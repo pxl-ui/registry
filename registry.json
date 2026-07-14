@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-cn",
+  "homepage": "https://pxl-ui.github.io/pxl-cn",
+  "items": [
+    {
+      "name": "gradiant-label",
+      "type": "registry:component",
+      "title": "Gradiant Label",
+      "description": "A label with gradiant colors to recreate retro style game indicators",
+      "files": [
+        {
+          "path": "registry/pxl-cn/gradiant-label/gradiant-label.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
