@@ -1,11 +1,11 @@
 import type * as React from "react";
 
 import BasicGradiantLabelExample from "@/app/examples/basic-gradiant-label";
-import { GitHubForkRibbon } from "@/components/github-fork-ribbon";
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { RegistryCommand } from "@/components/registry-command";
 import { ShowSourceButton } from "@/components/show-source-button";
 
+import BasicMarqueeTextExample from "./examples/basic-marquee-text";
 import ChromeGradiantLabelExample from "./examples/chrome-gradiant-label";
 import CryoGradiantLabelExample from "./examples/cryo-gradiant-label";
 import FireGradiantLabelExample from "./examples/fire-gradiant-label";
@@ -53,37 +53,45 @@ function ComponentDisplay({
 
 export default function Home() {
   return (
-    <>
-      <GitHubForkRibbon />
-      <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
-        <header className="flex flex-col gap-1 space-y-6 mb-6">
-          <h1 className="text-3xl font-heading font-bold tracking-tight">
-            PXL-CN
-          </h1>
-          <p className="text-muted-foreground">
-            A shadcn components registry extension for <a href="https://www.8bitcn.com/" target="__blank">8bitcn</a>.
-          </p>
-          <RegistryCommand registryId="gradiant-label" />
-        </header>
+    <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
+      <header className="flex flex-col gap-1 space-y-6 mb-6">
+        <h1 className="text-3xl font-heading italic font-bold tracking-tight">
+          PXL-CN
+        </h1>
+        <p className="text-muted-foreground">
+          A shadcn components registry extension for{" "}
+          <a href="https://www.8bitcn.com/" target="__blank">
+            8bitcn
+          </a>
+          .
+        </p>
+        <RegistryCommand registryId="gradiant-label" />
+      </header>
 
-        <main className="flex flex-col flex-1 gap-8">
-          <ComponentDisplay
-            name="gradiant-label"
-            description="A label with gradiant colors to recreate retro style game indicators"
-            filePath="app/examples/basic-gradiant-label.tsx"
-          >
-            <BasicGradiantLabelExample />
-            <FireGradiantLabelExample />
-            <CryoGradiantLabelExample />
-            <LootGradiantLabelExample />
-            <PlasmaGradiantLabelExample />
-            <ToxicGradiantLabelExample />
-            <ShadowGradiantLabelExample />
-            <SynthwaveGradiantLabelExample />
-            <ChromeGradiantLabelExample />
-          </ComponentDisplay>
-        </main>
-      </div>
-    </>
+      <main className="flex flex-col flex-1 gap-8">
+        <ComponentDisplay
+          name="gradiant-label"
+          description="A label with gradiant colors to recreate retro style game indicators"
+          filePath="app/examples/basic-gradiant-label.tsx"
+        >
+          <BasicGradiantLabelExample />
+          <FireGradiantLabelExample />
+          <CryoGradiantLabelExample />
+          <LootGradiantLabelExample />
+          <PlasmaGradiantLabelExample />
+          <ToxicGradiantLabelExample />
+          <ShadowGradiantLabelExample />
+          <SynthwaveGradiantLabelExample />
+          <ChromeGradiantLabelExample />
+        </ComponentDisplay>
+        <ComponentDisplay
+          name="marquee-text"
+          description=""
+          filePath="app/examples/basic-marquee-text.tsx"
+        >
+          <BasicMarqueeTextExample />
+        </ComponentDisplay>
+      </main>
+    </div>
   );
 }

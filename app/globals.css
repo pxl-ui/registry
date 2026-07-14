@@ -80,6 +80,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+
+  --animate-marquee: marquee var(--tw-duration, 6s) ease-in-out infinite
+    alternate;
 }
 
 :root {
@@ -178,4 +182,16 @@
     drop-shadow(
       0 calc(-1 * var(--pixel-size, 1px)) 0 --value(--color-*, [color])
     );
+}
+
+@theme {
+  @keyframes marquee {
+    0%,
+    100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(calc(-100% + 100cqw));
+    }
+  }
 }
