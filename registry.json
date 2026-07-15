@@ -191,6 +191,21 @@
           "animate-marquee": "marquee var(--tw-duration, 6s) ease-in-out infinite alternate"
         }
       }
+    },
+    {
+      "name": "animated-icon",
+      "type": "registry:component",
+      "title": "Animated Icon",
+      "description": "Animated Icon",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/animated-icon/animated-icon.tsx"
+        }
+      ]
     }
   ]
 }

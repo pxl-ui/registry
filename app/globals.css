@@ -2,9 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@import "@/registry/pxl-ui/fonts/able-5.css";
-@import "@/registry/pxl-ui/fonts/monogram.css";
-@import "@/registry/pxl-ui/fonts/pixel-digivolve.css";
+@import "@/registry/pxl-fonts/able-5/able-5.css";
+@import "@/registry/pxl-fonts/monogram/monogram.css";
+@import "@/registry/pxl-fonts/pixel-digivolve/pixel-digivolve.css";
 
 @import "@/registry/pxl-ui/utilities/cursor.css";
 @import "@/registry/pxl-ui/utilities/filter.css";

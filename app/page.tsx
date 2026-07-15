@@ -5,6 +5,7 @@ import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { RegistryCommand } from "@/components/registry-command";
 import { ShowSourceButton } from "@/components/show-source-button";
 
+import AnimatedIconExamples from "./examples/animated-icon";
 import BasicMarqueeTextExample from "./examples/basic-marquee-text";
 import ChromeGradiantLabelExample from "./examples/chrome-gradiant-label";
 import CryoGradiantLabelExample from "./examples/cryo-gradiant-label";
@@ -80,12 +81,21 @@ export default function Home() {
           <SynthwaveGradiantLabelExample />
           <ChromeGradiantLabelExample />
         </ComponentDisplay>
+
         <ComponentDisplay
           name="marquee-text"
           description=""
           filePath="app/examples/basic-marquee-text.tsx"
         >
           <BasicMarqueeTextExample />
+        </ComponentDisplay>
+
+        <ComponentDisplay
+          name="animated-icon"
+          description=""
+          filePath="app/examples/animated-icon.tsx"
+        >
+          <AnimatedIconExamples />
         </ComponentDisplay>
       </main>
     </div>
