@@ -1,5 +1,9 @@
 
 
+/** Retro compatibility utility for 8bitcn **/
+@utility retro {
+  @apply font-sans;
+}
 
 @utility pixel-size-* {
   --pixel-size: --value(--pixel-size-*, [length]);
