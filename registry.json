@@ -36,6 +36,9 @@
           "target": "src/styles/fonts/heading.css"
         }
       ],
+      "css": {
+        "@import \"@/styles/fonts/heading.css\"": {}
+      },
       "cssVars": {
         "theme": {
           "font-heading": "\"Pixel Digivolve\", monospace",
@@ -57,6 +60,9 @@
           "target": "src/styles/fonts/sans.css"
         }
       ],
+      "css": {
+        "@import \"@/styles/fonts/sans.css\"": {}
+      },
       "cssVars": {
         "theme": {
           "font-sans": "\"Able 5\", monospace"
@@ -76,6 +82,9 @@
           "target": "src/styles/fonts/mono.css"
         }
       ],
+      "css": {
+        "@import \"@/styles/fonts/mono.css\"": {}
+      },
       "cssVars": {
         "theme": {
           "font-mono": "\"Monogram Extended\", monospace"
