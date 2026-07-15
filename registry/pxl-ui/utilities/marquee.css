@@ -1,0 +1,19 @@
+
+
+
+@utility marquee {
+  --marquee-distance: -100%;
+  @apply inline-block whitespace-nowrap animate-marquee;
+}
+
+@theme {
+  @keyframes marquee {
+    0%,
+    100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(calc(-100% + 100cqw));
+    }
+  }
+}

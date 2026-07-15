@@ -2,42 +2,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@layer base {
-  @font-face {
-    font-family: "Able 5";
-    src: url("/fonts/Able_5.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
+@import "@/registry/pxl-ui/fonts/able-5.css";
+@import "@/registry/pxl-ui/fonts/monogram.css";
+@import "@/registry/pxl-ui/fonts/pixel-digivolve.css";
 
-  @font-face {
-    font-family: "Monogram Extended";
-    src: url("/fonts/Monogram_Extended.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Monogram Extended";
-    src: url("/fonts/Monogram_Extended_Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: "Pixel Digivolve";
-    src: url("/fonts/Pixel_Digivolve.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Pixel Digivolve";
-    src: url("/fonts/Pixel_Digivolve_Italic.otf") format("opentype");
-    font-weight: 500;
-    font-style: italic;
-  }
-}
+@import "@/registry/pxl-ui/utilities/cursor.css";
+@import "@/registry/pxl-ui/utilities/filter.css";
+@import "@/registry/pxl-ui/utilities/marquee.css";
+@import "@/registry/pxl-ui/utilities/sprite.css";
+@import "@/registry/pxl-ui/utilities/text.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -76,49 +49,63 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --text-2xs: 0.625rem;
+
+  --pixel-size-xs: 0.5px;
+  --pixel-size-sm: 1px;
+  --pixel-size-md: 2px;
+  --pixel-size-lg: 4px;
 
 
   --animate-marquee: marquee var(--tw-duration, 6s) ease-in-out infinite
     alternate;
+  --animate-sprite-idle: spriteIdle var(--tw-duration, 2.8s) steps(1) infinite;
+  --animate-sprite-idleBlink: spriteIdleBlink var(--tw-duration, 2.8s) steps(1)
+    infinite;
 }
 
+
 :root {
-  --radius: 0.625rem;
+  --radius: 0.65rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.1929 0.0336 42.11);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.1929 0.0336 42.11);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.1929 0.0336 42.11);
+  --primary: oklch(0.1929 0.0336 42.11);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary-foreground: oklch(0.1929 0.0336 42.11);
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted-foreground: oklch(0.4619 0.0164 67.4);
   --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
+  --accent-foreground: oklch(0.1929 0.0336 42.11);
+  --destructive: oklch(0.634 0.2539 17.63);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-1: oklch(0.7421 0.1721 359.48);
+  --chart-2: oklch(0.548585 0.130659 156.9834);
+  --chart-3: oklch(0.7178 0.1604 242.66);
+  --chart-4: oklch(0.929656 0.188853 103.2821);
+  --chart-5: oklch(0.7892 0.1713 69.64);
   --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.1929 0.0336 42.11);
+  --sidebar-primary: oklch(0.1929 0.0336 42.11);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-accent-foreground: oklch(0.1929 0.0336 42.11);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: oklch(0.8176 0.0057 274.95);
 }
 
 .dark {
@@ -161,37 +148,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-
-@utility pixel-size-* {
-  --pixel-size: --value(--pixel-size-*, [length]);
-}
-
-@utility pixel-drop-* {
-  filter: drop-shadow(
-      calc(1 * var(--pixel-size, 1px)) 0 0 --value(--color-*, [color])
-    )
-    drop-shadow(
-      calc(-1 * var(--pixel-size, 1px)) 0 0 --value(--color-*, [color])
-    )
-    drop-shadow(
-      0 calc(1 * var(--pixel-size, 1px)) 0 --value(--color-*, [color])
-    )
-    drop-shadow(
-      0 calc(-1 * var(--pixel-size, 1px)) 0 --value(--color-*, [color])
-    );
-}
-
-@theme {
-  @keyframes marquee {
-    0%,
-    100% {
-      transform: translateX(0%);
-    }
-    50% {
-      transform: translateX(calc(-100% + 100cqw));
-    }
   }
 }

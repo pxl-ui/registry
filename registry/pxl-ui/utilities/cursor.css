@@ -1,0 +1,60 @@
+@utility cursor-rotate {
+  cursor: var(--cursor-rotate);
+}
+@utility cursor-rotate-left {
+  cursor: var(--cursor-rotate-left);
+}
+@utility cursor-rotate-right {
+  cursor: var(--cursor-rotate-right);
+}
+@utility cursor-screenshot {
+  cursor: var(--cursor-screenshot);
+}
+@utility cursor-hand {
+  cursor: var(--cursor-hand);
+}
+
+
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+html,
+body {
+  @apply cursor-default;
+}
+
+a,
+button,
+[role="button"],
+[type="button"],
+[type="submit"],
+summary,
+label[for] {
+  @apply cursor-pointer;
+}
+[contenteditable],
+input:not([type="range"]),
+textarea {
+  @apply cursor-text;
+}
+select {
+  @apply cursor-default;
+}
+[disabled],
+[aria-disabled="true"] {
+  @apply cursor-not-allowed;
+}
+[draggable="true"] {
+  @apply cursor-grab;
+}
+[draggable="true"]:active {
+  @apply cursor-grabbing;
+}

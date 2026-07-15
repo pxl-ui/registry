@@ -1,0 +1,49 @@
+
+
+.filter-crt .filtered {
+  filter: url(#crt-filter);
+}
+
+.filter-lcd .filtered {
+  filter: grayscale(1) contrast(1.6) brightness(0.95);
+}
+
+.bg-lcd {
+  background: #7e7e7e;
+}
+
+.filter-dark .filtered {
+  filter: grayscale(1) contrast(1.8) brightness(0.75) sepia(0.3)
+    hue-rotate(20deg);
+}
+
+.bg-lcd-dark {
+  background: #141414;
+}
+
+.filter-green .filtered {
+  filter: grayscale(1) contrast(0.8) brightness(0.75) sepia(0.65)
+    hue-rotate(50deg) saturate(0.8);
+}
+
+.bg-lcd-green {
+  background: hsl(86.25deg 12% 25%);
+}
+
+.filter-green-light .filtered {
+  filter: grayscale(1) contrast(1.4) brightness(0.9) sepia(0.4)
+    hue-rotate(30deg) saturate(0.8);
+}
+
+.filter-green-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(140, 160, 110, 0.28);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.bg-lcd-green-light {
+  background: hsl(86.25deg 12% 25%);
+}

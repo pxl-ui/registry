@@ -92,6 +92,62 @@
       }
     },
     {
+      "name": "cursor",
+      "type": "registry:style",
+      "title": "Mouse Cursor",
+      "description": "Mouse Cursor configuration for pxl-ui",
+      "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "registry/pxl-ui/utilities/cursor.css",
+          "target": "src/styles/utilities/cursor.css"
+        }
+      ],
+      "css": {
+        "@import \"@/styles/utilities/cursor.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "cursor-default": "url(\"/cursors/default.png\") 4 1, default",
+          "cursor-pointer": "url(\"/cursors/pointer.png\") 12 1, pointer",
+          "cursor-text": "url(\"/cursors/text.png\") 8 16, text",
+          "cursor-move": "url(\"/cursors/move.png\") 8 8, move",
+          "cursor-grab": "url(\"/cursors/grab.png\") 8 8, grab",
+          "cursor-grabbing": "url(\"/cursors/grabbing.png\") 8 8, grabbing",
+          "cursor-crosshair": "url(\"/cursors/crosshair.png\") 8 8, crosshair",
+          "cursor-not-allowed": "url(\"/cursors/not-allowed.png\") 8 8, not-allowed",
+          "cursor-help": "url(\"/cursors/help.png\") 4 1, help",
+          "cursor-wait": "url(\"/cursors/wait.png\") 8 8, wait",
+          "cursor-progress": "url(\"/cursors/wait.png\") 8 8, progress",
+          "cursor-zoom-in": "url(\"/cursors/zoom-in.png\") 8 8, zoom-in",
+          "cursor-zoom-out": "url(\"/cursors/zoom-out.png\") 8 8, zoom-out",
+
+          "cursor-n-resize": "url(\"/cursors/n-resize.png\") 8 8, n-resize",
+          "cursor-s-resize": "url(\"/cursors/s-resize.png\") 8 8, s-resize",
+          "cursor-e-resize": "url(\"/cursors/e-resize.png\") 8 8, e-resize",
+          "cursor-w-resize": "url(\"/cursors/w-resize.png\") 8 8, w-resize",
+          "cursor-ns-resize": "url(\"/cursors/ns-resize.png\") 8 8, ns-resize",
+          "cursor-ew-resize": "url(\"/cursors/ew-resize.png\") 8 8, ew-resize",
+          "cursor-ne-resize": "url(\"/cursors/ne-resize.png\") 8 8, ne-resize",
+          "cursor-nw-resize": "url(\"/cursors/nw-resize.png\") 8 8, nw-resize",
+          "cursor-se-resize": "url(\"/cursors/se-resize.png\") 8 8, se-resize",
+          "cursor-sw-resize": "url(\"/cursors/sw-resize.png\") 8 8, sw-resize",
+          "cursor-nesw-resize": "url(\"/cursors/nesw-resize.png\") 8 8, nesw-resize",
+          "cursor-nwse-resize": "url(\"/cursors/nwse-resize.png\") 8 8, nwse-resize",
+          "cursor-col-resize": "url(\"/cursors/col-resize.png\") 8 8, col-resize",
+          "cursor-row-resize": "url(\"/cursors/row-resize.png\") 8 8, row-resize",
+
+          "cursor-rotate": "default",
+          "cursor-rotate-left": "default",
+          "cursor-rotate-right": "default",
+          "cursor-screenshot": "url(\"/cursors/screenshot.png\") 8 8, default",
+          "cursor-hand": "url(\"/cursors/hand.png\") 8 8, pointer",
+          "cursor-point": "pointer"
+        }
+      }
+    },
+    {
       "name": "styles",
       "type": "registry:style",
       "title": "Styles",
@@ -99,25 +155,134 @@
       "registryDependencies": [
         "pxl-ui/registry/font-heading",
         "pxl-ui/registry/font-sans",
-        "pxl-ui/registry/font-mono"
+        "pxl-ui/registry/font-mono",
+        "pxl-ui/registry/cursor"
       ],
-      "files": [
-      ]
+      "cssVars": {
+        "theme": {
+          "radius-sm": "calc(var(--radius) * 0.6)",
+          "radius-md": "calc(var(--radius) * 0.8)",
+          "radius-lg": "var(--radius)",
+          "radius-xl": "calc(var(--radius) * 1.4)",
+          "radius-2xl": "calc(var(--radius) * 1.8)",
+          "radius-3xl": "calc(var(--radius) * 2.2)",
+          "radius-4xl": "calc(var(--radius) * 2.6)",
+          "text-2xs": "0.625rem"
+        },
+        "light": {
+          "radius": "0.65rem",
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.1929 0.0336 42.11)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0.1929 0.0336 42.11)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0.1929 0.0336 42.11)",
+          "primary": "oklch(0.1929 0.0336 42.11)",
+          "primary-foreground": "oklch(0.985 0 0)",
+          "secondary": "oklch(0.97 0 0)",
+          "secondary-foreground": "oklch(0.1929 0.0336 42.11)",
+          "muted": "oklch(0.97 0 0)",
+          "muted-foreground": "oklch(0.4619 0.0164 67.4)",
+          "accent": "oklch(0.97 0 0)",
+          "accent-foreground": "oklch(0.1929 0.0336 42.11)",
+          "destructive": "oklch(0.634 0.2539 17.63)",
+          "border": "oklch(0.922 0 0)",
+          "input": "oklch(0.922 0 0)",
+          "ring": "oklch(0.708 0 0)",
+          "chart-1": "oklch(0.7421 0.1721 359.48)",
+          "chart-2": "oklch(0.548585 0.130659 156.9834)",
+          "chart-3": "oklch(0.7178 0.1604 242.66)",
+          "chart-4": "oklch(0.929656 0.188853 103.2821)",
+          "chart-5": "oklch(0.7892 0.1713 69.64)",
+          "sidebar": "oklch(0.985 0 0)",
+          "sidebar-foreground": "oklch(0.1929 0.0336 42.11)",
+          "sidebar-primary": "oklch(0.1929 0.0336 42.11)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.97 0 0)",
+          "sidebar-accent-foreground": "oklch(0.1929 0.0336 42.11)",
+          "sidebar-border": "oklch(0.922 0 0)",
+          "sidebar-ring": "oklch(0.8176 0.0057 274.95)"
+        }
+      }
     },
     {
       "name": "gradiant-label",
       "type": "registry:component",
       "title": "Gradiant Label",
       "description": "A label with gradiant colors to recreate retro style game indicators",
-      "registryDependencies": [
-        "pxl-ui/registry/styles"
-      ],
       "files": [
         {
           "type": "registry:component",
           "path": "registry/pxl-ui/gradiant-label/gradiant-label.tsx"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/pxl-ui/utilities/text.css",
+          "target": "src/styles/utilities/text.css"
         }
-      ]
+      ],
+      "css": {
+        "@import \"@/styles/utilities/text.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "pixel-size-xs": "0.5px",
+          "pixel-size-sm": "1px",
+          "pixel-size-md": "2px",
+          "pixel-size-lg": "4px"
+        }
+      }
+    },
+    {
+      "name": "sprite-image",
+      "type": "registry:component",
+      "title": "Sprite Image",
+      "description": "A pixelated sprite image",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-image/sprite-image.tsx"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/pxl-ui/utilities/sprite.css",
+          "target": "src/styles/utilities/sprite.css"
+        }
+      ],
+      "css": {
+        "@import \"@/styles/utilities/sprite.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "animate-sprite-idle": "spriteIdle var(--tw-duration, 2.8s) steps(1) infinite",
+          "animate-sprite-idleBlink": "spriteIdleBlink var(--tw-duration, 2.8s) steps(1) infinite"
+        }
+      }
+    },
+    {
+      "name": "marquee-text",
+      "type": "registry:component",
+      "title": "Marquee Text",
+      "description": "Marquee animated text for long texts on tiny screens",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/marquee-text/marquee-text.tsx"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/pxl-ui/utilities/marquee.css",
+          "target": "src/styles/utilities/marquee.css"
+        }
+      ],
+      "css": {
+        "@import \"@/styles/utilities/marquee.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "animate-marquee": "marquee var(--tw-duration, 6s) ease-in-out infinite alternate"
+        }
+      }
     }
   ]
 }
