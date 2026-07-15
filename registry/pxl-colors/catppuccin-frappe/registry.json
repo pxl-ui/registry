@@ -7,7 +7,7 @@
       "name": "colors-catppuccin-frappe",
       "type": "registry:theme",
       "title": "Catppuccin Frappe",
-      "description": "Catppuccin Frappe Theme",
+      "description": "Catppuccin Frappe color palette",
       "css": {
         "@import \"@/styles/colors/catppuccin-frappe.css\"": {}
       },

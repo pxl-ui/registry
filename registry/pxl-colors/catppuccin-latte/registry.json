@@ -7,7 +7,7 @@
       "name": "colors-catppuccin-latte",
       "type": "registry:theme",
       "title": "Catppuccin Latte",
-      "description": "Catppuccin Latte Theme",
+      "description": "Catppuccin Latte color palette",
       "css": {
         "@import \"@/styles/colors/catppuccin-latte.css\"": {}
       },

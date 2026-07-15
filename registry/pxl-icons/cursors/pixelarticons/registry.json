@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "pxl-icons-pixelarticons-cursor",
+  "name": "pxl-icons-cursors-pixelarticons",
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "pixelarticons-cursor",
+      "name": "cursors-pixelarticons",
       "type": "registry:style",
-      "title": "Pixelarticons Mouse Cursor",
-      "description": "Pixelarticons Mouse Cursor configuration",
+      "title": "Pixelarticons Mouse Cursors",
+      "description": "Pixelarticons mouse cursors",
       "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
       "cssVars": {
         "theme": {

@@ -7,7 +7,7 @@
       "name": "colors-catppuccin-mocha",
       "type": "registry:theme",
       "title": "Catppuccin Mocha",
-      "description": "Catppuccin Mocha Theme",
+      "description": "Catppuccin Mocha color palette",
       "css": {
         "@import \"@/styles/colors/catppuccin-mocha.css\"": {}
       },

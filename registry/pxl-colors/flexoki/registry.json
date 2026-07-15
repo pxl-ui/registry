@@ -7,7 +7,7 @@
       "name": "colors-flexoki",
       "type": "registry:theme",
       "title": "Flexoki",
-      "description": "Flexoki Theme",
+      "description": "Flexoki color palette",
       "css": {
         "@import \"@/styles/colors/flexoki.css\"": {}
       },

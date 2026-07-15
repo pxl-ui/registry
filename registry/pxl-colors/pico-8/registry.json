@@ -7,7 +7,7 @@
       "name": "colors-pico-8",
       "type": "registry:theme",
       "title": "PICO-8",
-      "description": "PICO-8 Color Palette",
+      "description": "PICO-8 color palette",
       "css": {
         "@import \"@/styles/colors/pico-8.css\"": {}
       },

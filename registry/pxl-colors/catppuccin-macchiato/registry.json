@@ -7,7 +7,7 @@
       "name": "colors-catppuccin-macchiato",
       "type": "registry:theme",
       "title": "Catppuccin Macchiato",
-      "description": "Catppuccin Macchiato Theme",
+      "description": "Catppuccin Macchiato color palette",
       "css": {
         "@import \"@/styles/colors/catppuccin-macchiato.css\"": {}
       },
