@@ -1,15 +1,15 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "pxl-colors",
+  "name": "pxl-colors-catppuccin-frappe",
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "catppuccin-frappe",
+      "name": "colors-catppuccin-frappe",
       "type": "registry:theme",
       "title": "Catppuccin Frappe",
       "description": "Catppuccin Frappe Theme",
       "css": {
-        "@import \"@/themes/catppuccin-frappe.css\"": {}
+        "@import \"@/styles/colors/catppuccin-frappe.css\"": {}
       },
       "cssVars": {
         "light": {
@@ -31,8 +31,8 @@
       "files": [
         {
           "type": "registry:style",
-          "path": "catppuccin-frappe/catppuccin-frappe.css",
-          "target": "themes/catppuccin-frappe.css"
+          "path": "catppuccin-frappe.css",
+          "target": "styles/colors/catppuccin-frappe.css"
         }
       ]
     }

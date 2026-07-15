@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-colors-catppuccin-latte",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "colors-catppuccin-latte",
+      "type": "registry:theme",
+      "title": "Catppuccin Latte",
+      "description": "Catppuccin Latte Theme",
+      "css": {
+        "@import \"@/styles/colors/catppuccin-latte.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "#eff1f5",
+          "foreground": "#4c4f69",
+          "card": "#e6e9ef",
+          "card-foreground": "#4c4f69",
+          "popover": "#dce0e8",
+          "popover-foreground": "#4c4f69",
+          "muted": "#ccd0da",
+          "muted-foreground": "#6c6f85",
+          "accent": "#bcc0cc",
+          "accent-foreground": "#4c4f69",
+          "border": "#acb0be",
+          "input": "#acb0be",
+          "ring": "#7c7f93"
+        }
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-latte.css",
+          "target": "styles/colors/catppuccin-latte.css"
+        }
+      ]
+    }
+  ]
+}

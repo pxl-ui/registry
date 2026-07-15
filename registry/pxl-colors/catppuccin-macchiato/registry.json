@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-colors-catppuccin-macchiato",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "colors-catppuccin-macchiato",
+      "type": "registry:theme",
+      "title": "Catppuccin Macchiato",
+      "description": "Catppuccin Macchiato Theme",
+      "css": {
+        "@import \"@/styles/colors/catppuccin-macchiato.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "#24273a",
+          "foreground": "#cad3f5",
+          "card": "#1e2030",
+          "card-foreground": "#cad3f5",
+          "popover": "#181926",
+          "popover-foreground": "#cad3f5",
+          "muted": "#363a4f",
+          "muted-foreground": "#a5adcb",
+          "accent": "#494d64",
+          "accent-foreground": "#cad3f5",
+          "border": "#5b6078",
+          "input": "#5b6078",
+          "ring": "#939ab7"
+        }
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-macchiato.css",
+          "target": "styles/colors/catppuccin-macchiato.css"
+        }
+      ]
+    }
+  ]
+}

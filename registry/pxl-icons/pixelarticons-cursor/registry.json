@@ -1,0 +1,53 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-icons-pixelarticons-cursor",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "pixelarticons-cursor",
+      "type": "registry:style",
+      "title": "Pixelarticons Mouse Cursor",
+      "description": "Pixelarticons Mouse Cursor configuration",
+      "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
+      "cssVars": {
+        "theme": {
+          "cursor-default": "url(\"/cursors/default.png\") 4 1, default",
+          "cursor-pointer": "url(\"/cursors/pointer.png\") 12 1, pointer",
+          "cursor-text": "url(\"/cursors/text.png\") 8 16, text",
+          "cursor-move": "url(\"/cursors/move.png\") 8 8, move",
+          "cursor-grab": "url(\"/cursors/grab.png\") 8 8, grab",
+          "cursor-grabbing": "url(\"/cursors/grabbing.png\") 8 8, grabbing",
+          "cursor-crosshair": "url(\"/cursors/crosshair.png\") 8 8, crosshair",
+          "cursor-not-allowed": "url(\"/cursors/not-allowed.png\") 8 8, not-allowed",
+          "cursor-help": "url(\"/cursors/help.png\") 4 1, help",
+          "cursor-wait": "url(\"/cursors/wait.png\") 8 8, wait",
+          "cursor-progress": "url(\"/cursors/wait.png\") 8 8, progress",
+          "cursor-zoom-in": "url(\"/cursors/zoom-in.png\") 8 8, zoom-in",
+          "cursor-zoom-out": "url(\"/cursors/zoom-out.png\") 8 8, zoom-out",
+
+          "cursor-n-resize": "url(\"/cursors/n-resize.png\") 8 8, n-resize",
+          "cursor-s-resize": "url(\"/cursors/s-resize.png\") 8 8, s-resize",
+          "cursor-e-resize": "url(\"/cursors/e-resize.png\") 8 8, e-resize",
+          "cursor-w-resize": "url(\"/cursors/w-resize.png\") 8 8, w-resize",
+          "cursor-ns-resize": "url(\"/cursors/ns-resize.png\") 8 8, ns-resize",
+          "cursor-ew-resize": "url(\"/cursors/ew-resize.png\") 8 8, ew-resize",
+          "cursor-ne-resize": "url(\"/cursors/ne-resize.png\") 8 8, ne-resize",
+          "cursor-nw-resize": "url(\"/cursors/nw-resize.png\") 8 8, nw-resize",
+          "cursor-se-resize": "url(\"/cursors/se-resize.png\") 8 8, se-resize",
+          "cursor-sw-resize": "url(\"/cursors/sw-resize.png\") 8 8, sw-resize",
+          "cursor-nesw-resize": "url(\"/cursors/nesw-resize.png\") 8 8, nesw-resize",
+          "cursor-nwse-resize": "url(\"/cursors/nwse-resize.png\") 8 8, nwse-resize",
+          "cursor-col-resize": "url(\"/cursors/col-resize.png\") 8 8, col-resize",
+          "cursor-row-resize": "url(\"/cursors/row-resize.png\") 8 8, row-resize",
+
+          "cursor-rotate": "default",
+          "cursor-rotate-left": "default",
+          "cursor-rotate-right": "default",
+          "cursor-screenshot": "url(\"/cursors/screenshot.png\") 8 8, default",
+          "cursor-hand": "url(\"/cursors/hand.png\") 8 8, pointer",
+          "cursor-point": "pointer"
+        }
+      }
+    }
+  ]
+}

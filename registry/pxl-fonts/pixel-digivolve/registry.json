@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-fonts-pixel-digivolve",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "fonts-pixel-digivolve",
+      "type": "registry:style",
+      "title": "Pixel Digivolve",
+      "description": "Pixel Digivolve font face",
+      "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "pixel-digivolve.css",
+          "target": "src/styles/fonts/pixel-digivolve.css"
+        }
+      ],
+      "css": {
+        "@import \"@/styles/fonts/pixel-digivolve.css\"": {}
+      }
+    }
+  ]
+}

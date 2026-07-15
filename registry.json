@@ -2,7 +2,18 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "pxl-ui",
   "homepage": "https://github.com/pxl-ui/registry",
-  "include": ["registry/pxl-colors/registry.json"],
+  "include": [
+    "registry/pxl-colors/catppuccin-frappe/registry.json",
+    "registry/pxl-colors/catppuccin-latte/registry.json",
+    "registry/pxl-colors/catppuccin-macchiato/registry.json",
+    "registry/pxl-colors/catppuccin-mocha/registry.json", 
+    "registry/pxl-colors/flexoki/registry.json", 
+    "registry/pxl-colors/pico-8/registry.json", 
+    "registry/pxl-fonts/able-5/registry.json",
+    "registry/pxl-fonts/monogram/registry.json",
+    "registry/pxl-fonts/pixel-digivolve/registry.json",
+    "registry/pxl-icons/pixelarticons-cursor/registry.json"
+  ],
   "items": [
     {
       "name": "base",
@@ -23,74 +34,6 @@
       "registryDependencies": [
         "pxl-ui/registry/styles"
       ]
-    },
-    {
-      "name": "font-heading",
-      "type": "registry:style",
-      "title": "Heading Font",
-      "description": "Heading font configuration for pxl-ui",
-      "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
-      "files": [
-        {
-          "type": "registry:file",
-          "path": "registry/pxl-fonts/pixel-digivolve/pixel-digivolve.css",
-          "target": "src/styles/fonts/heading.css"
-        }
-      ],
-      "css": {
-        "@import \"@/styles/fonts/heading.css\"": {}
-      },
-      "cssVars": {
-        "theme": {
-          "font-heading": "\"Pixel Digivolve\", monospace",
-          "font-mono": "\"Monogram Extended\", monospace",
-          "font-sans": "\"Able 5\", monospace"
-        }
-      }
-    },
-    {
-      "name": "font-sans",
-      "type": "registry:style",
-      "title": "Sans Serif Font",
-      "description": "Sans Serif font configuration for pxl-ui",
-      "docs": "Download font from https://stormgold.itch.io/able-font",
-      "files": [
-        {
-          "type": "registry:style",
-          "path": "registry/pxl-fonts/able-5/able-5.css",
-          "target": "src/styles/fonts/sans.css"
-        }
-      ],
-      "css": {
-        "@import \"@/styles/fonts/sans.css\"": {}
-      },
-      "cssVars": {
-        "theme": {
-          "font-sans": "\"Able 5\", monospace"
-        }
-      }
-    },
-    {
-      "name": "font-mono",
-      "type": "registry:style",
-      "title": "Monospaced Font",
-      "description": "Monospaced font configuration for pxl-ui",
-      "docs": "Download font from https://datagoblin.itch.io/monogram",
-      "files": [
-        {
-          "type": "registry:file",
-          "path": "registry/pxl-fonts/monogram/monogram.css",
-          "target": "src/styles/fonts/mono.css"
-        }
-      ],
-      "css": {
-        "@import \"@/styles/fonts/mono.css\"": {}
-      },
-      "cssVars": {
-        "theme": {
-          "font-mono": "\"Monogram Extended\", monospace"
-        }
-      }
     },
     {
       "name": "cursor",
@@ -154,13 +97,16 @@
       "title": "Styles",
       "description": "TailwindCSS core styles for pxl-ui",
       "registryDependencies": [
-        "pxl-ui/registry/font-heading",
-        "pxl-ui/registry/font-sans",
-        "pxl-ui/registry/font-mono",
+        "pxl-ui/registry/fonts-pixel-digivolve",
+        "pxl-ui/registry/fonts-able-5",
+        "pxl-ui/registry/fonts-monogram",
         "pxl-ui/registry/cursor"
       ],
       "cssVars": {
         "theme": {
+          "font-heading": "'Pixel Digivolve', 'Inter Variable', sans-serif",
+          "font-sans": "'Able 5', 'Inter Variable', sans-serif",
+          "font-mono": "'Monogram Extended', monospace",
           "radius-sm": "calc(var(--radius) * 0.6)",
           "radius-md": "calc(var(--radius) * 0.8)",
           "radius-lg": "var(--radius)",

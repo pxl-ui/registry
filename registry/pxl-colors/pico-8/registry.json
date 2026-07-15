@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-colors-pico-8",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "colors-pico-8",
+      "type": "registry:theme",
+      "title": "PICO-8",
+      "description": "PICO-8 Color Palette",
+      "css": {
+        "@import \"@/styles/colors/pico-8.css\"": {}
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "pico-8.css",
+          "target": "styles/colors/pico-8.css"
+        }
+      ]
+    }
+  ]
+}

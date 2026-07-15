@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-colors-flexoki",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "colors-flexoki",
+      "type": "registry:theme",
+      "title": "Flexoki",
+      "description": "Flexoki Theme",
+      "css": {
+        "@import \"@/styles/colors/flexoki.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "#FFFCF0",
+          "foreground": "#1C1B1A",
+          "card": "#F2F0E5",
+          "card-foreground": "#1C1B1A",
+          "popover": "#E6E4D9",
+          "popover-foreground": "#1C1B1A",
+          "muted": "#B7B5AC",
+          "muted-foreground": "#575653",
+          "accent": "#DAD8CE",
+          "accent-foreground": "#1C1B1A",
+          "border": "#343331",
+          "input": "#343331",
+          "ring": "#575653"
+        }
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "flexoki.css",
+          "target": "styles/colors/flexoki.css"
+        }
+      ]
+    }
+  ]
+}

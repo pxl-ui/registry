@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-colors-catppuccin-mocha",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "colors-catppuccin-mocha",
+      "type": "registry:theme",
+      "title": "Catppuccin Mocha",
+      "description": "Catppuccin Mocha Theme",
+      "css": {
+        "@import \"@/styles/colors/catppuccin-mocha.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "#1e1e2e",
+          "foreground": "#cdd6f4",
+          "card": "#181825",
+          "card-foreground": "#cdd6f4",
+          "popover": "#11111b",
+          "popover-foreground": "#cdd6f4",
+          "muted": "#313244",
+          "muted-foreground": "#a6adc8",
+          "accent": "#45475a",
+          "accent-foreground": "#cdd6f4",
+          "border": "#585b70",
+          "input": "#585b70",
+          "ring": "#9399b2"
+        }
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-mocha.css",
+          "target": "styles/colors/catppuccin-mocha.css"
+        }
+      ]
+    }
+  ]
+}
