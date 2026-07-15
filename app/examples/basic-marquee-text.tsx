@@ -1,4 +1,4 @@
-import { MarqueeText } from "@/registry/pxl-cn/marquee-text/marquee-text";
+import { MarqueeText } from "@/registry/pxl-ui/marquee-text/marquee-text";
 
 export default function BasicMarqueeTextExample() {
   return (

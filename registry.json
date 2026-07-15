@@ -1,17 +1,112 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "pxl-cn",
-  "homepage": "https://pxl-ui.github.io/pxl-cn",
+  "name": "pxl-ui",
+  "homepage": "https://github.com/pxl-ui/registry",
   "items": [
+    {
+      "name": "base",
+      "type": "registry:base",
+      "title": "PXL-UI",
+      "description": "ShadCN base for pxl-ui",
+      "extends": "none",
+      "config": {
+        "style": "radix-lyra",
+        "iconLibrary": "lucide",
+        "rtl": false,
+        "menuColor": "default",
+        "menuAccent": "subtle",
+        "tailwind": {
+          "baseColor": "neutral"
+        }
+      },
+      "registryDependencies": [
+        "pxl-ui/registry/styles"
+      ]
+    },
+    {
+      "name": "font-heading",
+      "type": "registry:style",
+      "title": "Heading Font",
+      "description": "Heading font configuration for pxl-ui",
+      "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "registry/pxl-ui/fonts/pixel-digivolve.css",
+          "target": "src/styles/fonts/heading.css"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "font-heading": "\"Pixel Digivolve\", monospace",
+          "font-mono": "\"Monogram Extended\", monospace",
+          "font-sans": "\"Able 5\", monospace"
+        }
+      }
+    },
+    {
+      "name": "font-sans",
+      "type": "registry:style",
+      "title": "Sans Serif Font",
+      "description": "Sans Serif font configuration for pxl-ui",
+      "docs": "Download font from https://stormgold.itch.io/able-font",
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "registry/pxl-ui/fonts/able-5.css",
+          "target": "src/styles/fonts/sans.css"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Able 5\", monospace"
+        }
+      }
+    },
+    {
+      "name": "font-mono",
+      "type": "registry:style",
+      "title": "Monospaced Font",
+      "description": "Monospaced font configuration for pxl-ui",
+      "docs": "Download font from https://datagoblin.itch.io/monogram",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "registry/pxl-ui/fonts/monogram.css",
+          "target": "src/styles/fonts/mono.css"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "font-mono": "\"Monogram Extended\", monospace"
+        }
+      }
+    },
+    {
+      "name": "styles",
+      "type": "registry:style",
+      "title": "Styles",
+      "description": "TailwindCSS core styles for pxl-ui",
+      "registryDependencies": [
+        "pxl-ui/registry/font-heading",
+        "pxl-ui/registry/font-sans",
+        "pxl-ui/registry/font-mono"
+      ],
+      "files": [
+      ]
+    },
     {
       "name": "gradiant-label",
       "type": "registry:component",
       "title": "Gradiant Label",
       "description": "A label with gradiant colors to recreate retro style game indicators",
+      "registryDependencies": [
+        "pxl-ui/registry/styles"
+      ],
       "files": [
         {
-          "path": "registry/pxl-cn/gradiant-label/gradiant-label.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "path": "registry/pxl-ui/gradiant-label/gradiant-label.tsx"
         }
       ]
     }

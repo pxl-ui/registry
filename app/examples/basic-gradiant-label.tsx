@@ -1,4 +1,4 @@
-import { GradiantLabel } from "@/registry/pxl-cn/gradiant-label/gradiant-label";
+import { GradiantLabel } from "@/registry/pxl-ui/gradiant-label/gradiant-label";
 
 export default function BasicGradiantLabelExample() {
   return (

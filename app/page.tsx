@@ -56,14 +56,10 @@ export default function Home() {
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
       <header className="flex flex-col gap-1 space-y-6 mb-6">
         <h1 className="text-3xl font-heading italic font-bold tracking-tight">
-          PXL-CN
+          PXL-UI Registry
         </h1>
         <p className="text-muted-foreground">
-          A shadcn components registry extension for{" "}
-          <a href="https://www.8bitcn.com/" target="__blank">
-            8bitcn
-          </a>
-          .
+          Shadcn components registry for PXL-UI
         </p>
         <RegistryCommand registryId="gradiant-label" />
       </header>

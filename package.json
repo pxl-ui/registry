@@ -1,10 +1,10 @@
 {
-  "name": "pxl-cn",
+  "name": "@pxl-ui/registry",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "A shadcn components registry extension for 8bitcn",
-  "homepage": "https://pxl-ui.github.io/pxl-cn",
+  "description": "Shadcn components registry for PXL-UI",
+  "homepage": "https://pxl-ui.github.io/registry",
   "keywords": [
     "shadcn",
     "shadcn-ui",
@@ -15,6 +15,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
+    "registry:serve": "pnpm run registry:build && http-serve public -p 3000",
     "registry:build": "shadcn build",
     "upgrade:shadcn": "npx --yes shadcn@canary add --all --overwrite --yes",
     "upgrade:packages": "pnpx npm-check-updates --interactive --format group"
@@ -38,6 +39,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
+    "http-serve": "^1.0.1",
     "tailwindcss": "^4.3.0",
     "typescript": "~5.9.3",
     "vite": "^7.3.1"
