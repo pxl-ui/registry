@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-fonts-able-5",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "fonts-able-5",
+      "type": "registry:style",
+      "title": "Able 5",
+      "description": "Able 5 font face",
+      "docs": "Download font from https://stormgold.itch.io/able-font",
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "able-5.css",
+          "target": "src/styles/fonts/able-5.css"
+        }
+      ],
+      "css": {
+        "@import \"@/styles/fonts/able-5.css\"": {}
+      }
+    }
+  ]
+}

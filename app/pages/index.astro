@@ -1,0 +1,41 @@
+---
+
+import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
+import Layout from "@/app/layouts/Layout.astro";
+import Logo from "@/app/layouts/Logo.png";
+import { RegistryCommand } from "@/components/registry-command";
+
+import { Image } from "astro:assets";
+
+---
+<Layout>
+  <div class="flex min-w-0 flex-1 flex-col">
+    <div class="h-(--top-spacing) shrink-0">
+    </div>
+    <div
+      class="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-6 px-4 py-6 text-neutral-800 md:px-0 lg:py-8 dark:text-neutral-300">
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center justify-between md:items-start">
+            <h1 class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">
+              <Image src={Logo} alt="logo" class="size-8 pixelated inline-flex mr-2" />
+              PXL-UI
+            </h1>
+          </div>
+          <p class="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">
+            Shadcn components for retro-style widgets and small screens.
+          </p>
+        </div>
+      </div>
+      <div class="prose flex-1">
+        <RegistryCommand command="list" registryId="pxl-ui/registry" />
+      </div>
+      <BottomNavigation 
+        next={{
+          label: "Components",
+          href: `/registry/components`
+        }}
+      />
+    </div>
+  </div>
+</Layout>

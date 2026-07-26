@@ -1,0 +1,30 @@
+
+@utility pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@theme {
+  @keyframes spriteIdle {
+    0%,
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  @keyframes spriteIdleBlink {
+    0%,
+    78%,
+    100% {
+      background-position: 0 0;
+    }
+    79%,
+    82% {
+      background-position: calc(var(--size) * -1) 0;
+    }
+    83%,
+    100% {
+      background-position: 0 0;
+    }
+  }
+}

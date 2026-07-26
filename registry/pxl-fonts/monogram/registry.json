@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl-fonts-monogram",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "fonts-monogram",
+      "type": "registry:style",
+      "title": "Monogram",
+      "description": "Monogram font face",
+      "docs": "Download font from https://datagoblin.itch.io/monogram",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "monogram.css",
+          "target": "src/styles/fonts/monogram.css"
+        }
+      ],
+      "css": {
+        "@import \"@/styles/fonts/monogram.css\"": {}
+      }
+    }
+  ]
+}

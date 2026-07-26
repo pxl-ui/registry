@@ -1,0 +1,21 @@
+---
+import '@/app/styles/global.css';
+
+import Header from "@/app/layouts/Header.astro";
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/registry/favicon.svg" />
+		<link rel="icon" href="/registry/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<title>PXL-UI</title>
+    <meta name="description" content="Shadcn components for retro-style widgets and small screens." />
+	</head>
+	<body>
+		<Header />
+		<slot />
+	</body>
+</html>

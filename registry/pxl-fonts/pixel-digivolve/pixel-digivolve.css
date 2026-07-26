@@ -1,0 +1,18 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Pixel Digivolve";
+    src: url("/fonts/Pixel_Digivolve.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Pixel Digivolve";
+    src: url("/fonts/Pixel_Digivolve_Italic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+  }
+}
+

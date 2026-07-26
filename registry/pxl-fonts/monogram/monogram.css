@@ -1,0 +1,17 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Monogram Extended";
+    src: url("/fonts/Monogram_Extended.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Monogram Extended";
+    src: url("/fonts/Monogram_Extended_Italic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+  }
+}
