@@ -2,6 +2,7 @@
 
 import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
 import Layout from "@/app/layouts/Layout.astro";
+import { url } from "@/app/utils";
 import { registry } from "@/lib/registry";
 
 ---
@@ -68,7 +69,9 @@ import { registry } from "@/lib/registry";
           {registry.map((entry) => (
             <a
               class="inline-flex items-center gap-2 text-lg font-medium underline-offset-4 hover:underline md:text-base"
-              href={`/registry/components/${entry.name}`}>
+              href={url(
+                `components/${entry.name}`
+              )}>
               {entry.title ?? entry.name}
             </a>
           ))}
@@ -77,11 +80,11 @@ import { registry } from "@/lib/registry";
       <BottomNavigation 
         prev={{
           label: "Introduction",
-          href: "/registry"
+          href: url("")
         }}
         next={{
           label: registry[0].title ?? registry[0].name,
-          href: `/registry/components/${registry[0].name}`
+          href: url(`components/${registry[0].name}`)
         }}
       />
     </div>

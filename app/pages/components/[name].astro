@@ -4,6 +4,7 @@
 
 import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
 import Layout from "@/app/layouts/Layout.astro";
+import { url } from "@/app/utils";
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { RegistryCommand } from "@/components/registry-command";
 import { RegistryPreview } from "@/components/registry-preview";
@@ -30,12 +31,14 @@ const index = registry.findIndex(r => r.name === name);
 
 const prev = {
   label: index === 0 ? "Components" : (registry[index - 1].title ?? registry[index - 1].name),
-  href: index === 0 ? "/registry/components" : `/registry/components/${registry[index - 1].name}`
+  href: url(
+    index === 0 ? "components" : `components/${registry[index - 1].name}`
+  )
 }
 
 const next = registry.length === index + 1 ? undefined : {
   label: (registry[index + 1].title ?? registry[index + 1].name),
-  href: `/registry/components/${registry[index + 1].name}`,
+  href: url(`components/${registry[index + 1].name}`),
 }
 
 ---

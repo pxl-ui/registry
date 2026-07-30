@@ -7,7 +7,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pxl-ui.github.io',
-  base: '/registry',
+  base: process.env.NODE_ENV === "development" ? undefined : '/registry',
   srcDir: "./app",
   publicDir: "./app/public",
   integrations: [react()],

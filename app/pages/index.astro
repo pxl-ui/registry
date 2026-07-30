@@ -1,8 +1,11 @@
 ---
 
+
+
 import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
 import Layout from "@/app/layouts/Layout.astro";
 import Logo from "@/app/layouts/Logo.png";
+import { url } from "@/app/utils";
 import { RegistryCommand } from "@/components/registry-command";
 
 import { Image } from "astro:assets";
@@ -33,7 +36,7 @@ import { Image } from "astro:assets";
       <BottomNavigation 
         next={{
           label: "Components",
-          href: `/registry/components`
+          href: url("components")
         }}
       />
     </div>
