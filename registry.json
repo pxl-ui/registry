@@ -142,6 +142,71 @@
       }
     },
     {
+      "name": "sprite-canvas",
+      "type": "registry:component",
+      "title": "Sprite Canvas",
+      "description": "A canvas renderer for single sprites",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-canvas/utils/index.ts"
+        },
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-canvas/hooks/use-sprite.ts"
+        },
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-canvas/sprite-canvas.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sprite-canvas-choice",
+      "type": "registry:component",
+      "title": "Sprite Canvas - Choice Animation",
+      "description": "A custom choice animation for sprite canvas",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-canvas/animations/choice.ts"
+        }
+      ],
+      "meta": {
+        "extends": ["sprite-canvas"]
+      }
+    },
+    {
+      "name": "sprite-canvas-transition",
+      "type": "registry:component",
+      "title": "Sprite Canvas - Transition Animation",
+      "description": "A custom transition animation for sprite canvas",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-canvas/animations/transition.ts"
+        }
+      ],
+      "meta": {
+        "extends": ["sprite-canvas"]
+      }
+    },
+    {
+      "name": "sprite-canvas-evolution",
+      "type": "registry:component",
+      "title": "Sprite Canvas - Evolution Animation",
+      "description": "A custom evolution animation for sprite canvas",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/sprite-canvas/animations/evolution.ts"
+        }
+      ],
+      "meta": {
+        "extends": ["sprite-canvas"]
+      }
+    },
+    {
       "name": "sprite-image",
       "type": "registry:component",
       "title": "Sprite Image",
@@ -165,6 +230,9 @@
           "animate-sprite-idle": "spriteIdle var(--tw-duration, 2.8s) steps(1) infinite",
           "animate-sprite-idleBlink": "spriteIdleBlink var(--tw-duration, 2.8s) steps(1) infinite"
         }
+      },
+      "meta": {
+        "hidden": true
       }
     },
     {
