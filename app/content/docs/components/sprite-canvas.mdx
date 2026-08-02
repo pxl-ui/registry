@@ -1,0 +1,70 @@
+---
+title: Sprite Canvas
+description: A canvas renderer for single sprites
+---
+import { Code } from '@astrojs/starlight/components';
+
+import Preview from '@/registry/pxl-ui/sprite-canvas/examples/sprite-canvas.tsx';
+import PreviewRaw from '@/registry/pxl-ui/sprite-canvas/examples/sprite-canvas.tsx?raw';
+
+import ChoiceAnimation from '@/registry/pxl-ui/sprite-canvas-choice/examples/sprite-canvas-choice.tsx';
+import ChoiceAnimationRaw from '@/registry/pxl-ui/sprite-canvas-choice/examples/sprite-canvas-choice.tsx?raw';
+
+import TransitionAnimation from '@/registry/pxl-ui/sprite-canvas-transition/examples/sprite-canvas-transition.tsx';
+import TransitionAnimationRaw from '@/registry/pxl-ui/sprite-canvas-transition/examples/sprite-canvas-transition.tsx?raw';
+
+import EvolutionAnimation from '@/registry/pxl-ui/sprite-canvas-evolution/examples/sprite-canvas-evolution.tsx';
+import EvolutionAnimationRaw from '@/registry/pxl-ui/sprite-canvas-evolution/examples/sprite-canvas-evolution.tsx?raw';
+
+A canvas renderer for single sprites
+
+
+<div class="not-content">
+  <Preview client:load />
+</div>
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas" lang="sh" />
+
+<Code code={PreviewRaw} lang="tsx" />
+
+### Extensions
+
+#### Choice Animation
+
+A custom choice animation for sprite canvas
+
+<div class="not-content">
+  <ChoiceAnimation client:load />
+</div>
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas-choice" lang="sh" />
+
+<Code code={ChoiceAnimationRaw} lang="tsx" />
+
+
+
+#### Transition Animation
+
+A custom transition animation for sprite canvas
+
+<div class="not-content">
+  <TransitionAnimation client:load />
+</div>
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas-transition" lang="sh" />
+
+<Code code={TransitionAnimationRaw} lang="tsx" />
+
+
+
+#### Evolution Animation
+
+A custom evolution animation for sprite canvas
+
+<div class="not-content">
+  <EvolutionAnimation client:load />
+</div>
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas-evolution" lang="sh" />
+
+<Code code={EvolutionAnimationRaw} lang="tsx" />

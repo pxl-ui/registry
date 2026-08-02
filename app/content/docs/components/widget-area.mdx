@@ -1,0 +1,25 @@
+---
+title: Widget Area
+description: Widget sizing container
+---
+import { Code } from '@astrojs/starlight/components';
+
+import Preview from '@/registry/pxl-ui/widget-area/examples/widget-area.tsx';
+import PreviewRaw from '@/registry/pxl-ui/widget-area/examples/widget-area.tsx?raw';
+
+import Sizes from '@/registry/pxl-ui/widget-area/examples/sizes.tsx';
+import SizesRaw from '@/registry/pxl-ui/widget-area/examples/sizes.tsx?raw';
+
+Widget sizing container
+
+<Preview client:load />
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/widget-area" lang="sh" />
+
+<Code code={PreviewRaw} lang="tsx" />
+
+### Sizes
+
+<Sizes client:load />
+
+<Code code={SizesRaw} lang="tsx" />

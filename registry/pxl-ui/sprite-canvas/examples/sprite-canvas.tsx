@@ -71,13 +71,15 @@ const ATLAS: Atlas = {
   },
 };
 
-export default function IdleExample() {
+export default function Preview() {
   return (
-    <SpriteCanvas
-      src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/sprites/tiny_chick.png"
-      animation="Idle"
-      size="lg"
-      atlas={ATLAS}
-    />
+    <div className="w-full min-h-92 flex items-center justify-center">
+      <SpriteCanvas
+        src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/sprites/tiny_chick.png"
+        animation="Idle"
+        size="lg"
+        atlas={ATLAS}
+      />
+    </div>
   );
 }

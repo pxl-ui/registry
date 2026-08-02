@@ -1,0 +1,50 @@
+---
+
+import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
+import Layout from "@/app/layouts/Layout.astro";
+import { url } from "@/app/utils";
+import { widgets } from "@/lib/registry";
+
+---
+
+<Layout>
+  <div class="flex min-w-0 flex-1 flex-col">
+    <div class="h-(--top-spacing) shrink-0">
+    </div>
+    <div
+      class="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-6 px-4 py-6 text-neutral-800 md:px-0 lg:py-8 dark:text-neutral-300">
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center justify-between md:items-start">
+            <h1 class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">Widgets</h1>
+          </div>
+          <p class="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">Here you can find
+            all the components available in the library. We are working on adding more components.</p>
+        </div>
+      </div>
+      <div class="prose flex-1">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-x-8 lg:gap-x-16 lg:gap-y-6 xl:gap-x-20">
+          {widgets.map((entry) => (
+            <a
+              class="inline-flex items-center gap-2 text-lg font-medium underline-offset-4 hover:underline md:text-base"
+              href={url(
+                `widgets/${entry.name}`
+              )}>
+              {entry.title ?? entry.name}
+            </a>
+          ))}
+        </div>
+      </div>
+      <BottomNavigation 
+        prev={{
+          label: "Introduction",
+          href: url("")
+        }}
+        next={{
+          label: widgets[0].title ?? widgets[0].name,
+          href: url(`widgets/${widgets[0].name}`)
+        }}
+      />
+    </div>
+  </div>
+</Layout>

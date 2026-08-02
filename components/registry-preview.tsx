@@ -29,7 +29,7 @@ export function RegistryPreview({ filePath }: Props) {
   return (
     <Suspense
       fallback={
-        <div className="animate-pulse w-full h-full bg-muted rounded" />
+        <div className="animate-pulse w-full h-full bg-muted pixel-color-muted-foreground pixel-border" />
       }
     >
       <Example />

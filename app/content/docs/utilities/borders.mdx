@@ -1,0 +1,40 @@
+---
+title: Borders
+sidebar:
+  order: 3
+description: Retro-styled borders
+---
+
+PXL-UI includes a `pixel-border` utility that can be used to display retro styled borders. This works together with the `pixel-color-*` and `pixel-size-*` utilities.
+
+
+<div class="not-content space-y-2">
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <h2 class="font-sans text-xl sm:w-30">sm</h2>
+    <p class="pixel-border pixel-color-border pixel-size-sm w-full h-10"></p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <h2 class="font-sans text-xl sm:w-30">md</h2>
+    <p class="pixel-border pixel-color-border pixel-size-md w-full h-10"></p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <h2 class="font-sans text-xl sm:w-30">lg</h2>
+    <p class="pixel-border pixel-color-border pixel-size-lg w-full h-10"></p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <h2 class="font-sans text-xl sm:w-30">colored</h2>
+    <p class="pixel-border pixel-color-red-500 pixel-size-md w-full h-10"></p>
+  </div>
+</div>
+
+Try to use the different sizes to represent visual hierarchy
+
+<div class="not content">
+  <div class="w-full sm:w-[60%] aspect-video pixel-border pixel-size-lg flex p-4">
+    <div class="w-[60%] aspect-video pixel-border pixel-size-md flex items-center justify-center">
+      <div class="w-[60%] h-5 pixel-border pixel-size-sm">
+      </div>
+    </div>
+  </div>
+</div>
+

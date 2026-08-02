@@ -15,32 +15,25 @@ export type SpriteCanvasHandle = {
 };
 
 type Props = {
-  /** URL de la imagen del spritesheet. */
+  /** Spritesheet image url. */
   src: string;
-  /** Definición del atlas de Aseprite (frames + frameTags). */
+  /** Aseprite atlas spritesheet definition (frames + frameTags). */
   atlas: Atlas;
-  /** Tamaño del sprite. Por defecto, el tamaño nativo indicado en el atlas. */
+  /** Size of the sprite. By default, the native size from the atlas. */
   size?: SpriteSize;
-  /** Nombre de un frameTag del atlas a reproducir en loop. */
+  /** frameTag name from the atlas to play in loop. */
   animation?: string;
   animationPayload?: unknown;
-  /** Frame estático a mostrar si no se indica `animation`. */
+  /** static frame to display if there's no animation. */
   frame?: string;
-  /** Tag al que volver tras animaciones puntuales (por defecto ninguno). */
+  /** animation to go back after playing other animations. */
   idleTag?: string;
-  /** Animaciones ad-hoc registradas para este canvas (evolutionEffect, choiceEffect, ...). */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  effects?: AnimationEffect<any, any>[];
+  /** ad-hoc animations registered for this canvas. */
+  effects?: AnimationEffect<unknown, unknown>[];
   className?: string;
   style?: CSSProperties;
 };
 
-/**
- * Canvas de sprite genérico y reutilizable. Renderiza declarativamente según
- * `animation`/`frame`, y expone `play()`/`loadSprite()` vía ref para control
- * imperativo (necesario para animaciones ad-hoc como evolution/choice, que
- * requieren callbacks de finalización y payloads extra).
- */
 export const SpriteCanvas = forwardRef<SpriteCanvasHandle, Props>(
   function SpriteCanvas(
     { src, atlas, size, animation, animationPayload, frame, idleTag, effects, className, style },

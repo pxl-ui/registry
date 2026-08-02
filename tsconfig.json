@@ -11,6 +11,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
+      "@/components/ui/pxl-ui/*": ["./registry/pxl-ui/*"],
+      "~/*": ["./app/*"],
       "@/*": ["./*"]
     }
   }

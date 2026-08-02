@@ -31,17 +31,19 @@ function AnimatedIconExample({ label, description, ...props }: Props) {
 
 export default function AnimatedIconExamples() {
   return (
-    <div className="grid grid-cols-4 w-full gap-2">
-      <AnimatedIconExample label="Blink" animation="blink" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Bounce" animation="bounce" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Float" animation="float" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Ping" animation="ping" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Pop" animation="pop" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Pulse" animation="pulse" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Shake" animation="shake" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Spin" animation="spin" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Swing" animation="swing" icon={PixelarticonsAlarmClock} />
-      <AnimatedIconExample label="Tada" animation="tada" icon={PixelarticonsAlarmClock} />
+    <div className="w-full min-h-92 flex items-center justify-center">
+      <div className="grid grid-cols-4 w-full gap-2">
+        <AnimatedIconExample label="Blink" animation="blink" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Bounce" animation="bounce" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Float" animation="float" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Ping" animation="ping" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Pop" animation="pop" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Pulse" animation="pulse" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Shake" animation="shake" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Spin" animation="spin" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Swing" animation="swing" icon={PixelarticonsAlarmClock} />
+        <AnimatedIconExample label="Tada" animation="tada" icon={PixelarticonsAlarmClock} />
+      </div>
     </div>
   )
 }

@@ -1,0 +1,148 @@
+---
+
+
+
+import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
+import Layout from "@/app/layouts/Layout.astro";
+import { url } from "@/app/utils";
+import { OpenInV0Button } from "@/components/open-in-v0-button";
+import { RegistryCommand } from "@/components/registry-command";
+import { RegistryPreview } from "@/components/registry-preview";
+import { ShowSourceButton } from "@/components/show-source-button";
+import { widgets, } from "@/lib/registry";
+
+const REGISTRY_URL = "pxl-ui/registry";
+const REPOSITORY_URL = `https://github.com/${REGISTRY_URL}`;
+
+export function getStaticPaths() {
+  return widgets.map(({ name }) => ({ params: { name } }));
+}
+
+const { name } = Astro.params;
+const entry = widgets.find(e => e.name === name);
+
+if (!entry) {
+  return Astro.redirect("/404");
+}
+
+const index = widgets.findIndex(r => r.name === name);
+
+const prev = {
+  label: index === 0 ? "Widgets" : (widgets[index - 1].title ?? widgets[index - 1].name),
+  href: url(
+    index === 0 ? "widgets" : `widgets/${widgets[index - 1].name}`
+  )
+}
+
+const next = widgets.length === index + 1 ? undefined : {
+  label: (widgets[index + 1].title ?? widgets[index + 1].name),
+  href: url(`widgets/${widgets[index + 1].name}`),
+}
+
+---
+
+<Layout>
+  <div class="flex min-w-0 flex-1 flex-col">
+    <div class="h-(--top-spacing) shrink-0">
+    </div>
+    <div
+      class="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-6 px-4 py-6 text-neutral-800 md:px-0 lg:py-8 dark:text-neutral-300">
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center justify-between md:items-start">
+            <h1 class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">{entry.title ?? entry.name}</h1>
+          </div>
+          <p class="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">
+            {entry.description}
+          </p>
+        </div>
+      </div>
+      <div class="prose flex-1">
+        {entry.preview &&<div
+          class="pixel-border pixel-color-muted-foreground bg-muted pixel-size-lg p-4"
+          style={{ minHeight: "400px" }}
+        >
+          <RegistryPreview
+            filePath={entry.preview}
+            client:visible
+          />
+        </div>}
+        <div>
+          <RegistryCommand client:visible registryId="pxl-ui/registry" registryComponent={entry.name} />
+        </div>
+      </div>
+      {entry.examples && entry.examples.length > 0 && (
+        <div>
+          <div class="flex items-center justify-between md:items-start">
+            <h2 class="scroll-m-24 text-2xl font-semibold tracking-tight sm:text-xl">
+              Examples
+            </h2>
+          </div>
+          {entry.examples.map(example => (
+            <div class="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-6 px-4 py-6 text-neutral-800 md:px-0 lg:py-8 dark:text-neutral-300">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between md:items-start">
+                    <h3 class="scroll-m-24 text-xl font-semibold tracking-tight sm:text-lg">{example.label}</h3>
+                  </div>
+                </div>
+                <div class="prose flex-1">
+                  <div
+                    class="flex flex-col items-center justify-center relative border rounded-lg p-4"
+                    style={{ minHeight: "400px" }}
+                  >
+                    <RegistryPreview
+                      filePath={example.path}
+                      client:visible
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      {entry.extensions && entry.extensions.length > 0 && (
+        <div>
+          <div class="flex items-center justify-between md:items-start">
+            <h2 class="scroll-m-24 text-2xl font-semibold tracking-tight sm:text-xl">
+              Extensions
+            </h2>
+          </div>
+          {entry.extensions.map(ext => (
+            <div class="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-6 px-4 py-6 text-neutral-800 md:px-0 lg:py-8 dark:text-neutral-300">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between md:items-start">
+                    <h3 class="scroll-m-24 text-xl font-semibold tracking-tight sm:text-lg">{ext.title ?? ext.name}</h3>
+                  </div>
+                  <p class="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">
+                    {ext.description}
+                  </p>
+                </div>
+                <div class="prose flex-1">
+                  {ext.preview && <div
+                    class="flex flex-col items-center justify-center relative border-foreground pixel-border p-4"
+                    style={{ minHeight: "400px" }}
+                  >
+                    <RegistryPreview
+                      filePath={ext.preview}
+                      client:visible
+                    />
+                  </div>}
+                  <div>
+                    <RegistryCommand client:visible registryId="pxl-ui/registry" registryComponent={ext.name} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      <BottomNavigation 
+        prev={prev}
+        next={next}
+      />
+    </div>
+  </div>
+</Layout>

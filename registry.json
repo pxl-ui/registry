@@ -12,7 +12,8 @@
     "registry/pxl-fonts/able-5/registry.json",
     "registry/pxl-fonts/monogram/registry.json",
     "registry/pxl-fonts/pixel-digivolve/registry.json",
-    "registry/pxl-icons/cursors/pixelarticons/registry.json"
+    "registry/pxl-icons/cursors/pixelarticons/registry.json",
+    "registry/pxl-widgets/registry.json"
   ],
   "items": [
     {
@@ -114,10 +115,10 @@
       }
     },
     {
-      "name": "gradiant-label",
+      "name": "text-stroke",
       "type": "registry:component",
-      "title": "Gradiant Label",
-      "description": "A label with gradiant colors to recreate retro style game indicators",
+      "title": "Text Stroke",
+      "description": "Text stroke effects to recreate retro style game indicators",
       "files": [
         {
           "type": "registry:component",
@@ -272,6 +273,30 @@
         {
           "type": "registry:component",
           "path": "registry/pxl-ui/animated-icon/animated-icon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "widget-area",
+      "type": "registry:component",
+      "title": "Widget Area",
+      "description": "Widget sizing container",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/widget-area/widget-area.tsx"
+        }
+      ]
+    },
+    {
+      "name": "anchor-grid",
+      "type": "registry:component",
+      "title": "Anchor Grid",
+      "description": "Grid-based widget sizing and positioning",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/pxl-ui/anchor-grid/anchor-grid.tsx"
         }
       ]
     }

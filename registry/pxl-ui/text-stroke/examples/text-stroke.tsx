@@ -1,0 +1,9 @@
+import { TextStroke } from "../text-stroke";
+
+export default function Preview() {
+  return (
+    <div className="w-full min-h-92 flex items-center justify-center">
+      <TextStroke variant="loot">+129 XP</TextStroke>
+    </div>
+  );
+}
