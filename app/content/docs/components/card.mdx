@@ -3,26 +3,37 @@ title: Card
 description: Card component
 draft: true
 ---
-import { Card, CardContent } from "@/registry/pxl-ui/card";
+import { Code } from '@astrojs/starlight/components';
+
+import Example from "~/components/example.astro";
+
+import Preview from '~/examples/card/preview.tsx';
+import PreviewRaw from '~/examples/card/preview.tsx?raw';
+
+import WithHeader from '~/examples/card/header.tsx';
+import WithHeaderRaw from '~/examples/card/header.tsx?raw';
+
+import WithScrollableContent from '~/examples/card/scrollable-content.tsx';
+import WithScrollableContentRaw from '~/examples/card/scrollable-content.tsx?raw';
 
 Use the Card component to render content that needs to be framed.
 
-<div class="not-content">
-  <div className="flex items-center justify-center min-h-92">
-    <Card size="lg">
-      <CardContent>
-        Hello World
-      </CardContent>
-    </Card>
-  </div>
-</div>
+<Example code={PreviewRaw}>
+  <Preview client:load />
+</Example>
 
-```html
-<div className="flex items-center justify-center min-h-92">
-  <Card size="lg">
-    <CardContent>
-      Hello World
-    </CardContent>
-  </Card>
-</div>
-```
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/card" lang="sh" />
+
+### With Header
+
+<Example code={WithHeaderRaw}>
+  <WithHeader client:load />
+</Example>
+
+
+### With Scrollable content
+
+<Example code={WithScrollableContentRaw}>
+  <WithScrollableContent client:load />
+</Example>
+

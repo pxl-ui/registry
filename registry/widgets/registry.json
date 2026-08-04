@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/widgets",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "day-view",
+      "type": "registry:block",
+      "title": "Day View",
+      "description": "A Day View widget with forecast and upcoming events",
+      "registryDependencies": [
+        "pxl-ui/registry/card",
+        "pxl-ui/registry/weather-icon"
+      ],
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "pxl/day-view.tsx",
+          "target": "@components/widgets/pxl/day-view.tsx"
+        }
+      ]
+    },
+    {
+      "name": "quests-log",
+      "type": "registry:block",
+      "title": "Quests Log",
+      "description": "A quests list with multiple categories",
+      "registryDependencies": [
+        "pxl-ui/registry/card"
+      ],
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "pxl/quests-log.tsx",
+          "target": "@components/widgets/pxl/quests-log.tsx"
+        }
+      ]
+    }
+  ]
+}

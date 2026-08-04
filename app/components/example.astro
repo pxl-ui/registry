@@ -1,0 +1,24 @@
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+import { cn } from '@/lib/utils';
+
+export type Props = {
+	code: string;
+	lang?: string;
+	class?: string;
+	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
+}
+
+const { code, lang = "tsx", class: className, style } = Astro.props;
+---
+<div class={cn(
+	"pixel-border pixel-color-muted-foreground bg-muted pixel-size-lg p-4 not-content",
+	className
+)}
+  style={style}
+>
+	<slot />
+	<Code code={code} lang={lang} />
+</div>

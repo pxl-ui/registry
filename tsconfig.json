@@ -11,9 +11,16 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
-      "@/components/ui/pxl-ui/*": ["./registry/pxl-ui/*"],
+      "~/examples/*": ["./examples/*"],
       "~/*": ["./app/*"],
-      "@/*": ["./*"]
+      "@/components/colors/*": ["./registry/colors/*"],
+      "@/components/fonts/*": ["./registry/fonts/*"],
+      "@/components/icons/*": ["./registry/icons/*"],
+      "@/components/styles/*": ["./registry/styles/*"],
+      "@/components/ui/*": ["./registry/ui/*"],
+      "@/components/widgets/*": ["./registry/widgets/*"],
+      "@/hooks/*": ["./registry/hooks/*"],
+      "@/lib/*": ["./registry/lib/*"],
     }
   }
 }

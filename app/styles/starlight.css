@@ -8,16 +8,16 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@import "@/registry/pxl-fonts/able-5/able-5.css";
-@import "@/registry/pxl-fonts/monogram/monogram.css";
-@import "@/registry/pxl-fonts/pixel-digivolve/pixel-digivolve.css";
+@import "@/components/fonts/pxl/able-5.css";
+@import "@/components/fonts/pxl/monogram.css";
+@import "@/components/fonts/pxl/pixel-digivolve.css";
 
-@import "@/registry/pxl-ui/utilities/border.css";
-@import "@/registry/pxl-ui/utilities/cursor.css";
-@import "@/registry/pxl-ui/utilities/filter.css";
-@import "@/registry/pxl-ui/utilities/marquee.css";
-@import "@/registry/pxl-ui/utilities/sprite.css";
-@import "@/registry/pxl-ui/utilities/text.css";
+@import "@/components/styles/pxl/border.css";
+@import "@/components/styles/pxl/cursor.css";
+@import "@/components/styles/pxl/filter.css";
+@import "@/components/styles/pxl/marquee.css";
+@import "@/components/styles/pxl/sprite.css";
+@import "@/components/styles/pxl/text.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -154,6 +154,8 @@
 
 :root {
   --sl-text-code-sm: 1.33rem;
+  --sl-line-height: 1.33rem;
+  --ec-codeLineHt: 1rem;
 
   --radius: 0.65rem;
   --background: oklch(1 0 0);
@@ -230,4 +232,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.expressive-code pre {
+  border: none;
+  /* --sl-line-height: 1rem; */
 }

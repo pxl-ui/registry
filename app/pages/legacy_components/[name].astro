@@ -1,15 +1,13 @@
 ---
 
-
-
-import BottomNavigation from "@/app/layouts/BottomNavigation.astro";
-import Layout from "@/app/layouts/Layout.astro";
-import { url } from "@/app/utils";
-import { OpenInV0Button } from "@/components/open-in-v0-button";
-import { RegistryCommand } from "@/components/registry-command";
-import { RegistryPreview } from "@/components/registry-preview";
-import { ShowSourceButton } from "@/components/show-source-button";
-import { components, } from "@/lib/registry";
+import { OpenInV0Button } from "~/components/open-in-v0-button";
+import { RegistryCommand } from "~/components/registry-command";
+import { RegistryPreview } from "~/components/registry-preview";
+import { ShowSourceButton } from "~/components/show-source-button";
+import BottomNavigation from "~/layouts/BottomNavigation.astro";
+import Layout from "~/layouts/Layout.astro";
+import { components, } from "~/lib/registry";
+import { url } from "~/lib/utils";
 
 const REGISTRY_URL = "pxl-ui/registry";
 const REPOSITORY_URL = `https://github.com/${REGISTRY_URL}`;
