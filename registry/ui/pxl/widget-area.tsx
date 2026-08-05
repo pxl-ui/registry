@@ -1,13 +1,13 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import type { PropsWithChildren } from "react";
 
-const widgetVariants = cva("size-full", {
+const widgetVariants = cva("widget", {
   variants: {
     size: {
-      sm: "max-w-41 max-h-41 aspect-square",
-      md: "max-h-41 max-w-86 aspect-86/41",
-      lg: "max-h-86 max-w-86 aspect-square",
-      xl: "max-h-86 max-w-176 aspect-43/22",
+      sm: "widget-size-sm aspect-widget-sm",
+      md: "widget-size-md aspect-widget-md",
+      lg: "widget-size-lg aspect-widget-lg",
+      xl: "widget-size-xl aspect-widget-xl",
     },
   },
   defaultVariants: {

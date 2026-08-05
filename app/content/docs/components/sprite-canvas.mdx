@@ -4,6 +4,8 @@ description: A canvas renderer for single sprites
 ---
 import { Code } from '@astrojs/starlight/components';
 
+import Example from "~/components/example.astro";
+
 import Preview from '~/examples/sprite-canvas/preview.tsx';
 import PreviewRaw from '~/examples/sprite-canvas/preview.tsx?raw';
 
@@ -18,14 +20,11 @@ import EvolutionAnimationRaw from '~/examples/sprite-canvas/evolution-animation.
 
 A canvas renderer for single sprites
 
-
-<div class="not-content">
+<Example code={PreviewRaw}>
   <Preview client:load />
-</div>
+</Example>
 
 <Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas" lang="sh" />
-
-<Code code={PreviewRaw} lang="tsx" />
 
 ### Extensions
 
@@ -33,38 +32,28 @@ A canvas renderer for single sprites
 
 A custom choice animation for sprite canvas
 
-<div class="not-content">
+<Example code={ChoiceAnimationRaw}>
   <ChoiceAnimation client:load />
-</div>
+</Example>
 
 <Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas-choice" lang="sh" />
-
-<Code code={ChoiceAnimationRaw} lang="tsx" />
-
-
 
 #### Transition Animation
 
 A custom transition animation for sprite canvas
 
-<div class="not-content">
+<Example code={TransitionAnimationRaw}>
   <TransitionAnimation client:load />
-</div>
+</Example>
 
 <Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas-transition" lang="sh" />
-
-<Code code={TransitionAnimationRaw} lang="tsx" />
-
-
 
 #### Evolution Animation
 
 A custom evolution animation for sprite canvas
 
-<div class="not-content">
+<Example code={EvolutionAnimationRaw}>
   <EvolutionAnimation client:load />
-</div>
+</Example>
 
 <Code code="pnpm dlx shadcn@latest add pxl-ui/registry/sprite-canvas-evolution" lang="sh" />
-
-<Code code={EvolutionAnimationRaw} lang="tsx" />

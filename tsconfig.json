@@ -21,6 +21,7 @@
       "@/components/widgets/*": ["./registry/widgets/*"],
       "@/hooks/*": ["./registry/hooks/*"],
       "@/lib/*": ["./registry/lib/*"],
+      "@/*": ["./registry/*"],
     }
   }
 }

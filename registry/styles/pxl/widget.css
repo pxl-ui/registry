@@ -1,0 +1,22 @@
+@utility widget-w-* {
+  --widget-width: --value(--widget-width-*, [length], [*]);
+}
+
+@utility widget-h-* {
+  --widget-height: --value(--widget-height-*, [length], [*]);
+}
+
+@utility widget-size-* {
+  --widget-width: --value(--widget-width-*, [length], [*]);
+  --widget-height: --value(--widget-height-*, [length], [*]);
+}
+
+@utility widget {
+  --w-width: var(--widget-width, var(--widget-width-sm));
+  --w-height: var(--widget-height, var(--widget-height-sm));
+
+  width: 100%;
+  height: 100%;
+  max-width: var(--w-width);
+  max-height: var(--w-height);
+}

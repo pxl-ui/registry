@@ -23,7 +23,7 @@
       "description": "PXL-UI Shadcn base",
       "extends": "none",
       "config": {
-        "style": "radix-lyra",
+        "style": "base-lyra",
         "iconLibrary": "lucide",
         "rtl": false,
         "menuColor": "default",

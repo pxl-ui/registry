@@ -4,6 +4,8 @@ description: Widget sizing container
 ---
 import { Code } from '@astrojs/starlight/components';
 
+import Example from "~/components/example.astro";
+
 import Preview from '~/examples/widget-area/preview.tsx';
 import PreviewRaw from '~/examples/widget-area/preview.tsx?raw';
 
@@ -12,14 +14,14 @@ import SizesRaw from '~/examples/widget-area/sizes.tsx?raw';
 
 Widget sizing container
 
-<Preview client:load />
+<Example code={PreviewRaw}>
+  <Preview client:load />
+</Example>
 
 <Code code="pnpm dlx shadcn@latest add pxl-ui/registry/widget-area" lang="sh" />
 
-<Code code={PreviewRaw} lang="tsx" />
-
 ### Sizes
 
-<Sizes client:load />
-
-<Code code={SizesRaw} lang="tsx" />
+<Example code={SizesRaw}>
+  <Sizes client:load />
+</Example>

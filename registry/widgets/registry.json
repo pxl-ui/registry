@@ -9,6 +9,7 @@
       "title": "Day View",
       "description": "A Day View widget with forecast and upcoming events",
       "registryDependencies": [
+        "pxl-ui/registry/badge",
         "pxl-ui/registry/card",
         "pxl-ui/registry/weather-icon"
       ],

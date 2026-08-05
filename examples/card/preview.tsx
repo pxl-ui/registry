@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/pxl/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/pxl/card";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
 export default function CardPreview() {
@@ -6,7 +6,12 @@ export default function CardPreview() {
     <div className="flex items-center justify-center min-h-92">
       <WidgetArea size="md">
       <Card size="lg" className="size-full">
-        <CardContent>Hello World</CardContent>
+          <CardHeader>
+            <CardTitle>Hello World!</CardTitle>
+          </CardHeader>
+        <CardContent>
+          This is a Card
+        </CardContent>
       </Card>
       </WidgetArea>
     </div>

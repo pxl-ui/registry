@@ -5,7 +5,7 @@ import { Code } from '@astrojs/starlight/components';
 import { cn } from '@/lib/utils';
 
 export type Props = {
-	code: string;
+	code?: string;
 	lang?: string;
 	class?: string;
 	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
@@ -20,5 +20,5 @@ const { code, lang = "tsx", class: className, style } = Astro.props;
   style={style}
 >
 	<slot />
-	<Code code={code} lang={lang} />
+	{code && <Code code={code} lang={lang} />}
 </div>

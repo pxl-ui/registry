@@ -27,7 +27,11 @@
           "radius-2xl": "calc(var(--radius) * 1.8)",
           "radius-3xl": "calc(var(--radius) * 2.2)",
           "radius-4xl": "calc(var(--radius) * 2.6)",
-          "text-2xs": "0.625rem"
+          "text-2xs": "0.625rem",
+          "container-7xs": "8rem",
+          "container-6xs": "10rem",
+          "container-5xs": "12rem",
+          "container-4xs": "14rem"
         },
         "light": {
           "radius": "0.65rem",
@@ -79,6 +83,22 @@
       ],
       "css": {
         "@import \"@/components/styles/pxl/cursor.css\"": {}
+      }
+    },
+    {
+      "name": "styles-gradients",
+      "type": "registry:style",
+      "cssVars": {
+        "theme": {
+          "background-image-chrome": "linear gradient(to bottom, var(--color-white), var(--color-gray-400), var(--color-gray-300))",
+          "background-image-cryo": "linear gradient(to bottom, var(--color-white), var(--color-cyan-300), var(--color-blue-600))",
+          "background-image-fire": "linear gradient(to bottom, var(--color-yellow-300), var(--color-orange-500), var(--color-red-600))",
+          "background-image-loot": "linear gradient(to bottom, var(--color-yellow-300), var(--color-orange-400), var(--color-yellow-700))",
+          "background-image-plasma": "linear gradient(to bottom right, var(--color-fuchsia-500), var(--color-purple-600), var(--color-cyan-400))",
+          "background-image-toxic": "linear gradient(to bottom right, var(--color-green-200), var(--color-green-400), var(--color-green-800))",
+          "background-image-shadow": "linear gradient(to bottom right, var(--color-purple-300), var(--color-purple-700), var(--color-purple-950))",
+          "background-image-synthwave": "linear gradient(to bottom, var(--color-pink-300), var(--color-pink-500), var(--color-orange-400), var(--color-yellow-300))"
+        }
       }
     },
     {
@@ -139,6 +159,38 @@
           "pixel-size-sm": "1px",
           "pixel-size-md": "2px",
           "pixel-size-lg": "4px"
+        }
+      }
+    },
+    {
+      "name": "styles-widget",
+      "type": "registry:style",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "pxl/widget.css",
+          "target": "@components/styles/pxl/widget.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/widget.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "aspect-widget-sm": "1/1",
+          "aspect-widget-md": "86/41",
+          "aspect-widget-lg": "1/1",
+          "aspect-widget-xl": "43/22",
+          "widget-width-sm": "calc(var(--spacing) * 41)",
+          "widget-height-sm": "calc(var(--spacing) * 41)",
+          "widget-width-md": "calc(var(--spacing) * 86)",
+          "widget-height-md": "calc(var(--spacing) * 41)",
+          "widget-width-lg": "calc(var(--spacing) * 86)",
+          "widget-height-lg": "calc(var(--spacing) * 86)",
+          "widget-width-xl": "calc(var(--spacing) * 176)",
+          "widget-height-xl": "calc(var(--spacing) * 86)",
+          "container-widget-md": "calc(var(--spacing) * 41)",
+          "container-widget-xl": "calc(var(--spacing) * 86)"
         }
       }
     }

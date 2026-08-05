@@ -33,12 +33,21 @@
       ]
     },
     {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "Badge",
+      "files": [
+        {
+          "path": "pxl/badge.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/badge.tsx"
+        }
+      ]
+    },
+    {
       "name": "card",
       "type": "registry:component",
       "title": "Card",
-      "registryDependencies": [
-        "card"
-      ],
       "files": [
         {
           "path": "pxl/card.tsx",
@@ -130,6 +139,9 @@
       "type": "registry:component",
       "title": "Widget Area",
       "description": "Widget sizing container",
+      "registryDependencies": [
+        "pxl-ui/registry/styles-widget"
+      ],
       "files": [
         {
           "path": "pxl/widget-area.tsx",

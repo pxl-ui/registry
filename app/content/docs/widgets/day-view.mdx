@@ -3,10 +3,17 @@ title: Day View
 description: A Day View widget with forecast and upcoming events.
 draft: true
 ---
-import DayView from "~/examples/day-view/preview";
+import { Code } from '@astrojs/starlight/components';
+
+import Example from "~/components/example.astro";
+
+import Preview from "~/examples/day-view/preview";
+import PreviewRaw from "~/examples/day-view/preview?raw";
 
 A Day View widget with forecast and upcoming events
 
-<div class="not-content">
-  <DayView />
-</div>
+<Example code={PreviewRaw}>
+  <Preview client:load />
+</Example>
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/day-view" lang="sh" />

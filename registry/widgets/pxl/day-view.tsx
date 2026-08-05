@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/pxl/badge";
 import {
   Card,
   CardContent,
@@ -22,49 +23,30 @@ export function DayView({ className }: Props) {
             daylight="day"
           />
         </div>
-          <div className="grid grid-cols-2 gap-(--card-spacing) h-full">
-              
-            <div className="flex flex-col justify-between">
-              <div>
-                <h2 className="font-sans text-xl leading-3">
-                  Viernes, 7 de Julio
-                </h2>
-                <p className="grayscale line-clamp-1">
-                  San Fermín
-                </p>
-              </div>
-
-              <div className="flex flex-col">
-                <div className="flex flex-row gap-1 items-end">
-                  <span className="font-heading text-2xl leading-6">
-                    25º C
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="leading-4 text-sm">
-                    Sol y Nubes
-                  </h3>
-                  <p className="leading-4 text-sm">
-                    21 Mín, 22 Max
-                  </p>
-                </div>
-
-              </div>
-
+        <div className="grid grid-cols-2 gap-(--card-spacing) h-full">
+          <div className="flex flex-col justify-between">
+            <div>
+              <h2 className="font-sans text-xl leading-3">7 de Julio</h2>
+              <p className="grayscale line-clamp-1">San Fermín</p>
             </div>
 
-
+            <div className="flex flex-col">
+              <div className="flex flex-row gap-1 items-end">
+                <span className="font-heading text-2xl leading-6">25°C</span>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="leading-4 text-sm">Sol y Nubes</h3>
+                <p className="leading-4 text-sm">21 Mín, 22 Max</p>
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-col gap-2">
             <div>
-              <h3 className="pixel-notch inline-flex h-4 items-center bg-primary px-4 leading-3 text-primary-foreground font-heading font-bold italic text-2xs truncate">
-                Mañana
-              </h3>
+              <Badge>Mañana</Badge>
             </div>
-
           </div>
-
-          </div>
+        </div>
       </CardContent>
     </Card>
   );

@@ -1,0 +1,18 @@
+---
+title: Badge
+description: Badge component
+draft: true
+---
+import { Code } from '@astrojs/starlight/components';
+
+import Example from "~/components/example.astro";
+
+import Preview from '~/examples/badge/preview.tsx';
+import PreviewRaw from '~/examples/badge/preview.tsx?raw';
+
+
+<Example code={PreviewRaw}>
+  <Preview client:load />
+</Example>
+
+<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/badge" lang="sh" />

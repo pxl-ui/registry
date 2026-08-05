@@ -1,13 +1,13 @@
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
-import { CopyIcon } from "~/components/ui/icons";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "~/components/ui/tooltip";
+} from "@/components/ui/tooltip";
+import { CopyIcon } from "~/components/ui/icons";
 
 type Props = {
   command?: "add" | "list";
@@ -15,7 +15,11 @@ type Props = {
   registryComponent?: string;
 };
 
-export function RegistryCommand({ command = "add", registryId, registryComponent }: Props) {
+export function RegistryCommand({
+  command = "add",
+  registryId,
+  registryComponent,
+}: Props) {
   const commandStr = registryComponent
     ? `pnpm dlx shadcn@latest ${command} ${registryId}/${registryComponent}`
     : `pnpm dlx shadcn@latest ${command} ${registryId}`;
@@ -36,7 +40,7 @@ export function RegistryCommand({ command = "add", registryId, registryComponent
       </pre>
       <TooltipProvider>
         <Tooltip open={copied || tooltipOpen} onOpenChange={setTooltipOpen}>
-          <TooltipTrigger asChild>
+          <TooltipTrigger render={
             <Button
               variant="ghost"
               size="icon"
@@ -45,7 +49,7 @@ export function RegistryCommand({ command = "add", registryId, registryComponent
             >
               <CopyIcon className="size-4" />
             </Button>
-          </TooltipTrigger>
+          } />
           <TooltipContent>
             {copied ? "Copied!" : "Copy to clipboard"}
           </TooltipContent>

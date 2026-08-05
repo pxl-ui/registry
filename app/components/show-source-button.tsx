@@ -19,12 +19,14 @@ export function ShowSourceButton({
       aria-label="Show Source"
       variant="outline"
       className={cn("h-7 gap-1 rounded-lg px-3 text-xs", className)}
-      asChild
+      render={
+        <a href={url} target="_blank" rel="noreferrer">
+          <ExternalLinkIcon className="size-4" />
+          Show Source
+        </a>
+      }
     >
-      <a href={url} target="_blank" rel="noreferrer">
-        <ExternalLinkIcon className="size-4" />
-        Show Source
-      </a>
+      
     </Button>
   );
 }
