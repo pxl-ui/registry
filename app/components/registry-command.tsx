@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/pxl/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/pxl/tooltip";
 import { CopyIcon } from "~/components/ui/icons";
 
 type Props = {

@@ -1,0 +1,8 @@
+@theme {
+  --color-paperback-paper-50: oklch(94.674% 0.0075 164.934);
+  --color-paperback-paper-100: oklch(80.367% 0.0166 148.361);
+  --color-paperback-paper-200: oklch(69.987% 0.0297 107.144);
+  --color-paperback-paper-700: oklch(45.676% 0.0307 285.119);
+  --color-paperback-paper-800: oklch(30.224% 0.0213 42.075);
+  --color-paperback-paper-950: oklch(23.92% 0.0059 337.754);
+}

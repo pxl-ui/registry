@@ -8,13 +8,13 @@
 @import "@/components/fonts/pxl/monogram.css";
 @import "@/components/fonts/pxl/pixel-digivolve.css";
 
-@import "@/components/styles/pxl/border.css";
-@import "@/components/styles/pxl/cursor.css";
-@import "@/components/styles/pxl/filter.css";
-@import "@/components/styles/pxl/marquee.css";
-@import "@/components/styles/pxl/sprite.css";
-@import "@/components/styles/pxl/text.css";
-@import "@/components/styles/pxl/widget.css";
+@import "@/components/styles/pxl/animations.css";
+@import "@/components/styles/pxl/borders.css";
+@import "@/components/styles/pxl/cursors.css";
+@import "@/components/styles/pxl/filters.css";
+@import "@/components/styles/pxl/images.css";
+@import "@/components/styles/pxl/texts.css";
+@import "@/components/styles/pxl/widgets.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -53,6 +53,14 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -139,7 +147,6 @@
   --widget-width-xl: calc(var(--spacing) * 176);
   --widget-height-xl: calc(var(--spacing) * 86);
 
-
   --container-7xs: 8rem;
   --container-6xs: 10rem;
   --container-5xs: 12rem;
@@ -147,7 +154,6 @@
   --container-widget-md: calc(var(--spacing) * 41);
   --container-widget-xl: calc(var(--spacing) * 86);
 }
-
 
 :root {
   --radius: 0.65rem;
@@ -157,8 +163,8 @@
   --card-foreground: oklch(0.1929 0.0336 42.11);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.1929 0.0336 42.11);
-  --primary: oklch(0.1929 0.0336 42.11);
-  --primary-foreground: oklch(0.985 0 0);
+  /* --primary: oklch(0.1929 0.0336 42.11); */
+  /* --primary-foreground: oklch(0.985 0 0); */
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.1929 0.0336 42.11);
   --muted: oklch(0.97 0 0);
@@ -182,6 +188,18 @@
   --sidebar-accent-foreground: oklch(0.1929 0.0336 42.11);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.8176 0.0057 274.95);
+
+
+  --primary: var(--color-blue-50);
+  --primary-foreground: var(--color-blue-500);
+  --info: var(--color-teal-50);
+  --info-foreground: var(--color-teal-500);
+  --success: var(--color-green-50);
+  --success-foreground: var(--color-green-500);
+  --warning: var(--color-orange-50);
+  --warning-foreground: var(--color-orange-500);
+  --danger: var(--color-red-50);
+  --danger-foreground: var(--color-red-500);
 }
 
 .dark {

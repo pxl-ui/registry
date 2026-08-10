@@ -1,0 +1,27 @@
+---
+title: Wheel List
+description: Wheel List Selection menu
+---
+import { InstallCommand } from '~/components';
+
+import Example from "~/components/example.astro";
+
+import Preview from '~/examples/wheel-list/preview';
+import PreviewRaw from '~/examples/wheel-list/preview.tsx?raw';
+
+import InCard from '~/examples/wheel-list/in-card';
+import InCardRaw from '~/examples/wheel-list/in-card.tsx?raw';
+
+Wheel List Selection menu
+
+<Example code={PreviewRaw}>
+  <Preview client:load />
+</Example>
+
+<InstallCommand item="wheel-list"  />
+
+## In card
+
+<Example code={InCardRaw}>
+  <InCard client:load />
+</Example>

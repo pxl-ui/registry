@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/paperback.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-paperback-paper-50);
+  --foreground: var(--color-paperback-paper-200);
+  --card: var(--color-paperback-paper-50);
+  --card-foreground: var(--color-paperback-paper-200);
+  --popover: var(--color-paperback-paper-50);
+  --popover-foreground: var(--color-paperback-paper-200);
+  --muted: var(--color-paperback-paper-50);
+  --muted-foreground: var(--color-paperback-paper-100);
+  --accent: var(--color-paperback-paper-100);
+  --accent-foreground: var(--color-paperback-paper-700);
+  --border: var(--color-paperback-paper-200);
+  --input: var(--color-paperback-paper-200);
+  --ring: var(--color-paperback-paper-700);
+}
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-paperback-paper-950);
+  --foreground: var(--color-paperback-paper-100);
+  --card: var(--color-paperback-paper-700);
+  --card-foreground: var(--color-paperback-paper-100);
+  --popover: var(--color-paperback-paper-800);
+  --popover-foreground: var(--color-paperback-paper-100);
+  --muted: var(--color-paperback-paper-200);
+  --muted-foreground: var(--color-paperback-paper-100);
+  --accent: var(--color-paperback-paper-200);
+  --accent-foreground: var(--color-paperback-paper-50);
+  --border: var(--color-paperback-paper-700);
+  --input: var(--color-paperback-paper-700);
+  --ring: var(--color-paperback-paper-200);
+
+}

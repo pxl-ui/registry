@@ -15,6 +15,11 @@ export default defineConfig({
     react(),
     starlight({
       title: "PXL UI",
+      expressiveCode: {
+        shiki: {
+          bundledLangs: ["sh", "bash", "typescript", "tsx"],
+        },
+      },
       social: [
         {
           icon: "github",
@@ -42,10 +47,6 @@ export default defineConfig({
         {
           label: "Recipes",
           items: [{ autogenerate: { directory: "recipes" } }],
-        },
-        {
-          label: "Customization",
-          items: [{ autogenerate: { directory: "customization" } }],
         },
       ],
       customCss: ["./app/styles/starlight.css"],

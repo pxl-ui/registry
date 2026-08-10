@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel:ELSH@0..100&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-geist-pixel: 'Geist Pixel', 'Inter Variable', sans-serif;
+}
+
+@utility geist-pixel-square {
+  font-variation-settings: "ELSH" 0;
+}
+
+@utility geist-pixel-circle {
+  font-variation-settings: "ELSH" 20;
+}
+
+@utility geist-pixel-grid {
+  font-variation-settings: "ELSH" 40;
+}
+
+@utility geist-pixel-triangle {
+  font-variation-settings: "ELSH" 60;
+}
+
+@utility geist-pixel-line {
+  font-variation-settings: "ELSH" 80;
+}

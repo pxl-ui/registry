@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/pxl/button";
 import {
   SpriteCanvas,
   type SpriteCanvasHandle,
@@ -20,7 +20,7 @@ export default function ChoiceExample() {
   }
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 items-center">
       <SpriteCanvas
         animation="Idle"
         ref={ref}

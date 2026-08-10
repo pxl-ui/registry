@@ -1,0 +1,26 @@
+GIMP Palette
+Name: DMG-01
+#
+# Description: Colors sampled from many different photographs and compared against a real Gameboy. There's no definitive "real" Gameboy palette, and every physical one will have slight differences, but I feel this is the most hardware-accurate one overall.
+# Colors: 4
+#
+
+230 214 156 Red 50
+180 165 107 Red 200
+123 113 98  Red 700
+57  56  40  Red 950
+
+215 232 149 Green 50
+174 196 64  Green 200
+82  127 57  Green 700
+32  70  49  Green 950
+
+224 240 232 Blue 50
+168 192 176 Blue 200
+80  120 104 Blue 700
+25  48  48  Blue 950
+
+154 158 63	Accurate 50
+73  107 34	Accurate 200
+14  69  11	Accurate 700
+27  42  9	Accurate 950

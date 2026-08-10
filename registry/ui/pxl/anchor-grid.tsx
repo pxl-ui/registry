@@ -62,6 +62,7 @@ export function AnchorGrid({
   widgets = [],
   showGridLines = false,
 }: Props) {
+  console.log(gap);
   const cellSize = useMemo(
     () => computeCellSize(containerWidth, containerHeight, cols, rows, gap),
     [containerWidth, containerHeight, cols, rows, gap]
@@ -90,19 +91,29 @@ export function AnchorGrid({
       <div
         className="relative"
         style={{
-          border: showGridLines ? "1px solid rgba(0,0,0,0.16)" : "none",
+          border: showGridLines ? "1px solid var(--border)" : "none",
           width: gridPixelWidth,
           height: gridPixelHeight,
           display: "grid",
           gridTemplateColumns: `repeat(${cols}, ${cellSize}px)`,
           gridTemplateRows: `repeat(${rows}, ${cellSize}px)`,
           gap: `${gap}px`,
-          backgroundImage:
-            showGridLines && gap === 0
-              ? `linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-                 linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)`
-              : "none",
-          backgroundSize: `${cellSize}px ${cellSize}px`,
+          backgroundImage: showGridLines
+            ? `
+              linear-gradient(
+                to right,
+                var(--border) 1px,
+                transparent 1px
+              ),
+              linear-gradient(
+                to bottom,
+                var(--border) 1px,
+                transparent 1px
+              )
+            `
+            : "none",
+
+          backgroundSize: `${cellSize + gap}px ${cellSize + gap}px`,
         }}
       >
         {widgets.map((widget) => {

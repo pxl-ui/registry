@@ -3,9 +3,7 @@ title: Quests Log
 description: A quests list with multiple categories
 draft: true
 ---
-import { Code } from '@astrojs/starlight/components';
-
-import Example from "~/components/example.astro";
+import { Example, InstallCommand } from '~/components';
 
 import Preview from "~/examples/quests-log/preview";
 import PreviewRaw from "~/examples/quests-log/preview?raw";
@@ -16,4 +14,4 @@ A quests list with multiple categories
   <Preview client:load />
 </Example>
 
-<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/quests-log" lang="sh" />
+<InstallCommand item="quests-log" />

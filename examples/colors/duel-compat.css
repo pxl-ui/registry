@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/duel-compat.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: oklch(97.547% 0.0045 258.325);
+  --foreground: oklch(51.523% 0.016 258.366);
+  --card: oklch(97.547% 0.0045 258.325);
+  --card-foreground: oklch(51.523% 0.016 258.366);
+  --popover: oklch(97.547% 0.0045 258.325);
+  --popover-foreground: oklch(51.523% 0.016 258.366);
+  --muted: oklch(86.227% 0.0123 259.824);
+  --muted-foreground: oklch(63.371% 0.0222 257.497);
+  --accent: oklch(86.227% 0.0123 259.824);
+  --accent-foreground: oklch(38.999% 0.0072 264.484);
+  --border: oklch(63.371% 0.0222 257.497);
+  --input: oklch(63.371% 0.0222 257.497);
+  --ring: oklch(51.523% 0.016 258.366);
+
+  --primary: oklch(69.919% 0.1232 223.394);
+  --primary-foreground: oklch(47.449% 0.0854 223.143);
+  --info: oklch(71.946% 0.1333 177.12);
+  --info-foreground: oklch(47.866% 0.0815 197.041);
+  --success: oklch(66.705% 0.1503 126.171);
+  --success-foreground: oklch(41.207% 0.1124 140.792);
+  --danger: oklch(82.138% 0.111 357.357);
+  --danger-foreground: oklch(61.402% 0.1789 11.189);
+  --warning: oklch(85.061% 0.0976 88.609);
+  --warning-foreground: oklch(59.743% 0.0684 72.123);
+}
+
+.dark, [data-theme="dark"] {
+  --background: oklch(0% 0 0);
+  --foreground: oklch(86.227% 0.0123 259.824);
+  --card: oklch(38.999% 0.0072 264.484);
+  --card-foreground: oklch(86.227% 0.0123 259.824);
+  --popover: oklch(25.51% 0.0015 197.063);
+  --popover-foreground: oklch(86.227% 0.0123 259.824);
+  --muted: oklch(51.523% 0.016 258.366);
+  --muted-foreground: oklch(74.824% 0.0195 258.361);
+  --accent: oklch(51.523% 0.016 258.366);
+  --accent-foreground: oklch(97.547% 0.0045 258.325);
+  --border: oklch(51.523% 0.016 258.366);
+  --input: oklch(51.523% 0.016 258.366);
+  --ring: oklch(63.371% 0.0222 257.497);
+
+
+  --primary: oklch(38.834% 0.0703 219.117);
+  --primary-foreground: oklch(84.043% 0.096 232.471);
+  --success: oklch(36.284% 0.0934 144.629);
+  --success-foreground: oklch(79.063% 0.176 122.996);
+  --danger: oklch(49.777% 0.1337 9.307);
+  --danger-foreground: oklch(90.689% 0.0857 326.256);
+  --warning: oklch(51.463% 0.0567 66.007);
+  --warning-foreground: oklch(93.453% 0.0913 96.298);
+  --info: oklch(40.156% 0.0722 218.207);
+  --info-foreground: oklch(81.404% 0.1396 192.45);
+}

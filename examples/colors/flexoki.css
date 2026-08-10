@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/flexoki.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-flexoki-paper);
+  --foreground: var(--color-flexoki-black);
+  --card: var(--color-flexoki-base-50);
+  --card-foreground: var(--color-flexoki-base-950);
+  --popover: var(--color-flexoki-base-100);
+  --popover-foreground: var(--color-flexoki-base-950);
+  --muted: var(--color-flexoki-base-300);
+  --muted-foreground: var(--color-flexoki-base-700);
+  --accent: var(--color-flexoki-base-150);
+  --accent-foreground: var(--color-flexoki-base-950);
+  --border: var(--color-flexoki-base-850);
+  --input: var(--color-flexoki-base-850);
+  --ring: var(--color-flexoki-base-700);
+
+  --primary: var(--color-flexoki-blue-100);
+  --primary-foreground: var(--color-flexoki-blue-600);
+  --danger: var(--color-flexoki-red-100);
+  --danger-foreground: var(--color-flexoki-red-600);
+  --warning: var(--color-flexoki-orange-100);
+  --warning-foreground: var(--color-flexoki-orange-600);
+  --success: var(--color-flexoki-green-100);
+  --success-foreground: var(--color-flexoki-green-600);
+  --info: var(--color-flexoki-cyan-100);
+  --info-foreground: var(--color-flexoki-cyan-600);
+}
+
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-flexoki-black);
+  --foreground: var(--color-flexoki-base-200);
+  --card: var(--color-flexoki-base-950);
+  --card-foreground: var(--color-flexoki-base-50);
+  --popover: var(--color-flexoki-base-900);
+  --popover-foreground: var(--color-flexoki-base-50);
+  --muted: var(--color-flexoki-base-700);
+  --muted-foreground: var(--color-flexoki-base-300);
+  --accent: var(--color-flexoki-base-850);
+  --accent-foreground: var(--color-flexoki-base-50);
+  --border: var(--color-flexoki-base-150);
+  --input: var(--color-flexoki-base-150);
+  --ring: var(--color-flexoki-base-300);
+
+  --primary: var(--color-flexoki-blue-800);
+  --primary-foreground: var(--color-flexoki-blue-400);
+  --danger: var(--color-flexoki-red-800);
+  --danger-foreground: var(--color-flexoki-red-400);
+  --warning: var(--color-flexoki-orange-800);
+  --warning-foreground: var(--color-flexoki-orange-400);
+  --success: var(--color-flexoki-green-800);
+  --success-foreground: var(--color-flexoki-green-400);
+  --info: var(--color-flexoki-cyan-800);
+  --info-foreground: var(--color-flexoki-cyan-400);
+}

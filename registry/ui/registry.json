@@ -62,13 +62,29 @@
       "title": "Marquee Text",
       "description": "Marquee animated text for long texts on tiny screens",
       "registryDependencies": [
-        "pxl-ui/registry/styles-marquee"
+        "pxl-ui/registry/styles-animations"
       ],
       "files": [
         {
           "path": "pxl/marquee-text.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/marquee-text.tsx"
+        }
+      ]
+    },
+    {
+      "name": "reveal",
+      "type": "registry:component",
+      "title": "Reveal",
+      "description": "Content display/hide animation",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "pxl/wheel-list.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/wheel-list.tsx"
         }
       ]
     },
@@ -95,7 +111,8 @@
       "title": "Sprite Image",
       "description": "A pixelated sprite image",
       "registryDependencies": [
-        "pxl-ui/registry/styles-sprite"
+        "pxl-ui/registry/styles-animations",
+        "pxl-ui/registry/styles-images"
       ],
       "files": [
         {
@@ -111,7 +128,7 @@
       "title": "Text Stroke",
       "description": "Text stroke effects to recreate retro style game indicators",
       "registryDependencies": [
-        "pxl-ui/registry/styles-text"
+        "pxl-ui/registry/styles-texts"
       ],
       "files": [
         {
@@ -135,12 +152,28 @@
       ]
     },
     {
+      "name": "wheel-list",
+      "type": "registry:component",
+      "title": "Wheel List",
+      "description": "Wheel List Selection menu",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "pxl/wheel-list.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/wheel-list.tsx"
+        }
+      ]
+    },
+    {
       "name": "widget-area",
       "type": "registry:component",
       "title": "Widget Area",
       "description": "Widget sizing container",
       "registryDependencies": [
-        "pxl-ui/registry/styles-widget"
+        "pxl-ui/registry/styles-widgets"
       ],
       "files": [
         {

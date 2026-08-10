@@ -13,7 +13,8 @@ const buttonVariants = cva(
         false: "",
       },
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80",
+        default: "bg-foreground text-background hover:bg-foreground/80",
+        primary: "bg-primary text-primary-foreground hover:bg-primary/80",
         outline:
           "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
@@ -53,53 +54,6 @@ const buttonVariants = cva(
   },
 );
 
-export function ButtonBorders({
-  variant,
-  size,
-}: VariantProps<typeof buttonVariants>) {
-  if (size === "icon") {
-    return (
-      <>
-        <div className="absolute top-0 left-0 w-full h-1.25 md:h-1.5 bg-foreground dark:bg-ring pointer-events-none" />
-        <div className="absolute bottom-0 w-full h-1.25 md:h-1.5 bg-foreground dark:bg-ring pointer-events-none" />
-        <div className="absolute top-1 -left-1 w-1.25 md:w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
-        <div className="absolute bottom-1 -left-1 w-1.25 md:w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
-        <div className="absolute top-1 -right-1 w-1.25 md:w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
-        <div className="absolute bottom-1 -right-1 w-1.25 md:w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
-      </>
-    );
-  }
-
-  if (variant !== "ghost" && variant !== "link") {
-    return (
-      <>
-        {/* Pixelated border */}
-        <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute -bottom-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute top-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute top-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute bottom-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute bottom-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute top-1.5 -left-1.5 h-[calc(100%-12px)] w-1.5 bg-foreground dark:bg-ring" />
-        <div className="absolute top-1.5 -right-1.5 h-[calc(100%-12px)] w-1.5 bg-foreground dark:bg-ring" />
-        {variant !== "outline" && (
-          <>
-            {/* Top shadow */}
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-foreground/20" />
-            <div className="absolute top-1.5 left-0 w-3 h-1.5 bg-foreground/20" />
-
-            {/* Bottom shadow */}
-            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-foreground/20" />
-            <div className="absolute bottom-1.5 right-0 w-3 h-1.5 bg-foreground/20" />
-          </>
-        )}
-      </>
-    );
-  }
-}
-
 type Props<T extends ElementType> = ButtonPrimitive.Props &
   VariantProps<typeof buttonVariants> & {
     as?: T;
@@ -131,14 +85,9 @@ function Button<T extends ElementType = "button">({
       {asChild ? (
         <span className="relative inline-flex items-center justify-center gap-1.5">
           {children}
-
-          {borders && <ButtonBorders size={size} variant={variant} />}
         </span>
       ) : (
-        <>
-          {children}
-          {borders && <ButtonBorders size={size} variant={variant} />}
-        </>
+        children
       )}
     </ButtonPrimitive>
   );

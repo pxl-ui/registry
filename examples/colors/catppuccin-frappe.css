@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/catppuccin-frappe.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-catppuccin-frappe-neutral-850);
+  --foreground: var(--color-catppuccin-frappe-neutral-50);
+  --card: var(--color-catppuccin-frappe-neutral-900);
+  --card-foreground: var(--color-catppuccin-frappe-neutral-50);
+  --popover: var(--color-catppuccin-frappe-neutral-950);
+  --popover-foreground: var(--color-catppuccin-frappe-neutral-50);
+  --muted: var(--color-catppuccin-frappe-neutral-800);
+  --muted-foreground: var(--color-catppuccin-frappe-neutral-200);
+  --accent: var(--color-catppuccin-frappe-neutral-700);
+  --accent-foreground: var(--color-catppuccin-frappe-neutral-50);
+  --border: var(--color-catppuccin-frappe-neutral-600);
+  --input: var(--color-catppuccin-frappe-neutral-600);
+  --ring: var(--color-catppuccin-frappe-neutral-300);
+
+  --primary: var(--color-catppuccin-frappe-blue-950);
+  --primary-foreground: var(--color-catppuccin-frappe-blue-500);
+  --success: var(--color-catppuccin-frappe-green-950);
+  --success-foreground: var(--color-catppuccin-frappe-green-500);
+  --danger: var(--color-catppuccin-frappe-red-950);
+  --danger-foreground: var(--color-catppuccin-frappe-red-500);
+  --warning: var(--color-catppuccin-frappe-yellow-950);
+  --warning-foreground: var(--color-catppuccin-frappe-yellow-500);
+  --info: var(--color-catppuccin-frappe-teal-950);
+  --info-foreground: var(--color-catppuccin-frappe-teal-500);
+}

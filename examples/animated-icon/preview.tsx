@@ -23,7 +23,7 @@ function AnimatedIconExample({ label, description, ...props }: Props) {
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
 
-      <AnimatedIcon className="size-4" {...props} />
+      <AnimatedIcon className="size-4 fill-current" {...props} />
     </div>
   );
 
@@ -31,7 +31,7 @@ function AnimatedIconExample({ label, description, ...props }: Props) {
 
 export default function AnimatedIconPreview() {
   return (
-    <div className="w-full min-h-92 flex items-center justify-center">
+    <div className="w-full min-h-23 flex items-center justify-center">
       <div className="grid grid-cols-4 w-full gap-2">
         <AnimatedIconExample label="Blink" animation="blink" icon={PixelarticonsAlarmClock} />
         <AnimatedIconExample label="Bounce" animation="bounce" icon={PixelarticonsAlarmClock} />

@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/pixel-digivolve.css";
+
+@theme {
+  --font-pixel-digivolve: 'Pixel Digivolve', 'Inter Variable', sans-serif;
+}

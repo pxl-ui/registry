@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/able-5.css";
+
+@theme {
+  --font-able-5: 'Able 5', 'Inter Variable', sans-serif;
+}

@@ -1,0 +1,24 @@
+---
+title: Tailwind
+---
+import { Aside } from '@astrojs/starlight/components';
+import {
+  ColorPaletteShowcase,
+  ColorThemeShowcase,
+  ColorVariantsShowcase,
+  InstallCommand
+} from "~/components";
+
+import "~/examples/colors/tailwind.css"
+
+import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
+
+The Tailwind 4.x official palette in case you need to use it or modify it.
+
+<Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
+
+<InstallCommand item="colors-tailwind" />
+
+## Full Palette
+
+<ColorShowcase palette={TailwindRaw} />

@@ -3,5 +3,325 @@ title: Colors
 sidebar:
   order: 4
 description: Color palettes
-draft: true
 ---
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
+
+import {
+  ColorThemeShowcase,
+  ColorVariantsShowcase,
+  ColorWheel,
+} from "~/components";
+
+import Arne16Raw from "@/components/colors/pxl/arne-16.gpl?raw"
+import CatpuccinFrappeRaw from "@/components/colors/pxl/catppuccin-frappe.gpl?raw";
+import CatpucciLatteRaw from "@/components/colors/pxl/catppuccin-latte.gpl?raw";
+import CatpuccinMacchiatoRaw from "@/components/colors/pxl/catppuccin-macchiato.gpl?raw";
+import CatpuccinMochaRaw from "@/components/colors/pxl/catppuccin-mocha.gpl?raw";
+import DMG01Raw from "@/components/colors/pxl/dmg-01.gpl?raw";
+import DuelCompatRaw from "@/components/colors/pxl/duel-compat.gpl?raw";
+import Fantasy24Raw from "@/components/colors/pxl/fantasy-24.gpl?raw";
+import FinalMenuRaw from "@/components/colors/pxl/final-menu.gpl?raw";
+import FlexokiRaw from "@/components/colors/pxl/flexoki.gpl?raw";
+import FlexokiCompatRaw from "@/components/colors/pxl/flexoki-compat.gpl?raw";
+import DuelRaw from "@/components/colors/pxl/duel.gpl?raw";
+import GothicBitRaw from "@/components/colors/pxl/gothic-bit.gpl?raw";
+import JustParchment8Raw from "@/components/colors/pxl/justparchment8.gpl?raw";
+import NestopiaRaw from "@/components/colors/pxl/nestopia.gpl?raw";
+import PaperbackRaw from "@/components/colors/pxl/paperback.gpl?raw";
+import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
+import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-linear-ramps.gpl?raw";
+
+import { url } from "~/lib/utils";
+
+## Base
+
+PXL-UI Base includes a monochromatic theme by default.
+
+<ColorThemeShowcase />
+
+Additional bases and color palettes can be installed from the [registry](#palettes).
+
+
+## Variants
+
+5 different color variants are available in some components to express intentionality.
+
+<ColorVariantsShowcase />
+
+## Gradients
+
+PXL-UI includes predefined gradients inspired by various video game indicators.
+
+The gradients are defined as `--background-image` variables in TailwindCSS, so they can be easily used with `bg-{{gradient_name}}` classes.
+
+<div class="not-content pixel-border pixel-color-[oklch(0.556_0_0)] dark:pixel-color-[oklch(0.708_0_0)]  bg-[oklch(0.97_0_0)] dark:bg-[oklch(0.269_0_0)] p-2 space-y-2">
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-chrome w-full h-10 text-black font-sans text-xl px-3 flex items-center">Chrome</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-cryo w-full h-10 text-black font-sans text-xl px-3 flex items-center">Cryo</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-fire w-full h-10 text-black font-sans text-xl px-3 flex items-center">Fire</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-loot w-full h-10 text-black font-sans text-xl px-3 flex items-center">Loot</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-plasma w-full h-10 text-black font-sans text-xl px-3 flex items-center">Plasma</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-toxic w-full h-10 text-black font-sans text-xl px-3 flex items-center">Toxic</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-shadow w-full h-10 text-black font-sans text-xl px-3 flex items-center">Shadow</p>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <p class="bg-synthwave w-full h-10 text-black font-sans text-xl px-3 flex items-center">Synthwave</p>
+  </div>
+</div>
+
+A common use case is to use them to decorate texts.
+
+<div class="not content">
+  <p class="font-mono text-4xl font-bold whitespace-nowrap bg-clip-text text-transparent pixel-drop-foreground bg-loot">+150 XP</p>
+</div>
+
+## Palettes
+
+The PXL UI registry provides some color palettes you can install and include into your projects.
+
+### Complete Palettes
+
+These palettes are focused on providing an entire set of colors to cover most use cases.
+
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  <a href={url("colors/duel")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>DUEL</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={DuelRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/flexoki")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Flexoki</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={FlexokiRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/catppuccin-frappe")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Catppuccin Frappe</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={CatpuccinFrappeRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/catppuccin-latte")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Catppuccin Latte</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={CatpucciLatteRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/catppuccin-macchiato")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Catppuccin Macchiato</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={CatpuccinMacchiatoRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/catppuccin-mocha")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Catppuccin Mocha</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={CatpuccinMochaRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/nestopia")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>NEStopia</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={NestopiaRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+</div>
+
+### Base Palettes
+
+These palettes provide minimal color gradients for texts and surfaces
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+  
+  <a href={url("colors/paperback")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Paperback</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={PaperbackRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/gothic-bit")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Gothic Bit</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={GothicBitRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/justparchment8")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>JustParchment8</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={JustParchment8Raw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/dmg-01")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>DMG-01</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={DMG01Raw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/final-menu")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Final Menu</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={FinalMenuRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+</div>
+
+### Color Palettes
+
+These palettes provide vibrant and unique color combinations for variants or advanced use cases.
+
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  <a href={url("colors/pico-8")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>PICO 8</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={PICO8Raw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/fantasy-24")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Fantasy 24</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={Fantasy24Raw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/arne-16")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Arne 16</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={Arne16Raw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/vines-flexible-linear-ramps")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Vine's Flexible Linear Ramps</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={VinesFlexibleLinearRampsRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+</div>
+
+
+
+### Compat Palettes
+
+The following palettes are designed as drop-in replacements for Tailwind Colors, using the Tailwind name conventions instead of namespaced prefixes. Some colors might not be available or not fit as expected. Use them carefully.
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+
+  <a href={url("colors/duel-compat")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>DUEL Compat</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={DuelCompatRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/flexoki-compat")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Flexoki Compat</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={FlexokiCompatRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+</div>

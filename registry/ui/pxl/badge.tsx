@@ -5,13 +5,38 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "group/badge pixel-notch inline-flex h-4 items-center bg-primary px-4 leading-3 text-primary-foreground font-heading font-bold italic text-2xs truncate",
+  "group/badge pixel-notch inline-flex h-4 items-center px-4 leading-3 font-bold italic truncate",
   {
     variants: {
-      variant: {
-        default: "",
+      font: {
+        default: "font-heading",
+        heading: "font-heading",
+        sans: "font-sans",
+        mono: "font-mono",
       },
+      variant: {
+        default: "bg-foreground text-background",
+        primary: "bg-primary text-primary-foreground",
+        secondary: "bg-secondary text-secondary-foreground",
+        muted: "bg-muted text-muted-foreground",
+        accent: "bg-accent text-accent-foreground",
+        success: "bg-success text-success-foreground",
+        danger: "bg-danger text-danger-foreground",
+        warning: "bg-warning text-warning-foreground",
+        info: "bg-info text-info-foreground",
+      },
+      size: {
+        default: "text-2xs",
+        sm: "text-2xs",
+        md: "text-2xs",
+        lg: "text-2xs",
+      }
     },
+    defaultVariants: {
+      font: "default",
+      variant: "default",
+      size: "default",
+    }
   },
 );
 

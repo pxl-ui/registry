@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/pico-8.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-white);
+  --foreground: var(--color-pico-slate);
+  --card: var(--color-white);
+  --card-foreground: var(--color-pico-slate);
+  --popover: var(--color-white);
+  --popover-foreground: var(--color-pico-slate);
+  --muted: var(--color-white);
+  --muted-foreground: var(--color-pico-silver);
+  --accent: var(--color-white);
+  --accent-foreground: var(--color-pico-black);
+  --border: var(--color-pico-silver);
+  --input: var(--color-pico-silver);
+  --ring: var(--color-pico-slate);
+
+  --primary: var(--color-pico-sky);
+  --primary-foreground: var(--color-pico-navy);
+  --info: var(--color-pico-lavender);
+  --info-foreground: var(--color-pico-cream);
+  --success: var(--color-pico-lime);
+  --success-foreground: var(--color-pico-forest);
+  --warning: var(--color-pico-yellow);
+  --warning-foreground: var(--color-pico-brown);
+  --danger: var(--color-pico-peach);
+  --danger-foreground: var(--color-pico-red);
+}
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-pico-black);
+  --foreground: var(--color-pico-silver);
+  --card: var(--color-pico-black);
+  --card-foreground: var(--color-pico-silver);
+  --popover: var(--color-pico-black);
+  --popover-foreground: var(--color-pico-silver);
+  --muted: var(--color-pico-black);
+  --muted-foreground: var(--color-pico-slate);
+  --accent: var(--color-pico-black);
+  --accent-foreground: var(--color-pico-cream);
+  --border: var(--color-pico-slate);
+  --input: var(--color-pico-slate);
+  --ring: var(--color-pico-silver);
+
+  --primary: var(--color-pico-navy);
+  --primary-foreground: var(--color-pico-sky);
+  --info: var(--color-pico-maroon);
+  --info-foreground: var(--color-pico-cream);
+  --success: var(--color-pico-forest);
+  --success-foreground: var(--color-pico-lime);
+  --warning: var(--color-pico-orange);
+  --warning-foreground: var(--color-pico-yellow);
+  --danger: var(--color-pico-red);
+  --danger-foreground: var(--color-pico-peach);
+}

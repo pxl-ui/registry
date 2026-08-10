@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/flexoki-compat.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: #FFFCF0;
+  --foreground: #1C1B1A;
+  --card: #F2F0E5;
+  --card-foreground: #1C1B1A;
+  --popover: #E6E4D9;
+  --popover-foreground: #1C1B1A;
+  --muted: #B7B5AC;
+  --muted-foreground: #575653;
+  --accent: #DAD8CE;
+  --accent-foreground: #1C1B1A;
+  --border: #343331;
+  --input: #343331;
+  --ring: #575653;
+}

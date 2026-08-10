@@ -1,0 +1,40 @@
+---
+import { Code, TabItem, Tabs, } from '@astrojs/starlight/components';
+
+export type Props = {
+  item: string;
+}
+
+const { item } = Astro.props;
+
+const registry = "pxl-ui/registry";
+
+const tabs = [
+  {
+    label: "pnpm",
+    command: `pnpm dlx shadcn@latest add ${registry}/${item}`,
+  },
+  {
+    label: "npm",
+    command: `npx shadcn@latest add ${registry}/${item}`,
+  },
+  {
+    label: "yarn",
+    command: `yarn dlx shadcn@latest add ${registry}/${item}`,
+  },
+  {
+    label: "bun",
+    command: `bunx --bun shadcn@latest add ${registry}/${item}`,
+  }
+]
+
+---
+
+
+<Tabs>
+  {tabs.map(({ label, command}) => (
+    <TabItem label={label}>
+      <Code code={command} lang="sh" frame="none" />
+    </TabItem>
+  ))}
+</Tabs>

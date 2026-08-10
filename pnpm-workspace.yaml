@@ -4,3 +4,4 @@ minimumReleaseAgeExclude:
 - react@19.2.8
 - react-dom@19.2.8
 - weather-i18n
+- gimp-palette

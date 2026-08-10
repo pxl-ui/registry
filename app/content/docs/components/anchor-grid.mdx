@@ -2,9 +2,8 @@
 title: Anchor Grid
 description: Grid-based widget sizing and positioning
 ---
-import { Code } from '@astrojs/starlight/components';
 
-import Example from "~/components/example.astro";
+import { Example, InstallCommand } from "~/components";
 
 import Preview from '~/examples/anchor-grid/preview.tsx';
 import PreviewRaw from '~/examples/anchor-grid/preview.tsx?raw';
@@ -15,4 +14,4 @@ Grid-based widget sizing and positioning
   <Preview client:load />
 </Example>
 
-<Code code="pnpm dlx shadcn@latest add pxl-ui/registry/anchor-grid" lang="sh" />
+<InstallCommand item="anchor-grid" />

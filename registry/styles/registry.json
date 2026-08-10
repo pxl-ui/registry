@@ -13,10 +13,21 @@
         "pxl-ui/registry/fonts-able-5",
         "pxl-ui/registry/fonts-monogram",
         "pxl-ui/registry/cursors-pixelarticons",
-        "pxl-ui/registry/styles-cursor"
+        "pxl-ui/registry/styles-animations",
+        "pxl-ui/registry/styles-borders",
+        "pxl-ui/registry/styles-colors",
+        "pxl-ui/registry/styles-cursors",
+        "pxl-ui/registry/styles-filters",
+        "pxl-ui/registry/styles-images",
+        "pxl-ui/registry/styles-texts",
+        "pxl-ui/registry/styles-widgets"
       ],
       "cssVars": {
         "theme": {
+          "container-7xs": "8rem",
+          "container-6xs": "10rem",
+          "container-5xs": "12rem",
+          "container-4xs": "14rem",
           "font-heading": "'Pixel Digivolve', 'Inter Variable', sans-serif",
           "font-sans": "'Able 5', 'Inter Variable', sans-serif",
           "font-mono": "'Monogram Extended', monospace",
@@ -27,11 +38,7 @@
           "radius-2xl": "calc(var(--radius) * 1.8)",
           "radius-3xl": "calc(var(--radius) * 2.2)",
           "radius-4xl": "calc(var(--radius) * 2.6)",
-          "text-2xs": "0.625rem",
-          "container-7xs": "8rem",
-          "container-6xs": "10rem",
-          "container-5xs": "12rem",
-          "container-4xs": "14rem"
+          "text-2xs": "0.625rem"
         },
         "light": {
           "radius": "0.65rem",
@@ -41,8 +48,8 @@
           "card-foreground": "oklch(0.1929 0.0336 42.11)",
           "popover": "oklch(1 0 0)",
           "popover-foreground": "oklch(0.1929 0.0336 42.11)",
-          "primary": "oklch(0.1929 0.0336 42.11)",
-          "primary-foreground": "oklch(0.985 0 0)",
+          "primary": "var(--color-blue-50)",
+          "primary-foreground": "var(--color-blue-500)",
           "secondary": "oklch(0.97 0 0)",
           "secondary-foreground": "oklch(0.1929 0.0336 42.11)",
           "muted": "oklch(0.97 0 0)",
@@ -70,19 +77,76 @@
       }
     },
     {
-      "name": "styles-cursor",
+      "name": "styles-animations",
+      "type": "registry:style",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "pxl/animations.css",
+          "target": "@components/styles/pxl/animations.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/animations.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "animate-marquee": "marquee var(--tw-duration, 6s) ease-in-out infinite alternate",
+          "animate-sprite-idle": "spriteIdle var(--tw-duration, 2.8s) steps(1) infinite",
+          "animate-sprite-idleBlink": "spriteIdleBlink var(--tw-duration, 2.8s) steps(1) infinite"
+        }
+      }
+    },
+    {
+      "name": "styles-colors",
+      "type": "registry:style",
+      "cssVars": {
+        "theme": {
+          "color-info": "var(--info)",
+          "color-info-foreground": "var(--info-foreground)",
+          "color-success": "var(--success)",
+          "color-success-foreground": "var(--success-foreground)",
+          "color-warning": "var(--warning)",
+          "color-warning-foreground": "var(--warning-foreground)",
+          "color-danger": "var(--danger)",
+          "color-danger-foreground": "var(--danger-foreground)"
+        },
+        "light": {
+          "info": "var(--color-teal-50)",
+          "info-foreground":"var(--color-teal-500)",
+          "success": "var(--color-green-50)",
+          "success-foreground": "var(--color-green-500)",
+          "warning": "var(--color-orange-50)",
+          "warning-foreground": "var(--color-orange-500)",
+          "danger": "var(--color-red-50)",
+          "danger-foreground": "var(--color-red-500)"
+        },
+        "dark": {
+          "info": "var(--color-teal-50)",
+          "info-foreground":"var(--color-teal-500)",
+          "success": "var(--color-green-50)",
+          "success-foreground": "var(--color-green-500)",
+          "warning": "var(--color-orange-50)",
+          "warning-foreground": "var(--color-orange-500)",
+          "danger": "var(--color-red-50)",
+          "danger-foreground": "var(--color-red-500)"
+        }
+      }
+    },
+    {
+      "name": "styles-cursors",
       "type": "registry:style",
       "title": "Mouse Cursor",
       "description": "TailwindCSS cursor utilities",
       "files": [
         {
           "type": "registry:file",
-          "path": "pxl/cursor.css",
-          "target": "@components/styles/pxl/cursor.css"
+          "path": "pxl/cursors.css",
+          "target": "@components/styles/pxl/cursors.css"
         }
       ],
       "css": {
-        "@import \"@/components/styles/pxl/cursor.css\"": {}
+        "@import \"@/components/styles/pxl/cursors.css\"": {}
       }
     },
     {
@@ -102,56 +166,31 @@
       }
     },
     {
-      "name": "styles-marquee",
-      "type": "registry:style",
-      "files": [
-        {
-          "type": "registry:file",
-          "path": "pxl/marquee.css",
-          "target": "@components/styles/pxl/marquee.css"
-        }
-      ],
-      "css": {
-        "@import \"@/components/styles/pxl/marquee.css\"": {}
-      },
-      "cssVars": {
-        "theme": {
-          "animate-marquee": "marquee var(--tw-duration, 6s) ease-in-out infinite alternate"
-        }
-      }
-    },
-    {
-      "name": "styles-sprite",
+      "name": "styles-images",
       "type": "registry:style",
       "files": [
         {
           "type": "registry:style",
-          "path": "pxl/sprite.css",
-          "target": "@components/styles/pxl/sprite.css"
+          "path": "pxl/images.css",
+          "target": "@components/styles/pxl/images.css"
         }
       ],
       "css": {
-        "@import \"@/components/styles/pxl/sprite.css\"": {}
-      },
-      "cssVars": {
-        "theme": {
-          "animate-sprite-idle": "spriteIdle var(--tw-duration, 2.8s) steps(1) infinite",
-          "animate-sprite-idleBlink": "spriteIdleBlink var(--tw-duration, 2.8s) steps(1) infinite"
-        }
+        "@import \"@/components/styles/pxl/images.css\"": {}
       }
     },
     {
-      "name": "styles-text",
+      "name": "styles-texts",
       "type": "registry:style",
       "files": [
         {
           "type": "registry:style",
-          "path": "pxl/text.css",
-          "target": "@components/styles/pxl/text.css"
+          "path": "pxl/texts.css",
+          "target": "@components/styles/pxl/texts.css"
         }
       ],
       "css": {
-        "@import \"@/components/styles/pxl/text.css\"": {}
+        "@import \"@/components/styles/pxl/texts.css\"": {}
       },
       "cssVars": {
         "theme": {
@@ -163,17 +202,17 @@
       }
     },
     {
-      "name": "styles-widget",
+      "name": "styles-widgets",
       "type": "registry:style",
       "files": [
         {
           "type": "registry:file",
-          "path": "pxl/widget.css",
-          "target": "@components/styles/pxl/widget.css"
+          "path": "pxl/widgets.css",
+          "target": "@components/styles/pxl/widgets.css"
         }
       ],
       "css": {
-        "@import \"@/components/styles/pxl/widget.css\"": {}
+        "@import \"@/components/styles/pxl/widgets.css\"": {}
       },
       "cssVars": {
         "theme": {

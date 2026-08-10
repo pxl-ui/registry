@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/final-menu.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--background-image-classic-blue);
+  --foreground: var(--color-final-menu-white);
+  --card: var(--background-image-classic-blue);
+  --card-foreground: var(--color-final-menu-white);
+  --popover: var(--background-image-classic-blue);
+  --popover-foreground: var(--color-final-menu-white);
+  --muted: var(--background-image-classic-blue);
+  --muted-foreground: var(--color-final-menu-white);
+  --accent: var(--background-image-classic-blue);
+  --accent-foreground: var(--color-final-menu-white);
+  --border: var(--color-final-menu-white);
+  --input: var(--color-final-menu-white);
+  --ring: var(--color-final-menu-white);
+
+  --primary: var(--color-final-menu-classic-blue-50);
+  --primary-foreground: var(--color-final-menu-white);
+  --danger: var(--color-final-menu-classic-red-50);
+  --danger-foreground: var(--color-final-menu-white);
+  --warning: var(--color-final-menu-classic-red-50);
+  --warning-foreground: var(--color-final-menu-white);
+  --success: var(--color-final-menu-classic-green-50);
+  --success-foreground: var(--color-final-menu-white);
+  --info: var(--color-final-menu-classic-blue-50);
+  --info-foreground: var(--color-final-menu-white);
+}
+
+
+.dark, [data-theme="dark"] {
+
+  --primary: var(--color-final-menu-classic-blue-950);
+  --primary-foreground: var(--color-final-menu-white);
+  --danger: var(--color-final-menu-classic-red-950);
+  --danger-foreground: var(--color-final-menu-white);
+  --warning: var(--color-final-menu-classic-red-950);
+  --warning-foreground: var(--color-final-menu-white);
+  --success: var(--color-final-menu-classic-green-950);
+  --success-foreground: var(--color-final-menu-white);
+  --info: var(--color-final-menu-classic-blue-950);
+  --info-foreground: var(--color-final-menu-white);
+}

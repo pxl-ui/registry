@@ -1,0 +1,10 @@
+@theme {
+  --color-gothic-bit-base-50: oklch(92.667% 0.0081 286.241);
+  --color-gothic-bit-base-100: oklch(81.617% 0.0237 285.864);
+  --color-gothic-bit-base-200: oklch(73.335% 0.0359 285.482);
+  --color-gothic-bit-base-400: oklch(61.305% 0.0542 284.69);
+  --color-gothic-bit-base-600: oklch(45.541% 0.0519 284.151);
+  --color-gothic-bit-base-700: oklch(32.939% 0.0334 284.417);
+  --color-gothic-bit-base-800: oklch(22.249% 0.0194 284.715);
+  --color-gothic-bit-base-950: oklch(16.566% 0.0083 285.456);
+}

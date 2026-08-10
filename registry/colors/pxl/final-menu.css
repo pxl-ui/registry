@@ -1,0 +1,157 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-final-menu-white: oklch(100% 0.0000000000000005 0deg);
+  --color-final-menu-classic-red-50: oklch(44.318% 0.1819 29.234);
+  --color-final-menu-classic-red-950: oklch(31.202% 0.1247 11.553);
+  --color-final-menu-modern-red-50: oklch(47.549% 0.1951 29.234);
+  --color-final-menu-modern-red-200: oklch(37.669% 0.1546 29.234);
+  --color-final-menu-modern-red-700: oklch(27.083% 0.1111 29.234);
+  --color-final-menu-modern-red-950: oklch(15.293% 0.0628 29.234);
+  --color-final-menu-classic-green-50: oklch(61.15% 0.2081 142.495);
+  --color-final-menu-classic-green-950: oklch(43.061% 0.1351 138.776);
+  --color-final-menu-modern-green-50: oklch(65.607% 0.2232 142.495);
+  --color-final-menu-modern-green-200: oklch(51.975% 0.1769 142.495);
+  --color-final-menu-modern-green-700: oklch(37.368% 0.1272 142.495);
+  --color-final-menu-modern-green-950: oklch(21.101% 0.0718 142.495);
+  --color-final-menu-classic-blue-50: oklch(31.901% 0.2211 264.052);
+  --color-final-menu-classic-blue-950: oklch(27.239% 0.1197 261.264);
+  --color-final-menu-modern-blue-50: oklch(34.227% 0.2372 264.052);
+  --color-final-menu-modern-blue-200: oklch(27.115% 0.1879 264.052);
+  --color-final-menu-modern-blue-700: oklch(19.495% 0.1351 264.052);
+  --color-final-menu-modern-blue-950: oklch(11.008% 0.0763 264.052);
+  --color-final-menu-black: oklch(0% 0.0000000000000005 0deg);
+
+
+  --background-image-classic-red:
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-classic-red-950) 0%,
+      var(--color-final-menu-classic-red-50) 100%
+    );
+
+  --background-image-linear-red:
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-modern-red-50),
+      var(--color-final-menu-modern-red-700)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-modern-red-200),
+      var(--color-final-menu-modern-red-950)
+    );
+
+  --background-image-radial-red:
+    radial-gradient(
+      ellipse at 0% 0%,
+      var(--color-final-menu-modern-red-50) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 100% 0%,
+      var(--color-final-menu-modern-red-200) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 0% 100%,
+      var(--color-final-menu-modern-red-700) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      var(--color-final-menu-modern-red-950) 0%,
+      transparent 70%
+    );
+
+
+  --background-image-classic-green:
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-classic-green-950) 0%,
+      var(--color-final-menu-classic-green-50) 100%
+    );
+
+  --background-image-linear-green:
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-modern-green-50),
+      var(--color-final-menu-modern-green-700)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-modern-green-200),
+      var(--color-final-menu-modern-green-950)
+    );
+
+  --background-image-radial-green:
+    radial-gradient(
+      ellipse at 0% 0%,
+      var(--color-final-menu-modern-green-50) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 100% 0%,
+      var(--color-final-menu-modern-green-200) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 0% 100%,
+      var(--color-final-menu-modern-green-700) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      var(--color-final-menu-modern-green-950) 0%,
+      transparent 70%
+    );
+
+
+  --background-image-classic-blue:
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-classic-blue-950) 0%,
+      var(--color-final-menu-classic-blue-50) 100%
+    );
+
+  --background-image-linear-blue:
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-modern-blue-50),
+      var(--color-final-menu-modern-blue-700)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-final-menu-modern-blue-200),
+      var(--color-final-menu-modern-blue-950)
+    );
+
+  --background-image-radial-blue:
+    radial-gradient(
+      ellipse at 0% 0%,
+      var(--color-final-menu-modern-blue-50) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 100% 0%,
+      var(--color-final-menu-modern-blue-200) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 0% 100%,
+      var(--color-final-menu-modern-blue-700) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      var(--color-final-menu-modern-blue-950) 0%,
+      transparent 70%
+    );
+
+ /** Override backgrounds so we can use image gradients **/
+ --background-image-background: var(--background);
+ --background-image-card: var(--card);
+ --background-image-popover: var(--popover);
+ --background-image-muted: var(--muted);
+ --background-image-accent: var(--accent);
+}

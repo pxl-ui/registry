@@ -12,6 +12,8 @@ export default function AnchorGridPreview() {
         containerHeight={height ?? 0}
         cols={9}
         rows={5}
+        gap={12}
+        showGridLines
         widgets={[
           {
             id: "widget_1",
@@ -22,7 +24,7 @@ export default function AnchorGridPreview() {
             anchorX: "left",
             anchorY: "top",
             render() {
-              return <div className="size-full bg-red-100"></div>;
+              return <div className="size-full pixel-border pixel-color-danger-foreground p-(--pixel-size)"><div className="size-full bg-danger"></div></div>;
             },
           },
           {
@@ -34,7 +36,7 @@ export default function AnchorGridPreview() {
             anchorX: "left",
             anchorY: "top",
             render() {
-              return <div className="size-full bg-green-100"></div>;
+              return <div className="size-full pixel-border pixel-color-success-foreground p-(--pixel-size)"><div className="size-full bg-success"></div></div>;
             },
           },
           {
@@ -46,7 +48,7 @@ export default function AnchorGridPreview() {
             anchorX: "left",
             anchorY: "top",
             render() {
-              return <div className="size-full bg-blue-100"></div>;
+              return <div className="size-full pixel-border pixel-color-primary-foreground p-(--pixel-size)"><div className="size-full bg-primary"></div></div>;
             },
           },
           {
@@ -58,7 +60,7 @@ export default function AnchorGridPreview() {
             anchorX: "left",
             anchorY: "top",
             render() {
-              return <div className="size-full bg-purple-100"></div>;
+              return <div className="size-full pixel-border pixel-color-info-foreground p-(--pixel-size)"><div className="size-full bg-info"></div></div>;
             },
           },
         ]}

@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/duel.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-duel-slate-50);
+  --foreground: var(--color-duel-slate-600);
+  --card: var(--color-duel-slate-50);
+  --card-foreground: var(--color-duel-slate-600);
+  --popover: var(--color-duel-slate-50);
+  --popover-foreground: var(--color-duel-slate-600);
+  --muted: var(--color-duel-slate-100);
+  --muted-foreground: var(--color-duel-slate-400);
+  --accent: var(--color-duel-slate-100);
+  --accent-foreground: var(--color-duel-slate-700);
+  --border: var(--color-duel-slate-400);
+  --input: var(--color-duel-slate-400);
+  --ring: var(--color-duel-slate-600);
+
+  --primary: var(--color-duel-abyss-50);
+  --primary-foreground: var(--color-duel-abyss-600);
+  --success: var(--color-duel-forest-50);
+  --success-foreground: var(--color-duel-forest-600);
+  --danger: var(--color-duel-sakura-100);
+  --danger-foreground: var(--color-duel-sakura-700);
+  --warning: var(--color-duel-honey-50);
+  --warning-foreground: var(--color-duel-honey-600);
+  --info: var(--color-duel-violet-50);
+  --info-foreground: var(--color-duel-violet-600);
+}
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-duel-slate-950);
+  --foreground: var(--color-duel-slate-100);
+  --card: var(--color-duel-slate-700);
+  --card-foreground: var(--color-duel-slate-100);
+  --popover: var(--color-duel-slate-800);
+  --popover-foreground: var(--color-duel-slate-100);
+  --muted: var(--color-duel-slate-600);
+  --muted-foreground: var(--color-duel-slate-200);
+  --accent: var(--color-duel-slate-600);
+  --accent-foreground: var(--color-duel-slate-50);
+  --border: var(--color-duel-slate-600);
+  --input: var(--color-duel-slate-600);
+  --ring: var(--color-duel-slate-400);
+
+
+  --primary: var(--color-duel-ocean-700);
+  --primary-foreground: var(--color-duel-ocean-50);
+  --success: var(--color-duel-moss-700);
+  --success-foreground: var(--color-duel-moss-50);
+  --danger: var(--color-duel-magenta-700);
+  --danger-foreground: var(--color-duel-magenta-100);
+  --warning: var(--color-duel-amber-700);
+  --warning-foreground: var(--color-duel-amber-50);
+  --info: var(--color-duel-lavender-700);
+  --info-foreground: var(--color-duel-lavender-50);
+}

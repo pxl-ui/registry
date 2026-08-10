@@ -2,7 +2,7 @@ import { SpriteCanvas } from "@/components/ui/pxl/sprite-canvas";
 
 export default function SpriteCanvasPreview() {
   return (
-    <div className="w-full min-h-92 flex items-center justify-center">
+    <div className="w-full min-h-23 flex items-center justify-center">
       <SpriteCanvas
         src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/sprites/tiny_chick.png"
         animation="Idle"

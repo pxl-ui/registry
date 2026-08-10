@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/pxl/button";
 import {
   SpriteCanvas,
   type SpriteCanvasHandle,

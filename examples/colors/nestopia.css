@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/nestopia.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-nestopia-white);
+  --foreground: var(--color-nestopia-neutral-600);
+  --card: var(--color-nestopia-white);
+  --card-foreground: var(--color-nestopia-neutral-600);
+  --popover: var(--color-nestopia-white);
+  --popover-foreground: var(--color-nestopia-neutral-600);
+  --muted: var(--color-nestopia-white);
+  --muted-foreground: var(--color-nestopia-neutral-50);
+  --accent: var(--color-nestopia-white);
+  --accent-foreground: var(--color-nestopia-neutral-950);
+  --border: var(--color-nestopia-neutral-50);
+  --input: var(--color-nestopia-neutral-50);
+  --ring: var(--color-nestopia-neutral-600);
+
+
+  --primary: var(--color-nestopia-blue-50);
+  --primary-foreground: var(--color-nestopia-blue-600);
+  --success: var(--color-nestopia-green-50);
+  --success-foreground: var(--color-nestopia-green-600);
+  --danger: var(--color-nestopia-red-50);
+  --danger-foreground: var(--color-nestopia-red-600);
+  --warning: var(--color-nestopia-yellow-50);
+  --warning-foreground: var(--color-nestopia-yellow-600);
+  --info: var(--color-nestopia-teal-50);
+  --info-foreground: var(--color-nestopia-teal-600);
+}
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-nestopia-black);
+  --foreground: var(--color-nestopia-neutral-400);
+  --card: var(--color-nestopia-black);
+  --card-foreground: var(--color-nestopia-neutral-400);
+  --popover: var(--color-nestopia-black);
+  --popover-foreground: var(--color-nestopia-neutral-400);
+  --muted: var(--color-nestopia-black);
+  --muted-foreground: var(--color-nestopia-neutral-950);
+  --accent: var(--color-nestopia-black);
+  --accent-foreground: var(--color-nestopia-neutral-50);
+  --border: var(--color-nestopia-neutral-950);
+  --input: var(--color-nestopia-neutral-950);
+  --ring: var(--color-nestopia-neutral-400);
+
+  --primary: var(--color-nestopia-blue-950);
+  --primary-foreground: var(--color-nestopia-blue-400);
+  --success: var(--color-nestopia-green-950);
+  --success-foreground: var(--color-nestopia-green-400);
+  --danger: var(--color-nestopia-red-950);
+  --danger-foreground: var(--color-nestopia-red-400);
+  --warning: var(--color-nestopia-yellow-950);
+  --warning-foreground: var(--color-nestopia-yellow-400);
+  --info: var(--color-nestopia-teal-950);
+  --info-foreground: var(--color-nestopia-teal-400);
+}

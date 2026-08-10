@@ -1,0 +1,32 @@
+---
+title: Flexoki Compat
+---
+import { Aside } from '@astrojs/starlight/components';
+import {
+  ColorPaletteShowcase,
+  ColorThemeShowcase,
+  ColorVariantsShowcase,
+  InstallCommand
+} from "~/components";
+
+import "~/examples/colors/flexoki-compat.css"
+
+import FlexokiRaw from "@/components/colors/pxl/flexoki-compat.gpl?raw";
+
+[Flexoki](https://stephango.com/flexoki) is an inky color scheme for prose and code designed for reading and writing on digital screens. It is inspired by analog inks and warm shades of paper.
+
+<Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
+
+<InstallCommand item="colors-flexoki-compat" />
+
+## Base
+
+<ColorThemeShowcase />
+
+## Variants
+
+<ColorVariantsShowcase />
+
+## Full Palette
+
+  <ColorPaletteShowcase palette={FlexokiRaw} />

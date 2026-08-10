@@ -1,0 +1,75 @@
+import { type ComponentProps, useState } from "react";
+
+import { Button } from "@/components/ui/pxl/button";
+import { Reveal } from "@/components/ui/pxl/reveal";
+import { WidgetArea } from "@/components/ui/pxl/widget-area";
+
+export default function RetroMenuExample() {
+  const [open, setOpen] = useState(false);
+
+  const [variant, setVariant] =
+    useState<ComponentProps<typeof Reveal>["variant"]>("default");
+
+  return (
+    <div className="relative flex flex-col items-start gap-4 p-8">
+
+      <div className="flex flex-row gap-2 w-full">
+        <Button
+          borders={false}
+          className="flex-1"
+          onClick={() => {
+            setVariant("default");
+            setOpen((v) => !v);
+          }}
+        >
+          Default (Background)
+        </Button>
+
+        <Button
+          borders={false}
+          variant="success"
+          className="flex-1"
+          onClick={() => {
+            setVariant("success");
+            setOpen((v) => !v);
+          }}
+        >
+          Success
+        </Button>
+
+        <Button
+          borders={false}
+          variant="danger"
+          className="flex-1"
+          onClick={() => {
+            setVariant("dangerForeground");
+            setOpen((v) => !v);
+          }}
+        >
+          Danger Foreground
+        </Button>
+      </div>
+      
+      <WidgetArea size="sm">
+        <Reveal show={open} variant={variant}>
+          <WidgetArea size="sm">
+            <nav className="">
+              <ul className="space-y-2">
+                <li className="cursor-pointer hover:text-yellow-300">
+                  ▸ Continue
+                </li>
+                <li className="cursor-pointer hover:text-yellow-300">
+                  ▸ Items
+                </li>
+                <li className="cursor-pointer hover:text-yellow-300">
+                  ▸ Equipment
+                </li>
+                <li className="cursor-pointer hover:text-yellow-300">▸ Save</li>
+              </ul>
+            </nav>
+          </WidgetArea>
+        </Reveal>
+      </WidgetArea>
+    </div>
+  );
+}

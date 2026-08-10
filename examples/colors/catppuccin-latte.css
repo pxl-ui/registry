@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/catppuccin-latte.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-catppuccin-latte-neutral-200);
+  --foreground: var(--color-catppuccin-latte-neutral-950);
+  --card: var(--color-catppuccin-latte-neutral-100);
+  --card-foreground: var(--color-catppuccin-latte-neutral-950);
+  --popover: var(--color-catppuccin-latte-neutral-50);
+  --popover-foreground: var(--color-catppuccin-latte-neutral-950);
+  --muted: var(--color-catppuccin-latte-neutral-300);
+  --muted-foreground: var(--color-catppuccin-latte-neutral-850);
+  --accent: var(--color-catppuccin-latte-neutral-400);
+  --accent-foreground: var(--color-catppuccin-latte-neutral-950);
+  --border: var(--color-catppuccin-latte-neutral-500);
+  --input: var(--color-catppuccin-latte-neutral-500);
+  --ring: var(--color-catppuccin-latte-neutral-800);
+
+  --primary: var(--color-catppuccin-latte-sky-50);
+  --primary-foreground: var(--color-catppuccin-latte-sky-700);
+  --success: var(--color-catppuccin-latte-green-50);
+  --success-foreground: var(--color-catppuccin-latte-green-700);
+  --danger: var(--color-catppuccin-latte-red-50);
+  --danger-foreground: var(--color-catppuccin-latte-red-700);
+  --warning: var(--color-catppuccin-latte-yellow-50);
+  --warning-foreground: var(--color-catppuccin-latte-yellow-700);
+  --info: var(--color-catppuccin-latte-teal-50);
+  --info-foreground: var(--color-catppuccin-latte-teal-700);
+}

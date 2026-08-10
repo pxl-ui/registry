@@ -1,0 +1,29 @@
+---
+title: NEStopia
+---
+import {
+  ColorPaletteShowcase,
+  ColorThemeShowcase,
+  ColorVariantsShowcase,
+  InstallCommand
+} from "~/components";
+
+import "~/examples/colors/nestopia.css"
+
+import NestopiaRaw from "@/components/colors/pxl/nestopia.gpl?raw";
+
+The default palette of the NES emulator [NEStopia](http://nestopia.sourceforge.net/), taken from a screenshot showing all its possible colors at once. Two of the whites and two of the blacks on the palette are duplicates, therefore they are not included.
+
+<InstallCommand item="colors-nestopia" />
+
+## Base
+
+<ColorThemeShowcase />
+
+## Variants
+
+<ColorVariantsShowcase />
+
+## Full Palette
+
+<ColorPaletteShowcase palette={NestopiaRaw} />

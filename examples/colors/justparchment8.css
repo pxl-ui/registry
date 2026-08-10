@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/justparchment8";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-justparchment8-base-50);
+  --foreground: var(--color-justparchment8-base-600);
+  --card: var(--color-justparchment8-base-50);
+  --card-foreground: var(--color-justparchment8-base-600);
+  --popover: var(--color-justparchment8-base-50);
+  --popover-foreground: var(--color-justparchment8-base-600);
+  --accent: var(--color-justparchment8-base-100);
+  --accent-foreground: var(--color-justparchment8-base-700);
+  --border: var(--color-justparchment8-base-400);
+  --input: var(--color-justparchment8-base-400);
+  --ring: var(--color-justparchment8-base-600);
+  --muted: var(--color-justparchment8-base-100);
+  --muted-foreground: var(--color-justparchment8-base-400);
+}
+
+
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-justparchment8-base-950);
+  --foreground: var(--color-justparchment8-base-100);
+  --card: var(--color-justparchment8-base-700);
+  --card-foreground: var(--color-justparchment8-base-100);
+  --popover: var(--color-justparchment8-base-800);
+  --popover-foreground: var(--color-justparchment8-base-100);
+  --muted: var(--color-justparchment8-base-600);
+  --muted-foreground: var(--color-justparchment8-base-400);
+  --accent: var(--color-justparchment8-base-600);
+  --accent-foreground: var(--color-justparchment8-base-50);
+  --border: var(--color-justparchment8-base-600);
+  --input: var(--color-justparchment8-base-600);
+  --ring: var(--color-justparchment8-base-400);
+
+}

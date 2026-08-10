@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/arne-16.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-arne-16-white);
+  --foreground: var(--color-arne-16-neutral-950);
+  --card: var(--color-arne-16-white);
+  --card-foreground: var(--color-arne-16-neutral-950);
+  --popover: var(--color-arne-16-white);
+  --popover-foreground: var(--color-arne-16-neutral-950);
+  --muted: var(--color-arne-16-white);
+  --muted-foreground: var(--color-arne-16-neutral-50);
+  --accent: var(--color-arne-16-white);
+  --accent-foreground: var(--color-arne-16-black);
+  --border: var(--color-arne-16-neutral-50);
+  --input: var(--color-arne-16-neutral-50);
+  --ring: var(--color-arne-16-black);
+  
+  --primary: var(--color-arne-16-blue-50);
+  --primary-foreground: var(--color-arne-16-blue-950);
+  --info: var(--color-arne-16-blue-50);
+  --info-foreground: var(--color-arne-16-blue-950);
+  --success: var(--color-arne-16-green-50);
+  --success-foreground: var(--color-arne-16-green-950);
+  --warning: var(--color-arne-16-amber-50);
+  --warning-foreground: var(--color-arne-16-amber-950);
+  --danger: var(--color-arne-16-red-50);
+  --danger-foreground: var(--color-arne-16-red-950);
+}
+
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-arne-16-black);
+  --foreground: var(--color-arne-16-neutral-50);
+  --card: var(--color-arne-16-black);
+  --card-foreground: var(--color-arne-16-neutral-50);
+  --popover: var(--color-arne-16-black);
+  --popover-foreground: var(--color-arne-16-neutral-50);
+  --muted: var(--color-arne-16-black);
+  --muted-foreground: var(--color-arne-16-neutral-950);
+  --accent: var(--color-arne-16-black);
+  --accent-foreground: var(--color-arne-16-white);
+  --border: var(--color-arne-16-neutral-50);
+  --input: var(--color-arne-16-neutral-50);
+  --ring: var(--color-arne-16-white);
+  
+  --primary: var(--color-arne-16-blue-500);
+  --primary-foreground: var(--color-arne-16-blue-50);
+  --info: var(--color-arne-16-blue-950);
+  --info-foreground: var(--color-arne-16-blue-500);
+  --success: var(--color-arne-16-green-500);
+  --success-foreground: var(--color-arne-16-green-50);
+  --warning: var(--color-arne-16-amber-500);
+  --warning-foreground: var(--color-arne-16-amber-50);
+  --danger: var(--color-arne-16-red-500);
+  --danger-foreground: var(--color-arne-16-red-50);
+}

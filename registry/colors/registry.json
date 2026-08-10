@@ -169,6 +169,48 @@
       }
     },
     {
+      "name": "colors-duel",
+      "type": "registry:theme",
+      "title": "duel",
+      "description": "duel color palette by @arilynart",
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "duel.css",
+          "target": "@/components/colors/pxl/duel.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/duel.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "primary": "var(--color-duel-abyss-100)",
+          "primary-foreground": "var(--color-duel-abyss-600)",
+          "info": "var(--color-duel-teal-100)",
+          "info-foreground": "var(--color-duel-teal-600)",
+          "success": "var(--color-duel-moss-100)",
+          "success-foreground": "var(--color-duel-moss-600)",
+          "warning": "var(--color-duel-honey-100)",
+          "warning-foreground": "var(--color-duel-honey-600)",
+          "danger": "var(--color-duel-magenta-100)",
+          "danger-foreground": "var(--color-duel-magenta-600)"
+        },
+        "dark": {
+          "primary": "var(--color-duel-abyss-700)",
+          "primary-foreground": "var(--color-duel-abyss-50)",
+          "info": "var(--color-duel-teal-700)",
+          "info-foreground": "var(--color-duel-teal-50)",
+          "success": "var(--color-duel-moss-700)",
+          "success-foreground": "var(--color-duel-moss-50)",
+          "warning": "var(--color-duel-honey-700)",
+          "warning-foreground": "var(--color-duel-honey-50)",
+          "danger": "var(--color-duel-magenta-700)",
+          "danger-foreground": "var(--color-duel-magenta-50)"
+        }
+      }
+    },
+    {
       "name": "colors-pico-8",
       "type": "registry:theme",
       "title": "PICO-8",
@@ -182,6 +224,20 @@
       ],
       "css": {
         "@import \"@/components/colors/pxl/pico-8.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "primary": "var(--color-pico-navy)",
+          "primary-foreground": "oklch(0.985 0 0)",
+          "info": "var(--color-pico-sky)",
+          "info-foreground": "oklch(0.985 0 0)",
+          "success": "var(--color-pico-forest)",
+          "success-foreground": "oklch(0.985 0 0)",
+          "warning": "var(--color-pico-orange)",
+          "warning-foreground": "oklch(0.985 0 0)",
+          "danger": "var(--color-pico-red)",
+          "danger-foreground": "oklch(0.985 0 0)"
+        }
       }
     }
   ]

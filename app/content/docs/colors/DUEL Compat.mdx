@@ -1,0 +1,32 @@
+---
+title: DUEL Compat
+---
+import { Aside } from '@astrojs/starlight/components';
+import {
+  ColorPaletteShowcase,
+  ColorThemeShowcase,
+  ColorVariantsShowcase,
+  InstallCommand
+} from "~/components";
+
+import "~/examples/colors/duel-compat.css"
+
+import DuelRaw from "@/components/colors/pxl/duel-compat.gpl?raw";
+
+A 256 colors palette divided in 32 groups. Created by [Arilyn](https://lospec.com/palette-list/duel)
+
+<Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
+
+<InstallCommand item="colors-duel-compat" />
+
+## Base
+
+<ColorThemeShowcase />
+
+## Variants
+
+<ColorVariantsShowcase />
+
+## Full Palette
+
+<ColorPaletteShowcase palette={DuelRaw} />

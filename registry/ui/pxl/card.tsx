@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const cardVariants = cva(
-  "group/card @container/card flex flex-col text-card-foreground pixel-color-border pixel-border pixel-size-(--card-border) p-(--card-border)",
+  "group/card @container/card flex flex-col text-card-foreground pixel-color-card-foreground pixel-border pixel-size-(--card-border) p-(--card-border) bg-card",
   {
     variants: {
       size: {
@@ -13,9 +13,21 @@ const cardVariants = cva(
         md: "[--card-border:--spacing(1)] [--card-spacing:--spacing(2)]",
         lg: "[--card-border:--spacing(1.5)] [--card-spacing:--spacing(1.5)]",
       },
+      variant: {
+        "default": "",
+        "primary": "[--card:var(--color-primary)] [--card-foreground:var(--color-primary-foreground)]",
+        "secondary": "[--card:var(--color-secondary)] [--card-foreground:var(--color-secondary-foreground)]",
+        "muted": "[--card:var(--color-muted)] [--card-foreground:var(--color-muted-foreground)]",
+        "accent": "[--card:var(--color-muted)] [--card-foreground:var(--color-accent-foreground)]",
+        "info": "[--card:var(--color-info)] [--card-foreground:var(--color-info-foreground)]",
+        "success": "[--card:var(--color-success)] [--card-foreground:var(--color-success-foreground)]",
+        "danger": "[--card:var(--color-danger)] [--card-foreground:var(--color-danger-foreground)]",
+        "warning": "[--card:var(--color-warning)] [--card-foreground:var(--color-warning-foreground)]",
+      },
     },
     defaultVariants: {
       size: "default",
+      variant: "default"
     },
   },
 );
@@ -23,6 +35,7 @@ const cardVariants = cva(
 function Card({
   className,
   size,
+  variant,
   ...props
 }: {
   asChild?: boolean;
@@ -33,6 +46,7 @@ function Card({
       data-slot="card"
       className={cardVariants({
         size,
+        variant,
         className,
       })}
       {...props}
@@ -45,7 +59,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-header"
       className={cn(
-        "group/card-header bg-card pt-(--card-spacing) px-(--card-spacing)",
+        "group/card-header pt-(--card-spacing) px-(--card-spacing)",
         className,
       )}
       {...props}
@@ -58,7 +72,20 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-title"
       className={cn(
-        "font-heading italic leading-4 text-base @7xs/card:text-lg @4xs/card:text-xl",
+        "font-heading italic  h-5 leading-4! text-base @7xs/card:text-lg @4xs/card:text-xl [&>svg]:fill-current [&>svg]:size-5 [&>svg]:inline-block [&>svg]:mr-1.5",
+        className,
+      )}
+      {...props}
+    />
+  );
+}
+
+function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn(
+        "font-sans leading-4 text-sm",
         className,
       )}
       {...props}
@@ -78,7 +105,7 @@ function CardContent({
     return (
       <div
         data-slot="card-content"
-        className={cn("bg-card p-(--card-spacing) size-full", className)}
+        className={cn("p-(--card-spacing) flex-1 min-h-0", className)}
         {...props}
       >
         {children}
@@ -89,7 +116,7 @@ function CardContent({
   return (
     <ScrollAreaPrimitive.Root
       data-slot="card-content"
-      className={cn("bg-card p-(--card-spacing) size-full relative", className)}
+      className={cn("p-(--card-spacing) size-full relative", className)}
       {...props}
     >
       <ScrollAreaPrimitive.Viewport
@@ -118,4 +145,4 @@ function CardContent({
   );
 }
 
-export { Card, CardContent, CardHeader, CardTitle };
+export { Card, CardContent, CardDescription, CardHeader, CardTitle, };

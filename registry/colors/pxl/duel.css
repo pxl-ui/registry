@@ -1,0 +1,295 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+
+@theme {
+  --color-duel-slate-50: oklch(97.547% 0.0045 258.325);
+  --color-duel-slate-100: oklch(86.227% 0.0123 259.824);
+  --color-duel-slate-200: oklch(74.824% 0.0195 258.361);
+  --color-duel-slate-400: oklch(63.371% 0.0222 257.497);
+  --color-duel-slate-600: oklch(51.523% 0.016 258.366);
+  --color-duel-slate-700: oklch(38.999% 0.0072 264.484);
+  --color-duel-slate-800: oklch(25.51% 0.0015 197.063);
+  --color-duel-slate-950: oklch(0% 0 0);
+
+  --color-duel-sand-50: oklch(96.61% 0.04 88.196);
+  --color-duel-sand-100: oklch(89.869% 0.0293 72.454);
+  --color-duel-sand-200: oklch(81.961% 0.0266 84.592);
+  --color-duel-sand-400: oklch(76.097% 0.0207 65.056);
+  --color-duel-sand-600: oklch(71.365% 0.0369 82.856);
+  --color-duel-sand-700: oklch(65.094% 0.0349 68.669);
+  --color-duel-sand-800: oklch(57.266% 0.0311 67.139);
+  --color-duel-sand-950: oklch(48.021% 0.0155 82.375);
+
+  --color-duel-clay-50: oklch(87.773% 0.1118 78.456);
+  --color-duel-clay-100: oklch(80.818% 0.1088 45.879);
+  --color-duel-clay-200: oklch(70.858% 0.1001 45.946);
+  --color-duel-clay-400: oklch(59.909% 0.0908 45.278);
+  --color-duel-clay-600: oklch(55.191% 0.0804 42.159);
+  --color-duel-clay-700: oklch(49.245% 0.0795 35.814);
+  --color-duel-clay-800: oklch(42.682% 0.076 22.985);
+  --color-duel-clay-950: oklch(35.953% 0.0602 36.573);
+  
+  --color-duel-abyss-50: oklch(84.043% 0.096 232.471);
+  --color-duel-abyss-100: oklch(69.919% 0.1232 223.394);
+  --color-duel-abyss-200: oklch(59.859% 0.0925 221.608);
+  --color-duel-abyss-400: oklch(50.187% 0.0924 221.498);
+  --color-duel-abyss-600: oklch(47.449% 0.0854 223.143);
+  --color-duel-abyss-700: oklch(38.834% 0.0703 219.117);
+  --color-duel-abyss-800: oklch(32.112% 0.0673 234.132);
+  --color-duel-abyss-950: oklch(25.445% 0.0493 227.279);
+  
+  --color-duel-ember-50: oklch(92.524% 0.1713 101.243);
+  --color-duel-ember-100: oklch(83.802% 0.1452 76.541);
+  --color-duel-ember-200: oklch(77.2% 0.1449 57.458);
+  --color-duel-ember-400: oklch(68.441% 0.1501 46.352);
+  --color-duel-ember-600: oklch(61.445% 0.1465 33.659);
+  --color-duel-ember-700: oklch(55.554% 0.138 26.335);
+  --color-duel-ember-800: oklch(46.749% 0.1268 20.967);
+  --color-duel-ember-950: oklch(37.133% 0.0857 24.082);
+  
+  --color-duel-twilight-50: oklch(92.202% 0.0473 229.546);
+  --color-duel-twilight-100: oklch(87.816% 0.0591 269.354);
+  --color-duel-twilight-200: oklch(75.63% 0.0643 256.715);
+  --color-duel-twilight-400: oklch(65.74% 0.052 272.095);
+  --color-duel-twilight-600: oklch(58.442% 0.0517 288.731);
+  --color-duel-twilight-700: oklch(50.216% 0.0585 286.565);
+  --color-duel-twilight-800: oklch(39.682% 0.0612 270.132);
+  --color-duel-twilight-950: oklch(30.204% 0.0559 278.28);
+
+  --color-duel-moss-50: oklch(79.063% 0.176 122.996);
+  --color-duel-moss-100: oklch(66.705% 0.1503 126.171);
+  --color-duel-moss-200: oklch(56.766% 0.144 133.919);
+  --color-duel-moss-400: oklch(46.355% 0.134 137.183);
+  --color-duel-moss-600: oklch(41.207% 0.1124 140.792);
+  --color-duel-moss-700: oklch(36.284% 0.0934 144.629);
+  --color-duel-moss-800: oklch(28.078% 0.0597 164.11);
+  --color-duel-moss-950: oklch(22.436% 0.0437 171.495);
+  
+  --color-duel-sky-50: oklch(90.031% 0.1144 200.826);
+  --color-duel-sky-100: oklch(81.096% 0.1273 225.16);
+  --color-duel-sky-200: oklch(72.059% 0.1223 230.809);
+  --color-duel-sky-400: oklch(61.103% 0.1061 232.023);
+  --color-duel-sky-600: oklch(50.487% 0.0751 236.524);
+  --color-duel-sky-700: oklch(38.763% 0.0744 252.656);
+  --color-duel-sky-800: oklch(31.741% 0.0526 261.624);
+  --color-duel-sky-950: oklch(24.049% 0.0325 265.854);
+  
+  --color-duel-forest-50: oklch(82.528% 0.1083 150.391);
+  --color-duel-forest-100: oklch(70.248% 0.1251 155.448);
+  --color-duel-forest-200: oklch(57.563% 0.0921 154.243);
+  --color-duel-forest-400: oklch(51.381% 0.0744 155.952);
+  --color-duel-forest-600: oklch(43.549% 0.0664 153.572);
+  --color-duel-forest-700: oklch(40.91% 0.0417 154.469);
+  --color-duel-forest-800: oklch(35.121% 0.024 166.426);
+  --color-duel-forest-950: oklch(29.825% 0.0339 173.951);
+  
+  --color-duel-sakura-50: oklch(93.208% 0.0614 326.057);
+  --color-duel-sakura-100: oklch(85.779% 0.0798 7.178);
+  --color-duel-sakura-200: oklch(79.536% 0.1201 11.761);
+  --color-duel-sakura-400: oklch(72.829% 0.1677 22.114);
+  --color-duel-sakura-600: oklch(65.023% 0.1697 21.788);
+  --color-duel-sakura-700: oklch(53.092% 0.159 27.18);
+  --color-duel-sakura-800: oklch(40.557% 0.1326 27.243);
+  --color-duel-sakura-950: oklch(30.968% 0.1173 22.898);
+
+  --color-duel-steel-50: oklch(95.307% 0.0097 252.812);
+  --color-duel-steel-100: oklch(82.598% 0.0315 258.944);
+  --color-duel-steel-200: oklch(75.347% 0.0231 277.369);
+  --color-duel-steel-400: oklch(62.555% 0.0212 276.143);
+  --color-duel-steel-600: oklch(55.962% 0.0184 285.791);
+  --color-duel-steel-700: oklch(47.858% 0.0208 282.089);
+  --color-duel-steel-800: oklch(40.107% 0.01 293.597);
+  --color-duel-steel-950: oklch(31.124% 0.0106 253.992);
+
+  --color-duel-mauve-50: oklch(97.116% 0.0989 105.009);
+  --color-duel-mauve-100: oklch(84.236% 0.0967 80.736);
+  --color-duel-mauve-200: oklch(74.698% 0.0884 57.281);
+  --color-duel-mauve-400: oklch(67.245% 0.0918 38.438);
+  --color-duel-mauve-600: oklch(59.795% 0.0882 29.961);
+  --color-duel-mauve-700: oklch(50.448% 0.0752 13.189);
+  --color-duel-mauve-800: oklch(39.355% 0.0442 359.744);
+  --color-duel-mauve-950: oklch(32.593% 0.0257 323.486);
+
+  --color-duel-taupe-50: oklch(82.117% 0.0601 72.661);
+  --color-duel-taupe-100: oklch(73.825% 0.0511 68.911);
+  --color-duel-taupe-200: oklch(64.411% 0.0465 76.039);
+  --color-duel-taupe-400: oklch(54.187% 0.0421 74.678);
+  --color-duel-taupe-600: oklch(48.923% 0.0348 41.552);
+  --color-duel-taupe-700: oklch(41.998% 0.0331 18.561);
+  --color-duel-taupe-800: oklch(35.522% 0.032 357.064);
+  --color-duel-taupe-950: oklch(27.322% 0.0266 345.742);
+
+  --color-duel-orchid-50: oklch(87.604% 0.0621 352.542);
+  --color-duel-orchid-100: oklch(75.838% 0.0926 344.065);
+  --color-duel-orchid-200: oklch(66.586% 0.1114 339.505);
+  --color-duel-orchid-400: oklch(62.908% 0.106 350.74);
+  --color-duel-orchid-600: oklch(53.449% 0.0979 350.019);
+  --color-duel-orchid-700: oklch(40.621% 0.084 338.066);
+  --color-duel-orchid-800: oklch(32.733% 0.0585 342.112);
+  --color-duel-orchid-950: oklch(22.952% 0.0595 338.735);
+
+  --color-duel-teal-50: oklch(81.404% 0.1396 192.45);
+  --color-duel-teal-100: oklch(71.946% 0.1333 177.12);
+  --color-duel-teal-200: oklch(63.066% 0.1176 176.298);
+  --color-duel-teal-400: oklch(54.595% 0.0956 186.344);
+  --color-duel-teal-600: oklch(47.866% 0.0815 197.041);
+  --color-duel-teal-700: oklch(40.156% 0.0722 218.207);
+  --color-duel-teal-800: oklch(34.459% 0.064 222.577);
+  --color-duel-teal-950: oklch(28.81% 0.0676 241.357);
+
+  --color-duel-honey-50: oklch(93.453% 0.0913 96.298);
+  --color-duel-honey-100: oklch(85.061% 0.0976 88.609);
+  --color-duel-honey-200: oklch(75.284% 0.0869 79.902);
+  --color-duel-honey-400: oklch(67.411% 0.0745 74.38);
+  --color-duel-honey-600: oklch(59.743% 0.0684 72.123);
+  --color-duel-honey-700: oklch(51.463% 0.0567 66.007);
+  --color-duel-honey-800: oklch(42.948% 0.0385 52.726);
+  --color-duel-honey-950: oklch(33.277% 0.0356 52.091);
+
+  --color-duel-sienna-50: oklch(87.588% 0.0874 89.36);
+  --color-duel-sienna-100: oklch(81.368% 0.0981 67.206);
+  --color-duel-sienna-200: oklch(72.011% 0.0849 56.257);
+  --color-duel-sienna-400: oklch(64.983% 0.0881 42.105);
+  --color-duel-sienna-600: oklch(56.746% 0.0942 28.057);
+  --color-duel-sienna-700: oklch(48.773% 0.1003 20.623);
+  --color-duel-sienna-800: oklch(37.744% 0.1053 10.649);
+  --color-duel-sienna-950: oklch(31.772% 0.1174 8.569);
+
+  --color-duel-violet-50: oklch(88.999% 0.0591 293.693);
+  --color-duel-violet-100: oklch(78.923% 0.1141 289.165);
+  --color-duel-violet-200: oklch(72.375% 0.1209 283.498);
+  --color-duel-violet-400: oklch(67.753% 0.1255 283.581);
+  --color-duel-violet-600: oklch(60.184% 0.1113 283.146);
+  --color-duel-violet-700: oklch(52.994% 0.0873 282.211);
+  --color-duel-violet-800: oklch(45.243% 0.0759 275.43);
+  --color-duel-violet-950: oklch(34.329% 0.0611 278.919);
+
+  --color-duel-magenta-50: oklch(90.689% 0.0857 326.256);
+  --color-duel-magenta-100: oklch(82.138% 0.111 357.357);
+  --color-duel-magenta-200: oklch(75.233% 0.1658 357.569);
+  --color-duel-magenta-400: oklch(68.877% 0.1903 9.908);
+  --color-duel-magenta-600: oklch(61.402% 0.1789 11.189);
+  --color-duel-magenta-700: oklch(49.777% 0.1337 9.307);
+  --color-duel-magenta-800: oklch(39.428% 0.0999 8.771);
+  --color-duel-magenta-950: oklch(27.924% 0.0715 357.195);
+
+  --color-duel-cinnamon-50: oklch(75.353% 0.0998 42.586);
+  --color-duel-cinnamon-100: oklch(70.809% 0.0892 36.074);
+  --color-duel-cinnamon-200: oklch(66.131% 0.0842 23.335);
+  --color-duel-cinnamon-400: oklch(60.609% 0.078 20.63);
+  --color-duel-cinnamon-600: oklch(53.604% 0.0833 19.188);
+  --color-duel-cinnamon-700: oklch(46.834% 0.0675 24.999);
+  --color-duel-cinnamon-800: oklch(38.45% 0.068 23.286);
+  --color-duel-cinnamon-950: oklch(31.054% 0.0571 34.994);
+
+  --color-duel-olive-50: oklch(82.299% 0.1636 107.961);
+  --color-duel-olive-100: oklch(72.522% 0.1356 104.467);
+  --color-duel-olive-200: oklch(66.211% 0.1329 111.536);
+  --color-duel-olive-400: oklch(58.539% 0.1197 113.565);
+  --color-duel-olive-600: oklch(52.235% 0.1212 120.075);
+  --color-duel-olive-700: oklch(44.544% 0.1092 122.926);
+  --color-duel-olive-800: oklch(38.807% 0.1016 131.943);
+  --color-duel-olive-950: oklch(26.278% 0.0634 121.478);
+
+  --color-duel-amber-50: oklch(95.205% 0.1786 106.26);
+  --color-duel-amber-100: oklch(85.824% 0.1519 99.892);
+  --color-duel-amber-200: oklch(75.355% 0.1341 89.163);
+  --color-duel-amber-400: oklch(66.004% 0.1198 78.116);
+  --color-duel-amber-600: oklch(55.681% 0.1093 66.397);
+  --color-duel-amber-700: oklch(48.024% 0.1012 62.949);
+  --color-duel-amber-800: oklch(41.896% 0.0992 54.15);
+  --color-duel-amber-950: oklch(35.766% 0.0946 49.963);
+
+  --color-duel-dawn-50: oklch(91.825% 0.0687 77.489);
+  --color-duel-dawn-100: oklch(77.384% 0.0583 67.656);
+  --color-duel-dawn-200: oklch(69.629% 0.044 57.461);
+  --color-duel-dawn-400: oklch(60.13% 0.0286 15.012);
+  --color-duel-dawn-600: oklch(53.144% 0.0187 348.113);
+  --color-duel-dawn-700: oklch(44.958% 0.0505 293.131);
+  --color-duel-dawn-800: oklch(35.679% 0.0498 288.339);
+  --color-duel-dawn-950: oklch(27.262% 0.0476 288.103);
+
+  --color-duel-fern-50: oklch(73.04% 0.1733 131.395);
+  --color-duel-fern-100: oklch(64.832% 0.1506 125.899);
+  --color-duel-fern-200: oklch(57.529% 0.1169 123.74);
+  --color-duel-fern-400: oklch(51.286% 0.1001 126.411);
+  --color-duel-fern-600: oklch(45.807% 0.0704 128.013);
+  --color-duel-fern-700: oklch(39.791% 0.0378 148.922);
+  --color-duel-fern-800: oklch(35.1% 0.0262 237.685);
+  --color-duel-fern-950: oklch(29.148% 0.047 258.703);
+
+  --color-duel-terracotta-50: oklch(78.726% 0.1079 44.112);
+  --color-duel-terracotta-100: oklch(72.345% 0.0934 45.315);
+  --color-duel-terracotta-200: oklch(65.385% 0.0901 43.303);
+  --color-duel-terracotta-400: oklch(59.363% 0.0833 40.046);
+  --color-duel-terracotta-600: oklch(53.551% 0.076 35.004);
+  --color-duel-terracotta-700: oklch(46.552% 0.0604 23.911);
+  --color-duel-terracotta-800: oklch(37.461% 0.0372 16.44);
+  --color-duel-terracotta-950: oklch(28.339% 0.0293 22.453);
+
+  --color-duel-mint-50: oklch(96.211% 0.0336 160.46);
+  --color-duel-mint-100: oklch(82.736% 0.0478 168.854);
+  --color-duel-mint-200: oklch(76.097% 0.084 150.77);
+  --color-duel-mint-400: oklch(71.322% 0.0626 149.943);
+  --color-duel-mint-600: oklch(63.582% 0.0537 155.404);
+  --color-duel-mint-700: oklch(55.276% 0.0461 159.788);
+  --color-duel-mint-800: oklch(47.967% 0.0395 169.902);
+  --color-duel-mint-950: oklch(38.791% 0.0366 185.178);
+
+  --color-duel-ocean-50: oklch(80.662% 0.1155 234.163);
+  --color-duel-ocean-100: oklch(73.114% 0.1277 241.81);
+  --color-duel-ocean-200: oklch(66.243% 0.1491 250.252);
+  --color-duel-ocean-400: oklch(55.213% 0.1417 248.162);
+  --color-duel-ocean-600: oklch(47.314% 0.131 251.52);
+  --color-duel-ocean-700: oklch(39.432% 0.1059 249.666);
+  --color-duel-ocean-800: oklch(31.341% 0.0942 253.423);
+  --color-duel-ocean-950: oklch(22.809% 0.0786 256.232);
+
+  --color-duel-dusk-50: oklch(95.787% 0.1354 105.98);
+  --color-duel-dusk-100: oklch(89.569% 0.0877 75.225);
+  --color-duel-dusk-200: oklch(83.122% 0.0684 56.423);
+  --color-duel-dusk-400: oklch(75.939% 0.0611 30.19);
+  --color-duel-dusk-600: oklch(68.502% 0.0555 8.248);
+  --color-duel-dusk-700: oklch(59.956% 0.052 343.53);
+  --color-duel-dusk-800: oklch(51.104% 0.0461 330.258);
+  --color-duel-dusk-950: oklch(42.622% 0.0577 302.91);
+
+  --color-duel-lavender-50: oklch(83.722% 0.0918 298.509);
+  --color-duel-lavender-100: oklch(78.166% 0.1077 292.788);
+  --color-duel-lavender-200: oklch(72.332% 0.1238 293.199);
+  --color-duel-lavender-400: oklch(67.815% 0.1558 288.323);
+  --color-duel-lavender-600: oklch(56.233% 0.1304 292.973);
+  --color-duel-lavender-700: oklch(44.711% 0.086 294.834);
+  --color-duel-lavender-800: oklch(33.98% 0.0565 299.197);
+  --color-duel-lavender-950: oklch(23.245% 0.0076 285.791);
+
+  --color-duel-cobalt-50: oklch(66.865% 0.0739 270.07);
+  --color-duel-cobalt-100: oklch(61.727% 0.1036 269.196);
+  --color-duel-cobalt-200: oklch(57.212% 0.1312 265.328);
+  --color-duel-cobalt-400: oklch(52.566% 0.1174 270.406);
+  --color-duel-cobalt-600: oklch(44.023% 0.0876 267.312);
+  --color-duel-cobalt-700: oklch(37.51% 0.0929 268.954);
+  --color-duel-cobalt-800: oklch(33.379% 0.0755 270.796);
+  --color-duel-cobalt-950: oklch(28.824% 0.0782 282.369);
+
+  --color-duel-rosewood-50: oklch(93.161% 0.0409 55.35);
+  --color-duel-rosewood-100: oklch(78.345% 0.0449 25.177);
+  --color-duel-rosewood-200: oklch(67.924% 0.0524 4.285);
+  --color-duel-rosewood-400: oklch(63.182% 0.0665 5.212);
+  --color-duel-rosewood-600: oklch(54.456% 0.0651 6.084);
+  --color-duel-rosewood-700: oklch(48.342% 0.0493 4.431);
+  --color-duel-rosewood-800: oklch(41.068% 0.0424 358.845);
+  --color-duel-rosewood-950: oklch(30.645% 0.0614 8.724);
+
+  --color-duel-sunset-50: oklch(95.658% 0.0683 104.92);
+  --color-duel-sunset-100: oklch(93.794% 0.1907 104.689);
+  --color-duel-sunset-200: oklch(87.111% 0.1776 91.701);
+  --color-duel-sunset-400: oklch(81.436% 0.1695 76.691);
+  --color-duel-sunset-600: oklch(71.319% 0.1568 58.305);
+  --color-duel-sunset-700: oklch(58.679% 0.1369 36.412);
+  --color-duel-sunset-800: oklch(47.406% 0.142 29.77);
+  --color-duel-sunset-950: oklch(36.737% 0.124 35.465);
+}

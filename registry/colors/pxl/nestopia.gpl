@@ -1,0 +1,72 @@
+GIMP Palette
+Name: NEStopia
+#Description: The default palette of the NES emulator <a href="http://nestopia.sourceforge.net/" target="_blank">NEStopia</a>, taken from a screenshot showing all its possible colors at once. Two of the whites and two of the blacks on the palette are duplicates, therefore they are not included.
+#Colors: 54
+
+189 222 255 Blue 50
+99	 173 255 Blue 400
+25	 99	 214 Blue 600
+0	 41	 140 Blue 950
+
+214 214 255 Indigo 50
+148 148 255 Indigo 400
+66	 66	 255 Indigo 600
+16	 16	 165 Indigo 950
+
+230 197 255 Purple 50
+197 115 255 Purple 400
+115 41	 255 Purple 600
+58	 0	 165 Purple 950
+
+247 197 255 Fuchsia 50
+239 107 255 Fuchsia 400
+156 25	 206 Fuchsia 600
+90	 0	 123 Fuchsia 950
+
+255 197 230 Pink 50
+255 107 206 Pink 400
+181 33	 123 Pink 600
+107 0	 66	 Pink 950
+
+255 206 197 Red 50
+255 132 115 Red 400
+181 49	 33	 Red 600
+107 8	 0	 Red 950
+
+247 214 165 Amber 50
+230 156 33	 Amber 400
+156 74	 0	 Amber 600
+82	 33	 0	 Amber 950
+
+230 230 148 Yellow 50
+189 189 0	 Yellow 400
+107 107 0	 Yellow 600
+49	 49	 0	 Yellow 950
+
+206 239 148 Lime 50
+140 214 0	 Lime 400
+58	 132 0	 Lime 600
+8	 74	 0	 Lime 950
+
+189 247 173 Green 50
+90	 230 49	 Green 400
+16	 148 0	 Green 600
+0	 82	 0	 Green 950
+
+181 247 206 Emerald 50
+66	 222 132 Emerald 400
+0	 140 49	 Emerald 600
+0	 82	 8	 Emerald 950
+
+181 239 239 Teal 50
+74	 206 222 Teal 400
+0	 123 140 Teal 600
+0	 66	 74	 Teal 950
+
+255 255 255 White
+181 181 181 Neutral 50
+173 173 173 Neutral 400
+99	 99	 99	 Neutral 600
+82	 82	 82	 Neutral 950
+0	 0	 0	 Black
+

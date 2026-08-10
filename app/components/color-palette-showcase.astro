@@ -1,0 +1,26 @@
+---
+
+
+
+import { formatColor, parse } from "gimp-palette";
+
+import { cn } from "@/lib/utils";
+
+export type Props = {
+  palette: string;
+};
+
+const { palette } = Astro.props;
+
+const { colors, name } = parse(palette);
+---
+<div class="not-content pixel-border pixel-color-[oklch(0.556_0_0)] dark:pixel-color-[oklch(0.708_0_0)]  bg-[oklch(0.97_0_0)] dark:bg-[oklch(0.269_0_0)] p-2 space-y-2">
+{colors.map(c => (
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <h2 class="font-sans text-xl sm:w-30">{c.name}</h2>
+    <p style={{
+      backgroundColor: formatColor(c, "oklch"), // We need to force the color because this classes are only available on run time
+    }} class={cn("w-full h-10", `bg-pico-${c.name}`)}></p>
+  </div>
+))}
+</div>

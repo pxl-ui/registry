@@ -1,0 +1,38 @@
+---
+title: Catppuccin Macchiato
+---
+import {
+  ColorPaletteShowcase,
+  ColorThemeShowcase,
+  ColorVariantsShowcase,
+  InstallCommand
+} from "~/components";
+
+import { url } from "~/lib/utils";
+
+import "~/examples/colors/catppuccin-macchiato.css"
+
+import CatpuccinMacchiatoRaw from "@/components/colors/pxl/catppuccin-macchiato.gpl?raw";
+
+Soothing pastel theme for the high-spirited!
+
+[Catppuccin](https://catppuccin.com/palette/) consists of 4 beautiful pastel color palettes, named flavors. The theme comes in one light and three dark variants:
+
+* <a href={url("colors/catppuccin-latte")}>Latte</a>: Lightest theme harmoniously inverting the essence of Catppuccin's dark themes.
+* <a href={url("colors/catppuccin-frappe")}>Frappé</a>: Less vibrant alternative using subdued colors for a muted aesthetic.
+*  **Macchiato**: Medium contrast with gentle colors creating a soothing atmosphere.
+* <a href={url("colors/catppuccin-mocha")}>Mocha</a>: The Original — Darkest variant offering a cozy feeling with color-rich accents.
+
+<InstallCommand item="colors-catppuccin-macchiato" />
+
+## Base
+
+<ColorThemeShowcase />
+
+## Variants
+
+<ColorVariantsShowcase />
+
+## Full Palette
+
+<ColorPaletteShowcase palette={CatpuccinMacchiatoRaw} />

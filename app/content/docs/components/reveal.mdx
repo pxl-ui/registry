@@ -1,0 +1,34 @@
+---
+title: Reveal
+description: Reveal component
+---
+import { Example, InstallCommand } from '~/components';
+
+import Preview from '~/examples/reveal/preview.tsx';
+import PreviewRaw from '~/examples/reveal/preview.tsx?raw';
+
+import Patterns from '~/examples/reveal/patterns.tsx';
+import PatternsRaw from '~/examples/reveal/patterns.tsx?raw';
+
+import Variants from '~/examples/reveal/variants.tsx';
+import VariantsRaw from '~/examples/reveal/variants.tsx?raw';
+
+Content display/hide animation
+
+<Example code={PreviewRaw}>
+  <Preview client:load />
+</Example>
+
+<InstallCommand item="reveal" />
+
+## Patterns
+
+<Example code={PatternsRaw}>
+  <Patterns client:load />
+</Example>
+
+## Variants
+
+<Example code={VariantsRaw}>
+  <Variants client:load />
+</Example>

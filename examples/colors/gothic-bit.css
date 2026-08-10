@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/gothic-bit.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: var(--color-gothic-bit-base-50);
+  --foreground: var(--color-gothic-bit-base-600);
+  --card: var(--color-gothic-bit-base-50);
+  --card-foreground: var(--color-gothic-bit-base-600);
+  --popover: var(--color-gothic-bit-base-50);
+  --popover-foreground: var(--color-gothic-bit-base-600);
+  --accent: var(--color-gothic-bit-base-100);
+  --accent-foreground: var(--color-gothic-bit-base-700);
+  --border: var(--color-gothic-bit-base-400);
+  --input: var(--color-gothic-bit-base-400);
+  --ring: var(--color-gothic-bit-base-600);
+  --muted: var(--color-gothic-bit-base-100);
+  --muted-foreground: var(--color-gothic-bit-base-400);
+}
+
+
+
+.dark, [data-theme="dark"] {
+  --background: var(--color-gothic-bit-base-950);
+  --foreground: var(--color-gothic-bit-base-100);
+  --card: var(--color-gothic-bit-base-700);
+  --card-foreground: var(--color-gothic-bit-base-100);
+  --popover: var(--color-gothic-bit-base-800);
+  --popover-foreground: var(--color-gothic-bit-base-100);
+  --muted: var(--color-gothic-bit-base-600);
+  --muted-foreground: var(--color-gothic-bit-base-400);
+  --accent: var(--color-gothic-bit-base-600);
+  --accent-foreground: var(--color-gothic-bit-base-50);
+  --border: var(--color-gothic-bit-base-600);
+  --input: var(--color-gothic-bit-base-600);
+  --ring: var(--color-gothic-bit-base-400);
+
+}
