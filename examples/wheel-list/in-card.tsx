@@ -18,7 +18,7 @@ const ITEMS: string[] = [
   "EXIT",
 ];
 
-export default function CardPreview() {
+export default function InCardPreview() {
   return (
     <div className="flex items-center justify-center min-h-23">
       <WidgetArea size="sm">

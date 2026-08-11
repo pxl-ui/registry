@@ -10,6 +10,7 @@ const avatarVariants = cva("group/avatar relative flex shrink-0 pixel-rounded se
   variants: {
     size: {
       default: "size-8 pixel-size-md",
+      xs: "size-4 pixel-size-sm",
       sm: "size-6 pixel-size-sm",
       md: "size-8 pixel-size-md",
       lg: "size-10 pixel-size-[3px]",

@@ -116,7 +116,7 @@ function CardContent({
   return (
     <ScrollAreaPrimitive.Root
       data-slot="card-content"
-      className={cn("p-(--card-spacing) size-full relative", className)}
+      className={cn("p-(--card-spacing) relative flex-1 min-h-0 min-w-0", className)}
       {...props}
     >
       <ScrollAreaPrimitive.Viewport
