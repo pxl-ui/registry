@@ -2,18 +2,22 @@ import {
   type ComponentProps,
   type CSSProperties,
   memo,
+  type PropsWithChildren,
   useEffect,
   useRef,
   useState,
 } from "react";
 import { Streamdown } from "streamdown";
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/pxl/avatar";
 import { Card, CardContent } from "@/components/ui/pxl/card";
 import { cn } from "@/lib/utils";
 
 const BOTTOM_THRESHOLD = 4;
-
-type DialogueBoxEvent = { type: "messageDisplayEnd" };
 
 const DialogueInner = memo(
   ({
@@ -136,40 +140,34 @@ function DialogueMessage({
   );
 }
 
-function DialogueBox({
-  characterDelay,
-  className,
-  classNames,
-  displayCursor,
-  text,
-  onEvent,
+function DialoguePortrait({
+  alt,
+  fallback,
+  src,
 }: {
-  characterDelay?: number;
-  className?: string;
-  classNames?: {
-    message?: string;
-  };
-  displayCursor?: boolean;
-  text: string;
-  onEvent?: (evt: DialogueBoxEvent) => void;
+  alt?: string;
+  fallback?: string;
+  src?: string;
 }) {
   return (
+    <Avatar size="xl">
+      <AvatarImage alt={alt} src={src} />
+      <AvatarFallback>{fallback}</AvatarFallback>
+    </Avatar>
+  );
+}
+
+function DialogueBox({
+  children,
+  className,
+}: {
+  className?: string;
+} & PropsWithChildren) {
+  return (
     <Card className={className}>
-      <CardContent>
-        <DialogueMessage
-          characterDelay={characterDelay}
-          className={classNames?.message}
-          displayCursor={displayCursor}
-          text={text}
-          onEnd={() =>
-            onEvent?.({
-              type: "messageDisplayEnd",
-            })
-          }
-        />
-      </CardContent>
+      <CardContent className="flex justify-between gap-2 [--card-spacing:--spacing(1)]">{children}</CardContent>
     </Card>
   );
 }
 
-export { DialogueBox };
+export { DialogueBox, DialogueMessage, DialoguePortrait };

@@ -57,6 +57,27 @@
   }
 }
 
+@utility pixel-rounded {
+  --px: var(--pixel-size, 2px);
+  --px-shape: polygon(
+    0 var(--px),
+    var(--px) var(--px),
+    var(--px) 0,
+    calc(100% - var(--px)) 0,
+    calc(100% - var(--px)) var(--px),
+    100% var(--px),
+    100% calc(100% - var(--px)),
+    calc(100% - var(--px)) calc(100% - var(--px)),
+    calc(100% - var(--px)) 100%,
+    var(--px) 100%,
+    var(--px) calc(100% - var(--px)),
+    0 calc(100% - var(--px)),
+    0 var(--px)
+  );
+
+  clip-path: var(--px-shape);
+}
+
 @utility pixel-notch {
   --n: var(--pixel-size, 2px);
   clip-path: polygon(
@@ -175,4 +196,33 @@
       var(--pw) var(--px2w)
     );
   }
+}
+
+@utility px-rounded-md {
+  --px: var(--pixel-size, 3px);
+  --px2: calc(var(--pixel-size, 3px) * 2);
+  --px-shape: polygon(
+    0 var(--px2),
+    var(--px) var(--px2),
+    var(--px) var(--px),
+    var(--px2) var(--px),
+    var(--px2) 0,
+    calc(100% - var(--px2)) 0,
+    calc(100% - var(--px2)) var(--px),
+    calc(100% - var(--px)) var(--px),
+    calc(100% - var(--px)) var(--px2),
+    100% var(--px2),
+    100% calc(100% - var(--px2)),
+    calc(100% - var(--px)) calc(100% - var(--px2)),
+    calc(100% - var(--px)) calc(100% - var(--px)),
+    calc(100% - var(--px2)) calc(100% - var(--px)),
+    calc(100% - var(--px2)) 100%,
+    var(--px2) 100%,
+    var(--px2) calc(100% - var(--px)),
+    var(--px) calc(100% - var(--px)),
+    var(--px) calc(100% - var(--px2)),
+    0 calc(100% - var(--px2))
+  );
+  border-radius: 0;
+  clip-path: var(--px-shape);
 }
