@@ -12,7 +12,7 @@ import { Reveal } from "@/components/ui/pxl/reveal";
 import { WheelList } from "@/components/ui/pxl/wheel-list";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
-export default function RevealExample() {
+export default function RevealPreview() {
   const [open, setOpen] = useState(false);
 
   return (

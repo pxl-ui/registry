@@ -8,6 +8,9 @@ import { Example, InstallCommand } from "~/components";
 import Preview from '~/examples/sprite-canvas/preview.tsx';
 import PreviewRaw from '~/examples/sprite-canvas/preview.tsx?raw';
 
+import Sizes from '~/examples/sprite-canvas/sizes.tsx';
+import SizesRaw from '~/examples/sprite-canvas/sizes.tsx?raw';
+
 import ChoiceAnimation from '~/examples/sprite-canvas/choice-animation.tsx';
 import ChoiceAnimationRaw from '~/examples/sprite-canvas/choice-animation.tsx?raw';
 
@@ -25,9 +28,15 @@ A canvas renderer for single sprites
 
 <InstallCommand item="sprite-canvas" />
 
-### Extensions
+## Sizes
 
-#### Choice Animation
+<Example code={SizesRaw}>
+  <Sizes client:load />
+</Example>
+
+## Extensions
+
+### Choice Animation
 
 A custom choice animation for sprite canvas
 
@@ -37,7 +46,7 @@ A custom choice animation for sprite canvas
 
 <InstallCommand item="sprite-canvas-choice" />
 
-#### Transition Animation
+### Transition Animation
 
 A custom transition animation for sprite canvas
 
@@ -47,7 +56,7 @@ A custom transition animation for sprite canvas
 
 <InstallCommand item="sprite-canvas-transition" />
 
-#### Evolution Animation
+### Evolution Animation
 
 A custom evolution animation for sprite canvas
 

@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 
 import { cn } from "@/lib/utils";
 
-const lcdScreenVariants = cva("", {
+const screenVariants = cva("", {
   variants: {
     variant: {
       default: "",
@@ -46,26 +46,9 @@ const lcdScreenVariants = cva("", {
   ],
 });
 
-export default function LCDScreen({
-  background,
-  children,
-  className,
-  variant,
-  ...props
-}: ComponentProps<"div"> & VariantProps<typeof lcdScreenVariants>) {
+function CRTFilter() {
   return (
-    <div
-      className={cn(
-        className,
-        lcdScreenVariants({
-          background,
-          variant,
-        }),
-      )}
-      {...props}
-    >
-      {variant === "crt" && (
-        <svg
+    <svg
           xmlns="http://www.w3.org/2000/svg"
           className="hidden absolute w-0 h-0"
         >
@@ -171,8 +154,43 @@ export default function LCDScreen({
             </filter>
           </defs>
         </svg>
+  )
+}
+
+function ScreenProvider({
+  background,
+  children,
+  className,
+  variant,
+  ...props
+}: ComponentProps<"div"> & VariantProps<typeof screenVariants>) {
+  return (
+    <div
+      className={cn(
+        className,
+        screenVariants({
+          background,
+          variant,
+        }),
       )}
-      <div className="filtered">{children}</div>
+      {...props}
+    >
+      {variant === "crt" && (
+        <CRTFilter />
+      )}
+      {children}
     </div>
   );
 }
+
+function ScreenFilter({ className, children, ...props }: ComponentProps<"div">) {
+  return (
+    <div className={cn("filtered", className)}>{children}</div>
+  )
+}
+
+ScreenProvider.Filter = ScreenFilter;
+
+export { ScreenFilter, ScreenProvider };
+
+export default ScreenProvider;
