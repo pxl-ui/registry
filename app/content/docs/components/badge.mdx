@@ -1,12 +1,17 @@
 ---
 title: Badge
 description: Badge component
-draft: true
 ---
 import { Example, InstallCommand  } from '~/components';
 
 import Preview from '~/examples/badge/preview.tsx';
 import PreviewRaw from '~/examples/badge/preview.tsx?raw';
+
+import Borders from '~/examples/badge/borders.tsx';
+import BordersRaw from '~/examples/badge/borders.tsx?raw';
+
+import Sizes from '~/examples/badge/sizes.tsx';
+import SizesRaw from '~/examples/badge/sizes.tsx?raw';
 
 import Variants from '~/examples/badge/variants.tsx';
 import VariantsRaw from '~/examples/badge/variants.tsx?raw';
@@ -16,6 +21,18 @@ import VariantsRaw from '~/examples/badge/variants.tsx?raw';
 </Example>
 
 <InstallCommand item="badge" />
+
+## Borders
+
+<Example code={BordersRaw}>
+  <Borders client:load />
+</Example>
+
+## Sizes
+
+<Example code={SizesRaw}>
+  <Sizes client:load />
+</Example>
 
 ## Variants
 
