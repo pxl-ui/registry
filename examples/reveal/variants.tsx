@@ -15,7 +15,6 @@ export default function RetroMenuExample() {
 
       <div className="flex flex-row gap-2 w-full">
         <Button
-          borders={false}
           className="flex-1"
           onClick={() => {
             setVariant("default");
@@ -26,7 +25,6 @@ export default function RetroMenuExample() {
         </Button>
 
         <Button
-          borders={false}
           variant="success"
           className="flex-1"
           onClick={() => {
@@ -38,7 +36,6 @@ export default function RetroMenuExample() {
         </Button>
 
         <Button
-          borders={false}
           variant="danger"
           className="flex-1"
           onClick={() => {

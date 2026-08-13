@@ -17,7 +17,7 @@ export default function RevealPreview() {
 
   return (
     <div className="relative flex flex-col items-start gap-4 p-8">
-      <Button borders={false} onClick={() => setOpen((v) => !v)}>
+      <Button onClick={() => setOpen((v) => !v)}>
         {open ? "Hide menu" : "Show menu"}
       </Button>
 

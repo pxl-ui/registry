@@ -16,7 +16,6 @@ export default function RetroMenuExample() {
       <div className="flex flex-row gap-2 w-full">
         
         <Button
-          borders={false}
           className="flex-1"
           onClick={() => {
             setPattern("radial");
@@ -27,7 +26,6 @@ export default function RetroMenuExample() {
         </Button>
 
         <Button
-          borders={false}
           className="flex-1"
           onClick={() => {
             setPattern("diagonal");
@@ -38,7 +36,6 @@ export default function RetroMenuExample() {
         </Button>
 
         <Button
-          borders={false}
           className="flex-1"
           onClick={() => {
             setPattern("random");
