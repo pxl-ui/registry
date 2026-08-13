@@ -15,9 +15,16 @@ import { url } from "~/lib/utils";
 
 
 import "~/examples/fonts/able-5.css"
+import "~/examples/fonts/bytesized.css"
+import "~/examples/fonts/coral-pixels.css"
+import "~/examples/fonts/geist-pixel.css"
+import "~/examples/fonts/jacquarda-bastarda-9.css"
+import "~/examples/fonts/micro-5.css"
 import "~/examples/fonts/monogram.css"
 import "~/examples/fonts/pixel-digivolve.css"
-import "~/examples/fonts/geist-pixel.css"
+import "~/examples/fonts/pixelify-sans.css"
+import "~/examples/fonts/press-start-2p.css"
+import "~/examples/fonts/tiny5.css"
 
 PXL-UI provides fonts for `font-heading`, `font-sans`, and `font-mono`.
 
@@ -27,7 +34,7 @@ Please note that each fonts may require different methods of installation or dow
 
 Default value: <a href={url("fonts/pixel-digivolve")}>Pixel Digivolve</a>
 
-These fonts are useful for displaying titles, headings, or funcy badges and buttons (normally in uppercase).
+These fonts are useful for displaying titles, headings, or fancy badges and buttons (normally in uppercase).
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
 
@@ -38,6 +45,17 @@ These fonts are useful for displaying titles, headings, or funcy badges and butt
       </CardHeader>
       <CardContent className="flex items-center justify-center font-pixel-digivolve">
         <TypographySample className="font-pixel-digivolve" />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("fonts/jacquarda-bastarda-9")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Jacquarda Bastarda 9</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-jacquarda-bastarda-9">
+        <TypographySample className="font-jacquarda-bastarda-9" />
       </CardContent>
     </Card>
   </a>
@@ -63,6 +81,39 @@ These fonts are used everywhere to display regular texts. Therefore, they tend t
     </Card>
   </a>
 
+  <a href={url("fonts/pixelify-sans")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Pixelify Sans</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-pixelify-sans">
+        <TypographySample className="font-pixelify-sans" />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("fonts/tiny5")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Tiny5</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-tiny5">
+        <TypographySample className="font-tiny5" />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("fonts/micro-5")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Micro 5</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-micro-5">
+        <TypographySample className="font-micro-5" />
+      </CardContent>
+    </Card>
+  </a>
+
   <a href={url("fonts/geist-pixel")}>
     <Card>
       <CardHeader>
@@ -74,14 +125,36 @@ These fonts are used everywhere to display regular texts. Therefore, they tend t
     </Card>
   </a>
 
+  <a href={url("fonts/press-start-2p")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Press Start 2P</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-press-start-2p">
+        <TypographySample className="font-press-start-2p" />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("fonts/coral-pixels")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Coral Pixels</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-coral-pixels">
+        <TypographySample className="font-coral-pixels" />
+      </CardContent>
+    </Card>
+  </a>
+
 
 </div>
 
 ## Monospaced Fonts
 
-In contexts where the spacing of each character must be similar across all letters, they are ideal for code blocks or command-line terminals.
-
 Default value: <a href={url("fonts/monogram")}>Monogram</a>
+
+In contexts where the spacing of each character must be similar across all letters, they are ideal for code blocks or command-line terminals.
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
 
@@ -92,6 +165,17 @@ Default value: <a href={url("fonts/monogram")}>Monogram</a>
       </CardHeader>
       <CardContent className="flex items-center justify-center font-monogram">
         <TypographySample className="font-monogram" />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("fonts/bytesized")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Bytesized</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-bytesized">
+        <TypographySample className="font-bytesized" />
       </CardContent>
     </Card>
   </a>

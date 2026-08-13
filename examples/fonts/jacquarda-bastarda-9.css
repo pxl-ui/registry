@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-jacquarda-bastarda-9: 'Jacquarda Bastarda 9', 'Inter Variable', sans-serif;
+}

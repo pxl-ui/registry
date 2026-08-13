@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-coral-pixels: 'Coral Pixels', 'Inter Variable', sans-serif;
+}
