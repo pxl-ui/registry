@@ -1,14 +1,27 @@
+import { type ComponentProps, useState } from "react";
+
+import { Button } from "@/components/ui/pxl/button";
 import Screen from "@/components/ui/pxl/screen";
 import { SpriteCanvas } from "@/components/ui/pxl/sprite-canvas";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
-export default function ScreenPreview() {
+export default function ScreenGreenExample() {
+  const [background, setBackground] =
+    useState<ComponentProps<typeof Screen>["background"]>("none");
   return (
     <div className="flex flex-col gap-2 items-center justify-center">
+      <Button
+        onClick={() =>
+          setBackground((prev) => (prev === "none" ? "filter" : "none"))
+        }
+      >
+        Toggle Background
+      </Button>
       <WidgetArea size="sm">
         <Screen
           className="size-full flex items-center justify-center"
-          variant="lcd"
+          variant="green"
+          background={background}
         >
           <Screen.Filter>
             <SpriteCanvas

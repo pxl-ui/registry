@@ -32,16 +32,7 @@
 
 .filter-green-light .filtered {
   filter: grayscale(1) contrast(1.4) brightness(0.9) sepia(0.4)
-    hue-rotate(30deg) saturate(0.8);
-}
-
-.filter-green-light::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: hsla(84, 21%, 53%, 0.28);
-  pointer-events: none;
-  mix-blend-mode: multiply;
+    hue-rotate(30deg) saturate(0.8) url(#green-light-filter);
 }
 
 .bg-lcd-green-light {

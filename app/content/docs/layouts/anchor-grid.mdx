@@ -1,14 +1,20 @@
 ---
 title: Anchor Grid
 description: Grid-based widget sizing and positioning
+sidebar:
+  order: 2
 ---
 
+import { Aside } from '@astrojs/starlight/components';
 import { Example, InstallCommand } from "~/components";
+import { url } from '~/lib/utils';
 
 import Preview from '~/examples/anchor-grid/preview.tsx';
 import PreviewRaw from '~/examples/anchor-grid/preview.tsx?raw';
 
 Grid-based widget sizing and positioning
+
+<Aside type="tip" title="When to use">Use Anchor Grid to display your widgets in websites or other full screen based setups. For desktop/floating widgets, use <a href={url("layouts/widget-area")}>Widget Area</a> instead.</Aside>
 
 <Example code={PreviewRaw}>
   <Preview client:load />

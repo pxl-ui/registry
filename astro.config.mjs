@@ -15,6 +15,9 @@ export default defineConfig({
     react(),
     starlight({
       title: "PXL UI",
+      logo: {
+        src: './app/assets/logo.png',
+      },
       expressiveCode: {
         shiki: {
           bundledLangs: ["sh", "bash", "typescript", "tsx"],
@@ -35,6 +38,10 @@ export default defineConfig({
         {
           label: "Utilities",
           items: [{ autogenerate: { directory: "utilities" } }],
+        },
+        {
+          label: "Layouts",
+          items: [{ autogenerate: { directory: "layouts" } }],
         },
         {
           label: "Components",

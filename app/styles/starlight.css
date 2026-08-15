@@ -17,6 +17,7 @@
 @import "@/components/styles/pxl/cursors.css";
 @import "@/components/styles/pxl/filters.css";
 @import "@/components/styles/pxl/images.css";
+@import "@/components/styles/pxl/sprites.css";
 @import "@/components/styles/pxl/texts.css";
 @import "@/components/styles/pxl/widgets.css";
 
@@ -148,7 +149,7 @@
 
   --animate-blink: blink var(--tw-duration, 1s) steps(1) infinite;
   --animate-marquee: marquee var(--tw-duration, 6s) ease-in-out infinite alternate;
-  --animate-sprite-idle: spriteIdle var(--tw-duration, 2.8s) steps(1) infinite;
+  /* --animate-sprite-idle: spriteIdle var(--tw-duration, 2.8s) steps(1) infinite; */
   --animate-sprite-idleBlink: spriteIdleBlink var(--tw-duration, 2.8s) steps(1) infinite;
 
   --aspect-widget-sm: 1/1;
@@ -188,6 +189,7 @@
   --sl-text-code-sm: 1.33rem;
   --sl-line-height: 1.33rem;
   --ec-codeLineHt: 1rem;
+  --sl-nav-gap: 0.5rem;
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -315,6 +317,31 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.site-title {
+  img {
+    image-rendering: pixelated;
+    width: 32px;
+    height: 32px;
+  }
+  span {
+    @apply font-normal italic font-heading pr-0.5 text-black;
+  }
+}
+
+.content-panel *:not(.not-content) {
+  h1:not(.not-content, .not-content *) {
+    @apply font-heading text-3xl italic;
+  }
+
+  h2:not(.not-content, .not-content *) {
+    @apply font-heading text-2xl;
+  }
+
+  h3:not(.not-content, .not-content *) {
+    @apply font-heading text-xl;
   }
 }
 

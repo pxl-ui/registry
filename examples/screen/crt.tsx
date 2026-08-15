@@ -2,15 +2,13 @@ import Screen from "@/components/ui/pxl/screen";
 import { SpriteCanvas } from "@/components/ui/pxl/sprite-canvas";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
-export default function ScreenPreview() {
+export default function ScreenCRTExample() {
   return (
-    <div className="flex flex-col gap-2 items-center justify-center">
+    <div className="flex items-center justify-center">
       <WidgetArea size="sm">
-        <Screen
-          className="size-full flex items-center justify-center"
-          variant="lcd"
-        >
-          <Screen.Filter>
+        <Screen 
+          className="size-full" variant="crt">
+          <Screen.Filter className="size-full flex items-center justify-center">
             <SpriteCanvas
               src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/sprites/tiny_chick.png"
               animation="Idle"

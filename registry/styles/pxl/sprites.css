@@ -1,0 +1,16 @@
+@plugin "./sprite-animate.js";
+
+@utility sprite-cols-* {
+  --sprite-cols: --value(--sprite-cols-*, integer);
+}
+@utility sprite-rows-* {
+  --sprite-rows: --value(--sprite-rows-*, integer);
+}
+@utility sprite-duration-* {
+  --sprite-duration: --value(--sprite-duration-*, [*]);
+}
+@utility sprite-sheet {
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  background-size: calc(var(--sprite-cols, 1) * 100%) calc(var(--sprite-rows, 1) * 100%);
+}

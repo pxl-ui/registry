@@ -1,5 +1,5 @@
 import { motion, type TargetAndTransition } from "motion/react";
-import type { ComponentType, SVGProps } from "react";
+import type { ComponentProps, ComponentType, SVGProps } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -163,14 +163,16 @@ export const animations = {
       },
     },
   },
-} satisfies Record<
-  string,
-  { animate: TargetAndTransition }
->;
+} satisfies Record<string, { animate: TargetAndTransition }>;
 
 export type Animation = keyof typeof animations;
 
-type Props = {
+export default function AnimatedIcon({
+  animation,
+  className,
+  icon: Icon,
+  ...props
+}: {
   /**
    * Icon to render.
    */
@@ -180,25 +182,14 @@ type Props = {
    * If omitted, the icon renders statically.
    */
   animation?: Animation;
-} & SVGProps<SVGSVGElement>;
-
-export default function AnimatedIcon({ animation, className, icon: Icon, ...props }: Props) {
-  if (!animation) {
-    return (
-      <span className={cn("inline-flex", className)}>
-        <Icon {...props} aria-hidden="true" />
-      </span>
-    );
-  }
-
-  const animDef = animations[animation];
-
+} & ComponentProps<typeof motion.span>) {
   return (
     <motion.span
       className={cn("inline-flex", className)}
-      animate={animDef.animate}
+      animate={animation ? animations[animation].animate : undefined}
+      {...props}
     >
-      <Icon {...props} aria-hidden="true" />
+      <Icon aria-hidden="true" />
     </motion.span>
   );
 }
