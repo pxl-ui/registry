@@ -19,7 +19,9 @@ export default function FlipPreview() {
                     Front
                   </CardTitle>
                 </CardHeader>
-                <CardContent></CardContent>
+                <CardContent className="flex items-center justify-center">
+                  Click me to see the back
+                </CardContent>
               </Card>
             </FlipFront>
             <FlipBack className="w-full">
@@ -30,7 +32,9 @@ export default function FlipPreview() {
                     Back
                   </CardTitle>
                 </CardHeader>
-                <CardContent></CardContent>
+                <CardContent className="flex items-center justify-center">
+                  Click me to see the front
+                </CardContent>
               </Card>
             </FlipBack>
           </FlipTrigger>
