@@ -31,6 +31,7 @@
     "react": "^19.2.8",
     "react-day-picker": "^10.0.1",
     "react-dom": "^19.2.8",
+    "react-simple-keyboard": "^3.8.255",
     "shadcn": "^4.4.0",
     "sonner": "^2.0.7",
     "starlight-package-managers": "^0.12.0",

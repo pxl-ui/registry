@@ -1,9 +1,12 @@
 import { Input as InputPrimitive } from "@base-ui/react/input";
-import type { ComponentProps } from "react";
+import { type ComponentProps, forwardRef } from "react";
 
 import { cn } from "@/lib/utils";
 
-function Input({ className, type, ...props }: ComponentProps<"input">) {
+const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(function Input(
+  { className, type, ...props },
+  ref,
+) {
   return (
     <div
       data-slot="input-wrapper"
@@ -13,6 +16,7 @@ function Input({ className, type, ...props }: ComponentProps<"input">) {
       )}
     >
       <InputPrimitive
+        ref={ref}
         type={type}
         data-slot="input"
         className="h-9 w-full min-w-0 bg-transparent px-2.5 py-1 text-base transition-[color] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed md:text-sm"
@@ -20,6 +24,8 @@ function Input({ className, type, ...props }: ComponentProps<"input">) {
       />
     </div>
   );
-}
+});
+
+Input.displayName = "Input";
 
 export { Input };

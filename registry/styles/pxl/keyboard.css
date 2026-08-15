@@ -1,0 +1,64 @@
+
+@utility hg-theme-pxl {
+  --_kb-spacing: var(--keyboard-spacing, 1px);
+  @apply w-full overflow-hidden touch-manipulation select-none;
+
+
+  .hg-row {
+    @apply flex;
+
+    &:not(:last-child) {
+      @apply mb-(--_kb-spacing);
+    }
+
+    > .hg-button:not(:last-child) {
+      @apply mr-(--_kb-spacing);
+    }
+  }
+
+  .hg-button {
+    @apply grow items-center flex justify-center;
+    /* align-items: center;
+    background: #fff;
+    border-width: 0;
+    border-bottom: 1px solid #b5b5b5;
+    border-radius: 5px;
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: inherit;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+    span,
+    span svg {
+      @apply pointer-events-none;
+    }
+
+    &.hg-standardBtn {
+      @apply aspect-square;
+    }
+
+    &.hg-selectedButton {
+      @apply text-white bg-[rgba(5,25,70,0.53)];
+    }
+
+    &.hg-button-space {
+      @apply grow-5;
+    }
+  }
+}
+
+@utility keyboard-highlight-bg-* {
+  --keyboard-higlight: --value(--color-*, [color]);
+  --keyboard-highlight-alpha: calc(--modifier(integer) * 1%);
+  --keyboard-highlight: --alpha(--value(--color-*, [color]) / var(--keyboard-highlight-alpha, 100%));
+}
+
+@utility keyboard-highlight-text-* {
+  --keyboard-higlight-foreground: --value(--color-*, [color]);
+  --keyboard-highlight-foreground-alpha: calc(--modifier(integer) * 1%);
+  --keyboard-highlight-foreground: --alpha(--value(--color-*, [color]) / var(--keyboard-highlight-foreground-alpha, 100%));
+}

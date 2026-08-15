@@ -20,6 +20,7 @@
 @import "@/components/styles/pxl/sprites.css";
 @import "@/components/styles/pxl/texts.css";
 @import "@/components/styles/pxl/widgets.css";
+@import "@/components/styles/pxl/keyboard.css";
 
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
@@ -322,12 +323,10 @@
 
 .site-title {
   img {
-    image-rendering: pixelated;
-    width: 32px;
-    height: 32px;
+    @apply pixelated size-8 dark:invert-100;
   }
   span {
-    @apply font-normal italic font-heading pr-0.5 text-black;
+    @apply font-normal italic font-heading pr-0.5 text-black dark:text-white;
   }
 }
 
@@ -346,6 +345,6 @@
 }
 
 .expressive-code pre {
-  border: none;
+  @apply border-none;
   /* --sl-line-height: 1rem; */
 }
