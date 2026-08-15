@@ -34,6 +34,7 @@ export default function KeyboardPreview() {
         />
         <Keyboard
           inputName="preview"
+          enableKeyNavigation
           keyboardRef={keyboard}
           onChange={onKbChange}
           onSubmit={() => console.log("onSubmit")}

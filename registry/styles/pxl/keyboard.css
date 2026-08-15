@@ -41,14 +41,33 @@
       @apply aspect-square;
     }
 
-    &.hg-selectedButton {
-      @apply text-white bg-[rgba(5,25,70,0.53)];
+    &.hg-keyMarker {
+      @apply bg-(--keyboard-highlight) text-(--keyboard-highlight-foreground);
     }
 
     &.hg-button-space {
       @apply grow-5;
     }
   }
+
+  &.hg-layout-shift {
+    .hg-button-shift {
+      --pixel-color: var(--keyboard-shift);
+      @apply bg-(--keyboard-shift) text-(--keyboard-shift-foreground);
+    }
+  }
+}
+
+@utility keyboard-shift-bg-* {
+  --keyboard-shift: --value(--color-*, [color]);
+  --keyboard-shift-alpha: calc(--modifier(integer) * 1%);
+  --keyboard-shift: --alpha(--value(--color-*, [color]) / var(--keyboard-shift-alpha, 100%));
+}
+
+@utility keyboard-shift-text-* {
+  --keyboard-shift-foreground: --value(--color-*, [color]);
+  --keyboard-shift-foreground-alpha: calc(--modifier(integer) * 1%);
+  --keyboard-shift-foreground: --alpha(--value(--color-*, [color]) / var(--keyboard-shift-foreground-alpha, 100%));
 }
 
 @utility keyboard-highlight-bg-* {

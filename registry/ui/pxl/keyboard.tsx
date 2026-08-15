@@ -1,5 +1,7 @@
+"use client";
+
 import { cva, type VariantProps } from "class-variance-authority";
-import { type RefObject, useMemo, useState } from "react";
+import { type RefObject, useEffect, useMemo, useState } from "react";
 import SimpleKeyboard, {
   type KeyboardOptions,
   type SimpleKeyboard as KeyboardRef,
@@ -13,6 +15,14 @@ type Language = "en" | "es";
 type KeyboardDisplay = "regular" | "mobile";
 type KeyboardLayout = "default" | "shift" | "numbers";
 type KeyboardLayoutConfig = Record<KeyboardLayout, string[]>;
+
+let keyNavigationModule: any;
+
+if (typeof window !== "undefined") {
+  // @ts-expect-error simple-keyboard-key-navigation doesn't provide types
+  keyNavigationModule = (await import("simple-keyboard-key-navigation")).default
+    .default;
+}
 
 const keyboardVariants = cva("hg-theme-pxl", {
   variants: {
@@ -31,22 +41,28 @@ const keyboardVariants = cva("hg-theme-pxl", {
       lg: "[--keyboard-spacing:--spacing(1)]",
     },
     variant: {
-      default: "keyboard-highlight-bg-foreground/80 keyboard-highlight-text-background",
-      primary: "keyboard-highlight-bg-primary/80 keyboard-highlight-text-primary",
-      outline: "keyboard-highlight-bg-muted keyboard-highlight-text-foreground",
-      secondary: "keyboard-highlight-bg-secondary/80 keyboard-highlight-text-secondary",
-      ghost: "keyboard-highlight-bg-muted keyboard-highlight-text-foreground",
-      destructive: "keyboard-highlight-bg-destructive/20 keyboard-highlight-text-destructive",
-      info: "keyboard-highlight-bg-info/80 keyboard-highlight-text-info",
-      success: "keyboard-highlight-bg-success/80 keyboard-highlight-text-success",
-      warning: "keyboard-highlight-bg-warning/80 keyboard-highlight-text-warning",
-      danger: "keyboard-highlight-bg-danger/80 keyboard-highlight-text-danger",
+      default:
+        "keyboard-highlight-bg-foreground/80 keyboard-highlight-text-background keyboard-shift-text-foreground keyboard-shift-bg-background",
+      primary:
+        "keyboard-highlight-bg-primary/80 keyboard-highlight-text-primary-foreground keyboard-shift-text-primary keyboard-shift-bg-primary-foreground",
+      outline: "keyboard-highlight-bg-muted keyboard-highlight-text-foreground  keyboard-shift-text-muted keyboard-shift-bg-foreground",
+      secondary:
+        "keyboard-highlight-bg-secondary/80 keyboard-highlight-text-secondary-foreground keyboard-shift-text-secondary keyboard-shift-bg-secondary-foreground",
+      ghost: "keyboard-highlight-bg-muted keyboard-highlight-text-foreground  keyboard-shift-text-background keyboard-shift-bg-foreground",
+      destructive:
+        "keyboard-highlight-bg-destructive/20 keyboard-highlight-text-destructive keyboard-shift-text-destructive/20 keyboard-shift-bg-destructive",
+      info: "keyboard-highlight-bg-info/80 keyboard-highlight-text-info-foreground keyboard-shift-text-info keyboard-shift-bg-info-foreground",
+      success:
+        "keyboard-highlight-bg-success/80 keyboard-highlight-text-success-foreground keyboard-shift-text-success keyboard-shift-bg-success-foreground",
+      warning:
+        "keyboard-highlight-bg-warning/80 keyboard-highlight-text-warning-foreground keyboard-shift-text-warning keyboard-shift-bg-warning-foreground",
+      danger: "keyboard-highlight-bg-danger/80 keyboard-highlight-text-danger-foreground keyboard-shift-text-danger keyboard-shift-bg-danger-foreground",
     },
   },
   defaultVariants: {
     font: "default",
     size: "default",
-    variant: "default"
+    variant: "default",
   },
 });
 
@@ -66,22 +82,26 @@ const SPECIAL_KEYS = {
   SHIFT: "{shift}",
   SPACE: "{space}",
   TAB: "{tab}",
-}
+};
 
-
-const KEYS: Record<Language, {
-  alphabet: string;
-  numbers: string;
-}> = {
+const KEYS: Record<
+  Language,
+  {
+    alphabet: string;
+    numbers: string;
+  }
+> = {
   en: {
-    alphabet: "a A b B c C d D e E f F g G h H i I j J k K l L m M n N o O p P q Q r R s S t T u U v V w W x X y Y z Z",
-    numbers: "0 1 2 3 4 5 6 7 8 9"
+    alphabet:
+      "a A b B c C d D e E f F g G h H i I j J k K l L m M n N o O p P q Q r R s S t T u U v V w W x X y Y z Z",
+    numbers: "0 1 2 3 4 5 6 7 8 9",
   },
   es: {
-    alphabet: "a A b B c C d D e E f F g G h H i I j J k K l L m M n N ñ Ñ o O p P q Q r R s S t T u U v V w W x X y Y z Z",
-    numbers: "0 1 2 3 4 5 6 7 8 9"
-  }
-}
+    alphabet:
+      "a A b B c C d D e E f F g G h H i I j J k K l L m M n N ñ Ñ o O p P q Q r R s S t T u U v V w W x X y Y z Z",
+    numbers: "0 1 2 3 4 5 6 7 8 9",
+  },
+};
 
 const keyboardLayouts: Record<
   Language,
@@ -203,6 +223,7 @@ function Keyboard({
   border = "default",
   className,
   display = "mobile",
+  enableKeyNavigation,
   font,
   keyboardRef,
   language = "en",
@@ -214,9 +235,10 @@ function Keyboard({
   ...props
 }: Omit<KeyboardOptions, "display"> &
   VariantProps<typeof keyboardVariants> &
-  Pick<VariantProps<typeof buttonVariants>, "border" | "variant"> &
-  {
+  Pick<VariantProps<typeof buttonVariants>, "border" | "variant"> & {
     className?: string;
+    /** Enables the key navigation module */
+    keyNavigation?: boolean;
     keyboardRef?: RefObject<KeyboardRef | null>;
     display?: KeyboardDisplay;
     language?: Language;
@@ -231,38 +253,45 @@ function Keyboard({
       display: keyboardDisplays[language][display],
       layout: keyboardLayouts[language][display],
       allButtons: [
-        KEYS[language].alphabet, 
+        KEYS[language].alphabet,
         KEYS[language].numbers,
-        Object.values(SPECIAL_KEYS).join(" ")
+        Object.values(SPECIAL_KEYS).join(" "),
       ].join(" "),
     };
   }, [language, display]);
 
+  const modules = useMemo(() => {
+    if (enableKeyNavigation) {
+      return [keyNavigationModule];
+    }
+  }, [enableKeyNavigation]);
 
-  const buttonSize = useMemo<VariantProps<typeof buttonVariants>["size"]>(() => {
+  const buttonSize = useMemo<
+    VariantProps<typeof buttonVariants>["size"]
+  >(() => {
     if (!size) {
       return null;
     }
 
-    return ({
+    return {
       default: "sm",
       "2xs": "2xs",
       xs: "2xs",
       sm: "xs",
       md: "sm",
-      lg: "md"
-    })[size] as VariantProps<typeof buttonVariants>["size"];
-  }, [size])
+      lg: "md",
+    }[size] as VariantProps<typeof buttonVariants>["size"];
+  }, [size]);
 
   function onKeyPress(button: string) {
     if (button === "{shift}" || button === "{lock}") {
-      const nextLayout = layoutName === "default" ? "shift" : "default";
+      const nextLayout = layoutName === "shift" ? "default" : "shift";
       setLayoutName(nextLayout);
       onLayoutChange?.(nextLayout);
     }
 
     if (button === "{numbers}" || button === "{abc}") {
-      const nextLayout = layoutName === "default" ? "numbers" : "default";
+      const nextLayout = layoutName === "numbers" ? "default" : "numbers";
       setLayoutName(nextLayout);
       onLayoutChange?.(nextLayout);
     }
@@ -271,7 +300,33 @@ function Keyboard({
       onSubmit?.();
     }
   }
-  
+
+  useEffect(
+    function handleKeyNavigation() {
+      if (!enableKeyNavigation) {
+        return;
+      }
+
+      function onKeyDown(e: KeyboardEvent) {
+        if (e.key === "ArrowUp")
+          keyboardRef?.current?.modules.keyNavigation.up();
+        else if (e.key === "ArrowDown")
+          keyboardRef?.current?.modules.keyNavigation.down();
+        else if (e.key === "ArrowLeft")
+          keyboardRef?.current?.modules.keyNavigation.left();
+        else if (e.key === "ArrowRight")
+          keyboardRef?.current?.modules.keyNavigation.right();
+        else if (e.key === "Enter")
+          keyboardRef?.current?.modules.keyNavigation.press();
+      }
+
+      document.addEventListener("keydown", onKeyDown, false);
+
+      return () => document.removeEventListener("keydown", onKeyDown);
+    },
+    [enableKeyNavigation, keyboardRef],
+  );
+
   return (
     <SimpleKeyboard
       buttonTheme={[
@@ -293,15 +348,31 @@ function Keyboard({
       layoutName={layoutName}
       layout={config.layout}
       mergeDisplay
-      theme={cn(keyboardVariants({ 
-        font,
-        size,
-      }), className)}
+      theme={cn(
+        keyboardVariants({
+          font,
+          size,
+          variant,
+        }),
+        className,
+      )}
+      enableKeyNavigation={enableKeyNavigation}
+      modules={modules}
       onChange={onChange}
       onKeyPress={onKeyPress}
       physicalKeyboardHighlight
       physicalKeyboardHighlightBgColor="var(--keyboard-highlight)"
       physicalKeyboardHighlightTextColor="var(--keyboard-highlight-foreground)"
+      useMouseEvents
+      onModulesLoaded={(keyboard: KeyboardRef) => {
+        /**
+         * Optional: If keyboard.modules is not available below.
+         * You can call module methods here
+         * e.g: keyboard.modules.keyNavigation.up();
+         * etc.
+         */
+        keyboard.modules.keyNavigation.up();
+      }}
       {...props}
     />
   );
