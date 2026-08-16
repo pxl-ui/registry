@@ -26,7 +26,7 @@ function ScoreAvatar({
         size="xs"
         className={cn(
           index === 1 &&
-            "[--size:--spacing(4)] animate-sprite-idleBlink duration-2000",
+            "[--size:--spacing(4)]",
         )}
       >
         <AvatarImage alt={alt} src={src} />

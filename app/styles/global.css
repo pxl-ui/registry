@@ -129,9 +129,6 @@
 
   --animate-marquee: marquee var(--tw-duration, 6s) ease-in-out infinite
     alternate;
-  --animate-sprite-idle: spriteIdle var(--tw-duration, 2.8s) steps(1) infinite;
-  --animate-sprite-idleBlink: spriteIdleBlink var(--tw-duration, 2.8s) steps(1)
-    infinite;
 
   --aspect-widget-sm: 1/1;
   --aspect-widget-md: 86/41;
