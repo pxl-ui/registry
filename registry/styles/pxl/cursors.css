@@ -1,3 +1,4 @@
+
 @utility cursor-rotate {
   cursor: var(--cursor-rotate);
 }
@@ -14,17 +15,6 @@
   cursor: var(--cursor-hand);
 }
 
-
-@keyframes cursor-blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
 
 html,
 body {

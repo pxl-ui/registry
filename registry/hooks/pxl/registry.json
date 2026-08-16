@@ -1,0 +1,41 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/hooks",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "use-sprite",
+      "type": "registry:hook",
+      "title": "Use Sprite",
+      "description": "Sprite hook for canvas rendering and animating",
+      "categories": ["pxl-ui", "sprite-sheet", "canvas"],
+      "registryDependencies": [
+        "pxl-ui/registry/sprite"
+      ],
+      "files": [
+        {
+          "type": "registry:hook",
+          "path": "use-sprite.ts",
+          "target": "@hooks/pxl/use-sprite.ts"
+        }
+      ]
+    },
+    {
+      "name": "use-context-menu-trigger",
+      "type": "registry:hook",
+      "title": "Use Context Menu Trigger",
+      "description": "Context Menu hook for triggering on long press (mobile) and right click",
+      "categories": ["pxl-ui", "context-menu", "user-interaction"],
+      "registryDependencies": [
+        "pxl-ui/registry/sprite"
+      ],
+      "files": [
+        {
+          "type": "registry:hook",
+          "path": "use-context-menu-trigger.ts",
+          "target": "@hooks/pxl/use-context-menu-trigger.ts"
+        }
+      ]
+    }
+  ]
+}

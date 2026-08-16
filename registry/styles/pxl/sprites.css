@@ -1,5 +1,10 @@
 @plugin "./sprite-animate.js";
 
+@utility pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
 @utility sprite-cols-* {
   --sprite-cols: --value(--sprite-cols-*, integer);
 }

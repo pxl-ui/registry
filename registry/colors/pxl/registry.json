@@ -1,0 +1,461 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/colors",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "colors-arne-16",
+      "type": "registry:theme",
+      "title": "Arne 16",
+      "author": "Arne <http://androidarts.com/palette/16pal.htm>",
+      "categories": ["pxl-ui", "color-palette"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "arne-16.css",
+          "target": "@components/colors/pxl/arne-16.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/arne-16.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-arne-16-white)",
+          "foreground": "var(--color-arne-16-neutral-950)",
+          "card": "var(--color-arne-16-white)",
+          "card-foreground": "var(--color-arne-16-neutral-950)",
+          "popover": "var(--color-arne-16-white)",
+          "popover-foreground": "var(--color-arne-16-neutral-950)",
+          "muted": "var(--color-arne-16-white)",
+          "muted-foreground": "var(--color-arne-16-neutral-50)",
+          "accent": "var(--color-arne-16-white)",
+          "accent-foreground": "var(--color-arne-16-black)",
+          "border": "var(--color-arne-16-neutral-50)",
+          "input": "var(--color-arne-16-neutral-50)",
+          "ring": "var(--color-arne-16-black)",
+          "primary": "var(--color-arne-16-blue-50)",
+          "primary-foreground": "var(--color-arne-16-blue-950)",
+          "info": "var(--color-arne-16-blue-50)",
+          "info-foreground": "var(--color-arne-16-blue-950)",
+          "success": "var(--color-arne-16-green-50)",
+          "success-foreground": "var(--color-arne-16-green-950)",
+          "warning": "var(--color-arne-16-amber-50)",
+          "warning-foreground": "var(--color-arne-16-amber-950)",
+          "danger": "var(--color-arne-16-red-50)",
+          "danger-foreground": "var(--color-arne-16-red-950)"
+        },
+        "dark": {
+          "background": "var(--color-arne-16-black)",
+          "foreground": "var(--color-arne-16-neutral-50)",
+          "card": "var(--color-arne-16-black)",
+          "card-foreground": "var(--color-arne-16-neutral-50)",
+          "popover": "var(--color-arne-16-black)",
+          "popover-foreground": "var(--color-arne-16-neutral-50)",
+          "muted": "var(--color-arne-16-black)",
+          "muted-foreground": "var(--color-arne-16-neutral-950)",
+          "accent": "var(--color-arne-16-black)",
+          "accent-foreground": "var(--color-arne-16-white)",
+          "border": "var(--color-arne-16-neutral-50)",
+          "input": "var(--color-arne-16-neutral-50)",
+          "ring": "var(--color-arne-16-white)",
+          "primary": "var(--color-arne-16-blue-500)",
+          "primary-foreground": "var(--color-arne-16-blue-50)",
+          "info": "var(--color-arne-16-blue-950)",
+          "info-foreground": "var(--color-arne-16-blue-500)",
+          "success": "var(--color-arne-16-green-500)",
+          "success-foreground": "var(--color-arne-16-green-50)",
+          "warning": "var(--color-arne-16-amber-500)",
+          "warning-foreground": "var(--color-arne-16-amber-50)",
+          "danger": "var(--color-arne-16-red-500)",
+          "danger-foreground": "var(--color-arne-16-red-50)"
+        }
+      }
+    },
+    {
+      "name": "colors-catppuccin-frappe",
+      "type": "registry:theme",
+      "title": "Catppuccin Frappe",
+      "description": "Soothing pastel theme for the high-spirited!",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-frappe.css",
+          "target": "@components/colors/pxl/catppuccin-frappe.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/catppuccin-frappe.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-catppuccin-frappe-neutral-850)",
+          "foreground": "var(--color-catppuccin-frappe-neutral-50)",
+          "card": "var(--color-catppuccin-frappe-neutral-900)",
+          "card-foreground": "var(--color-catppuccin-frappe-neutral-50)",
+          "popover": "var(--color-catppuccin-frappe-neutral-950)",
+          "popover-foreground": "var(--color-catppuccin-frappe-neutral-50)",
+          "muted": "var(--color-catppuccin-frappe-neutral-800)",
+          "muted-foreground": "var(--color-catppuccin-frappe-neutral-200)",
+          "accent": "var(--color-catppuccin-frappe-neutral-700)",
+          "accent-foreground": "var(--color-catppuccin-frappe-neutral-50)",
+          "border": "var(--color-catppuccin-frappe-neutral-600)",
+          "input": "var(--color-catppuccin-frappe-neutral-600)",
+          "ring": "var(--color-catppuccin-frappe-neutral-300)",
+          "primary": "var(--color-catppuccin-frappe-blue-950)",
+          "primary-foreground": "var(--color-catppuccin-frappe-blue-500)",
+          "success": "var(--color-catppuccin-frappe-green-950)",
+          "success-foreground": "var(--color-catppuccin-frappe-green-500)",
+          "danger": "var(--color-catppuccin-frappe-red-950)",
+          "danger-foreground": "var(--color-catppuccin-frappe-red-500)",
+          "warning": "var(--color-catppuccin-frappe-yellow-950)",
+          "warning-foreground": "var(--color-catppuccin-frappe-yellow-500)",
+          "info": "var(--color-catppuccin-frappe-teal-950)",
+          "info-foreground": "var(--color-catppuccin-frappe-teal-500)"
+        }
+      }
+    },
+    {
+      "name": "colors-catppuccin-latte",
+      "type": "registry:theme",
+      "title": "Catppuccin Latte",
+      "description": "Soothing pastel theme for the high-spirited!",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-latte.css",
+          "target": "@components/colors/pxl/catppuccin-latte.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/catppuccin-latte.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-catppuccin-latte-neutral-200)",
+          "foreground": "var(--color-catppuccin-latte-neutral-950)",
+          "card": "var(--color-catppuccin-latte-neutral-100)",
+          "card-foreground": "var(--color-catppuccin-latte-neutral-950)",
+          "popover": "var(--color-catppuccin-latte-neutral-50)",
+          "popover-foreground": "var(--color-catppuccin-latte-neutral-950)",
+          "muted": "var(--color-catppuccin-latte-neutral-300)",
+          "muted-foreground": "var(--color-catppuccin-latte-neutral-850)",
+          "accent": "var(--color-catppuccin-latte-neutral-400)",
+          "accent-foreground": "var(--color-catppuccin-latte-neutral-950)",
+          "border": "var(--color-catppuccin-latte-neutral-500)",
+          "input": "var(--color-catppuccin-latte-neutral-500)",
+          "ring": "var(--color-catppuccin-latte-neutral-800)",
+          "primary": "var(--color-catppuccin-latte-sky-50)",
+          "primary-foreground": "var(--color-catppuccin-latte-sky-700)",
+          "success": "var(--color-catppuccin-latte-green-50)",
+          "success-foreground": "var(--color-catppuccin-latte-green-700)",
+          "danger": "var(--color-catppuccin-latte-red-50)",
+          "danger-foreground": "var(--color-catppuccin-latte-red-700)",
+          "warning": "var(--color-catppuccin-latte-yellow-50)",
+          "warning-foreground": "var(--color-catppuccin-latte-yellow-700)",
+          "info": "var(--color-catppuccin-latte-teal-50)",
+          "info-foreground": "var(--color-catppuccin-latte-teal-700)"
+        }
+      }
+    },
+    {
+      "name": "colors-catppuccin-macchiato",
+      "type": "registry:theme",
+      "title": "Catppuccin Macchiato",
+      "description": "Soothing pastel theme for the high-spirited!",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-macchiato.css",
+          "target": "@components/colors/pxl/catppuccin-macchiato.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/catppuccin-macchiato.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-catppuccin-macchiato-neutral-850)",
+          "foreground": "var(--color-catppuccin-macchiato-neutral-50)",
+          "card": "var(--color-catppuccin-macchiato-neutral-900)",
+          "card-foreground": "var(--color-catppuccin-macchiato-neutral-50)",
+          "popover": "var(--color-catppuccin-macchiato-neutral-950)",
+          "popover-foreground": "var(--color-catppuccin-macchiato-neutral-50)",
+          "muted": "var(--color-catppuccin-macchiato-neutral-800)",
+          "muted-foreground": "var(--color-catppuccin-macchiato-neutral-200)",
+          "accent": "var(--color-catppuccin-macchiato-neutral-700)",
+          "accent-foreground": "var(--color-catppuccin-macchiato-neutral-50)",
+          "border": "var(--color-catppuccin-macchiato-neutral-600)",
+          "input": "var(--color-catppuccin-macchiato-neutral-600)",
+          "ring": "var(--color-catppuccin-macchiato-neutral-300)",
+          "primary": "var(--color-catppuccin-macchiato-blue-950)",
+          "primary-foreground": "var(--color-catppuccin-macchiato-blue-500)",
+          "success": "var(--color-catppuccin-macchiato-green-950)",
+          "success-foreground": "var(--color-catppuccin-macchiato-green-500)",
+          "danger": "var(--color-catppuccin-macchiato-red-950)",
+          "danger-foreground": "var(--color-catppuccin-macchiato-red-500)",
+          "warning": "var(--color-catppuccin-macchiato-yellow-950)",
+          "warning-foreground": "var(--color-catppuccin-macchiato-yellow-500)",
+          "info": "var(--color-catppuccin-macchiato-teal-950)",
+          "info-foreground": "var(--color-catppuccin-macchiato-teal-500)"
+        }
+      }
+    },
+    {
+      "name": "colors-catppuccin-mocha",
+      "type": "registry:theme",
+      "title": "Catppuccin Mocha",
+      "description": "Soothing pastel theme for the high-spirited!",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "catppuccin-mocha.css",
+          "target": "@components/colors/pxl/catppuccin-mocha.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/catppuccin-mocha.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-catppuccin-mocha-neutral-850)",
+          "foreground": "var(--color-catppuccin-mocha-neutral-50)",
+          "card": "var(--color-catppuccin-mocha-neutral-900)",
+          "card-foreground": "var(--color-catppuccin-mocha-neutral-50)",
+          "popover": "var(--color-catppuccin-mocha-neutral-950)",
+          "popover-foreground": "var(--color-catppuccin-mocha-neutral-50)",
+          "muted": "var(--color-catppuccin-mocha-neutral-800)",
+          "muted-foreground": "var(--color-catppuccin-mocha-neutral-200)",
+          "accent": "var(--color-catppuccin-mocha-neutral-700)",
+          "accent-foreground": "var(--color-catppuccin-mocha-neutral-50)",
+          "border": "var(--color-catppuccin-mocha-neutral-600)",
+          "input": "var(--color-catppuccin-mocha-neutral-600)",
+          "ring": "var(--color-catppuccin-mocha-neutral-300)",
+          "primary": "var(--color-catppuccin-mocha-blue-950)",
+          "primary-foreground": "var(--color-catppuccin-mocha-blue-500)",
+          "success": "var(--color-catppuccin-mocha-green-950)",
+          "success-foreground": "var(--color-catppuccin-mocha-green-500)",
+          "danger": "var(--color-catppuccin-mocha-red-950)",
+          "danger-foreground": "var(--color-catppuccin-mocha-red-500)",
+          "warning": "var(--color-catppuccin-mocha-yellow-950)",
+          "warning-foreground": "var(--color-catppuccin-mocha-yellow-500)",
+          "info": "var(--color-catppuccin-mocha-teal-950)",
+          "info-foreground": "var(--color-catppuccin-mocha-teal-500)"
+        }
+      }
+    },
+    {
+      "name": "colors-flexoki",
+      "type": "registry:theme",
+      "title": "Flexoki",
+      "description": "Flexoki is an inky color scheme for prose and code designed for reading and writing on digital screens. It is inspired by analog inks and warm shades of paper.",
+      "author": "Kepano <https://stephango.com>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "flexoki.css",
+          "target": "@components/colors/pxl/flexoki.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/flexoki.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-flexoki-paper)",
+          "foreground": "var(--color-flexoki-black)",
+          "card": "var(--color-flexoki-base-50)",
+          "card-foreground": "var(--color-flexoki-base-950)",
+          "popover": "var(--color-flexoki-base-100)",
+          "popover-foreground": "var(--color-flexoki-base-950)",
+          "muted": "var(--color-flexoki-base-300)",
+          "muted-foreground": "var(--color-flexoki-base-700)",
+          "accent": "var(--color-flexoki-base-150)",
+          "accent-foreground": "var(--color-flexoki-base-950)",
+          "border": "var(--color-flexoki-base-850)",
+          "input": "var(--color-flexoki-base-850)",
+          "ring": "var(--color-flexoki-base-700)",
+          "primary": "var(--color-flexoki-blue-100)",
+          "primary-foreground": "var(--color-flexoki-blue-600)",
+          "danger": "var(--color-flexoki-red-100)",
+          "danger-foreground": "var(--color-flexoki-red-600)",
+          "warning": "var(--color-flexoki-orange-100)",
+          "warning-foreground": "var(--color-flexoki-orange-600)",
+          "success": "var(--color-flexoki-green-100)",
+          "success-foreground": "var(--color-flexoki-green-600)",
+          "info": "var(--color-flexoki-cyan-100)",
+          "info-foreground": "var(--color-flexoki-cyan-600)"
+        },
+        "dark": {
+          "background": "var(--color-flexoki-black)",
+          "foreground": "var(--color-flexoki-base-200)",
+          "card": "var(--color-flexoki-base-950)",
+          "card-foreground": "var(--color-flexoki-base-50)",
+          "popover": "var(--color-flexoki-base-900)",
+          "popover-foreground": "var(--color-flexoki-base-50)",
+          "muted": "var(--color-flexoki-base-700)",
+          "muted-foreground": "var(--color-flexoki-base-300)",
+          "accent": "var(--color-flexoki-base-850)",
+          "accent-foreground": "var(--color-flexoki-base-50)",
+          "border": "var(--color-flexoki-base-150)",
+          "input": "var(--color-flexoki-base-150)",
+          "ring": "var(--color-flexoki-base-300)",
+          "primary": "var(--color-flexoki-blue-800)",
+          "primary-foreground": "var(--color-flexoki-blue-400)",
+          "danger": "var(--color-flexoki-red-800)",
+          "danger-foreground": "var(--color-flexoki-red-400)",
+          "warning": "var(--color-flexoki-orange-800)",
+          "warning-foreground": "var(--color-flexoki-orange-400)",
+          "success": "var(--color-flexoki-green-800)",
+          "success-foreground": "var(--color-flexoki-green-400)",
+          "info": "var(--color-flexoki-cyan-800)",
+          "info-foreground": "var(--color-flexoki-cyan-400)"
+        }
+      }
+    },
+    {
+      "name": "colors-duel",
+      "type": "registry:theme",
+      "title": "duel",
+      "description": "A 256 colors palette divided in 32 groups.",
+      "author": "Arilyn <https://lospec.com/palette-list/duel>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "duel.css",
+          "target": "@/components/colors/pxl/duel.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/duel.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-duel-slate-50)",
+          "foreground": "var(--color-duel-slate-600)",
+          "card": "var(--color-duel-slate-50)",
+          "card-foreground": "var(--color-duel-slate-600)",
+          "popover": "var(--color-duel-slate-50)",
+          "popover-foreground": "var(--color-duel-slate-600)",
+          "muted": "var(--color-duel-slate-100)",
+          "muted-foreground": "var(--color-duel-slate-400)",
+          "accent": "var(--color-duel-slate-100)",
+          "accent-foreground": "var(--color-duel-slate-700)",
+          "border": "var(--color-duel-slate-400)",
+          "input": "var(--color-duel-slate-400)",
+          "ring": "var(--color-duel-slate-600)",
+          "primary": "var(--color-duel-abyss-50)",
+          "primary-foreground": "var(--color-duel-abyss-600)",
+          "success": "var(--color-duel-forest-50)",
+          "success-foreground": "var(--color-duel-forest-600)",
+          "danger": "var(--color-duel-sakura-100)",
+          "danger-foreground": "var(--color-duel-sakura-700)",
+          "warning": "var(--color-duel-honey-50)",
+          "warning-foreground": "var(--color-duel-honey-600)",
+          "info": "var(--color-duel-violet-50)",
+          "info-foreground": "var(--color-duel-violet-600)"
+        },
+        "dark": {
+          "background": "var(--color-duel-slate-950)",
+          "foreground": "var(--color-duel-slate-100)",
+          "card": "var(--color-duel-slate-700)",
+          "card-foreground": "var(--color-duel-slate-100)",
+          "popover": "var(--color-duel-slate-800)",
+          "popover-foreground": "var(--color-duel-slate-100)",
+          "muted": "var(--color-duel-slate-600)",
+          "muted-foreground": "var(--color-duel-slate-200)",
+          "accent": "var(--color-duel-slate-600)",
+          "accent-foreground": "var(--color-duel-slate-50)",
+          "border": "var(--color-duel-slate-600)",
+          "input": "var(--color-duel-slate-600)",
+          "ring": "var(--color-duel-slate-400)",
+          "primary": "var(--color-duel-ocean-700)",
+          "primary-foreground": "var(--color-duel-ocean-50)",
+          "success": "var(--color-duel-moss-700)",
+          "success-foreground": "var(--color-duel-moss-50)",
+          "danger": "var(--color-duel-magenta-700)",
+          "danger-foreground": "var(--color-duel-magenta-100)",
+          "warning": "var(--color-duel-amber-700)",
+          "warning-foreground": "var(--color-duel-amber-50)",
+          "info": "var(--color-duel-lavender-700)",
+          "info-foreground": "var(--color-duel-lavender-50)"
+        }
+      }
+    },
+    {
+      "name": "colors-pico-8",
+      "type": "registry:theme",
+      "title": "PICO-8",
+      "description": "The PICO-8 is a virtual video game console created by Lexaloffle Games.",
+      "categories": ["pxl-ui", "color-palette"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "pico-8.css",
+          "target": "@/components/colors/pxl/pico-8.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/pico-8.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-white)",
+          "foreground": "var(--color-pico-slate)",
+          "card": "var(--color-white)",
+          "card-foreground": "var(--color-pico-slate)",
+          "popover": "var(--color-white)",
+          "popover-foreground": "var(--color-pico-slate)",
+          "muted": "var(--color-white)",
+          "muted-foreground": "var(--color-pico-silver)",
+          "accent": "var(--color-white)",
+          "accent-foreground": "var(--color-pico-black)",
+          "border": "var(--color-pico-silver)",
+          "input": "var(--color-pico-silver)",
+          "ring": "var(--color-pico-slate)",
+          "primary": "var(--color-pico-sky)",
+          "primary-foreground": "var(--color-pico-navy)",
+          "info": "var(--color-pico-lavender)",
+          "info-foreground": "var(--color-pico-cream)",
+          "success": "var(--color-pico-lime)",
+          "success-foreground": "var(--color-pico-forest)",
+          "warning": "var(--color-pico-yellow)",
+          "warning-foreground": "var(--color-pico-brown)",
+          "danger": "var(--color-pico-peach)",
+          "danger-foreground": "var(--color-pico-red)"
+        },
+        "dark": {
+          "background": "var(--color-pico-black)",
+          "foreground": "var(--color-pico-silver)",
+          "card": "var(--color-pico-black)",
+          "card-foreground": "var(--color-pico-silver)",
+          "popover": "var(--color-pico-black)",
+          "popover-foreground": "var(--color-pico-silver)",
+          "muted": "var(--color-pico-black)",
+          "muted-foreground": "var(--color-pico-slate)",
+          "accent": "var(--color-pico-black)",
+          "accent-foreground": "var(--color-pico-cream)",
+          "border": "var(--color-pico-slate)",
+          "input": "var(--color-pico-slate)",
+          "ring": "var(--color-pico-silver)",
+          "primary": "var(--color-pico-navy)",
+          "primary-foreground": "var(--color-pico-sky)",
+          "info": "var(--color-pico-maroon)",
+          "info-foreground": "var(--color-pico-cream)",
+          "success": "var(--color-pico-forest)",
+          "success-foreground": "var(--color-pico-lime)",
+          "warning": "var(--color-pico-orange)",
+          "warning-foreground": "var(--color-pico-yellow)",
+          "danger": "var(--color-pico-red)",
+          "danger-foreground": "var(--color-pico-peach)"
+        }
+      }
+    }
+  ]
+}

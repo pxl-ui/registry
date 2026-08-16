@@ -3,31 +3,25 @@
   "name": "pxl-ui",
   "homepage": "https://github.com/pxl-ui/registry",
   "include": [
-    "registry/colors/registry.json",
-    "registry/fonts/registry.json",
-    "registry/hooks/registry.json",
-    "registry/icons/registry.json",
-    "registry/lib/registry.json",
-    "registry/styles/registry.json",
-    "registry/ui/registry.json",
-    "registry/widgets/registry.json"
+    "registry/colors/pxl/registry.json",
+    "registry/fonts/pxl/registry.json",
+    "registry/hooks/pxl/registry.json",
+    "registry/icons/pxl/registry.json",
+    "registry/lib/pxl/registry.json",
+    "registry/styles/pxl/registry.json",
+    "registry/ui/pxl/registry.json",
+    "registry/widgets/pxl/registry.json"
   ],
   "items": [
     {
       "name": "base",
       "type": "registry:base",
       "title": "PXL-UI",
-      "description": "PXL-UI Shadcn base",
+      "description": "PXL-UI Base",
+      "categories": ["pxl-ui"],
       "extends": "none",
       "config": {
-        "style": "base-lyra",
-        "iconLibrary": "lucide",
-        "rtl": false,
-        "menuColor": "default",
-        "menuAccent": "subtle",
-        "tailwind": {
-          "baseColor": "neutral"
-        }
+        "style": "pxl-ui"
       },
       "registryDependencies": [
         "pxl-ui/registry/styles"

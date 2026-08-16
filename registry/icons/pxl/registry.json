@@ -7,8 +7,13 @@
       "name": "cursors-pixelarticons",
       "type": "registry:style",
       "title": "Pixelarticons Mouse Cursors",
-      "description": "Pixelarticons mouse cursors",
+      "description": "Mouse cursors powered by pixelarticons",
       "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
+      "author": "halfmage <https://x.com/halfmage>",
+      "categories": ["pxl-ui", "icons", "mouse-cursors"],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-cursors"
+      ],
       "cssVars": {
         "theme": {
           "cursor-default": "url(\"/cursors/default.png\") 4 1, default",

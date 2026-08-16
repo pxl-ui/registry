@@ -1,6 +1,6 @@
 import { type MouseEvent, useRef } from "react";
 
-export function useLongPress(onOpen: () => void) {
+export function useContextMenuTrigger(onOpen: () => void) {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   return {

@@ -1,0 +1,285 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/ui",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "anchor-grid",
+      "type": "registry:component",
+      "title": "Anchor Grid",
+      "description": "Grid-based widget sizing and positioning",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "path": "anchor-grid.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/anchor-grid.tsx"
+        }
+      ]
+    },
+    {
+      "name": "animated-icon",
+      "type": "registry:component",
+      "title": "Animated Icon",
+      "description": "Animate your svg icons using motion",
+      "categories": ["pxl-ui", "components", "icons", "animations"],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "animated-icon.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/animated-icon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "Badge",
+      "description": "Displays a badge or a component that looks like a badge.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-colors",
+        "pxl-ui/registry/styles-pixels",
+        "pxl-ui/registry/styles-texts"
+      ],
+      "files": [
+        {
+          "path": "badge.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "description": "Displays a button or a component that looks like a button.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-colors",
+        "pxl-ui/registry/styles-pixels",
+        "pxl-ui/registry/styles-texts"
+      ],
+      "files": [
+        {
+          "path": "button.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Card",
+      "description": "Displays a card with header, content, and footer.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-colors",
+        "pxl-ui/registry/styles-pixels",
+        "pxl-ui/registry/styles-texts"
+      ],
+      "files": [
+        {
+          "path": "card.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "reveal",
+      "type": "registry:component",
+      "title": "Reveal",
+      "description": "Content display/hide animation",
+      "categories": ["pxl-ui", "components", "ui", "animations"],
+      "dependencies": [
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-colors"
+      ],
+      "files": [
+        {
+          "path": "reveal.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/reveal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sprite-background",
+      "type": "registry:component",
+      "title": "Sprite Background",
+      "description": "A background image renderer for single sprite-sheets",
+      "categories": ["pxl-ui", "components", "sprite-sheet", "animations"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-sprites"
+      ],
+      "files": [
+        {
+          "path": "sprite-background.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/sprite-background.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:component",
+      "title": "ScrollArea",
+      "description": "Augments native scroll functionality for custom, cross-browser styling.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "scroll-area.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/scroll-area.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sprite-canvas",
+      "type": "registry:component",
+      "title": "Sprite Canvas",
+      "description": "A canvas renderer for single sprite-sheets",
+      "categories": ["pxl-ui", "components", "sprite-sheet", "canvas", "animations"],
+      "registryDependencies": [
+        "pxl-ui/registry/sprite",
+        "pxl-ui/registry/use-sprite"
+      ],
+      "files": [
+        {
+          "path": "sprite-canvas.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/sprite-canvas.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-marquee",
+      "type": "registry:component",
+      "title": "Marquee Text",
+      "description": "Marquee animated text for long texts on tiny screens",
+      "categories": ["pxl-ui", "components", "ui", "texts", "animations"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-animations",
+        "pxl-ui/registry/styles-colors",
+        "pxl-ui/registry/styles-texts"
+      ],
+      "files": [
+        {
+          "path": "text-marquee.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/text-marquee.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-stroke",
+      "type": "registry:component",
+      "title": "Text Stroke",
+      "description": "Text stroke effects to recreate retro style game indicators",
+      "categories": ["pxl-ui", "components", "ui", "texts"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-gradients",
+        "pxl-ui/registry/styles-pixels",
+        "pxl-ui/registry/styles-texts"
+      ],
+      "files": [
+        {
+          "path": "text-stroke.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/text-stroke.tsx"
+        }
+      ]
+    },
+    {
+      "name": "weather-icon",
+      "type": "registry:component",
+      "title": "Weather Icon",
+      "description": "A Icon Component to display the Weather",
+      "categories": ["pxl-ui", "components", "icons", "weather"],
+      "dependencies": [
+        "weather-i18n"
+      ],
+      "files": [
+        {
+          "path": "weather-icon.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/weather-icon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "wheel-list",
+      "type": "registry:component",
+      "title": "Wheel List",
+      "description": "Wheel List Selection menu",
+      "categories": ["pxl-ui", "components", "ui", "navigation"],
+      "dependencies": [
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-pixels"
+      ],
+      "files": [
+        {
+          "path": "wheel-list.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/wheel-list.tsx"
+        }
+      ]
+    },
+    {
+      "name": "widget-area",
+      "type": "registry:component",
+      "title": "Widget Area",
+      "description": "Widget sizing container",
+      "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/styles-widgets"
+      ],
+      "files": [
+        {
+          "path": "widget-area.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/widget-area.tsx"
+        }
+      ]
+    }
+  ]
+}

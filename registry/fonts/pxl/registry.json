@@ -7,51 +7,72 @@
       "name": "fonts-able-5",
       "type": "registry:style",
       "title": "Able 5",
-      "description": "Able 5 font face",
+      "description": "A tiny font that supports hundreds of languages!",
       "docs": "Download font from https://stormgold.itch.io/able-font",
+      "author": "stormgold <https://stormgold.itch.io/>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
       "files": [
         {
           "type": "registry:style",
-          "path": "pxl/able-5.css",
+          "path": "able-5.css",
           "target": "@components/fonts/pxl/able-5.css"
         }
       ],
       "css": {
         "@import \"@/components/fonts/pxl/able-5.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-able-5": "'Able 5', sans-serif"
+        }
       }
     },
     {
       "name": "fonts-monogram",
       "type": "registry:style",
       "title": "Monogram",
-      "description": "Monogram font face",
+      "description": "Elegant monospace pixel font",
+      "author": "datagoblin <https://datagoblin.itch.io/>",
       "docs": "Download font from https://datagoblin.itch.io/monogram",
+      "categories": ["pxl-ui", "font-family", "font-monospace"],
       "files": [
         {
           "type": "registry:file",
-          "path": "pxl/monogram.css",
+          "path": "monogram.css",
           "target": "@components/fonts/pxl/monogram.css"
         }
       ],
       "css": {
         "@import \"@/components/fonts/pxl/monogram.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-monogram": "'Monogram Extended', monospace"
+        }
       }
     },
     {
       "name": "fonts-pixel-digivolve",
       "type": "registry:style",
       "title": "Pixel Digivolve",
-      "description": "Pixel Digivolve font face",
+      "description": "A simple ‘faux pixel’ face based loosely on the title logo from the classic “Digimon” series.",
       "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
+      "author": "Neale Davidson <https://www.pixelsagas.com/>",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
       "files": [
         {
           "type": "registry:file",
-          "path": "pxl/pixel-digivolve.css",
+          "path": "pixel-digivolve.css",
           "target": "@components/fonts/pxl/pixel-digivolve.css"
         }
       ],
       "css": {
         "@import \"@/components/fonts/pxl/pixel-digivolve.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-monogram": "'Pixel Digivolve', sans-serif"
+        }
       }
     }
   ]

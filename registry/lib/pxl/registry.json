@@ -6,10 +6,13 @@
     {
       "name": "sprite",
       "type": "registry:lib",
+      "title": "Sprite",
+      "description": "Sprite class for canvas rendering",
+      "categories": ["pxl-ui", "sprite-sheet", "canvas"],
       "files": [
         {
           "type": "registry:lib",
-          "path": "pxl/sprite.ts",
+          "path": "sprite.ts",
           "target": "@lib/pxl/sprite.ts"
         }
       ]
@@ -18,58 +21,61 @@
       "name": "sprite-animation-choice",
       "type": "registry:lib",
       "title": "Sprite Canvas - Choice Animation",
-      "description": "A custom choice animation for sprite canvas",
+      "description": "Choice/Selection animation for sprite canvas",
+      "categories": ["pxl-ui", "sprite-sheet", "canvas", "animations"],
+      "meta": {
+        "extends": ["pxl-ui/registry/sprite-canvas"]
+      },
       "registryDependencies": [
         "pxl-ui/registry/sprite"
       ],
       "files": [
         {
           "type": "registry:lib",
-          "path": "pxl/sprite-animations/choice.ts",
+          "path": "sprite-animations/choice.ts",
           "target": "@lib/pxl/sprite-animations/choice.ts"
         }
-      ],
-      "meta": {
-        "extends": ["sprite-canvas"]
-      }
+      ]
     },
     {
       "name": "sprite-animation-evolution",
       "type": "registry:lib",
       "title": "Sprite Canvas - Evolution Animation",
-      "description": "A custom evolution animation for sprite canvas",
+      "description": "Evolve/Morph animation for sprite canvas",
+      "categories": ["pxl-ui", "sprite-sheet", "canvas", "animations"],
+      "meta": {
+        "extends": ["pxl-ui/registry/sprite-canvas"]
+      },
       "registryDependencies": [
         "pxl-ui/registry/sprite"
       ],
       "files": [
         {
           "type": "registry:lib",
-          "path": "pxl/sprite-animations/evolution.ts",
+          "path": "sprite-animations/evolution.ts",
           "target": "@lib/pxl/sprite-animations/evolution.ts"
         }
-      ],
-      "meta": {
-        "extends": ["sprite-canvas"]
-      }
+      ]
     },
     {
       "name": "sprite-animation-transition",
       "type": "registry:lib",
       "title": "Sprite Canvas - Transition Animation",
-      "description": "A custom transition animation for sprite canvas",
+      "description": "Transition/Carousel animation for sprite canvas",
+      "categories": ["pxl-ui", "sprite-sheet", "canvas", "animations"],
+      "meta": {
+        "extends": ["pxl-ui/registry/sprite-canvas"]
+      },
       "registryDependencies": [
         "pxl-ui/registry/sprite"
       ],
       "files": [
         {
           "type": "registry:lib",
-          "path": "pxl/sprite-animations/transition.ts",
+          "path": "sprite-animations/transition.ts",
           "target": "@lib/pxl/sprite-animations/transition.ts"
         }
-      ],
-      "meta": {
-        "extends": ["sprite-canvas"]
-      }
+      ]
     }
   ]
 }

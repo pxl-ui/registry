@@ -1,0 +1,343 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/styles",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "styles",
+      "type": "registry:style",
+      "title": "Styles",
+      "description": "TailwindCSS core styles for pxl-ui",
+      "registryDependencies": [
+        "pxl-ui/registry/cursors-pixelarticons",
+        "pxl-ui/registry/fonts-pixel-digivolve",
+        "pxl-ui/registry/fonts-able-5",
+        "pxl-ui/registry/fonts-monogram",
+        "pxl-ui/registry/styles-animations",
+        "pxl-ui/registry/styles-colors",
+        "pxl-ui/registry/styles-cursors",
+        "pxl-ui/registry/styles-filters",
+        "pxl-ui/registry/styles-pixels",
+        "pxl-ui/registry/styles-sprites",
+        "pxl-ui/registry/styles-texts",
+        "pxl-ui/registry/styles-widgets"
+      ],
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Pixel Digivolve', sans-serif",
+          "font-sans": "'Able 5', sans-serif",
+          "font-mono": "'Monogram Extended', monospace"
+        },
+        "light": {
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.145 0 0)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0.145 0 0)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0.145 0 0)",
+          "primary": "oklch(0.205 0 0)",
+          "primary-foreground": "oklch(0.985 0 0)",
+          "secondary": "oklch(0.97 0 0)",
+          "secondary-foreground": "oklch(0.205 0 0)",
+          "muted": "oklch(0.97 0 0)",
+          "muted-foreground": "oklch(0.556 0 0)",
+          "accent": "oklch(0.97 0 0)",
+          "accent-foreground": "oklch(0.205 0 0)",
+          "destructive": "oklch(0.577 0.245 27.325)",
+          "border": "oklch(0.922 0 0)",
+          "input": "oklch(0.922 0 0)",
+          "ring": "oklch(0.708 0 0)",
+          "chart-1": "oklch(0.87 0 0)",
+          "chart-2": "oklch(0.556 0 0)",
+          "chart-3": "oklch(0.439 0 0)",
+          "chart-4": "oklch(0.371 0 0)",
+          "chart-5": "oklch(0.269 0 0)",
+          "sidebar": "oklch(0.985 0 0)",
+          "sidebar-foreground": "oklch(0.145 0 0)",
+          "sidebar-primary": "oklch(0.205 0 0)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.97 0 0)",
+          "sidebar-accent-foreground": "oklch(0.205 0 0)",
+          "sidebar-border": "oklch(0.922 0 0)",
+          "sidebar-ring": "oklch(0.708 0 0)"
+        },
+        "dark": {
+          "background": "oklch(0.145 0 0)",
+          "foreground": "oklch(0.985 0 0)",
+          "card": "oklch(0.205 0 0)",
+          "card-foreground": "oklch(0.985 0 0)",
+          "popover": "oklch(0.205 0 0)",
+          "popover-foreground": "oklch(0.985 0 0)",
+          "primary": "oklch(0.922 0 0)",
+          "primary-foreground": "oklch(0.205 0 0)",
+          "secondary": "oklch(0.269 0 0)",
+          "secondary-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.269 0 0)",
+          "muted-foreground": "oklch(0.708 0 0)",
+          "accent": "oklch(0.269 0 0)",
+          "accent-foreground": "oklch(0.985 0 0)",
+          "destructive": "oklch(0.704 0.191 22.216)",
+          "border": "oklch(1 0 0 / 10%)",
+          "input": "oklch(1 0 0 / 15%)",
+          "ring": "oklch(0.556 0 0)",
+          "chart-1": "oklch(0.87 0 0)",
+          "chart-2": "oklch(0.556 0 0)",
+          "chart-3": "oklch(0.439 0 0)",
+          "chart-4": "oklch(0.371 0 0)",
+          "chart-5": "oklch(0.269 0 0)",
+          "sidebar": "oklch(0.205 0 0)",
+          "sidebar-foreground": "oklch(0.985 0 0)",
+          "sidebar-primary": "oklch(0.488 0.243 264.376)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.269 0 0)",
+          "sidebar-accent-foreground": "oklch(0.985 0 0)",
+          "sidebar-border": "oklch(1 0 0 / 10%)",
+          "sidebar-ring": "oklch(0.556 0 0)"
+        }
+      }
+    },
+    {
+      "name": "styles-animations",
+      "type": "registry:style",
+      "title": "Animation Styles",
+      "description": "Keyframe based CSS animations",
+      "categories": ["pxl-ui", "styles", "animations"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "animations.css",
+          "target": "@components/styles/pxl/animations.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/animations.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "animate-blink": "blink var(--tw-duration, 1s) steps(1) infinite",
+          "animate-marquee": "marquee var(--tw-duration, 6s) ease-in-out infinite alternate",
+          "animate-shine": "shine var(--tw-duration, 1s) ease-in-out infinite"
+        }
+      }
+    },
+    {
+      "name": "styles-colors",
+      "type": "registry:style",
+      "title": "Color Variants",
+      "description": "Color variants to express intentionality inspired by Bootstrap",
+      "categories": ["pxl-ui", "styles", "color-palette"],
+      "cssVars": {
+        "theme": {
+          "color-destructive": "var(--danger-foreground)",
+          "color-info": "var(--info)",
+          "color-info-foreground": "var(--info-foreground)",
+          "color-success": "var(--success)",
+          "color-success-foreground": "var(--success-foreground)",
+          "color-warning": "var(--warning)",
+          "color-warning-foreground": "var(--warning-foreground)",
+          "color-danger": "var(--danger)",
+          "color-danger-foreground": "var(--danger-foreground)"
+        },
+        "light": {
+          "primary": "var(--color-teal-100)",
+          "primary-foreground":"var(--color-sky-600)",
+          "info": "var(--color-teal-100)",
+          "info-foreground":"var(--color-teal-600)",
+          "success": "var(--color-green-100)",
+          "success-foreground": "var(--color-green-600)",
+          "warning": "var(--color-orange-100)",
+          "warning-foreground": "var(--color-orange-500)",
+          "danger": "var(--color-red-100)",
+          "danger-foreground": "var(--color-red-600)"
+        },
+        "dark": {
+          "primary": "var(--color-sky-800)",
+          "primary-foreground": "var(--color-sky-400)",
+          "info": "var(--color-teal-800)",
+          "info-foreground":"var(--color-teal-400)",
+          "success": "var(--color-green-800)",
+          "success-foreground": "var(--color-green-400)",
+          "warning": "var(--color-orange-800)",
+          "warning-foreground": "var(--color-orange-400)",
+          "danger": "var(--color-red-800)",
+          "danger-foreground": "var(--color-red-400)"
+        }
+      }
+    },
+    {
+      "name": "styles-cursors",
+      "type": "registry:style",
+      "title": "Mouse Cursors",
+      "description": "Custom mouse cursor utilities",
+      "categories": ["pxl-ui", "styles", "mouse-cursors"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "cursors.css",
+          "target": "@components/styles/pxl/cursors.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/cursors.css\"": {}
+      }
+    },
+    {
+      "name": "styles-filters",
+      "type": "registry:style",
+      "title": "Screen Filters Styles",
+      "description": "Custom screen filter styles",
+      "categories": ["pxl-ui", "styles", "screen-filters"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "filters.css",
+          "target": "@components/styles/pxl/filters.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/filters.css\"": {}
+      }
+    },
+    {
+      "name": "styles-keyboard",
+      "type": "registry:style",
+      "title": "Keyboard Styles",
+      "description": "Custom keyboard styles",
+      "categories": ["pxl-ui", "styles", "keyboard"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "keyboard.css",
+          "target": "@components/styles/pxl/keyboard.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/keyboard.css\"": {}
+      }
+    },
+    {
+      "name": "styles-gradients",
+      "type": "registry:style",
+      "title": "Color Gradients",
+      "description": "Predefined gradients inspired by videogame indicators",
+      "categories": ["pxl-ui", "styles", "color-palette"],
+      "cssVars": {
+        "theme": {
+          "background-image-chrome": "linear gradient(to bottom, var(--color-white), var(--color-gray-400), var(--color-gray-300))",
+          "background-image-cryo": "linear gradient(to bottom, var(--color-white), var(--color-cyan-300), var(--color-blue-600))",
+          "background-image-fire": "linear gradient(to bottom, var(--color-yellow-300), var(--color-orange-500), var(--color-red-600))",
+          "background-image-loot": "linear gradient(to bottom, var(--color-yellow-300), var(--color-orange-400), var(--color-yellow-700))",
+          "background-image-plasma": "linear gradient(to bottom right, var(--color-fuchsia-500), var(--color-purple-600), var(--color-cyan-400))",
+          "background-image-toxic": "linear gradient(to bottom right, var(--color-green-200), var(--color-green-400), var(--color-green-800))",
+          "background-image-shadow": "linear gradient(to bottom right, var(--color-purple-300), var(--color-purple-700), var(--color-purple-950))",
+          "background-image-synthwave": "linear gradient(to bottom, var(--color-pink-300), var(--color-pink-500), var(--color-orange-400), var(--color-yellow-300))"
+        }
+      }
+    },
+    {
+      "name": "styles-pixels",
+      "type": "registry:style",
+      "title": "Pixel Styles",
+      "description": "Custom pixel-based text and border styles",
+      "categories": ["pxl-ui", "styles", "pixels"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "filters.css",
+          "target": "@components/styles/pxl/pixels.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/pixels.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "pixel-size-xs": "0.5px",
+          "pixel-size-sm": "1px",
+          "pixel-size-md": "2px",
+          "pixel-size-lg": "4px"
+        }
+      }
+    },
+    {
+      "name": "styles-sprites",
+      "type": "registry:style",
+      "title": "Sprite Styles",
+      "description": "Sprite rendering utilities",
+      "categories": ["pxl-ui", "styles", "sprite-sheet", "animations"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "sprites.css",
+          "target": "@components/styles/pxl/sprites.css"
+        },
+        {
+          "type": "registry:lib",
+          "path": "sprite-animate.js",
+          "target": "@components/styles/pxl/sprite-animate.js"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/sprites.css\"": {}
+      }
+    },
+    {
+      "name": "styles-texts",
+      "type": "registry:style",
+      "title": "Text Sizes",
+      "description": "Text sizing override utilities",
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "texts.css",
+          "target": "@components/styles/pxl/texts.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/texts.css\"": {}
+      },
+      "cssVars": {
+        "text-3xs": "0.5rem",
+        "text-2xs": "0.625rem"
+      }
+    },
+    {
+      "name": "styles-widgets",
+      "type": "registry:style",
+      "title": "Widget Sizes",
+      "description": "Widget sizing utilities",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "widgets.css",
+          "target": "@components/styles/pxl/widgets.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/widgets.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "aspect-widget-sm": "1/1",
+          "aspect-widget-md": "86/41",
+          "aspect-widget-lg": "1/1",
+          "aspect-widget-xl": "43/22",
+          "widget-width-sm": "calc(var(--spacing) * 41)",
+          "widget-height-sm": "calc(var(--spacing) * 41)",
+          "widget-width-md": "calc(var(--spacing) * 86)",
+          "widget-height-md": "calc(var(--spacing) * 41)",
+          "widget-width-lg": "calc(var(--spacing) * 86)",
+          "widget-height-lg": "calc(var(--spacing) * 86)",
+          "widget-width-xl": "calc(var(--spacing) * 176)",
+          "widget-height-xl": "calc(var(--spacing) * 86)",
+          "container-7xs": "8rem",
+          "container-6xs": "10rem",
+          "container-5xs": "12rem",
+          "container-4xs": "14rem",
+          "container-widget-md": "calc(var(--spacing) * 41)",
+          "container-widget-xl": "calc(var(--spacing) * 86)"
+        }
+      }
+    }
+  ]
+}

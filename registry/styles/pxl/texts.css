@@ -9,34 +9,6 @@
   line-height: var(--tw-leading, var(--text-2xs--line-height));
 }
 
-@utility pixel-size-* {
-  --pixel-size: --value(--pixel-size-*, [length], [*]);
-}
-
-@utility pixel-color-* {
-  --pixel-color: --value(--color-*, [color]);
-  --pixel-alpha: calc(--modifier(integer) * 1%);
-  --pixel-color: --alpha(--value(--color-*, [color]) / var(--pixel-alpha, 100%));
-}
-
-@utility pixel-drop-* {
-  --drop-size: var(--pixel-size, var(--pixel-size-md, 2px));
-  --drop-color: --value(--color-*, [color]);
-
-  filter: drop-shadow(
-    calc(1 * var(--drop-size, 1px)) 0 0 var(--drop-color)
-  )
-  drop-shadow(
-    calc(-1 * var(--drop-size, 1px)) 0 0 var(--drop-color)
-  )
-  drop-shadow(
-    0 calc(1 * var(--drop-size, 1px)) 0 var(--drop-color)
-  )
-  drop-shadow(
-    0 calc(-1 * var(--drop-size, 1px)) 0 var(--drop-color)
-  );
-}
-
 @utility font-heading {
   font-family: var(--font-heading);
 

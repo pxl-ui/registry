@@ -9,10 +9,10 @@
 @import "@/components/fonts/pxl/pixel-digivolve.css";
 
 @import "@/components/styles/pxl/animations.css";
-@import "@/components/styles/pxl/borders.css";
+@import "@/components/styles/pxl/pixels.css";
 @import "@/components/styles/pxl/cursors.css";
 @import "@/components/styles/pxl/filters.css";
-@import "@/components/styles/pxl/images.css";
+@import "@/components/styles/pxl/sprites.css";
 @import "@/components/styles/pxl/texts.css";
 @import "@/components/styles/pxl/widgets.css";
 
