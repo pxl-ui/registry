@@ -38,7 +38,6 @@ const definitions = await Promise.all(
   }));
 
 for (const include of root.include) {
-  console.log(include);
   const resolved = definitions.find(r => r.path === `/${include}`);
 
   if (!resolved) {

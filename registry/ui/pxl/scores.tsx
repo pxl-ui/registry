@@ -5,9 +5,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/pxl/avatar";
+import { TextStroke } from "@/components/ui/pxl/text-stroke";
 import { cn } from "@/lib/utils";
-
-import { TextStroke } from "./text-stroke";
 
 function ScoreAvatar({
   alt,
@@ -22,13 +21,7 @@ function ScoreAvatar({
 }) {
   return (
     <div className="shrink-0">
-      <Avatar
-        size="xs"
-        className={cn(
-          index === 1 &&
-            "[--size:--spacing(4)]",
-        )}
-      >
+      <Avatar size="xs" className={cn(index === 1 && "[--size:--spacing(4)]")}>
         <AvatarImage alt={alt} src={src} />
         <AvatarFallback>{fallback}</AvatarFallback>
       </Avatar>

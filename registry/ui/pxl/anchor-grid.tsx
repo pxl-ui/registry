@@ -62,7 +62,6 @@ export function AnchorGrid({
   widgets = [],
   showGridLines = false,
 }: Props) {
-  console.log(gap);
   const cellSize = useMemo(
     () => computeCellSize(containerWidth, containerHeight, cols, rows, gap),
     [containerWidth, containerHeight, cols, rows, gap]

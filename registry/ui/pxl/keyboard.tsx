@@ -7,9 +7,8 @@ import SimpleKeyboard, {
   type SimpleKeyboard as KeyboardRef,
 } from "react-simple-keyboard";
 
+import { buttonVariants } from "@/components/ui/pxl/button";
 import { cn } from "@/lib/utils";
-
-import { buttonVariants } from "./button";
 
 type Language = "en" | "es";
 type KeyboardDisplay = "regular" | "mobile";
@@ -45,10 +44,12 @@ const keyboardVariants = cva("hg-theme-pxl", {
         "keyboard-highlight-bg-foreground/80 keyboard-highlight-text-background keyboard-shift-text-foreground keyboard-shift-bg-background",
       primary:
         "keyboard-highlight-bg-primary/80 keyboard-highlight-text-primary-foreground keyboard-shift-text-primary keyboard-shift-bg-primary-foreground",
-      outline: "keyboard-highlight-bg-muted keyboard-highlight-text-foreground  keyboard-shift-text-muted keyboard-shift-bg-foreground",
+      outline:
+        "keyboard-highlight-bg-muted keyboard-highlight-text-foreground  keyboard-shift-text-muted keyboard-shift-bg-foreground",
       secondary:
         "keyboard-highlight-bg-secondary/80 keyboard-highlight-text-secondary-foreground keyboard-shift-text-secondary keyboard-shift-bg-secondary-foreground",
-      ghost: "keyboard-highlight-bg-muted keyboard-highlight-text-foreground  keyboard-shift-text-background keyboard-shift-bg-foreground",
+      ghost:
+        "keyboard-highlight-bg-muted keyboard-highlight-text-foreground  keyboard-shift-text-background keyboard-shift-bg-foreground",
       destructive:
         "keyboard-highlight-bg-destructive/20 keyboard-highlight-text-destructive keyboard-shift-text-destructive/20 keyboard-shift-bg-destructive",
       info: "keyboard-highlight-bg-info/80 keyboard-highlight-text-info-foreground keyboard-shift-text-info keyboard-shift-bg-info-foreground",
@@ -56,7 +57,8 @@ const keyboardVariants = cva("hg-theme-pxl", {
         "keyboard-highlight-bg-success/80 keyboard-highlight-text-success-foreground keyboard-shift-text-success keyboard-shift-bg-success-foreground",
       warning:
         "keyboard-highlight-bg-warning/80 keyboard-highlight-text-warning-foreground keyboard-shift-text-warning keyboard-shift-bg-warning-foreground",
-      danger: "keyboard-highlight-bg-danger/80 keyboard-highlight-text-danger-foreground keyboard-shift-text-danger keyboard-shift-bg-danger-foreground",
+      danger:
+        "keyboard-highlight-bg-danger/80 keyboard-highlight-text-danger-foreground keyboard-shift-text-danger keyboard-shift-bg-danger-foreground",
     },
   },
   defaultVariants: {

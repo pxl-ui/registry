@@ -32,6 +32,20 @@
       ]
     },
     {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "Avatar",
+      "description": "An image element with a fallback for representing the user.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "avatar.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/avatar.tsx"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:component",
       "title": "Badge",
@@ -60,6 +74,27 @@
       ]
     },
     {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Calendar",
+      "description": "A calendar component that allows users to select a date or a range of dates.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "react-day-picker"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/select"
+      ],
+      "files": [
+        {
+          "path": "calendar.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/calendar.tsx"
+        }
+      ]
+    },
+    {
       "name": "card",
       "type": "registry:component",
       "title": "Card",
@@ -70,6 +105,176 @@
           "path": "card.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:component",
+      "title": "Command",
+      "description": "Command menu for search and quick actions.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "cmdk"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/dialog",
+        "pxl-ui/registry/input-group"
+      ],
+      "files": [
+        {
+          "path": "command.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/command.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Dialog",
+      "description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "dialog.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialogue-box",
+      "type": "registry:component",
+      "title": "Dialogue Box",
+      "description": "Displays a dialogue box with animated text and portrait.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "streamdown"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/avatar",
+        "pxl-ui/registry/card"
+      ],
+      "files": [
+        {
+          "path": "dialogue-box.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/dialogue-box.tsx"
+        }
+      ]
+    },
+    {
+      "name": "flip",
+      "type": "registry:component",
+      "title": "Flip",
+      "description": "A flip component that supports automatic, manual (gesture-based), and programmatic flipping.",
+      "categories": ["pxl-ui", "components", "ui", "layout", "animations"],
+      "files": [
+        {
+          "path": "flip.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/flip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:component",
+      "title": "Input Group",
+      "description": "Add addons, buttons, and helper content to inputs.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/textarea"
+      ],
+      "files": [
+        {
+          "path": "input-group.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/input-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "Input",
+      "description": "A text input component for forms and user data entry with built-in styling and accessibility features.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "input.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "keyboard",
+      "type": "registry:component",
+      "title": "Keyboard",
+      "description": "Renders a virtual keyboard",
+      "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": [
+        "react-simple-keyboard",
+        "simple-keyboard-key-navigation"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/styles-keyboard"
+      ],
+      "files": [
+        {
+          "path": "keyboard.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/keyboard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:component",
+      "title": "Label",
+      "description": "Renders an accessible label associated with controls.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "label.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/label.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:component",
+      "title": "Popover",
+      "description": "Displays rich content in a portal, triggered by a button.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "popover.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:component",
+      "title": "Radio Group",
+      "description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "radio-group.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/radio-group.tsx"
         }
       ]
     },
@@ -88,6 +293,66 @@
       ]
     },
     {
+      "name": "scores",
+      "type": "registry:component",
+      "title": "Scores",
+      "description": "Gradient list to display scores",
+      "categories": ["pxl-ui", "components", "ui"],
+      "registryDependencies": [
+        "pxl-ui/registry/avatar",
+        "pxl-ui/registry/text-stroke"
+      ],
+      "files": [
+        {
+          "path": "scores.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/scores.tsx"
+        }
+      ]
+    },
+    {
+      "name": "screen",
+      "type": "registry:component",
+      "title": "Screen",
+      "description": "Custom filters for different screen displays",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "screen.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/screen.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:component",
+      "title": "Scroll Area",
+      "description": "Augments native scroll functionality for custom, cross-browser styling.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "path": "scroll-area.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/scroll-area.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "Select",
+      "description": "Displays a list of options for the user to pick from—triggered by a button.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "select.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/select.tsx"
+        }
+      ]
+    },
+    {
       "name": "sprite-background",
       "type": "registry:component",
       "title": "Sprite Background",
@@ -98,20 +363,6 @@
           "path": "sprite-background.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/sprite-background.tsx"
-        }
-      ]
-    },
-    {
-      "name": "scroll-area",
-      "type": "registry:component",
-      "title": "ScrollArea",
-      "description": "Augments native scroll functionality for custom, cross-browser styling.",
-      "categories": ["pxl-ui", "components", "layout"],
-      "files": [
-        {
-          "path": "scroll-area.tsx",
-          "type": "registry:component",
-          "target": "@ui/pxl/scroll-area.tsx"
         }
       ]
     },
@@ -158,6 +409,34 @@
           "path": "text-stroke.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/text-stroke.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:component",
+      "title": "Textarea",
+      "description": "Displays a form textarea or a component that looks like a textarea.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "textarea.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "Tooltip",
+      "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "textarea.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/textarea.tsx"
         }
       ]
     },
