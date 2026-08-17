@@ -23,6 +23,11 @@
       "config": {
         "style": "pxl-ui"
       },
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "motion"
+      ],
       "registryDependencies": [
         "pxl-ui/registry/styles"
       ]

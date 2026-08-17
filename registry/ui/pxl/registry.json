@@ -23,9 +23,6 @@
       "title": "Animated Icon",
       "description": "Animate your svg icons using motion",
       "categories": ["pxl-ui", "components", "icons", "animations"],
-      "dependencies": [
-        "motion"
-      ],
       "files": [
         {
           "path": "animated-icon.tsx",
@@ -40,15 +37,6 @@
       "title": "Badge",
       "description": "Displays a badge or a component that looks like a badge.",
       "categories": ["pxl-ui", "components", "ui"],
-      "dependencies": [
-        "@base-ui/react",
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-colors",
-        "pxl-ui/registry/styles-pixels",
-        "pxl-ui/registry/styles-texts"
-      ],
       "files": [
         {
           "path": "badge.tsx",
@@ -63,15 +51,6 @@
       "title": "Button",
       "description": "Displays a button or a component that looks like a button.",
       "categories": ["pxl-ui", "components", "ui"],
-      "dependencies": [
-        "@base-ui/react",
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-colors",
-        "pxl-ui/registry/styles-pixels",
-        "pxl-ui/registry/styles-texts"
-      ],
       "files": [
         {
           "path": "button.tsx",
@@ -86,15 +65,6 @@
       "title": "Card",
       "description": "Displays a card with header, content, and footer.",
       "categories": ["pxl-ui", "components", "ui"],
-      "dependencies": [
-        "@base-ui/react",
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-colors",
-        "pxl-ui/registry/styles-pixels",
-        "pxl-ui/registry/styles-texts"
-      ],
       "files": [
         {
           "path": "card.tsx",
@@ -109,13 +79,6 @@
       "title": "Reveal",
       "description": "Content display/hide animation",
       "categories": ["pxl-ui", "components", "ui", "animations"],
-      "dependencies": [
-        "class-variance-authority",
-        "motion"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-colors"
-      ],
       "files": [
         {
           "path": "reveal.tsx",
@@ -130,12 +93,6 @@
       "title": "Sprite Background",
       "description": "A background image renderer for single sprite-sheets",
       "categories": ["pxl-ui", "components", "sprite-sheet", "animations"],
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-sprites"
-      ],
       "files": [
         {
           "path": "sprite-background.tsx",
@@ -150,9 +107,6 @@
       "title": "ScrollArea",
       "description": "Augments native scroll functionality for custom, cross-browser styling.",
       "categories": ["pxl-ui", "components", "layout"],
-      "dependencies": [
-        "@base-ui/react"
-      ],
       "files": [
         {
           "path": "scroll-area.tsx",
@@ -185,14 +139,6 @@
       "title": "Marquee Text",
       "description": "Marquee animated text for long texts on tiny screens",
       "categories": ["pxl-ui", "components", "ui", "texts", "animations"],
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-animations",
-        "pxl-ui/registry/styles-colors",
-        "pxl-ui/registry/styles-texts"
-      ],
       "files": [
         {
           "path": "text-marquee.tsx",
@@ -207,14 +153,6 @@
       "title": "Text Stroke",
       "description": "Text stroke effects to recreate retro style game indicators",
       "categories": ["pxl-ui", "components", "ui", "texts"],
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-gradients",
-        "pxl-ui/registry/styles-pixels",
-        "pxl-ui/registry/styles-texts"
-      ],
       "files": [
         {
           "path": "text-stroke.tsx",
@@ -246,13 +184,6 @@
       "title": "Wheel List",
       "description": "Wheel List Selection menu",
       "categories": ["pxl-ui", "components", "ui", "navigation"],
-      "dependencies": [
-        "class-variance-authority",
-        "motion"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-pixels"
-      ],
       "files": [
         {
           "path": "wheel-list.tsx",
@@ -267,12 +198,6 @@
       "title": "Widget Area",
       "description": "Widget sizing container",
       "categories": ["pxl-ui", "components", "layout"],
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "registryDependencies": [
-        "pxl-ui/registry/styles-widgets"
-      ],
       "files": [
         {
           "path": "widget-area.tsx",

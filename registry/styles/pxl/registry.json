@@ -17,6 +17,7 @@
         "pxl-ui/registry/styles-colors",
         "pxl-ui/registry/styles-cursors",
         "pxl-ui/registry/styles-filters",
+        "pxl-ui/registry/styles-gradients",
         "pxl-ui/registry/styles-pixels",
         "pxl-ui/registry/styles-sprites",
         "pxl-ui/registry/styles-texts",

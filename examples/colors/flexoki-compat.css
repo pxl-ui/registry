@@ -18,4 +18,42 @@
   --border: #343331;
   --input: #343331;
   --ring: #575653;
+
+  --primary: #C6DDE8;
+  --primary-foreground: #205EA6;
+  --danger: #FFCABB;
+  --danger-foreground: #AF3029;
+  --warning: #FED3AF;
+  --warning-foreground: #BC5215;
+  --success: #DDE2B2;
+  --success-foreground: #66800B;
+  --info: #BFE8D9;
+  --info-foreground: #24837B;
+}
+
+.dark, [data-theme="dark"] {
+  --background: #100F0F;
+  --foreground: #CECDC3;
+  --card: #282726;
+  --card-foreground: #F2F0E5;
+  --popover: #282726;
+  --popover-foreground: #F2F0E5;
+  --muted: #575653;
+  --muted-foreground: #B7B5AC;
+  --accent: #343331;
+  --accent-foreground: #F2F0E5;
+  --border: #DAD8CE;
+  --input: #DAD8CE;
+  --ring: #B7B5AC;
+
+  --primary: #163B66;
+  --primary-foreground: #4385BE;
+  --danger: #6C201C;
+  --danger-foreground: #D14D41;
+  --warning: #71320D;
+  --warning-foreground: #DA702C;
+  --success: #3D4C07;
+  --success-foreground: #879A39;
+  --info: #164F4A;
+  --info-foreground: #3AA99F;
 }

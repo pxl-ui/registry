@@ -249,6 +249,146 @@
       }
     },
     {
+      "name": "colors-dmg-01",
+      "type": "registry:theme",
+      "title": "DMG-01",
+      "description": "DMG-01 is the official model code for the original Nintendo Game Boy, launched in Japan in April 1989",
+      "categories": ["pxl-ui", "color-palette", "color-palette-base"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "dmg-01.css",
+          "target": "@components/colors/pxl/dmg-01.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/dmg-01.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-dmg-01-green-50)",
+          "foreground": "var(--color-dmg-01-green-950)",
+          "card": "var(--color-dmg-01-green-50)",
+          "card-foreground": "var(--color-dmg-01-green-950)",
+          "popover": "var(--color-dmg-01-green-50)",
+          "popover-foreground": "var(--color-dmg-01-green-950)",
+          "muted": "var(--color-dmg-01-green-200)",
+          "muted-foreground": "var(--color-dmg-01-green-700)",
+          "accent": "var(--color-dmg-01-green-200)",
+          "accent-foreground": "var(--color-dmg-01-green-950)",
+          "border": "var(--color-dmg-01-green-200)",
+          "input": "var(--color-dmg-01-green-200)",
+          "ring": "var(--color-dmg-01-green-700)",
+          "primary": "var(--color-dmg-01-accurate-200)",
+          "primary-foreground": "var(--color-dmg-01-accurate-950)",
+          "danger": "var(--color-dmg-01-red-200)",
+          "danger-foreground": "var(--color-dmg-01-red-950)",
+          "warning": "var(--color-dmg-01-red-200)",
+          "warning-foreground": "var(--color-dmg-01-red-950)",
+          "success": "var(--color-dmg-01-green-200)",
+          "success-foreground": "var(--color-dmg-01-green-950)",
+          "info": "var(--color-dmg-01-blue-200)",
+          "info-foreground": "var(--color-dmg-01-blue-950)"
+        },
+        "dark": {
+          "--background": "var(--color-dmg-01-green-950)",
+          "--foreground": "var(--color-dmg-01-green-50)",
+          "--card": "var(--color-dmg-01-green-950)",
+          "--card-foreground": "var(--color-dmg-01-green-50)",
+          "--popover": "var(--color-dmg-01-green-950)",
+          "--popover-foreground": "var(--color-dmg-01-green-50)",
+          "--muted": "var(--color-dmg-01-green-700)",
+          "--muted-foreground": "var(--color-dmg-01-green-200)",
+          "--accent": "var(--color-dmg-01-green-700)",
+          "--accent-foreground": "var(--color-dmg-01-green-50)",
+          "--border": "var(--color-dmg-01-green-700)",
+          "--input": "var(--color-dmg-01-green-700)",
+          "--ring": "var(--color-dmg-01-green-200)",
+          "--primary": "var(--color-dmg-01-accurate-700)",
+          "--primary-foreground": "var(--color-dmg-01-accurate-50)",
+          "--danger": "var(--color-dmg-01-red-700)",
+          "--danger-foreground": "var(--color-dmg-01-red-50)",
+          "--warning": "var(--color-dmg-01-red-700)",
+          "--warning-foreground": "var(--color-dmg-01-red-50)",
+          "--success": "var(--color-dmg-01-green-700)",
+          "--success-foreground": "var(--color-dmg-01-green-50)",
+          "--info": "var(--color-dmg-01-blue-700)",
+          "--info-foreground": "var(--color-dmg-01-blue-50)"
+        }
+      }
+    },
+    {
+      "name": "colors-fantasy-24",
+      "type": "registry:theme",
+      "title": "Fantasy 24",
+      "description": "",
+      "author": "Gabriel C <https://twitter.com/cigsandflowers>",
+      "categories": ["pxl-ui", "color-palette"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "fantasy-24.css",
+          "target": "@components/colors/pxl/fantasy-24.css"
+        }
+
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/fantasy-24.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-fantasy-24-neutral-50)",
+          "foreground": "var(--color-fantasy-24-neutral-950)",
+          "card": "var(--color-fantasy-24-neutral-50)",
+          "card-foreground": "var(--color-fantasy-24-neutral-950)",
+          "popover": "var(--color-fantasy-24-neutral-50)",
+          "popover-foreground": "var(--color-fantasy-24-neutral-950)",
+          "muted": "var(--color-fantasy-24-neutral-50)",
+          "muted-foreground": "var(--color-fantasy-24-neutral-400)",
+          "accent": "var(--color-fantasy-24-neutral-50)",
+          "accent-foreground": "var(--color-fantasy-24-neutral-600)",
+          "border": "var(--color-fantasy-24-neutral-400)",
+          "input": "var(--color-fantasy-24-neutral-400)",
+          "ring": "var(--color-fantasy-24-neutral-600)",
+          "primary": "var(--color-fantasy-24-blue-50)",
+          "primary-foreground": "var(--color-fantasy-24-blue-600)",
+          "info": "var(--color-fantasy-24-brown-50)",
+          "info-foreground": "var(--color-fantasy-24-brown-600)",
+          "success": "var(--color-fantasy-24-green-50)",
+          "success-foreground": "var(--color-fantasy-24-green-600)",
+          "warning": "var(--color-fantasy-24-amber-50)",
+          "warning-foreground": "var(--color-fantasy-24-amber-600)",
+          "danger": "var(--color-fantasy-24-red-50)",
+          "danger-foreground": "var(--color-fantasy-24-red-600)"
+        },
+        "dark": {
+          "background": "var(--color-fantasy-24-neutral-950)",
+          "foreground": "var(--color-fantasy-24-neutral-400)",
+          "card": "var(--color-fantasy-24-neutral-950)",
+          "card-foreground": "var(--color-fantasy-24-neutral-400)",
+          "popover": "var(--color-fantasy-24-neutral-950)",
+          "popover-foreground": "var(--color-fantasy-24-neutral-400)",
+          "muted": "var(--color-fantasy-24-neutral-950)",
+          "muted-foreground": "var(--color-fantasy-24-neutral-600)",
+          "accent": "var(--color-fantasy-24-neutral-950)",
+          "accent-foreground": "var(--color-fantasy-24-neutral-50)",
+          "border": "var(--color-fantasy-24-neutral-600)",
+          "input": "var(--color-fantasy-24-neutral-600)",
+          "ring": "var(--color-fantasy-24-neutral-50)",
+          "primary": "var(--color-fantasy-24-blue-600)",
+          "primary-foreground": "var(--color-fantasy-24-blue-50)",
+          "info": "var(--color-fantasy-24-brown-600)",
+          "info-foreground": "var(--color-fantasy-24-brown-50)",
+          "success": "var(--color-fantasy-24-green-400)",
+          "success-foreground": "var(--color-fantasy-24-green-50)",
+          "warning": "var(--color-fantasy-24-amber-600)",
+          "warning-foreground": "var(--color-fantasy-24-amber-50)",
+          "danger": "var(--color-fantasy-24-red-600)",
+          "danger-foreground": "var(--color-fantasy-24-red-50)"
+        }
+      }
+    },
+    {
       "name": "colors-flexoki",
       "type": "registry:theme",
       "title": "Flexoki",
@@ -319,9 +459,135 @@
       }
     },
     {
+      "name": "colors-flexoki-compat",
+      "type": "registry:theme",
+      "title": "Flexoki Compat",
+      "description": "Flexoki is an inky color scheme for prose and code designed for reading and writing on digital screens. It is inspired by analog inks and warm shades of paper.",
+      "author": "Kepano <https://stephango.com>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete", "color-palette-compat"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "flexoki-compat.css",
+          "target": "@components/colors/pxl/flexoki-compat.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/flexoki-compat.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "#FFFCF0",
+          "foreground": "#1C1B1A",
+          "card": "#F2F0E5",
+          "card-foreground": "#1C1B1A",
+          "popover": "#E6E4D9",
+          "popover-foreground": "#1C1B1A",
+          "muted": "#B7B5AC",
+          "muted-foreground": "#575653",
+          "accent": "#DAD8CE",
+          "accent-foreground": "#1C1B1A",
+          "border": "#343331",
+          "input": "#343331",
+          "ring": "#575653",
+          "primary": "#C6DDE8",
+          "primary-foreground": "#205EA6",
+          "danger": "#FFCABB",
+          "danger-foreground": "#AF3029",
+          "warning": "#FED3AF",
+          "warning-foreground": "#BC5215",
+          "success": "#DDE2B2",
+          "success-foreground": "#66800B",
+          "info": "#BFE8D9",
+          "info-foreground": "#24837B"
+        },
+        "dark": {
+          "background": "#100F0F",
+          "foreground": "#CECDC3",
+          "card": "#282726",
+          "card-foreground": "#F2F0E5",
+          "popover": "#282726",
+          "popover-foreground": "#F2F0E5",
+          "muted": "#575653",
+          "muted-foreground": "#B7B5AC",
+          "accent": "#343331",
+          "accent-foreground": "#F2F0E5",
+          "border": "#DAD8CE",
+          "input": "#DAD8CE",
+          "ring": "#B7B5AC",
+          "primary": "#163B66",
+          "primary-foreground": "#4385BE",
+          "danger": "#6C201C",
+          "danger-foreground": "#D14D41",
+          "warning": "#71320D",
+          "warning-foreground": "#DA702C",
+          "success": "#3D4C07",
+          "success-foreground": "#879A39",
+          "info": "#164F4A",
+          "info-foreground": "#3AA99F"
+        }
+      }
+    },
+    {
+      "name": "colors-final-menu",
+      "type": "registry:theme",
+      "title": "Final Menu",
+      "description": "A base palette inspired by Final Fantasy menus",
+      "categories": ["pxl-ui", "color-palette", "color-palette-base"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "final-menu.css",
+          "target": "@/components/colors/pxl/final-menu.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/final-menu.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--background-image-classic-blue)",
+          "foreground": "var(--color-final-menu-white)",
+          "card": "var(--background-image-classic-blue)",
+          "card-foreground": "var(--color-final-menu-white)",
+          "popover": "var(--background-image-classic-blue)",
+          "popover-foreground": "var(--color-final-menu-white)",
+          "muted": "var(--background-image-classic-blue)",
+          "muted-foreground": "var(--color-final-menu-white)",
+          "accent": "var(--background-image-classic-blue)",
+          "accent-foreground": "var(--color-final-menu-white)",
+          "border": "var(--color-final-menu-white)",
+          "input": "var(--color-final-menu-white)",
+          "ring": "var(--color-final-menu-white)",
+          "primary": "var(--color-final-menu-classic-blue-50)",
+          "primary-foreground": "var(--color-final-menu-white)",
+          "danger": "var(--color-final-menu-classic-red-50)",
+          "danger-foreground": "var(--color-final-menu-white)",
+          "warning": "var(--color-final-menu-classic-red-50)",
+          "warning-foreground": "var(--color-final-menu-white)",
+          "success": "var(--color-final-menu-classic-green-50)",
+          "success-foreground": "var(--color-final-menu-white)",
+          "info": "var(--color-final-menu-classic-blue-50)",
+          "info-foreground": "var(--color-final-menu-white)"
+        },
+        "dark": {
+          "primary": "var(--color-final-menu-classic-blue-950)",
+          "primary-foreground": "var(--color-final-menu-white)",
+          "danger": "var(--color-final-menu-classic-red-950)",
+          "danger-foreground": "var(--color-final-menu-white)",
+          "warning": "var(--color-final-menu-classic-red-950)",
+          "warning-foreground": "var(--color-final-menu-white)",
+          "success": "var(--color-final-menu-classic-green-950)",
+          "success-foreground": "var(--color-final-menu-white)",
+          "info": "var(--color-final-menu-classic-blue-950)",
+          "info-foreground": "var(--color-final-menu-white)"
+        }
+      }
+    },
+    {
       "name": "colors-duel",
       "type": "registry:theme",
-      "title": "duel",
+      "title": "DUEL",
       "description": "A 256 colors palette divided in 32 groups.",
       "author": "Arilyn <https://lospec.com/palette-list/duel>",
       "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
@@ -385,6 +651,297 @@
           "warning-foreground": "var(--color-duel-amber-50)",
           "info": "var(--color-duel-lavender-700)",
           "info-foreground": "var(--color-duel-lavender-50)"
+        }
+      }
+    },
+    {
+      "name": "colors-duel-compat",
+      "type": "registry:theme",
+      "title": "DUEL Compat",
+      "description": "A 256 colors palette divided in 32 groups.",
+      "author": "Arilyn <https://lospec.com/palette-list/duel>",
+      "docs": "This palette overrides predefined Tailwind Colors. Use it carefully.",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete", "color-palette-compat"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "duel.css",
+          "target": "@/components/colors/pxl/duel-compat.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/duel-compat.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "oklch(97.547% 0.0045 258.325)",
+          "foreground": "oklch(51.523% 0.016 258.366)",
+          "card": "oklch(97.547% 0.0045 258.325)",
+          "card-foreground": "oklch(51.523% 0.016 258.366)",
+          "popover": "oklch(97.547% 0.0045 258.325)",
+          "popover-foreground": "oklch(51.523% 0.016 258.366)",
+          "muted": "oklch(86.227% 0.0123 259.824)",
+          "muted-foreground": "oklch(63.371% 0.0222 257.497)",
+          "accent": "oklch(86.227% 0.0123 259.824)",
+          "accent-foreground": "oklch(38.999% 0.0072 264.484)",
+          "border": "oklch(63.371% 0.0222 257.497)",
+          "input": "oklch(63.371% 0.0222 257.497)",
+          "ring": "oklch(51.523% 0.016 258.366)",
+          "primary": "oklch(69.919% 0.1232 223.394)",
+          "primary-foreground": "oklch(47.449% 0.0854 223.143)",
+          "info": "oklch(71.946% 0.1333 177.12)",
+          "info-foreground": "oklch(47.866% 0.0815 197.041)",
+          "success": "oklch(66.705% 0.1503 126.171)",
+          "success-foreground": "oklch(41.207% 0.1124 140.792)",
+          "danger": "oklch(82.138% 0.111 357.357)",
+          "danger-foreground": "oklch(61.402% 0.1789 11.189)",
+          "warning": "oklch(85.061% 0.0976 88.609)",
+          "warning-foreground": "oklch(59.743% 0.0684 72.123)"
+        },
+        "dark": {
+          "background": "oklch(0% 0 0)",
+          "foreground": "oklch(86.227% 0.0123 259.824)",
+          "card": "oklch(38.999% 0.0072 264.484)",
+          "card-foreground": "oklch(86.227% 0.0123 259.824)",
+          "popover": "oklch(25.51% 0.0015 197.063)",
+          "popover-foreground": "oklch(86.227% 0.0123 259.824)",
+          "muted": "oklch(51.523% 0.016 258.366)",
+          "muted-foreground": "oklch(74.824% 0.0195 258.361)",
+          "accent": "oklch(51.523% 0.016 258.366)",
+          "accent-foreground": "oklch(97.547% 0.0045 258.325)",
+          "border": "oklch(51.523% 0.016 258.366)",
+          "input": "oklch(51.523% 0.016 258.366)",
+          "ring": "oklch(63.371% 0.0222 257.497)",
+          "primary": "oklch(38.834% 0.0703 219.117)",
+          "primary-foreground": "oklch(84.043% 0.096 232.471)",
+          "success": "oklch(36.284% 0.0934 144.629)",
+          "success-foreground": "oklch(79.063% 0.176 122.996)",
+          "danger": "oklch(49.777% 0.1337 9.307)",
+          "danger-foreground": "oklch(90.689% 0.0857 326.256)",
+          "warning": "oklch(51.463% 0.0567 66.007)",
+          "warning-foreground": "oklch(93.453% 0.0913 96.298)",
+          "info": "oklch(40.156% 0.0722 218.207)",
+          "info-foreground": "oklch(81.404% 0.1396 192.45)"
+        }
+      }
+    },
+    {
+      "name": "colors-gothic-bit",
+      "type": "registry:theme",
+      "title": "Gothic Bit",
+      "description": "A dark and moody palette with gothic aesthetic to it.",
+      "author": "HiroHi <https://lospec.com/itshirohi>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-base"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "gothic-bit.css",
+          "target": "@/components/colors/pxl/gothic-bit.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/gothic-bit.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-gothic-bit-base-50)",
+          "foreground": "var(--color-gothic-bit-base-600)",
+          "card": "var(--color-gothic-bit-base-50)",
+          "card-foreground": "var(--color-gothic-bit-base-600)",
+          "popover": "var(--color-gothic-bit-base-50)",
+          "popover-foreground": "var(--color-gothic-bit-base-600)",
+          "accent": "var(--color-gothic-bit-base-100)",
+          "accent-foreground": "var(--color-gothic-bit-base-700)",
+          "border": "var(--color-gothic-bit-base-400)",
+          "input": "var(--color-gothic-bit-base-400)",
+          "ring": "var(--color-gothic-bit-base-600)",
+          "muted": "var(--color-gothic-bit-base-100)",
+          "muted-foreground": "var(--color-gothic-bit-base-400)"
+        },
+        "dark": {
+          "background": "var(--color-gothic-bit-base-950)",
+          "foreground": "var(--color-gothic-bit-base-100)",
+          "card": "var(--color-gothic-bit-base-700)",
+          "card-foreground": "var(--color-gothic-bit-base-100)",
+          "popover": "var(--color-gothic-bit-base-800)",
+          "popover-foreground": "var(--color-gothic-bit-base-100)",
+          "muted": "var(--color-gothic-bit-base-600)",
+          "muted-foreground": "var(--color-gothic-bit-base-400)",
+          "accent": "var(--color-gothic-bit-base-600)",
+          "accent-foreground": "var(--color-gothic-bit-base-50)",
+          "border": "var(--color-gothic-bit-base-600)",
+          "input": "var(--color-gothic-bit-base-600)",
+          "ring": "var(--color-gothic-bit-base-400)"
+        }
+      }
+    },
+    {
+      "name": "colors-justparchment8",
+      "type": "registry:theme",
+      "title": "JustParchment8",
+      "description": "A small 8 colour palette made for paper and ink / parchment style designs. To be used for things like old scrolls and maps and to give the feel of old fasioned ink on parchment drawings.",
+      "author": "JustJimmy <https://lospec.com/just-jimmy>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-base"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "justparchment8.css",
+          "target": "@/components/colors/pxl/justparchment8.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/justparchment8.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-justparchment8-base-50)",
+          "foreground": "var(--color-justparchment8-base-600)",
+          "card": "var(--color-justparchment8-base-50)",
+          "card-foreground": "var(--color-justparchment8-base-600)",
+          "popover": "var(--color-justparchment8-base-50)",
+          "popover-foreground": "var(--color-justparchment8-base-600)",
+          "accent": "var(--color-justparchment8-base-100)",
+          "accent-foreground": "var(--color-justparchment8-base-700)",
+          "border": "var(--color-justparchment8-base-400)",
+          "input": "var(--color-justparchment8-base-400)",
+          "ring": "var(--color-justparchment8-base-600)",
+          "muted": "var(--color-justparchment8-base-100)",
+          "muted-foreground": "var(--color-justparchment8-base-400)"
+        },
+        "dark": {
+          "background": "var(--color-justparchment8-base-950)",
+          "foreground": "var(--color-justparchment8-base-100)",
+          "card": "var(--color-justparchment8-base-700)",
+          "card-foreground": "var(--color-justparchment8-base-100)",
+          "popover": "var(--color-justparchment8-base-800)",
+          "popover-foreground": "var(--color-justparchment8-base-100)",
+          "muted": "var(--color-justparchment8-base-600)",
+          "muted-foreground": "var(--color-justparchment8-base-400)",
+          "accent": "var(--color-justparchment8-base-600)",
+          "accent-foreground": "var(--color-justparchment8-base-50)",
+          "border": "var(--color-justparchment8-base-600)",
+          "input": "var(--color-justparchment8-base-600)",
+          "ring": "var(--color-justparchment8-base-400)"
+        }
+      }
+    },
+    {
+      "name": "colors-nestopia",
+      "type": "registry:theme",
+      "title": "NEStopia",
+      "description": "The default palette of the NES emulator NEStopia, taken from a screenshot showing all its possible colors at once.",
+      "author": "Superjustinbros <https://lospec.com/superjustinbros>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "nestopia.css",
+          "target": "@/components/colors/pxl/nestopia.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/nestopia.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-nestopia-white)",
+          "foreground": "var(--color-nestopia-neutral-600)",
+          "card": "var(--color-nestopia-white)",
+          "card-foreground": "var(--color-nestopia-neutral-600)",
+          "popover": "var(--color-nestopia-white)",
+          "popover-foreground": "var(--color-nestopia-neutral-600)",
+          "muted": "var(--color-nestopia-white)",
+          "muted-foreground": "var(--color-nestopia-neutral-50)",
+          "accent": "var(--color-nestopia-white)",
+          "accent-foreground": "var(--color-nestopia-neutral-950)",
+          "border": "var(--color-nestopia-neutral-50)",
+          "input": "var(--color-nestopia-neutral-50)",
+          "ring": "var(--color-nestopia-neutral-600)",
+          "primary": "var(--color-nestopia-blue-50)",
+          "primary-foreground": "var(--color-nestopia-blue-600)",
+          "success": "var(--color-nestopia-green-50)",
+          "success-foreground": "var(--color-nestopia-green-600)",
+          "danger": "var(--color-nestopia-red-50)",
+          "danger-foreground": "var(--color-nestopia-red-600)",
+          "warning": "var(--color-nestopia-yellow-50)",
+          "warning-foreground": "var(--color-nestopia-yellow-600)",
+          "info": "var(--color-nestopia-teal-50)",
+          "info-foreground": "var(--color-nestopia-teal-600)"
+        },
+        "dark": {
+          "background": "var(--color-nestopia-black)",
+          "foreground": "var(--color-nestopia-neutral-400)",
+          "card": "var(--color-nestopia-black)",
+          "card-foreground": "var(--color-nestopia-neutral-400)",
+          "popover": "var(--color-nestopia-black)",
+          "popover-foreground": "var(--color-nestopia-neutral-400)",
+          "muted": "var(--color-nestopia-black)",
+          "muted-foreground": "var(--color-nestopia-neutral-950)",
+          "accent": "var(--color-nestopia-black)",
+          "accent-foreground": "var(--color-nestopia-neutral-50)",
+          "border": "var(--color-nestopia-neutral-950)",
+          "input": "var(--color-nestopia-neutral-950)",
+          "ring": "var(--color-nestopia-neutral-400)",
+          "primary": "var(--color-nestopia-blue-950)",
+          "primary-foreground": "var(--color-nestopia-blue-400)",
+          "success": "var(--color-nestopia-green-950)",
+          "success-foreground": "var(--color-nestopia-green-400)",
+          "danger": "var(--color-nestopia-red-950)",
+          "danger-foreground": "var(--color-nestopia-red-400)",
+          "warning": "var(--color-nestopia-yellow-950)",
+          "warning-foreground": "var(--color-nestopia-yellow-400)",
+          "info": "var(--color-nestopia-teal-950)",
+          "info-foreground": "var(--color-nestopia-teal-400)"
+        }
+      }
+    },
+    {
+      "name": "colors-paperback",
+      "type": "registry:theme",
+      "title": "Paperback",
+      "description": "A cool off-white and a warm off-black to evoke the pages of a manga magazine.",
+      "author": "Doph <https://lospec.com/dophsart>",
+      "categories": ["pxl-ui", "color-palette", "color-palette-base"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "paperback.css",
+          "target": "@/components/colors/pxl/paperback.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/paperback.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-paperback-paper-50)",
+          "foreground": "var(--color-paperback-paper-200)",
+          "card": "var(--color-paperback-paper-50)",
+          "card-foreground": "var(--color-paperback-paper-200)",
+          "popover": "var(--color-paperback-paper-50)",
+          "popover-foreground": "var(--color-paperback-paper-200)",
+          "muted": "var(--color-paperback-paper-50)",
+          "muted-foreground": "var(--color-paperback-paper-100)",
+          "accent": "var(--color-paperback-paper-100)",
+          "accent-foreground": "var(--color-paperback-paper-700)",
+          "border": "var(--color-paperback-paper-200)",
+          "input": "var(--color-paperback-paper-200)",
+          "ring": "var(--color-paperback-paper-700)"
+        },
+        "dark": {
+          "background": "var(--color-paperback-paper-950)",
+          "foreground": "var(--color-paperback-paper-100)",
+          "card": "var(--color-paperback-paper-700)",
+          "card-foreground": "var(--color-paperback-paper-100)",
+          "popover": "var(--color-paperback-paper-800)",
+          "popover-foreground": "var(--color-paperback-paper-100)",
+          "muted": "var(--color-paperback-paper-200)",
+          "muted-foreground": "var(--color-paperback-paper-100)",
+          "accent": "var(--color-paperback-paper-200)",
+          "accent-foreground": "var(--color-paperback-paper-50)",
+          "border": "var(--color-paperback-paper-700)",
+          "input": "var(--color-paperback-paper-700)",
+          "ring": "var(--color-paperback-paper-200)"
         }
       }
     },
@@ -454,6 +1011,155 @@
           "warning-foreground": "var(--color-pico-yellow)",
           "danger": "var(--color-pico-red)",
           "danger-foreground": "var(--color-pico-peach)"
+        }
+      }
+    },
+    {
+      "name": "colors-tailwind",
+      "type": "registry:theme",
+      "title": "Tailwind",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "tailwind.css",
+          "target": "@/components/colors/pxl/tailwind.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/tailwind.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.145 0 0)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0.145 0 0)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0.145 0 0)",
+          "muted": "oklch(0.97 0 0)",
+          "muted-foreground": "oklch(0.556 0 0)",
+          "accent": "oklch(0.97 0 0)",
+          "accent-foreground": "oklch(0.205 0 0)",
+          "destructive": "oklch(0.577 0.245 27.325)",
+          "border": "oklch(0.922 0 0)",
+          "input": "oklch(0.922 0 0)",
+          "ring": "oklch(0.708 0 0)",
+          "chart-1": "oklch(0.87 0 0)",
+          "chart-2": "oklch(0.556 0 0)",
+          "chart-3": "oklch(0.439 0 0)",
+          "chart-4": "oklch(0.371 0 0)",
+          "chart-5": "oklch(0.269 0 0)",
+          "sidebar": "oklch(0.985 0 0)",
+          "sidebar-foreground": "oklch(0.145 0 0)",
+          "sidebar-primary": "oklch(0.205 0 0)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.97 0 0)",
+          "sidebar-accent-foreground": "oklch(0.205 0 0)",
+          "sidebar-border": "oklch(0.922 0 0)",
+          "sidebar-ring": "oklch(0.708 0 0)",
+          "primary": "var(--color-teal-100)",
+          "primary-foreground":"var(--color-sky-600)",
+          "secondary": "oklch(0.97 0 0)",
+          "secondary-foreground": "oklch(0.205 0 0)",
+          "info": "var(--color-teal-100)",
+          "info-foreground":"var(--color-teal-600)",
+          "success": "var(--color-green-100)",
+          "success-foreground": "var(--color-green-600)",
+          "warning": "var(--color-orange-100)",
+          "warning-foreground": "var(--color-orange-500)",
+          "danger": "var(--color-red-100)",
+          "danger-foreground": "var(--color-red-600)"
+        },
+        "dark": {
+          "background": "oklch(0.145 0 0)",
+          "foreground": "oklch(0.985 0 0)",
+          "card": "oklch(0.205 0 0)",
+          "card-foreground": "oklch(0.985 0 0)",
+          "popover": "oklch(0.205 0 0)",
+          "popover-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.269 0 0)",
+          "muted-foreground": "oklch(0.708 0 0)",
+          "accent": "oklch(0.269 0 0)",
+          "accent-foreground": "oklch(0.985 0 0)",
+          "destructive": "oklch(0.704 0.191 22.216)",
+          "border": "oklch(1 0 0 / 10%)",
+          "input": "oklch(1 0 0 / 15%)",
+          "ring": "oklch(0.556 0 0)",
+          "chart-1": "oklch(0.87 0 0)",
+          "chart-2": "oklch(0.556 0 0)",
+          "chart-3": "oklch(0.439 0 0)",
+          "chart-4": "oklch(0.371 0 0)",
+          "chart-5": "oklch(0.269 0 0)",
+          "sidebar": "oklch(0.205 0 0)",
+          "sidebar-foreground": "oklch(0.985 0 0)",
+          "sidebar-primary": "oklch(0.488 0.243 264.376)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.269 0 0)",
+          "sidebar-accent-foreground": "oklch(0.985 0 0)",
+          "sidebar-border": "oklch(1 0 0 / 10%)",
+          "sidebar-ring": "oklch(0.556 0 0)",
+          "primary": "var(--color-sky-800)",
+          "primary-foreground": "var(--color-sky-400)",
+          "secondary": "oklch(0.269 0 0)",
+          "secondary-foreground": "oklch(0.985 0 0)",
+          "info": "var(--color-teal-800)",
+          "info-foreground":"var(--color-teal-400)",
+          "success": "var(--color-green-800)",
+          "success-foreground": "var(--color-green-400)",
+          "warning": "var(--color-orange-800)",
+          "warning-foreground": "var(--color-orange-400)",
+          "danger": "var(--color-red-800)",
+          "danger-foreground": "var(--color-red-400)"
+        }
+      }
+    },
+    {
+      "name": "colors-vines-flexible-linear-ramps",
+      "type": "registry:theme",
+      "title": "Vine's Flexible Linear Ramps",
+      "author": "Vine <https://x.com/VINE2D>",
+      "categories": ["pxl-ui", "color-palette"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "vines-flexible-linear-ramps.css",
+          "target": "@/components/colors/pxl/vines-flexible-linear-ramps.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/vines-flexible-linear-ramps.css\"": {}
+      },
+      "cssVars": {
+        "light": {
+          "background": "var(--color-vines-flexible-linear-ramps-white)",
+          "card": "var(--color-vines-flexible-linear-ramps-white)",
+          "popover": "var(--color-vines-flexible-linear-ramps-white)",
+          "muted": "var(--color-vines-flexible-linear-ramps-white)",
+          "accent": "var(--color-vines-flexible-linear-ramps-white)",
+
+          "primary": "var(--color-vines-flexible-linear-ramps-blue-200)",
+          "primary-foreground": "var(--color-vines-flexible-linear-ramps-blue-800)",
+          "info": "var(--color-vines-flexible-linear-ramps-teal-200)",
+          "info-foreground": "var(--color-vines-flexible-linear-ramps-teal-800)",
+          "success": "var(--color-vines-flexible-linear-ramps-green-200)",
+          "success-foreground": "var(--color-vines-flexible-linear-ramps-green-800)",
+          "warning": "var(--color-vines-flexible-linear-ramps-red-200)",
+          "warning-foreground": "var(--color-vines-flexible-linear-ramps-red-800)",
+          "danger": "var(--color-vines-flexible-linear-ramps-pink-200)",
+          "danger-foreground": "var(--color-vines-flexible-linear-ramps-pink-800)"
+        },
+        "dark": {
+          "primary": "var(--color-vines-flexible-linear-ramps-blue-600)",
+          "primary-foreground": "var(--color-vines-flexible-linear-ramps-blue-200)",
+          "info": "var(--color-vines-flexible-linear-ramps-teal-600)",
+          "info-foreground": "var(--color-vines-flexible-linear-ramps-teal-200)",
+          "success": "var(--color-vines-flexible-linear-ramps-green-600)",
+          "success-foreground": "var(--color-vines-flexible-linear-ramps-green-200)",
+          "warning": "var(--color-vines-flexible-linear-ramps-orange-60)",
+          "warning-foreground": "var(--color-vines-flexible-linear-ramps-orange-20)",
+          "danger": "var(--color-vines-flexible-linear-ramps-red-600)",
+          "danger-foreground": "var(--color-vines-flexible-linear-ramps-red-200)"
         }
       }
     }
