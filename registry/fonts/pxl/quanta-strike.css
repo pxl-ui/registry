@@ -1,0 +1,377 @@
+
+@layer base {
+  @font-face {
+    font-family: "quanta-strike-6";
+    src: url("/fonts/quanta-strike-6-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-6-mono";
+    src: url("/fonts/quanta-strike-6-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-10";
+    src: url("/fonts/quanta-strike-10-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-10-mono";
+    src: url("/fonts/quanta-strike-10-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-12";
+    src: url("/fonts/quanta-strike-12-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-12";
+    src: url("/fonts/quanta-strike-12-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-12-mono";
+    src: url("/fonts/quanta-strike-12-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-12-mono";
+    src: url("/fonts/quanta-strike-12-mono-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-14";
+    src: url("/fonts/quanta-strike-14-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-14-mono";
+    src: url("/fonts/quanta-strike-14-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-16";
+    src: url("/fonts/quanta-strike-16-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-16-mono";
+    src: url("/fonts/quanta-strike-16-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-18";
+    src: url("/fonts/quanta-strike-18-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-18-mono";
+    src: url("/fonts/quanta-strike-18-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-20";
+    src: url("/fonts/quanta-strike-20-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-20-mono";
+    src: url("/fonts/quanta-strike-20-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-32";
+    src: url("/fonts/quanta-strike-32-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "quanta-strike-32-mono";
+    src: url("/fonts/quanta-strike-32-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+}
+
+:root {
+  --qs-px: calc(0.0625rem * var(--qs-zoom, 1)); /* one source pixel; follows --qs-zoom */
+}
+
+@layer theme {
+  :root { --qs-zoom: 2; }
+  @media (width < 48rem) { :root { --qs-zoom: 1.5; } }
+}
+
+@theme {
+  --font-strike-6: 'quanta-strike-6', sans-serif;
+  --font-strike-6-mono: "quanta-strike-6-mono";
+  --font-strike-10: "quanta-strike-10";
+  --font-strike-10-mono: "quanta-strike-10-mono";
+  --font-strike-12: "quanta-strike-12";
+  --font-strike-12-mono: "quanta-strike-12-mono";
+  --font-strike-14: "quanta-strike-14";
+  --font-strike-14-mono: "quanta-strike-14-mono";
+  --font-strike-16: "quanta-strike-16";
+  --font-strike-16-mono: "quanta-strike-16-mono";
+  --font-strike-18: "quanta-strike-18";
+  --font-strike-18-mono: "quanta-strike-18-mono";
+  --font-strike-20: "quanta-strike-20";
+  --font-strike-20-mono: "quanta-strike-20-mono";
+  --font-strike-32: "quanta-strike-32";
+  --font-strike-32-mono: "quanta-strike-32-mono";
+}
+
+@utility font-sans {
+  /* Same as Tailwind's 0.25rem default at zoom 1. Expressed in source
+     pixels so it follows --qs-px. */
+  --spacing: calc(var(--qs-px) * 4);
+
+  /* Drive Tailwind's line utility generators so responsive, state, and
+     other variants use the same grid widths as their base utilities.
+     Divide resolves through the border-width namespace. */
+  --default-border-width: var(--qs-px);
+  --border-width-1: var(--qs-px);
+  --border-width-2: calc(var(--qs-px) * 2);
+  --border-width-4: calc(var(--qs-px) * 4);
+  --border-width-8: calc(var(--qs-px) * 8);
+  --default-outline-width: var(--qs-px);
+  --outline-width-1: var(--qs-px);
+  --outline-width-2: calc(var(--qs-px) * 2);
+  --outline-width-4: calc(var(--qs-px) * 4);
+  --outline-width-8: calc(var(--qs-px) * 8);
+  --default-ring-width: var(--qs-px);
+  --ring-width-1: var(--qs-px);
+  --ring-width-2: calc(var(--qs-px) * 2);
+  --ring-width-4: calc(var(--qs-px) * 4);
+  --ring-width-8: calc(var(--qs-px) * 8);
+  --ring-offset-width-1: var(--qs-px);
+  --ring-offset-width-2: calc(var(--qs-px) * 2);
+  --ring-offset-width-4: calc(var(--qs-px) * 4);
+  --ring-offset-width-8: calc(var(--qs-px) * 8);
+
+  /* Integer radii — keep rounded-* doing something; 0 everywhere is
+     the more honest pixel default if you want it. */
+  --radius-xs: calc(var(--qs-px) * 2);
+  --radius-sm: calc(var(--qs-px) * 4);
+  --radius-md: calc(var(--qs-px) * 6);
+  --radius-lg: calc(var(--qs-px) * 8);
+  --radius-xl: calc(var(--qs-px) * 12);
+  --radius-2xl: calc(var(--qs-px) * 16);
+  --radius-3xl: calc(var(--qs-px) * 24);
+  --radius-4xl: calc(var(--qs-px) * 32);
+  --radius: calc(var(--qs-px) * 4);
+
+  /* Letter-spacing must be 0 or whole units — fractional em tracking
+     pushes glyph origins off the grid and blurs every glyph after the first. */
+  --tracking-tighter: calc(var(--qs-px) * -1);
+  --tracking-tight: 0;
+  --tracking-normal: 0;
+  --tracking-wide: var(--qs-px);
+  --tracking-wider: calc(var(--qs-px) * 2);
+  --tracking-widest: calc(var(--qs-px) * 4);
+
+  /* Unitless leading on the grid. Presets also force line-height: 1. */
+  --leading-tight: 1;
+  --leading-snug: 1;
+  --leading-normal: 1;
+  --leading-relaxed: 1;
+  --leading-loose: 1;
+
+  /* Shadow offsets on the grid; blur stays soft. */
+  --shadow-2xs: 0 var(--qs-px) rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 var(--qs-px) calc(var(--qs-px) * 2) 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 var(--qs-px) calc(var(--qs-px) * 3) 0 rgb(0 0 0 / 0.1), 0 var(--qs-px) calc(var(--qs-px) * 2) calc(var(--qs-px) * -1) rgb(0 0 0 / 0.1);
+  --shadow-md: 0 calc(var(--qs-px) * 4) calc(var(--qs-px) * 6) calc(var(--qs-px) * -1) rgb(0 0 0 / 0.1), 0 calc(var(--qs-px) * 2) calc(var(--qs-px) * 4) calc(var(--qs-px) * -2) rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 calc(var(--qs-px) * 10) calc(var(--qs-px) * 15) calc(var(--qs-px) * -3) rgb(0 0 0 / 0.1), 0 calc(var(--qs-px) * 4) calc(var(--qs-px) * 6) calc(var(--qs-px) * -4) rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 calc(var(--qs-px) * 20) calc(var(--qs-px) * 25) calc(var(--qs-px) * -5) rgb(0 0 0 / 0.1), 0 calc(var(--qs-px) * 8) calc(var(--qs-px) * 10) calc(var(--qs-px) * -6) rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 calc(var(--qs-px) * 25) calc(var(--qs-px) * 50) calc(var(--qs-px) * -12) rgb(0 0 0 / 0.25);
+  --shadow: 0 var(--qs-px) calc(var(--qs-px) * 3) 0 rgb(0 0 0 / 0.1), 0 var(--qs-px) calc(var(--qs-px) * 2) calc(var(--qs-px) * -1) rgb(0 0 0 / 0.1);
+  --shadow-inner: inset 0 calc(var(--qs-px) * 2) calc(var(--qs-px) * 4) 0 rgb(0 0 0 / 0.05);
+  --inset-shadow-2xs: inset 0 var(--qs-px) rgb(0 0 0 / 0.05);
+  --inset-shadow-xs: inset 0 var(--qs-px) var(--qs-px) rgb(0 0 0 / 0.05);
+  --inset-shadow-sm: inset 0 calc(var(--qs-px) * 2) calc(var(--qs-px) * 4) rgb(0 0 0 / 0.05);
+  --drop-shadow-xs: 0 var(--qs-px) var(--qs-px) rgb(0 0 0 / 0.05);
+  --drop-shadow-sm: 0 var(--qs-px) calc(var(--qs-px) * 2) rgb(0 0 0 / 0.15);
+  --drop-shadow-md: 0 calc(var(--qs-px) * 3) calc(var(--qs-px) * 3) rgb(0 0 0 / 0.12);
+  --drop-shadow-lg: 0 calc(var(--qs-px) * 4) calc(var(--qs-px) * 4) rgb(0 0 0 / 0.15);
+  --drop-shadow-xl: 0 calc(var(--qs-px) * 9) calc(var(--qs-px) * 7) rgb(0 0 0 / 0.1);
+  --drop-shadow-2xl: 0 calc(var(--qs-px) * 25) calc(var(--qs-px) * 25) rgb(0 0 0 / 0.15);
+  --drop-shadow: 0 var(--qs-px) calc(var(--qs-px) * 2) rgb(0 0 0 / 0.1), 0 var(--qs-px) var(--qs-px) rgb(0 0 0 / 0.06);
+
+  --text-xs: calc(var(--qs-px) * 6);
+  --text-xs--line-height: 1;
+  --text-sm: calc(var(--qs-px) * 10);
+  --text-sm--line-height: 1;
+  --text-base: calc(var(--qs-px) * 12);
+  --text-base--line-height: 1;
+  --text-lg: calc(var(--qs-px) * 14);
+  --text-lg--line-height: 1;
+  --text-xl: calc(var(--qs-px) * 16);
+  --text-xl--line-height: 1;
+  --text-2xl: calc(var(--qs-px) * 18);
+  --text-2xl--line-height: 1;
+  --text-3xl: calc(var(--qs-px) * 20);
+  --text-3xl--line-height: 1;
+  --text-4xl: calc(var(--qs-px) * 32);
+  --text-4xl--line-height: 1;
+  --text-5xl: calc(var(--qs-px) * 32);
+  --text-5xl--line-height: 1;
+  --text-6xl: calc(var(--qs-px) * 32);
+  --text-6xl--line-height: 1;
+  --text-7xl: calc(var(--qs-px) * 32);
+  --text-7xl--line-height: 1;
+  --text-8xl: calc(var(--qs-px) * 32);
+  --text-8xl--line-height: 1;
+  --text-9xl: calc(var(--qs-px) * 32);
+  --text-9xl--line-height: 1;
+
+  /* Underline and strikethrough, the same unit as the borders above. Left at
+   `auto` the engines split: Blink and Gecko read the font's own stroke,
+   WebKit derives one from font-size and lands under a source pixel.
+   --qs-rule is what a strike class publishes as its own stroke, and it
+   inherits, so a strike that draws thicker than one pixel (the 32) keeps
+   its design and everything else falls back to the grid unit. */
+  :where(a, u, s, ins, del, abbr) {
+    text-decoration-thickness: var(--qs-rule, var(--qs-px));
+  }
+
+  &.text-3xs,
+  .text-3xs,
+  &.text-2xs,
+  .text-2xs,
+  &.text-xs,
+  .text-xs {
+    font-family: var(--font-strike-6);
+    font-size: var(--text-xs);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: 0;
+  }
+
+  &.text-sm,
+  .text-sm {
+    font-family: var(--font-strike-10);
+    font-size: var(--text-sm);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+
+  &.text-base,
+  .text-base {
+    font-family: var(--font-strike-12);
+    font-size: var(--text-base);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+
+  &.text-lg,
+  .text-lg {
+    font-family: var(--font-strike-14);
+    font-size: var(--text-lg);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+
+  &.text-xl,
+  .text-xl {
+    font-family: var(--font-strike-16);
+    font-size: var(--text-xl);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+
+  &.text-2xl,
+  .text-2xl {
+    font-family: var(--font-strike-18);
+    font-size: var(--text-2xl);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+
+  &.text-3xl,
+  .text-3xl {
+    font-family: var(--font-strike-20);
+    font-size: var(--text-3xl);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+
+  &.text-4xl,
+  .text-4xl,
+  &.text-5xl,
+  .text-5xl,
+  &.text-6xl,
+  .text-6xl,
+  &.text-7xl,
+  .text-7xl,
+  &.text-8xl,
+  .text-8xl,
+  &.text-9xl,
+  .text-9xl {
+    font-family: var(--font-strike-32);
+    font-size: var(--text-4xl);
+    line-height: 1;
+    --qs-rule: calc(var(--qs-px) * 2);
+    text-decoration-thickness: calc(var(--qs-px) * 2);
+    text-underline-offset: calc(var(--qs-px) * 3);
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--font-strike-12);
+    font-size: calc(var(--qs-px) * 12);
+    line-height: 1;
+    --qs-rule: var(--qs-px);
+    text-decoration-thickness: var(--qs-px);
+    text-underline-offset: var(--qs-px);
+  }
+}

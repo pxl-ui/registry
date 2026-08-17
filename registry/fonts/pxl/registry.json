@@ -23,8 +23,102 @@
       },
       "cssVars": {
         "theme": {
-          "font-able-5": "'Able 5', sans-serif"
+          "font-sans": "'Able 5', sans-serif"
         }
+      }
+    },
+    {
+      "name": "fonts-quanta-strike",
+      "type": "registry:style",
+      "title": "Quanta Strike",
+      "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
+      "docs": "Download font from https://github.com/dithernaut/quanta-strike",
+      "author": "dithernaut <https://dithernaut.com/posts/pixel-scaling/>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "quanta-strike.css",
+          "target": "@components/fonts/pxl/quanta-strike.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/quanta-strike.css\"": {}
+      }
+    },
+    {
+      "name": "fonts-bytesized",
+      "type": "registry:font",
+      "title": "Bytesized",
+      "description": "A tiny 3x4 pixel font.",
+      "author": "Baltdev <https://github.com/balt-dev/bytesized-gf>",
+      "categories": ["pxl-ui", "font-family", "font-monospace"],
+      "font": {
+        "family": "'Bytesized', monospace",
+        "provider": "google",
+        "import": "Bytesized",
+        "variable": "--font-mono",
+        "dependency": "@fontsource/bytesized"
+      }
+    },
+    {
+      "name": "fonts-coral-pixels",
+      "type": "registry:font",
+      "title": "Coral Pixels",
+      "description": "Coral Pixels is a color font inspired by subpixel rendering techniques.",
+      "author": "Tanukizamurai <https://github.com/tanukifont/Coral-Pixels>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'Coral Pixels', sans-serif",
+        "provider": "google",
+        "import": "CoralPixels",
+        "variable": "--font-sans",
+        "dependency": "@fontsource/coral-pixels"
+      }
+    },
+    {
+      "name": "fonts-geist-pixel",
+      "type": "registry:font",
+      "title": "Geist Pixel",
+      "description": "Geist Pixel is a display typeface family of five pixel-based styles, each with a distinct visual character.",
+      "author": "Vercel <https://vercel.com/font?type=pixel>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'Geist Pixel', sans-serif",
+        "provider": "google",
+        "import": "GeistPixel",
+        "variable": "--font-sans",
+        "dependency": "@fontsource/geist-pixel"
+      }
+    },
+    {
+      "name": "fonts-jacquarda-bastarda-9",
+      "type": "registry:font",
+      "title": "Jacquarda Bastarda 9",
+      "description": "Jacquarda Bastarda is an expanded revival typeface from a bastarda-esque Victorian needlepoint alphabet designed in Berlin by Heinrich Kuehn circa 1880.",
+      "author": "Sarah Cadigan-Fried <https://github.com/scfried/soft-type-jacquarda-bastarda>",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "font": {
+        "family": "'Jacquarda Bastarda 9', serif",
+        "provider": "google",
+        "import": "JacquardaBastarda9",
+        "variable": "--font-heading",
+        "dependency": "@fontsource/jacquarda-bastarda-9"
+      }
+    },
+    {
+      "name": "fonts-micro-5",
+      "type": "registry:font",
+      "title": "Micro 5",
+      "description": "Micro 5 is a teeny-tiny typeface that can fit anywhere on your project.",
+      "author": "Sarah Cadigan-Fried <https://github.com/scfried/soft-type-micro>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'Micro 5', sans-serif",
+        "provider": "google",
+        "import": "Micro5",
+        "variable": "--font-sans",
+        "dependency": "@fontsource/micro-5"
       }
     },
     {
@@ -47,7 +141,7 @@
       },
       "cssVars": {
         "theme": {
-          "font-monogram": "'Monogram Extended', monospace"
+          "font-mono": "'Monogram Extended', monospace"
         }
       }
     },
@@ -71,8 +165,53 @@
       },
       "cssVars": {
         "theme": {
-          "font-monogram": "'Pixel Digivolve', sans-serif"
+          "font-heading": "'Pixel Digivolve', sans-serif"
         }
+      }
+    },
+    {
+      "name": "fonts-pixelify-sans",
+      "type": "registry:font",
+      "title": "Pixelify Sans",
+      "description": "Pixel display font. It works great for your retro party designs, game creation or pretty much anything that demands a “go back in time” vibe.",
+      "author": "Stefie Justprince <github.com/eifetx/Pixelify-Sans>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'Pixelify Sans Variable', sans-serif",
+        "provider": "google",
+        "import": "PixelifySans",
+        "variable": "--font-sans",
+        "dependency": "@fontsource-variable/pixelify-sans"
+      }
+    },
+    {
+      "name": "fonts-press-start-2p",
+      "type": "registry:font",
+      "title": "Press Start 2P",
+      "description": "Press Start 2P is a bitmap font based on the font design from 1980s Namco arcade games. It works best at sizes of 8px, 16px and other multiples of 8.",
+      "author": "Cody \"CodeMan38\" Boisclair <https://fonts.google.com/?query=CodeMan38>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'Press Start 2P', sans-serif",
+        "provider": "google",
+        "import": "PressStart2P",
+        "variable": "--font-sans",
+        "dependency": "@fontsource/press-start-2p"
+      }
+    },
+    {
+      "name": "fonts-tiny5",
+      "type": "registry:font",
+      "title": "tiny5",
+      "description": "tiny5 is a variable-width, 5-pixel font playing with the concept of least amount of information while producing both legible and aesthetically pleasing text.",
+      "author": "Stefan Schmidt <https://github.com/Gissio/font_tiny5>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'Tiny5', sans-serif",
+        "provider": "google",
+        "import": "Tiny5",
+        "variable": "--font-sans",
+        "dependency": "@fontsource/tiny5"
       }
     }
   ]

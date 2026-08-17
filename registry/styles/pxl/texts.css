@@ -41,3 +41,7 @@
   --text-base: 1rem; /** 16px **/
   --text-lg: 1.125rem; /** 18px **/
 }
+
+@utility font-var-* {
+  font-variation-settings: --value([*]);
+}
