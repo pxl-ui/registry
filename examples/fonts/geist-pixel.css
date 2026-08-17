@@ -6,22 +6,22 @@
   --font-geist-pixel: 'Geist Pixel', 'Inter Variable', sans-serif;
 }
 
-@utility geist-pixel-square {
+.elsh-0 {
   font-variation-settings: "ELSH" 0;
 }
 
-@utility geist-pixel-circle {
+.elsh-20 {
   font-variation-settings: "ELSH" 20;
 }
 
-@utility geist-pixel-grid {
+.elsh-40 {
   font-variation-settings: "ELSH" 40;
 }
 
-@utility geist-pixel-triangle {
+.elsh-60 {
   font-variation-settings: "ELSH" 60;
 }
 
-@utility geist-pixel-line {
+.elsh-80 {
   font-variation-settings: "ELSH" 80;
 }

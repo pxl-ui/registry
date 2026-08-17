@@ -17,6 +17,7 @@ import { url } from "~/lib/utils";
 import "~/examples/fonts/able-5.css"
 import "~/examples/fonts/bytesized.css"
 import "~/examples/fonts/coral-pixels.css"
+import "~/examples/fonts/dotgothic16.css"
 import "~/examples/fonts/geist-pixel.css"
 import "~/examples/fonts/jacquarda-bastarda-9.css"
 import "~/examples/fonts/micro-5.css"
@@ -26,6 +27,7 @@ import "~/examples/fonts/pixel-digivolve.css"
 import "~/examples/fonts/pixelify-sans.css"
 import "~/examples/fonts/press-start-2p.css"
 import "~/examples/fonts/tiny5.css"
+import "~/examples/fonts/vt323.css"
 
 PXL-UI provides fonts for `font-heading`, `font-sans`, and `font-mono`.
 
@@ -137,6 +139,17 @@ These fonts are used everywhere to display regular texts. Therefore, they tend t
     </Card>
   </a>
 
+  <a href={url("fonts/dotgothic16")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>DotGothic16</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-dotgothic16">
+        <TypographySample className="font-dotgothic16" />
+      </CardContent>
+    </Card>
+  </a>
+
   <a href={url("fonts/press-start-2p")}>
     <Card>
       <CardHeader>
@@ -188,6 +201,17 @@ In contexts where the spacing of each character must be similar across all lette
       </CardHeader>
       <CardContent className="flex items-center justify-center font-bytesized">
         <TypographySample className="font-bytesized" />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("fonts/vt323")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>VT323</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center font-vt323">
+        <TypographySample className="font-vt323" />
       </CardContent>
     </Card>
   </a>

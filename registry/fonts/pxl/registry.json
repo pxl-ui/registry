@@ -28,25 +28,6 @@
       }
     },
     {
-      "name": "fonts-quanta-strike",
-      "type": "registry:style",
-      "title": "Quanta Strike",
-      "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
-      "docs": "Download font from https://github.com/dithernaut/quanta-strike",
-      "author": "dithernaut <https://dithernaut.com/posts/pixel-scaling/>",
-      "categories": ["pxl-ui", "font-family", "font-text"],
-      "files": [
-        {
-          "type": "registry:style",
-          "path": "quanta-strike.css",
-          "target": "@components/fonts/pxl/quanta-strike.css"
-        }
-      ],
-      "css": {
-        "@import \"@/components/fonts/pxl/quanta-strike.css\"": {}
-      }
-    },
-    {
       "name": "fonts-bytesized",
       "type": "registry:font",
       "title": "Bytesized",
@@ -74,6 +55,21 @@
         "import": "CoralPixels",
         "variable": "--font-sans",
         "dependency": "@fontsource/coral-pixels"
+      }
+    },
+    {
+      "name": "fonts-dotgothic16",
+      "type": "registry:font",
+      "title": "DotGothic16",
+      "description": "Dotgothic 16 is based on the old 16x16 Gothic bitmap font that recreates the feel of pixel fonts from old video games, cell phones and computer screens on print.",
+      "author": "Fontworks Inc. <https://github.com/fontworks-fonts/DotGothic16>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "font": {
+        "family": "'DotGothic16', sans-serif",
+        "provider": "google",
+        "import": "DotGothic16",
+        "variable": "--font-sans",
+        "dependency": "@fontsource/dotgothic16"
       }
     },
     {
@@ -200,6 +196,25 @@
       }
     },
     {
+      "name": "fonts-quanta-strike",
+      "type": "registry:style",
+      "title": "Quanta Strike",
+      "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
+      "docs": "Download font from https://github.com/dithernaut/quanta-strike",
+      "author": "dithernaut <https://dithernaut.com/posts/pixel-scaling/>",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "quanta-strike.css",
+          "target": "@components/fonts/pxl/quanta-strike.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/quanta-strike.css\"": {}
+      }
+    },
+    {
       "name": "fonts-tiny5",
       "type": "registry:font",
       "title": "tiny5",
@@ -212,6 +227,21 @@
         "import": "Tiny5",
         "variable": "--font-sans",
         "dependency": "@fontsource/tiny5"
+      }
+    },
+    {
+      "name": "fonts-vt323",
+      "type": "registry:font",
+      "title": "VT323",
+      "description": "This font was created from the glyphs of the DEC VT320 text terminal, which I used in college, and for which I have retained an unaccountable nostalgia.",
+      "author": "Peter Hull <https://fonts.google.com/?query=Peter+Hull>",
+      "categories": ["pxl-ui", "font-family", "font-monospace"],
+      "font": {
+        "family": "'VT323', monospace",
+        "provider": "google",
+        "import": "VT323",
+        "variable": "--font-mono",
+        "dependency": "@fontsource/vt323"
       }
     }
   ]

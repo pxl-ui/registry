@@ -1018,6 +1018,7 @@
       "name": "colors-tailwind",
       "type": "registry:theme",
       "title": "Tailwind",
+      "description": "The Tailwind 4.x official palette in case you need to use it or modify it.",
       "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
       "files": [
         {

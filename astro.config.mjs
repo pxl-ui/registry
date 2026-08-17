@@ -55,6 +55,10 @@ export default defineConfig({
           label: "Recipes",
           items: [{ autogenerate: { directory: "recipes" } }],
         },
+        {
+          label: "Additional Resources",
+          link: "additional-resources"
+        }
       ],
       customCss: ["./app/styles/starlight.css"],
     }),

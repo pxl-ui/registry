@@ -1,0 +1,13 @@
+---
+
+import registry from "~/lib/registry";
+
+export type Props = {
+  item: string;
+}
+
+const { item: name } = Astro.props;
+
+const item = registry.get(name);
+---
+<p>{item?.description}</p>

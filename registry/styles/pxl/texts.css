@@ -42,6 +42,6 @@
   --text-lg: 1.125rem; /** 18px **/
 }
 
-@utility font-var-* {
-  font-variation-settings: --value([*]);
+@utility elsh-* {
+  font-variation-settings: "ELSH" --value([*]);
 }

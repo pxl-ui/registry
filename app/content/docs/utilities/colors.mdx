@@ -29,6 +29,7 @@ import JustParchment8Raw from "@/components/colors/pxl/justparchment8.gpl?raw";
 import NestopiaRaw from "@/components/colors/pxl/nestopia.gpl?raw";
 import PaperbackRaw from "@/components/colors/pxl/paperback.gpl?raw";
 import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
+import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
 import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-linear-ramps.gpl?raw";
 
 import { url } from "~/lib/utils";
@@ -320,6 +321,17 @@ The following palettes are designed as drop-in replacements for Tailwind Colors,
       </CardHeader>
       <CardContent className="flex items-center justify-center">
         <ColorWheel palette={FlexokiCompatRaw} />
+      </CardContent>
+    </Card>
+  </a>
+
+  <a href={url("colors/tailwind")}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Tailwind</CardTitle>
+      </CardHeader>
+      <CardContent className="flex items-center justify-center">
+        <ColorWheel palette={TailwindRaw} />
       </CardContent>
     </Card>
   </a>
