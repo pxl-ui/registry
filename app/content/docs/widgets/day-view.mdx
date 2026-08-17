@@ -2,25 +2,11 @@
 title: Day View
 description: A Day View widget with forecast and upcoming events.
 ---
-import { Example, InstallCommand } from '~/components';
+import { Description, Example, InstallCommand } from '~/components';
 
-import Preview from "~/examples/day-view/preview";
-import PreviewRaw from "~/examples/day-view/preview?raw";
+<Description item="day-view" />
 
-import Pending from "~/examples/day-view/pending";
-import PendingRaw from "~/examples/day-view/pending?raw";
-
-import Error from "~/examples/day-view/error";
-import ErrorRaw from "~/examples/day-view/error?raw";
-
-import Success from "~/examples/day-view/success";
-import SuccessRaw from "~/examples/day-view/success?raw";
-
-A Day View widget with forecast and upcoming events
-
-<Example code={PreviewRaw}>
-  <Preview client:load />
-</Example>
+<Example src="day-view/preview" />
 
 <InstallCommand item="day-view" />
 
@@ -28,18 +14,12 @@ A Day View widget with forecast and upcoming events
 
 ### Pending
 
-<Example code={PendingRaw}>
-  <Pending client:load />
-</Example>
+<Example src="day-view/pending" />
 
 ### Error
 
-<Example code={ErrorRaw}>
-  <Error client:load />
-</Example>
+<Example src="day-view/error" />
 
 ### Success
 
-<Example code={SuccessRaw}>
-  <Success client:load />
-</Example>
+<Example src="day-view/success" />
