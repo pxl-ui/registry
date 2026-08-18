@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-@import 'tailwindcss';
+.font-dotgothic16 {
+  --font-size-adjust: 0.5;
 
-@theme {
-  --font-dotgothic16: 'DotGothic16', 'Inter Variable', sans-serif;
+  font-family: 'DotGothic16', serif;
+  font-size-adjust: var(--font-size-adjust);
 }

@@ -215,7 +215,7 @@ function DrumOption({
       role="option"
       aria-selected={selected}
       className={cn(
-        "h-(--wheel-item) flex items-center snap-center tabular-nums cursor-pointer select-none",
+        "h-(--wheel-item) flex items-center snap-center tabular-nums cursor-pointer select-none text-xs",
         optionVariants({
           align,
         }),

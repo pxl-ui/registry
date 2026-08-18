@@ -1,0 +1,35 @@
+---
+
+import type { HTMLAttributes } from 'astro/types';
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/pxl/card';
+
+interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
+	title: string;
+	description?: string;
+}
+
+const { title, description, ...attributes } = Astro.props;
+---
+<a {...attributes}>
+  <Card className="cursor-pointer pixel-color-border! hover:pixel-color-foreground!">
+    <CardHeader className="flex justify-between">
+      <CardTitle className="h-auto flex gap-2 items-center leading-5! text-base! mr-4 truncate">
+        <slot name="avatar" />
+        <span class="truncate">{title}</span>
+      </CardTitle>
+  <svg
+    class="icon rtl:flip size-[1.333em] text-muted-foreground group-hover/card:text-foreground"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M4 11v2h16v-2zm12 2v2h2v-2zm-2 2v2h2v-2zm-2 2v2h2v-2zm4-6V9h2v2z" />
+    <path d="M14 15V7h2v8zm-2 2V5h2v12z" />
+  </svg>
+    </CardHeader>
+    <CardContent>
+  		<p class="line-clamp-1 text-muted-foreground text-xs" set:html={description ?? "&nbsp;"} />
+    </CardContent>
+  </Card>
+</a>

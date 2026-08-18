@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-nestopia {
   --background: var(--color-nestopia-white);
   --foreground: var(--color-nestopia-neutral-600);
   --card: var(--color-nestopia-white);
@@ -32,7 +32,7 @@
   --info-foreground: var(--color-nestopia-teal-600);
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-nestopia, [data-theme="dark"] .colors-nestopia {
   --background: var(--color-nestopia-black);
   --foreground: var(--color-nestopia-neutral-400);
   --card: var(--color-nestopia-black);

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-flexoki-compat {
   --background: #FFFCF0;
   --foreground: #1C1B1A;
   --card: #F2F0E5;
@@ -31,7 +31,7 @@
   --info-foreground: #24837B;
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-flexoki-compat, [data-theme="dark"] .colors-flexoki-compat {
   --background: #100F0F;
   --foreground: #CECDC3;
   --card: #282726;

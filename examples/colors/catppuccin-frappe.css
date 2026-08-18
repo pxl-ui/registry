@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-catppuccin-frappe {
   --background: var(--color-catppuccin-frappe-neutral-850);
   --foreground: var(--color-catppuccin-frappe-neutral-50);
   --card: var(--color-catppuccin-frappe-neutral-900);

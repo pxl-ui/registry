@@ -11,7 +11,7 @@ import { buttonVariants } from "@/components/ui/pxl/button";
 import { cn } from "@/lib/utils";
 
 type Language = "en" | "es";
-type KeyboardDisplay = "regular" | "mobile";
+type KeyboardDisplay = "desktop" | "mobile" | "alphabetical";
 type KeyboardLayout = "default" | "shift" | "numbers";
 type KeyboardLayoutConfig = Record<KeyboardLayout, string[]>;
 
@@ -33,6 +33,7 @@ const keyboardVariants = cva("hg-theme-pxl", {
     },
     size: {
       default: "[--keyboard-spacing:--spacing(1)]",
+      "3xs": "[--keyboard-spacing:--spacing(0.25)]",
       "2xs": "[--keyboard-spacing:--spacing(0.25)]",
       xs: "[--keyboard-spacing:--spacing(0.5)]",
       sm: "[--keyboard-spacing:--spacing(0.5)]",
@@ -68,16 +69,19 @@ const keyboardVariants = cva("hg-theme-pxl", {
   },
 });
 
-const SPECIAL_KEYS = {
+const BUTTON_CHARS = {
   ABC: "{abc}",
   ALT_LEFT: "{altleft}",
   ALT_RIGHT: "{altright}",
-  BACK: "{backspace}",
+  BACKSPACE: "{backspace}",
+  BKSP: "{bksp}",
   CTRL_LEFT: "{controlleft}",
   CTRL_RIGHT: "{controlright}",
-  ENTER: "{ent}",
+  ENT: "{ent}",
+  ENTER: "{enter}",
   ESCAPE: "{escape}",
-  LOCK: "{capslock}",
+  LOCK: "{lock}",
+  CAPSLOCK: "{capslock}",
   META_LEFT: "{metaleft}",
   META_RIGHT: "{metaright}",
   NUMBERS: "{numbers}",
@@ -86,31 +90,12 @@ const SPECIAL_KEYS = {
   TAB: "{tab}",
 };
 
-const KEYS: Record<
-  Language,
-  {
-    alphabet: string;
-    numbers: string;
-  }
-> = {
-  en: {
-    alphabet:
-      "a A b B c C d D e E f F g G h H i I j J k K l L m M n N o O p P q Q r R s S t T u U v V w W x X y Y z Z",
-    numbers: "0 1 2 3 4 5 6 7 8 9",
-  },
-  es: {
-    alphabet:
-      "a A b B c C d D e E f F g G h H i I j J k K l L m M n N ñ Ñ o O p P q Q r R s S t T u U v V w W x X y Y z Z",
-    numbers: "0 1 2 3 4 5 6 7 8 9",
-  },
-};
-
 const keyboardLayouts: Record<
   Language,
   Record<KeyboardDisplay, KeyboardLayoutConfig>
 > = {
   en: {
-    regular: {
+    desktop: {
       default: [
         "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
         "{tab} q w e r t y u i o p [ ] \\",
@@ -142,9 +127,26 @@ const keyboardLayouts: Record<
       ],
       numbers: ["1 2 3", "4 5 6", "7 8 9", "{abc} 0 {backspace}"],
     },
+    alphabetical: {
+      default: [
+        "a b c d e f g",
+        "h i j k l m n",
+        "o p q r s t u",
+        "{shift} v w x y z {backspace}",
+        "{numbers} {space} {ent}",
+      ],
+      shift: [
+        "A B C D E F G",
+        "H I J K L M N",
+        "O P Q R S T U",
+        "{shift} V W X Y Z {backspace}",
+        "{numbers} {space} {ent}",
+      ],
+      numbers: ["1 2 3", "4 5 6", "7 8 9", "{abc} 0 {backspace}"],
+    },
   },
   es: {
-    regular: {
+    desktop: {
       default: [
         "\u007c 1 2 3 4 5 6 7 8 9 0 ' \u00bf {bksp}",
         "{tab} q w e r t y u i o p \u0301 +",
@@ -176,6 +178,23 @@ const keyboardLayouts: Record<
       ],
       numbers: ["1 2 3", "4 5 6", "7 8 9", "{abc} 0 {backspace}"],
     },
+    alphabetical: {
+      default: [
+        "a b c d e f g",
+        "h i j k l m n",
+        "ñ o p q r s t",
+        "{shift} u v w x y z {backspace}",
+        "{numbers} {space} {ent}",
+      ],
+      shift: [
+        "A B C D E F G",
+        "H I J K L M N",
+        "Ñ O P Q R S T",
+        "{shift} U V W X Y Z {backspace}",
+        "{numbers} {space} {ent}",
+      ],
+      numbers: ["1 2 3", "4 5 6", "7 8 9", "{abc} 0 {backspace}"],
+    },
   },
 };
 
@@ -185,46 +204,91 @@ const keyboardDisplays: Record<
 > = {
   en: {
     mobile: {
-      [SPECIAL_KEYS.ABC]: "ABC",
-      [SPECIAL_KEYS.ALT_LEFT]: "alt ⌥",
-      [SPECIAL_KEYS.ALT_RIGHT]: "alt ⌥",
-      [SPECIAL_KEYS.BACK]: "⌫",
-      [SPECIAL_KEYS.CTRL_LEFT]: "ctrl ⌃",
-      [SPECIAL_KEYS.CTRL_RIGHT]: "ctrl ⌃",
-      [SPECIAL_KEYS.ENTER]: "Confirm",
-      [SPECIAL_KEYS.ESCAPE]: "esc ⎋",
-      [SPECIAL_KEYS.LOCK]: "caps lock ⇪",
-      [SPECIAL_KEYS.META_LEFT]: "cmd ⌘",
-      [SPECIAL_KEYS.META_RIGHT]: "cmd ⌘",
-      [SPECIAL_KEYS.NUMBERS]: "123",
-      [SPECIAL_KEYS.SHIFT]: "⇧",
-      [SPECIAL_KEYS.TAB]: "tab ⇥",
+      [BUTTON_CHARS.ABC]: "ABC",
+      [BUTTON_CHARS.ALT_LEFT]: "alt ⌥",
+      [BUTTON_CHARS.ALT_RIGHT]: "alt ⌥",
+      [BUTTON_CHARS.BACKSPACE]: "⌫",
+      [BUTTON_CHARS.CTRL_LEFT]: "ctrl ⌃",
+      [BUTTON_CHARS.CTRL_RIGHT]: "ctrl ⌃",
+      [BUTTON_CHARS.ENT]: "Confirm",
+      [BUTTON_CHARS.ESCAPE]: "esc ⎋",
+      [BUTTON_CHARS.CAPSLOCK]: "caps lock ⇪",
+      [BUTTON_CHARS.META_LEFT]: "cmd ⌘",
+      [BUTTON_CHARS.META_RIGHT]: "cmd ⌘",
+      [BUTTON_CHARS.NUMBERS]: "123",
+      [BUTTON_CHARS.SHIFT]: "⇧",
+      [BUTTON_CHARS.TAB]: "tab ⇥",
+    },
+    alphabetical: {
+      [BUTTON_CHARS.ABC]: "ABC",
+      [BUTTON_CHARS.ALT_LEFT]: "alt ⌥",
+      [BUTTON_CHARS.ALT_RIGHT]: "alt ⌥",
+      [BUTTON_CHARS.BACKSPACE]: "⌫",
+      [BUTTON_CHARS.CTRL_LEFT]: "ctrl ⌃",
+      [BUTTON_CHARS.CTRL_RIGHT]: "ctrl ⌃",
+      [BUTTON_CHARS.ENT]: "Confirm",
+      [BUTTON_CHARS.ESCAPE]: "esc ⎋",
+      [BUTTON_CHARS.CAPSLOCK]: "caps lock ⇪",
+      [BUTTON_CHARS.META_LEFT]: "cmd ⌘",
+      [BUTTON_CHARS.META_RIGHT]: "cmd ⌘",
+      [BUTTON_CHARS.NUMBERS]: "123",
+      [BUTTON_CHARS.SHIFT]: "⇧",
+      [BUTTON_CHARS.TAB]: "tab ⇥",
     },
   },
   es: {
     mobile: {
-      [SPECIAL_KEYS.ABC]: "ABC",
-      [SPECIAL_KEYS.ALT_LEFT]: "alt ⌥",
-      [SPECIAL_KEYS.ALT_RIGHT]: "alt ⌥",
-      [SPECIAL_KEYS.BACK]: "⌫",
-      [SPECIAL_KEYS.CTRL_LEFT]: "ctrl ⌃",
-      [SPECIAL_KEYS.CTRL_RIGHT]: "ctrl ⌃",
-      [SPECIAL_KEYS.ENTER]: "Confirmar",
-      [SPECIAL_KEYS.ESCAPE]: "esc ⎋",
-      [SPECIAL_KEYS.LOCK]: "caps lock ⇪",
-      [SPECIAL_KEYS.META_LEFT]: "cmd ⌘",
-      [SPECIAL_KEYS.META_RIGHT]: "cmd ⌘",
-      [SPECIAL_KEYS.NUMBERS]: "123",
-      [SPECIAL_KEYS.SHIFT]: "⇧",
-      [SPECIAL_KEYS.TAB]: "tab ⇥",
+      [BUTTON_CHARS.ABC]: "ABC",
+      [BUTTON_CHARS.ALT_LEFT]: "alt ⌥",
+      [BUTTON_CHARS.ALT_RIGHT]: "alt ⌥",
+      [BUTTON_CHARS.BACKSPACE]: "⌫",
+      [BUTTON_CHARS.CTRL_LEFT]: "ctrl ⌃",
+      [BUTTON_CHARS.CTRL_RIGHT]: "ctrl ⌃",
+      [BUTTON_CHARS.ENT]: "Confirmar",
+      [BUTTON_CHARS.ESCAPE]: "esc ⎋",
+      [BUTTON_CHARS.CAPSLOCK]: "caps lock ⇪",
+      [BUTTON_CHARS.META_LEFT]: "cmd ⌘",
+      [BUTTON_CHARS.META_RIGHT]: "cmd ⌘",
+      [BUTTON_CHARS.NUMBERS]: "123",
+      [BUTTON_CHARS.SHIFT]: "⇧",
+      [BUTTON_CHARS.TAB]: "tab ⇥",
+    },
+    alphabetical: {
+      [BUTTON_CHARS.ABC]: "ABC",
+      [BUTTON_CHARS.ALT_LEFT]: "alt ⌥",
+      [BUTTON_CHARS.ALT_RIGHT]: "alt ⌥",
+      [BUTTON_CHARS.BACKSPACE]: "⌫",
+      [BUTTON_CHARS.CTRL_LEFT]: "ctrl ⌃",
+      [BUTTON_CHARS.CTRL_RIGHT]: "ctrl ⌃",
+      [BUTTON_CHARS.ENT]: "Confirmar",
+      [BUTTON_CHARS.ESCAPE]: "esc ⎋",
+      [BUTTON_CHARS.CAPSLOCK]: "caps lock ⇪",
+      [BUTTON_CHARS.META_LEFT]: "cmd ⌘",
+      [BUTTON_CHARS.META_RIGHT]: "cmd ⌘",
+      [BUTTON_CHARS.NUMBERS]: "123",
+      [BUTTON_CHARS.SHIFT]: "⇧",
+      [BUTTON_CHARS.TAB]: "tab ⇥",
     },
   },
+};
+
+const sizedDisplays: Record<
+  NonNullable<VariantProps<typeof keyboardVariants>["size"]>,
+  KeyboardDisplay
+> = {
+  default: "mobile",
+  "3xs": "mobile",
+  "2xs": "mobile",
+  xs: "mobile",
+  sm: "mobile",
+  md: "mobile",
+  lg: "desktop",
 };
 
 function Keyboard({
   border = "default",
   className,
-  display = "mobile",
+  display = "auto",
   enableKeyNavigation,
   font,
   keyboardRef,
@@ -242,7 +306,8 @@ function Keyboard({
     /** Enables the key navigation module */
     keyNavigation?: boolean;
     keyboardRef?: RefObject<KeyboardRef | null>;
-    display?: KeyboardDisplay;
+    /** The keyboard display. "auto" will resolve a display based on the size */
+    display?: KeyboardDisplay | "auto";
     language?: Language;
     onChange?: (input: string) => void;
     onLayoutChange?: (layout: KeyboardLayout) => void;
@@ -251,16 +316,21 @@ function Keyboard({
   const [layoutName, setLayoutName] = useState<KeyboardLayout>("default");
 
   const config = useMemo(() => {
+    const resolvedDisplay =
+      display === "auto" ? sizedDisplays[size ?? "default"] : display;
+
+    const layout = keyboardLayouts[language][resolvedDisplay];
+
     return {
-      display: keyboardDisplays[language][display],
-      layout: keyboardLayouts[language][display],
+      display: keyboardDisplays[language][resolvedDisplay],
+      layout,
       allButtons: [
-        KEYS[language].alphabet,
-        KEYS[language].numbers,
-        Object.values(SPECIAL_KEYS).join(" "),
+        ...layout.default,
+        ...layout.numbers,
+        ...layout.shift,
       ].join(" "),
     };
-  }, [language, display]);
+  }, [language, display, size]);
 
   const modules = useMemo(() => {
     if (enableKeyNavigation) {
@@ -277,7 +347,8 @@ function Keyboard({
 
     return {
       default: "sm",
-      "2xs": "2xs",
+      "3xs": "4xs",
+      "2xs": "3xs",
       xs: "2xs",
       sm: "xs",
       md: "sm",

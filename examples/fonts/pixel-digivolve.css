@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import "@/components/fonts/pxl/pixel-digivolve.css";
 
-@theme {
-  --font-pixel-digivolve: 'Pixel Digivolve', 'Inter Variable', sans-serif;
+.font-pixel-digivolve {
+  --font-size-adjust: 0.75;
+  
+  font-family: 'Pixel Digivolve', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
 }

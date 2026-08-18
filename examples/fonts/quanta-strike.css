@@ -141,25 +141,27 @@
 }
 
 @theme {
-  --font-strike-6: 'quanta-strike-6', sans-serif;
+  --font-strike-6: 'quanta-strike-6', serif;
   --font-strike-6-mono: "quanta-strike-6-mono", monospace;
-  --font-strike-10: "quanta-strike-10", sans-serif;
+  --font-strike-10: "quanta-strike-10", serif;
   --font-strike-10-mono: "quanta-strike-10-mono", monospace;
-  --font-strike-12: "quanta-strike-12", sans-serif;
+  --font-strike-12: "quanta-strike-12", serif;
   --font-strike-12-mono: "quanta-strike-12-mono", monospace;
-  --font-strike-14: "quanta-strike-14", sans-serif;
+  --font-strike-14: "quanta-strike-14", serif;
   --font-strike-14-mono: "quanta-strike-14-mono", monospace;
-  --font-strike-16: "quanta-strike-16", sans-serif;
+  --font-strike-16: "quanta-strike-16", serif;
   --font-strike-16-mono: "quanta-strike-16-mono", monospace;
-  --font-strike-18: "quanta-strike-18", sans-serif;
+  --font-strike-18: "quanta-strike-18", serif;
   --font-strike-18-mono: "quanta-strike-18-mono", monospace;
-  --font-strike-20: "quanta-strike-20", sans-serif;
+  --font-strike-20: "quanta-strike-20", serif;
   --font-strike-20-mono: "quanta-strike-20-mono", monospace;
-  --font-strike-32: "quanta-strike-32", sans-serif;
+  --font-strike-32: "quanta-strike-32", serif;
   --font-strike-32-mono: "quanta-strike-32-mono", monospace;
 }
 
 @utility font-quanta-strike {
+  --font-size-adjust: 0.55;
+  
   /* Same as Tailwind's 0.25rem default at zoom 1. Expressed in source
      pixels so it follows --qs-px. */
   --spacing: calc(var(--qs-px) * 4);
@@ -276,6 +278,7 @@
 
 
   font-family: var(--font-strike-12);
+  font-size-adjust: var(--font-size-adjust);
   font-size: var(--text-base);
   line-height: 1;
   --qs-rule: var(--qs-px);

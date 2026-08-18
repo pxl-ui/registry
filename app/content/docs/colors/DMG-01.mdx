@@ -5,7 +5,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -13,9 +12,9 @@ import "~/examples/colors/dmg-01.css"
 
 import DMG01Raw from "@/components/colors/pxl/dmg-01.gpl?raw";
 
-<Description item="colors-dmg-01" />
+<ColorPaletteShowcase palette={DMG01Raw} />
 
-The letters "DMG" stand for "Dot Matrix Game," referencing the console's unique pixel-based screen.
+## Installation
 
 <InstallCommand item="colors-dmg-01" />
 
@@ -26,7 +25,3 @@ The letters "DMG" stand for "Dot Matrix Game," referencing the console's unique 
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={DMG01Raw} />

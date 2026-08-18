@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
 
-@import 'tailwindcss';
+.font-bytesized {
+  --font-size-adjust: 0.36;
 
-@theme {
-  --font-bytesized: 'Bytesized', 'Inter Variable', sans-serif;
+  font-family: 'Bytesized', monospace;
+  font-size-adjust: var(--font-size-adjust);
 }

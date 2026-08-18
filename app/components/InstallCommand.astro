@@ -30,11 +30,12 @@ const tabs = [
 
 ---
 
-
-<Tabs>
-  {tabs.map(({ label, command}) => (
-    <TabItem label={label}>
-      <Code code={command} lang="sh" frame="none" />
-    </TabItem>
-  ))}
-</Tabs>
+<div class="mt-6">
+  <Tabs>
+    {tabs.map(({ label, command}) => (
+      <TabItem label={label}>
+        <Code code={command} lang="sh" frame="none" />
+      </TabItem>
+    ))}
+  </Tabs>
+</div>

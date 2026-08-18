@@ -2,7 +2,7 @@
 
 import { Code } from '@astrojs/starlight/components';
 
-import { Button } from '@/components/ui/pxl/button';
+import { Button, buttonVariants } from '@/components/ui/pxl/button';
 
 export type Props = {
 	class?: string;
@@ -12,7 +12,7 @@ export type Props = {
 	lang?: string;
 }
 
-const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 120 } = Astro.props;
+const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 } = Astro.props;
 
 ---
 {!collapsed && (
@@ -26,7 +26,7 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 120 }
     class={className}>
     <div
       data-slot="code-preview-content"
-      class="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+      class="overflow-hidden scrollbar-none transition-[max-height] duration-300 ease-in-out"
       style={`max-height: ${collapsedHeight}px`}
     >
       <Code code={code} lang={lang}  />
@@ -34,16 +34,21 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 120 }
 
     <div 
       data-slot="code-preview-fade"
-      class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-(--ec-frm-edBg) to-transparent transition-opacity duration-300" />
+      class="pointer-events-none absolute inset-x-0 bottom-0 transition-opacity duration-300"
+			style={`height: ${collapsedHeight}px; background:linear-gradient(to top, var(--ec-frm-edBg), color-mix(in oklab, var(--ec-frm-edBg) 60%, transparent), transparent)`} />
 
     <div
       data-slot="code-preview-toggle-wrapper" 
-      class="absolute inset-x-0 bottom-9 flex justify-center pt-2">
+      class="absolute inset-x-0 flex justify-center pt-2"
+			style={`bottom: ${(collapsedHeight / 2) - 14}px`}>
       <button
         type="button"
         data-slot="code-preview-toggle"
         data-state="collapsed"
-        class="group/button shrink-0 bg-clip-padding font-medium whitespace-nowrap outline-none select-none focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-1 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='fill-'])]:fill-current [&_svg:not([class*='size-'])]:size-4 pixel-border pixel-rounded pixel-size-md pixel-color-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:pixel-color-input dark:bg-input/30 dark:hover:bg-input/50 h-9 gap-1.5 px-2.5 text-lg has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 rounded-none active:translate-y-1 transition-transform relative inline-flex items-center justify-center border-none"
+				class={buttonVariants({
+					size: "sm",
+					variant: "outline"
+				})}
       >
         View code
       </button>

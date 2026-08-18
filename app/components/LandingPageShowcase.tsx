@@ -13,22 +13,25 @@ import { Keyboard, type KeyboardRef } from "@/components/ui/pxl/keyboard";
 import { WheelList, WheelOption } from "@/components/ui/pxl/wheel-list";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 import { DayView } from "@/components/widgets/pxl/day-view";
+import { url } from "~/lib/utils";
 
 function SpriteWidget() {
   return (
     <WidgetArea size="sm">
-      <Card size="lg" className="size-full">
-        <CardContent className="p-8">
-          <div
-            className="size-full sprite-sheet sprite-cols-2 sprite-rows-2 sprite-animate-[0,1] sprite-duration-[1000ms]"
-            style={{
-              backgroundImage: "url(regulus.png)",
-            }}
-          >
+      <a className="size-full" href={url("components/sprite-canvas")}>
+        <Card size="lg" className="size-full">
+          <CardContent className="p-8">
+            <div
+              className="size-full sprite-sheet sprite-cols-2 sprite-rows-2 sprite-animate-[0,1] sprite-duration-[1000ms]"
+              style={{
+                backgroundImage: "url(regulus.png)",
+              }}
+            >
 
-          </div>
-      </CardContent>
-      </Card>
+            </div>
+          </CardContent>
+        </Card>
+      </a>
     </WidgetArea>
   )
 }
@@ -80,36 +83,38 @@ function DayViewWidget() {
 
   return (
     <WidgetArea size="md">
-      <DayView
-        status="success"
-        className="size-full"
-        forecast={{
-          hourly_units: {
-            temperature_2m: "°C",
-          },
-          hourly: {
-            time: hourlyTimeRange,
-            temperature_2m: [
-              23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6, 25.6,
-              25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3, 24.5, 25,
-              24.7,
-            ],
-            weather_code: [
-              0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3, 3,
-              51, 3,
-            ],
-            is_day: [
-              0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-              0, 0,
-            ],
-          },
-          daily: {
-            temperature_2m_max: [25.6],
-            temperature_2m_min: [22.4],
-          },
-        }}
-        events={events}
-      />
+      <a className="size-full" href={url("widgets/day-view")}>
+        <DayView
+          status="success"
+          className="size-full"
+          forecast={{
+            hourly_units: {
+              temperature_2m: "°C",
+            },
+            hourly: {
+              time: hourlyTimeRange,
+              temperature_2m: [
+                23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6, 25.6,
+                25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3, 24.5, 25,
+                24.7,
+              ],
+              weather_code: [
+                0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3, 3,
+                51, 3,
+              ],
+              is_day: [
+                0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                0, 0,
+              ],
+            },
+            daily: {
+              temperature_2m_max: [25.6],
+              temperature_2m_min: [22.4],
+            },
+          }}
+          events={events}
+        />
+      </a>
     </WidgetArea>
   );
 }
@@ -117,11 +122,13 @@ function DayViewWidget() {
 function CalendarWidget() {
   return (
     <WidgetArea size="sm">
-      <Card size="lg" className="size-full">
-        <CardContent>
-          <Calendar />
-        </CardContent>
-      </Card>
+      <a className="size-full" href={url("components/calendar")}>
+        <Card size="lg" className="size-full">
+          <CardContent>
+            <Calendar />
+          </CardContent>
+        </Card>
+      </a>
     </WidgetArea>
   );
 }
@@ -142,29 +149,31 @@ function KeyboardWidget() {
 
   return (
     <WidgetArea size="sm">
-      <Card size="lg" className="size-full">
-        <CardHeader>
-          <CardDescription>Input your name</CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col justify-end gap-2">
-          <Input
-            size="xs"
-            defaultValue="Regulus"
-            ref={input}
-            value={kbValue}
-            onChange={onChangeInput}
-            name="preview"
-          />
-          <Keyboard
-            size="2xs"
-            inputName="preview"
-            enableKeyNavigation
-            keyboardRef={keyboard}
-            onChange={onKbChange}
-            onSubmit={() => console.log("onSubmit")}
-          />
-        </CardContent>
-      </Card>
+      <a className="size-full" href={url("components/keyboard")}>
+        <Card size="lg" className="size-full">
+          <CardHeader>
+            <CardDescription>Input your name</CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col justify-end gap-2">
+            <Input
+              size="xs"
+              defaultValue="Regulus"
+              ref={input}
+              value={kbValue}
+              onChange={onChangeInput}
+              name="preview"
+            />
+            <Keyboard
+              size="3xs"
+              inputName="preview"
+              enableKeyNavigation
+              keyboardRef={keyboard}
+              onChange={onKbChange}
+              onSubmit={() => console.log("onSubmit")}
+            />
+          </CardContent>
+        </Card>
+      </a>
     </WidgetArea>
   );
 }
@@ -172,33 +181,35 @@ function KeyboardWidget() {
 function MenuWidget() {
   return (
     <WidgetArea size="sm">
-      <Card size="lg" className="size-full">
-        <CardHeader>
-          <CardTitle>Menu</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <WheelList
-            align="start"
-            visibleCount={3}
-            label="Pick a start time"
-            defaultValue="ITEM"
-          >
-            {[
-              "POKÉDEX",
-              "POKÉMON",
-              "ITEM",
-              "TRAINER",
-              "SAVE",
-              "OPTION",
-              "EXIT",
-            ].map((i) => (
-              <WheelOption key={i} value={i}>
-                {i}
-              </WheelOption>
-            ))}
-          </WheelList>
-        </CardContent>
-      </Card>
+      <a className="size-full" href={url("components/wheel-list")}>
+        <Card size="lg" className="size-full">
+          <CardHeader>
+            <CardTitle>Menu</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <WheelList
+              align="start"
+              visibleCount={3}
+              label="Pick a start time"
+              defaultValue="ITEM"
+            >
+              {[
+                "POKÉDEX",
+                "POKÉMON",
+                "ITEM",
+                "TRAINER",
+                "SAVE",
+                "OPTION",
+                "EXIT",
+              ].map((i) => (
+                <WheelOption key={i} value={i}>
+                  {i}
+                </WheelOption>
+              ))}
+            </WheelList>
+          </CardContent>
+        </Card>
+      </a>
     </WidgetArea>
   );
 }

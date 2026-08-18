@@ -5,7 +5,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand,
 } from "~/components";
 
@@ -15,14 +14,9 @@ import "~/examples/colors/catppuccin-latte.css"
 
 import CatpuccinLatteRaw from "@/components/colors/pxl/catppuccin-latte.gpl?raw";
 
-<Description item="colors-catppuccin-latte" />
+<ColorPaletteShowcase palette={CatpuccinLatteRaw} />
 
-[Catppuccin](https://catppuccin.com/palette/) consists of 4 beautiful pastel color palettes, named flavors. The theme comes in one light and three dark variants:
-
-* **Latte**: Lightest theme harmoniously inverting the essence of Catppuccin's dark themes.
-* <a href={url("colors/catppuccin-frappe")}>Frappé</a>: Less vibrant alternative using subdued colors for a muted aesthetic.
-* <a href={url("colors/catppuccin-macchiato")}>Macchiato</a>: Medium contrast with gentle colors creating a soothing atmosphere.
-* <a href={url("colors/catppuccin-mocha")}>Mocha</a>: The Original — Darkest variant offering a cozy feeling with color-rich accents.
+## Installation
 
 <InstallCommand item="colors-catppuccin-latte" />
 
@@ -33,7 +27,3 @@ import CatpuccinLatteRaw from "@/components/colors/pxl/catppuccin-latte.gpl?raw"
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={CatpuccinLatteRaw} />

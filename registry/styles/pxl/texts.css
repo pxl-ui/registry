@@ -1,4 +1,9 @@
 
+@utility text-4xs {
+  font-size: var(--text-4xs);
+  line-height: var(--tw-leading, var(--text-4xs--line-height));
+}
+
 @utility text-3xs {
   font-size: var(--text-3xs);
   line-height: var(--tw-leading, var(--text-3xs--line-height));
@@ -10,8 +15,12 @@
 }
 
 @utility font-heading {
-  font-family: var(--font-heading);
+  --font-size-adjust: 0.75;
 
+  font-family: var(--font-heading);
+  font-size-adjust: var(--font-size-adjust);
+
+  --text-4xs: 0.375rem; /** 6px **/
   --text-3xs: 0.5rem; /** 8px **/
   --text-2xs: 0.625rem; /** 10px **/
   --text-xs: 0.75rem; /** 12px **/
@@ -21,8 +30,12 @@
 }
 
 @utility font-sans {
-  font-family: var(--font-sans);
+  --font-size-adjust: 0.6;
 
+  font-family: var(--font-sans);
+  font-size-adjust: var(--font-size-adjust);
+
+  --text-4xs: 0.375rem; /** 6px **/
   --text-3xs: 0.5rem; /** 8px **/
   --text-2xs: 0.625rem; /** 10px **/
   --text-xs: 0.75rem; /** 12px **/
@@ -32,8 +45,12 @@
 }
 
 @utility font-mono {
-  font-family: var(--font-mono);
+  --font-size-adjust: 0.54;
 
+  font-family: var(--font-mono);
+  font-size-adjust: var(--font-size-adjust);
+
+  --text-4xs: 0.375rem; /** 6px **/
   --text-3xs: 0.5rem; /** 8px **/
   --text-2xs: 0.625rem; /** 10px **/
   --text-xs: 0.75rem; /** 12px **/

@@ -5,7 +5,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -13,7 +12,9 @@ import "~/examples/colors/flexoki.css"
 
 import FlexokiRaw from "@/components/colors/pxl/flexoki.gpl?raw";
 
-<Description item="colors-flexoki" />
+<ColorPaletteShowcase palette={FlexokiRaw} />
+
+## Installation
 
 <InstallCommand item="colors-flexoki" />
 
@@ -24,7 +25,3 @@ import FlexokiRaw from "@/components/colors/pxl/flexoki.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={FlexokiRaw} />

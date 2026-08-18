@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-vines-flexible-linear-ramps {
   --background: var(--color-vines-flexible-linear-ramps-white);
   --card: var(--color-vines-flexible-linear-ramps-white);
   --popover: var(--color-vines-flexible-linear-ramps-white);
@@ -23,7 +23,7 @@
   --danger-foreground: var(--color-vines-flexible-linear-ramps-pink-800);
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-vines-flexible-linear-ramps, [data-theme="dark"] .colors-vines-flexible-linear-ramps {
   --primary: var(--color-vines-flexible-linear-ramps-blue-600);
   --primary-foreground: var(--color-vines-flexible-linear-ramps-blue-200);
   --info: var(--color-vines-flexible-linear-ramps-teal-600);

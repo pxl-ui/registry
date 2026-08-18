@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-arne-16 {
   --background: var(--color-arne-16-white);
   --foreground: var(--color-arne-16-neutral-950);
   --card: var(--color-arne-16-white);
@@ -32,7 +32,7 @@
 }
 
 
-.dark, [data-theme="dark"] {
+.dark .colors-arne-16, [data-theme="dark"] .colors-arne-16 {
   --background: var(--color-arne-16-black);
   --foreground: var(--color-arne-16-neutral-50);
   --card: var(--color-arne-16-black);

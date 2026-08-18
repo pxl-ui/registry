@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-pico-8 {
   --background: var(--color-white);
   --foreground: var(--color-pico-slate);
   --card: var(--color-white);
@@ -31,7 +31,7 @@
   --danger-foreground: var(--color-pico-red);
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-pico-8, [data-theme="dark"] .colors-pico-8 {
   --background: var(--color-pico-black);
   --foreground: var(--color-pico-silver);
   --card: var(--color-pico-black);

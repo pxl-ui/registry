@@ -1,13 +1,21 @@
 ---
 
 import registry from "~/lib/registry";
+import { registryItemFromRouteId } from "~/lib/utils";
 
 export type Props = {
-  item: string;
+  item?: string;
 }
 
 const { item: name } = Astro.props;
 
-const item = registry.get(name);
+let itemName: string | null = name ?? null;
+
+if (!itemName) {
+ itemName = registryItemFromRouteId(Astro.locals.starlightRoute.id); 
+}
+
+const item = itemName ? registry.get(itemName) : null;
+
 ---
-<p>{item?.description}</p>
+{item?.description && <p>{item.description}</p>}

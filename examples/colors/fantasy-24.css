@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-fantasy-24 {
   --background: var(--color-fantasy-24-neutral-50);
   --foreground: var(--color-fantasy-24-neutral-950);
   --card: var(--color-fantasy-24-neutral-50);
@@ -32,7 +32,7 @@
 }
 
 
-.dark, [data-theme="dark"] {
+.dark .colors-fantasy-24, [data-theme="dark"] .colors-fantasy-24 {
   --background: var(--color-fantasy-24-neutral-950);
   --foreground: var(--color-fantasy-24-neutral-400);
   --card: var(--color-fantasy-24-neutral-950);

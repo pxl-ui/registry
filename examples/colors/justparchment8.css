@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-justparchment8 {
   --background: var(--color-justparchment8-base-50);
   --foreground: var(--color-justparchment8-base-600);
   --card: var(--color-justparchment8-base-50);
@@ -22,7 +22,7 @@
 
 
 
-.dark, [data-theme="dark"] {
+.dark .colors-justparchment8, [data-theme="dark"] .colors-justparchment8 {
   --background: var(--color-justparchment8-base-950);
   --foreground: var(--color-justparchment8-base-100);
   --card: var(--color-justparchment8-base-700);

@@ -5,7 +5,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -13,14 +12,12 @@ import "~/examples/colors/gothic-bit.css"
 
 import GothicBitRaw from "@/components/colors/pxl/gothic-bit.gpl?raw";
 
-<Description item="colors-gothic-bit" />
+<ColorPaletteShowcase palette={GothicBitRaw} />
+
+## Installation
 
 <InstallCommand item="colors-gothic-bit" />
 
 ## Base
 
 <ColorThemeShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={GothicBitRaw} />

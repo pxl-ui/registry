@@ -2,7 +2,6 @@ import { DialogueBox, DialogueMessage, DialoguePortrait } from "@/components/ui/
 
 export default function WithPortrait() {
   return (
-    <div className="relative flex flex-col items-center gap-4 p-8">
       <DialogueBox className="size-full w-(--widget-width-md)">
         <DialogueMessage
           className="h-[2lh]"
@@ -15,6 +14,5 @@ export default function WithPortrait() {
           src="https://github.com/shadcn.png"
           />
       </DialogueBox>
-    </div>
   );
 }

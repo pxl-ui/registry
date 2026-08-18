@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-dmg-01 {
   --background: var(--color-dmg-01-green-50);
   --foreground: var(--color-dmg-01-green-950);
   --card: var(--color-dmg-01-green-50);
@@ -34,7 +34,7 @@
 }
 
 
-.dark, [data-theme="dark"] {
+.dark .colors-dmg-01, [data-theme="dark"] .colors-dmg-01 {
   --background: var(--color-dmg-01-green-950);
   --foreground: var(--color-dmg-01-green-50);
   --card: var(--color-dmg-01-green-950);

@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import "@/components/fonts/pxl/able-5.css";
 
-@theme {
-  --font-able-5: 'Able 5', 'Inter Variable', sans-serif;
+.font-able-5 {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Able 5', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
 }

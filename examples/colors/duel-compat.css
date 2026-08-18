@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-duel-compat {
   --background: oklch(97.547% 0.0045 258.325);
   --foreground: oklch(51.523% 0.016 258.366);
   --card: oklch(97.547% 0.0045 258.325);
@@ -31,7 +31,7 @@
   --warning-foreground: oklch(59.743% 0.0684 72.123);
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-duel-compat, [data-theme="dark"] .colors-duel-compat {
   --background: oklch(0% 0 0);
   --foreground: oklch(86.227% 0.0123 259.824);
   --card: oklch(38.999% 0.0072 264.484);

@@ -1,36 +1,55 @@
+---
 
-<div class="not-content pixel-border pixel-color-[oklch(0.556_0_0)] dark:pixel-color-[oklch(0.708_0_0)]  bg-[oklch(0.97_0_0)] dark:bg-[oklch(0.269_0_0)] p-2 space-y-2">
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-background text-foreground font-sans text-xl w-full h-10 px-3 flex items-center">Background</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-card text-card-foreground font-sans text-xl w-full h-10 px-3 flex items-center">Card</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-popover text-popover-foreground font-sans text-xl w-full h-10 px-3 flex items-center">Popover</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-muted text-muted-foreground font-sans text-xl w-full h-10 px-3 flex items-center">Muted</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-accent text-accent-foreground font-sans text-xl w-full h-10 px-3 flex items-center">Accent</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Border</h2>
-    <div class="p-1 pixel-border pixel-color-border pixel-size-lg w-full h-10">
-      <div class="size-full bg-background"></div>
-    </div>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Input</h2>
-    <div class="p-1 pixel-border pixel-color-input pixel-size-lg w-full h-10">
-      <div class="size-full bg-background"></div>
-    </div>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Ring</h2>
-    <div class="p-1 pixel-border pixel-color-ring pixel-size-lg w-full h-10">
-      <div class="size-full bg-background"></div>
+
+import { cardVariants } from "@/components/ui/pxl/card";
+import { cn } from "@/lib/utils";
+import { registryItemFromRouteId } from "~/lib/utils";
+
+const itemName = registryItemFromRouteId(Astro.locals.starlightRoute.id); 
+
+---
+<div class={cn(
+  "not-content",
+  cardVariants(),
+  "pixel-color-border!"
+)}>
+	<div
+		data-slot="card-content"
+		class={cn("flex-1 min-h-0 p-(--card-spacing)")}>
+    <div class={cn("flex flex-col gap-2", itemName)}>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-background text-foreground font-sans text-sm w-full h-10 px-3 flex items-center">Background</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-card text-card-foreground font-sans text-sm w-full h-10 px-3 flex items-center">Card</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-popover text-popover-foreground font-sans text-sm w-full h-10 px-3 flex items-center">Popover</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-muted text-muted-foreground font-sans text-sm w-full h-10 px-3 flex items-center">Muted</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-accent text-accent-foreground font-sans text-sm w-full h-10 px-3 flex items-center">Accent</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <h2 class="font-sans text-sm sm:w-30">Border</h2>
+        <div class="p-1 pixel-border pixel-color-border pixel-size-lg w-full h-10">
+          <div class="size-full bg-background"></div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <h2 class="font-sans text-sm sm:w-30">Input</h2>
+        <div class="p-1 pixel-border pixel-color-input pixel-size-lg w-full h-10">
+          <div class="size-full bg-background"></div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <h2 class="font-sans text-sm sm:w-30">Ring</h2>
+        <div class="p-1 pixel-border pixel-color-ring pixel-size-lg w-full h-10">
+          <div class="size-full bg-background"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

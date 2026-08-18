@@ -6,7 +6,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -14,7 +13,9 @@ import "~/examples/colors/duel-compat.css"
 
 import DuelRaw from "@/components/colors/pxl/duel-compat.gpl?raw";
 
-<Description item="colors-duel-compat" />
+<ColorPaletteShowcase palette={DuelRaw} />
+
+## Installation
 
 <Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
 
@@ -27,7 +28,3 @@ import DuelRaw from "@/components/colors/pxl/duel-compat.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={DuelRaw} />

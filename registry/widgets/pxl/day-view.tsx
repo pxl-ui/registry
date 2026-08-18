@@ -131,18 +131,18 @@ function Weather({
         </div>
       )}
       <div>
-        <h2 className="font-sans text-xl leading-3">{title}</h2>
+        <h2 className="font-sans text-lg leading-3">{title}</h2>
       </div>
 
       <div className="flex flex-col">
         <div className="flex flex-row gap-1 items-end">
-          <span className="font-heading text-2xl leading-6">
+          <span className="font-heading text-xl leading-6">
             {weather?.current}
           </span>
         </div>
         <div className="flex flex-col">
-          <h3 className="leading-4 text-sm">{weather?.summary}</h3>
-          <p className="leading-4 text-sm">
+          <h3 className="leading-4 text-xs">{weather?.summary}</h3>
+          <p className="leading-4 text-xs">
             {weather?.max} {weather?.min}
           </p>
         </div>
@@ -316,8 +316,8 @@ function Schedule({
     <ScrollArea className="flex-1 min-h-0 min-w-0">
       <div className="flex flex-col gap-2 mr-2">
         {eventGroups.map((group) => (
-          <div key={group.key}>
-            <Badge className="mb-1" border="notch">
+          <div className="flex flex-col" key={group.key}>
+            <Badge className="w-fit mb-1" border="notch" size="sm">
               {group.label}
             </Badge>
             <ul className="flex flex-col gap-0.5">
@@ -328,11 +328,11 @@ function Schedule({
                   title={item.summary}
                 >
                   {item.start && (
-                    <span className="text-muted-foreground mr-2 font-mono text-xl leading-0.5">
+                    <span className="text-muted-foreground mr-2 font-mono text-2xs">
                       {item.start}
                     </span>
                   )}
-                  <p className="truncate text-xs leading-4">{item.summary}</p>
+                  <p className="truncate text-2xs leading-4">{item.summary}</p>
                 </li>
               ))}
             </ul>

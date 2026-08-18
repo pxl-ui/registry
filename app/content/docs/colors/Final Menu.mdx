@@ -5,15 +5,18 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
+import { cardVariants } from "@/components/ui/pxl/card";
+import { cn } from "@/lib/utils";
 
 import "~/examples/colors/final-menu.css"
 
 import FinalMenuRaw from "@/components/colors/pxl/final-menu.gpl?raw";
 
-<Description item="colors-final-menu" />
+<ColorPaletteShowcase palette={FinalMenuRaw} />
+
+## Installation
 
 <InstallCommand item="colors-final-menu" />
 
@@ -27,45 +30,49 @@ import FinalMenuRaw from "@/components/colors/pxl/final-menu.gpl?raw";
 
 ## Gradients
 
-<div class="not-content pixel-border pixel-color-[oklch(0.556_0_0)] dark:pixel-color-[oklch(0.708_0_0)]  bg-[oklch(0.97_0_0)] dark:bg-[oklch(0.269_0_0)] p-2 space-y-2">
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Classic Red</h2>
-    <p class="bg-classic-red w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Linear Red</h2>
-    <p class="bg-linear-red w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Radial Red</h2>
-    <p class="bg-radial-red w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Classic Green</h2>
-    <p class="bg-classic-green w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Linear Green</h2>
-    <p class="bg-linear-green w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Radial Green</h2>
-    <p class="bg-radial-green w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Classic Blue</h2>
-    <p class="bg-classic-blue w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Linear Blue</h2>
-    <p class="bg-linear-blue w-full h-10"></p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <h2 class="font-sans text-xl sm:w-30">Radial Blue</h2>
-    <p class="bg-radial-blue w-full h-10"></p>
+<div class={cn(
+  "not-content",
+  cardVariants(),
+  "pixel-color-border!",
+)}>
+  <div
+    data-slot="card-content"
+    class={cn("flex-1 flex flex-col gap-2 min-h-0 p-(--card-spacing)", "colors-final-menu")}>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Classic Red</h2>
+      <p class="bg-classic-red w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Linear Red</h2>
+      <p class="bg-linear-red w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Radial Red</h2>
+      <p class="bg-radial-red w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Classic Green</h2>
+      <p class="bg-classic-green w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Linear Green</h2>
+      <p class="bg-linear-green w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Radial Green</h2>
+      <p class="bg-radial-green w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Classic Blue</h2>
+      <p class="bg-classic-blue w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Linear Blue</h2>
+      <p class="bg-linear-blue w-full h-10"></p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-2 items-center">
+      <h2 class="font-sans text-sm sm:w-30">Radial Blue</h2>
+      <p class="bg-radial-blue w-full h-10"></p>
+    </div>
   </div>
 </div>
-
-## Full Palette
-
-<ColorPaletteShowcase palette={FinalMenuRaw} />

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-duel {
   --background: var(--color-duel-slate-50);
   --foreground: var(--color-duel-slate-600);
   --card: var(--color-duel-slate-50);
@@ -31,7 +31,7 @@
   --info-foreground: var(--color-duel-violet-600);
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-duel, [data-theme="dark"] .colors-duel {
   --background: var(--color-duel-slate-950);
   --foreground: var(--color-duel-slate-100);
   --card: var(--color-duel-slate-700);

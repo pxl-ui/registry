@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import "@/components/fonts/pxl/able-5.css";
 
-@theme {
-  --font-monogram: 'Monogram Extended', monospace;
+.font-monogram {
+  --font-size-adjust: 0.54;
+
+  font-family: 'Monogram Extended', monospace;
+  font-size-adjust: var(--font-size-adjust);
 }

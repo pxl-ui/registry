@@ -5,7 +5,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -13,7 +12,9 @@ import "~/examples/colors/duel.css"
 
 import DuelRaw from "@/components/colors/pxl/duel.gpl?raw";
 
-<Description item="colors-duel" />
+<ColorPaletteShowcase palette={DuelRaw} />
+
+## Installation
 
 <InstallCommand item="colors-duel" />
 
@@ -24,7 +25,3 @@ import DuelRaw from "@/components/colors/pxl/duel.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={DuelRaw} />

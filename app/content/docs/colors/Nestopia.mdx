@@ -5,7 +5,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -13,7 +12,9 @@ import "~/examples/colors/nestopia.css"
 
 import NestopiaRaw from "@/components/colors/pxl/nestopia.gpl?raw";
 
-<Description item="colors-nestopia" />
+<ColorPaletteShowcase palette={NestopiaRaw} />
+
+## Installation
 
 <InstallCommand item="colors-nestopia" />
 
@@ -24,7 +25,3 @@ import NestopiaRaw from "@/components/colors/pxl/nestopia.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={NestopiaRaw} />

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-catppuccin-mocha {
   --background: var(--color-catppuccin-mocha-neutral-850);
   --foreground: var(--color-catppuccin-mocha-neutral-50);
   --card: var(--color-catppuccin-mocha-neutral-900);

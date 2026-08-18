@@ -353,6 +353,20 @@
       ]
     },
     {
+      "name": "separator",
+      "type": "registry:component",
+      "title": "Separator",
+      "description": "Visually or semantically separates content.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "separator.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/separator.tsx"
+        }
+      ]
+    },
+    {
       "name": "sprite-background",
       "type": "registry:component",
       "title": "Sprite Background",
@@ -387,7 +401,7 @@
     {
       "name": "text-marquee",
       "type": "registry:component",
-      "title": "Marquee Text",
+      "title": "Text Marquee",
       "description": "Marquee animated text for long texts on tiny screens",
       "categories": ["pxl-ui", "components", "ui", "texts", "animations"],
       "files": [

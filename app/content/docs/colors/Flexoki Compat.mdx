@@ -6,7 +6,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -14,7 +13,9 @@ import "~/examples/colors/flexoki-compat.css"
 
 import FlexokiRaw from "@/components/colors/pxl/flexoki-compat.gpl?raw";
 
-<Description item="colors-flexoki-compat" />
+<ColorPaletteShowcase palette={FlexokiRaw} />
+
+## Installation
 
 <Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
 
@@ -27,7 +28,3 @@ import FlexokiRaw from "@/components/colors/pxl/flexoki-compat.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-  <ColorPaletteShowcase palette={FlexokiRaw} />

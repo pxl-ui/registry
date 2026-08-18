@@ -4,7 +4,14 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-final-menu {
+ /** Override backgrounds so we can use image gradients **/
+ --background-image-background: var(--background);
+ --background-image-card: var(--card);
+ --background-image-popover: var(--popover);
+ --background-image-muted: var(--muted);
+ --background-image-accent: var(--accent);
+ 
   --background: var(--background-image-classic-blue);
   --foreground: var(--color-final-menu-white);
   --card: var(--background-image-classic-blue);
@@ -32,7 +39,7 @@
 }
 
 
-.dark, [data-theme="dark"] {
+.dark .colors-final-menu, [data-theme="dark"] .colors-final-menu {
 
   --primary: var(--color-final-menu-classic-blue-950);
   --primary-foreground: var(--color-final-menu-white);

@@ -2,7 +2,6 @@
 title: Colors
 sidebar:
   order: 4
-description: Color palettes
 ---
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
 
@@ -10,6 +9,7 @@ import {
   ColorThemeShowcase,
   ColorVariantsShowcase,
   ColorWheel,
+  LinkCard,
 } from "~/components";
 
 import Arne16Raw from "@/components/colors/pxl/arne-16.gpl?raw"
@@ -32,7 +32,8 @@ import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
 import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
 import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-linear-ramps.gpl?raw";
 
-import { url } from "~/lib/utils";
+import { itemBasename, routeFromRegistryItem, url } from "~/lib/utils";
+import { lists, palettes } from "~/lib/colors";
 
 ## Base
 
@@ -99,82 +100,17 @@ These palettes are focused on providing an entire set of colors to cover most us
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
 
-  <a href={url("colors/duel")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>DUEL</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={DuelRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/flexoki")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Flexoki</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={FlexokiRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/catppuccin-frappe")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Catppuccin Frappe</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={CatpuccinFrappeRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/catppuccin-latte")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Catppuccin Latte</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={CatpucciLatteRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/catppuccin-macchiato")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Catppuccin Macchiato</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={CatpuccinMacchiatoRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/catppuccin-mocha")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Catppuccin Mocha</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={CatpuccinMochaRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/nestopia")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>NEStopia</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={NestopiaRaw} />
-      </CardContent>
-    </Card>
-  </a>
+  {lists.complete.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "colors")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      {palettes.has(itemBasename(item.name, "colors")) && (
+        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
+      )}
+    </LinkCard>
+  ))}
 
 </div>
 
@@ -183,61 +119,18 @@ These palettes are focused on providing an entire set of colors to cover most us
 These palettes provide minimal color gradients for texts and surfaces
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
-  
-  <a href={url("colors/paperback")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Paperback</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={PaperbackRaw} />
-      </CardContent>
-    </Card>
-  </a>
 
-  <a href={url("colors/gothic-bit")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Gothic Bit</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={GothicBitRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/justparchment8")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>JustParchment8</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={JustParchment8Raw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/dmg-01")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>DMG-01</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={DMG01Raw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/final-menu")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Final Menu</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={FinalMenuRaw} />
-      </CardContent>
-    </Card>
-  </a>
+  {lists.base.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "colors")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      {palettes.has(itemBasename(item.name, "colors")) && (
+        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
+      )}
+    </LinkCard>
+  ))}
 
 </div>
 
@@ -248,49 +141,17 @@ These palettes provide vibrant and unique color combinations for variants or adv
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
 
-  <a href={url("colors/pico-8")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>PICO 8</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={PICO8Raw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/fantasy-24")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Fantasy 24</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={Fantasy24Raw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/arne-16")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Arne 16</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={Arne16Raw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/vines-flexible-linear-ramps")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Vine's Flexible Linear Ramps</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={VinesFlexibleLinearRampsRaw} />
-      </CardContent>
-    </Card>
-  </a>
+  {lists.colors.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "colors")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      {palettes.has(itemBasename(item.name, "colors")) && (
+        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
+      )}
+    </LinkCard>
+  ))}
 
 </div>
 
@@ -302,38 +163,16 @@ The following palettes are designed as drop-in replacements for Tailwind Colors,
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
 
-
-  <a href={url("colors/duel-compat")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>DUEL Compat</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={DuelCompatRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/flexoki-compat")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Flexoki Compat</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={FlexokiCompatRaw} />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("colors/tailwind")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Tailwind</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center">
-        <ColorWheel palette={TailwindRaw} />
-      </CardContent>
-    </Card>
-  </a>
+  {lists.compat.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "colors")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      {palettes.has(itemBasename(item.name, "colors")) && (
+        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
+      )}
+    </LinkCard>
+  ))}
 
 </div>

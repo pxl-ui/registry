@@ -6,6 +6,7 @@ import Description from "./Description.astro";
 import Example from "./Example.astro";
 import InstallCommand from "./InstallCommand.astro";
 import LandingPageShowcase from "./LandingPageShowcase";
+import LinkCard from "./LinkCard.astro";
 import TypographyCascade from "./TypographyCascade.astro";
 import TypographySample from "./TypographySample.astro";
 
@@ -18,6 +19,7 @@ export {
   Example,
   InstallCommand,
   LandingPageShowcase,
+  LinkCard,
   TypographyCascade,
   TypographySample,
 };

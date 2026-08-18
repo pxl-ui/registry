@@ -5,23 +5,19 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
-
 
 import "~/examples/colors/paperback.css"
 
 import PaperbackRaw from "@/components/colors/pxl/paperback.gpl?raw";
 
-<Description item="colors-paperback" />
+<ColorPaletteShowcase palette={PaperbackRaw} />
+
+## Installation
 
 <InstallCommand item="colors-paperback" />
 
 ## Base
 
 <ColorThemeShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={PaperbackRaw} />

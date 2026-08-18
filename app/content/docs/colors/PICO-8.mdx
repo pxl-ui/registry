@@ -1,6 +1,5 @@
 ---
 title: PICO-8
-description: The PICO-8 is a virtual video game console created by Lexaloffle Games.
 ---
 import {
   ColorPaletteShowcase,
@@ -14,7 +13,9 @@ import "~/examples/colors/pico-8.css"
 
 import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
 
-<Description item="colors-pico-8" />
+<ColorPaletteShowcase palette={PICO8Raw} />
+
+## Installation
 
 <InstallCommand item="colors-pico-8" />
 
@@ -25,7 +26,3 @@ import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={PICO8Raw} />

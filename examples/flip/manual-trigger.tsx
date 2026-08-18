@@ -19,7 +19,7 @@ export default function FlipPreview() {
   const [isFlipped, setFlipped] = useState(false);
 
   return (
-    <div className="flex flex-col gap-2.5 items-center justify-center">
+    <div className="w-full flex flex-col gap-2.5 items-center justify-center">
       <Button onClick={() => setFlipped((v) => !v)}>Flip</Button>
 
       <WidgetArea size="md">

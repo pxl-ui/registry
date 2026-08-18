@@ -6,7 +6,6 @@ import {
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
-  Description,
   InstallCommand
 } from "~/components";
 
@@ -14,7 +13,9 @@ import "~/examples/colors/tailwind.css"
 
 import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
 
-<Description item="colors-tailwind" />
+<ColorPaletteShowcase palette={TailwindRaw} />
+
+## Installation
 
 <Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
 
@@ -27,7 +28,3 @@ import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
 ## Variants
 
 <ColorVariantsShowcase />
-
-## Full Palette
-
-<ColorPaletteShowcase palette={TailwindRaw} />

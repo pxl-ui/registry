@@ -6,7 +6,16 @@
 
 
 
+
+
+
+
+
+
+
+
 import { Button } from '@/components/ui/pxl/button';
+import { Separator } from '@/components/ui/pxl/separator';
 import { url } from '~/lib/utils';
 
 import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
@@ -28,7 +37,7 @@ const shouldRenderSearch =
     <ul class="flex gap-2">
       <li>
         <a href={url("")}>
-          <Button size="lg" variant="ghost" 
+          <Button size="sm" variant="ghost" 
             aria-expanded={Astro.locals.starlightRoute.id === ""}>
             Home
           </Button>
@@ -36,7 +45,7 @@ const shouldRenderSearch =
       </li>
       <li>
         <a href={url("docs")}>
-          <Button size="lg" variant="ghost"
+          <Button size="sm" variant="ghost"
             aria-expanded={Astro.locals.starlightRoute.id === "docs"}>
             Docs
           </Button>
@@ -44,7 +53,7 @@ const shouldRenderSearch =
       </li>
       <li>
         <a href={url("components")}>
-          <Button size="lg" variant="ghost"
+          <Button size="sm" variant="ghost"
             aria-expanded={Astro.locals.starlightRoute.id === "components"}>
             Components
           </Button>
@@ -52,7 +61,7 @@ const shouldRenderSearch =
       </li>
       <li>
         <a href={url("widgets")}>
-          <Button size="lg" variant="ghost"
+          <Button size="sm" variant="ghost"
             aria-expanded={Astro.locals.starlightRoute.id === "widgets"}>
             Widgets
           </Button>
@@ -65,10 +74,10 @@ const shouldRenderSearch =
     <div class="md:w-48 lg:w-40 xl:w-64">
   		{shouldRenderSearch && <Search />}
     </div>
-    <div class="hidden md:flex print:hidden gap-4 items-center">
-      <div class="sl-flex social-icons">
-        <SocialIcons />
-      </div>
+    <div class="hidden md:flex print:hidden gap-2 items-center">
+      <Separator className="h-4 self-center! ml-2" orientation='vertical'  />
+      <SocialIcons />
+      <Separator className="h-4 self-center!" orientation='vertical'  />
       <ThemeSelect />
       <LanguageSelect />
     </div>
@@ -77,12 +86,6 @@ const shouldRenderSearch =
 
 <style>
 	@layer starlight.core {
-
-		.right-group,
-		.social-icons {
-			gap: 1rem;
-			align-items: center;
-		}
 		.social-icons::after {
 			content: '';
 			height: 2rem;

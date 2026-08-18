@@ -1,11 +1,10 @@
 ---
 title: Widget Area
-description: Widget sizing container
 sidebar:
   order: 1
 ---
 import { Aside } from '@astrojs/starlight/components';
-import { Example, InstallCommand } from "~/components";
+import { Description, Example, InstallCommand } from "~/components";
 import { url } from '~/lib/utils';
 
 import Preview from '~/examples/widget-area/preview.tsx';
@@ -14,14 +13,13 @@ import PreviewRaw from '~/examples/widget-area/preview.tsx?raw';
 import Sizes from '~/examples/widget-area/sizes.tsx';
 import SizesRaw from '~/examples/widget-area/sizes.tsx?raw';
 
-Widget sizing container
-
-
 <Aside type="tip" title="When to use">Use Widget Area to display your widgets in desktop or floating setups. For full screen scenarios, use <a href={url("layouts/anchor-grid")}>Anchor Grid</a> instead.</Aside>
 
 <Example code={PreviewRaw}>
   <Preview client:load />
 </Example>
+
+## Installation
 
 <InstallCommand item="widget-area" />
 

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-paperback {
   --background: var(--color-paperback-paper-50);
   --foreground: var(--color-paperback-paper-200);
   --card: var(--color-paperback-paper-50);
@@ -20,7 +20,7 @@
   --ring: var(--color-paperback-paper-700);
 }
 
-.dark, [data-theme="dark"] {
+.dark .colors-paperback, [data-theme="dark"] .colors-paperback {
   --background: var(--color-paperback-paper-950);
   --foreground: var(--color-paperback-paper-100);
   --card: var(--color-paperback-paper-700);

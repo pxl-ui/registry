@@ -1,18 +1,37 @@
+---
 
-<div class="not-content pixel-border pixel-color-[oklch(0.556_0_0)] dark:pixel-color-[oklch(0.708_0_0)]  bg-[oklch(0.97_0_0)] dark:bg-[oklch(0.269_0_0)] p-2 space-y-2">
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-primary text-primary-foreground w-full h-10 font-sans text-xl px-3 flex items-center">Primary</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-success text-success-foreground w-full h-10 font-sans text-xl px-3 flex items-center">Success</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-danger text-danger-foreground w-full h-10 font-sans text-xl px-3 flex items-center">Danger</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-warning text-warning-foreground w-full h-10 font-sans text-xl px-3 flex items-center">Warning</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-info text-info-foreground w-full h-10 font-sans text-xl px-3 flex items-center">Info</p>
+
+import { cardVariants } from "@/components/ui/pxl/card";
+import { cn } from "@/lib/utils";
+import { registryItemFromRouteId } from "~/lib/utils";
+
+const itemName = registryItemFromRouteId(Astro.locals.starlightRoute.id); 
+
+---
+<div class={cn(
+  "not-content",
+  cardVariants(),
+  "pixel-color-border!",
+)}>
+	<div
+		data-slot="card-content"
+		class={cn("flex-1 min-h-0 p-(--card-spacing)")}>
+    <div class={cn("flex flex-col gap-2", itemName)}>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-primary text-primary-foreground w-full h-10 font-sans text-sm px-3 flex items-center">Primary</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-success text-success-foreground w-full h-10 font-sans text-sm px-3 flex items-center">Success</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-danger text-danger-foreground w-full h-10 font-sans text-sm px-3 flex items-center">Danger</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-warning text-warning-foreground w-full h-10 font-sans text-sm px-3 flex items-center">Warning</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="bg-info text-info-foreground w-full h-10 font-sans text-sm px-3 flex items-center">Info</p>
+      </div>
+    </div>
   </div>
 </div>

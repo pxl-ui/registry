@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
+.colors-gothic-bit {
   --background: var(--color-gothic-bit-base-50);
   --foreground: var(--color-gothic-bit-base-600);
   --card: var(--color-gothic-bit-base-50);
@@ -22,7 +22,7 @@
 
 
 
-.dark, [data-theme="dark"] {
+.dark .colors-gothic-bit, [data-theme="dark"] .colors-gothic-bit {
   --background: var(--color-gothic-bit-base-950);
   --foreground: var(--color-gothic-bit-base-100);
   --card: var(--color-gothic-bit-base-700);
