@@ -1,13 +1,11 @@
 
 import type { ComponentType } from "react";
 
-const components = new Map<string, ComponentType>();
+const components = new Map<string, () => Promise<{ default: ComponentType}>>();
 const sources = new Map<string, string>();
 
 Object.entries(
-  import.meta.glob<ComponentType>("/examples/**/*.tsx", {
-    import: "default",
-    eager: true,
+  import.meta.glob<{ default: ComponentType }>("/examples/**/*.tsx", {
   }),
 ).forEach(([path, component]) => {
   components.set(

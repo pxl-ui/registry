@@ -1,13 +1,15 @@
 ---
 
-import { Code } from '@astrojs/starlight/components';
-
+import { cardVariants } from '@/components/ui/pxl/card';
 import { cn } from '@/lib/utils';
 import examples from "~/lib/examples";
 
+import Code from './Code.astro';
 import ExampleRenderer from './ExampleRenderer';
 
 export type Props = {
+	align?: "center" | "start" | "end";
+	chromeless?: boolean;
 	src?: string;
 	code?: string;
 	lang?: string;
@@ -16,7 +18,7 @@ export type Props = {
 	collapsedHeight?: number;
 }
 
-const { src, code, lang = "tsx", class: className, style, collapsedHeight = 120 } = Astro.props;
+const { align, chromeless, src, code, lang = "tsx", class: className, style, collapsedHeight = 120 } = Astro.props;
 
 let sourceCode = code;
 
@@ -27,70 +29,26 @@ if (src && !code) {
 
 <div
 	class={cn(
-		"pixel-border pixel-color-muted-foreground bg-muted pixel-size-lg p-4 not-content",
+		"not-content",
+		cardVariants(),
+		"pixel-color-border!",
 		className
 	)}
 	style={style}
 >
-	{src ? <ExampleRenderer src={src} client:load /> : <slot />}
-
-	{sourceCode && (
-		<div class="code-preview relative mt-4" data-collapsed-height={collapsedHeight}>
-			<div
-				class="code-preview-content overflow-hidden transition-[max-height] duration-300 ease-in-out"
-				style={`max-height: ${collapsedHeight}px`}
-			>
-				<Code code={sourceCode} lang={lang}  />
-			</div>
-
-			<div class="code-preview-fade pointer-events-none absolute inset-x-0 bottom-9 h-16 bg-linear-to-t from-muted to-transparent transition-opacity duration-300" />
-
-			<div class="code-preview-toggle-wrapper relative flex justify-center pt-2">
-				<button
-					type="button"
-					class="code-preview-toggle pixel-border pixel-color-muted-foreground pixel-size-sm bg-background px-3 py-1.5 text-xs font-medium hover:bg-accent transition-colors"
-					data-state="collapsed"
-				>
-					View code
-				</button>
-			</div>
+	<div
+		data-slot="card-content"
+		class={cn("flex-1 min-h-0", className)}
+	>
+		<div 
+			data-align={align}
+			data-chromeless={chromeless}
+			class={cn(
+				"relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end",
+			)}>
+			{src ? <ExampleRenderer src={src} client:load /> : <slot />}
 		</div>
-	)}
+
+		{sourceCode && <Code class="relative border-t-4 border-border" code={sourceCode} lang={lang} collapsed />}
+	</div>
 </div>
-
-<script>
-	function initCodePreviews(root: ParentNode = document) {
-		root.querySelectorAll<HTMLElement>('.code-preview:not([data-init])').forEach((wrapper) => {
-			wrapper.dataset.init = "true";
-
-			const content = wrapper.querySelector<HTMLElement>('.code-preview-content');
-			const fade = wrapper.querySelector<HTMLElement>('.code-preview-fade');
-			const toggleWrapper = wrapper.querySelector<HTMLElement>('.code-preview-toggle-wrapper');
-			const button = wrapper.querySelector<HTMLButtonElement>('.code-preview-toggle');
-			if (!content || !button) return;
-
-			const collapsedHeight = Number(wrapper.dataset.collapsedHeight ?? 240);
-
-			if (content.scrollHeight <= collapsedHeight) {
-				content.style.maxHeight = "none";
-				fade?.remove();
-				toggleWrapper?.remove();
-				return;
-			}
-
-			button.addEventListener('click', () => {
-				const collapsed = button.dataset.state === 'collapsed';
-
-				content.style.maxHeight = collapsed ? `400px` : `${collapsedHeight}px`;
-				content?.classList.toggle('overflow-hidden', !collapsed);
-				content?.classList.toggle('overflow-auto', collapsed);
-				fade?.classList.toggle('opacity-0', collapsed);
-				button.dataset.state = collapsed ? 'expanded' : 'collapsed';
-				button.textContent = collapsed ? 'Hide code' : 'View code';
-			});
-		});
-	}
-
-	initCodePreviews();
-	document.addEventListener('astro:page-load', () => initCodePreviews());
-</script>

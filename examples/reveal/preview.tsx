@@ -16,7 +16,7 @@ export default function RevealPreview() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative flex flex-col items-start gap-4 p-8">
+    <div className="w-full relative flex flex-col items-start gap-4 p-8">
       <Button onClick={() => setOpen((v) => !v)}>
         {open ? "Hide menu" : "Show menu"}
       </Button>

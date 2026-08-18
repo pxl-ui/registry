@@ -56,7 +56,7 @@ export default function DayViewSuccessExample() {
         summary: "Car Maintenance",
         start: {
           date: inTwoDays,
-          dateTime: `${inTwoDays}T10:00`
+          dateTime: `${inTwoDays}T10:00`,
         },
       },
       {
@@ -87,46 +87,44 @@ export default function DayViewSuccessExample() {
         summary: "Book Club Meeting",
         start: {
           date: inSevenDays,
-          dateTime: `${inSevenDays}T19:00`
+          dateTime: `${inSevenDays}T19:00`,
         },
       },
     ];
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-23">
-      <WidgetArea size="md">
-        <DayView
-          status="success"
-          className="size-full"
-          forecast={{
-            hourly_units: {
-              temperature_2m: "°C",
-            },
-            hourly: {
-              time: hourlyTimeRange,
-              temperature_2m: [
-                23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6,
-                25.6, 25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3,
-                24.5, 25, 24.7,
-              ],
-              weather_code: [
-                0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3,
-                3, 51, 3,
-              ],
-              is_day: [
-                0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                1, 0, 0,
-              ],
-            },
-            daily: {
-              temperature_2m_max: [25.6],
-              temperature_2m_min: [22.4],
-            },
-          }}
-          events={events}
-        />
-      </WidgetArea>
-    </div>
+    <WidgetArea size="md">
+      <DayView
+        status="success"
+        className="size-full"
+        forecast={{
+          hourly_units: {
+            temperature_2m: "°C",
+          },
+          hourly: {
+            time: hourlyTimeRange,
+            temperature_2m: [
+              23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6, 25.6,
+              25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3, 24.5, 25,
+              24.7,
+            ],
+            weather_code: [
+              0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3, 3,
+              51, 3,
+            ],
+            is_day: [
+              0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+              0, 0,
+            ],
+          },
+          daily: {
+            temperature_2m_max: [25.6],
+            temperature_2m_min: [22.4],
+          },
+        }}
+        events={events}
+      />
+    </WidgetArea>
   );
 }

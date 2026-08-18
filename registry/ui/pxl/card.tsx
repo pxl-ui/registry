@@ -14,20 +14,27 @@ const cardVariants = cva(
         lg: "[--card-border:--spacing(1.5)] [--card-spacing:--spacing(1.5)]",
       },
       variant: {
-        "default": "",
-        "primary": "[--card:var(--color-primary)] [--card-foreground:var(--color-primary-foreground)]",
-        "secondary": "[--card:var(--color-secondary)] [--card-foreground:var(--color-secondary-foreground)]",
-        "muted": "[--card:var(--color-muted)] [--card-foreground:var(--color-muted-foreground)]",
-        "accent": "[--card:var(--color-muted)] [--card-foreground:var(--color-accent-foreground)]",
-        "info": "[--card:var(--color-info)] [--card-foreground:var(--color-info-foreground)]",
-        "success": "[--card:var(--color-success)] [--card-foreground:var(--color-success-foreground)]",
-        "danger": "[--card:var(--color-danger)] [--card-foreground:var(--color-danger-foreground)]",
-        "warning": "[--card:var(--color-warning)] [--card-foreground:var(--color-warning-foreground)]",
+        default: "",
+        primary:
+          "[--card:var(--color-primary)] [--card-foreground:var(--color-primary-foreground)]",
+        secondary:
+          "[--card:var(--color-secondary)] [--card-foreground:var(--color-secondary-foreground)]",
+        muted:
+          "[--card:var(--color-muted)] [--card-foreground:var(--color-muted-foreground)]",
+        accent:
+          "[--card:var(--color-muted)] [--card-foreground:var(--color-accent-foreground)]",
+        info: "[--card:var(--color-info)] [--card-foreground:var(--color-info-foreground)]",
+        success:
+          "[--card:var(--color-success)] [--card-foreground:var(--color-success-foreground)]",
+        danger:
+          "[--card:var(--color-danger)] [--card-foreground:var(--color-danger-foreground)]",
+        warning:
+          "[--card:var(--color-warning)] [--card-foreground:var(--color-warning-foreground)]",
       },
     },
     defaultVariants: {
       size: "default",
-      variant: "default"
+      variant: "default",
     },
   },
 );
@@ -84,10 +91,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-description"
-      className={cn(
-        "font-sans leading-4 text-sm",
-        className,
-      )}
+      className={cn("font-sans leading-4 text-sm", className)}
       {...props}
     />
   );
@@ -116,7 +120,10 @@ function CardContent({
   return (
     <ScrollAreaPrimitive.Root
       data-slot="card-content"
-      className={cn("p-(--card-spacing) relative flex-1 min-h-0 min-w-0", className)}
+      className={cn(
+        "p-(--card-spacing) relative flex-1 min-h-0 min-w-0",
+        className,
+      )}
       {...props}
     >
       <ScrollAreaPrimitive.Viewport
@@ -145,4 +152,11 @@ function CardContent({
   );
 }
 
-export { Card, CardContent, CardDescription, CardHeader, CardTitle, };
+export {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  cardVariants,
+};

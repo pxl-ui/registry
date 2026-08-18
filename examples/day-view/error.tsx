@@ -3,13 +3,12 @@ import { DayView } from "@/components/widgets/pxl/day-view";
 
 export default function DayViewErrorExample() {
   return (
-    <div className="flex items-center justify-center min-h-23">
-      <WidgetArea size="md">
-        <DayView 
-          status="error" 
-          errorMessage="Something Failed"
-          className="size-full" />
-      </WidgetArea>
-    </div>
+    <WidgetArea size="md">
+      <DayView
+        status="error"
+        errorMessage="Something Failed"
+        className="size-full"
+      />
+    </WidgetArea>
   );
 }

@@ -334,6 +334,11 @@ body, .header {
   }
 }
 
+.expressive-code {
+  --ec-codeBg: var(--muted);
+  --ec-frm-edBg: var(--muted);
+}
+
 .expressive-code pre {
   @apply border-none;
   /* --sl-line-height: 1rem; */
