@@ -17,7 +17,7 @@
   }
 
   .hg-button {
-    @apply grow items-center flex justify-center;
+    @apply grow items-center flex justify-center h-auto;
   
     span,
     span svg {

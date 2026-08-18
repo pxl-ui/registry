@@ -1,17 +1,52 @@
 import { Input as InputPrimitive } from "@base-ui/react/input";
+import { cva, type VariantProps } from "class-variance-authority";
 import { type ComponentProps, forwardRef } from "react";
 
 import { cn } from "@/lib/utils";
 
-const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(function Input(
-  { className, type, ...props },
-  ref,
-) {
+const inputWrapperVariants = cva(
+  "pixel-rounded pixel-border pixel-size-md [--pixel-color:var(--input)] has-[input:focus-visible]:[--pixel-color:var(--ring)] has-[input:disabled]:opacity-50 has-[input[aria-invalid=true]]:[--pixel-color:var(--destructive)]",
+  {
+    variants: {
+      size: {
+        default: "",
+        xs: "",
+        md: "",
+      },
+      defaultVariants: {
+        size: "default",
+      },
+    },
+  },
+);
+
+const inputVariants = cva(
+  "w-full min-w-0 bg-transparent transition-[color] outline-none file:inline-flex file:border-0 file:bg-transparent file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed",
+  {
+    variants: {
+      size: {
+        default: "px-2.5 py-1 h-9 text-base file:h-7 file:text-sm md:text-sm",
+        xs: "px-1.5 py-0.5 h-5 text-sm file:h-7 file:text-sm md:text-xs",
+        md: "px-2.5 py-1 h-9 text-base file:h-7 file:text-sm md:text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "default",
+    },
+  },
+);
+
+const Input = forwardRef<
+  HTMLInputElement,
+  Omit<ComponentProps<"input">, "size"> & VariantProps<typeof inputVariants>
+>(function Input({ className, size = "default", type, ...props }, ref) {
   return (
     <div
       data-slot="input-wrapper"
       className={cn(
-        "px-rounded-sm px-border-sm pixel-size-[3px] [--px-border-color:var(--input)] has-[input:focus-visible]:[--px-border-color:var(--ring)] has-[input:disabled]:opacity-50 has-[input[aria-invalid=true]]:[--px-border-color:var(--destructive)]",
+        inputWrapperVariants({
+          size,
+        }),
         className,
       )}
     >
@@ -19,7 +54,11 @@ const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(function Inp
         ref={ref}
         type={type}
         data-slot="input"
-        className="h-9 w-full min-w-0 bg-transparent px-2.5 py-1 text-base transition-[color] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed md:text-sm"
+        className={cn(
+          inputVariants({
+            size,
+          }),
+        )}
         {...props}
       />
     </div>

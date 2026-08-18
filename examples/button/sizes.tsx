@@ -6,7 +6,8 @@ export default function ButtonSizesExample() {
       <div className="flex flex-row flex-wrap gap-2.5">
         <Button size="2xs">2XS</Button>
         <Button size="xs">XS</Button>
-        <Button size="default">Default</Button>
+        <Button size="sm">SM</Button>
+        <Button size="md">MD</Button>
         <Button size="lg">LG</Button>
       </div>
       <div className="flex flex-row flex-wrap gap-2.5">
