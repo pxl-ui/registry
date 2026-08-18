@@ -8,7 +8,7 @@ import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
 export default function CardVariantsExample() {
   return (
-    <div className="flex flex-col gap-2.5 items-center justify-center min-h-92">
+    <div className="w-full flex flex-col gap-2.5 items-center justify-center min-h-92">
       <WidgetArea size="md">
         <Card size="lg" className="size-full" variant="primary">
           <CardHeader>

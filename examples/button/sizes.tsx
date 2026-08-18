@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/pxl/button";
 
 export default function ButtonSizesExample() {
   return (
-    <div className="min-h-23 flex flex-col gap-4 items-center justify-center">
+    <div className="w-full flex flex-col gap-4 items-center">
       <div className="flex flex-row flex-wrap gap-2.5">
         <Button size="2xs">2XS</Button>
         <Button size="xs">XS</Button>

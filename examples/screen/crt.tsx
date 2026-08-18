@@ -4,28 +4,26 @@ import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
 export default function ScreenCRTExample() {
   return (
-    <div className="flex items-center justify-center">
-      <WidgetArea size="sm">
-        <Screen 
-          className="size-full" variant="crt">
-          <Screen.Filter className="size-full flex items-center justify-center">
-            <SpriteCanvas
-              src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/sprites/tiny_chick.png"
-              animation="Idle"
-              size="lg"
-              atlas={{
-                frames: {
-                  "0": { frame: { x: 0, y: 0, w: 16, h: 16 } },
-                  "1": { frame: { x: 16, y: 0, w: 16, h: 16 } },
-                  "2": { frame: { x: 32, y: 0, w: 16, h: 16 } },
-                  "3": { frame: { x: 48, y: 0, w: 16, h: 16 } },
-                },
-                meta: { frameTags: [{ name: "Idle", from: 0, to: 3 }] },
-              }}
-            />
-          </Screen.Filter>
-        </Screen>
-      </WidgetArea>
-    </div>
+    <WidgetArea size="sm">
+      <Screen 
+        className="size-full" variant="crt">
+        <Screen.Filter className="size-full flex items-center justify-center">
+          <SpriteCanvas
+            src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/sprites/tiny_chick.png"
+            animation="Idle"
+            size="lg"
+            atlas={{
+              frames: {
+                "0": { frame: { x: 0, y: 0, w: 16, h: 16 } },
+                "1": { frame: { x: 16, y: 0, w: 16, h: 16 } },
+                "2": { frame: { x: 32, y: 0, w: 16, h: 16 } },
+                "3": { frame: { x: 48, y: 0, w: 16, h: 16 } },
+              },
+              meta: { frameTags: [{ name: "Idle", from: 0, to: 3 }] },
+            }}
+          />
+        </Screen.Filter>
+      </Screen>
+    </WidgetArea>
   );
 }

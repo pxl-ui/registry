@@ -9,7 +9,7 @@ export default function ScreenDarkExample() {
   const [background, setBackground] =
     useState<ComponentProps<typeof Screen>["background"]>("none");
   return (
-    <div className="flex flex-col gap-2 items-center justify-center">
+    <div className="w-full flex flex-col gap-2 items-center justify-center">
       <Button
         onClick={() =>
           setBackground((prev) => (prev === "none" ? "filter" : "none"))
