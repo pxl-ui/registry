@@ -1,0 +1,123 @@
+---
+
+
+
+
+
+
+
+import { Button } from '@/components/ui/pxl/button';
+import { url } from '~/lib/utils';
+
+import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
+import Search from 'virtual:starlight/components/Search';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+import config from 'virtual:starlight/user-config';
+
+/**
+ * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
+ */
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+
+---
+
+<div class="flex gap-(--sl-nav-gap) justify-between items-center h-full">
+  <nav class="items-center gap-0 hidden lg:flex">
+    <ul class="flex gap-2">
+      <li>
+        <a href={url("")}>
+          <Button size="lg" variant="ghost" 
+            aria-expanded={Astro.locals.starlightRoute.id === ""}>
+            Home
+          </Button>
+        </a>
+      </li>
+      <li>
+        <a href={url("docs")}>
+          <Button size="lg" variant="ghost"
+            aria-expanded={Astro.locals.starlightRoute.id === "docs"}>
+            Docs
+          </Button>
+        </a>
+      </li>
+      <li>
+        <a href={url("components")}>
+          <Button size="lg" variant="ghost"
+            aria-expanded={Astro.locals.starlightRoute.id === "components"}>
+            Components
+          </Button>
+        </a>
+      </li>
+      <li>
+        <a href={url("widgets")}>
+          <Button size="lg" variant="ghost"
+            aria-expanded={Astro.locals.starlightRoute.id === "widgets"}>
+            Widgets
+          </Button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
+    <div class="md:w-48 lg:w-40 xl:w-64">
+  		{shouldRenderSearch && <Search />}
+    </div>
+    <div class="hidden md:flex print:hidden gap-4 items-center">
+      <div class="sl-flex social-icons">
+        <SocialIcons />
+      </div>
+      <ThemeSelect />
+      <LanguageSelect />
+    </div>
+  </div>
+</div>
+
+<style>
+	@layer starlight.core {
+
+		.right-group,
+		.social-icons {
+			gap: 1rem;
+			align-items: center;
+		}
+		.social-icons::after {
+			content: '';
+			height: 2rem;
+			border-inline-end: 1px solid var(--sl-color-gray-5);
+		}
+
+		@media (min-width: 50rem) {
+			:global(:root[data-has-sidebar]) {
+				--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+			}
+			:global(:root:not([data-has-toc])) {
+				--__toc-width: 0rem;
+			}
+			.header {
+				--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+				--__main-column-fr: calc(
+					(
+							100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+								(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+								var(--sl-content-width)
+						) / 2
+				);
+				display: grid;
+				grid-template-columns:
+        /* 1 (site title): runs up until the main content column’s left edge or the width of the title, whichever is the largest  */
+					minmax(
+						calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
+						auto
+					)
+					/* 2 (search box): all free space that is available. */
+					1fr
+					/* 3 (right items): use the space that these need. */
+					auto;
+				align-content: center;
+			}
+		}
+	}
+</style>

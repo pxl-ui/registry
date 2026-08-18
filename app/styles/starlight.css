@@ -224,7 +224,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 
 
-  /** Tailwind colors **/
   --primary: var(--color-sky-100);
   --primary-foreground: var(--color-sky-600);
   --info: var(--color-teal-100);
@@ -235,18 +234,6 @@
   --warning-foreground: var(--color-orange-600);
   --danger: var(--color-red-100);
   --danger-foreground: var(--color-red-600);
-
-  /** DUEL colors **/
-  /* --primary: var(--color-duel-abyss-100);
-  --primary-foreground: var(--color-duel-abyss-600);
-  --info: var(--color-duel-teal-100);
-  --info-foreground: var(--color-duel-teal-600);
-  --success: var(--color-duel-moss-100);
-  --success-foreground: var(--color-duel-moss-600);
-  --warning: var(--color-duel-honey-100);
-  --warning-foreground: var(--color-duel-honey-600);
-  --danger: var(--color-duel-magenta-100);
-  --danger-foreground: var(--color-duel-magenta-600); */
 
 }
 
@@ -293,21 +280,6 @@
   --warning-foreground: var(--color-orange-400);
   --danger: var(--color-red-800);
   --danger-foreground: var(--color-red-400);
-
-
-  /** DUEL colors **/
-  /* 
-  --primary: var(--color-duel-abyss-700);
-  --primary-foreground: var(--color-duel-abyss-50);
-  --info: var(--color-duel-teal-700);
-  --info-foreground: var(--color-duel-teal-50);
-  --success: var(--color-duel-moss-700);
-  --success-foreground: var(--color-duel-moss-50);
-  --warning: var(--color-duel-honey-700);
-  --warning-foreground: var(--color-duel-honey-50);
-  --danger: var(--color-duel-magenta-700);
-  --danger-foreground: var(--color-duel-magenta-50); 
-  */
 }
 
 @layer base {
@@ -317,6 +289,26 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body, .header {
+  @apply bg-background;
+}
+
+.header, .content-panel, .sidebar-pane, .right-sidebar {
+  @apply border-none;
+}
+
+.sidebar-pane {
+  @apply scrollbar-thin scrollbar-thumb-border;
+
+  li a[aria-current=page] {
+    @apply border-none shadow-none pixel-border bg-muted pixel-color-muted text-foreground;
+  }
+}
+
+.pagination-links a {
+  @apply border-none shadow-none pixel-border pixel-size-lg hover:pixel-color-foreground; 
 }
 
 .site-title {
@@ -345,4 +337,28 @@
 .expressive-code pre {
   @apply border-none;
   /* --sl-line-height: 1rem; */
+}
+
+
+.starlight-aside {
+  @apply border-none pixel-border pixel-size-md;
+
+
+  a {
+    @apply font-bold underline-offset-4 hover:underline;
+  }
+
+  &.starlight-aside--caution {
+    @apply bg-warning pixel-color-warning-foreground;
+    * {
+      @apply text-warning-foreground;
+    }
+  }
+
+  &.starlight-aside--tip {
+    @apply bg-info pixel-color-info-foreground;
+    * {
+      @apply text-info-foreground;
+    }
+  }
 }

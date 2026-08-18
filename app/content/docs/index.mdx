@@ -1,20 +1,12 @@
 ---
 title: PXL-UI
-description: Shadcn components for retro-style widgets and small screens.
+description: A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it.
 template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  title: |
-    Welcome to
-    <span
-      class="font-mono text-7xl font-bold whitespace-nowrap bg-synthwave bg-clip-text text-transparent pixel-drop-foreground pixel-size-lg"
-    >
-      PXL-UI
-    </span>
-  tagline: Shadcn components for retro-style widgets and small screens.
-  image:
-    html: '<div class="size-64 sprite-sheet sprite-cols-2 sprite-rows-2 sprite-animate-[0,1] sprite-duration-[1000ms]" style="background-image: url(regulus.png)"></div>'
-  actions:
-    - text: Get Started
-      link: /guides/getting-started/
-      icon: right-arrow
+hero: {}
 ---
+
+import {
+  LandingPageShowcase
+} from "~/components";
+
+<LandingPageShowcase client:load />

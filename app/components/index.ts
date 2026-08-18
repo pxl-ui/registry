@@ -5,6 +5,7 @@ import ColorWheel from "./color-wheel.astro";
 import Description from "./Description.astro";
 import Example from "./example.astro";
 import InstallCommand from "./install-command.astro";
+import LandingPageShowcase from "./LandingPageShowcase";
 import TypographyCascade from "./typography-cascade.astro";
 import TypographySample from "./typography-sample.astro";
 
@@ -16,6 +17,7 @@ export {
   Description,
   Example,
   InstallCommand,
+  LandingPageShowcase,
   TypographyCascade,
   TypographySample,
 };

@@ -44,6 +44,7 @@
     "weather-i18n": "^1.2.0"
   },
   "devDependencies": {
+    "@pagefind/default-ui": "^1.5.2",
     "@types/node": "^22.13.10",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

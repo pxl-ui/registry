@@ -15,9 +15,9 @@ export default defineConfig({
     react(),
     starlight({
       title: "PXL UI",
-      logo: {
-        src: './app/assets/logo.png',
-      },
+      // logo: {
+      //   src: './app/assets/logo.png',
+      // },
       expressiveCode: {
         shiki: {
           bundledLangs: ["sh", "bash", "typescript", "tsx"],
@@ -61,6 +61,14 @@ export default defineConfig({
         }
       ],
       customCss: ["./app/styles/starlight.css"],
+      components: {
+        Header: './app/components/Header.astro',
+        Hero: './app/components/Hero.astro',
+        Search: './app/components/Search.astro',
+        SocialIcons: './app/components/SocialIcons.astro',
+        ThemeSelect: './app/components/ThemeSelect.astro',
+        Footer: './app/components/Footer.astro'
+      },
     }),
   ],
   vite: {
