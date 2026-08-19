@@ -14,7 +14,8 @@ const buttonVariants = cva(
     },
     variants: {
       border: {
-        default: "pixel-border pixel-rounded pixel-size-md pixel-color-[transparent]",
+        default:
+          "pixel-border pixel-rounded pixel-size-md pixel-color-[transparent]",
         none: "",
         outline: "pixel-border pixel-rounded pixel-size-md",
       },
@@ -27,23 +28,29 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
           "pixel-color-[transparent] hover:bg-muted hover:pixel-color-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:pixel-color-muted aria-expanded:text-foreground dark:hover:bg-muted/50 dark:hover:pixel-color-muted/50",
-        destructive: "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
+        destructive:
+          "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "pixel-color-[transparent] text-primary-foreground underline-offset-4 hover:underline",
         info: "bg-info text-info-foreground fill-info-foreground hover:bg-info/80",
-        success: "bg-success text-success-foreground fill-success-foreground hover:bg-success/80",
-        warning: "bg-warning text-warning-foreground fill-warning-foreground hover:bg-warning/80",
-        danger: "bg-danger text-danger-foreground fill-danger-foreground hover:bg-danger/80",
+        success:
+          "bg-success text-success-foreground fill-success-foreground hover:bg-success/80",
+        warning:
+          "bg-warning text-warning-foreground fill-warning-foreground hover:bg-warning/80",
+        danger:
+          "bg-danger text-danger-foreground fill-danger-foreground hover:bg-danger/80",
       },
       size: {
         default:
           "h-8 gap-1.5 px-2.5 text-sm has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        "4xs": "h-2.5 gap-0.5 px-0.5 text-4xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        "3xs": "h-3 gap-0.5 px-0.5 text-3xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        "2xs": "h-4 gap-0.5 px-1 text-2xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        xs:    "h-6 gap-1 px-2 text-xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        sm:    "h-7 gap-1 px-2.5 text-sm has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
-        md:
-          "h-8 gap-1.5 px-2.5 text-md has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+        "4xs":
+          "h-2.5 gap-0.5 px-0.5 text-4xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
+        "3xs":
+          "h-3 gap-0.5 px-0.5 text-3xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
+        "2xs":
+          "h-4 gap-0.5 px-1 text-2xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
+        xs: "h-6 gap-1 px-2 text-xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
+        sm: "h-7 gap-1 px-2.5 text-sm has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
+        md: "h-8 gap-1.5 px-2.5 text-md has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
         lg: "h-9 gap-1.5 px-2.5 text-lg has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
         icon: "size-8 [&_svg:not([class*='size-'])]:size-4",
         "icon-xs": "size-6 [&_svg:not([class*='size-'])]:size-3",
@@ -56,22 +63,22 @@ const buttonVariants = cva(
       {
         border: "default",
         size: "4xs",
-        className: "pixel-size-sm"
+        className: "pixel-size-sm",
       },
       {
         border: "outline",
         size: "4xs",
-        className: "pixel-size-sm"
+        className: "pixel-size-sm",
       },
       {
         border: "default",
         size: "3xs",
-        className: "pixel-size-sm"
+        className: "pixel-size-sm",
       },
       {
         border: "outline",
         size: "3xs",
-        className: "pixel-size-sm"
+        className: "pixel-size-sm",
       },
       {
         border: "outline",
@@ -86,73 +93,58 @@ const buttonVariants = cva(
       {
         border: "outline",
         variant: "primary",
-        className: "pixel-color-primary-foreground hover:pixel-color-primary-foreground/80",
+        className:
+          "pixel-color-primary-foreground hover:pixel-color-primary-foreground/80",
       },
       {
         border: "outline",
         variant: "secondary",
-        className: "pixel-color-secondary-foreground  hover:pixel-color-[color-mix(in_oklch,var(--secondary-foreground),var(--foreground)_5%)] aria-expanded:pixel-color-secondary-foreground",
+        className:
+          "pixel-color-secondary-foreground  hover:pixel-color-[color-mix(in_oklch,var(--secondary-foreground),var(--foreground)_5%)] aria-expanded:pixel-color-secondary-foreground",
       },
       {
         border: "outline",
         variant: "info",
-        className: "pixel-color-info-foreground hover:pixel-color-info-foreground/80",
+        className:
+          "pixel-color-info-foreground hover:pixel-color-info-foreground/80",
       },
       {
         border: "outline",
         variant: "success",
-        className: "pixel-color-success-foreground hover:pixel-color-success-foreground/80",
+        className:
+          "pixel-color-success-foreground hover:pixel-color-success-foreground/80",
       },
       {
         border: "outline",
         variant: "danger",
-        className: "pixel-color-danger-foreground hover:pixel-color-danger-foreground/80",
+        className:
+          "pixel-color-danger-foreground hover:pixel-color-danger-foreground/80",
       },
       {
         border: "outline",
         variant: "warning",
-        className: "pixel-color-warning-foreground hover:pixel-color-warning-foreground/80",
-      }
-    ]
+        className:
+          "pixel-color-warning-foreground hover:pixel-color-warning-foreground/80",
+      },
+    ],
   },
 );
 
-type Props<T extends ElementType> = ButtonPrimitive.Props &
-  VariantProps<typeof buttonVariants> & {
-    as?: T;
-    asChild?: boolean;
-    ref?: React.Ref<HTMLButtonElement>;
-  };
-
-function Button<T extends ElementType = "button">({
-  as,
-  children,
-  asChild,
+function Button({
+  border = "default",
+  className,
+  variant,
+  size,
   ...props
-}: Props<T>) {
-  const { border = "default", variant, size, className } = props;
-
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
   return (
     <ButtonPrimitive
-      {...props}
-      className={cn(
-        buttonVariants({ border, variant, size }),
-        "rounded-none active:translate-y-1 transition-transform relative inline-flex items-center justify-center border-none",
-        size === "icon" && "mx-1 my-0",
-        className,
-      )}
       data-slot="button"
       data-variant={variant}
       data-size={size}
-    >
-      {asChild ? (
-        <span className="relative inline-flex items-center justify-center gap-1.5">
-          {children}
-        </span>
-      ) : (
-        children
-      )}
-    </ButtonPrimitive>
+      className={cn(buttonVariants({ border, variant, size, className }))}
+      {...props}
+    />
   );
 }
 

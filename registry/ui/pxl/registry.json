@@ -215,6 +215,23 @@
       ]
     },
     {
+      "name": "item",
+      "type": "registry:component",
+      "title": "Item",
+      "description": "A versatile component for displaying content with media, title, description, and actions.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "registryDependencies": [
+        "pxl-ui/registry/separator"
+      ],
+      "files": [
+        {
+          "path": "item.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/item.tsx"
+        }
+      ]
+    },
+    {
       "name": "keyboard",
       "type": "registry:component",
       "title": "Keyboard",

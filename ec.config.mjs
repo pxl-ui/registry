@@ -8,8 +8,12 @@ export default defineEcConfig({
     bundledLangs: ["sh", "bash", "typescript", "tsx"],
   },
   defaultProps: {
+    showLineNumbers: false,
     overridesByLang: {
       "sh": {
+        showLineNumbers: false,
+      },
+      "text": {
         showLineNumbers: false,
       },
     },

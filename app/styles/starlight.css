@@ -368,8 +368,17 @@ body, .header {
   }
 
   ul li a {
-    @apply px-0 text-xs;
+    @apply text-xs;
   }
+
+  ul li ul {
+    @apply mt-2;
+  }
+
+/* 
+  ul > li > a {
+    @apply px-0 text-xs;
+  } data-[depth=3]:pl-4 data-[depth=4]:pl-6 */
 }
 
 .site-title {
@@ -427,7 +436,17 @@ body, .header {
   }
 
   h3:not(.not-content, .not-content *) {
-    @apply font-heading font-normal text-base;
+    @apply font-sans font-semibold text-base text-black;
+  }
+
+  table:not(.not-content, .not-content *) {
+    @apply table w-full;
+  }
+
+  .expressive-code:not(.not-content, .not-content *) {
+    pre {
+      @apply pixel-size-lg pixel-color-border pixel-border;
+    }
   }
 }
 
@@ -436,7 +455,7 @@ body, .header {
   --ec-frm-edBg: var(--muted);
 
   pre {
-    @apply scrollbar-none font-mono;
+    @apply scrollbar-none font-mono border-none;
   }
 }
 

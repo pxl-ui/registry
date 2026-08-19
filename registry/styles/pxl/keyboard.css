@@ -17,7 +17,7 @@
   }
 
   .hg-button {
-    @apply grow items-center flex justify-center h-auto;
+    @apply grow items-center flex justify-center h-full flex-1;
   
     span,
     span svg {
@@ -25,7 +25,7 @@
     }
 
     &.hg-standardBtn {
-      @apply aspect-square;
+      @apply aspect-square flex-1;
     }
 
     &.hg-keyMarker {
@@ -33,7 +33,16 @@
     }
 
     &.hg-button-space {
-      @apply grow-5;
+      @apply grow-5 aspect-5/1;
+    }
+
+    &.hg-button-backspace,
+    &.hg-button-shift {
+      @apply grow-[1.5] h-auto;
+    }
+
+    &.hg-button-shift {
+      @apply grow-[1.5];
     }
   }
 
@@ -67,4 +76,11 @@
   --keyboard-higlight-foreground: --value(--color-*, [color]);
   --keyboard-highlight-foreground-alpha: calc(--modifier(integer) * 1%);
   --keyboard-highlight-foreground: --alpha(--value(--color-*, [color]) / var(--keyboard-highlight-foreground-alpha, 100%));
+}
+
+.simple-keyboard .hg-button.hg-standardBtn.hg-keyMarker,
+.simple-keyboard .hg-button.hg-functionBtn.hg-keyMarker,
+.simple-keyboard .hg-candidate-box-list-item.hg-keyMarker,
+.simple-keyboard .hg-candidate-box-close.hg-keyMarker {
+  @apply shadow-none! rounded-none!;
 }

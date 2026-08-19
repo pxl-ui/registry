@@ -1,6 +1,7 @@
 
 import { Aside } from '@astrojs/starlight/components';
 
+import Code from "./Code.astro";
 import ColorPalette from "./ColorPalette";
 import ColorPaletteShowcase from "./ColorPaletteShowcase.astro";
 import ColorThemeShowcase from "./ColorThemeShowcase.astro";
@@ -17,6 +18,7 @@ import TypographySample from "./TypographySample.astro";
 
 export {
   Aside,
+  Code,
   ColorPalette,
   ColorPaletteShowcase,
   ColorThemeShowcase,

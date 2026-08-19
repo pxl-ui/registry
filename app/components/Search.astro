@@ -40,7 +40,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 			{
 				/* TODO: Make the layout of this button flexible to accommodate different word lengths. Currently hard-coded for English: “Cancel” */
 			}
-			<button data-close-modal class="sl-flex md:sl-hidden">
+			<button type="button" data-close-modal class="sl-flex md:sl-hidden">
 				{Astro.locals.t('search.cancelLabel')}
 			</button>
 			{

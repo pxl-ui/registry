@@ -1,5 +1,9 @@
 ---
 
+
+
+import { Button, buttonVariants } from '@/components/ui/pxl/button';
+import { cn } from '@/lib/utils';
 import registry from "~/lib/registry";
 import { registryItemFromRouteId } from "~/lib/utils";
 
@@ -10,13 +14,40 @@ const item = itemName ? registry.get(itemName) : null;
 const title = item?.title ?? Astro.locals.starlightRoute.entry.data.title;
 const description = item?.description ?? Astro.locals.starlightRoute.entry.data.description;
 
+const { dir, pagination } = Astro.locals.starlightRoute;
+const { prev, next } = pagination;
+
 ---
 <div class="flex flex-col gap-2 mt-8">
-  <h1
-    class="font-heading text-3xl text-foreground italic"
-    id="_top">
-    {title}
-  </h1>
+  <div class="flex items-center justify-between md:items-start">
+    <h1
+      class="font-heading italic scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl"
+      id="_top">
+      {title}
+    </h1>
+    <div class="docs-nav flex items-center gap-2">
+      <div class="hidden sm:block">
+
+      </div>
+      <div class="ml-auto flex gap-2">
+        {prev ? (
+          <a href={prev.href} rel="prev" class={cn(buttonVariants({
+            size: "icon",
+            variant: "secondary",
+          }), "md:size-7")}>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 11v2H4v-2zM8 13v2H6v-2zm2 2v2H8v-2zm2 2v2h-2v-2zm-4-6V9H6v2z"/><path d="M10 15V7H8v8zm2 2V5h-2v12z"/></svg>
+          </a>
+        ) : <p></p>}
+        {next && (
+          <a href={next.href} rel="next">
+            <Button size="icon" variant="secondary" className="md:size-7">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M4 11v2h16v-2zm12 2v2h2v-2zm-2 2v2h2v-2zm-2 2v2h2v-2zm4-6V9h2v2z"/><path d="M14 15V7h2v8zm-2 2V5h2v12z"/></svg>
+            </Button>
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
   {
     description &&
     (<p class="text-muted-foreground text-base">
@@ -24,3 +55,4 @@ const description = item?.description ?? Astro.locals.starlightRoute.entry.data.
     </p>)
   }
 </div>
+
