@@ -22,7 +22,7 @@
       "type": "registry:component",
       "title": "Animated Icon",
       "description": "Animate your svg icons using motion",
-      "categories": ["pxl-ui", "components", "icons", "animations"],
+      "categories": ["pxl-ui", "components", "content", "icons", "animations"],
       "files": [
         {
           "path": "animated-icon.tsx",
@@ -36,7 +36,7 @@
       "type": "registry:component",
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "content"],
       "files": [
         {
           "path": "avatar.tsx",
@@ -50,7 +50,7 @@
       "type": "registry:component",
       "title": "Badge",
       "description": "Displays a badge or a component that looks like a badge.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "content"],
       "files": [
         {
           "path": "badge.tsx",
@@ -64,7 +64,7 @@
       "type": "registry:component",
       "title": "Button",
       "description": "Displays a button or a component that looks like a button.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "button.tsx",
@@ -78,7 +78,7 @@
       "type": "registry:component",
       "title": "Calendar",
       "description": "A calendar component that allows users to select a date or a range of dates.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "content"],
       "dependencies": [
         "react-day-picker"
       ],
@@ -99,7 +99,7 @@
       "type": "registry:component",
       "title": "Card",
       "description": "Displays a card with header, content, and footer.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "layout"],
       "files": [
         {
           "path": "card.tsx",
@@ -113,7 +113,7 @@
       "type": "registry:component",
       "title": "Command",
       "description": "Command menu for search and quick actions.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "navigation"],
       "dependencies": [
         "cmdk"
       ],
@@ -134,7 +134,7 @@
       "type": "registry:component",
       "title": "Dialog",
       "description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "registryDependencies": [
         "pxl-ui/registry/button"
       ],
@@ -151,7 +151,7 @@
       "type": "registry:component",
       "title": "Dialogue Box",
       "description": "Displays a dialogue box with animated text and portrait.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "content"],
       "dependencies": [
         "streamdown"
       ],
@@ -219,7 +219,7 @@
       "type": "registry:component",
       "title": "Keyboard",
       "description": "Renders a virtual keyboard",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": [
         "react-simple-keyboard",
         "simple-keyboard-key-navigation"
@@ -255,7 +255,7 @@
       "type": "registry:component",
       "title": "Popover",
       "description": "Displays rich content in a portal, triggered by a button.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "popover.tsx",
@@ -269,7 +269,7 @@
       "type": "registry:component",
       "title": "Radio Group",
       "description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "radio-group.tsx",
@@ -283,7 +283,7 @@
       "type": "registry:component",
       "title": "Reveal",
       "description": "Content display/hide animation",
-      "categories": ["pxl-ui", "components", "ui", "animations"],
+      "categories": ["pxl-ui", "components", "interaction", "animations"],
       "files": [
         {
           "path": "reveal.tsx",
@@ -297,7 +297,7 @@
       "type": "registry:component",
       "title": "Scores",
       "description": "Gradient list to display scores",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "content"],
       "registryDependencies": [
         "pxl-ui/registry/avatar",
         "pxl-ui/registry/text-stroke"
@@ -315,7 +315,7 @@
       "type": "registry:component",
       "title": "Screen",
       "description": "Custom filters for different screen displays",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "layout"],
       "files": [
         {
           "path": "screen.tsx",
@@ -343,7 +343,7 @@
       "type": "registry:component",
       "title": "Select",
       "description": "Displays a list of options for the user to pick from—triggered by a button.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "select.tsx",
@@ -357,7 +357,7 @@
       "type": "registry:component",
       "title": "Separator",
       "description": "Visually or semantically separates content.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "layout"],
       "files": [
         {
           "path": "separator.tsx",
@@ -371,7 +371,7 @@
       "type": "registry:component",
       "title": "Sprite Background",
       "description": "A background image renderer for single sprite-sheets",
-      "categories": ["pxl-ui", "components", "sprite-sheet", "animations"],
+      "categories": ["pxl-ui", "components", "content", "sprite-sheet", "animations"],
       "files": [
         {
           "path": "sprite-background.tsx",
@@ -385,7 +385,7 @@
       "type": "registry:component",
       "title": "Sprite Canvas",
       "description": "A canvas renderer for single sprite-sheets",
-      "categories": ["pxl-ui", "components", "sprite-sheet", "canvas", "animations"],
+      "categories": ["pxl-ui", "components", "content", "sprite-sheet", "canvas", "animations"],
       "registryDependencies": [
         "pxl-ui/registry/sprite",
         "pxl-ui/registry/use-sprite"
@@ -403,7 +403,7 @@
       "type": "registry:component",
       "title": "Text Marquee",
       "description": "Marquee animated text for long texts on tiny screens",
-      "categories": ["pxl-ui", "components", "ui", "texts", "animations"],
+      "categories": ["pxl-ui", "components", "content", "texts", "animations"],
       "files": [
         {
           "path": "text-marquee.tsx",
@@ -417,7 +417,7 @@
       "type": "registry:component",
       "title": "Text Stroke",
       "description": "Text stroke effects to recreate retro style game indicators",
-      "categories": ["pxl-ui", "components", "ui", "texts"],
+      "categories": ["pxl-ui", "components", "content", "texts"],
       "files": [
         {
           "path": "text-stroke.tsx",

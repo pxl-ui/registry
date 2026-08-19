@@ -14,7 +14,7 @@ const { title, description, ...attributes } = Astro.props;
 <a {...attributes}>
   <Card className="cursor-pointer pixel-color-border! hover:pixel-color-foreground!">
     <CardHeader className="flex justify-between">
-      <CardTitle className="h-auto flex gap-2 items-center leading-5! text-base! mr-4 truncate">
+      <CardTitle className="h-auto flex gap-2 items-center leading-5! text-sm! mr-4 truncate">
         <slot name="avatar" />
         <span class="truncate">{title}</span>
       </CardTitle>
@@ -29,7 +29,7 @@ const { title, description, ...attributes } = Astro.props;
   </svg>
     </CardHeader>
     <CardContent>
-  		<p class="line-clamp-1 text-muted-foreground text-xs" set:html={description ?? "&nbsp;"} />
+  		<p class="line-clamp-1 text-muted-foreground text-2xs" set:html={description ?? "&nbsp;"} />
     </CardContent>
   </Card>
 </a>

@@ -11,6 +11,9 @@
       "docs": "Download font from https://stormgold.itch.io/able-font",
       "author": "stormgold <https://stormgold.itch.io/>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 1
+      },
       "files": [
         {
           "type": "registry:style",
@@ -49,6 +52,9 @@
       "description": "Coral Pixels is a color font inspired by subpixel rendering techniques.",
       "author": "Tanukizamurai <https://github.com/tanukifont/Coral-Pixels>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 9
+      },
       "font": {
         "family": "'Coral Pixels', sans-serif",
         "provider": "google",
@@ -63,7 +69,9 @@
       "title": "DotGothic16",
       "description": "Dotgothic 16 is based on the old 16x16 Gothic bitmap font that recreates the feel of pixel fonts from old video games, cell phones and computer screens on print.",
       "author": "Fontworks Inc. <https://github.com/fontworks-fonts/DotGothic16>",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-text"],"meta": {
+        "order": 7
+      },
       "font": {
         "family": "'DotGothic16', sans-serif",
         "provider": "google",
@@ -79,6 +87,9 @@
       "description": "Geist Pixel is a display typeface family of five pixel-based styles, each with a distinct visual character.",
       "author": "Vercel <https://vercel.com/font?type=pixel>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 6
+      },
       "font": {
         "family": "'Geist Pixel', sans-serif",
         "provider": "google",
@@ -109,6 +120,9 @@
       "description": "Micro 5 is a teeny-tiny typeface that can fit anywhere on your project.",
       "author": "Sarah Cadigan-Fried <https://github.com/scfried/soft-type-micro>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 5
+      },
       "font": {
         "family": "'Micro 5', sans-serif",
         "provider": "google",
@@ -125,6 +139,9 @@
       "author": "datagoblin <https://datagoblin.itch.io/>",
       "docs": "Download font from https://datagoblin.itch.io/monogram",
       "categories": ["pxl-ui", "font-family", "font-monospace"],
+      "meta": {
+        "order": 1
+      },
       "files": [
         {
           "type": "registry:file",
@@ -149,6 +166,9 @@
       "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
       "author": "Neale Davidson <https://www.pixelsagas.com/>",
       "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "order": 1
+      },
       "files": [
         {
           "type": "registry:file",
@@ -172,6 +192,9 @@
       "description": "Pixel display font. It works great for your retro party designs, game creation or pretty much anything that demands a “go back in time” vibe.",
       "author": "Stefie Justprince <github.com/eifetx/Pixelify-Sans>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 3
+      },
       "font": {
         "family": "'Pixelify Sans Variable', sans-serif",
         "provider": "google",
@@ -187,6 +210,9 @@
       "description": "Press Start 2P is a bitmap font based on the font design from 1980s Namco arcade games. It works best at sizes of 8px, 16px and other multiples of 8.",
       "author": "Cody \"CodeMan38\" Boisclair <https://fonts.google.com/?query=CodeMan38>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 8
+      },
       "font": {
         "family": "'Press Start 2P', sans-serif",
         "provider": "google",
@@ -203,6 +229,9 @@
       "docs": "Download font from https://github.com/dithernaut/quanta-strike",
       "author": "dithernaut <https://dithernaut.com/posts/pixel-scaling/>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 2
+      },
       "files": [
         {
           "type": "registry:style",
@@ -221,6 +250,9 @@
       "description": "tiny5 is a variable-width, 5-pixel font playing with the concept of least amount of information while producing both legible and aesthetically pleasing text.",
       "author": "Stefan Schmidt <https://github.com/Gissio/font_tiny5>",
       "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "order": 4
+      },
       "font": {
         "family": "'Tiny5', sans-serif",
         "provider": "google",

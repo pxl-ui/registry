@@ -8,9 +8,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/ca
 import {
   TypographyCascade,
   TypographySample,
+  LinkCard,
 } from "~/components";
 
-import { url } from "~/lib/utils";
+import { lists } from "~/lib/fonts";
+import { itemBasename, routeFromRegistryItem, url } from "~/lib/utils";
 
 
 import "~/examples/fonts/able-5.css"
@@ -33,187 +35,65 @@ PXL-UI provides fonts for `font-heading`, `font-sans`, and `font-mono`.
 Please note that each fonts may require different methods of installation or downloading typographic resources.
 
 ## Heading Fonts
-
-Default value: <a href={url("fonts/pixel-digivolve")}>Pixel Digivolve</a>
+> Default value: <a href={url("fonts/pixel-digivolve")}>Pixel Digivolve</a>
 
 These fonts are useful for displaying titles, headings, or fancy badges and buttons (normally in uppercase).
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  <a href={url("fonts/pixel-digivolve")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Pixel Digivolve</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-pixel-digivolve">
-        <TypographySample className="font-pixel-digivolve" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/jacquarda-bastarda-9")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Jacquarda Bastarda 9</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-jacquarda-bastarda-9">
-        <TypographySample className="font-jacquarda-bastarda-9" />
-      </CardContent>
-    </Card>
-  </a>
-
+  {lists.headings.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "fonts")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <TypographySample 
+        slot="avatar"
+        class={`font-${itemBasename(item.name, "fonts")}`} />
+    </LinkCard>
+  ))}
 
 </div>
 
 ## Text Fonts
-
-Default value: <a href={url("fonts/pixel-digivolve")}>Able 5</a>
+> Default value: <a href={url("fonts/pixel-digivolve")}>Able 5</a>
 
 These fonts are used everywhere to display regular texts. Therefore, they tend to be legible and support a wide variety of symbols.
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
-  <a href={url("fonts/able-5")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Able 5</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-able-5">
-        <TypographySample className="font-able-5" />
-      </CardContent>
-    </Card>
-  </a>
-  <a href={url("fonts/quanta-strike")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Quanta Strike</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-quanta-strike">
-        <TypographySample className="font-quanta-strike" />
-      </CardContent>
-    </Card>
-  </a>
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-
-  <a href={url("fonts/pixelify-sans")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Pixelify Sans</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-pixelify-sans">
-        <TypographySample className="font-pixelify-sans" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/tiny5")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Tiny5</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-tiny5">
-        <TypographySample className="font-tiny5" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/micro-5")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Micro 5</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-micro-5">
-        <TypographySample className="font-micro-5" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/geist-pixel")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Geist Pixel</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-geist-pixel">
-        <TypographySample className="font-geist-pixel" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/dotgothic16")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>DotGothic16</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-dotgothic16">
-        <TypographySample className="font-dotgothic16" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/press-start-2p")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Press Start 2P</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-press-start-2p">
-        <TypographySample className="font-press-start-2p" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/coral-pixels")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Coral Pixels</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-coral-pixels">
-        <TypographySample className="font-coral-pixels" />
-      </CardContent>
-    </Card>
-  </a>
-
+  {lists.texts.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "fonts")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <TypographySample 
+        slot="avatar"
+        class={`font-${itemBasename(item.name, "fonts")}`} />
+    </LinkCard>
+  ))}
 
 </div>
 
 ## Monospaced Fonts
 
-Default value: <a href={url("fonts/monogram")}>Monogram</a>
+> Default value: <a href={url("fonts/monogram")}>Monogram</a>
 
 In contexts where the spacing of each character must be similar across all letters, they are ideal for code blocks or command-line terminals.
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  <a href={url("fonts/monogram")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Monogram</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-monogram">
-        <TypographySample className="font-monogram" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/bytesized")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>Bytesized</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-bytesized">
-        <TypographySample className="font-bytesized" />
-      </CardContent>
-    </Card>
-  </a>
-
-  <a href={url("fonts/vt323")}>
-    <Card>
-      <CardHeader>
-        <CardTitle>VT323</CardTitle>
-      </CardHeader>
-      <CardContent className="flex items-center justify-center font-vt323">
-        <TypographySample className="font-vt323" />
-      </CardContent>
-    </Card>
-  </a>
-
+  {lists.monospaces.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "fonts")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <TypographySample 
+        slot="avatar"
+        class={`font-${itemBasename(item.name, "fonts")}`} />
+    </LinkCard>
+  ))}
 
 </div>

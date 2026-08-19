@@ -368,10 +368,6 @@ body, .header {
   }
 }
 
-.pagination-links a {
-  @apply border-none shadow-none pixel-border pixel-size-lg hover:pixel-color-foreground; 
-}
-
 .site-title {
   img {
     @apply pixelated size-8 dark:invert-100;
@@ -382,6 +378,10 @@ body, .header {
 }
 
 .content-panel *:not(.not-content) {
+
+  hr:not(.not-content, .not-content *) {
+    @apply mt-8;
+  }
 
   .sl-heading-wrapper:not(.not-content, .not-content *) {
     &.level-h2 {

@@ -3,17 +3,71 @@ title: Components
 sidebar:
   order: 6
 ---
+import { LinkCard } from "~/components";
+import { lists } from "~/lib/components";
+import { routeFromRegistryItem } from "~/lib/utils";
 
 ## Layout
 > <p className="text-muted-foreground">How do I organize the interface?</p>
 
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  {lists.layout.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "layout")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
 ## Interaction
 > <p className="text-muted-foreground">How does the user interact with it?</p>
 
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  {lists.interaction.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "interaction")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
 
 ## Navigation
 > <p className="text-muted-foreground">How does the user move through it?</p>
 
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  {lists.navigation.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "navigation")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
 
 ## Content
 > <p className="text-muted-foreground">What does the interface show?</p>
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  {lists.content.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "content")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>

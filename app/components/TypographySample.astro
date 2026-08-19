@@ -9,7 +9,8 @@ export type Props = {
 
 const { class: className, lowercase = true } = Astro.props;
 
-let sample = "AaBbCcDdEeFfGgHhIiJjKkLlMmÑnOoPpQqRrSsTtUuVvWwXxYyZz";
+// let sample = "AaBbCcDdEeFfGgHhIiJjKkLlMmÑnOoPpQqRrSsTtUuVvWwXxYyZz";
+let sample = "Aa";
 
 if (lowercase === false) {
   sample = [...sample]
@@ -18,6 +19,6 @@ if (lowercase === false) {
 }
 
 ---
-<span class={cn("w-full truncate", className)}>
-{sample}
+<span class={cn("not-italic text-sm text-muted-foreground", className)}>
+  {sample}
 </span>

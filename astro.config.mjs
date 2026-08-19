@@ -62,6 +62,7 @@ export default defineConfig({
         SocialIcons: './app/components/SocialIcons.astro',
         ThemeSelect: './app/components/ThemeSelect.astro',
         Footer: './app/components/Footer.astro',
+        Pagination: './app/components/Pagination.astro',
         PageTitle: './app/components/PageTitle.astro'
       },
     }),

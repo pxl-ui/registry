@@ -2,4 +2,21 @@
 title: Widgets
 sidebar:
   order: 7
+tableOfContents: false
 ---
+import { LinkCard } from "~/components";
+import { lists } from "~/lib/components";
+import { routeFromRegistryItem } from "~/lib/utils";
+
+<div class="not-content grid sm:grid-cols-2 gap-2.5">
+
+  {lists.widgets.map(item => (
+    <LinkCard 
+      href={routeFromRegistryItem(item.name, "widgets")} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
