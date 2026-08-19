@@ -399,6 +399,20 @@
       ]
     },
     {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "Tabs",
+      "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "path": "tabs.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/tabs.tsx"
+        }
+      ]
+    },
+    {
       "name": "text-marquee",
       "type": "registry:component",
       "title": "Text Marquee",
