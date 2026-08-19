@@ -1,4 +1,3 @@
-import { basename } from "node:path";
 
 export const baseUrl = import.meta.env.BASE_URL;
 
@@ -32,7 +31,7 @@ export function registryItemFromRouteId(routeId: string) {
     return null;
   }
 
-  const itemName = basename(routeId);
+  const itemName = routeId.split("/").reverse()[0];
 
   return REGISTRY_URL_GROUPS[group].prefix ?
     `${REGISTRY_URL_GROUPS[group].prefix}${itemName}` : itemName;

@@ -142,15 +142,17 @@ function DialogueMessage({
 
 function DialoguePortrait({
   alt,
+  className,
   fallback,
   src,
 }: {
   alt?: string;
+  className?: string;
   fallback?: string;
   src?: string;
 }) {
   return (
-    <Avatar size="xl">
+    <Avatar className={className} size="xl">
       <AvatarImage alt={alt} src={src} />
       <AvatarFallback>{fallback}</AvatarFallback>
     </Avatar>

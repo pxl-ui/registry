@@ -35,8 +35,8 @@ function ScoreTitle({
 }: { index: number } & PropsWithChildren) {
   return (
     <TextStroke
-      className="whitespace-pre leading-4.5"
-      size="sm"
+      className="whitespace-pre"
+      size="xs"
       variant={index <= 3 ? "synthwave" : "chrome"}
     >
       {children}
@@ -46,7 +46,7 @@ function ScoreTitle({
 
 function ScoreDescription({ children }: PropsWithChildren) {
   return (
-    <span className="text-muted-foreground font-mono italic font-extrabold text-base leading-4.5">
+    <span className="text-muted-foreground font-mono italic font-extrabold text-xs leading-4.5">
       {children}
     </span>
   );

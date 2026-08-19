@@ -52,15 +52,15 @@ const shouldRenderSearch =
         </a>
       </li>
       <li>
-        <a href={url("components")}>
+        <a href={url("docs/components")}>
           <Button size="sm" variant="ghost"
-            aria-expanded={Astro.locals.starlightRoute.id === "components"}>
+            aria-expanded={["layout", "interaction", "navigation", "content"].some(id => Astro.locals.starlightRoute.id.startsWith(id))}>
             Components
           </Button>
         </a>
       </li>
       <li>
-        <a href={url("widgets")}>
+        <a href={url("docs/widgets")}>
           <Button size="sm" variant="ghost"
             aria-expanded={Astro.locals.starlightRoute.id === "widgets"}>
             Widgets

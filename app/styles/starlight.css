@@ -310,6 +310,14 @@ body, .header {
     }
   }
 
+  details {
+    @apply mt-2;
+  }
+
+  .top-level > li:nth-child(1 of :has(> details)) > details {
+    @apply mt-4;
+  }
+
   li {
     @apply border-s-0;
   }

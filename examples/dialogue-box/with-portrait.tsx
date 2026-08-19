@@ -9,9 +9,10 @@ export default function WithPortrait() {
           onEnd={() => console.log("onEnd")}
         />
         <DialoguePortrait 
-          alt="@shadcn" 
-          fallback="CN"
-          src="https://github.com/shadcn.png"
+          className="bg-primary"
+          alt="@hero" 
+          fallback="IHS"
+           src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png"
           />
       </DialogueBox>
   );

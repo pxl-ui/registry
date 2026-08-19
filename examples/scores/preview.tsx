@@ -6,14 +6,14 @@ export default function ScoresExample() {
       <Scores
         className="w-36"
         items={[
-          { avatar: "https://github.com/shadcn.png", description: "AAA", title: "1,000,000", },
-          { avatar: "https://github.com/shadcn.png", description: "ABB", title: "900,000", },
-          { avatar: "https://github.com/shadcn.png", description: "KNM", title: "700,000", },
-          { avatar: "https://github.com/shadcn.png", description: "XLL", title: "550,000", },
-          { avatar: "https://github.com/shadcn.png", description: "RSS", title: "90,000", },
-          { avatar: "https://github.com/shadcn.png", description: "AAA", title: "75,000", },
-          { avatar: "https://github.com/shadcn.png", description: "CKL", title: "60,000", },
-          { avatar: "https://github.com/shadcn.png", description: "ABB", title: "1,000", }
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "IHS", title: "1,000,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "AAA", title: "900,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "KNM", title: "700,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "XLL", title: "550,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "RSS", title: "90,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "AAA", title: "75,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "CKL", title: "60,000", },
+          { avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", description: "ABB", title: "1,000", }
         ]} 
       />
     </div>

@@ -18,7 +18,7 @@ import { url } from "~/lib/utils";
 function SpriteWidget() {
   return (
     <WidgetArea size="sm">
-      <a className="size-full" href={url("components/sprite-canvas")}>
+      <a className="size-full" href={url("content/sprite-canvas")}>
         <Card size="lg" className="size-full">
           <CardContent className="p-8">
             <div
@@ -122,7 +122,7 @@ function DayViewWidget() {
 function CalendarWidget() {
   return (
     <WidgetArea size="sm">
-      <a className="size-full" href={url("components/calendar")}>
+      <a className="size-full" href={url("content/calendar")}>
         <Card size="lg" className="size-full">
           <CardContent>
             <Calendar />
@@ -149,7 +149,7 @@ function KeyboardWidget() {
 
   return (
     <WidgetArea size="sm">
-      <a className="size-full" href={url("components/keyboard")}>
+      <a className="size-full" href={url("interaction/keyboard")}>
         <Card size="lg" className="size-full">
           <CardHeader>
             <CardDescription>Input your name</CardDescription>
@@ -181,7 +181,7 @@ function KeyboardWidget() {
 function MenuWidget() {
   return (
     <WidgetArea size="sm">
-      <a className="size-full" href={url("components/wheel-list")}>
+      <a className="size-full" href={url("navigation/wheel-list")}>
         <Card size="lg" className="size-full">
           <CardHeader>
             <CardTitle>Menu</CardTitle>
