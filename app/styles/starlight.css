@@ -303,8 +303,15 @@ body, .header {
 .sidebar-pane {
   @apply bg-background scrollbar-thin scrollbar-thumb-border;
 
+  .top-level > li {
+    @apply mt-0;
+    & > a {
+      @apply py-[4.2px] text-sm!;
+    }
+  }
+
   li {
-    @apply ps-0 ms-0 border-s-0;
+    @apply border-s-0;
   }
 
   li a span,
@@ -326,10 +333,6 @@ body, .header {
 
   li summary svg {
     @apply hidden;
-  }
-
-  .top-level > li ul {
-    @apply ps-1.5;
   }
 }
 

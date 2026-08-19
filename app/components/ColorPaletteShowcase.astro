@@ -33,7 +33,7 @@ const { colors, name } = parse(palette);
           <h2 class="font-sans text-sm sm:w-30">{c.name}</h2>
           <p style={{
             backgroundColor: formatColor(c, "oklch"), // We need to force the color because this classes are only available on run time
-          }} class={cn("w-full h-10", `bg-pico-${c.name}`)}></p>
+          }} class={cn("pixel-rounded pixel-size-lg w-full h-10", `bg-pico-${c.name}`)}></p>
         </div>
       ))}
     </div>

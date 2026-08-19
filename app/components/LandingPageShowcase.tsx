@@ -24,7 +24,7 @@ function SpriteWidget() {
             <div
               className="size-full sprite-sheet sprite-cols-2 sprite-rows-2 sprite-animate-[0,1] sprite-duration-[1000ms]"
               style={{
-                backgroundImage: "url(regulus.png)",
+                backgroundImage: "url(sprites/regulus.png)",
               }}
             >
 

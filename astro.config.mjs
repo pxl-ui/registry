@@ -15,9 +15,6 @@ export default defineConfig({
     react(),
     starlight({
       title: "PXL UI",
-      // logo: {
-      //   src: './app/assets/logo.png',
-      // },
       expressiveCode: {
         shiki: {
           bundledLangs: ["sh", "bash", "typescript", "tsx"],
@@ -31,21 +28,22 @@ export default defineConfig({
         },
       ],
       sidebar: [
+        { autogenerate: { directory: "docs" } },
         {
-          label: "Guides",
-          items: [{ autogenerate: { directory: "guides" } }],
+          label: "Layout",
+          items: [{ autogenerate: { directory: "layout" } }],
         },
         {
-          label: "Utilities",
-          items: [{ autogenerate: { directory: "utilities" } }],
+          label: "Interaction",
+          items: [{ autogenerate: { directory: "interaction" } }],           
         },
         {
-          label: "Layouts",
-          items: [{ autogenerate: { directory: "layouts" } }],
+          label: "Navigation",
+          items: [{ autogenerate: { directory: "navigation" } }],     
         },
         {
-          label: "Components",
-          items: [{ autogenerate: { directory: "components" } }],
+          label: "Content",
+          items: [{ autogenerate: { directory: "content" } }],     
         },
         {
           label: "Widgets",
@@ -67,7 +65,8 @@ export default defineConfig({
         Search: './app/components/Search.astro',
         SocialIcons: './app/components/SocialIcons.astro',
         ThemeSelect: './app/components/ThemeSelect.astro',
-        Footer: './app/components/Footer.astro'
+        Footer: './app/components/Footer.astro',
+        PageTitle: './app/components/PageTitle.astro'
       },
     }),
   ],

@@ -44,9 +44,9 @@ const shouldRenderSearch =
         </a>
       </li>
       <li>
-        <a href={url("docs")}>
+        <a href={url("docs/installation")}>
           <Button size="sm" variant="ghost"
-            aria-expanded={Astro.locals.starlightRoute.id === "docs"}>
+            aria-expanded={Astro.locals.starlightRoute.id.startsWith("docs")}>
             Docs
           </Button>
         </a>

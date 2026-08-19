@@ -10,7 +10,10 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string; }> = {
   colors: { prefix: "colors-" },
   fonts: { prefix: "fonts-" },
   components: {},
-  layouts: {},
+  layout: {},
+  interaction: {},
+  navigation: {},
+  content: {},
   widgets: {},
 }
 

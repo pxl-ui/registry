@@ -149,8 +149,8 @@ function GreenLightFilter() {
       className="hidden absolute w-0 h-0"
       aria-hidden="true"
     >
-      <filter id="green-light-filter" color-interpolation-filters="sRGB">
-        <feFlood flood-color="hsla(84, 21%, 53%, 0.28)" result="flood" />
+      <filter id="green-light-filter" colorInterpolationFilters="sRGB">
+        <feFlood floodColor="hsla(84, 21%, 53%, 0.28)" result="flood" />
         <feComposite
           in="flood"
           in2="SourceGraphic"

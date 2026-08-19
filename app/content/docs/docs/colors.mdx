@@ -1,9 +1,10 @@
 ---
 title: Colors
 sidebar:
-  order: 4
+  order: 5
 ---
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
+import { cardVariants, Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
+import { cn } from "@/lib/utils";
 
 import {
   ColorThemeShowcase,
@@ -56,37 +57,48 @@ PXL-UI includes predefined gradients inspired by various video game indicators.
 
 The gradients are defined as `--background-image` variables in TailwindCSS, so they can be easily used with `bg-{{gradient_name}}` classes.
 
-<div class="not-content pixel-border pixel-color-[oklch(0.556_0_0)] dark:pixel-color-[oklch(0.708_0_0)]  bg-[oklch(0.97_0_0)] dark:bg-[oklch(0.269_0_0)] p-2 space-y-2">
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-chrome w-full h-10 text-black font-sans text-xl px-3 flex items-center">Chrome</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-cryo w-full h-10 text-black font-sans text-xl px-3 flex items-center">Cryo</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-fire w-full h-10 text-black font-sans text-xl px-3 flex items-center">Fire</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-loot w-full h-10 text-black font-sans text-xl px-3 flex items-center">Loot</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-plasma w-full h-10 text-black font-sans text-xl px-3 flex items-center">Plasma</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-toxic w-full h-10 text-black font-sans text-xl px-3 flex items-center">Toxic</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-shadow w-full h-10 text-black font-sans text-xl px-3 flex items-center">Shadow</p>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-2 items-center">
-    <p class="bg-synthwave w-full h-10 text-black font-sans text-xl px-3 flex items-center">Synthwave</p>
+<div class={cn(
+  "not-content",
+  cardVariants(),
+  "pixel-color-border!"
+)}>
+	<div
+		data-slot="card-content"
+		class="flex-1 min-h-0 p-(--card-spacing)">
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-chrome w-full h-10 text-black font-sans text-sm px-3 flex items-center">Chrome</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-cryo w-full h-10 text-black font-sans text-sm px-3 flex items-center">Cryo</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-fire w-full h-10 text-black font-sans text-sm px-3 flex items-center">Fire</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-loot w-full h-10 text-black font-sans text-sm px-3 flex items-center">Loot</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-plasma w-full h-10 text-black font-sans text-sm px-3 flex items-center">Plasma</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-toxic w-full h-10 text-black font-sans text-sm px-3 flex items-center">Toxic</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-shadow w-full h-10 text-black font-sans text-sm px-3 flex items-center">Shadow</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
+        <p class="pixel-rounded pixel-size-lg bg-synthwave w-full h-10 text-black font-sans text-sm px-3 flex items-center">Synthwave</p>
+      </div>
+    </div>
   </div>
 </div>
 
+
 A common use case is to use them to decorate texts.
 
-<div class="not content">
-  <p class="font-mono text-4xl font-bold whitespace-nowrap bg-clip-text text-transparent pixel-drop-foreground bg-loot">+150 XP</p>
+<div class="not-content">
+  <p class="font-mono text-base font-bold whitespace-nowrap bg-clip-text text-transparent pixel-drop-foreground pixel-size-md bg-loot">+150 XP</p>
 </div>
 
 ## Palettes
