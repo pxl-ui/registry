@@ -1,27 +1,12 @@
 ---
 title: Arne 16
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/arne-16.css"
 
-import Arne16Raw from "@/components/colors/pxl/arne-16.gpl?raw";
-
-<ColorPaletteShowcase palette={Arne16Raw} />
+<ColorPalette client:load palette="arne-16" />
 
 ## Installation
 
 <InstallCommand item="colors-arne-16" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

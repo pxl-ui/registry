@@ -285,6 +285,8 @@
   text-decoration-thickness: var(--qs-px);
   text-underline-offset: var(--qs-px);
 
+  &.text-4xs,
+  .text-4xs,
   &.text-3xs,
   .text-3xs,
   &.text-2xs,

@@ -1,5 +1,6 @@
 GIMP Palette
 Name: DMG-01
+Columns: 4
 #
 # Description: Colors sampled from many different photographs and compared against a real Gameboy. There's no definitive "real" Gameboy palette, and every physical one will have slight differences, but I feel this is the most hardware-accurate one overall.
 # Colors: 4

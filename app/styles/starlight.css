@@ -301,7 +301,7 @@ body, .header {
 }
 
 .sidebar-pane {
-  @apply bg-background scrollbar-thin scrollbar-thumb-border;
+  @apply bg-background scrollbar-thin scrollbar-thumb-border md:w-72;
 
   .top-level > li {
     @apply mt-0;
@@ -344,6 +344,10 @@ body, .header {
   }
 }
 
+.right-sidebar-container {
+  @apply md:w-72;
+}
+
 .right-sidebar {
 
   .right-sidebar-panel {
@@ -376,6 +380,23 @@ body, .header {
     @apply font-normal italic font-heading pr-0.5 text-black dark:text-white;
   }
 }
+
+.main-frame {
+  @apply md:ps-72;
+
+  .main-pane {
+    @apply w-full flex-1;
+    
+    .content-panel {
+      @apply md:px-0 md:max-w-160 md:mx-auto;
+    }
+  }
+}
+
+.main-frame > div {
+  @apply w-full;
+}
+
 
 .content-panel *:not(.not-content) {
 

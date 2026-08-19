@@ -1,27 +1,12 @@
 ---
 title: Fantasy 24
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/fantasy-24.css"
 
-import Fantasy24Raw from "@/components/colors/pxl/fantasy-24.gpl?raw";
-
-<ColorPaletteShowcase palette={Fantasy24Raw} />
+<ColorPalette client:load palette="fantasy-24" />
 
 ## Installation
 
 <InstallCommand item="colors-fantasy-24" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

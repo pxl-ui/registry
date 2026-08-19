@@ -1,30 +1,14 @@
 ---
 title: DUEL Compat
 ---
-import { Aside } from '@astrojs/starlight/components';
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { Aside, ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/duel-compat.css"
 
-import DuelRaw from "@/components/colors/pxl/duel-compat.gpl?raw";
-
-<ColorPaletteShowcase palette={DuelRaw} />
+<ColorPalette client:load palette="duel-compat" />
 
 ## Installation
 
 <Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
 
 <InstallCommand item="colors-duel-compat" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

@@ -1,5 +1,6 @@
 GIMP Palette
 Name: Catppuccin Mocha
+Columns: 12
 #
 250 240 238 Rosewater 50
 249 237 235 Rosewater 100
@@ -10,6 +11,7 @@ Name: Catppuccin Mocha
 234 214 210 Rosewater 600
 216 198 195 Rosewater 700
 196 179 177 Rosewater 800
+196 179 177 Rosewater 850
 173 158 157 Rosewater 900
 145 133 133 Rosewater 950
 249 232 232 Flamingo 50
@@ -21,6 +23,7 @@ Name: Catppuccin Mocha
 231 196 196 Flamingo 600
 214 181 181 Flamingo 700
 194 164 165 Flamingo 800
+194 164 165 Flamingo 850
 171 145 147 Flamingo 900
 143 121 124 Flamingo 950
 250 227 243 Pink 50
@@ -32,6 +35,7 @@ Name: Catppuccin Mocha
 234 185 221 Pink 600
 216 171 204 Pink 700
 196 155 186 Pink 800
+196 155 186 Pink 850
 173 137 165 Pink 900
 145 115 139 Pink 950
 231 217 251 Mauve 50
@@ -43,6 +47,7 @@ Name: Catppuccin Mocha
 194 159 236 Mauve 600
 179 146 218 Mauve 700
 162 133 199 Mauve 800
+162 133 199 Mauve 850
 143 117 176 Mauve 900
 120 99 148 Mauve 950
 249 208 217 Red 50
@@ -54,6 +59,7 @@ Name: Catppuccin Mocha
 232 133 161 Red 600
 214 123 149 Red 700
 195 111 136 Red 800
+195 111 136 Red 850
 172 98 121 Red 900
 144 83 103 Red 950
 245 214 219 Maroon 50
@@ -65,6 +71,7 @@ Name: Catppuccin Mocha
 224 153 165 Maroon 600
 207 141 152 Maroon 700
 188 128 139 Maroon 800
+188 128 139 Maroon 850
 166 113 124 Maroon 900
 139 95 106 Maroon 950
 253 221 207 Peach 50
@@ -76,6 +83,7 @@ Name: Catppuccin Mocha
 239 171 129 Peach 600
 221 158 120 Peach 700
 200 143 110 Peach 800
+200 143 110 Peach 850
 177 126 99 Peach 900
 148 106 85 Peach 950
 252 241 220 Yellow 50
@@ -87,6 +95,7 @@ Name: Catppuccin Mocha
 238 216 167 Yellow 600
 220 199 155 Yellow 700
 199 181 141 Yellow 800
+199 181 141 Yellow 850
 176 160 126 Yellow 900
 147 134 107 Yellow 950
 217 242 215 Green 50
@@ -98,6 +107,7 @@ Name: Catppuccin Mocha
 159 217 154 Green 600
 146 200 143 Green 700
 133 182 130 Green 800
+133 182 130 Green 850
 117 160 116 Green 900
 99 134 99 Green 950
 211 241 235 Teal 50
@@ -109,6 +119,7 @@ Name: Catppuccin Mocha
 141 216 204 Teal 600
 131 199 188 Teal 700
 119 181 172 Teal 800
+119 181 172 Teal 850
 105 160 152 Teal 900
 88 134 129 Teal 950
 207 238 245 Sky 50
@@ -120,6 +131,7 @@ Name: Catppuccin Mocha
 131 210 225 Sky 600
 121 194 208 Sky 700
 110 176 189 Sky 800
+110 176 189 Sky 850
 97 155 167 Sky 900
 82 130 141 Sky 950
 201 229 246 Sapphire 50
@@ -130,7 +142,8 @@ Name: Catppuccin Mocha
 116 199 236 Sapphire 500
 111 190 226 Sapphire 600
 102 176 209 Sapphire 700
-93 159 190 Sapphire 800
+93 159 190 Sapphire 8000
+93 159 190 Sapphire 850
 83 140 168 Sapphire 900
 70 118 142 Sapphire 950
 207 222 253 Blue 50
@@ -142,6 +155,7 @@ Name: Catppuccin Mocha
 131 172 239 Blue 600
 121 159 221 Blue 700
 110 144 201 Blue 800
+110 144 201 Blue 850
 97 127 178 Blue 900
 82 107 150 Blue 950
 222 226 255 Lavender 50
@@ -153,6 +167,7 @@ Name: Catppuccin Mocha
 172 181 243 Lavender 600
 159 168 225 Lavender 700
 144 152 204 Lavender 800
+144 152 204 Lavender 850
 127 134 181 Lavender 900
 107 112 153 Lavender 950
 205 214 244 Neutral 50

@@ -1,23 +1,12 @@
 ---
 title: Paperback
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/paperback.css"
 
-import PaperbackRaw from "@/components/colors/pxl/paperback.gpl?raw";
-
-<ColorPaletteShowcase palette={PaperbackRaw} />
+<ColorPalette client:load palette="paperback" variants={[]} />
 
 ## Installation
 
 <InstallCommand item="colors-paperback" />
-
-## Base
-
-<ColorThemeShowcase />

@@ -1,23 +1,12 @@
 ---
 title: JustParchment8
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/justparchment8.css"
 
-import JustParchment8Raw from "@/components/colors/pxl/justparchment8.gpl?raw";
-
-<ColorPaletteShowcase palette={JustParchment8Raw} />
+<ColorPalette client:load palette="justparchment8" variants={[]} />
 
 ## Installation
 
 <InstallCommand item="colors-justparchment8" />
-
-## Base
-
-<ColorThemeShowcase />

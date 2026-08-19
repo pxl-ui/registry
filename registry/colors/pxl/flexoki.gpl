@@ -1,11 +1,10 @@
 GIMP Palette
 Name: Flexoki
-Columns: 15
+Columns: 13
 #
 # Description: An inky color scheme for prose and code.
 # Url: https://stephango.com/flexoki
 #
-255 252 240 Paper
 242 240 229 Base 50
 230 228 217 Base 100
 218 216 206 Base 150
@@ -19,7 +18,6 @@ Columns: 15
 52  51  49  Base 850
 40  39  38  Base 900
 28  27  26  Base 950
-16  15  15  Black
 
 255 225 213 Red 50
 255 202 187 Red 100
@@ -132,3 +130,6 @@ Columns: 15
 79  27  57  Magenta 850
 57  23  43  Magenta 900
 36  19  29  Magenta 950
+
+255 252 240 Paper
+16  15  15  Black

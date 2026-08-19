@@ -1,29 +1,12 @@
 ---
 title: Catppuccin Macchiato
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
-
-import { url } from "~/lib/utils";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/catppuccin-macchiato.css"
 
-import CatpuccinMacchiatoRaw from "@/components/colors/pxl/catppuccin-macchiato.gpl?raw";
-
-<ColorPaletteShowcase palette={CatpuccinMacchiatoRaw} />
+<ColorPalette client:load palette="catppuccin-macchiato" />
 
 ## Installation
 
 <InstallCommand item="colors-catppuccin-macchiato" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

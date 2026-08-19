@@ -2,26 +2,14 @@
 title: DMG-01
 ---
 import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
+  ColorPalette,
   InstallCommand
 } from "~/components";
 
 import "~/examples/colors/dmg-01.css"
 
-import DMG01Raw from "@/components/colors/pxl/dmg-01.gpl?raw";
-
-<ColorPaletteShowcase palette={DMG01Raw} />
+<ColorPalette client:load palette="dmg-01" />
 
 ## Installation
 
 <InstallCommand item="colors-dmg-01" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

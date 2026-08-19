@@ -1,27 +1,12 @@
 ---
 title: DUEL
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
-import "~/examples/colors/duel.css"
+import "~/examples/colors/duel.css";
 
-import DuelRaw from "@/components/colors/pxl/duel.gpl?raw";
-
-<ColorPaletteShowcase palette={DuelRaw} />
+<ColorPalette client:load palette="duel" />
 
 ## Installation
 
 <InstallCommand item="colors-duel" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

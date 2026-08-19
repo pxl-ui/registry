@@ -1,28 +1,12 @@
 ---
 title: PICO-8
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  Description,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/pico-8.css"
 
-import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
-
-<ColorPaletteShowcase palette={PICO8Raw} />
+<ColorPalette client:load palette="pico-8" />
 
 ## Installation
 
 <InstallCommand item="colors-pico-8" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

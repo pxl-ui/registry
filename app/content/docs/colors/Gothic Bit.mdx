@@ -1,23 +1,12 @@
 ---
 title: Gothic Bit
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/gothic-bit.css"
 
-import GothicBitRaw from "@/components/colors/pxl/gothic-bit.gpl?raw";
-
-<ColorPaletteShowcase palette={GothicBitRaw} />
+<ColorPalette client:load palette="gothic-bit" variants={[]} />
 
 ## Installation
 
 <InstallCommand item="colors-gothic-bit" />
-
-## Base
-
-<ColorThemeShowcase />

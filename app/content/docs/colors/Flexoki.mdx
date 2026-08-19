@@ -1,27 +1,12 @@
 ---
 title: Flexoki
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/flexoki.css"
 
-import FlexokiRaw from "@/components/colors/pxl/flexoki.gpl?raw";
-
-<ColorPaletteShowcase palette={FlexokiRaw} />
+<ColorPalette client:load palette="flexoki" />
 
 ## Installation
 
 <InstallCommand item="colors-flexoki" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

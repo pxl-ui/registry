@@ -1,27 +1,12 @@
 ---
 title: NEStopia
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/nestopia.css"
 
-import NestopiaRaw from "@/components/colors/pxl/nestopia.gpl?raw";
-
-<ColorPaletteShowcase palette={NestopiaRaw} />
+<ColorPalette client:load palette="nestopia" />
 
 ## Installation
 
 <InstallCommand item="colors-nestopia" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

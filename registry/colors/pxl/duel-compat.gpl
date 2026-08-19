@@ -1,5 +1,6 @@
 GIMP Palette
 Name: Duel Compat
+Columns: 9
 # Author: Arilyn
 # Description: 
 # Colors: 256
@@ -62,6 +63,7 @@ Name: Duel Compat
 169 209 193 Emerald 100
 138 193 150 Emerald 200
 135 174 142 Emerald 400
+135 174 142 Emerald 500
 113 149 125 Emerald 600
 91	 123 105 Emerald 700
 71	 101 90	 Emerald 800
@@ -223,6 +225,7 @@ Name: Duel Compat
 186 199 219 Mist 100
 171 174 190 Mist 200
 132 135 149 Mist 400
+132 135 149 Mist 500
 115 115 127 Mist 600
 91	 92	 105 Mist 700
 72	 71	 77	 Mist 800

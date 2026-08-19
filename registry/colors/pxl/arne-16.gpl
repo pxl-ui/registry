@@ -1,5 +1,6 @@
 GIMP Palette
 Name: Arne 16
+Columns: 3
 #Description: Created by <a href="http://androidarts.com/palette/16pal.htm">Arne</a>.
 #Colors: 16
 224 111 139 Red 50
@@ -14,7 +15,12 @@ Name: Arne 16
 247 226 107 Amber 50
 235 137 49	 Amber 500
 164 100 34	 Amber 950
-255 255 255 White
 157 157 157 Neutral 50
+157 157 157 Neutral 500
 27	 38	 50	 Neutral 950
+255 255 255 White
+255 255 255 White
+255 255 255 White
+0	 0	 0	 Black
+0	 0	 0	 Black
 0	 0	 0	 Black

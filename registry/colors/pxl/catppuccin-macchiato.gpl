@@ -1,5 +1,6 @@
 GIMP Palette
 Name: Catppuccin Macchiato
+Columns: 12
 #
 250 238 236 Rosewater 50
 248 234 232 Rosewater 100
@@ -10,6 +11,7 @@ Name: Catppuccin Macchiato
 233 209 205 Rosewater 600
 215 193 190 Rosewater 700
 196 176 173 Rosewater 800
+196 176 173 Rosewater 850
 173 155 155 Rosewater 900
 145 131 132 Rosewater 950
 248 229 229 Flamingo 50
@@ -21,6 +23,7 @@ Name: Catppuccin Macchiato
 229 189 190 Flamingo 600
 212 175 176 Flamingo 700
 192 159 161 Flamingo 800
+192 159 161 Flamingo 850
 170 141 144 Flamingo 900
 143 119 123 Flamingo 950
 250 225 243 Pink 50
@@ -32,6 +35,7 @@ Name: Catppuccin Macchiato
 234 181 220 Pink 600
 216 167 204 Pink 700
 196 152 186 Pink 800
+196 152 186 Pink 850
 174 134 166 Pink 900
 146 114 141 Pink 950
 229 214 251 Mauve 50
@@ -43,6 +47,7 @@ Name: Catppuccin Macchiato
 189 153 235 Mauve 600
 175 142 218 Mauve 700
 159 129 199 Mauve 800
+159 129 199 Mauve 850
 140 114 177 Mauve 900
 118 97 150 Mauve 950
 246 207 211 Red 50
@@ -54,6 +59,7 @@ Name: Catppuccin Macchiato
 226 129 144 Red 600
 209 120 134 Red 700
 190 109 124 Red 800
+190 109 124 Red 850
 168 97 112 Red 900
 141 83 98 Red 950
 247 212 214 Maroon 50
@@ -65,6 +71,7 @@ Name: Catppuccin Macchiato
 227 146 153 Maroon 600
 210 135 143 Maroon 700
 191 123 131 Maroon 800
+191 123 131 Maroon 850
 169 110 118 Maroon 900
 142 93 103 Maroon 950
 250 218 204 Peach 50
@@ -76,6 +83,7 @@ Name: Catppuccin Macchiato
 234 162 122 Peach 600
 216 149 114 Peach 700
 196 136 106 Peach 800
+196 136 106 Peach 850
 174 121 97 Peach 900
 146 102 86 Peach 950
 247 235 214 Yellow 50
@@ -87,6 +95,7 @@ Name: Catppuccin Macchiato
 227 203 153 Yellow 600
 210 187 142 Yellow 700
 191 170 130 Yellow 800
+191 170 130 Yellow 850
 169 151 117 Yellow 900
 142 127 102 Yellow 950
 217 237 211 Green 50
@@ -98,6 +107,7 @@ Name: Catppuccin Macchiato
 159 208 143 Green 600
 147 193 133 Green 700
 133 175 123 Green 800
+133 175 123 Green 850
 118 155 111 Green 900
 100 130 97 Green 950
 208 235 231 Teal 50
@@ -109,6 +119,7 @@ Name: Catppuccin Macchiato
 133 204 193 Teal 600
 123 188 179 Teal 700
 112 171 164 Teal 800
+112 171 164 Teal 850
 99 151 146 Teal 900
 85 127 125 Teal 950
 210 236 242 Sky 50
@@ -120,6 +131,7 @@ Name: Catppuccin Macchiato
 139 205 217 Sky 600
 128 190 201 Sky 700
 117 173 184 Sky 800
+117 173 184 Sky 850
 104 153 164 Sky 900
 88 129 139 Sky 950
 204 228 242 Sapphire 50
@@ -131,6 +143,7 @@ Name: Catppuccin Macchiato
 120 187 218 Sapphire 600
 111 173 202 Sapphire 700
 101 157 185 Sapphire 800
+101 157 185 Sapphire 850
 90 139 164 Sapphire 900
 77 118 140 Sapphire 950
 207 219 250 Blue 50
@@ -142,6 +155,7 @@ Name: Catppuccin Macchiato
 132 165 233 Blue 600
 122 153 216 Blue 700
 111 139 197 Blue 800
+111 139 197 Blue 850
 99 123 175 Blue 900
 84 104 149 Blue 950
 223 225 252 Lavender 50
@@ -153,6 +167,7 @@ Name: Catppuccin Macchiato
 175 181 237 Lavender 600
 162 167 220 Lavender 700
 147 152 200 Lavender 800
+147 152 200 Lavender 850
 130 134 178 Lavender 900
 109 114 151 Lavender 950
 202 211 245 Neutral 50

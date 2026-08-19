@@ -1,5 +1,6 @@
 GIMP Palette
 Name: Catppuccin Latte
+Columns: 12
 #
 230 198 196 Rosewater 50
 228 188 184 Rosewater 100
@@ -10,6 +11,7 @@ Name: Catppuccin Latte
 210 131 114 Rosewater 600
 194 121 105 Rosewater 700
 175 109 94 Rosewater 800
+175 109 94 Rosewater 850
 154 95 82 Rosewater 900
 128 78 67 Rosewater 950
 230 193 196 Flamingo 50
@@ -21,6 +23,7 @@ Name: Catppuccin Latte
 211 114 114 Flamingo 600
 194 105 105 Flamingo 700
 176 94 94 Flamingo 800
+176 94 94 Flamingo 850
 154 82 82 Flamingo 900
 128 67 67 Flamingo 950
 237 193 225 Pink 50
@@ -32,6 +35,7 @@ Name: Catppuccin Latte
 223 112 194 Pink 600
 206 103 178 Pink 700
 186 93 161 Pink 800
+186 93 161 Pink 850
 164 81 142 Pink 900
 136 66 117 Pink 950
 196 181 242 Mauve 50
@@ -43,6 +47,7 @@ Name: Catppuccin Latte
 130 54 228 Mauve 600
 119 49 210 Mauve 700
 107 43 190 Mauve 800
+107 43 190 Mauve 850
 94 37 167 Mauve 900
 77 29 139 Mauve 950
 225 177 184 Red 50
@@ -54,6 +59,7 @@ Name: Catppuccin Latte
 200 14 54 Red 600
 185 12 49 Red 700
 167 9 43 Red 800
+167 9 43 Red 850
 147 7 37 Red 900
 122 5 29 Red 950
 235 182 187 Maroon 50
@@ -65,6 +71,7 @@ Name: Catppuccin Latte
 220 65 79 Maroon 600
 202 60 72 Maroon 700
 183 53 64 Maroon 800
+183 53 64 Maroon 850
 161 46 56 Maroon 900
 134 36 45 Maroon 950
 247 188 180 Peach 50
@@ -76,6 +83,7 @@ Name: Catppuccin Latte
 242 95 10 Peach 600
 224 87 8 Peach 700
 203 78 7 Peach 800
+203 78 7 Peach 850
 178 68 5 Peach 900
 148 55 3 Peach 950
 231 200 181 Yellow 50
@@ -87,6 +95,7 @@ Name: Catppuccin Latte
 213 135 27 Yellow 600
 196 124 24 Yellow 700
 178 112 21 Yellow 800
+178 112 21 Yellow 850
 156 98 17 Yellow 900
 130 80 12 Yellow 950
 180 206 182 Green 50
@@ -98,6 +107,7 @@ Name: Catppuccin Latte
 61 153 41 Green 600
 55 140 37 Green 700
 49 127 32 Green 800
+49 127 32 Green 850
 42 111 27 Green 900
 33 91 21 Green 950
 176 201 206 Teal 50
@@ -109,6 +119,7 @@ Name: Catppuccin Latte
 21 139 146 Teal 600
 19 128 134 Teal 700
 16 115 121 Teal 800
+16 115 121 Teal 850
 13 101 106 Teal 900
 8 83 87 Teal 950
 176 208 237 Sky 50
@@ -120,6 +131,7 @@ Name: Catppuccin Latte
 4 157 219 Sky 600
 3 145 202 Sky 700
 2 131 182 Sky 800
+2 131 182 Sky 850
 2 114 160 Sky 900
 1 94 133 Sky 950
 177 205 216 Sapphire 50
@@ -131,6 +143,7 @@ Name: Catppuccin Latte
 30 152 173 Sapphire 600
 27 139 159 Sapphire 700
 23 126 144 Sapphire 800
+23 126 144 Sapphire 850
 19 110 126 Sapphire 900
 14 91 104 Sapphire 950
 177 189 245 Blue 50
@@ -142,6 +155,7 @@ Name: Catppuccin Latte
 28 97 234 Blue 600
 25 89 216 Blue 700
 22 80 195 Blue 800
+22 80 195 Blue 850
 18 69 172 Blue 900
 13 56 143 Blue 950
 190 197 249 Lavender 50
@@ -153,6 +167,7 @@ Name: Catppuccin Latte
 109 129 242 Lavender 600
 100 118 223 Lavender 700
 89  106 202 Lavender 800
+89  106 202 Lavender 850
 78  93  177 Lavender 900
 63  76  148 Lavender 950
 220 224 232 Neutral 50

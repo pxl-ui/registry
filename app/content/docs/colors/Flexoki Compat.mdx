@@ -1,30 +1,14 @@
 ---
 title: Flexoki Compat
 ---
-import { Aside } from '@astrojs/starlight/components';
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { Aside, ColorPalette, InstallCommand } from "~/components";
 
-import "~/examples/colors/flexoki-compat.css"
+import "~/examples/colors/flexoki-compat.css";
 
-import FlexokiRaw from "@/components/colors/pxl/flexoki-compat.gpl?raw";
-
-<ColorPaletteShowcase palette={FlexokiRaw} />
+<ColorPalette client:load palette="flexoki-compat" />
 
 ## Installation
 
 <Aside type="caution">This palette overrides predefined Tailwind Colors. Use it carefully.</Aside>
 
 <InstallCommand item="colors-flexoki-compat" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

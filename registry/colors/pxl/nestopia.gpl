@@ -1,5 +1,6 @@
 GIMP Palette
 Name: NEStopia
+Columns: 4
 #Description: The default palette of the NES emulator <a href="http://nestopia.sourceforge.net/" target="_blank">NEStopia</a>, taken from a screenshot showing all its possible colors at once. Two of the whites and two of the blacks on the palette are duplicates, therefore they are not included.
 #Colors: 54
 
@@ -63,10 +64,11 @@ Name: NEStopia
 0	 123 140 Teal 600
 0	 66	 74	 Teal 950
 
-255 255 255 White
 181 181 181 Neutral 50
 173 173 173 Neutral 400
 99	 99	 99	 Neutral 600
 82	 82	 82	 Neutral 950
+
+255 255 255 White
 0	 0	 0	 Black
 

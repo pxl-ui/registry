@@ -7,6 +7,7 @@ import { cardVariants, Card, CardHeader, CardTitle, CardContent } from "@/compon
 import { cn } from "@/lib/utils";
 
 import {
+  ColorPalette,
   ColorThemeShowcase,
   ColorVariantsShowcase,
   ColorWheel,
@@ -36,64 +37,30 @@ import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-
 import { itemBasename, routeFromRegistryItem, url } from "~/lib/utils";
 import { lists, palettes } from "~/lib/colors";
 
+<ColorPalette client:load palette="tailwind"
+  activeTab="variants"
+  gradients={[
+    { label: "Chrome", className: "bg-chrome" },
+    { label: "Cryo", className: "bg-cryo" },
+    { label: "Fire", className: "bg-fire" },
+    { label: "Loot", className: "bg-loot" },
+    { label: "Plasma", className: "bg-plasma" },
+    { label: "Toxic", className: "bg-toxic" },
+    { label: "Shadow", className: "bg-shadow" },
+    { label: "Synthwave", className: "bg-synthwave" }
+  ]} />
+
 ## Base
 
-PXL-UI Base includes a monochromatic theme by default.
-
-<ColorThemeShowcase />
-
-Additional bases and color palettes can be installed from the [registry](#palettes).
-
-
-## Variants
+PXL-UI Base includes a monochromatic theme by default. Additional bases and color palettes can be installed from the [registry](#palettes).
 
 5 different color variants are available in some components to express intentionality.
-
-<ColorVariantsShowcase />
 
 ## Gradients
 
 PXL-UI includes predefined gradients inspired by various video game indicators.
 
 The gradients are defined as `--background-image` variables in TailwindCSS, so they can be easily used with `bg-{{gradient_name}}` classes.
-
-<div class={cn(
-  "not-content",
-  cardVariants(),
-  "pixel-color-border!"
-)}>
-	<div
-		data-slot="card-content"
-		class="flex-1 min-h-0 p-(--card-spacing)">
-    <div class="flex flex-col gap-2">
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-chrome w-full h-10 text-black font-sans text-sm px-3 flex items-center">Chrome</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-cryo w-full h-10 text-black font-sans text-sm px-3 flex items-center">Cryo</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-fire w-full h-10 text-black font-sans text-sm px-3 flex items-center">Fire</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-loot w-full h-10 text-black font-sans text-sm px-3 flex items-center">Loot</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-plasma w-full h-10 text-black font-sans text-sm px-3 flex items-center">Plasma</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-toxic w-full h-10 text-black font-sans text-sm px-3 flex items-center">Toxic</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-shadow w-full h-10 text-black font-sans text-sm px-3 flex items-center">Shadow</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-2 items-center">
-        <p class="pixel-rounded pixel-size-lg bg-synthwave w-full h-10 text-black font-sans text-sm px-3 flex items-center">Synthwave</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 A common use case is to use them to decorate texts.
 
@@ -107,7 +74,7 @@ The PXL UI registry provides some color palettes you can install and include int
 
 ### Complete Palettes
 
-These palettes are focused on providing an entire set of colors to cover most use cases.
+> These palettes are focused on providing an entire set of colors to cover most use cases.
 
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -128,7 +95,7 @@ These palettes are focused on providing an entire set of colors to cover most us
 
 ### Base Palettes
 
-These palettes provide minimal color gradients for texts and surfaces
+> These palettes provide minimal color gradients for texts and surfaces
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
@@ -148,7 +115,7 @@ These palettes provide minimal color gradients for texts and surfaces
 
 ### Color Palettes
 
-These palettes provide vibrant and unique color combinations for variants or advanced use cases.
+> These palettes provide vibrant and unique color combinations for variants or advanced use cases.
 
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -171,7 +138,7 @@ These palettes provide vibrant and unique color combinations for variants or adv
 
 ### Compat Palettes
 
-The following palettes are designed as drop-in replacements for Tailwind Colors, using the Tailwind name conventions instead of namespaced prefixes. Some colors might not be available or not fit as expected. Use them carefully.
+> Compat palettes are designed as drop-in replacements for Tailwind Colors, using the Tailwind name conventions instead of namespaced prefixes. **Some colors might not be available or not fit as expected.** Use them carefully.
 
 <div class="not-content grid sm:grid-cols-2 gap-2.5">
 

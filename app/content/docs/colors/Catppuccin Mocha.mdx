@@ -1,29 +1,12 @@
 ---
 title: Catppuccin Mocha
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
-
-import { url } from "~/lib/utils";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/catppuccin-mocha.css"
 
-import CatpuccinMochaRaw from "@/components/colors/pxl/catppuccin-mocha.gpl?raw";
-
-<ColorPaletteShowcase palette={CatpuccinMochaRaw} />
+<ColorPalette client:load palette="catppuccin-mocha" />
 
 ## Installation
 
 <InstallCommand item="colors-catppuccin-mocha" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

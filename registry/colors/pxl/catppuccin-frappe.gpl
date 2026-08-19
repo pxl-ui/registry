@@ -1,5 +1,6 @@
 GIMP Palette
 Name: Catppuccin Frappe
+Columns: 12
 #
 249 235 233 Rosewater 50
 247 231 228 Rosewater 100
@@ -10,6 +11,7 @@ Name: Catppuccin Frappe
 231 204 198 Rosewater 600
 214 189 185 Rosewater 700
 195 172 169 Rosewater 800
+195 172 169 Rosewater 850
 173 153 152 Rosewater 900
 146 130 132 Rosewater 950
 247 226 226 Flamingo 50
@@ -21,6 +23,7 @@ Name: Catppuccin Frappe
 228 182 182 Flamingo 600
 211 169 170 Flamingo 700
 192 154 156 Flamingo 800
+192 154 156 Flamingo 850
 170 137 141 Flamingo 900
 144 117 123 Flamingo 950
 250 223 242 Pink 50
@@ -32,6 +35,7 @@ Name: Catppuccin Frappe
 233 176 218 Pink 600
 216 163 203 Pink 700
 196 149 186 Pink 800
+196 149 186 Pink 850
 174 133 166 Pink 900
 147 114 143 Pink 950
 231 214 243 Mauve 50
@@ -43,6 +47,7 @@ Name: Catppuccin Frappe
 193 151 220 Mauve 600
 179 141 205 Mauve 700
 163 129 187 Mauve 800
+163 129 187 Mauve 850
 145 115 168 Mauve 900
 123 100 144 Mauve 950
 243 205 206 Red 50
@@ -54,6 +59,7 @@ Name: Catppuccin Frappe
 221 125 127 Red 600
 204 116 120 Red 700
 186 107 112 Red 800
+186 107 112 Red 850
 165 97  104 Red 900
 140 85  94  Red 950
 245 212 213 Maroon 50
@@ -65,6 +71,7 @@ Name: Catppuccin Frappe
 224 147 150 Maroon 600
 207 136 141 Maroon 700
 188 125 130 Maroon 800
+188 125 130 Maroon 850
 167 112 119 Maroon 900
 141 97  105 Maroon 950
 247 214 202 Peach 50
@@ -76,6 +83,7 @@ Name: Catppuccin Frappe
 229 152 114 Peach 600
 211 142 108 Peach 700
 192 130 102 Peach 800
+192 130 102 Peach 850
 171 116 95 Peach 900
 144 100 88 Peach 950
 242 230 209 Yellow 50
@@ -87,6 +95,7 @@ Name: Catppuccin Frappe
 219 191 139 Yellow 600
 203 177 130 Yellow 700
 184 162 121 Yellow 800
+184 162 121 Yellow 850
 164 144 111 Yellow 900
 138 123 100 Yellow 950
 217 233 207 Green 50
@@ -98,6 +107,7 @@ Name: Catppuccin Frappe
 159 200 132 Green 600
 147 185 124 Green 700
 135 169 116 Green 800
+135 169 116 Green 850
 120 150 107 Green 900
 103 128 96  Green 950
 205 230 226 Teal 50
@@ -109,6 +119,7 @@ Name: Catppuccin Frappe
 124 191 182 Teal 600
 115 177 170 Teal 700
 106 162 156 Teal 800
+106 162 156 Teal 850
 95  144 141 Teal 900
 83  123 123 Teal 950
 212 233 238 Sky 50
@@ -120,6 +131,7 @@ Name: Catppuccin Frappe
 147 200 210 Sky 600
 136 185 195 Sky 700
 124 169 179 Sky 800
+124 169 179 Sky 850
 111 150 160 Sky 900
 96  128 138 Sky 950
 206 227 238 Sapphire 50
@@ -131,6 +143,7 @@ Name: Catppuccin Frappe
 128 185 211 Sapphire 600
 119 171 196 Sapphire 700
 109 156 180 Sapphire 800
+109 156 180 Sapphire 850
 98  139 161 Sapphire 900
 85  119 139 Sapphire 950
 208 218 247 Blue 50
@@ -142,6 +155,7 @@ Name: Catppuccin Frappe
 134 163 228 Blue 600
 125 151 212 Blue 700
 114 138 194 Blue 800
+114 138 194 Blue 850
 103 123 173 Blue 900
 89  106 149 Blue 950
 224 224 248 Lavender 50
@@ -153,6 +167,7 @@ Name: Catppuccin Frappe
 178 179 231 Lavender 600
 165 166 214 Lavender 700
 150 152 196 Lavender 800
+150 152 196 Lavender 850
 134 135 175 Lavender 900
 114 116 150 Lavender 950
 198 208 245 Neutral 50

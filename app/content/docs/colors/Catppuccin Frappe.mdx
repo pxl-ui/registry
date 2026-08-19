@@ -1,29 +1,12 @@
 ---
 title: Catppuccin Frappé
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
-
-import { url } from "~/lib/utils";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/catppuccin-frappe.css"
 
-import CatpuccinFrappeRaw from "@/components/colors/pxl/catppuccin-frappe.gpl?raw";
-
-<ColorPaletteShowcase palette={CatpuccinFrappeRaw} />
+<ColorPalette client:load palette="catppuccin-frappe" />
 
 ## Installation
 
 <InstallCommand item="colors-catppuccin-frappe" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

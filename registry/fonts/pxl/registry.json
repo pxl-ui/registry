@@ -265,7 +265,7 @@
       "name": "fonts-vt323",
       "type": "registry:font",
       "title": "VT323",
-      "description": "This font was created from the glyphs of the DEC VT320 text terminal, which I used in college, and for which I have retained an unaccountable nostalgia.",
+      "description": "This font was created from the glyphs of the DEC VT320 text terminal.",
       "author": "Peter Hull <https://fonts.google.com/?query=Peter+Hull>",
       "categories": ["pxl-ui", "font-family", "font-monospace"],
       "font": {

@@ -1,3 +1,7 @@
+
+import { Aside } from '@astrojs/starlight/components';
+
+import ColorPalette from "./ColorPalette";
 import ColorPaletteShowcase from "./ColorPaletteShowcase.astro";
 import ColorThemeShowcase from "./ColorThemeShowcase.astro";
 import ColorVariantsShowcase from "./ColorVariantsShowcase.astro";
@@ -7,10 +11,13 @@ import Example from "./Example.astro";
 import InstallCommand from "./InstallCommand.astro";
 import LandingPageShowcase from "./LandingPageShowcase";
 import LinkCard from "./LinkCard.astro";
+import Typography from "./Typography";
 import TypographyCascade from "./TypographyCascade.astro";
 import TypographySample from "./TypographySample.astro";
 
 export {
+  Aside,
+  ColorPalette,
   ColorPaletteShowcase,
   ColorThemeShowcase,
   ColorVariantsShowcase,
@@ -20,6 +27,7 @@ export {
   InstallCommand,
   LandingPageShowcase,
   LinkCard,
+  Typography,
   TypographyCascade,
   TypographySample,
 };

@@ -1,37 +1,22 @@
 ---
 title: Geist Pixel
 ---
-import {
-  InstallCommand,
-  TypographyCascade
-} from "~/components";
+import { InstallCommand, Typography, TypographyCascade } from "~/components";
 
 import "~/examples/fonts/geist-pixel.css"
+
+<Typography client:load font="geist-pixel"
+  variants={[
+    { label: "Square", className: "elsh-0" },
+    { label: "Circle", className: "elsh-20" },
+    { label: "Line", className: "elsh-40" },
+    { label: "Grid", className: "elsh-60" },
+    { label: "Triangle", className: "elsh-80" }
+  ]} 
+/>
+
+## Installation
 
 <InstallCommand item="fonts-geist-pixel" />
 
 Geist Pixel comes in 5 different shapes: Square, Circle, Line, Grid and Triangle. You can choose one of them with the provided `elsh-*value` utility.
-
-## Square
-
-<TypographyCascade class="font-geist-pixel elsh-0" />
-
-
-## Circle
-
-<TypographyCascade class="font-geist-pixel elsh-20" />
-
-
-## Line
-
-<TypographyCascade class="font-geist-pixel elsh-40" />
-
-
-## Grid
-
-<TypographyCascade class="font-geist-pixel elsh-60" />
-
-
-## Triangle
-
-<TypographyCascade class="font-geist-pixel elsh-80" />

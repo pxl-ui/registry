@@ -1,27 +1,12 @@
 ---
 title: Vine's Flexible Linear Ramps
 ---
-import {
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
+import { ColorPalette, InstallCommand } from "~/components";
 
 import "~/examples/colors/vines-flexible-linear-ramps.css"
 
-import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-linear-ramps.gpl?raw";
-
-<ColorPaletteShowcase palette={VinesFlexibleLinearRampsRaw} />
+<ColorPalette client:load palette="vines-flexible-linear-ramps" />
 
 ## Installation
 
 <InstallCommand item="colors-vines-flexible-linear-ramps" />
-
-## Base
-
-<ColorThemeShowcase />
-
-## Variants
-
-<ColorVariantsShowcase />

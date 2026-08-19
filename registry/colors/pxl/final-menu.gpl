@@ -1,9 +1,10 @@
 GIMP Palette
 Name: Final Menu
-#
-255 255 255 White
+Columns: 4
 
 160 0   0   Classic Red 50
+160 0   0   Classic Red 200
+96  0   32  Classic Red 700
 96  0   32  Classic Red 950
 
 176 0   0   Modern Red 50
@@ -13,6 +14,8 @@ Name: Final Menu
 
 
 0   160 0   Classic Green 50
+0   160 0   Classic Green 200
+32  96  0   Classic Green 700
 32  96  0   Classic Green 950
 
 0   176 0   Modern Green 50
@@ -21,6 +24,8 @@ Name: Final Menu
 0   32  0   Modern Green 950
 
 0   0   160 Classic Blue 50
+0   0   160 Classic Blue 200
+0   32  96  Classic Blue 700
 0   32  96  Classic Blue 950
 
 0   0   176 Modern Blue 50
@@ -29,3 +34,12 @@ Name: Final Menu
 0   0   32  Modern Blue 950
 
 0   0   0 Black
+0   0   0 Black
+0   0   0 Black
+0   0   0 Black
+
+#
+255 255 255 White
+255 255 255 White
+255 255 255 White
+255 255 255 White
