@@ -1,10 +1,15 @@
 ---
 
-import { Button } from '@/components/ui/pxl/button';
+import { buttonVariants } from '@/components/ui/pxl/button';
+import { cn } from '@/lib/utils';
 
 import Pagination from './Pagination.astro';
+import { getEntry } from 'astro:content';
 import EditLink from 'virtual:starlight/components/EditLink';
 import LastUpdated from 'virtual:starlight/components/LastUpdated';
+
+const site = await getEntry("config", "site");
+const footer = site?.data.footer;
 ---
 
 <footer class="flex flex-col gap-6">
@@ -16,7 +21,54 @@ import LastUpdated from 'virtual:starlight/components/LastUpdated';
 
 
   {Astro.locals.starlightRoute.id === "" && <p class="bottom-0 items-center my-6 mx-auto text-xs text-muted-foreground hover:text-foreground self-center-safe">
-    Built by <a href="https://aitorllamas.com"><Button className="p-0 h-auto" variant="link">aitorllj93</Button></a> at <a href="https://github.com/gotchu-creatures"><Button className="p-0 h-auto" variant="link">Gotchu Creatures</Button></a>. The source code is available on <a href="https://github.com/pxl-ui/registry"><Button className="p-0 h-auto" variant="link">GitHub</Button></a>.
+    {footer?.author && (
+			<>
+				{Astro.locals.t('footer.credits.author')}
+				{footer.author.url ? 
+					<a 
+						class={cn(buttonVariants({
+							variant: "link",
+							className: "p-0 h-auto"
+						}))}
+						href={footer.author.url}
+					>
+						{footer.author.name}
+					</a> :
+				footer.author.name}
+			</>
+		)}{" "}
+		 {footer?.company && (
+			<>
+				{Astro.locals.t('footer.credits.company')}
+				{footer.company.url ? 
+					<a 
+						class={cn(buttonVariants({
+							variant: "link",
+							className: "p-0 h-auto"
+						}))}
+						href={footer.company.url}
+					>
+						{footer.company.name}
+					</a> :
+				footer.company.name}
+			</>
+		 )}{". "}
+		 {footer?.repository && (
+			<>
+				{Astro.locals.t('footer.credits.repository')}
+				{footer.company.url ? 
+					<a 
+						class={cn(buttonVariants({
+							variant: "link",
+							className: "p-0 h-auto"
+						}))}
+						href={footer.repository.url}
+					>
+						{footer.repository.name}
+					</a> :
+				footer.repository.name}
+			</>
+		 )}{"."}
   </p>}
 </footer>
 

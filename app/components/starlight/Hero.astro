@@ -1,6 +1,6 @@
 ---
 
-import { Button, buttonVariants } from "@/components/ui/pxl/button";
+import { buttonVariants } from "@/components/ui/pxl/button";
 import { url } from "~/lib/utils";
 
 import Icon from "./Icon.astro";
@@ -22,13 +22,11 @@ const { title = data.title, tagline, actions = [] } = data.hero || {};
       ({ attrs: { class: className, ...attrs } = {}, icon, link: href, text, variant }) => (
         <a
           href={url(href)}
-          class={buttonVariants({
-            variant: "default"
-          })}
+          class={buttonVariants({ variant })}
           {...attrs}>
           {text}
           {icon && (
-            icon?.html ? <Fragment set:html={icon.html} /> : (icon.name && (<Icon name={icon.name as any} />))
+            icon?.html ? <Fragment set:html={icon.html} /> : (icon.name && (<Icon name={icon.name} />))
           )}
         </a>
       )

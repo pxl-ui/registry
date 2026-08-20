@@ -1,4 +1,6 @@
 import {
+  configLoader,
+  configSchema,
   docsLoader,
   docsSchema,
   i18nLoader,
@@ -11,5 +13,12 @@ export const collections = {
     loader: docsLoader(),
     schema: docsSchema(),
   }),
-  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
+  i18n: defineCollection({
+    loader: i18nLoader(),
+    schema: i18nSchema(),
+  }),
+  config: defineCollection({
+    loader: configLoader(),
+    schema: configSchema(),
+  }),
 };

@@ -165,6 +165,10 @@ function starlightI18nSchema() {
       'heading.anchorLabel': z
         .string()
         .meta({ description: 'Label for anchor links in Markdown content.' }),
+
+      "footer.credits.author": z.string(),
+      "footer.credits.company": z.string(),
+      "footer.credits.repository": z.string(),
     })
     .partial();
 }

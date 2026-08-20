@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/pxl/button';
 
+import Icon from './Icon.astro';
 import project from 'virtual:starlight/project-context';
 
 const pagefindTranslations = {
@@ -25,7 +26,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 		data-open-modal
 		disabled
 		variant="ghost">
-    <svg class="size-4 mt-px" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M22 22h-2v-2h2v2Zm-2-2h-2v-2h2v2Zm-6-2H6v-2h8v2Zm4 0h-2v-2h2v2ZM6 16H4v-2h2v2Zm10 0h-2v-2h2v2ZM4 14H2V6h2v8Zm14 0h-2V6h2v8ZM6 6H4V4h2v2Zm10 0h-2V4h2v2Zm-2-2H6V2h8v2Z"/></svg>
+		<Icon name="magnifier" class="size-4 mt-px" />
 		<span class="hidden md:block" aria-hidden="true">{Astro.locals.t('search.label')}</span>
 		<kbd class="hidden md:flex ms-auto items-center gap-0.5" style="display: none;">
 			<kbd>

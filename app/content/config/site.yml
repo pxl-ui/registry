@@ -1,0 +1,14 @@
+header:
+  nav: 
+   - link: ""
+     text: "Home"
+   - link: "docs/installation"
+     text: "Docs"
+   - link: "docs/components"
+     text: "Components"
+   - link: "docs/widgets"
+     text: "Widgets"
+footer:
+  author: aitorllj93 (https://aitorllamas.com)
+  company: Gotchu Creatures (https://github.com/gotchu-creatures)
+  repository: GitHub (https://github.com/pxl-ui/registry)

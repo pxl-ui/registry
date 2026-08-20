@@ -15,6 +15,7 @@ export default defineConfig({
     react(),
     starlight({
       title: "PXL UI",
+      description: "A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it.",
       expressiveCode: {
         shiki: {
           bundledLangs: ["sh", "bash", "typescript", "tsx"],

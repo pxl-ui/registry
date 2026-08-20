@@ -1,14 +1,18 @@
 ---
 
-import { Button } from '@/components/ui/pxl/button';
+import { buttonVariants } from '@/components/ui/pxl/button';
 import { Separator } from '@/components/ui/pxl/separator';
 import { url } from '~/lib/utils';
 
 import Search from './Search.astro';
 import SocialIcons from './SocialIcons.astro';
 import ThemeSelect from './ThemeSelect.astro';
+import { getEntry } from 'astro:content';
 import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
 import config from 'virtual:starlight/user-config';
+
+const site = await getEntry("config", "site");
+const header = site?.data.header;
 
 /**
  * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
@@ -21,38 +25,18 @@ const shouldRenderSearch =
 <div class="flex gap-(--sl-nav-gap) justify-between items-center h-full">
   <nav class="items-center gap-0 hidden lg:flex">
     <ul class="flex gap-2">
-      <li>
-        <a href={url("")}>
-          <Button size="sm" variant="ghost" 
-            aria-expanded={Astro.locals.starlightRoute.id === ""}>
-            Home
-          </Button>
-        </a>
-      </li>
-      <li>
-        <a href={url("docs/installation")}>
-          <Button size="sm" variant="ghost"
-            aria-expanded={Astro.locals.starlightRoute.id.startsWith("docs")}>
-            Docs
-          </Button>
-        </a>
-      </li>
-      <li>
-        <a href={url("docs/components")}>
-          <Button size="sm" variant="ghost"
-            aria-expanded={["layout", "interaction", "navigation", "content"].some(id => Astro.locals.starlightRoute.id.startsWith(id))}>
-            Components
-          </Button>
-        </a>
-      </li>
-      <li>
-        <a href={url("docs/widgets")}>
-          <Button size="sm" variant="ghost"
-            aria-expanded={Astro.locals.starlightRoute.id === "widgets"}>
-            Widgets
-          </Button>
-        </a>
-      </li>
+      {header?.nav.map(item => (
+        <li>
+          <a href={url(item.link)} 
+            class={buttonVariants({
+              size: "sm",
+              variant: "ghost"
+            })}
+            aria-expanded={Astro.locals.starlightRoute.id === item.link}>
+            {item.text}
+          </a>
+        </li>
+      ))}
     </ul>
   </nav>
 

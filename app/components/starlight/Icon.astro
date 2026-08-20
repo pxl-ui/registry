@@ -8,7 +8,7 @@ export type Props = {
 	class?: string;
 }
 
-const { class: className, name, label } = Astro.props;
+const { class: className, name, label, ...rest } = Astro.props;
 const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden': 'true' } as const);
 ---
 <svg
@@ -18,4 +18,5 @@ const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden':
   set:html={Icons[name]}
   class={className}
   {...a11yAttrs}
+  {...rest}
 />

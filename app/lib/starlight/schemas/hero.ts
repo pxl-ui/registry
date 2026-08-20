@@ -47,7 +47,7 @@ export const HeroSchema = ({ image }: SchemaContext) =>
         /** Value for the link’s `href` attribute, e.g. `/page` or `https://mysite.com`. */
         link: z.string(),
         /** Button style to use. One of `primary` (the default), `secondary`, `success`, `danger`, `warning`, `info`, `ghost`, `outline` or `link`. */
-        variant: z.enum(["primary", "secondary", "success", "danger", "warning", "info", "ghost", "outline", "link"]).default("primary"),
+        variant: z.enum(["default", "primary", "secondary", "success", "danger", "warning", "info", "ghost", "outline", "link"]).default("default"),
         /**
          * An optional icon to display alongside the link text.
          * Can be an inline `<svg>` or the name of one of Starlight’s built-in icons.
