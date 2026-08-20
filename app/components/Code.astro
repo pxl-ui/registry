@@ -1,5 +1,4 @@
 ---
-
 import { Code } from '@astrojs/starlight/components';
 
 import { buttonVariants } from '@/components/ui/pxl/button';
@@ -10,13 +9,18 @@ export type Props = {
   collapsed?: boolean;
 	collapsedHeight?: number;
 	lang?: string;
+	title?: string;
 }
 
-const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 } = Astro.props;
+const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 , title} = Astro.props;
 
 ---
 {!collapsed && (
-  <Code code={code} lang={lang}  />
+  <Code 
+		title={title}
+		code={code} 
+		lang={lang}
+		showLineNumbers />
 )}
 
 {collapsed && (
@@ -29,7 +33,11 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 }
       class="overflow-hidden scrollbar-none transition-[max-height] duration-300 ease-in-out"
       style={`max-height: ${collapsedHeight}px`}
     >
-      <Code showLineNumbers code={code} lang={lang}  />
+      <Code 
+				title={title}
+				code={code} 
+				lang={lang} 
+				showLineNumbers  />
     </div>
 
     <div 

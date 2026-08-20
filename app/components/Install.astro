@@ -1,41 +1,89 @@
 ---
-import { Code, TabItem, Tabs, } from '@astrojs/starlight/components';
+
+import { Code, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import { cardVariants } from '@/components/ui/pxl/card';
+import { cn } from '@/lib/utils';
+import registry, { files } from '~/lib/registry';
+
+import CollapsibleCode from "./Code.astro";
+
+function resolveTargetPath(path: string) {
+  return path
+    .replace("@ui", "components/ui")
+    .replace("@components", "components")
+    .replace("@hooks", "hooks")
+    .replace("@lib", "lib")
+}
 
 export type Props = {
   item: string;
 }
 
-const { item } = Astro.props;
+const { item: itemName } = Astro.props;
 
-const registry = "pxl-ui/registry";
+const item = registry.get(itemName);
 
-const tabs = [
-  {
-    label: "pnpm",
-    command: `pnpm dlx shadcn@latest add ${registry}/${item}`,
-  },
-  {
-    label: "npm",
-    command: `npx shadcn@latest add ${registry}/${item}`,
-  },
-  {
-    label: "yarn",
-    command: `yarn dlx shadcn@latest add ${registry}/${item}`,
-  },
-  {
-    label: "bun",
-    command: `bunx --bun shadcn@latest add ${registry}/${item}`,
-  }
-]
+const itemFiles = files.get(itemName) ?? [];
+const dependencies = item?.dependencies ?? [];
 
 ---
-
-<div class="mt-6">
-  <Tabs>
-    {tabs.map(({ label, command}) => (
-      <TabItem label={label}>
-        <Code code={command} lang="sh" frame="none" />
+<Tabs>
+  <TabItem label={Astro.locals.t('registry.installation.command')}>
+    <Tabs>
+      <TabItem label={"pnpm"} icon="pnpm">
+        <Code code={`pnpm dlx shadcn@latest add pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
       </TabItem>
-    ))}
-  </Tabs>
-</div>
+      <TabItem label={"npm"} icon="npm">
+        <Code code={`npx shadcn@latest list pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
+      </TabItem>
+      <TabItem label={"yarn"} icon="seti:yarn">
+        <Code code={`yarn dlx shadcn@latest list pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
+      </TabItem>
+      <TabItem label={"bun"} icon="bun">
+        <Code code={`bunx --bun shadcn@latest list pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
+      </TabItem>
+    </Tabs>
+  </TabItem>
+  <TabItem label={Astro.locals.t('registry.installation.manual')}>
+    <div
+      class={cn(
+        "steps mb-12 [counter-reset:step] md:ml-4 md:border-l md:pl-8 [&>h3]:step",
+      )}
+    >
+      {dependencies.length > 0 && (<h3>{Astro.locals.t('registry.installation.manual.steps.installDependencies')}</h3>)}
+      {dependencies.length > 0 && (<Tabs>
+        <TabItem label={"pnpm"} icon="pnpm">
+          <Code code={`pnpm add ${dependencies.join(" ")}`} lang="sh" frame="none" />
+        </TabItem>
+        <TabItem label={"npm"} icon="npm">
+          <Code code={`npm install ${dependencies.join(" ")}`} lang="sh" frame="none" />
+        </TabItem>
+        <TabItem label={"yarn"} icon="seti:yarn">
+          <Code code={`yarn add ${dependencies.join(" ")}`} lang="sh" frame="none" />
+        </TabItem>
+        <TabItem label={"bun"} icon="bun">
+          <Code code={`bun add ${dependencies.join(" ")}`} lang="sh" frame="none" />
+        </TabItem>
+      </Tabs>)}
+      {itemFiles.length > 0 && (<h3>{Astro.locals.t('registry.installation.manual.steps.copyCode')}</h3>)}
+      {itemFiles.map(f => (
+        <div class={cn(
+          "not-content",
+          cardVariants(),
+          "pixel-color-border! bg-background! mt-4 mb-12",
+        )}>
+          <CollapsibleCode 
+            class="relative"
+            title={resolveTargetPath(f.target)}
+            code={f.content}
+            collapsed={true}
+            collapsedHeight={256}
+            lang="tsx" 
+          />
+        </div>
+      ))}
+      <h3>{Astro.locals.t('registry.installation.manual.steps.updateImports')}</h3>
+    </div>
+  </TabItem>
+</Tabs>
