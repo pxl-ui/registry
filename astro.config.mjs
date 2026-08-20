@@ -67,6 +67,7 @@ export default defineConfig({
         SocialIcons: './app/components/starlight/SocialIcons.astro',
         ThemeSelect: './app/components/starlight/ThemeSelect.astro',
       },
+      routeMiddleware: './app/routeMiddleware.ts'
     }),
   ],
   vite: {

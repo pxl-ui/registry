@@ -1,0 +1,21 @@
+---
+
+import { Icons, type StarlightIcon } from '~/lib/starlight';
+
+export type Props = {
+  name: StarlightIcon;
+	label?: string;
+	class?: string;
+}
+
+const { class: className, name, label } = Astro.props;
+const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden': 'true' } as const);
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  set:html={Icons[name]}
+  class={className}
+  {...a11yAttrs}
+/>

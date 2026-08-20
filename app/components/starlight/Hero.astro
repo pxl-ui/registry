@@ -1,32 +1,37 @@
 ---
 
-import { Button } from "@/components/ui/pxl/button";
+import { Button, buttonVariants } from "@/components/ui/pxl/button";
 import { url } from "~/lib/utils";
+
+import Icon from "./Icon.astro";
+
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, actions = [] } = data.hero || {};
 
 ---
 <div class="flex flex-col gap-[clamp(1.5rem,1.5rem+1vw,2rem)] text-center pb-4 md:py-[clamp(2.5rem,1rem+10vmin,10rem)]">
   <div class="flex flex-col gap-4 items-center">
-    <h1 class="text-foreground font-heading text-3xl">Low-Res Look, High-Res Craft</h1>
+    <h1 class="text-foreground font-heading text-3xl">{title}</h1>
     <p class="text-base sm:text-lg leading-5">
-      A UI kit for people making things that blink, bounce, and beep. Sharp
-      pixel edges paired with fluid, modern interaction — nothing here looks
-      like a template, and nothing here should stay looking like ours once
-      you're done with it.
+      {tagline}
     </p>
   </div>
-  <div class="flex flex-wrap gap-[1rem_2rem] justify-center">
-    <a href={url("docs/installation/")}>
-      <Button>
-        Get Started
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M4 11v2h16v-2zm12 2v2h2v-2zm-2 2v2h2v-2zm-2 2v2h2v-2zm4-6V9h2v2z" />
-          <path d="M14 15V7h2v8zm-2 2V5h2v12z" />
-        </svg>
-      </Button>
-    </a>
-  </div>
+
+  {actions.length > 0 && (<div class="flex flex-wrap gap-[1rem_2rem] justify-center">
+    {actions.map(
+      ({ attrs: { class: className, ...attrs } = {}, icon, link: href, text, variant }) => (
+        <a
+          href={url(href)}
+          class={buttonVariants({
+            variant: "default"
+          })}
+          {...attrs}>
+          {text}
+          {icon && (
+            icon?.html ? <Fragment set:html={icon.html} /> : (icon.name && (<Icon name={icon.name as any} />))
+          )}
+        </a>
+      )
+    )}
+  </div>)}
 </div>

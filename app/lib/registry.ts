@@ -6,6 +6,17 @@ const KIND_CATEGORIES = {
   WIDGETS: "widgets"
 }
 
+const REGISTRY_URL_GROUPS: Record<string, { prefix?: string; }> = {
+  colors: { prefix: "colors-" },
+  fonts: { prefix: "fonts-" },
+  components: {},
+  layout: {},
+  interaction: {},
+  navigation: {},
+  content: {},
+  widgets: {},
+}
+
 export type Registry = {
   name: string;
   items: RegistryItem[];
@@ -143,10 +154,27 @@ function basename(itemName: string) {
   return itemName;
 }
 
+
+function fromRouteId(routeId: string) {
+  const group = Object.keys(REGISTRY_URL_GROUPS).find(group => routeId.startsWith(group));
+
+  if (!group) {
+    return null;
+  }
+
+  const baseName = routeId.split("/").reverse()[0];
+
+  const itemName = REGISTRY_URL_GROUPS[group].prefix ?
+    `${REGISTRY_URL_GROUPS[group].prefix}${baseName}` : baseName;
+
+  return registry.get(itemName) ?? null;
+}
+
 export default registry;
 
 export {
   basename,
   filter,
+  fromRouteId,
   kind,
 }
