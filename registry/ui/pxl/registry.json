@@ -23,6 +23,7 @@
       "title": "Animated Icon",
       "description": "Animate your svg icons using motion",
       "categories": ["pxl-ui", "components", "content", "icons", "animations"],
+      "dependencies": ["motion/react"],
       "files": [
         {
           "path": "animated-icon.tsx",
@@ -37,6 +38,7 @@
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
       "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "avatar.tsx",
@@ -51,6 +53,7 @@
       "title": "Badge",
       "description": "Displays a badge or a component that looks like a badge.",
       "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "badge.tsx",
@@ -65,6 +68,7 @@
       "title": "Button",
       "description": "Displays a button or a component that looks like a button.",
       "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "button.tsx",
@@ -100,6 +104,7 @@
       "title": "Card",
       "description": "Displays a card with header, content, and footer.",
       "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "card.tsx",
@@ -135,6 +140,7 @@
       "title": "Dialog",
       "description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
       "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": [
         "pxl-ui/registry/button"
       ],
@@ -173,6 +179,7 @@
       "title": "Flip",
       "description": "A flip component that supports automatic, manual (gesture-based), and programmatic flipping.",
       "categories": ["pxl-ui", "components", "ui", "layout", "animations"],
+      "dependencies": ["motion/react"],
       "files": [
         {
           "path": "flip.tsx",
@@ -206,6 +213,7 @@
       "title": "Input",
       "description": "A text input component for forms and user data entry with built-in styling and accessibility features.",
       "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "input.tsx",
@@ -220,6 +228,7 @@
       "title": "Item",
       "description": "A versatile component for displaying content with media, title, description, and actions.",
       "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": [
         "pxl-ui/registry/separator"
       ],
@@ -273,6 +282,7 @@
       "title": "Popover",
       "description": "Displays rich content in a portal, triggered by a button.",
       "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "popover.tsx",
@@ -287,6 +297,7 @@
       "title": "Radio Group",
       "description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
       "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "radio-group.tsx",
@@ -301,6 +312,7 @@
       "title": "Reveal",
       "description": "Content display/hide animation",
       "categories": ["pxl-ui", "components", "interaction", "animations"],
+      "dependencies": ["motion/react"],
       "files": [
         {
           "path": "reveal.tsx",
@@ -347,6 +359,7 @@
       "title": "Scroll Area",
       "description": "Augments native scroll functionality for custom, cross-browser styling.",
       "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "scroll-area.tsx",
@@ -361,6 +374,7 @@
       "title": "Select",
       "description": "Displays a list of options for the user to pick from—triggered by a button.",
       "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "select.tsx",
@@ -375,6 +389,7 @@
       "title": "Separator",
       "description": "Visually or semantically separates content.",
       "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "separator.tsx",
@@ -421,6 +436,7 @@
       "title": "Tabs",
       "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
       "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "tabs.tsx",
@@ -477,6 +493,7 @@
       "title": "Tooltip",
       "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
       "categories": ["pxl-ui", "components", "ui"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "textarea.tsx",
@@ -508,6 +525,7 @@
       "title": "Wheel List",
       "description": "Wheel List Selection menu",
       "categories": ["pxl-ui", "components", "ui", "navigation"],
+      "dependencies": ["motion/react"],
       "files": [
         {
           "path": "wheel-list.tsx",
