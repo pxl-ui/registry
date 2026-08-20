@@ -2,20 +2,20 @@
 
 import { cardVariants } from '@/components/ui/pxl/card';
 import { cn } from '@/lib/utils';
-import examples from "~/lib/examples";
+import { sources } from "~/lib/examples";
 
 import Code from './Code.astro';
-import ExampleRenderer from './ExampleRenderer';
+import ComponentRenderer from './ComponentRenderer';
 
 export type Props = {
 	align?: "center" | "start" | "end";
 	chromeless?: boolean;
-	src?: string;
-	code?: string;
-	lang?: string;
 	class?: string;
-	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
+	code?: string;
 	collapsedHeight?: number;
+	lang?: string;
+	src?: string;
+	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
 }
 
 const { align, chromeless, src, code, lang = "tsx", class: className, style, collapsedHeight = 120 } = Astro.props;
@@ -23,7 +23,7 @@ const { align, chromeless, src, code, lang = "tsx", class: className, style, col
 let sourceCode = code;
 
 if (src && !code) {
-	sourceCode = examples.sources.get(src);
+	sourceCode = sources.get(src);
 }
 ---
 
@@ -46,9 +46,15 @@ if (src && !code) {
 			class={cn(
 				"relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end",
 			)}>
-			{src ? <ExampleRenderer src={src} client:load /> : <slot />}
+			{src ? <ComponentRenderer src={src} client:load /> : <slot />}
 		</div>
 
-		{sourceCode && <Code class="relative border-t-4 border-border" code={sourceCode} lang={lang} collapsed />}
+		{sourceCode && <Code 
+			class="relative border-t-4 border-border" 
+			code={sourceCode} 
+			collapsed
+			collapsedHeight={collapsedHeight}
+			lang={lang} 
+			/>}
 	</div>
 </div>

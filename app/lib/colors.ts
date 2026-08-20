@@ -1,8 +1,8 @@
-
+import { type GIMPPalette, parse } from "gimp-palette";
 
 import { filter } from "~/lib/registry";
 
-const palettes = new Map<string, string>();
+const palettes = new Map<string, GIMPPalette>();
 
 Object.entries(
   import.meta.glob<string>("/registry/**/*.gpl", {
@@ -13,31 +13,28 @@ Object.entries(
 ).forEach(([path, palette]) => {
   palettes.set(
     path.replace("/registry/colors/pxl/", "").replace(".gpl", ""),
-    palette,
+    parse(palette),
   );
 });
 
 const lists = {
   base: filter({
-    categories: ["color-palette-base"]
+    categories: ["color-palette-base"],
   }),
   colors: filter({
-    categories: ["color-palette-colors"]
+    categories: ["color-palette-colors"],
   }),
   compat: filter({
-    categories: ["color-palette-compat"]
+    categories: ["color-palette-compat"],
   }),
   complete: filter({
-    categories: ["color-palette-complete"]
-  })
-}
-
-export {
-  lists,
-  palettes
+    categories: ["color-palette-complete"],
+  }),
 };
+
+export { lists, palettes };
 
 export default {
   lists,
-  palettes
+  palettes,
 };

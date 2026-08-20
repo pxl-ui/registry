@@ -19,17 +19,17 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 
 <site-search class={Astro.props.class} {...dataAttributes}>
   <Button
-    variant="outline"
-    className="hover:bg-background hover:pixel-color-foreground w-full max-w-88 items-center"
+		aria-keyshortcuts="Control+K"
+		aria-label={Astro.locals.t('search.label')}
+    className="w-full max-w-88 items-center text-foreground md:bg-muted md:hover:pixel-color-muted/50 md:hover:bg-muted/50 dark:md:bg-card dark:md:hover:bg-input/50"
 		data-open-modal
 		disabled
-		aria-label={Astro.locals.t('search.label')}
-		aria-keyshortcuts="Control+K">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M22 22h-2v-2h2v2Zm-2-2h-2v-2h2v2Zm-6-2H6v-2h8v2Zm4 0h-2v-2h2v2ZM6 16H4v-2h2v2Zm10 0h-2v-2h2v2ZM4 14H2V6h2v8Zm14 0h-2V6h2v8ZM6 6H4V4h2v2Zm10 0h-2V4h2v2Zm-2-2H6V2h8v2Z"/></svg>
+		variant="ghost">
+    <svg class="size-4 mt-px" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M22 22h-2v-2h2v2Zm-2-2h-2v-2h2v2Zm-6-2H6v-2h8v2Zm4 0h-2v-2h2v2ZM6 16H4v-2h2v2Zm10 0h-2v-2h2v2ZM4 14H2V6h2v8Zm14 0h-2V6h2v8ZM6 6H4V4h2v2Zm10 0h-2V4h2v2Zm-2-2H6V2h8v2Z"/></svg>
 		<span class="hidden md:block" aria-hidden="true">{Astro.locals.t('search.label')}</span>
 		<kbd class="hidden md:flex ms-auto items-center gap-0.5" style="display: none;">
 			<kbd>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M8 22H4v-2h4v2Zm12 0h-4v-2h4v2ZM4 20H2v-4h2v4Zm6-12h4V4h2v4h4v2h-4v4h4v2h-4v4h-2v-4h-4v4H8v-4H4v-2h4v-4H4V8h4V4h2v4Zm12 12h-2v-4h2v4Zm-12-6h4v-4h-4v4ZM4 8H2V4h2v4Zm18 0h-2V4h2v4ZM8 4H4V2h4v2Zm12 0h-4V2h4v2Z"></path></svg>  
+        <svg class="size-3.5 mt-0.5 mr-0.5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M8 22H4v-2h4v2Zm12 0h-4v-2h4v2ZM4 20H2v-4h2v4Zm6-12h4V4h2v4h4v2h-4v4h4v2h-4v4h-2v-4h-4v4H8v-4H4v-2h4v-4H4V8h4V4h2v4Zm12 12h-2v-4h2v4Zm-12-6h4v-4h-4v4ZM4 8H2V4h2v4Zm18 0h-2V4h2v4ZM8 4H4V2h4v2Zm12 0h-4V2h4v2Z"></path></svg>  
       </kbd>
       <kbd>K</kbd>
 		</kbd>
@@ -72,7 +72,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
 		const platformKey = shortcut.querySelector('kbd');
 		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-			platformKey.textContent = '⌘';
+			// platformKey.textContent = '⌘';
 			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
 		}
 		shortcut.style.display = '';

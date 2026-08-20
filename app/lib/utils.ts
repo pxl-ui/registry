@@ -37,19 +37,6 @@ export function registryItemFromRouteId(routeId: string) {
     `${REGISTRY_URL_GROUPS[group].prefix}${itemName}` : itemName;
 }
 
-export function itemBasename(registryItem: string, groupName: string) {
-  const group = REGISTRY_URL_GROUPS[groupName];
-
-  if (!group) {
-    return registryItem;
-  }
-
-  return group.prefix ?
-    registryItem.replace(group.prefix, "") :
-    registryItem;
-}
-
-
 export function routeFromRegistryItem(registryItem: string, groupName: string) {
   const group = REGISTRY_URL_GROUPS[groupName];
 

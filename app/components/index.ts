@@ -1,35 +1,22 @@
-
-import { Aside } from '@astrojs/starlight/components';
+import { Aside } from "@astrojs/starlight/components";
 
 import Code from "./Code.astro";
-import ColorPalette from "./ColorPalette";
-import ColorPaletteShowcase from "./ColorPaletteShowcase.astro";
-import ColorThemeShowcase from "./ColorThemeShowcase.astro";
-import ColorVariantsShowcase from "./ColorVariantsShowcase.astro";
-import ColorWheel from "./ColorWheel.astro";
-import Description from "./Description.astro";
-import Example from "./Example.astro";
-import InstallCommand from "./InstallCommand.astro";
+import ColorPreview from "./ColorPreview";
+import ComponentPreview from "./ComponentPreview.astro";
+import FontPreview from "./FontPreview";
+import Install from "./Install.astro";
 import LandingPageShowcase from "./LandingPageShowcase";
 import LinkCard from "./LinkCard.astro";
-import Typography from "./Typography";
-import TypographyCascade from "./TypographyCascade.astro";
-import TypographySample from "./TypographySample.astro";
+import LinkCardMedia from "./LinkCardMedia";
 
 export {
   Aside,
   Code,
-  ColorPalette,
-  ColorPaletteShowcase,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  ColorWheel,
-  Description,
-  Example,
-  InstallCommand,
+  ColorPreview,
+  ComponentPreview,
+  FontPreview,
+  Install,
   LandingPageShowcase,
   LinkCard,
-  Typography,
-  TypographyCascade,
-  TypographySample,
+  LinkCardMedia,
 };

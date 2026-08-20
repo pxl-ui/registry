@@ -3,16 +3,7 @@ title: Colors
 sidebar:
   order: 5
 ---
-import { cardVariants, Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
-import { cn } from "@/lib/utils";
-
-import {
-  ColorPalette,
-  ColorThemeShowcase,
-  ColorVariantsShowcase,
-  ColorWheel,
-  LinkCard,
-} from "~/components";
+import { ColorPreview, LinkCard, LinkCardMedia } from "~/components";
 
 import Arne16Raw from "@/components/colors/pxl/arne-16.gpl?raw"
 import CatpuccinFrappeRaw from "@/components/colors/pxl/catppuccin-frappe.gpl?raw";
@@ -34,10 +25,11 @@ import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
 import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
 import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-linear-ramps.gpl?raw";
 
-import { itemBasename, routeFromRegistryItem, url } from "~/lib/utils";
+import { routeFromRegistryItem, url } from "~/lib/utils";
 import { lists, palettes } from "~/lib/colors";
 
-<ColorPalette client:load palette="tailwind"
+<ColorPreview client:load 
+  palette="tailwind"
   activeTab="variants"
   gradients={[
     { label: "Chrome", className: "bg-chrome" },
@@ -85,9 +77,10 @@ The PXL UI registry provides some color palettes you can install and include int
       title={item.title ?? item.name}
       description={item.description}
     >
-      {palettes.has(itemBasename(item.name, "colors")) && (
-        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
-      )}
+      <LinkCardMedia
+        slot="avatar"
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 
@@ -105,9 +98,10 @@ The PXL UI registry provides some color palettes you can install and include int
       title={item.title ?? item.name}
       description={item.description}
     >
-      {palettes.has(itemBasename(item.name, "colors")) && (
-        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
-      )}
+      <LinkCardMedia
+        slot="avatar"
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 
@@ -126,9 +120,10 @@ The PXL UI registry provides some color palettes you can install and include int
       title={item.title ?? item.name}
       description={item.description}
     >
-      {palettes.has(itemBasename(item.name, "colors")) && (
-        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
-      )}
+      <LinkCardMedia
+        slot="avatar"
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 
@@ -148,9 +143,10 @@ The PXL UI registry provides some color palettes you can install and include int
       title={item.title ?? item.name}
       description={item.description}
     >
-      {palettes.has(itemBasename(item.name, "colors")) && (
-        <ColorWheel slot="avatar" palette={palettes.get(itemBasename(item.name, "colors"))} />
-      )}
+      <LinkCardMedia
+        slot="avatar"
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 

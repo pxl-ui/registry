@@ -1,19 +1,14 @@
 ---
 title: Final Menu
 ---
-import {
-  ColorPalette,
-  ColorVariantsShowcase,
-  InstallCommand
-} from "~/components";
-import { cardVariants } from "@/components/ui/pxl/card";
+import { ColorPreview, Install } from "~/components";
 import { cn } from "@/lib/utils";
 
 import "~/examples/colors/final-menu.css"
 
 import FinalMenuRaw from "@/components/colors/pxl/final-menu.gpl?raw";
 
-<ColorPalette client:load palette="final-menu"
+<ColorPreview client:load palette="final-menu"
   gradients={[
     { label: "Classic Red", className: "bg-classic-red" },
     { label: "Linear Red", className: "bg-linear-red" },
@@ -28,4 +23,4 @@ import FinalMenuRaw from "@/components/colors/pxl/final-menu.gpl?raw";
 
 ## Installation
 
-<InstallCommand item="colors-final-menu" />
+<Install item="colors-final-menu" />

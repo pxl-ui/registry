@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/pxl/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/pxl/tabs";
 import { cn } from "@/lib/utils";
 
-export default function Typography({
+export default function FontPreview({
   font: fontName,
   sampleText = "The quick brown fox jumps over the lazy dog",
   sizes = [

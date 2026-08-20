@@ -2,36 +2,17 @@
 title: Sprite Canvas
 ---
 
-import { Example, InstallCommand } from "~/components";
+import { ComponentPreview, Install } from "~/components";
 
-import Preview from '~/examples/sprite-canvas/preview.tsx';
-import PreviewRaw from '~/examples/sprite-canvas/preview.tsx?raw';
-
-import Sizes from '~/examples/sprite-canvas/sizes.tsx';
-import SizesRaw from '~/examples/sprite-canvas/sizes.tsx?raw';
-
-import ChoiceAnimation from '~/examples/sprite-canvas/choice-animation.tsx';
-import ChoiceAnimationRaw from '~/examples/sprite-canvas/choice-animation.tsx?raw';
-
-import TransitionAnimation from '~/examples/sprite-canvas/transition-animation.tsx';
-import TransitionAnimationRaw from '~/examples/sprite-canvas/transition-animation.tsx?raw';
-
-import EvolutionAnimation from '~/examples/sprite-canvas/evolution-animation.tsx';
-import EvolutionAnimationRaw from '~/examples/sprite-canvas/evolution-animation.tsx?raw';
-
-<Example code={PreviewRaw}>
-  <Preview client:load />
-</Example>
+<ComponentPreview src="sprite-canvas/preview" />
 
 ## Installation
 
-<InstallCommand item="sprite-canvas" />
+<Install item="sprite-canvas" />
 
 ## Sizes
 
-<Example code={SizesRaw}>
-  <Sizes client:load />
-</Example>
+<ComponentPreview src="sprite-canvas/sizes" />
 
 ## Extensions
 
@@ -39,28 +20,20 @@ import EvolutionAnimationRaw from '~/examples/sprite-canvas/evolution-animation.
 
 A custom choice animation for sprite canvas
 
-<Example code={ChoiceAnimationRaw}>
-  <ChoiceAnimation client:load />
-</Example>
+<ComponentPreview src="sprite-canvas/choice-animation" />
 
-<InstallCommand item="sprite-canvas-choice" />
+<Install item="sprite-canvas-choice" />
 
 ### Transition Animation
 
 A custom transition animation for sprite canvas
 
-<Example code={TransitionAnimationRaw}>
-  <TransitionAnimation client:load />
-</Example>
+<ComponentPreview src="sprite-canvas/transition-animation" />
 
-<InstallCommand item="sprite-canvas-transition" />
+<Install item="sprite-canvas-transition" />
 
 ### Evolution Animation
 
 A custom evolution animation for sprite canvas
 
-<Example code={EvolutionAnimationRaw}>
-  <EvolutionAnimation client:load />
-</Example>
-
-<InstallCommand item="sprite-canvas-evolution" />
+<ComponentPreview src="sprite-canvas/evolution-animation" />

@@ -1,4 +1,4 @@
-import { formatColor, parse } from "gimp-palette";
+import { formatColor } from "gimp-palette";
 import { Fragment } from "react";
 
 import { Card, CardContent } from "@/components/ui/pxl/card";
@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import { palettes } from "~/lib/colors";
 
-export default function ColorPalette({
+export default function ColorPreview({
   activeTab = "swatches",
   gradients  = [],
   palette: paletteName,
@@ -47,7 +47,7 @@ export default function ColorPalette({
     return null;
   }
 
-  const { colors, columns = 1 } = parse(palette);
+  const { colors, columns = 1 } = palette;
 
   const rows = Math.ceil(colors.length / columns);
 

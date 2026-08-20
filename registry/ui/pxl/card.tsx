@@ -79,7 +79,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-title"
       className={cn(
-        "font-heading italic  h-5 leading-4! text-base @7xs/card:text-lg @4xs/card:text-xl [&_svg]:fill-current [&_svg]:size-5 *:data-[slot=icon]:mr-1.5 *:data-[slot=icon]:inline-block [&>svg]:inline-block [&>svg]:mr-1.5",
+        "font-heading italic leading-4! text-base @7xs/card:text-lg @4xs/card:text-xl [&_svg]:fill-current [&_svg]:size-5 *:data-[slot=icon]:mr-1.5 *:data-[slot=icon]:inline-block [&>svg]:inline-block [&>svg]:mr-1.5",
         className,
       )}
       {...props}

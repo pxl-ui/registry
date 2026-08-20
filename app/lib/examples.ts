@@ -27,6 +27,11 @@ Object.entries(
   );
 });
 
+export {
+  components,
+  sources,
+}
+
 export default {
   components,
   sources,

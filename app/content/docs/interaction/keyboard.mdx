@@ -1,33 +1,19 @@
 ---
 title: Keyboard
 ---
-import { Example, InstallCommand } from '~/components';
+import { ComponentPreview, Install } from '~/components';
 
-import Preview from '~/examples/keyboard/preview.tsx';
-import PreviewRaw from '~/examples/keyboard/preview.tsx?raw';
-
-import Variants from '~/examples/keyboard/variants.tsx';
-import VariantsRaw from '~/examples/keyboard/variants.tsx?raw';
-
-import Sizes from '~/examples/keyboard/sizes.tsx';
-import SizesRaw from '~/examples/keyboard/sizes.tsx?raw';
-
-<Example code={PreviewRaw}>
-  <Preview client:load />
-</Example>
+<ComponentPreview src="keyboard/preview" />
 
 ## Installation
 
-<InstallCommand item="keyboard" />
+<Install item="keyboard" />
 
 ## Variants
 
-<Example code={VariantsRaw}>
-  <Variants client:load />
-</Example>
+<ComponentPreview src="keyboard/variants" />
+
 
 ## Sizes
 
-<Example code={SizesRaw}>
-  <Sizes client:load />
-</Example>
+<ComponentPreview src="keyboard/sizes" />

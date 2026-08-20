@@ -5,15 +5,10 @@ sidebar:
 ---
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
 
-import {
-  TypographyCascade,
-  TypographySample,
-  LinkCard,
-} from "~/components";
+import { LinkCard, LinkCardMedia } from "~/components";
 
 import { lists } from "~/lib/fonts";
-import { itemBasename, routeFromRegistryItem, url } from "~/lib/utils";
-
+import { routeFromRegistryItem, url } from "~/lib/utils";
 
 import "~/examples/fonts/able-5.css"
 import "~/examples/fonts/bytesized.css"
@@ -45,9 +40,10 @@ Please note that each fonts may require different methods of installation or dow
       title={item.title ?? item.name}
       description={item.description}
     >
-      <TypographySample 
+      <LinkCardMedia
         slot="avatar"
-        class={`font-${itemBasename(item.name, "fonts")}`} />
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 
@@ -65,9 +61,10 @@ Please note that each fonts may require different methods of installation or dow
       title={item.title ?? item.name}
       description={item.description}
     >
-      <TypographySample 
+      <LinkCardMedia
         slot="avatar"
-        class={`font-${itemBasename(item.name, "fonts")}`} />
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 
@@ -85,9 +82,10 @@ Please note that each fonts may require different methods of installation or dow
       title={item.title ?? item.name}
       description={item.description}
     >
-      <TypographySample 
+      <LinkCardMedia
         slot="avatar"
-        class={`font-${itemBasename(item.name, "fonts")}`} />
+        item={item.name}        
+      />
     </LinkCard>
   ))}
 

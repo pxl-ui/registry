@@ -1,42 +1,50 @@
 ---
 title: Button
 ---
-import { Example, InstallCommand } from '~/components';
+import { ComponentPreview, Install } from '~/components';
 
-import Preview from '~/examples/button/preview.tsx';
-import PreviewRaw from '~/examples/button/preview.tsx?raw';
-
-import Borders from '~/examples/button/borders.tsx';
-import BordersRaw from '~/examples/button/borders.tsx?raw';
-
-import Sizes from '~/examples/button/sizes.tsx';
-import SizesRaw from '~/examples/button/sizes.tsx?raw';
-
-import Variants from '~/examples/button/variants.tsx';
-import VariantsRaw from '~/examples/button/variants.tsx?raw';
-
-<Example code={PreviewRaw}>
-  <Preview client:load />
-</Example>
+<ComponentPreview src="button/preview" />
 
 ## Installation
 
-<InstallCommand item="button" />
+<Install item="button" />
 
-## Borders
+## Usage
 
-<Example code={BordersRaw}>
-  <Borders client:load />
-</Example>
+```tsx
+import { Button } from "@/components/ui/pxl/button"
+```
 
-## Sizes
+```tsx
+<Button variant="outline">Button</Button>
+```
 
-<Example code={SizesRaw}>
-  <Sizes client:load />
-</Example>
+## Size
+
+Use the `size` prop to change the size of the button.
+
+<ComponentPreview src="button/sizes" />
 
 ## Variants
 
-<Example code={VariantsRaw}>
-  <Variants client:load />
-</Example>
+Use the `variant` prop to change the colors of the button.
+
+<ComponentPreview src="button/variants" />
+
+## Borders
+
+Use the `border` prop to change the border of the button.
+
+<ComponentPreview src="button/borders" />
+
+## API Reference
+
+### Button
+
+The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
+
+| Prop      | Type                                                                                 | Default     |
+| --------- | ------------------------------------------------------------------------------------ | ----------- |
+| `variant` | `"default" \| "primary" \| "outline" \| "ghost" \| "destructive" \| "secondary" \| "link" \| "success" \| "warning" \| "danger"`        | `"default"` |
+| `size`    | `"default" \| "xs" \| "sm" \| "lg" \| "icon" \| "icon-xs" \| "icon-sm" \| "icon-lg"` | `"default"` |
+| `border`    | `"default" \| "none" \| "outline"` | `"default"` |

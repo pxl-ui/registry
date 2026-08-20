@@ -1,5 +1,11 @@
 import root from "../../registry.json" with { type: "json" };
 
+const KIND_CATEGORIES = {
+  COLOR: "color-palette",
+  FONT: "font-family",
+  WIDGETS: "widgets"
+}
+
 export type Registry = {
   name: string;
   items: RegistryItem[];
@@ -94,8 +100,53 @@ function filter({
   })
 }
 
+function kind(itemName: string): "color" | "font" | "component" | "widget" {
+  const item = registry.get(itemName);
+
+  if (!item) {
+    throw new Error(`Item "${itemName}" not found`);
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.COLOR)) {
+    return "color";
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.FONT)) {
+    return "font";
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.WIDGETS)) {
+    return "widget";
+  }
+
+  return "component";
+}
+
+/**
+ * Removes kind prefixes from registry item. Eg: from "fonts-able-5" to "able-5".
+ */
+function basename(itemName: string) {
+  const item = registry.get(itemName);
+
+  if (!item) {
+    throw new Error(`Item "${itemName}" not found`);
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.COLOR)) {
+    return itemName.replace("colors-", "");
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.FONT)) {
+    return itemName.replace("fonts-", "");
+  }
+
+  return itemName;
+}
+
 export default registry;
 
 export {
+  basename,
   filter,
+  kind,
 }

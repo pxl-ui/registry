@@ -1,0 +1,75 @@
+---
+
+import { Button } from "@/components/ui/pxl/button";
+
+---
+<starlight-menu-button class="peer group print:hidden">
+	<Button
+		aria-expanded="false"
+		aria-label={Astro.locals.t('menuButton.accessibleLabel')}
+		aria-controls="starlight__sidebar"
+		size="icon"
+		variant="ghost"
+		className="flex md:hidden fixed top-[calc((var(--sl-nav-height)-var(--sl-menu-button-size))/2)] inset-e-(--sl-nav-pad-x) z-(--sl-z-index-navbar)"
+	>
+		<svg class="open-menu flex group-aria-expanded:hidden" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 18H4v-2h16v2Zm0-5H4v-2h16v2Zm0-5H4V6h16v2Z"/></svg>
+    <svg class="close-menu hidden group-aria-expanded:flex" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M7 19H5v-2h2v2Zm12 0h-2v-2h2v2ZM9 15v2H7v-2h2Zm8 2h-2v-2h2v2Zm-6-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-2-2h-2v-2h2v2Zm-2-2H9V9h2v2Zm4 0h-2V9h2v2ZM9 9H7V7h2v2Zm8 0h-2V7h2v2ZM7 7H5V5h2v2Zm12 0h-2V5h2v2Z"/></svg>
+	</Button>
+</starlight-menu-button>
+
+<script>
+	class StarlightMenuButton extends HTMLElement {
+		btn = this.querySelector('button');
+
+		constructor() {
+			super();
+			// Toggle `aria-expanded` state when a user clicks the button.
+			this.btn?.addEventListener('click', () => this.toggleExpanded());
+
+			// Close the menu when a user presses the escape key.
+			const parentNav = this.closest('nav');
+			if (parentNav) {
+				parentNav.addEventListener('keyup', (e) => this.closeOnEscape(e));
+			}
+
+			// Reset menu state when the viewport toggles between mobile and desktop sizes.
+			matchMedia('(min-width: 50em)').addEventListener('change', () => this.setExpanded(false));
+		}
+
+		setExpanded(expanded: boolean) {
+			this.setAttribute('aria-expanded', String(expanded));
+			document.body.toggleAttribute('data-mobile-menu-expanded', expanded);
+			// Trap keyboard focus inside the header and menu when the menu is expanded.
+			document.querySelectorAll<HTMLElement>('.main-frame, .sl-skip-link').forEach((el) => {
+				el.toggleAttribute('inert', expanded);
+			});
+		}
+
+		toggleExpanded() {
+			this.setExpanded(this.getAttribute('aria-expanded') !== 'true');
+		}
+
+		closeOnEscape(e: KeyboardEvent) {
+			if (e.code === 'Escape') {
+				this.setExpanded(false);
+				this.btn?.focus();
+			}
+		}
+	}
+
+	customElements.define('starlight-menu-button', StarlightMenuButton);
+</script>
+
+<style is:global>
+	@layer starlight.core {
+		[data-mobile-menu-expanded] {
+			overflow: hidden;
+		}
+
+		@media (min-width: 50rem) {
+			[data-mobile-menu-expanded] {
+				overflow: auto;
+			}
+		}
+	}
+</style>
