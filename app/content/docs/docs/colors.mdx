@@ -25,7 +25,7 @@ import PICO8Raw from "@/components/colors/pxl/pico-8.gpl?raw";
 import TailwindRaw from "@/components/colors/pxl/tailwind.gpl?raw";
 import VinesFlexibleLinearRampsRaw from "@/components/colors/pxl/vines-flexible-linear-ramps.gpl?raw";
 
-import { routeFromRegistryItem, url } from "~/lib/utils";
+import { toRouteId } from "~/lib/registry";
 import { lists, palettes } from "~/lib/colors";
 
 <ColorPreview client:load 
@@ -73,7 +73,7 @@ The PXL UI registry provides some color palettes you can install and include int
 
   {lists.complete.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "colors")} 
+      href={toRouteId(item.name)} 
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -94,7 +94,7 @@ The PXL UI registry provides some color palettes you can install and include int
 
   {lists.base.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "colors")} 
+      href={toRouteId(item.name)} 
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -116,7 +116,7 @@ The PXL UI registry provides some color palettes you can install and include int
 
   {lists.colors.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "colors")} 
+      href={toRouteId(item.name)} 
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -139,7 +139,7 @@ The PXL UI registry provides some color palettes you can install and include int
 
   {lists.compat.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "colors")} 
+      href={toRouteId(item.name)} 
       title={item.title ?? item.name}
       description={item.description}
     >

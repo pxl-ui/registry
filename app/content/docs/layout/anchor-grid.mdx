@@ -5,11 +5,11 @@ sidebar:
   order: 2
 ---
 import { Aside, ComponentPreview, Install } from "~/components";
-import { url } from '~/lib/utils';
+import { url as resolveUrl } from '~/lib/utils';
 
 <ComponentPreview src="anchor-grid/preview" />
 
-<Aside type="tip" title="When to use">Use Anchor Grid to display your widgets in websites or other full screen based setups. For desktop/floating widgets, use <a href={url("layouts/widget-area")}>Widget Area</a> instead.</Aside>
+<Aside type="tip" title="When to use">Use Anchor Grid to display your widgets in websites or other full screen based setups. For desktop/floating widgets, use <a href={resolveUrl("layouts/widget-area")}>Widget Area</a> instead.</Aside>
 
 ## Installation
 

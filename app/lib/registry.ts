@@ -1,4 +1,5 @@
 import root from "../../registry.json" with { type: "json" };
+import { url } from "./utils";
 
 const KIND_CATEGORIES = {
   COLOR: "color-palette",
@@ -170,6 +171,23 @@ function fromRouteId(routeId: string) {
   return registry.get(itemName) ?? null;
 }
 
+
+function toRouteId(itemName: string) {
+  const baseName = basename(itemName);
+  const itemKind = kind(itemName);
+
+  if (itemKind === "color") {
+    return url(`colors/${baseName}`);
+  }
+
+  if (itemKind === "font") {
+    return url(`fonts/${baseName}`);
+  }
+  
+  // TODO: Implement component subcategories
+  throw new Error("Not implemented");
+}
+
 export default registry;
 
 export {
@@ -177,4 +195,5 @@ export {
   filter,
   fromRouteId,
   kind,
+  toRouteId,
 }

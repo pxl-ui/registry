@@ -3,12 +3,10 @@ title: Typography
 sidebar:
   order: 4
 ---
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pxl/card";
-
 import { LinkCard, LinkCardMedia } from "~/components";
 
 import { lists } from "~/lib/fonts";
-import { routeFromRegistryItem, url } from "~/lib/utils";
+import { toRouteId } from "~/lib/registry";
 
 import "~/examples/fonts/able-5.css"
 import "~/examples/fonts/bytesized.css"
@@ -35,8 +33,8 @@ Please note that each fonts may require different methods of installation or dow
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.headings.map(item => (
-    <LinkCard 
-      href={routeFromRegistryItem(item.name, "fonts")} 
+    <LinkCard
+      href={toRouteId(item.name)}
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -56,8 +54,8 @@ Please note that each fonts may require different methods of installation or dow
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.texts.map(item => (
-    <LinkCard 
-      href={routeFromRegistryItem(item.name, "fonts")} 
+    <LinkCard
+      href={toRouteId(item.name)}
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -77,8 +75,8 @@ Please note that each fonts may require different methods of installation or dow
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.monospaces.map(item => (
-    <LinkCard 
-      href={routeFromRegistryItem(item.name, "fonts")} 
+    <LinkCard
+      href={toRouteId(item.name)}
       title={item.title ?? item.name}
       description={item.description}
     >
