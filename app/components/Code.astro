@@ -47,7 +47,7 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 ,
 
     <div
       data-slot="code-preview-toggle-wrapper" 
-      class="absolute inset-x-0 flex justify-center pt-2"
+      class="absolute inset-x-0 flex justify-center pt-2 transition-all"
 			style={`bottom: ${(collapsedHeight / 2) - 14}px`}>
       <button
         type="button"
@@ -94,6 +94,10 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 ,
 				fade?.classList.toggle('opacity-0', collapsed);
 				button.dataset.state = collapsed ? 'expanded' : 'collapsed';
 				button.textContent = collapsed ? 'Hide code' : 'View code';
+				toggleWrapper!.style.bottom = collapsed ? "14px" : `${(collapsedHeight / 2) - 14}px`;
+				if (collapsed) {
+					toggleWrapper!.style.display = "none";
+				}
 			});
 		});
 	}

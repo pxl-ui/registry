@@ -1,0 +1,64 @@
+---
+title: Tooltip
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview src="tooltip/preview" />
+
+## Installation
+
+<Install item="tooltip" />
+
+Add the `TooltipProvider` to the root of your app.
+
+```tsx title="app/layout.tsx" showLineNumbers {1,7}
+import { TooltipProvider } from "@/components/ui/tooltip"
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <TooltipProvider>{children}</TooltipProvider>
+      </body>
+    </html>
+  )
+}
+```
+
+## Usage
+
+```tsx
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+```
+
+```tsx
+<Tooltip>
+  <TooltipTrigger>Hover</TooltipTrigger>
+  <TooltipContent>
+    <p>Add to library</p>
+  </TooltipContent>
+</Tooltip>
+```
+
+## Composition
+
+Use the following composition to build a `Tooltip`:
+
+```text
+Tooltip
+├── TooltipTrigger
+└── TooltipContent
+```
+
+## Side
+
+Use the `side` prop to change the position of the tooltip.
+
+
+## API Reference
+
+See the [Base UI Tooltip](https://base-ui.com/react/components/tooltip#api-reference) documentation.

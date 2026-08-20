@@ -439,9 +439,7 @@ body {
   }
 
   .expressive-code:not(.not-content, .not-content *) {
-    pre {
-      @apply pixel-size-lg pixel-color-border pixel-border;
-    }
+    @apply pixel-size-lg pixel-color-border pixel-border p-(--pixel-size);
   }
 }
 
@@ -452,6 +450,23 @@ body {
   pre {
     @apply scrollbar-none font-mono border-none;
   }
+
+  .frame {
+    .header {
+      @apply [background:var(--muted)] px-2 py-1.5 border-b-2 border-b-border sticky top-0;
+
+      &::before {
+        @apply hidden;
+      }
+
+      .title {
+        @apply p-0 font-mono text-xs;
+      }
+      .title::after {
+        @apply hidden; 
+      }
+    }
+  }
 }
 
 
@@ -461,6 +476,13 @@ body {
 
   a {
     @apply font-bold underline-offset-4 hover:underline;
+  }
+
+  &.starlight-aside--note {
+    @apply bg-primary pixel-color-primary-foreground;
+    * {
+      @apply text-primary-foreground;
+    }
   }
 
   &.starlight-aside--caution {
@@ -497,7 +519,7 @@ starlight-tabs [role="tablist"] {
   }
 
   .tab [aria-selected="true"] {
-    @apply bg-accent pixel-color-accent;
+    @apply bg-accent pixel-color-accent font-normal;
   } 
 }
 

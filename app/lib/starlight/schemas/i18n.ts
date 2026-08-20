@@ -63,6 +63,7 @@ export function builtinI18nSchema() {
     ...z.strictObject({ ...starlightI18nSchema().required().shape }).shape,
     ...pagefindI18nSchema().shape,
     ...expressiveCodeI18nSchema().shape,
+    ...appI18nSchema().shape,
   });
 }
 
@@ -165,16 +166,6 @@ function starlightI18nSchema() {
       'heading.anchorLabel': z
         .string()
         .meta({ description: 'Label for anchor links in Markdown content.' }),
-
-      "footer.credits.author": z.string(),
-      "footer.credits.company": z.string(),
-      "footer.credits.repository": z.string(),
-
-      "registry.installation.command": "Command",
-      "registry.installation.manual": "Manual",
-      "registry.installation.manual.steps.installDependencies": z.string(),
-      "registry.installation.manual.steps.copyCode": z.string(),
-      "registry.installation.manual.steps.updateImports": z.string(),
     })
     .partial();
 }
@@ -251,4 +242,18 @@ function expressiveCodeI18nSchema() {
       }),
     })
     .partial();
+}
+
+function appI18nSchema() {
+  return z.object({
+    "footer.credits.author": z.string(),
+    "footer.credits.company": z.string(),
+    "footer.credits.repository": z.string(),
+
+    "registry.installation.command": z.string(),
+    "registry.installation.manual": z.string(),
+    "registry.installation.manual.steps.installDependencies": z.string(),
+    "registry.installation.manual.steps.copyCode": z.string(),
+    "registry.installation.manual.steps.updateImports": z.string(),
+  }).partial();
 }

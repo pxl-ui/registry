@@ -48,7 +48,7 @@ const dependencies = item?.dependencies ?? [];
   <TabItem label={Astro.locals.t('registry.installation.manual')}>
     <div
       class={cn(
-        "steps mb-12 [counter-reset:step] md:ml-4 md:border-l md:pl-8 [&>h3]:step",
+        "steps mb-12 [counter-reset:step] md:ml-4 md:border-l md:pl-8 [&>h3]:step [&>h3]:font-normal!",
       )}
     >
       {dependencies.length > 0 && (<h3>{Astro.locals.t('registry.installation.manual.steps.installDependencies')}</h3>)}

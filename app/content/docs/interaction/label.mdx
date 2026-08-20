@@ -1,0 +1,37 @@
+---
+title: Label
+---
+import { Aside, ComponentPreview, Install } from "~/components";
+
+<ComponentPreview src="label/preview" />
+
+<Aside>
+  For form fields, use the [Field](/docs/components/base/field) component which
+  includes built-in label, description, and error handling.
+</Aside>
+
+## Installation
+
+<Install item="label" />
+
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/label"
+```
+
+```tsx
+<Label htmlFor="email">Your email address</Label>
+```
+
+## Label in Field
+
+For form fields, use the [Field](/docs/components/base/field) component which
+includes built-in `FieldLabel`, `FieldDescription`, and `FieldError` components.
+
+```tsx
+<Field>
+  <FieldLabel htmlFor="email">Your email address</FieldLabel>
+  <Input id="email" />
+</Field>
+```

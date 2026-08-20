@@ -543,7 +543,7 @@
         {
           "type": "registry:style",
           "path": "final-menu.css",
-          "target": "@/components/colors/pxl/final-menu.css"
+          "target": "@components/colors/pxl/final-menu.css"
         }
       ],
       "css": {
@@ -603,7 +603,7 @@
         {
           "type": "registry:style",
           "path": "duel.css",
-          "target": "@/components/colors/pxl/duel.css"
+          "target": "@components/colors/pxl/duel.css"
         }
       ],
       "css": {
@@ -674,7 +674,7 @@
         {
           "type": "registry:style",
           "path": "duel.css",
-          "target": "@/components/colors/pxl/duel-compat.css"
+          "target": "@components/colors/pxl/duel-compat.css"
         }
       ],
       "css": {
@@ -747,7 +747,7 @@
         {
           "type": "registry:style",
           "path": "gothic-bit.css",
-          "target": "@/components/colors/pxl/gothic-bit.css"
+          "target": "@components/colors/pxl/gothic-bit.css"
         }
       ],
       "css": {
@@ -800,7 +800,7 @@
         {
           "type": "registry:style",
           "path": "justparchment8.css",
-          "target": "@/components/colors/pxl/justparchment8.css"
+          "target": "@components/colors/pxl/justparchment8.css"
         }
       ],
       "css": {
@@ -850,7 +850,7 @@
         {
           "type": "registry:style",
           "path": "nestopia.css",
-          "target": "@/components/colors/pxl/nestopia.css"
+          "target": "@components/colors/pxl/nestopia.css"
         }
       ],
       "css": {
@@ -923,7 +923,7 @@
         {
           "type": "registry:style",
           "path": "paperback.css",
-          "target": "@/components/colors/pxl/paperback.css"
+          "target": "@components/colors/pxl/paperback.css"
         }
       ],
       "css": {
@@ -975,7 +975,7 @@
         {
           "type": "registry:style",
           "path": "pico-8.css",
-          "target": "@/components/colors/pxl/pico-8.css"
+          "target": "@components/colors/pxl/pico-8.css"
         }
       ],
       "css": {
@@ -1044,7 +1044,7 @@
         {
           "type": "registry:style",
           "path": "tailwind.css",
-          "target": "@/components/colors/pxl/tailwind.css"
+          "target": "@components/colors/pxl/tailwind.css"
         }
       ],
       "css": {
@@ -1145,7 +1145,7 @@
         {
           "type": "registry:style",
           "path": "vines-flexible-linear-ramps.css",
-          "target": "@/components/colors/pxl/vines-flexible-linear-ramps.css"
+          "target": "@components/colors/pxl/vines-flexible-linear-ramps.css"
         }
       ],
       "css": {

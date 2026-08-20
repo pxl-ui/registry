@@ -114,6 +114,21 @@
       ]
     },
     {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Checkbox",
+      "description": "A control that allows the user to toggle between checked and not checked.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "checkbox.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/checkbox.tsx"
+        }
+      ]
+    },
+    {
       "name": "command",
       "type": "registry:component",
       "title": "Command",
@@ -170,6 +185,20 @@
           "path": "dialogue-box.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/dialogue-box.tsx"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:component",
+      "title": "Field",
+      "description": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs.",
+      "categories": ["pxl-ui", "components", "ui"],
+      "files": [
+        {
+          "path": "field.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/field.tsx"
         }
       ]
     },
