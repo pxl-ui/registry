@@ -1,5 +1,6 @@
 ---
 title: Components
+description: Here you can find all the components available in the library. We are working on adding more components.
 sidebar:
   order: 6
 ---
@@ -11,7 +12,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 > <p className="text-muted-foreground">How do I organize the interface?</p>
 
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.layout.map(item => (
     <LinkCard 
@@ -27,7 +28,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 ## Interaction
 > <p className="text-muted-foreground">How does the user interact with it?</p>
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.interaction.map(item => (
     <LinkCard 
@@ -43,7 +44,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 ## Navigation
 > <p className="text-muted-foreground">How does the user move through it?</p>
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.navigation.map(item => (
     <LinkCard 
@@ -59,7 +60,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 ## Content
 > <p className="text-muted-foreground">What does the interface show?</p>
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.content.map(item => (
     <LinkCard 

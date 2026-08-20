@@ -2,13 +2,13 @@
 title: Widgets
 sidebar:
   order: 7
-tableOfContents: false
+description: Here you can find all the widgets available in the library. We are working on adding more widgets.
 ---
 import { LinkCard } from "~/components";
 import { lists } from "~/lib/components";
 import { routeFromRegistryItem } from "~/lib/utils";
 
-<div class="not-content grid sm:grid-cols-2 gap-2.5">
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.widgets.map(item => (
     <LinkCard 
