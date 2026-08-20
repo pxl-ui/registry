@@ -21,7 +21,6 @@ const creditSchema = z
     }),
   ])
   .transform((author) => {
-    console.log(author)
     if (typeof author !== "string") {
       return author;
     }
