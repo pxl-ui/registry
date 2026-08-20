@@ -29,5 +29,10 @@
   "themeSelect.light": "Light",
   "themeSelect.auto": "Auto",
   "tableOfContents.onThisPage": "On This Page",
-  "tableOfContents.overview": "Overview"
+  "tableOfContents.overview": "Overview",
+  "registry.installation.command": "Command",
+  "registry.installation.manual": "Manual",
+  "registry.installation.manual.steps.installDependencies": "Install the following dependencies:",
+  "registry.installation.manual.steps.copyCode": "Copy and paste the following code into your project.",
+  "registry.installation.manual.steps.updateImports": "Update the import paths to match your project setup."
 }

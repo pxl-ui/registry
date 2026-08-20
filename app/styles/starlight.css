@@ -483,3 +483,30 @@ body {
     @apply py-0;
   }
 }
+
+
+starlight-tabs {
+  @apply mt-6;
+}
+
+starlight-tabs [role="tablist"] {
+  @apply border-b-0 gap-2;
+
+  .tab {
+    @apply pixel-rounded hover:bg-accent hover:pixel-color-accent;
+  }
+
+  .tab [aria-selected="true"] {
+    @apply bg-accent pixel-color-accent;
+  } 
+}
+
+
+@utility step {
+  counter-increment: step;
+
+  &:before {
+    @apply mr-2 inline-flex size-6 items-center justify-center pixel-size-lg pixel-rounded pixel-color-muted bg-muted text-center -indent-px font-mono text-sm font-medium md:absolute md:-mt-1 md:-ml-12.5 md:size-7;
+    content: counter(step);
+  }
+}

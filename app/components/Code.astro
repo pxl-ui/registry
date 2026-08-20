@@ -70,7 +70,7 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 }
 
 			const collapsedHeight = Number(wrapper.dataset.collapsedHeight ?? 240);
 
-			if (content.scrollHeight <= collapsedHeight) {
+			if (content.scrollHeight && content.scrollHeight <= collapsedHeight) {
 				content.style.maxHeight = "none";
 				fade?.remove();
 				toggleWrapper?.remove();

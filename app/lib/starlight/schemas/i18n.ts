@@ -169,6 +169,12 @@ function starlightI18nSchema() {
       "footer.credits.author": z.string(),
       "footer.credits.company": z.string(),
       "footer.credits.repository": z.string(),
+
+      "registry.installation.command": "Command",
+      "registry.installation.manual": "Manual",
+      "registry.installation.manual.steps.installDependencies": z.string(),
+      "registry.installation.manual.steps.copyCode": z.string(),
+      "registry.installation.manual.steps.updateImports": z.string(),
     })
     .partial();
 }
