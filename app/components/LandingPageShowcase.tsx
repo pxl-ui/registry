@@ -8,8 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/pxl/card";
+import {
+  DialogueBox,
+  DialogueMessage,
+  DialoguePortrait,
+} from "@/components/ui/pxl/dialogue-box";
 import { Input } from "@/components/ui/pxl/input";
 import { Keyboard, type KeyboardRef } from "@/components/ui/pxl/keyboard";
+import { Scores } from "@/components/ui/pxl/scores";
 import { WheelList, WheelOption } from "@/components/ui/pxl/wheel-list";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 import { DayView } from "@/components/widgets/pxl/day-view";
@@ -26,14 +32,12 @@ function SpriteWidget() {
               style={{
                 backgroundImage: "url(sprites/regulus.png)",
               }}
-            >
-
-            </div>
+            ></div>
           </CardContent>
         </Card>
       </a>
     </WidgetArea>
-  )
+  );
 }
 
 function DayViewWidget() {
@@ -94,17 +98,17 @@ function DayViewWidget() {
             hourly: {
               time: hourlyTimeRange,
               temperature_2m: [
-                23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6, 25.6,
-                25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3, 24.5, 25,
-                24.7,
+                23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6,
+                25.6, 25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3,
+                24.5, 25, 24.7,
               ],
               weather_code: [
-                0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3, 3,
-                51, 3,
+                0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3,
+                3, 51, 3,
               ],
               is_day: [
-                0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                1, 0, 0,
               ],
             },
             daily: {
@@ -214,10 +218,96 @@ function MenuWidget() {
   );
 }
 
+function ScoresWidget() {
+  return (
+    <WidgetArea size="sm">
+      <Card size="lg" className="size-full">
+        <CardHeader>
+          <CardTitle>High Scores</CardTitle>
+        </CardHeader>
+        <CardContent scrollable>
+          <Scores
+            className="w-full"
+            items={[
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "IHS",
+                title: "1,000,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "AAA",
+                title: "900,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "KNM",
+                title: "700,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "XLL",
+                title: "550,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "RSS",
+                title: "90,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "AAA",
+                title: "75,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "CKL",
+                title: "60,000",
+              },
+              {
+                avatar:
+                  "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png",
+                description: "ABB",
+                title: "1,000",
+              },
+            ]}
+          />
+        </CardContent>
+      </Card>
+    </WidgetArea>
+  );
+}
+
+function DialogueBoxWidget() {
+  return (
+    <WidgetArea size="md" className="h-full flex flex-col justify-between">
+      <DialogueBox size="lg" className="w-full">
+        <DialogueMessage
+          className="h-[2lh]"
+          text="A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it."
+          onEnd={() => console.log("onEnd")}
+        />
+        <DialoguePortrait
+          className="bg-primary"
+          alt="@hero"
+          fallback="IHS"
+          src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png"
+        />
+      </DialogueBox>
+    </WidgetArea>
+  );
+}
+
 export default function LandingPageShowcase() {
   return (
     <div className="not-content w-full h-full flex flex-row flex-wrap gap-4 justify-center">
-
       <SpriteWidget />
 
       <DayViewWidget />
@@ -227,6 +317,10 @@ export default function LandingPageShowcase() {
       <KeyboardWidget />
 
       <MenuWidget />
+
+      <ScoresWidget />
+
+      <DialogueBoxWidget />
     </div>
   );
 }

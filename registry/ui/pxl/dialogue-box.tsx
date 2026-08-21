@@ -161,12 +161,10 @@ function DialoguePortrait({
 
 function DialogueBox({
   children,
-  className,
-}: {
-  className?: string;
-} & PropsWithChildren) {
+  ...props
+}: ComponentProps<typeof Card> & PropsWithChildren) {
   return (
-    <Card className={className}>
+    <Card {...props}>
       <CardContent className="flex justify-between gap-2 [--card-spacing:--spacing(1)]">{children}</CardContent>
     </Card>
   );
