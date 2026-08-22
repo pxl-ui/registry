@@ -9,8 +9,33 @@ export const onRequest = defineRouteMiddleware((context) => {
   const item = fromRouteId(id);
 
   if (item) {
-    entry.data.description = entry.data.description ?? item.description;
-    // Update the title to add an exclamation mark.
-    entry.data.title = entry.data.title ?? item.title;
+    const description = entry.data.description ?? item.description;
+    const title = entry.data.title ?? item.title;
+
+    entry.data.description = description;
+    entry.data.title = title;
+
+    // Override description meta tags
+    for (const headItem of context.locals.starlightRoute.head) {
+      if (
+        headItem.tag === "meta" &&
+        (
+          headItem.attrs?.name === "description" ||
+          headItem.attrs?.property === "og:description"
+
+        )
+      ) {
+        headItem.attrs.content = description;
+      }
+    }
   }
+
+  // Remove generator tags
+  context.locals.starlightRoute.head = context.locals.starlightRoute.head?.filter((headItem) => {
+    if (headItem.tag === "meta" && headItem.attrs?.name === "generator") {
+      return false;
+    }
+
+    return true;
+  })
 });

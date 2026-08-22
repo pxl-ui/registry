@@ -5,10 +5,12 @@ import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
+const baseUrl = process.env.NODE_ENV === "development" ? undefined : "/registry";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://pxl-ui.github.io",
-  base: process.env.NODE_ENV === "development" ? undefined : "/registry",
+  base: baseUrl,
   srcDir: "./app",
   publicDir: "./app/public",
   integrations: [
@@ -16,6 +18,38 @@ export default defineConfig({
     starlight({
       title: "PXL UI",
       description: "A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it.",
+      head: [
+        {
+          tag: "link",
+          attrs: {
+            rel: "preload",
+            as: "font",
+            crossorigin: "anonymous",
+            href: `${baseUrl ?? ""}/fonts/Able_5.ttf`,
+            type: "font/ttf"
+          }
+        },
+        {
+          tag: "link",
+          attrs: {
+            rel: "preload",
+            as: "font",
+            crossorigin: "anonymous",
+            href: `${baseUrl ?? ""}/fonts/Pixel_Digivolve.otf`,
+            type: "font/otf"
+          }
+        },
+        {
+          tag: "link",
+          attrs: {
+            rel: "preload",
+            as: "font",
+            crossorigin: "anonymous",
+            href: `${baseUrl ?? ""}/fonts/Monogram_Extended.ttf`,
+            type: "font/ttf"
+          }
+        }
+      ],
       expressiveCode: {
         shiki: {
           bundledLangs: ["sh", "bash", "typescript", "tsx"],
