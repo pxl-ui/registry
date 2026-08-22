@@ -469,37 +469,6 @@ body {
   }
 }
 
-
-.starlight-aside {
-  @apply border-none pixel-border pixel-size-md;
-
-
-  a {
-    @apply font-bold underline-offset-4 hover:underline;
-  }
-
-  &.starlight-aside--note {
-    @apply bg-primary pixel-color-primary-foreground;
-    * {
-      @apply text-primary-foreground;
-    }
-  }
-
-  &.starlight-aside--caution {
-    @apply bg-warning pixel-color-warning-foreground;
-    * {
-      @apply text-warning-foreground;
-    }
-  }
-
-  &.starlight-aside--tip {
-    @apply bg-info pixel-color-info-foreground;
-    * {
-      @apply text-info-foreground;
-    }
-  }
-}
-
 .mobile-preferences,
 #starlight__on-this-page--mobile {
   @apply hidden;
@@ -527,7 +496,7 @@ starlight-tabs [role="tablist"] {
   counter-increment: step;
 
   &:before {
-    @apply mr-2 inline-flex size-6 items-center justify-center pixel-size-lg pixel-rounded pixel-color-muted bg-muted text-center -indent-px font-mono text-sm font-medium md:absolute md:-mt-1 md:-ml-12.5 md:size-7;
+    @apply mr-2 inline-flex size-6 leading-6 items-center justify-center pixel-size-lg pixel-rounded pixel-color-muted bg-muted text-muted-foreground text-center -indent-px font-mono text-sm font-bold md:absolute md:-mt-1 md:-ml-12.5 md:size-7;
     content: counter(step);
   }
 }

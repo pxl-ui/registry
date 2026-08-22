@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import registry, { files } from '~/lib/registry';
 
 import CollapsibleCode from "./Code.astro";
+import NodeCommand from './NodeCommand';
 
 function resolveTargetPath(path: string) {
   return path
@@ -30,48 +31,31 @@ const dependencies = item?.dependencies ?? [];
 ---
 <Tabs>
   <TabItem label={Astro.locals.t('registry.installation.command')}>
-    <Tabs>
-      <TabItem label={"pnpm"} icon="pnpm">
-        <Code code={`pnpm dlx shadcn@latest add pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
-      </TabItem>
-      <TabItem label={"npm"} icon="npm">
-        <Code code={`npx shadcn@latest list pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
-      </TabItem>
-      <TabItem label={"yarn"} icon="seti:yarn">
-        <Code code={`yarn dlx shadcn@latest list pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
-      </TabItem>
-      <TabItem label={"bun"} icon="bun">
-        <Code code={`bunx --bun shadcn@latest list pxl-ui/registry/${itemName}`} lang="sh" frame="none" />
-      </TabItem>
-    </Tabs>
+    <NodeCommand client:load 
+      className="mt-0"
+      command={`shadcn@latest add pxl-ui/registry/${itemName}`} />
   </TabItem>
   <TabItem label={Astro.locals.t('registry.installation.manual')}>
     <div
-      class={cn(
-        "steps mb-12 [counter-reset:step] md:ml-4 md:border-l md:pl-8 [&>h3]:step [&>h3]:font-normal!",
-      )}
-    >
+      class="steps [counter-reset:step] md:ml-4 md:border-l md:pl-8 [&>h3]:step [&>h3]:font-normal!">
       {dependencies.length > 0 && (<h3>{Astro.locals.t('registry.installation.manual.steps.installDependencies')}</h3>)}
-      {dependencies.length > 0 && (<Tabs>
-        <TabItem label={"pnpm"} icon="pnpm">
-          <Code code={`pnpm add ${dependencies.join(" ")}`} lang="sh" frame="none" />
-        </TabItem>
-        <TabItem label={"npm"} icon="npm">
-          <Code code={`npm install ${dependencies.join(" ")}`} lang="sh" frame="none" />
-        </TabItem>
-        <TabItem label={"yarn"} icon="seti:yarn">
-          <Code code={`yarn add ${dependencies.join(" ")}`} lang="sh" frame="none" />
-        </TabItem>
-        <TabItem label={"bun"} icon="bun">
-          <Code code={`bun add ${dependencies.join(" ")}`} lang="sh" frame="none" />
-        </TabItem>
-      </Tabs>)}
+      {dependencies.length > 0 && (
+        <NodeCommand client:load
+          command={`${dependencies.join(" ")}`}
+          tabs={[
+            { label: "pnpm", template: "pnpm add {cmd}"},
+            { label: "npm", template: "npm install {cmd}"},
+            { label: "yarn", template: "yarn add {cmd}"},
+            { label: "bun", template: "bun add {cmd}"}
+          ]} 
+        />
+      )}
       {itemFiles.length > 0 && (<h3>{Astro.locals.t('registry.installation.manual.steps.copyCode')}</h3>)}
       {itemFiles.map(f => (
         <div class={cn(
           "not-content",
           cardVariants(),
-          "pixel-color-border! bg-background! mt-4 mb-12",
+          "pixel-color-border! bg-background! mt-4",
         )}>
           <CollapsibleCode 
             class="relative"
