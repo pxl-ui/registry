@@ -301,10 +301,32 @@ body {
 }
 
 .sidebar-pane {
-  .top-level > li {
-    @apply mt-0;
+
+  li {
+    @apply mx-0 my-3 md:my-0 border-s-0;
     & > a {
-      @apply py-[4.2px] text-sm!;
+      @apply py-[4.2px];
+    }
+
+    a[aria-current=page] {
+      @apply border-none shadow-none pixel-border bg-muted pixel-color-muted text-foreground;
+    }
+
+    a span,
+    .group-label span {
+      @apply font-normal text-2xl md:text-xs;
+    }
+
+    a span {
+      @apply text-foreground;
+    }
+
+    .group-label span {
+      @apply text-xs text-muted-foreground;
+    }
+
+    summary svg {
+      @apply hidden;
     }
   }
 
@@ -315,35 +337,10 @@ body {
   .top-level > li:nth-child(1 of :has(> details)) > details {
     @apply mt-4;
   }
-
-  li {
-    @apply border-s-0;
-  }
-
-  li a span,
-  .group-label span {
-    @apply text-xs font-normal;
-  }
-
-  li a[aria-current=page] {
-    @apply border-none shadow-none pixel-border bg-muted pixel-color-muted text-foreground;
-  }
-
-  li a span {
-    @apply text-foreground;
-  }
-
-  .group-label span {
-    @apply text-muted-foreground;
-  }
-
-  li summary svg {
-    @apply hidden;
-  }
 }
 
 .right-sidebar-container {
-  @apply md:w-72;
+  @apply hidden xl:flex xl:w-72;
 }
 
 .right-sidebar {
@@ -388,7 +385,10 @@ body {
       @apply w-full flex-1;
       
       .content-panel {
-        @apply md:px-0 md:max-w-160 md:mx-auto py-0;
+        @apply lg:px-0 lg:max-w-160 lg:mx-auto py-0;
+        .sl-container {
+          @apply mx-auto lg:mx-0;
+        }
       }
     }
   }
@@ -500,10 +500,9 @@ body {
   }
 }
 
-.mobile-preferences {
-  .social-icons {
-    @apply py-0;
-  }
+.mobile-preferences,
+#starlight__on-this-page--mobile {
+  @apply hidden;
 }
 
 

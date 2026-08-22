@@ -8,7 +8,7 @@ const { dir, pagination } = Astro.locals.starlightRoute;
 const { prev, next } = pagination;
 ---
 
-<div class="w-full flex flex-row justify-between print:hidden" dir={dir}>
+<div class="h-16 hidden w-full md:flex flex-row items-center justify-between print:hidden mb-8" dir={dir}>
 	{prev ? (
     <a href={prev.href} 
       rel="prev"
