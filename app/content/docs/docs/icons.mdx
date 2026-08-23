@@ -1,0 +1,28 @@
+---
+title: Icons
+sidebar:
+  order: 6
+---
+import { LinkCard, LinkCardMedia } from "~/components";
+
+import { lists } from "~/lib/icons";
+import { toRouteId } from "~/lib/registry";
+
+## Flags
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.flags.map(item => (
+    <LinkCard
+      href={toRouteId(item.name)}
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <LinkCardMedia
+        slot="avatar"
+        item={item.name}        
+      />
+    </LinkCard>
+  ))}
+
+</div>

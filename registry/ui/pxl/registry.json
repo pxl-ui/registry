@@ -150,6 +150,23 @@
       ]
     },
     {
+      "name": "country-flag",
+      "type": "registry:component",
+      "title": "Country Flag",
+      "description": "Displays a country flag.",
+      "categories": ["pxl-ui", "components", "content"],
+      "registryDependencies": [
+        "pxl-ui/registry/flags-countries"
+      ],
+      "files": [
+        {
+          "path": "country-flag.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/country-flag.tsx"
+        }
+      ]
+    },
+    {
       "name": "dialog",
       "type": "registry:component",
       "title": "Dialog",

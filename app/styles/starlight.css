@@ -515,3 +515,12 @@ starlight-tabs [role="tablist"] {
     }
   }
 }
+
+/** Search Dialog **/
+dialog {
+ @apply rounded-none border-0 pixel-rounded pixel-size-lg; 
+
+ .pagefind-ui__search-input {
+  @apply rounded-none border-0 pixel-border pixel-size-md pixel-color-border; 
+ }
+}

@@ -8,6 +8,7 @@ export const baseUrl = import.meta.env.BASE_URL;
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string; }> = {
   colors: { prefix: "colors-" },
   fonts: { prefix: "fonts-" },
+  icons: { prefix: "icons-" },
   components: {},
   layout: {},
   interaction: {},

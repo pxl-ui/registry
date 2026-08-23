@@ -1,0 +1,48 @@
+---
+title: Country Flag
+---
+import { Callout, ComponentPreview, Install  } from '~/components';
+
+<ComponentPreview src="country-flag/demo" />
+
+## About
+
+The `<CountryFlag />` component uses the [Terrabandiere](https://rmocci.itch.io/terrabandiere) flags by [Roberto Mocci](https://rmocci.itch.io/).
+
+## Installation
+
+<Callout>
+  Only the countries visible on the demo are available.
+</Callout>
+
+<Install item="country-flag" />
+
+## Usage
+
+```tsx
+import { CountryFlag } from "@/components/ui/pxl/country-flag"
+```
+
+```tsx
+<CountryFlag code="ALPHA3 | ALPHA2 | NUMBER" />
+```
+
+## Sizes
+
+Use the `size` prop to change the size of the flag.
+
+```tsx
+<CountryFlag size="sm" />
+```
+
+## API Reference
+
+### CountryFlag
+
+The `CountryFlag` component displays a country flag
+
+| Prop        | Type                                                                          | Default     |
+| ----------- | ----------------------------------------------------------------------------- | ----------- |
+| `code` | `string \| number`                                                                      | -           |
+| `size`   | `"sm" \| "md" \| "default"` | `"default"` |
+| `className` | `string`                                                                      | -           |

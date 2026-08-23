@@ -9,9 +9,10 @@
       "title": "Able 5",
       "description": "A tiny font that supports hundreds of languages!",
       "docs": "Download font from https://stormgold.itch.io/able-font",
-      "author": "stormgold <https://stormgold.itch.io/>",
+      "author": "stormgold (https://stormgold.itch.io/)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
+        "license": "License (https://stormgold.itch.io/able-font)",
         "order": 1
       },
       "files": [
@@ -35,7 +36,7 @@
       "type": "registry:font",
       "title": "Bytesized",
       "description": "A tiny 3x4 pixel font.",
-      "author": "Baltdev <https://github.com/balt-dev/bytesized-gf>",
+      "author": "Baltdev (https://github.com/balt-dev/bytesized-gf)",
       "categories": ["pxl-ui", "font-family", "font-monospace"],
       "font": {
         "family": "'Bytesized', monospace",
@@ -50,7 +51,7 @@
       "type": "registry:font",
       "title": "Coral Pixels",
       "description": "Coral Pixels is a color font inspired by subpixel rendering techniques.",
-      "author": "Tanukizamurai <https://github.com/tanukifont/Coral-Pixels>",
+      "author": "Tanukizamurai (https://github.com/tanukifont/Coral-Pixels)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 9
@@ -68,7 +69,7 @@
       "type": "registry:font",
       "title": "DotGothic16",
       "description": "Dotgothic 16 is based on the old 16x16 Gothic bitmap font that recreates the feel of pixel fonts from old video games, cell phones and computer screens on print.",
-      "author": "Fontworks Inc. <https://github.com/fontworks-fonts/DotGothic16>",
+      "author": "Fontworks Inc. (https://github.com/fontworks-fonts/DotGothic16)",
       "categories": ["pxl-ui", "font-family", "font-text"],"meta": {
         "order": 7
       },
@@ -85,7 +86,7 @@
       "type": "registry:font",
       "title": "Geist Pixel",
       "description": "Geist Pixel is a display typeface family of five pixel-based styles, each with a distinct visual character.",
-      "author": "Vercel <https://vercel.com/font?type=pixel>",
+      "author": "Vercel (https://vercel.com/font?type=pixel)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 6
@@ -103,8 +104,11 @@
       "type": "registry:font",
       "title": "Jacquarda Bastarda 9",
       "description": "Jacquarda Bastarda is an expanded revival typeface from a bastarda-esque Victorian needlepoint alphabet designed in Berlin by Heinrich Kuehn circa 1880.",
-      "author": "Sarah Cadigan-Fried <https://github.com/scfried/soft-type-jacquarda-bastarda>",
+      "author": "Sarah Cadigan-Fried (https://github.com/scfried/soft-type-jacquarda-bastarda)",
       "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1 (https://raw.githubusercontent.com/scfried/soft-type-jacquarda-bastarda/refs/heads/main/OFL.txt)"
+      },
       "font": {
         "family": "'Jacquarda Bastarda 9', serif",
         "provider": "google",
@@ -118,7 +122,7 @@
       "type": "registry:font",
       "title": "Micro 5",
       "description": "Micro 5 is a teeny-tiny typeface that can fit anywhere on your project.",
-      "author": "Sarah Cadigan-Fried <https://github.com/scfried/soft-type-micro>",
+      "author": "Sarah Cadigan-Fried (https://github.com/scfried/soft-type-micro)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 5
@@ -136,7 +140,7 @@
       "type": "registry:style",
       "title": "Monogram",
       "description": "Elegant monospace pixel font",
-      "author": "datagoblin <https://datagoblin.itch.io/>",
+      "author": "datagoblin (https://datagoblin.itch.io/)",
       "docs": "Download font from https://datagoblin.itch.io/monogram",
       "categories": ["pxl-ui", "font-family", "font-monospace"],
       "meta": {
@@ -164,9 +168,10 @@
       "title": "Pixel Digivolve",
       "description": "A simple ‘faux pixel’ face based loosely on the title logo from the classic “Digimon” series.",
       "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
-      "author": "Neale Davidson <https://www.pixelsagas.com/>",
+      "author": "Neale Davidson (https://www.pixelsagas.com/?download=pixel-digivolve)",
       "categories": ["pxl-ui", "font-family", "font-heading"],
       "meta": {
+        "license": "OFL 1.1 (https://www.pixelsagas.com/?page_id=8484)",
         "order": 1
       },
       "files": [
@@ -190,7 +195,7 @@
       "type": "registry:font",
       "title": "Pixelify Sans",
       "description": "Pixel display font. It works great for your retro party designs, game creation or pretty much anything that demands a “go back in time” vibe.",
-      "author": "Stefie Justprince <github.com/eifetx/Pixelify-Sans>",
+      "author": "Stefie Justprince (github.com/eifetx/Pixelify-Sans)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 3
@@ -227,7 +232,7 @@
       "title": "Quanta Strike",
       "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
       "docs": "Download font from https://github.com/dithernaut/quanta-strike",
-      "author": "dithernaut <https://dithernaut.com/posts/pixel-scaling/>",
+      "author": "dithernaut (https://dithernaut.com/posts/pixel-scaling/)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 2
@@ -248,7 +253,7 @@
       "type": "registry:font",
       "title": "tiny5",
       "description": "tiny5 is a variable-width, 5-pixel font playing with the concept of least amount of information while producing both legible and aesthetically pleasing text.",
-      "author": "Stefan Schmidt <https://github.com/Gissio/font_tiny5>",
+      "author": "Stefan Schmidt (https://github.com/Gissio/font_tiny5)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 4
@@ -266,7 +271,7 @@
       "type": "registry:font",
       "title": "VT323",
       "description": "This font was created from the glyphs of the DEC VT320 text terminal.",
-      "author": "Peter Hull <https://fonts.google.com/?query=Peter+Hull>",
+      "author": "Peter Hull (https://fonts.google.com/?query=Peter+Hull)",
       "categories": ["pxl-ui", "font-family", "font-monospace"],
       "font": {
         "family": "'VT323', monospace",

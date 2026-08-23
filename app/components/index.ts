@@ -3,6 +3,7 @@ import Code from "./Code.astro";
 import ColorPreview from "./ColorPreview";
 import ComponentPreview from "./ComponentPreview.astro";
 import FontPreview from "./FontPreview";
+import IconPreview from "./IconPreview";
 import Install from "./Install.astro";
 import LinkCard from "./LinkCard.astro";
 import LinkCardMedia from "./LinkCardMedia";
@@ -16,6 +17,7 @@ export {
   ColorPreview,
   ComponentPreview,
   FontPreview,
+  IconPreview,
   Install,
   LinkCard,
   LinkCardMedia,

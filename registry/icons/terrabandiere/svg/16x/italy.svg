@@ -1,0 +1,54 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16" 
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Italy</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path id="Green"
+      fill="#0a8f19"
+      d="m 1,1 h 4 v 10 h -4 z" />
+    <path 
+      id="White"
+      fill="#ffffff" 
+      d="m 5,1 h 6 v 10 h -6 z" />
+    <path 
+      id="Red"
+      fill="#d01515" 
+      d="m 11,1 h 4 v 10 h -4 z" />
+  </g>
+</svg>

@@ -4,6 +4,7 @@ import { url } from "./utils";
 
 const KIND_CATEGORIES = {
   COLOR: "color-palette",
+  ICON: "icons",
   FONT: "font-family",
   WIDGETS: "widgets",
 };
@@ -40,6 +41,7 @@ export type RegistryItem = {
   }[];
   meta?: {
     hidden?: boolean;
+    license?: string;
     extends?: string[];
     order?: number;
   };
@@ -133,7 +135,7 @@ function filter({
     });
 }
 
-function kind(itemName: string): "color" | "font" | "component" | "widget" {
+function kind(itemName: string): "color" | "font" | "icon" | "component" | "widget" {
   const item = registry.get(itemName);
 
   if (!item) {
@@ -146,6 +148,10 @@ function kind(itemName: string): "color" | "font" | "component" | "widget" {
 
   if (item.categories?.includes(KIND_CATEGORIES.FONT)) {
     return "font";
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.ICON)) {
+    return "icon";
   }
 
   if (item.categories?.includes(KIND_CATEGORIES.WIDGETS)) {
@@ -167,6 +173,13 @@ function basename(itemName: string) {
 
   if (item.categories?.includes(KIND_CATEGORIES.COLOR)) {
     return itemName.replace("colors-", "");
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.ICON)) {
+    return itemName
+      .replace("icons-", "")
+      .replace("flags-", "")
+      .replace("cursors-", "");
   }
 
   if (item.categories?.includes(KIND_CATEGORIES.FONT)) {
@@ -204,6 +217,10 @@ function toRouteId(itemName: string) {
 
   if (itemKind === "font") {
     return url(`fonts/${baseName}`);
+  }
+
+  if (itemKind === "icon") {
+    return url(`icons/${baseName}`);
   }
 
   // TODO: Implement component subcategories

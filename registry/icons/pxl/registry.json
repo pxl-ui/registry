@@ -10,7 +10,7 @@
       "description": "Mouse cursors powered by pixelarticons",
       "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
       "author": "halfmage <https://x.com/halfmage>",
-      "categories": ["pxl-ui", "icons", "mouse-cursors"],
+      "categories": ["pxl-ui", "icons", "cursors"],
       "registryDependencies": [
         "pxl-ui/registry/styles-cursors"
       ],
@@ -53,6 +53,24 @@
           "cursor-point": "pointer"
         }
       }
+    },
+    {
+      "name": "icons-terrabandiere",
+      "type": "registry:component",
+      "title": "Terrabandiere",
+      "description": "Pixel flags from the world",
+      "author": "Roberto Mocci (https://rmocci.itch.io/)",
+      "categories": ["pxl-ui", "icons", "flags"],
+      "meta": {
+        "license": "CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)"
+      },
+      "files": [
+        {
+          "path": "terrabandiere.tsx",
+          "type": "registry:component",
+          "target": "@components/icons/pxl/terrabandiere.tsx"
+        }
+      ]
     }
   ]
 }

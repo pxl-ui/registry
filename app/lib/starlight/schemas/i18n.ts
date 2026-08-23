@@ -64,6 +64,7 @@ export function builtinI18nSchema() {
     ...pagefindI18nSchema().shape,
     ...expressiveCodeI18nSchema().shape,
     ...appI18nSchema().shape,
+    ...registryI18nSchema().shape,
   });
 }
 
@@ -249,11 +250,18 @@ function appI18nSchema() {
     "footer.credits.author": z.string(),
     "footer.credits.company": z.string(),
     "footer.credits.repository": z.string(),
+  }).partial();
+}
+
+function registryI18nSchema() {
+  return z.object({
+    "registry.credits.author": z.string(),
+    "registry.credits.license": z.string(),
 
     "registry.installation.command": z.string(),
     "registry.installation.manual": z.string(),
     "registry.installation.manual.steps.installDependencies": z.string(),
     "registry.installation.manual.steps.copyCode": z.string(),
     "registry.installation.manual.steps.updateImports": z.string(),
-  }).partial();
+  });
 }

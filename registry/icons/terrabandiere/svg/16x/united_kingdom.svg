@@ -1,0 +1,88 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <title>United Kingdom</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="andrewCrossBg"
+      fill="#142269"
+      d="m 1,1 h 14 v 10 h -14 z" />
+    <path
+      id="andrewCrossFgTopLeft"
+      fill="#ffffff"
+      d="m 1,1 v 1 h 1 v 1 h 1 v 1 h 3 v -1 h -1 v -1 h -1 v -1 z" />
+    <path
+      id="andrewCrossFgTopRight"
+      fill="#ffffff"
+      d="m 15,1 v 1 h -1 v 1 h -1 v 1 h -3 v -1 h 1 v -1 h 1 v -1 z" />
+    <path
+      id="andrewCrossFgBottomLeft"
+      fill="#ffffff"
+      d="m 6,8 v 1 h -1 v 1 h -1 v 1 h -3 v -1 h 1 v -1 h 1 v -1 z" />
+    <path
+      id="andrewCrossFgBottomRight"
+      fill="#ffffff"
+      d="m 10,8 v 1 h 1 v 1 h 1 v 1 h 3 v -1 h -1 v -1 h -1 v -1 z" />
+    <path
+      id="georgeCrossBg"
+      fill="#ffffff"
+      d="m 6,1 v 3 h -5 v 4 h 5 v 3 h 4 v -3 h 5 v -4 h -5 v -3 z" />
+    <path
+      id="georgeCrossFg"
+      fill="#d01515"
+      d="m 7,1 v 4 h -6 v 2 h 6 v 4 h 2 v -4 h 6 v -2 h -6 v -4 z" />
+    <path
+      id="patrickCrossTopLeft"
+      fill="#d01515"
+      d="m 5,4 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z" />
+    <path
+      id="patrickCrossTopRight"
+      fill="#d01515"
+      d="m 11,4 v -1 h 1 v 1 z m 1,-1 v -1 h 1 v 1 z m 1,-1 v -1 h 1 v 1 z" />
+    <path
+      id="patrickCrossBottomLeft"
+      fill="#d01515"
+      d="m 5,8 v 1 h -1 v -1 z m -1,1 v 1 h -1 v -1 z m -1,1 v 1 h -1 v -1 z" />
+    <path
+      id="patrickCrossBottomRight"
+      fill="#d01515"
+      d="m 11,8 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z" />
+  </g>
+</svg>

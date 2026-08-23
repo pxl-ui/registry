@@ -2,6 +2,7 @@ import { formatColor } from "gimp-palette";
 
 import { cn } from "@/lib/utils";
 import { palettes } from "~/lib/colors";
+import { iconPacks } from "~/lib/icons";
 import { basename, kind } from "~/lib/registry";
 
 function getPaletteGradient(item: string) {
@@ -27,6 +28,18 @@ function getPaletteGradient(item: string) {
       return `${formatColor(color, "rgb")} ${start}% ${end}%`;
     })
     .join(", ")})`;
+}
+
+function getFirstIcon(item: string) {
+  const pack = iconPacks.get(basename(item));
+
+  if (!pack) {
+    return "";
+  }
+
+  const variant = pack.variants[Object.keys(pack.variants)[0]];
+
+  return Object.values(variant)[0];
 }
 
 export default function LinkCardMedia({ item: itemName }: { item: string }) {
@@ -55,6 +68,16 @@ export default function LinkCardMedia({ item: itemName }: { item: string }) {
       >
         Aa
       </div>
+    );
+  }
+
+  if (itemKind === "icon") {
+    return (
+      <div
+        className={cn("not-italic text-sm text-muted-foreground")}
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Icon rendering
+        dangerouslySetInnerHTML={{ __html: getFirstIcon(itemName) }}
+      />
     );
   }
 

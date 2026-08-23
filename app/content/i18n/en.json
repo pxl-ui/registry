@@ -30,6 +30,8 @@
   "themeSelect.auto": "Auto",
   "tableOfContents.onThisPage": "On This Page",
   "tableOfContents.overview": "Overview",
+  "registry.credits.author": "Original work by ",
+  "registry.credits.license": "License: ",
   "registry.installation.command": "Command",
   "registry.installation.manual": "Manual",
   "registry.installation.manual.steps.installDependencies": "Install the following dependencies:",
