@@ -5,10 +5,10 @@ export default function SeparatorDemo() {
     <div className="flex w-full max-w-md flex-col gap-4">
       <div className="space-y-1">
         <h4 className="font-heading text-sm">
-          8bit
+          pxl-ui
         </h4>
         <p className="text-muted-foreground text-sm">
-          Pixel-cornered UI components.
+          Retro styled components
         </p>
       </div>
       <Separator />

@@ -10,6 +10,45 @@ import { ComponentPreview, Install } from '~/components';
 
 <Install item="flip" />
 
+## Usage
+
+```tsx
+import { 
+  Flip,
+  FlipBack,
+  FlipFront,
+  FlipTrigger,
+} from "@/components/ui/pxl/flip";
+```
+
+```tsx
+<Flip
+  className="size-full"
+  flipDirection="horizontal">
+  <FlipTrigger>
+    <FlipFront className="w-full">
+      Front
+    </FlipFront>
+    <FlipBack className="w-full">
+      Back
+    </FlipBack>
+  </FlipTrigger>
+</Flip>
+```
+
+## Composition
+
+Use the following composition to build a `Flip`:
+
+```text
+Flip
+└── FlipTrigger
+    ├── FlipFront
+    └── FlipBack
+```
+
 ## Manual Trigger
+
+Use `isFlipped` to change the state from outside.
 
 <ComponentPreview src="flip/manual-trigger" />

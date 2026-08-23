@@ -9,10 +9,24 @@ import { ComponentPreview, Install } from '~/components';
 
 <Install item="reveal" />
 
+## Usage
+
+```tsx
+import { Reveal } from "@/components/ui/pxl/reveal"
+```
+
+```tsx
+<Reveal show={show} duration={seconds}>{content}</Reveal>
+```
+
 ## Patterns
+
+Use the `pattern` prop to change the pattern of the reveal.
 
 <ComponentPreview src="reveal/patterns" />
 
 ## Variants
+
+Use the `variant` prop to change the variant of the reveal.
 
 <ComponentPreview src="reveal/variants" />

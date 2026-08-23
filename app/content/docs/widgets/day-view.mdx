@@ -9,16 +9,32 @@ import { ComponentPreview, Install } from '~/components';
 
 <Install item="day-view" />
 
+## Usage
+
+```tsx
+import { DayView } from "@/components/ui/pxl/day-view"
+```
+
+```tsx
+<DayView status={status} forecast={forecast} events={events} />
+```
+
 ## States
 
 ### Pending
+
+The request is loading
 
 <ComponentPreview src="day-view/pending" />
 
 ### Error
 
+The request failed
+
 <ComponentPreview src="day-view/error" />
 
 ### Success
+
+Data is available
 
 <ComponentPreview src="day-view/success" />

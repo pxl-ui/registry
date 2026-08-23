@@ -9,6 +9,39 @@ import { ComponentPreview, Install } from "~/components";
 
 <Install item="dialogue-box" />
 
+## Usage
+
+```tsx
+import { 
+  DialogueBox,
+  DialogueMessage,
+  DialoguePortrait
+} from "@/components/ui/pxl/dialogue-box"
+```
+
+```tsx
+<DialogueBox className="size-full">
+  <DialogueMessage
+    className="h-[2lh]"
+    text={text}
+  />
+  <DialoguePortrait 
+    className="bg-primary"
+    src={portrait}
+  />
+</DialogueBox>
+```
+
+## Composition
+
+Use the following composition to build a `DialogueBox`:
+
+```text
+DialogueBox
+├── DialogueMessage
+└── DialoguePortrait
+```
+
 ## With portrait
 
 <ComponentPreview src="dialogue-box/with-portrait" />

@@ -9,6 +9,27 @@ import { ComponentPreview, Install } from "~/components";
 
 <Install item="scores" />
 
+## Usage
+
+```tsx
+import { Scores } from "@/components/ui/pxl/scores"
+```
+
+```tsx
+const ITEMS = [
+  { description: "IHS", title: "1,000,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "AAA", title: "900,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "KNM", title: "700,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "XLL", title: "550,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "RSS", title: "90,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "AAA", title: "75,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "CKL", title: "60,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", },
+  { description: "ABB", title: "1,000", avatar: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png", }
+]
+
+<Scores items={ITEMS} />
+```
+
 ## In card
 
 <ComponentPreview src="scores/in-card" />

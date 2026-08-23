@@ -9,14 +9,64 @@ import { ComponentPreview, Install  } from '~/components';
 
 <Install item="badge" />
 
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/pxl/badge"
+```
+
+```tsx
+<Badge variant="default">Badge</Badge>
+```
+
 ## Borders
+
+Use the `border` prop to change the border style of the badge.
 
 <ComponentPreview src="badge/borders" />
 
 ## Sizes
 
+Use the `size` prop to change the size of the badge.
+
 <ComponentPreview src="badge/sizes" />
 
 ## Variants
 
+Use the `variant` prop to change the variant of the badge.
+
 <ComponentPreview src="badge/variants" />
+
+## With Icon
+
+You can render an icon inside the badge. Use `data-icon="inline-start"` to render the icon on the left and `data-icon="inline-end"` to render the icon on the right.
+
+<ComponentPreview styleName="base-nova" name="badge-icon" />
+
+## With Spinner
+
+You can render a spinner inside the badge. Remember to add the `data-icon="inline-start"` or `data-icon="inline-end"` prop to the spinner.
+
+<ComponentPreview styleName="base-nova" name="badge-spinner" />
+
+## Link
+
+Use the `render` prop to render a link as a badge.
+
+<ComponentPreview styleName="base-nova" name="badge-link" />
+
+## Custom Colors
+
+You can customize the colors of a badge by adding custom classes such as `bg-green-50 dark:bg-green-800` to the `Badge` component.
+
+
+## API Reference
+
+### Badge
+
+The `Badge` component displays a badge or a component that looks like a badge.
+
+| Prop        | Type                                                                          | Default     |
+| ----------- | ----------------------------------------------------------------------------- | ----------- |
+| `variant`   | `"default" \| "secondary" \| "destructive" \| "outline" \| "ghost" \| "link"` | `"default"` |
+| `className` | `string`                                                                      | -           |

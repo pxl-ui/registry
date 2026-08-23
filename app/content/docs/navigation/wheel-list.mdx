@@ -9,6 +9,40 @@ import { ComponentPreview, Install } from '~/components';
 
 <Install item="wheel-list"  />
 
+## Usage
+
+```tsx
+import { 
+  WheelList,
+  WheelOption,
+} from "@/components/ui/pxl/wheel-list"
+```
+
+```tsx
+const items = [
+  { label: "Light", value: "light" },
+  { label: "Dark", value: "dark" },
+  { label: "System", value: "system" },
+];
+
+<WheelList>
+  {items.map((item) => (
+    <WheelOption key={item.value} value={item.value}>
+      {item.label}
+    </WheelOption>
+  ))}
+</WheelList>
+```
+
+## Composition
+
+Use the following composition to build a `WheelList`:
+
+```text
+WheelList
+└── WheelOption
+```
+
 ## In card
 
 <ComponentPreview src="wheel-list/in-card" />

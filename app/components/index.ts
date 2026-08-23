@@ -7,6 +7,8 @@ import Install from "./Install.astro";
 import LinkCard from "./LinkCard.astro";
 import LinkCardMedia from "./LinkCardMedia";
 import Showcase from "./Showcase";
+import Step from "./Step.astro";
+import Steps from "./Steps.astro";
 
 export {
   Callout,
@@ -18,4 +20,6 @@ export {
   LinkCard,
   LinkCardMedia,
   Showcase,
+  Step,
+  Steps,
 };

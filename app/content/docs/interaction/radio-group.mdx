@@ -9,6 +9,40 @@ import { ComponentPreview, Install } from '~/components';
 
 <Install item="radio-group" />
 
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/pxl/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/pxl/radio-group"
+```
+
+```tsx
+<RadioGroup defaultValue="option-one">
+  <div className="flex items-center gap-3">
+    <RadioGroupItem value="option-one" id="option-one" />
+    <Label htmlFor="option-one">Option One</Label>
+  </div>
+  <div className="flex items-center gap-3">
+    <RadioGroupItem value="option-two" id="option-two" />
+    <Label htmlFor="option-two">Option Two</Label>
+  </div>
+</RadioGroup>
+```
+
+## Composition
+
+Use the following composition to build a `RadioGroup`:
+
+```text
+RadioGroup
+├── RadioGroupItem
+└── RadioGroupItem
+```
+
 ## Variants
 
 <ComponentPreview src="radio-group/variants" />
+
+## API Reference
+
+See the [Base UI Radio Group](https://base-ui.com/react/components/radio-group#api-reference) documentation.

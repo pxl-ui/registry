@@ -500,3 +500,18 @@ starlight-tabs [role="tablist"] {
     content: counter(step);
   }
 }
+
+.ec-line.highlight {
+  &.del {
+    @apply bg-danger;
+    .code {
+      @apply border-s-danger-foreground before:text-danger-foreground before:content-(--tmLabel,'_');
+    }
+  }
+  &.ins {
+    @apply bg-success;
+    .code {
+      @apply border-s-success-foreground before:text-success-foreground before:content-(--tmLabel,'_');
+    }
+  }
+}

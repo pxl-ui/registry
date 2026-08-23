@@ -14,3 +14,35 @@ import { url as resolveUrl } from '~/lib/utils';
 ## Installation
 
 <Install item="anchor-grid" />
+
+## Usage
+
+```tsx
+import {
+  AnchorGrid
+} from "@/components/ui/pxl/anchor-grid"
+```
+
+```tsx
+<AnchorGrid
+  containerWidth={500}
+  containerHeight={500}
+  cols={9}
+  rows={5}
+  gap={12}
+  widgets={[
+    {
+      id: "widget_1",
+      x: 0,
+      y: 0,
+      w: 3,
+      h: 1,
+      anchorX: "left",
+      anchorY: "top",
+      render() {
+        return <div className="size-full pixel-border pixel-color-danger-foreground p-(--pixel-size)"><div className="size-full bg-danger"></div></div>;
+      },
+    },
+  ]}
+  />
+```

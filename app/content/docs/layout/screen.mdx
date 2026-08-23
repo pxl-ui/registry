@@ -11,6 +11,31 @@ import { ComponentPreview, Install } from '~/components';
 
 <Install item="screen" />
 
+## Usage
+
+```tsx
+import { 
+  ScreenFilter, 
+  ScreenProvider
+} from "@/components/ui/pxl/screen";
+```
+
+```tsx
+<ScreenProvider variant="lcd">
+  <ScreenFilter>
+  </ScreenFilter>
+</ScreenProvider>
+```
+
+## Composition
+
+Use the following composition to build a `Screen`:
+
+```text
+ScreenProvider
+└── ScreenFilter
+```
+
 ## Variants
 
 ### CRT
