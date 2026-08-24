@@ -4,7 +4,7 @@ export default {
   sm: {
     Andorra(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Andorra</title>
           <g id="borders">
             <rect
@@ -86,7 +86,7 @@ export default {
     },
     Bangladesh(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Bangladesh</title>
           <g id="borders">
             <rect
@@ -140,7 +140,7 @@ export default {
     },
     Canada(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Canada</title>
           <g id="borders">
             <rect
@@ -200,7 +200,7 @@ export default {
     },
     China(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>China</title>
           <g id="borders">
             <rect
@@ -255,7 +255,7 @@ export default {
     },
     Egypt(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Egypt</title>
           <g id="borders">
             <rect
@@ -304,7 +304,7 @@ export default {
     },
     France(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>France</title>
           <g id="borders">
             <rect
@@ -350,7 +350,7 @@ export default {
     },
     Germany(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Germany</title>
           <g id="borders">
             <rect
@@ -396,7 +396,7 @@ export default {
     },
     India(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>India</title>
           <g id="borders">
             <rect
@@ -458,7 +458,7 @@ export default {
     },
     Italy(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Italy</title>
           <g id="borders">
             <rect
@@ -504,7 +504,7 @@ export default {
     },
     Japan(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Japan</title>
           <g id="borders">
             <rect
@@ -565,7 +565,7 @@ export default {
     },
     Portugal(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Portugal</title>
           <g id="borders">
             <rect
@@ -621,7 +621,7 @@ export default {
     },
     Russia(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Russia</title>
           <g id="borders">
             <rect
@@ -667,7 +667,7 @@ export default {
     },
     SaudiArabia(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Saudi Arabia</title>
           <g id="borders">
             <rect
@@ -720,7 +720,7 @@ export default {
     },
     SouthKorea(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>South Korea</title>
           <g id="borders">
             <rect
@@ -804,7 +804,7 @@ export default {
     },
     Spain(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Spain</title>
           <g id="borders">
             <rect
@@ -919,7 +919,7 @@ export default {
     },
     UnitedKingdom(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>United Kingdom</title>
           <g id="borders">
             <rect
@@ -1019,13 +1019,7 @@ export default {
   md: {
     Andorra(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-          {...props}
-        >
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props} >
           <title>Andorra</title>
           <g id="borders">
             <rect
@@ -1246,7 +1240,7 @@ export default {
     },
     Bangladesh(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Bangladesh</title>
           <g id="borders">
             <rect
@@ -1300,7 +1294,7 @@ export default {
     },
     Canada(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Canada</title>
           <g id="borders">
             <rect
@@ -1370,7 +1364,7 @@ export default {
     },
     China(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>China</title>
           <g id="borders">
             <rect
@@ -1429,7 +1423,7 @@ export default {
     },
     Egypt(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Egypt</title>
           <g id="borders">
             <rect
@@ -1510,7 +1504,7 @@ export default {
     },
     France(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>France</title>
           <g id="borders">
             <rect
@@ -1556,7 +1550,7 @@ export default {
     },
     Germany(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Germany</title>
           <g id="borders">
             <rect
@@ -1602,7 +1596,7 @@ export default {
     },
     India(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>India</title>
           <g id="borders">
             <rect
@@ -1688,7 +1682,7 @@ export default {
     },
     Italy(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Italy</title>
           <g id="borders">
             <rect
@@ -1734,7 +1728,7 @@ export default {
     },
     Japan(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Japan</title>
           <g id="borders">
             <rect
@@ -1795,7 +1789,7 @@ export default {
     },
     Portugal(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Portugal</title>
           <g id="borders">
             <rect
@@ -1867,7 +1861,7 @@ export default {
     },
     Russia(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Russia</title>
           <g id="borders">
             <rect
@@ -1913,7 +1907,7 @@ export default {
     },
     SaudiArabia(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Saudi Arabia</title>
           <g id="borders">
             <rect
@@ -1980,7 +1974,7 @@ export default {
     },
     SouthKorea(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>South Korea</title>
           <g id="borders">
             <rect
@@ -2075,7 +2069,7 @@ export default {
     },
     Spain(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Spain</title>
           <g id="borders">
             <rect
@@ -2186,7 +2180,7 @@ export default {
     },
     UnitedKingdom(props: SVGProps<SVGSVGElement>) {
       return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>United Kingdom</title>
           <g id="borders">
             <rect

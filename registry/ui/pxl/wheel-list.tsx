@@ -121,12 +121,14 @@ function fallbackMetrics(count: number, boxH: number, itemH: number): Metrics {
 // Pulls the `<WheelList.Option>` children out of the React tree into a plain
 // array. Anything that isn't a WheelOption is ignored (with a dev warning) so
 // stray whitespace/fragments from JSX don't break indexing.
-function resolveOptions(children: ReactNode): ResolvedOption[] {
-  const resolved: ResolvedOption[] = [];
+function resolveChildren(children: ReactNode): {
+  lens: ReactNode,
+  options: ResolvedOption[]
+} {
+  const options: ResolvedOption[] = [];
+  let lens: ReactNode = (<WheelLens />);
   for (const child of Children.toArray(children)) {
-    if (
-      !isValidElement<ComponentProps<typeof WheelOption>>(child)
-    ) {
+    if (!isValidElement<ComponentProps<typeof WheelOption>>(child)) {
       if (process.env.NODE_ENV !== "production") {
         console.warn(
           "WheelList: ignoring child that isn't a <WheelList.Option>.",
@@ -135,13 +137,20 @@ function resolveOptions(children: ReactNode): ResolvedOption[] {
       }
       continue;
     }
-    resolved.push({
-      className: child.props.className,
-      value: child.props.value,
-      content: child.props.children,
-    });
+
+    if ((child.type as any).displayName === "WheelList.Option") {
+      options.push({
+        className: child.props.className,
+        value: child.props.value,
+        content: child.props.children,
+      });
+    } else {
+      if ((child.type as any).displayName === "WheelList.Lens") {
+        lens = child;
+      }
+    }
   }
-  return resolved;
+  return { lens, options };
 }
 
 const optionVariants = cva("", {
@@ -215,7 +224,7 @@ function DrumOption({
       role="option"
       aria-selected={selected}
       className={cn(
-        "h-(--wheel-item) flex items-center snap-center tabular-nums cursor-pointer select-none text-xs",
+        "h-(--wheel-item) flex items-center snap-center tabular-nums cursor-pointer select-none text-xs aria-selected:animate-pulse",
         optionVariants({
           align,
         }),
@@ -228,6 +237,21 @@ function DrumOption({
     </motion.li>
   );
 }
+
+function WheelLens({ className, ...props }: ComponentProps<"span">) {
+  return (
+    <span
+      data-slot="selection-lens"
+      className={cn(
+        "absolute left-0 right-0 top-1/2 h-(--wheel-item) -translate-y-1/2 pixel-border pixel-size-md bg-muted pointer-events-none",
+        className
+      )}
+      aria-hidden="true"
+      {...props}
+    />
+  )
+}
+WheelLens.displayName = "WheelList.Lens";
 
 function WheelList({
   align = "center",
@@ -267,7 +291,7 @@ function WheelList({
   const idBase = useId();
   const reduced = useReducedMotion();
 
-  const options = useMemo(() => resolveOptions(children), [children]);
+  const { lens, options } = useMemo(() => resolveChildren(children), [children]);
   const defaultIndex = defaultValue
     ? options.findIndex((opt) => opt.value === defaultValue)
     : 0;
@@ -369,7 +393,6 @@ function WheelList({
 
   // Measure the wrapper against its parent's box - this is what geometry now
   // derives from instead of width/height/itemHeight props.
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useLayoutEffect(() => {
     const container = containerRef.current;
     if (!container) return undefined;
@@ -448,10 +471,7 @@ function WheelList({
       }
     >
       <div className="relative h-full">
-        <span
-          className="absolute left-0 right-0 top-1/2 h-(--wheel-item) -translate-y-1/2 pixel-border pixel-size-md bg-muted pointer-events-none"
-          aria-hidden="true"
-        />
+        {lens}
         <div
           className="relative h-full overflow-y-auto overscroll-contain [scroll-snap-type:y_mandatory] perspective-[44rem] scrollbar-none [&::-webkit-scrollbar]:hidden mask-[linear-gradient(to_bottom,transparent_0,#000_30%,#000_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0,#000_30%,#000_70%,transparent_100%)] focus-visible:outline-none"
           ref={scrollerRef}
@@ -496,6 +516,13 @@ function WheelList({
   );
 }
 
-const WheelListWithOption = Object.assign(WheelList, { Option: WheelOption });
+const WheelListWithComponents = Object.assign(WheelList, { 
+  Lens: WheelLens,
+  Option: WheelOption
+});
 
-export { WheelListWithOption as WheelList, WheelOption };
+export { 
+  WheelLens,
+  WheelListWithComponents as WheelList, 
+  WheelOption 
+};

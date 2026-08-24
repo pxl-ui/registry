@@ -4,6 +4,21 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
+      "name": "accordion",
+      "type": "registry:component",
+      "title": "Accordion",
+      "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
+      "categories": ["pxl-ui", "components", "navigation"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "accordion.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/accordion.tsx"
+        }
+      ]
+    },
+    {
       "name": "anchor-grid",
       "type": "registry:component",
       "title": "Anchor Grid",
@@ -110,6 +125,24 @@
           "path": "card.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "title": "Carousel",
+      "description": "A carousel with motion and swipe built using Embla.",
+      "categories": ["pxl-ui", "components", "navigation"],
+      "dependencies": ["embla-carousel-react"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "carousel.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/carousel.tsx"
         }
       ]
     },
@@ -338,6 +371,24 @@
       ]
     },
     {
+      "name": "questionnaire",
+      "type": "registry:component",
+      "title": "Questionnaire",
+      "description": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@shadcn/react/questionnaire"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "questionnaire.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/questionnaire.tsx"
+        }
+      ]
+    },
+    {
       "name": "radio-group",
       "type": "registry:component",
       "title": "Radio Group",
@@ -481,7 +532,7 @@
       "type": "registry:component",
       "title": "Tabs",
       "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-      "categories": ["pxl-ui", "components", "layout"],
+      "categories": ["pxl-ui", "components", "navigation"],
       "dependencies": ["@base-ui/react"],
       "files": [
         {

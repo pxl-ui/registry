@@ -1,0 +1,62 @@
+---
+title: Accordion
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview src="accordion/demo" />
+
+## Installation
+
+<Install item="accordion" />
+
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/pxl/accordion"
+```
+
+```tsx
+<Accordion defaultValue={["item-1"]}>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## Composition
+
+Use the following composition to build an `Accordion`:
+
+```text
+Accordion
+├── AccordionItem
+│   ├── AccordionTrigger
+│   └── AccordionContent
+└── AccordionItem
+    ├── AccordionTrigger
+    └── AccordionContent
+```
+
+## Multiple
+
+Use the `multiple` prop to allow multiple items to be open at the same time.
+
+## Disabled
+
+Use the `disabled` prop on `AccordionItem` to disable individual items.
+
+## Borders
+
+Add `border` to the `Accordion` and `border-b last:border-b-0` to the `AccordionItem` to add borders to the items.
+
+## API Reference
+
+See the [Base UI](https://base-ui.com/react/components/accordion#api-reference) documentation for more information.

@@ -3,7 +3,7 @@
   height="32"
   viewBox="0 0 32 20"
   xmlns="http://www.w3.org/2000/svg">
-  <title>Italy</title>
+  <title>TITLE</title>
   <g id="borders">
     <rect
       id="borderTop"
@@ -39,16 +39,5 @@
     />
   </g>
   <g id="flag">
-    <path id="Green"
-      fill="#0a8f19"
-      d="m 1,1 h 10 v 18 h -10 z" />
-    <path 
-      id="White"
-      fill="#ffffff" 
-      d="m 11,1 h 10 v 18 h -10 z" />
-    <path 
-      id="Red"
-      fill="#d01515" 
-      d="m 21,1 h 10 v 18 h -10 z" />
   </g>
 </svg>
