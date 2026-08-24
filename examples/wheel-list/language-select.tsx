@@ -2,43 +2,66 @@ import { CountryFlag } from "@/components/ui/pxl/country-flag";
 import { WheelList, WheelOption } from "@/components/ui/pxl/wheel-list";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
-const ITEMS = [
-  { label: "Español", value: "ES" },
-  { label: "Português", value: "PT" },
-  { label: "Français", value: "FR" },
-  { label: "Italiano", value: "IT" },
-  { label: "Deutsch", value: "DE" },
-  { label: "English", value: "GB" },
-  { label: "Русский", value: "RU"},
-  { label: "हिन्दी", value: "IN" },
-  { label: "বাংলা", value: "BD" },
-  { label: "العربية", value: "SA" },
-  { label: "中文", value: "CH"},
-  { label: "日本語", value: "JP"},
-  { label: "한국어", value: "KR" },
-];
-
 export default function LanguageSelect() {
   return (
     <WidgetArea size="sm">
       <WheelList
         align="start"
         visibleCount={5}
-        label="Pick a start time"
-        defaultValue="ITEM"
-        onChange={(evt) =>
-          console.log(evt.settled ? `selected ${evt.value}` : "coasting")
-        }
-        onSelect={(value) => console.log(value)}
+        defaultValue="ES"
       >
-        {ITEMS.map(({ label, value }) => (
-          <WheelOption className="flex items-center gap-2.5" key={value} value={value}>
-            <CountryFlag className="w-8" code={value} />
-            <span className="flex-1">
-              {label}
-            </span>
-          </WheelOption>
-        ))}
+        <WheelOption value="ES">
+          <CountryFlag code="ES" />
+          Español
+        </WheelOption>
+        <WheelOption value="PT">
+          <CountryFlag code="PT" />
+          Português
+        </WheelOption>
+        <WheelOption value="FR">
+          <CountryFlag code="FR" />
+          Français
+        </WheelOption>
+        <WheelOption value="IT">
+          <CountryFlag code="IT" />
+          Italiano
+        </WheelOption>
+        <WheelOption value="DE">
+          <CountryFlag code="DE" />
+          Deutsch
+        </WheelOption>
+        <WheelOption value="GB">
+          <CountryFlag code="GB" />
+          English
+        </WheelOption>
+        <WheelOption value="RU">
+          <CountryFlag code="RU" />
+          Русский
+        </WheelOption>
+        <WheelOption value="IN">
+          <CountryFlag code="IN" />
+          हिन्दी
+        </WheelOption>
+        <WheelOption value="BD">
+          <CountryFlag code="BD" />
+          বাংলা
+        </WheelOption>
+        <WheelOption value="SA">
+          <CountryFlag code="SA" />
+          العربية
+        </WheelOption>
+        <WheelOption value="CH">
+          <CountryFlag code="CH" />
+          中文
+        </WheelOption>
+        <WheelOption value="JP">
+          <CountryFlag code="JP" />
+          日本語
+        </WheelOption>
+        <WheelOption value="KR">
+          <CountryFlag code="KR" />
+          한국어
+        </WheelOption>
       </WheelList>
     </WidgetArea>
   );

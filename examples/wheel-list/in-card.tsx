@@ -30,7 +30,6 @@ export default function InCardPreview() {
           <WheelList
             align="start"
             visibleCount={3}
-            label="Pick a start time"
             defaultValue="ITEM"
             onChange={(evt) =>
               console.log(evt.settled ? `selected ${evt.value}` : "coasting")

@@ -120,7 +120,6 @@ export default function WheelListPreview() {
   return (
     <div className="w-full h-48 flex items-center justify-center">
       <WheelList
-        label="Pick a start time"
         defaultValue="ITEM"
         onChange={(evt) =>
           console.log(evt.settled ? `selected ${evt.value}` : "coasting")

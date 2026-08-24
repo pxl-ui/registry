@@ -224,7 +224,7 @@ function DrumOption({
       role="option"
       aria-selected={selected}
       className={cn(
-        "h-(--wheel-item) flex items-center snap-center tabular-nums cursor-pointer select-none text-xs aria-selected:animate-pulse",
+        "h-(--wheel-item) flex items-center gap-2.5 snap-center tabular-nums cursor-pointer select-none text-xs aria-selected:animate-pulse",
         optionVariants({
           align,
         }),
@@ -473,7 +473,7 @@ function WheelList({
       <div className="relative h-full">
         {lens}
         <div
-          className="relative h-full overflow-y-auto overscroll-contain [scroll-snap-type:y_mandatory] perspective-[44rem] scrollbar-none [&::-webkit-scrollbar]:hidden mask-[linear-gradient(to_bottom,transparent_0,#000_30%,#000_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0,#000_30%,#000_70%,transparent_100%)] focus-visible:outline-none"
+          className="relative h-full overflow-x-hidden overflow-y-auto overscroll-contain [scroll-snap-type:y_mandatory] perspective-[44rem] scrollbar-none [&::-webkit-scrollbar]:hidden mask-[linear-gradient(to_bottom,transparent_0,#000_30%,#000_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0,#000_30%,#000_70%,transparent_100%)] focus-visible:outline-none"
           ref={scrollerRef}
           role="listbox"
           aria-label={label}

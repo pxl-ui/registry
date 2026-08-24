@@ -194,7 +194,6 @@ function MenuWidget() {
             <WheelList
               align="start"
               visibleCount={3}
-              label="Pick a start time"
               defaultValue="ITEM"
             >
               {[

@@ -1,6 +1,8 @@
+import { cva, type VariantProps } from "class-variance-authority";
 import { type SVGProps, useMemo } from "react";
 
 import CountryFlags from "@/components/icons/pxl/terrabandiere";
+import { cn } from "@/lib/utils";
 
 const flagsByNumber: Record<number, keyof typeof CountryFlags.md> = {
   20: "Andorra",
@@ -59,15 +61,26 @@ const flagsByAlpha3: Record<string, keyof typeof CountryFlags.md> = {
   SAU: "SaudiArabia",
 };
 
+const flagVariants = cva("", {
+  variants: {
+    size: {
+      default: "w-8",
+      sm: "w-4",
+      md: "w-8",
+    },
+  },
+});
+
 function CountryFlag({
+  className,
   code,
   size = "default",
   ...props
-}: SVGProps<SVGSVGElement> & {
-  /** ISO 3166-1 Code */
-  code: string | number;
-  size?: "sm" | "md" | "default";
-}) {
+}: SVGProps<SVGSVGElement> &
+  VariantProps<typeof flagVariants> & {
+    /** ISO 3166-1 Code */
+    code: string | number;
+  }) {
   const key = useMemo(() => {
     if (typeof code === "number") {
       return flagsByNumber[code];
@@ -80,15 +93,16 @@ function CountryFlag({
     return flagsByAlpha2[code];
   }, [code]);
 
-  const Component = CountryFlags[size === "default" ? "md" : size][key];
+  const Component =
+    CountryFlags[size === "default" || size === null ? "md" : size][key];
 
   if (!Component) {
     return null;
   }
 
-  return <Component {...props} />;
+  return (
+    <Component className={cn(flagVariants({ size }), className)} {...props} />
+  );
 }
 
-export {
-  CountryFlag
-}
+export { CountryFlag };
