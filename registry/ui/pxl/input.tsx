@@ -67,4 +67,4 @@ const Input = forwardRef<
 
 Input.displayName = "Input";
 
-export { Input };
+export { Input, inputVariants, inputWrapperVariants };
