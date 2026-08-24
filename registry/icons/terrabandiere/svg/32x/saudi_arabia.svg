@@ -1,0 +1,139 @@
+<svg
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Saudi Arabia</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="30"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="18"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="19"
+      width="30"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="31"
+      y="1"
+      width="1"
+      height="18"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="path10490"
+      fill="#00662c"
+      d="m 1,1 h 30 v 18 h -30 z" />
+    <path
+      id="path1130"
+      fill="#ffffff"
+      d="m 11,13 h 8 v 1 h -8 z" />
+    <path
+      id="path1339"
+      fill="#bfbfbf"
+      d="m 19,13 h 3 v 1 h -3 z" />
+    <path
+      id="path1625"
+      fill="#4fbd42"
+      d="m 19,12 h 1 v 1 h -1 z" />
+    <path
+      id="path1696"
+      fill="#4fbd42"
+      d="m 19,14 h 1 v 1 h -1 z" />
+    <path
+      id="path1698"
+      fill="#4fbd42"
+      d="m 22,14 h 1 v 1 h -1 z" />
+    <path
+      id="path1700"
+      fill="#bfbfbf"
+      d="m 22,8 h 1 v 1 h -1 z" />
+    <path
+      id="path1702"
+      fill="#ffffff"
+      d="m 23,5 h 1 v 3 h -1 z" />
+    <path
+      id="path1704"
+      fill="#ffffff"
+      d="m 21,5 h 1 v 3 h -1 z" />
+    <path
+      id="path1706"
+      fill="#ffffff"
+      d="m 19,5 h 1 v 3 h -1 z" />
+    <path
+      id="path1708"
+      fill="#ffffff"
+      d="m 18,8 h 1 v 1 h -1 z" />
+    <path
+      id="path1710"
+      fill="#ffffff"
+      d="m 16,7 h 1 v 1 h -1 z" />
+    <path
+      id="path1712"
+      fill="#ffffff"
+      d="m 17,5 h 1 v 2 h -1 z" />
+    <path
+      id="path1783"
+      fill="#bfbfbf"
+      d="m 15,8 h 1 v 1 h -1 z" />
+    <path
+      id="path1785"
+      fill="#ffffff"
+      d="m 15,5 h 1 v 2 h -1 z" />
+    <path
+      id="path1787"
+      fill="#ffffff"
+      d="m 8,5 h 1 v 2 h -1 z" />
+    <path
+      id="path1789"
+      fill="#ffffff"
+      d="m 10,5 h 1 v 3 h -1 z" />
+    <path
+      id="path1791"
+      fill="#ffffff"
+      d="m 12,5 h 1 v 1 h -1 z" />
+    <path
+      id="path1794"
+      fill="#bfbfbf"
+      d="m 9,8 h 1 v 1 h -1 z" />
+    <path
+      id="path1796"
+      fill="#bfbfbf"
+      d="m 12,7 h 1 v 1 h -1 z" />
+    <path
+      id="path1798"
+      fill="#bfbfbf"
+      d="m 14,7 h 1 v 1 h -1 z" />
+    <path
+      id="path1800"
+      fill="#bfbfbf"
+      d="m 13,5 h 1 v 2 h -1 z" />
+    <path
+      id="path1802"
+      fill="#bfbfbf"
+      d="m 11,8 h 1 v 1 h -1 z" />
+    <path
+      id="path1804"
+      fill="#bfbfbf"
+      d="m 13,8 h 1 v 1 h -1 z" />
+  </g>
+</svg>

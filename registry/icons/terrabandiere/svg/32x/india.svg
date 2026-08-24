@@ -1,0 +1,87 @@
+<svg
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+  xmlns="http://www.w3.org/2000/svg">
+  <title>India</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="30"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="18"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="19"
+      width="30"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="31"
+      y="1"
+      width="1"
+      height="18"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="Saffron"
+      fill="#c47d22"
+      d="m 1,1 h 30 v 5 h -30 z" />
+    <path
+      id="White"
+      fill="#ffffff"
+      d="m 1,6 h 30 v 8 h -30 z" />
+    <path
+      id="Green"
+      fill="#00662c"
+      d="m 1,14 h 30 v 5 h -30 z" />
+    <path
+      id="AshokaChakraBg"
+      fill="#6ddff8"
+      d="m 13,6 v 1 h -1 v 6 h 1 v 1 h 6 v -1 h 1 v -6 h -1 v -1 z" />
+    <path
+      id="AshokaChakraBorder"
+      fill="#1c4fb0"
+      d="m 14,6 v 1 h -1 v 1 h -1 v 4 h 1 v 1 h 1 v 1 h 4 v -1 h 1 v -1 h 1 v -4 h -1 v -1 h -1 v -1 z" />
+    <path
+      id="AshokaChakraBorder2"
+      fill="#00ccad"
+      d="m 14,7 v 1 h -1 v 4 h 1 v 1 h 4 v -1 h 1 v -4 h -1 v -1 z" />
+    <path
+      id="AshokaChakraInnerBg"
+      fill="#ffffff"
+      d="m 15,7 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z" />
+    <path
+      id="AshokaChakraInnerFg1"
+      fill="#519fdf"
+      d="m 15,8 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z" />
+    <path
+      id="AshokaChakraInnerFg2"
+      fill="#6ddff8"
+      d="m 16,8 v 1 h 1 v -1 z m -2,1 v 1 h 1 v -1 z m 3,1 v 1 h 1 v -1 z m -2,1 v 1 h 1 v -1 z" />
+    <path
+      id="AshokaChakraInnerFg3"
+      fill="#142269"
+      d="m 15,9 h 2 v 2 h -2 z" />
+    <path
+      id="AshokaChakraInnerFg4"
+      fill="#1081d3"
+      d="m 17,9 v 1 h -1 v -1 z m -1,1 v 1 h -1 v -1 z" />
+  </g>
+</svg>

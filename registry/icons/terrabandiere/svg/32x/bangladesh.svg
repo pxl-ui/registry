@@ -3,7 +3,7 @@
   height="32"
   viewBox="0 0 32 32"
   xmlns="http://www.w3.org/2000/svg">
-  <title>France</title>
+  <title>Bangladesh</title>
   <g id="borders">
     <rect
       id="borderTop"
@@ -39,16 +39,17 @@
     />
   </g>
   <g id="flag">
-    <path id="Blue"
-      fill="#142269"
-      d="m 1,1 h 10 v 18 h -10 z" />
-    <path 
-      id="White"
-      fill="#ffffff" 
-      d="m 11,1 h 10 v 18 h -10 z" />
-    <path 
-      id="Red"
-      fill="#d01515" 
-      d="m 21,1 h 10 v 18 h -10 z" />
+    <path
+      id="Green"
+      fill="#00662c"
+      d="m 1,1 h 30 v 18 h -30 z" />
+    <path
+      id="CircleBg"
+      fill="#d01515"
+      d="m 11,4 v 3 h -3 v 6 h 3 v 3 h 6 v -3 h 3 v -6 h -3 v -3 z" />
+    <path
+      id="CircleFg"
+      fill="#fd1c1c"
+      d="m 12,4 v 1 h -2 v 1 h -1 v 2 h -1 v 4 h 1 v 2 h 1 v 1 h 2 v 1 h 4 v -1 h 2 v -1 h 1 v -2 h 1 v -4 h -1 v -2 h -1 v -1 h -2 v -1 z" />
   </g>
 </svg>

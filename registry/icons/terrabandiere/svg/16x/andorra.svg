@@ -1,0 +1,76 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16" 
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Andorra</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <rect
+      id="rect37094"
+      fill="#043095"
+      width="4"
+      height="10"
+      x="1"
+      y="1" />
+    <rect
+      id="rect37660"
+      fill="#fd1c1c"
+      width="4"
+      height="10"
+      x="11"
+      y="1" />
+    <rect
+      id="rect37662"
+      fill="#fff700"
+      width="6"
+      height="10"
+      x="5"
+      y="1" />
+    <path
+      fill="#d01515"
+      id="rect4686"
+      d="m 6,4 v 4 h 1 v -2 h 1 v -2 z m 2,2 v 1 h 2 v -3 h -1 v 2 z" />
+    <path
+      id="rect4694"
+      fill="#ff9d00"
+      d="m 6,5 v 1 h 1 v -1 z m 2,2 v 1 h 2 v -1 z" />
+    <path
+      id="rect4844"
+      fill="#a6a6a6"
+      d="m 6,2 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 z m 2,0 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m -4,0 h -1 v 1 h 1 z m -1,2 v 2 h 1 v -2 z m 5,0 v 2 h 1 v -2 z m -5,3 v 1 h 2 v 1 h 2 v -1 h 2 v -1 z" />
+  </g>
+</svg>

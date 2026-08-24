@@ -1,0 +1,79 @@
+<svg
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Portugal</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="30"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="18"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="19"
+      width="30"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="31"
+      y="1"
+      width="1"
+      height="18"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="Green"
+      fill="#00662c"
+      d="m 1,1 h 11 v 18 h -11 z" />
+    <path
+      id="Red"
+      fill="#fd1c1c"
+      d="m 12,1 h 19 v 18 h -19 z" />
+    <path
+      id="SphereBorder"
+      fill="#fff700"
+      d="m 10,5 v 1 h 4 v -1 z m 4,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 4 h 1 v -4 z m 0,4 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -4 v 1 h 4 z m -4,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -1,-1 v -4 h -1 v 4 z m 0,-4 h 1 v -1 h -1 z m 1,-1 h 1 v -1 h -1 z" />
+    <path
+      id="ShieldBorder"
+      fill="#fd1c1c"
+      d="m 9,7 v 5 h 1 v 1 h 4 v -1 h 1 v -5 z" />
+    <path
+      id="ShieldInner"
+      fill="#ffffff"
+      d="m 10,8 v 3 h 1 v 1 h 2 v -1 h 1 v -3 z" />
+    <path
+      id="ShieldInner2"
+      fill="#1c4fb0"
+      d="m 11,9 h 1 v 1 h -1 z" />
+    <path
+      id="ShieldInner3"
+      fill="#519fdf"
+      d="m 12,10 h 1 v 1 h -1 z" />
+    <path
+      id="SphereAxis"
+      fill="#fff700"
+      d="m 11,6 v 1 h 1 v -1 z m -3,3 v 1 h 1 v -1 z m 7,1 v 1 h 1 v -1 z m -4,3 v 1 h 1 v -1 z" />
+    <path
+      id="SphereAxis2"
+      fill="#ff9d00"
+      d="m 12,6 v 1 h 1 v -1 z m 3,3 v 1 h 1 v -1 z m -7,1 v 1 h 1 v -1 z m 4,3 v 1 h 1 v -1 z" />
+  </g>
+</svg>

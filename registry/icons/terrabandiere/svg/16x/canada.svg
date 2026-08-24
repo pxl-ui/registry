@@ -1,0 +1,63 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16" 
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Canada</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="path1854"
+      fill="#d01515"
+      d="m 1,1 h 14 v 10 h -14 z" />
+    <path
+      id="path1856"
+      fill="#ffffff"
+      d="m 4,1 h 8 v 10 h -8 z" />
+    <path
+      id="path1858"
+      fill="#f15d67"
+      d="m 7,3 v 4 h -2 v 1 h 2 v 1 h 2 v -1 h 2 v -1 h -2 v -4 z" />
+    <path
+      id="path1862"
+      fill="#d01515"
+      d="m 7,4 v 1 h -2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h -2 v -1 z" />
+    <path
+      id="path1870"
+      fill="#f15d67"
+      d="m 5,4 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+  </g>
+</svg>

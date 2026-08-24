@@ -1,0 +1,79 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16" 
+  xmlns="http://www.w3.org/2000/svg">
+  <title>South Korea</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="path13589"
+      fill="#ffffff"
+      d="m 1,1 h 14 v 10 h -14 z" />
+    <path
+      id="path4698"
+      fill="#f7926c"
+      d="m 6,3 v 1 h -1 v 1 h 6 v -1 h -1 v -1 z" />
+    <path
+      id="path4703"
+      fill="#519fdf"
+      d="m 5,7 v 1 h 1 v 1 h 4 v -1 h 1 v -1 z" />
+    <path
+      id="path4691"
+      fill="#fd1c1c"
+      d="m 7,3 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z" />
+    <path
+      id="path4707"
+      fill="#1c4fb0"
+      d="m 9,5 v 1 h -1 v 1 h -1 v -1 h -2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h -1 v -1 z" />
+    <path
+      id="path4719"
+      fill="#000000"
+      d="m 3,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z" />
+    <path
+      id="path4731"
+      fill="#000000"
+      d="m 12,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z" />
+    <path
+      id="path4739"
+      fill="#000000"
+      d="m 12,7 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z" />
+    <path
+      id="path4748"
+      fill="#000000"
+      d="m 3,7 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z" />
+  </g>
+</svg>

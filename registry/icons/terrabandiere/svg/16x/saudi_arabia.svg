@@ -1,0 +1,83 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16" 
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Saudi Arabia</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+      <path
+         id="path10492"
+         fill="#00662c"
+         d="m 1,1 h 14 v 10 h -14 z" />
+      <path
+         id="path1806"
+         fill="#ffffff"
+         d="m 5,8 h 4 v 1 h -4 z" />
+      <path
+         id="path1808"
+         fill="#bfbfbf"
+         d="m 9,8 h 2 v 1 h -2 z" />
+      <path
+         id="path1810"
+         fill="#ffffff"
+         d="m 11,3 h 1 v 3 h -1 z" />
+      <path
+         id="path1812"
+         fill="#bfbfbf"
+         d="m 10,6 h 1 v 1 h -1 z" />
+      <path
+         id="path1814"
+         fill="#ffffff"
+         d="m 9,3 h 1 v 3 h -1 z" />
+      <path
+         id="path1816"
+         fill="#ffffff"
+         d="m 7,3 h 1 v 2 h -1 z" />
+      <path
+         id="path1818"
+         fill="#ffffff"
+         d="m 4,3 h 1 v 2 h -1 z" />
+      <path
+         id="path1820"
+         fill="#bfbfbf"
+         d="m 5,6 h 1 v 1 h -1 z" />
+      <path
+         id="path1822"
+         fill="#bfbfbf"
+         d="m 6,3 h 1 v 3 h -1 z" />
+    </g>
+</svg>

@@ -1,0 +1,71 @@
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16" 
+  xmlns="http://www.w3.org/2000/svg">
+  <title>India</title>
+  <g id="borders">
+    <rect
+      id="borderTop"
+      x="1"
+      y="0"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderLeft"
+      x="0"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+    <rect
+      id="borderBottom"
+      x="1"
+      y="11"
+      width="14"
+      height="1"
+      fill="currentColor"
+    />
+    <rect
+      id="borderRight"
+      x="15"
+      y="1"
+      width="1"
+      height="10"
+      fill="currentColor"
+    />
+  </g>
+  <g id="flag">
+    <path
+      id="Saffron"
+      fill="#c47d22"
+      d="m 1,1 h 14 v 3 h -14 z" />
+    <path
+      id="White"
+      fill="#ffffff"
+      d="m 1,4 h 14 v 4 h -14 z" />
+    <path
+      id="Green"
+      fill="#00662c"
+      d="m 1,8 h 14 v 3 h -14 z" />
+    <path
+      id="AshokaChakraBg"
+      fill="#6ddff8"
+      d="m 6,4 h 4 v 4 h -4 z" />
+    <path
+      id="AshokaChakraFg"
+      fill="#1c4fb0"
+      d="m 7,4 v 1 h -1 v 2 h 1 v 1 h 2 v -1 h 1 v -2 h -1 v -1 z" />
+    <path
+      id="AshokaChakraInnerBg"
+      fill="#ffffff"
+      d="m 7,5 h 2 v 2 h -2 z" />
+    <path
+      id="AshokaChakraInnerFg"
+      fill="#6ddff8"
+      d="m 7,5 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z" />
+  </g>
+</svg>

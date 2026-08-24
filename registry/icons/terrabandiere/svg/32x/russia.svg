@@ -3,7 +3,7 @@
   height="32"
   viewBox="0 0 32 32"
   xmlns="http://www.w3.org/2000/svg">
-  <title>France</title>
+  <title>Russia</title>
   <g id="borders">
     <rect
       id="borderTop"
@@ -39,16 +39,17 @@
     />
   </g>
   <g id="flag">
-    <path id="Blue"
-      fill="#142269"
-      d="m 1,1 h 10 v 18 h -10 z" />
-    <path 
+    <path
       id="White"
-      fill="#ffffff" 
-      d="m 11,1 h 10 v 18 h -10 z" />
-    <path 
+      fill="#ffffff"
+      d="m 1,1 h 30 v 18 h -30 z" />
+    <path
+      id="Blue"
+      fill="#1c4fb0"
+      d="m 1,7 h 30 v 6 h -30 z" />
+    <path
       id="Red"
-      fill="#d01515" 
-      d="m 21,1 h 10 v 18 h -10 z" />
+      fill="#d01515"
+      d="m 1,13 h 30 v 6 h -30 z" />
   </g>
 </svg>
