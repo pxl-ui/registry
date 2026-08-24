@@ -61,43 +61,43 @@ const { prev, next } = pagination;
       </div>
     </div>
   </div>
-  <div class="flex flex-row gap-2 md:max-w-[80%]">
-    {author && (
-      <a 
-        class={cn(buttonVariants({
-          variant: "secondary",
-          size: "sm"
-        }), "text-muted-foreground hover:text-foreground")}
-        aria-disabled={!author.url}
-        href={author.url}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6 22H4v-4h2v4Zm14 0h-2v-4h2v4ZM8 18H6v-2h2v2Zm10 0h-2v-2h2v2Zm-2-2H8v-2h8v2Zm-1-4H9v-2h6v2Zm-6-2H7V4h2v6Zm8 0h-2V4h2v6Zm-2-6H9V2h6v2Z"/></svg>
-        {author.name}
-      </a>
-    )}
-    {license && (
-      <a 
-        class={cn(buttonVariants({
-          variant: "secondary",
-          size: "sm"
-        }), "text-muted-foreground hover:text-foreground")}
-        aria-disabled={!license.url}
-        href={license.url}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M16 20h1v-1h2v1h1v-3h2v5h-3v-1h-2v1h-3v-5h2v3Zm-4 0H4v-2h8v2Zm-8-2H2V4h2v14Zm16-1h-4v-2h4v2Zm-4-2h-2v-4h2v4Zm6 0h-2v-4h2v4Zm-12-3H6v-2h4v2Zm10-1h-4V9h4v2Zm-6-3H6V6h8v2Zm4-1h-2V4h2v3Zm-2-3H4V2h12v2Z"></path></svg>
-        {license.name}
-      </a>
-    )}
-  </div>
-  {
-    description &&
-    (<p class="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">
+  <div class="flex flex-col md:flex-row items-start justify-between gap-2">
+    <p class="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">
       {description}
-    </p>)
-  }
+    </p>
+    <div class="flex flex-row gap-2">
+      {author && (
+        <a 
+          class={cn(buttonVariants({
+            variant: "secondary",
+            size: "sm"
+          }), "text-muted-foreground hover:text-foreground")}
+          aria-disabled={!author.url}
+          href={author.url}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6 22H4v-4h2v4Zm14 0h-2v-4h2v4ZM8 18H6v-2h2v2Zm10 0h-2v-2h2v2Zm-2-2H8v-2h8v2Zm-1-4H9v-2h6v2Zm-6-2H7V4h2v6Zm8 0h-2V4h2v6Zm-2-6H9V2h6v2Z"/></svg>
+          {author.name}
+        </a>
+      )}
+      {license && (
+        <a 
+          class={cn(buttonVariants({
+            variant: "secondary",
+            size: "sm"
+          }), "text-muted-foreground hover:text-foreground")}
+          aria-disabled={!license.url}
+          href={license.url}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M16 20h1v-1h2v1h1v-3h2v5h-3v-1h-2v1h-3v-5h2v3Zm-4 0H4v-2h8v2Zm-8-2H2V4h2v14Zm16-1h-4v-2h4v2Zm-4-2h-2v-4h2v4Zm6 0h-2v-4h2v4Zm-12-3H6v-2h4v2Zm10-1h-4V9h4v2Zm-6-3H6V6h8v2Zm4-1h-2V4h2v3Zm-2-3H4V2h12v2Z"></path></svg>
+          {license.name}
+        </a>
+      )}
+    </div>
+
+  </div>
 </div>
 
