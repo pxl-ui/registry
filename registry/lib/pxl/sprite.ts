@@ -122,7 +122,7 @@ export type AnimationRuntime<TState = unknown> = {
   /** Tamaño nativo (sin escalar) de un frame del atlas, para posicionar partículas/efectos. */
   frameW: number;
   frameH: number;
-  createSprite: (src: string, atlas?: Atlas) => Sprite;
+  createSprite: (src: string|string[], atlas?: Atlas) => Sprite;
   setSprite: (sprite: Sprite) => void;
 }
 
@@ -192,7 +192,7 @@ export type Options = {
   frame?: string;
 };
 export class Sprite {
-  img?: HTMLImageElement;
+  img?: HTMLImageElement[];
   scale: number;
 
   /** Cuando no es null, fuerza el flip en draw() en vez del definido por el frame. */
@@ -216,7 +216,7 @@ export class Sprite {
   private offscreen?: HTMLCanvasElement;
   private offscreenCtx?: CanvasRenderingContext2D | null;
 
-  constructor(src: string, atlas: Atlas, options: Options = {}) {
+  constructor(src: string|string[], atlas: Atlas, options: Options = {}) {
     this.atlas = atlas;
     this.frameKeys = getFrameKeys(atlas);
     this.scale = options.scale ?? 1;
@@ -231,13 +231,20 @@ export class Sprite {
     this.loadImage(src);
   }
 
-  private loadImage(src: string) {
+  private loadImage(src: string|string[]) {
     if (!src) return;
-    const img = new Image();
-    img.onload = () => {
-      this.img = img;
-    };
-    img.src = src;
+
+    const sources = Array.isArray(src) ? src : [src];
+    this.img = [];
+
+    for (const key of sources.keys()) {
+      const img = new Image();
+      img.onload = () => {
+        // biome-ignore lint/style/noNonNullAssertion: initialised above
+        this.img![key] = img;
+      };
+      img.src = sources[key];
+    }
   }
 
   get currentFrameKey(): string | undefined {
@@ -351,9 +358,13 @@ export class Sprite {
 
     if (shouldFlip) {
       ctx.scale(-1, 1);
-      ctx.drawImage(this.img, x, y, w, h, -dw, 0, dw, dh);
+      for (const img of this.img) {
+        ctx.drawImage(img, x, y, w, h, -dw, 0, dw, dh);
+      }
     } else {
-      ctx.drawImage(this.img, x, y, w, h, 0, 0, dw, dh);
+      for (const img of this.img) {
+        ctx.drawImage(img, x, y, w, h, 0, 0, dw, dh);
+      }
     }
 
     if (this.whiteRatio > 0) {
@@ -390,7 +401,9 @@ export class Sprite {
     if (!oCtx) return;
 
     oCtx.clearRect(0, 0, w, h);
-    oCtx.drawImage(this.img, x, y, w, h, 0, 0, w, h);
+    for (const img of this.img) {
+      oCtx.drawImage(img, x, y, w, h, 0, 0, w, h);
+    }
     oCtx.globalCompositeOperation = "source-in";
     oCtx.fillStyle = "#ffffff";
     oCtx.fillRect(0, 0, w, h);

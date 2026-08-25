@@ -26,7 +26,7 @@ export type ActiveEffect = {
 };
 
 type UseSpriteOptions = {
-  src: string;
+  src: string | string[];
   atlas: Atlas;
   /** size to render the canvas. */
   size: number;
@@ -73,13 +73,13 @@ export function useSprite({
   );
 
   const createSprite = useCallback(
-    (spriteSrc: string, spriteAtlas: Atlas = atlas) =>
+    (spriteSrc: string|string[], spriteAtlas: Atlas = atlas) =>
       new Sprite(spriteSrc, spriteAtlas, { idleTag, frame }),
     [atlas, idleTag, frame],
   );
 
   const loadSprite = useCallback(
-    (spriteSrc: string, spriteAtlas: Atlas = atlas) => {
+    (spriteSrc: string | string[], spriteAtlas: Atlas = atlas) => {
       const next = createSprite(spriteSrc, spriteAtlas);
       setSprite(next);
       return next;

@@ -1,8 +1,8 @@
 import type { AnimationEffect, Sprite } from "@/lib/pxl/sprite";
 
 type EvolutionPayload = {
-  /** Src de la imagen de la nueva forma. */
-  src: string;
+  /** New sprite's src */
+  src: string|string[];
 };
 
 type Particle = {

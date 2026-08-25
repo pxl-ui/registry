@@ -1,8 +1,8 @@
 import type { AnimationEffect, Sprite } from "@/lib/pxl/sprite";
 
 type TransitionPayload = {
-  /** Src de la imagen del nuevo sprite hacia el que se transiciona. */
-  src: string;
+  /** New sprite's src */
+  src: string | string[];
   /** -1: el nuevo entra desde la derecha (slide izquierda). 1: entra desde la izquierda. */
   direction: 1 | -1;
 };

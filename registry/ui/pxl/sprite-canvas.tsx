@@ -16,7 +16,7 @@ export type SpriteCanvasHandle = {
 
 type Props = {
   /** Spritesheet image url. */
-  src: string;
+  src: string | string[];
   /** Aseprite atlas spritesheet definition (frames + frameTags). */
   atlas: Atlas;
   /** Size of the sprite. By default, the native size from the atlas. */
