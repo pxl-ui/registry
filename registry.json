@@ -3,6 +3,7 @@
   "name": "pxl-ui",
   "homepage": "https://github.com/pxl-ui/registry",
   "include": [
+    "registry/backgrounds/pxl/registry.json",
     "registry/colors/pxl/registry.json",
     "registry/fonts/pxl/registry.json",
     "registry/hooks/pxl/registry.json",

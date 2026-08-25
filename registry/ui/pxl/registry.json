@@ -38,7 +38,7 @@
       "title": "Animated Icon",
       "description": "Animate your svg icons using motion",
       "categories": ["pxl-ui", "components", "content", "icons", "animations"],
-      "dependencies": ["motion/react"],
+      "dependencies": ["motion"],
       "files": [
         {
           "path": "animated-icon.tsx",
@@ -258,7 +258,7 @@
       "title": "Flip",
       "description": "A flip component that supports automatic, manual (gesture-based), and programmatic flipping.",
       "categories": ["pxl-ui", "components", "ui", "layout", "animations"],
-      "dependencies": ["motion/react"],
+      "dependencies": ["motion"],
       "files": [
         {
           "path": "flip.tsx",
@@ -409,7 +409,7 @@
       "title": "Reveal",
       "description": "Content display/hide animation",
       "categories": ["pxl-ui", "components", "interaction", "animations"],
-      "dependencies": ["motion/react"],
+      "dependencies": ["motion"],
       "files": [
         {
           "path": "reveal.tsx",
@@ -621,8 +621,9 @@
       "type": "registry:component",
       "title": "Wheel List",
       "description": "Wheel List Selection menu",
+      "author": "Moumen Soliman (https://github.com/moumen-soliman)",
       "categories": ["pxl-ui", "components", "ui", "navigation"],
-      "dependencies": ["motion/react"],
+      "dependencies": ["motion"],
       "files": [
         {
           "path": "wheel-list.tsx",

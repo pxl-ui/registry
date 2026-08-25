@@ -3,6 +3,7 @@
 import { cardVariants } from '@/components/ui/pxl/card';
 import { cn } from '@/lib/utils';
 import { sources } from "~/lib/examples";
+import { basename } from '~/lib/registry';
 
 import Code from './Code.astro';
 import ComponentRenderer from './ComponentRenderer';
@@ -11,18 +12,30 @@ export type Props = {
 	align?: "center" | "start" | "end";
 	chromeless?: boolean;
 	class?: string;
-	code?: string;
 	collapsedHeight?: number;
-	lang?: string;
-	src?: string;
 	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
+
+	/** Approach n.1: Raw code */
+	code?: string;
+	lang?: string;
+
+	/** Approach n.2: File name (without extension)  */
+	src?: string;
+
+	/** Approach n.3: Component name + example name (default to demo)  */
+	item?: string;
+	example?: string;
 }
 
-const { align, chromeless, src, code, lang = "tsx", class: className, style, collapsedHeight = 120 } = Astro.props;
+const { align, chromeless, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120 } = Astro.props;
 
+let srcPath = src;
 let sourceCode = code;
 
-if (src && !code) {
+if (item) {
+	srcPath = `${basename(item)}/${example}`;
+	sourceCode = sources.get(srcPath);
+} else if (src) {
 	sourceCode = sources.get(src);
 }
 ---
@@ -46,7 +59,7 @@ if (src && !code) {
 			class={cn(
 				"relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end",
 			)}>
-			{src ? <ComponentRenderer src={src} client:load /> : <slot />}
+			{srcPath ? <ComponentRenderer src={srcPath} client:load /> : <slot />}
 		</div>
 
 		{sourceCode && <Code 

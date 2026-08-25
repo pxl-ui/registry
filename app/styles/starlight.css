@@ -491,7 +491,7 @@ starlight-tabs [role="tablist"] {
   }
 
   .tab [aria-selected="true"] {
-    @apply bg-accent pixel-color-accent font-normal;
+    @apply bg-accent pixel-color-accent font-normal shadow-none;
   } 
 }
 

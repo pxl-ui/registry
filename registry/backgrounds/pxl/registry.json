@@ -1,0 +1,86 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/backgrounds",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "backgrounds-grid-pattern",
+      "type": "registry:component",
+      "title": "Grid Pattern",
+      "description": "A background grid pattern made with SVGs.",
+      "author": "Dillion Verma (https://github.com/dillionverma)",
+      "categories": ["pxl-ui", "background", "background-pattern"],
+      "files": [
+        {
+          "path": "grid-pattern.tsx",
+          "type": "registry:component",
+          "target": "@components/backgrounds/pxl/grid-pattern.tsx"
+        }
+      ]
+    },
+    {
+      "name": "backgrounds-animated-grid-pattern",
+      "type": "registry:component",
+      "title": "Animated Grid Pattern",
+      "description": "A animated background grid pattern made with SVGs.",
+      "categories": ["pxl-ui", "background", "background-pattern", "animations"],
+      "meta": {
+        "order": 1
+      },
+      "author": "Dillion Verma (https://github.com/dillionverma)",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "animated-grid-pattern.tsx",
+          "type": "registry:component",
+          "target": "@components/backgrounds/pxl/animated-grid-pattern.tsx"
+        }
+      ]
+    },
+    {
+      "name": "backgrounds-flickering-grid",
+      "type": "registry:component",
+      "title": "Flickering Grid",
+      "description": "A flickering grid background made with SVGs",
+      "author": "Dillion Verma (https://github.com/dillionverma)",
+      "categories": ["pxl-ui", "background", "background-pattern"],
+      "files": [
+        {
+          "path": "flickering-grid.tsx",
+          "type": "registry:component",
+          "target": "@components/backgrounds/pxl/flickering-grid.tsx"
+        }
+      ]
+    },
+    {
+      "name": "backgrounds-glyph-matrix",
+      "type": "registry:component",
+      "title": "Glyph Matrix",
+      "description": "An animated grid of subtly shifting glyphs on a canvas",
+      "author": "Sarvan Kumar (https://github.com/sarvan-2187)",
+      "categories": ["pxl-ui", "background", "background-pattern"],
+      "files": [
+        {
+          "path": "glyph-matrix.tsx",
+          "type": "registry:component",
+          "target": "@components/backgrounds/pxl/glyph-matrix.tsx"
+        }
+      ]
+    },
+    {
+      "name": "backgrounds-hexagon-pattern",
+      "type": "registry:component",
+      "title": "Hexagon Pattern",
+      "description": "A background hexagon pattern made with SVGs.",
+      "author": "Matheus Figueiredo (https://github.com/chishiyac)",
+      "categories": ["pxl-ui", "background", "background-pattern"],
+      "files": [
+        {
+          "path": "hexagon-pattern.tsx",
+          "type": "registry:component",
+          "target": "@components/backgrounds/pxl/hexagon-pattern.tsx"
+        }
+      ]
+    }
+  ]
+}

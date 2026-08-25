@@ -1,18 +1,18 @@
 ---
-title: Icons
+title: Backgrounds
 sidebar:
   order: 6
 ---
 import { LinkCard, LinkCardMedia } from "~/components";
 
-import { lists } from "~/lib/icons";
+import { lists } from "~/lib/backgrounds";
 import { toRouteId } from "~/lib/registry";
 
-## Flags
+## Patterns
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  {lists.flags.map(item => (
+  {lists.patterns.map(item => (
     <LinkCard
       href={toRouteId(item.name)}
       title={item.title ?? item.name}

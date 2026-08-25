@@ -1,0 +1,35 @@
+---
+title: Glyph Matrix
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="backgrounds-glyph-matrix" />
+
+
+## Installation
+
+<Install item="backgrounds-glyph-matrix" />
+
+## Usage
+
+```tsx
+import { GlyphMatrix } from "@/components/backgrounds/pxl/glyph-matrix"
+```
+
+```tsx
+<GlyphMatrix />
+```
+
+## API Reference
+
+### GlyphMatrix
+
+| Prop           | Type     | Default          | Description                                  |
+| -------------- | -------- | ---------------- | -------------------------------------------- |
+| `glyphs`       | `string` | `"01·•+*/\\<>="` | Characters to randomly pick from.            |
+| `cellSize`     | `number` | `14`             | Cell size in pixels and font size.           |
+| `mutationRate` | `number` | `0.04`           | Probability a cell mutates each tick.        |
+| `interval`     | `number` | `90`             | Tick interval in milliseconds.               |
+| `className`    | `string` | `-`              | Classes applied to the canvas element.       |
+| `fadeBottom`   | `number` | `0.6`            | Fade strength toward the bottom of the grid. |
+| `color`        | `string` | `"#6B7280"`      | Glyph color (any CSS color).                 |

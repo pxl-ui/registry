@@ -1,0 +1,47 @@
+---
+title: Hexagon Pattern
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="backgrounds-hexagon-pattern" />
+
+## Installation
+
+<Install item="backgrounds-hexagon-pattern" />
+
+## Usage
+
+```tsx
+import { HexagonPattern } from "@/components/backgrounds/pxl/hexagon-pattern"
+```
+
+```tsx
+<HexagonPattern />
+```
+
+## Linear Gradient
+
+<ComponentPreview item="backgrounds-hexagon-pattern" example="linear-gradient" />
+
+## Dashed Stroke
+
+<ComponentPreview item="backgrounds-hexagon-pattern" example="dashed-stroke" />
+
+## Spacing
+
+<ComponentPreview item="backgrounds-hexagon-pattern" example="spacing" />
+
+## API Reference
+
+### HexagonPattern
+
+| Prop              | Type                         | Default        | Description                                                               |
+| ----------------- | ---------------------------- | -------------- | ------------------------------------------------------------------------- |
+| `radius`          | `number`                     | `40`           | Radius from center to vertex for each hexagon                             |
+| `gap`             | `number`                     | `0`            | Extra spacing between adjacent hexagons (pixels)                          |
+| `x`               | `number`                     | `-1`           | X offset of the pattern origin                                            |
+| `y`               | `number`                     | `-1`           | Y offset of the pattern origin                                            |
+| `direction`       | `"horizontal" \| "vertical"` | `"horizontal"` | `horizontal` — flat-top honeycomb; `vertical` — pointy-top honeycomb      |
+| `hexagons`        | `Array<[col, row]>`          | —              | Grid coordinates of highlighted (filled) hexagons                         |
+| `strokeDasharray` | `string`                     | `"0"`          | SVG `stroke-dasharray` for outline hexagons in the repeating pattern      |
+| `className`       | `string`                     | —              | Additional classes on the root SVG (for example Tailwind color utilities) |

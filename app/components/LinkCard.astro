@@ -17,7 +17,7 @@ const { title, description, ...attributes } = Astro.props;
   <Card className="cursor-pointer pixel-color-border! hover:pixel-color-foreground!">
     <CardHeader className="flex justify-between">
       <CardTitle className="h-auto flex gap-2 items-center leading-5! text-sm! mr-4 truncate">
-        <slot name="avatar" />
+        <slot name="media" />
         <span class="truncate">{title}</span>
       </CardTitle>
       <Icon name="right-arrow"

@@ -1,7 +1,9 @@
 import { formatColor } from "gimp-palette";
+import { lazy, Suspense } from "react";
 
 import { cn } from "@/lib/utils";
 import { palettes } from "~/lib/colors";
+import { components } from "~/lib/examples";
 import { iconPacks } from "~/lib/icons";
 import { basename, kind } from "~/lib/registry";
 
@@ -42,6 +44,29 @@ function getFirstIcon(item: string) {
   return Object.values(variant)[0];
 }
 
+function getBackgroundPreview(item: string) {
+  const itemName = basename(item);
+  const importer = components.get(`${itemName}/thumbnail`);
+
+  if (!importer) {
+    return null;
+  }
+
+  const Component = lazy(importer);
+
+  return (
+    <div className="size-4 aspect-square relative">
+      <Suspense
+        fallback={
+          <div className="animate-pulse w-full h-full bg-muted pixel-rounded" />
+        }
+      >
+        <Component />
+      </Suspense>
+    </div>
+  );
+}
+
 export default function LinkCardMedia({ item: itemName }: { item: string }) {
   const itemKind = kind(itemName);
 
@@ -69,6 +94,10 @@ export default function LinkCardMedia({ item: itemName }: { item: string }) {
         Aa
       </div>
     );
+  }
+
+  if (itemKind === "background") {
+    return getBackgroundPreview(itemName);
   }
 
   if (itemKind === "icon") {

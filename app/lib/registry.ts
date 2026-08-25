@@ -2,14 +2,19 @@ import root from "../../registry.json" with { type: "json" };
 import { files } from "./files";
 import { url } from "./utils";
 
+/** Registry item meta kinds */
+type Kind = "background" | "color" | "font" | "icon" | "component" | "widget"
+
 const KIND_CATEGORIES = {
-  COLOR: "color-palette",
-  ICON: "icons",
-  FONT: "font-family",
-  WIDGETS: "widgets",
-};
+  background: "background",
+  color: "color-palette",
+  icon: "icons",
+  font: "font-family",
+  widget: "widgets",
+} satisfies Partial<Record<Kind, string>>;
 
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
+  backgrounds: { prefix: "backgrounds-" },
   colors: { prefix: "colors-" },
   fonts: { prefix: "fonts-" },
   components: {},
@@ -70,6 +75,7 @@ for (const include of root.include) {
   const resolved = definitions.find((r) => r.path === `/${include}`);
 
   if (!resolved) {
+    console.warn(`Failed to include "${include}" from registry root`);
     continue;
   }
 
@@ -135,27 +141,21 @@ function filter({
     });
 }
 
-function kind(itemName: string): "color" | "font" | "icon" | "component" | "widget" {
+function kind(itemName: string): Kind {
   const item = registry.get(itemName);
 
   if (!item) {
     throw new Error(`Item "${itemName}" not found`);
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.COLOR)) {
-    return "color";
+  if (!item.categories || item.categories.length === 0) {
+    return "component";
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.FONT)) {
-    return "font";
-  }
-
-  if (item.categories?.includes(KIND_CATEGORIES.ICON)) {
-    return "icon";
-  }
-
-  if (item.categories?.includes(KIND_CATEGORIES.WIDGETS)) {
-    return "widget";
+  for (const [kind, category] of Object.entries(KIND_CATEGORIES)) {
+    if (item.categories?.includes(category)) {
+      return kind as Kind;
+    }
   }
 
   return "component";
@@ -171,18 +171,22 @@ function basename(itemName: string) {
     throw new Error(`Item "${itemName}" not found`);
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.COLOR)) {
+  if (item.categories?.includes(KIND_CATEGORIES.background)) {
+    return itemName.replace("backgrounds-", "");
+  }
+
+  if (item.categories?.includes(KIND_CATEGORIES.color)) {
     return itemName.replace("colors-", "");
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.ICON)) {
+  if (item.categories?.includes(KIND_CATEGORIES.icon)) {
     return itemName
       .replace("icons-", "")
       .replace("flags-", "")
       .replace("cursors-", "");
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.FONT)) {
+  if (item.categories?.includes(KIND_CATEGORIES.font)) {
     return itemName.replace("fonts-", "");
   }
 
@@ -211,6 +215,10 @@ function toRouteId(itemName: string) {
   const baseName = basename(itemName);
   const itemKind = kind(itemName);
 
+  if (itemKind === "background") {
+    return url(`backgrounds/${baseName}`);
+  }
+
   if (itemKind === "color") {
     return url(`colors/${baseName}`);
   }
@@ -224,7 +232,7 @@ function toRouteId(itemName: string) {
   }
 
   // TODO: Implement component subcategories
-  throw new Error("Not implemented");
+  throw new Error(`Method toRouteId not implemented for kind "${itemKind}"`);
 }
 
 export default registry;
@@ -234,6 +242,7 @@ export {
   filter,
   fromRouteId,
   kind,
+  registry,
   registryFiles as files,
   toRouteId,
 };
