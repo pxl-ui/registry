@@ -31,12 +31,20 @@ import { HexagonPattern } from "@/components/backgrounds/pxl/hexagon-pattern"
 
 <ComponentPreview item="backgrounds-hexagon-pattern" example="spacing" />
 
+
+## Variants
+
+Use the `variant` prop to change the colors of the grid.
+
+<ComponentPreview item="backgrounds-hexagon-pattern" example="variants" />
+
 ## API Reference
 
 ### HexagonPattern
 
 | Prop              | Type                         | Default        | Description                                                               |
 | ----------------- | ---------------------------- | -------------- | ------------------------------------------------------------------------- |
+| `variant` | `"default" \| "primary" \| "secondary" \| "muted" \| "success" \| "warning" \| "danger"`        | `"default"` | Colors of the grids |
 | `radius`          | `number`                     | `40`           | Radius from center to vertex for each hexagon                             |
 | `gap`             | `number`                     | `0`            | Extra spacing between adjacent hexagons (pixels)                          |
 | `x`               | `number`                     | `-1`           | X offset of the pattern origin                                            |

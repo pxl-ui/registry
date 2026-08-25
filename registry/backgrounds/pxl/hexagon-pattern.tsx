@@ -1,8 +1,30 @@
+import { cva, type VariantProps } from "class-variance-authority";
 import { type SVGProps, useId } from "react";
 
 import { cn } from "@/lib/utils";
 
 type HexPoint = readonly [number, number];
+
+const hexagonPatternVariants = cva(
+  "pointer-events-none absolute inset-0 h-full w-full",
+  {
+    variants: {
+      variant: {
+        default: "bg-background fill-border stroke-border text-border",
+        primary: "bg-primary fill-primary-foreground/30 stroke-primary-foreground/30 text-primary-foreground/30",
+        secondary: "bg-secondary fill-secondary-foreground/30 stroke-secondary-foreground/30 text-secondary-foreground/30",
+        muted: "bg-muted fill-muted-foreground/30 stroke-muted-foreground/30 text-muted-foreground/30",
+        info: "bg-info fill-info-foreground/30 stroke-info-foreground/30 text-info-foreground/30",
+        success: "bg-success fill-success-foreground/30 stroke-success-foreground/30 text-success-foreground/30",
+        warning: "bg-warning fill-warning-foreground/30 stroke-warning-foreground/30 text-warning-foreground/30",
+        danger: "bg-danger fill-danger-foreground/30 stroke-danger-foreground/30 text-danger-foreground/30",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
 
 function hexVertexList(
   cx: number,
@@ -185,51 +207,53 @@ function HexagonPattern({
   direction = "horizontal",
   hexagons,
   className,
+  variant = "default",
   ...props
-}: SVGProps<SVGSVGElement> & {
-  /**
-   * The radius of each hexagon (center to vertex).
-   * @default 40
-   */
-  radius?: number;
-  /**
-   * Spacing in pixels between adjacent hexagons.
-   * The tile grows by this amount while the visual radius stays fixed,
-   * so the gap is evenly distributed on all sides of each hexagon.
-   * @default 0
-   */
-  gap?: number;
-  /**
-   * Offset applied to the pattern origin on the x-axis.
-   * @default -1
-   */
-  x?: number;
-  /**
-   * Offset applied to the pattern origin on the y-axis.
-   * @default -1
-   */
-  y?: number;
-  /**
-   * Controls the orientation of the hexagons.
-   * - `"horizontal"` — flat-top hexagons tiled in a horizontal honeycomb grid.
-   * - `"vertical"` — pointy-top hexagons tiled in a vertical honeycomb grid.
-   * @default "horizontal"
-   */
-  direction?: "horizontal" | "vertical";
-  /**
-   * SVG stroke-dasharray applied to each hexagon outline.
-   * @default "0"
-   */
-  strokeDasharray?: string;
-  /**
-   * Array of [col, row] coordinates for hexagons that should be highlighted
-   * (filled) on top of the repeating pattern — mirrors the `squares` prop of
-   * GridPattern.
-   */
-  hexagons?: Array<[col: number, row: number]>;
-  className?: string;
-  [key: string]: unknown;
-}) {
+}: SVGProps<SVGSVGElement> &
+  VariantProps<typeof hexagonPatternVariants> & {
+    /**
+     * The radius of each hexagon (center to vertex).
+     * @default 40
+     */
+    radius?: number;
+    /**
+     * Spacing in pixels between adjacent hexagons.
+     * The tile grows by this amount while the visual radius stays fixed,
+     * so the gap is evenly distributed on all sides of each hexagon.
+     * @default 0
+     */
+    gap?: number;
+    /**
+     * Offset applied to the pattern origin on the x-axis.
+     * @default -1
+     */
+    x?: number;
+    /**
+     * Offset applied to the pattern origin on the y-axis.
+     * @default -1
+     */
+    y?: number;
+    /**
+     * Controls the orientation of the hexagons.
+     * - `"horizontal"` — flat-top hexagons tiled in a horizontal honeycomb grid.
+     * - `"vertical"` — pointy-top hexagons tiled in a vertical honeycomb grid.
+     * @default "horizontal"
+     */
+    direction?: "horizontal" | "vertical";
+    /**
+     * SVG stroke-dasharray applied to each hexagon outline.
+     * @default "0"
+     */
+    strokeDasharray?: string;
+    /**
+     * Array of [col, row] coordinates for hexagons that should be highlighted
+     * (filled) on top of the repeating pattern — mirrors the `squares` prop of
+     * GridPattern.
+     */
+    hexagons?: Array<[col: number, row: number]>;
+    className?: string;
+    [key: string]: unknown;
+  }) {
   const id = useId();
 
   const { tileW, tileH, centers } = getTileGeometry(radius, direction, gap);
@@ -241,10 +265,7 @@ function HexagonPattern({
   return (
     <svg
       aria-hidden="true"
-      className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
-        className,
-      )}
+      className={cn(hexagonPatternVariants({ variant }), className)}
       {...props}
     >
       <defs>
@@ -299,6 +320,4 @@ function HexagonPattern({
   );
 }
 
-export {
-  HexagonPattern
-}
+export { HexagonPattern };

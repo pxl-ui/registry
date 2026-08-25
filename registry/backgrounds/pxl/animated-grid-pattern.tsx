@@ -1,5 +1,6 @@
 "use client";
 
+import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "motion/react";
 import {
   type ComponentPropsWithoutRef,
@@ -12,6 +13,24 @@ import {
 
 import { cn } from "@/lib/utils";
 
+const animatedGridPatternVariants = cva("pointer-events-none absolute inset-0 h-full w-full", {
+  variants: {
+    variant: {
+      default: "bg-background fill-border stroke-border text-border",
+      primary: "bg-primary fill-primary-foreground/30 stroke-primary-foreground/30 text-primary-foreground/30",
+      secondary: "bg-secondary fill-secondary-foreground/30 stroke-secondary-foreground/30 text-secondary-foreground/30",
+      muted: "bg-muted fill-muted-foreground/30 stroke-muted-foreground/30 text-muted-foreground/30",
+      info: "bg-info fill-info-foreground/30 stroke-info-foreground/30 text-info-foreground/30",
+      success: "bg-success fill-success-foreground/30 stroke-success-foreground/30 text-success-foreground/30",
+      warning: "bg-warning fill-warning-foreground/30 stroke-warning-foreground/30 text-warning-foreground/30",
+      danger: "bg-danger fill-danger-foreground/30 stroke-danger-foreground/30 text-danger-foreground/30",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+});
+
 type Square = {
   id: number;
   pos: [number, number];
@@ -19,28 +38,30 @@ type Square = {
 };
 
 function AnimatedGridPattern({
-  width = 40,
+  className,
+  duration = 4,
   height = 40,
+  maxOpacity = 0.5,
+  numSquares = 50,
+  repeatDelay = 0.5,
+  strokeDasharray = 0,
+  variant = "default",
+  width = 40,
   x = -1,
   y = -1,
-  strokeDasharray = 0,
-  numSquares = 50,
-  className,
-  maxOpacity = 0.5,
-  duration = 4,
-  repeatDelay = 0.5,
   ...props
-}: ComponentPropsWithoutRef<"svg"> & {
-  width?: number;
-  height?: number;
-  x?: number;
-  y?: number;
-  strokeDasharray?: number;
-  numSquares?: number;
-  maxOpacity?: number;
-  duration?: number;
-  repeatDelay?: number;
-}) {
+}: ComponentPropsWithoutRef<"svg"> &
+  VariantProps<typeof animatedGridPatternVariants> & {
+    width?: number;
+    height?: number;
+    x?: number;
+    y?: number;
+    strokeDasharray?: number;
+    numSquares?: number;
+    maxOpacity?: number;
+    duration?: number;
+    repeatDelay?: number;
+  }) {
   const id = useId();
   const containerRef = useRef<SVGSVGElement | null>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -124,10 +145,7 @@ function AnimatedGridPattern({
     <svg
       ref={containerRef}
       aria-hidden="true"
-      className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
-        className,
-      )}
+      className={cn(animatedGridPatternVariants({ variant }), className)}
       {...props}
     >
       <defs>
@@ -174,4 +192,4 @@ function AnimatedGridPattern({
   );
 }
 
-export { AnimatedGridPattern }
+export { AnimatedGridPattern };

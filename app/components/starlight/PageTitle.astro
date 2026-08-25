@@ -2,7 +2,7 @@
 
 import { buttonVariants } from '@/components/ui/pxl/button';
 import { cn } from '@/lib/utils';
-import registry from "~/lib/registry";
+import { pages, registry } from "~/lib/registry";
 import { registryItemFromRouteId } from "~/lib/utils";
 
 import Icon from './Icon.astro';
@@ -26,7 +26,12 @@ if (item?.meta?.license) {
   license = creditsSchema.parse(item.meta.license);
 }
 
-const { pagination } = Astro.locals.starlightRoute;
+let { pagination } = Astro.locals.starlightRoute;
+
+if (itemName && !pagination.prev && !pagination.next) {
+  pagination = pages(itemName);
+}
+
 const { prev, next } = pagination;
 
 ---

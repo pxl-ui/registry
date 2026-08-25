@@ -126,7 +126,7 @@
       "type": "registry:style",
       "title": "Color Variants",
       "description": "Color variants to express intentionality inspired by Bootstrap",
-      "categories": ["pxl-ui", "styles", "color-palette"],
+      "categories": ["pxl-ui", "styles"],
       "cssVars": {
         "theme": {
           "color-destructive": "var(--danger-foreground)",
@@ -221,7 +221,7 @@
       "type": "registry:style",
       "title": "Color Gradients",
       "description": "Predefined gradients inspired by videogame indicators",
-      "categories": ["pxl-ui", "styles", "color-palette"],
+      "categories": ["pxl-ui", "styles"],
       "cssVars": {
         "theme": {
           "background-image-chrome": "linear gradient(to bottom, var(--color-white), var(--color-gray-400), var(--color-gray-300))",

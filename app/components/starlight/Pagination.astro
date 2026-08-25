@@ -1,10 +1,18 @@
 ---
 
 import { buttonVariants } from '@/components/ui/pxl/button';
+import { fromRouteId, pages } from '~/lib/registry';
 
 import Icon from './Icon.astro';
 
-const { dir, pagination } = Astro.locals.starlightRoute;
+const item = fromRouteId(Astro.locals.starlightRoute.id); 
+
+let { dir, pagination } = Astro.locals.starlightRoute;
+
+if (item?.name && !pagination.prev && !pagination.next) {
+  pagination = pages(item.name);
+}
+
 const { prev, next } = pagination;
 ---
 

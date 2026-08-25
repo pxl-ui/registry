@@ -10,7 +10,7 @@
       "description": "Mouse cursors powered by pixelarticons",
       "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
       "author": "halfmage <https://x.com/halfmage>",
-      "categories": ["pxl-ui", "icons", "cursors"],
+      "categories": ["pxl-ui", "cursors"],
       "registryDependencies": [
         "pxl-ui/registry/styles-cursors"
       ],

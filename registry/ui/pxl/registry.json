@@ -37,7 +37,7 @@
       "type": "registry:component",
       "title": "Animated Icon",
       "description": "Animate your svg icons using motion",
-      "categories": ["pxl-ui", "components", "content", "icons", "animations"],
+      "categories": ["pxl-ui", "components", "content", "animations"],
       "dependencies": ["motion"],
       "files": [
         {
@@ -618,7 +618,7 @@
       "type": "registry:component",
       "title": "Weather Icon",
       "description": "A Icon Component to display the Weather",
-      "categories": ["pxl-ui", "components", "icons", "weather"],
+      "categories": ["pxl-ui", "components", "weather"],
       "dependencies": [
         "weather-i18n"
       ],

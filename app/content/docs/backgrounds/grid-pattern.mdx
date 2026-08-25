@@ -27,6 +27,12 @@ import { GridPattern } from "@/components/backgrounds/pxl/grid-pattern"
 
 <ComponentPreview item="backgrounds-grid-pattern" example="dashed-stroke" />
 
+## Variants
+
+Use the `variant` prop to change the colors of the grid.
+
+<ComponentPreview item="backgrounds-grid-pattern" example="variants" />
+
 ## API Reference
 
 ### GridPattern
@@ -34,6 +40,7 @@ import { GridPattern } from "@/components/backgrounds/pxl/grid-pattern"
 | Prop              | Type     | Default | Description                                   |
 | ----------------- | -------- | ------- | --------------------------------------------- |
 | `className`       | `string` | `-`     | Additional classes to be added to the pattern |
+| `variant` | `"default" \| "primary" \| "secondary" \| "muted" \| "success" \| "warning" \| "danger"`        | `"default"` | Colors of the grids |
 | `width`           | `number` | `40`    | Width of the pattern                          |
 | `height`          | `number` | `40`    | Height of the pattern                         |
 | `x`               | `number` | `-1`    | X offset of the pattern                       |

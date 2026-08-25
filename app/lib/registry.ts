@@ -1,9 +1,11 @@
 import root from "../../registry.json" with { type: "json" };
 import { files } from "./files";
+import type { Badge } from "./starlight/schemas/badge";
+import type { LinkHTMLAttributes } from "./starlight/schemas/sidebar";
 import { url } from "./utils";
 
 /** Registry item meta kinds */
-type Kind = "background" | "color" | "font" | "icon" | "component" | "widget"
+type Kind = "background" | "color" | "font" | "icon" | "component" | "widget";
 
 const KIND_CATEGORIES = {
   background: "background",
@@ -17,6 +19,7 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   backgrounds: { prefix: "backgrounds-" },
   colors: { prefix: "colors-" },
   fonts: { prefix: "fonts-" },
+  icons: { prefix: "icons-" },
   components: {},
   layout: {},
   interaction: {},
@@ -235,6 +238,88 @@ function toRouteId(itemName: string) {
   throw new Error(`Method toRouteId not implemented for kind "${itemKind}"`);
 }
 
+function pages(itemName: string): {
+  next: {
+    type: 'link';
+    label: string;
+    href: string;
+    isCurrent: boolean;
+    badge: Badge | undefined;
+    attrs: LinkHTMLAttributes;
+  } | undefined;
+  prev: {
+	type: 'link';
+	label: string;
+	href: string;
+	isCurrent: boolean;
+	badge: Badge | undefined;
+	attrs: LinkHTMLAttributes;
+} | undefined;
+} {
+  let next: {
+    type: 'link';
+    label: string;
+    href: string;
+    isCurrent: boolean;
+    badge: Badge | undefined;
+    attrs: LinkHTMLAttributes;
+  } | undefined;
+  let prev: {
+    type: 'link';
+    label: string;
+    href: string;
+    isCurrent: boolean;
+    badge: Badge | undefined;
+    attrs: LinkHTMLAttributes;
+  } | undefined;
+  const itemKind = kind(itemName);
+
+  if (!(itemKind in KIND_CATEGORIES)) {
+    return {
+      next,
+      prev,
+    };
+  }
+
+  const categories = [KIND_CATEGORIES[itemKind as keyof typeof KIND_CATEGORIES]];
+
+
+  const items = filter({ categories });
+
+  const index = items.findIndex(i => i.name === itemName);
+
+  if (index > 0) {
+    const prevItem = items[index - 1];
+
+    prev = {
+      type: "link",
+      label: prevItem.title ?? prevItem.name,
+      href: toRouteId(prevItem.name),
+      isCurrent: false,
+      badge: undefined,
+      attrs: {}
+    };
+  }
+
+  if (index < items.length - 1) {
+    const nextItem = items[index + 1];
+
+    next = {
+      type: "link",
+      label: nextItem.title ?? nextItem.name,
+      href: toRouteId(nextItem.name),
+      isCurrent: false,
+      badge: undefined,
+      attrs: {}
+    };
+  }
+
+  return {
+    next,
+    prev,
+  };
+}
+
 export default registry;
 
 export {
@@ -242,6 +327,7 @@ export {
   filter,
   fromRouteId,
   kind,
+  pages,
   registry,
   registryFiles as files,
   toRouteId,

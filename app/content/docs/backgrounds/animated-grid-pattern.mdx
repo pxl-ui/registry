@@ -19,6 +19,13 @@ import { AnimatedGridPattern } from "@/components/backgrounds/pxl/animated-grid-
 <AnimatedGridPattern />
 ```
 
+## Variants
+
+Use the `variant` prop to change the colors of the grid.
+
+<ComponentPreview item="backgrounds-animated-grid-pattern" example="variants" />
+
+
 ## API Reference
 
 ### AnimatedGridPattern
@@ -26,6 +33,7 @@ import { AnimatedGridPattern } from "@/components/backgrounds/pxl/animated-grid-
 | Prop              | Type     | Default | Description                                   |
 | ----------------- | -------- | ------- | --------------------------------------------- |
 | `className`       | `string` | `-`     | Additional classes to be added to the pattern |
+| `variant` | `"default" \| "primary" \| "secondary" \| "muted" \| "success" \| "warning" \| "danger"`        | `"default"` | Colors of the grids |
 | `width`           | `number` | `40`    | Width of the pattern                          |
 | `height`          | `number` | `40`    | Height of the pattern                         |
 | `x`               | `number` | `-1`    | X offset of the pattern                       |
