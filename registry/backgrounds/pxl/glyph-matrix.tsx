@@ -1,41 +1,90 @@
 "use client";
 
-import { type HTMLAttributes, useEffect, useRef } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { type HTMLAttributes, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+const glyphMatrixVariants = cva("absolute inset-0 z-0 size-full", {
+  variants: {
+    font: {
+      default: "font-mono",
+      mono: "font-mono",
+      heading: "font-heading",
+      sans: "font-sans",
+    },
+    variant: {
+      default: "bg-background text-foreground",
+      primary: "bg-primary text-primary-foreground",
+      secondary: "bg-secondary text-secondary-foreground",
+      info: "bg-info text-info-foreground",
+      success: "bg-success text-success-foreground",
+      warning: "bg-warning text-warning-foreground",
+      danger: "bg-danger text-danger-foreground",
+      muted: "bg-muted text-muted-foreground",
+    },
+    size: {
+      default: "text-sm",
+      "4xs": "text-4xs",
+      "3xs": "text-3xs",
+      "2xs": "text-2xs",
+      xs: "text-xs",
+      sm: "text-sm",
+      md: "text-base",
+      lg: "text-lg",
+      xl: "text-xl",
+      "2xl": "text-2xl",
+      "3xl": "text-3xl",
+    }
+  },
+});
+
 function GlyphMatrix({
+  className,
+  font = "default",
   glyphs = "01·•+*/\\<>=",
-  cellSize = 14,
   mutationRate = 0.04,
   interval = 90,
-  className,
   fadeBottom = 0.6,
-  color = "#6B7280",
-  style,
+  size = "default",
+  variant = "default",
   ...props
-}: HTMLAttributes<HTMLCanvasElement> & {
+}: HTMLAttributes<HTMLCanvasElement> & VariantProps<typeof glyphMatrixVariants> & {
   /** Characters to randomly pick from */
   glyphs?: string;
-  /** Cell size in px (also font size) */
-  cellSize?: number;
   /** Probability (0-1) a cell mutates each tick */
   mutationRate?: number;
   /** Tick interval in ms */
   interval?: number;
   /** Fade out toward bottom (0 = no fade) */
   fadeBottom?: number;
-  /** Glyph color (any CSS color). Pass a theme-aware value from the consumer. */
-  color?: string;
 }) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const stylesRef = useRef({
   // Current glyph color as RGBA (a in 0-1). Kept in a ref so a color change
   // (e.g. theme toggle) recolors the next frame without restarting the
   // animation. Defaults to #6B7280.
-  const rgbaRef = useRef({ r: 107, g: 114, b: 128, a: 1 });
+    color: { r: 107, g: 114, b: 128, a: 1 },
+    fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+    fontSize: 14,
+  });
+
+  const [computedColor, setComputedColor] = useState("rgba(107, 114, 128, 1)");
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: computed styles might change on font and variant changes
+  useLayoutEffect(function resolveComputedStyles() {
+    if (!containerRef.current) return;
+
+    const computedStyle = getComputedStyle(containerRef.current);
+    stylesRef.current.fontFamily = computedStyle.fontFamily;
+    stylesRef.current.fontSize = Number.parseFloat(computedStyle.fontSize);
+
+    setComputedColor(computedStyle.color);
+  }, [font, size, variant]);
 
   // Resolve the CSS color string to RGBA (handles hex, rgb, hsl, oklch, ...).
-  useEffect(() => {
+  useEffect(function resolveRGBATextColor() {
     const probe = document.createElement("canvas");
     probe.width = 1;
     probe.height = 1;
@@ -45,13 +94,13 @@ function GlyphMatrix({
     // context keeps the previous fillStyle when assigned an invalid value
     // instead of silently turning black.
     probeCtx.fillStyle = "#6B7280";
-    probeCtx.fillStyle = color;
+    probeCtx.fillStyle = computedColor;
     probeCtx.fillRect(0, 0, 1, 1);
     const [r, g, b, a] = probeCtx.getImageData(0, 0, 1, 1).data;
-    rgbaRef.current = { r, g, b, a: a / 255 };
-  }, [color]);
+    stylesRef.current.color = { r, g, b, a: a / 255 };
+  }, [computedColor]);
 
-  useEffect(() => {
+  useEffect(function renderGlyphs() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -74,8 +123,8 @@ function GlyphMatrix({
       canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      cols = Math.ceil(w / cellSize);
-      rows = Math.ceil(h / cellSize);
+      cols = Math.ceil(w / stylesRef.current.fontSize);
+      rows = Math.ceil(h / stylesRef.current.fontSize);
 
       cells = new Array(cols * rows)
         .fill(0)
@@ -89,17 +138,17 @@ function GlyphMatrix({
       const { clientWidth: w, clientHeight: h } = canvas;
       ctx.clearRect(0, 0, w, h);
 
-      ctx.font = `${cellSize - 2}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+      ctx.font = `${stylesRef.current.fontSize - 2}px ${stylesRef.current.fontFamily}`;
       ctx.textBaseline = "top";
 
-      const { r, g, b, a: colorAlpha } = rgbaRef.current;
+      const { r, g, b, a: colorAlpha } = stylesRef.current.color;
       for (let y = 0; y < rows; y++) {
         const fade = fadeBottom > 0 ? 1 - (y / rows) * fadeBottom : 1;
         for (let x = 0; x < cols; x++) {
           const i = y * cols + x;
           const a = alphas[i] * fade * colorAlpha;
           ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
-          ctx.fillText(cells[i], x * cellSize, y * cellSize);
+          ctx.fillText(cells[i], x * stylesRef.current.fontSize, y * stylesRef.current.fontSize);
         }
       }
     };
@@ -140,15 +189,14 @@ function GlyphMatrix({
       cancelAnimationFrame(raf);
       ro.disconnect();
     };
-  }, [glyphs, cellSize, mutationRate, interval, fadeBottom]);
+  }, [glyphs, mutationRate, interval, fadeBottom]);
 
   return (
-    <div className="absolute inset-0 z-0 size-full">
+    <div className={cn(glyphMatrixVariants({ font, size, variant, }), className)} ref={containerRef}>
       {/** biome-ignore lint/a11y/noAriaHiddenOnFocusable: background canvas */}
       <canvas
         ref={canvasRef}
-        className={cn("pointer-events-none", className)}
-        style={{ width: "100%", height: "100%", display: "block", ...style }}
+        className="pointer-events-none w-full h-full block"
         aria-hidden="true"
         {...props}
       />

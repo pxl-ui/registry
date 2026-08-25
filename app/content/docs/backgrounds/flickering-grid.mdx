@@ -11,18 +11,30 @@ import { ComponentPreview, Install } from '~/components';
 
 ### Usage
 
-```tsx showLineNumbers
+```tsx
 import { FlickeringGrid } from "@/components/backgrounds/pxl/flickering-grid"
 ```
 
-```tsx showLineNumbers
+```tsx
 <FlickeringGrid />
 ```
+
+## Size
+
+Use the `size` prop to change the size of the squares.
+
+<ComponentPreview item="backgrounds-flickering-grid" example="sizes" />
+
+
+## Variants
+
+Use the `variant` prop to change the colors of the grid.
+
+<ComponentPreview item="backgrounds-flickering-grid" example="variants" />
 
 ## Rounded
 
 <ComponentPreview item="backgrounds-flickering-grid" example="rounded" />
-
 
 ## API Reference
 
@@ -31,11 +43,9 @@ import { FlickeringGrid } from "@/components/backgrounds/pxl/flickering-grid"
 
 | Prop            | Type     | Default          | Description                           |
 | --------------- | -------- | ---------------- | ------------------------------------- |
-| `squareSize`    | `number` | `4`              | Size of each square in the grid       |
+| `size`    | `"default" \| "4xs" \| "3xs" \| "2xs" \| "xs" \| "sm" \| "md" \| "lg"` | `"default"` | Size of the squares |
+| `variant` | `"default" \| "primary" \| "secondary" \| "muted" \| "success" \| "warning" \| "danger"`        | `"default"` | Colors of the grids |
 | `gridGap`       | `number` | `6`              | Gap between squares in the grid       |
 | `flickerChance` | `number` | `0.3`            | Probability of a square flickering    |
-| `color`         | `string` | `"rgb(0, 0, 0)"` | Color of the squares                  |
-| `width`         | `number` | `-`              | Width of the canvas                   |
-| `height`        | `number` | `-`              | Height of the canvas                  |
 | `className`     | `string` | `-`              | Additional CSS classes for the canvas |
 | `maxOpacity`    | `number` | `0.2`            | Maximum opacity of the squares        |

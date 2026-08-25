@@ -2,8 +2,9 @@
 
 import { GlyphMatrix } from "@/components/backgrounds/pxl/glyph-matrix";
 
-export default function GlyphMatrixDemo() {
+export default function GlyphMatrixSizes() {
   return (
-    <GlyphMatrix  />
+    <GlyphMatrix
+      size="lg"  />
   );
 }

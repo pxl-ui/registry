@@ -1,57 +1,103 @@
 "use client";
 
+import { cva, type VariantProps } from "class-variance-authority";
 import {
   type HTMLAttributes,
   useCallback,
   useEffect,
-  useMemo,
+  useLayoutEffect,
   useRef,
   useState,
 } from "react";
 
 import { cn } from "@/lib/utils";
 
+const flickeringGridVariants = cva("absolute inset-0 z-0 size-full", {
+  variants: {
+    variant: {
+      default: "bg-background text-foreground",
+      primary: "bg-primary text-primary-foreground",
+      secondary: "bg-secondary text-secondary-foreground",
+      info: "bg-info text-info-foreground",
+      success: "bg-success text-success-foreground",
+      warning: "bg-warning text-warning-foreground",
+      danger: "bg-danger text-danger-foreground",
+      muted: "bg-muted text-muted-foreground",
+    },
+  },
+});
+
+const flickeringGridSquareSizes = {
+  default: 4,
+  "4xs": 0.6,
+  "3xs": 0.8,
+  "2xs": 1,
+  xs: 2,
+  sm: 4,
+  md: 6,
+  lg: 8,
+  xl: 10,
+  "2xl": 14,
+  "3xl": 20,
+} as const;
+
 function FlickeringGrid({
-  squareSize = 4,
-  gridGap = 6,
-  flickerChance = 0.3,
-  color = "rgb(0, 0, 0)",
-  width,
-  height,
   className,
+  flickerChance = 0.3,
+  gridGap = 6,
+  height,
   maxOpacity = 0.3,
+  size = "default",
+  variant = "default",
+  width,
   ...props
-}: HTMLAttributes<HTMLDivElement> & {
-  squareSize?: number;
-  gridGap?: number;
-  flickerChance?: number;
-  color?: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  maxOpacity?: number;
-}) {
+}: HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof flickeringGridVariants> & {
+    flickerChance?: number;
+    gridGap?: number;
+    height?: number;
+    maxOpacity?: number;
+    width?: number;
+    size?: keyof typeof flickeringGridSquareSizes;
+  }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isInView, setIsInView] = useState(false);
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
+  const [isInView, setIsInView] = useState(false);
+  const rgbaRef = useRef({ r: 107, g: 114, b: 128, a: 1 });
+  const [computedColor, setComputedColor] = useState("rgba(107, 114, 128, 1)");
+  const squareSize = flickeringGridSquareSizes[size];
 
-  const memoizedColor = useMemo(() => {
-    const toRGBA = (color: string) => {
-      if (typeof window === "undefined") {
-        return `rgba(0, 0, 0,`;
-      }
-      const canvas = document.createElement("canvas");
-      canvas.width = canvas.height = 1;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return "rgba(255, 0, 0,";
-      ctx.fillStyle = color;
-      ctx.fillRect(0, 0, 1, 1);
-      const [r, g, b] = Array.from(ctx.getImageData(0, 0, 1, 1).data);
-      return `rgba(${r}, ${g}, ${b},`;
-    };
-    return toRGBA(color);
-  }, [color]);
+  // biome-ignore lint/correctness/useExhaustiveDependencies: computed styles might change on font and variant changes
+  useLayoutEffect(
+    function resolveComputedStyles() {
+      if (!containerRef.current) return;
+
+      const computedStyle = getComputedStyle(containerRef.current);
+      setComputedColor(computedStyle.color);
+    },
+    [variant],
+  );
+
+  // Resolve the CSS color string to RGBA (handles hex, rgb, hsl, oklch, ...).
+  useEffect(
+    function resolveRGBATextColor() {
+      const probe = document.createElement("canvas");
+      probe.width = 1;
+      probe.height = 1;
+      const probeCtx = probe.getContext("2d");
+      if (!probeCtx) return;
+      // Seed with the default so an invalid color falls back to it: the 2d
+      // context keeps the previous fillStyle when assigned an invalid value
+      // instead of silently turning black.
+      probeCtx.fillStyle = "#6B7280";
+      probeCtx.fillStyle = computedColor;
+      probeCtx.fillRect(0, 0, 1, 1);
+      const [r, g, b, a] = probeCtx.getImageData(0, 0, 1, 1).data;
+      rgbaRef.current = { r, g, b, a: a / 255 };
+    },
+    [computedColor],
+  );
 
   const setupCanvas = useCallback(
     (canvas: HTMLCanvasElement, width: number, height: number) => {
@@ -98,10 +144,12 @@ function FlickeringGrid({
       ctx.fillStyle = "transparent";
       ctx.fillRect(0, 0, width, height);
 
+      const { r, g, b } = rgbaRef.current;
+
       for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
           const opacity = squares[i * rows + j];
-          ctx.fillStyle = `${memoizedColor}${opacity})`;
+          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`;
           ctx.fillRect(
             i * (squareSize + gridGap) * dpr,
             j * (squareSize + gridGap) * dpr,
@@ -111,7 +159,7 @@ function FlickeringGrid({
         }
       }
     },
-    [memoizedColor, squareSize, gridGap],
+    [squareSize, gridGap],
   );
 
   useEffect(() => {
@@ -187,7 +235,7 @@ function FlickeringGrid({
   return (
     <div
       ref={containerRef}
-      className={cn("h-full w-full", className)}
+      className={cn(flickeringGridVariants({ variant }), className)}
       {...props}
     >
       <canvas
