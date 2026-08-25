@@ -1,0 +1,45 @@
+---
+title: Bars Loader
+---
+import { ComponentPreview, Install  } from '~/components';
+
+<ComponentPreview item="bars-loader" />
+
+## Installation
+
+<Install item="bars-loader" />
+
+## Usage
+
+```tsx
+import { BarsLoader } from "@/components/ui/pxl/bars-loader"
+```
+
+```tsx
+<BarsLoader />
+```
+
+## Bars amount
+
+Use the `bars` prop to change the bars amount of the loader.
+
+## Size
+
+Use the `size` prop to change the size of the loader.
+
+## Variants
+
+Use the `variant` prop to change the colors of the loader.
+
+<ComponentPreview item="bars-loader" example="variants" />
+
+## API Reference
+
+### BarsLoader
+
+| Prop           | Type     | Default          | Description                                  |
+| -------------- | -------- | ---------------- | -------------------------------------------- |
+| `bars`       | `number` | `9` | Amount of bars            |
+| `size`    | `"default" \| "4xs" \| "3xs" \| "2xs" \| "xs" \| "sm" \| "md" \| "lg"` | `"default"` | Size of the bars loader |
+| `variant` | `"default" \| "primary" \| "secondary" \| "muted" \| "success" \| "warning" \| "danger"`        | `"default"` | Colors of the bars |
+| `border`    | `"default" \| "none"` | `"default"` | Border of the loader |

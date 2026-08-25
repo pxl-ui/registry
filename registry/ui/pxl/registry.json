@@ -78,6 +78,20 @@
       ]
     },
     {
+      "name": "bars-loader",
+      "type": "registry:component",
+      "title": "Bars Loader",
+      "description": "A minimalist loading animation using vertical bars with staggered opacity transitions.",
+      "categories": ["pxl-ui", "components", "content"],
+      "files": [
+        {
+          "path": "bars-loader.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/bars-loader.tsx"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:component",
       "title": "Button",
