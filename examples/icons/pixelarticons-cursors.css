@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+.cursors-pixelarticons-cursors {
+  --cursor-default: url("/cursors/default.png") 4 1, default;
+  --cursor-pointer: url("/cursors/pointer.png") 12 1, pointer;
+  --cursor-text: url("/cursors/text.png") 8 16, text;
+  --cursor-move: url("/cursors/move.png") 8 8, move;
+  --cursor-grab: url("/cursors/grab.png") 8 8, grab;
+  --cursor-grabbing: url("/cursors/grabbing.png") 8 8, grabbing;
+  --cursor-crosshair: url("/cursors/crosshair.png") 8 8, crosshair;
+  --cursor-not-allowed: url("/cursors/not-allowed.png") 8 8, not-allowed;
+  --cursor-help: url("/cursors/help.png") 4 1, help;
+  --cursor-wait: url("/cursors/wait.png") 8 8, wait;
+  --cursor-progress: url("/cursors/wait.png") 8 8, progress;
+  --cursor-zoom-in: url("/cursors/zoom-in.png") 8 8, zoom-in;
+  --cursor-zoom-out: url("/cursors/zoom-out.png") 8 8, zoom-out;
+
+  /* Cardinal Resize */
+  --cursor-n-resize: url("/cursors/n-resize.png") 8 8, n-resize;
+  --cursor-s-resize: url("/cursors/s-resize.png") 8 8, s-resize;
+  --cursor-e-resize: url("/cursors/e-resize.png") 8 8, e-resize;
+  --cursor-w-resize: url("/cursors/w-resize.png") 8 8, w-resize;
+  --cursor-ns-resize: url("/cursors/ns-resize.png") 8 8, ns-resize;
+  --cursor-ew-resize: url("/cursors/ew-resize.png") 8 8, ew-resize;
+  --cursor-ne-resize: url("/cursors/ne-resize.png") 8 8, ne-resize;
+  --cursor-nw-resize: url("/cursors/nw-resize.png") 8 8, nw-resize;
+  --cursor-se-resize: url("/cursors/se-resize.png") 8 8, se-resize;
+  --cursor-sw-resize: url("/cursors/sw-resize.png") 8 8, sw-resize;
+  --cursor-nesw-resize: url("/cursors/nesw-resize.png") 8 8, nesw-resize;
+  --cursor-nwse-resize: url("/cursors/nwse-resize.png") 8 8, nwse-resize;
+  --cursor-col-resize: url("/cursors/col-resize.png") 8 8, col-resize;
+  --cursor-row-resize: url("/cursors/row-resize.png") 8 8, row-resize;
+
+  --cursor-rotate: default;
+  --cursor-rotate-left: default;
+  --cursor-rotate-right: default;
+  --cursor-screenshot: url("/cursors/screenshot.png") 8 8, default;
+  --cursor-hand: url("/cursors/hand.png") 8 8, pointer;
+  --cursor-point: pointer;
+
+  .icon-cursor-default {
+    background: url("/cursors/default.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-pointer {
+    background: url("/cursors/pointer.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-text {
+    background: url("/cursors/text.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-move {
+    background: url("/cursors/move.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-grab {
+    background: url("/cursors/grab.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-grabbing {
+    background: url("/cursors/grabbing.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-crosshair {
+    background: url("/cursors/crosshair.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-not-allowed {
+    background: url("/cursors/not-allowed.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-help {
+    background: url("/cursors/help.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-wait {
+    background: url("/cursors/wait.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-progress {
+    background: url("/cursors/wait.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-zoom-in {
+    background: url("/cursors/zoom-in.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-zoom-out {
+    background: url("/cursors/zoom-out.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-n-resize {
+    background: url("/cursors/n-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-s-resize {
+    background: url("/cursors/s-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-e-resize {
+    background: url("/cursors/e-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-w-resize {
+    background: url("/cursors/w-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-ns-resize {
+    background: url("/cursors/ns-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-ew-resize {
+    background: url("/cursors/ew-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-ne-resize {
+    background: url("/cursors/ne-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-nw-resize {
+    background: url("/cursors/nw-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-se-resize {
+    background: url("/cursors/se-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-sw-resize {
+    background: url("/cursors/sw-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-nesw-resize {
+    background: url("/cursors/nesw-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-nwse-resize {
+    background: url("/cursors/nwse-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-col-resize {
+    background: url("/cursors/col-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-row-resize {
+    background: url("/cursors/row-resize.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-screenshot {
+    background: url("/cursors/screenshot.png");
+    background-repeat: no-repeat;
+  }
+  .icon-cursor-hand {
+    background: url("/cursors/hand.png");
+    background-repeat: no-repeat;
+  }
+}

@@ -51,6 +51,9 @@ Object.entries(
 });
 
 const lists = {
+  emojis: filter({
+    categories: ["icons", "emojis"],
+  }),
   cursors: filter({
     categories: ["icons", "cursors"],
   }),

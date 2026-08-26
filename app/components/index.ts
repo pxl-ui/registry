@@ -2,6 +2,8 @@ import Callout from "./Callout.astro";
 import Code from "./Code.astro";
 import ColorPreview from "./ColorPreview";
 import ComponentPreview from "./ComponentPreview.astro";
+import CursorPreview from "./CursorPreview";
+import EmojiPreview from "./EmojiPreview";
 import FontPreview from "./FontPreview";
 import IconPreview from "./IconPreview";
 import Install from "./Install.astro";
@@ -16,6 +18,8 @@ export {
   Code,
   ColorPreview,
   ComponentPreview,
+  CursorPreview,
+  EmojiPreview,
   FontPreview,
   IconPreview,
   Install,

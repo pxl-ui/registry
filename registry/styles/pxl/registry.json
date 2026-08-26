@@ -9,7 +9,7 @@
       "title": "Styles",
       "description": "TailwindCSS core styles for pxl-ui",
       "registryDependencies": [
-        "pxl-ui/registry/cursors-pixelarticons",
+        "pxl-ui/registry/icons-pixelarticons-cursors",
         "pxl-ui/registry/fonts-pixel-digivolve",
         "pxl-ui/registry/fonts-able-5",
         "pxl-ui/registry/fonts-monogram",

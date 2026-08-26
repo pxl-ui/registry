@@ -4,13 +4,13 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "cursors-pixelarticons",
+      "name": "icons-pixelarticons-cursors",
       "type": "registry:style",
       "title": "Pixelarticons Mouse Cursors",
       "description": "Mouse cursors powered by pixelarticons",
       "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
-      "author": "halfmage <https://x.com/halfmage>",
-      "categories": ["pxl-ui", "cursors"],
+      "author": "Gerrit Halfmann (https://x.com/halfmage)",
+      "categories": ["pxl-ui", "icons", "cursors"],
       "registryDependencies": [
         "pxl-ui/registry/styles-cursors"
       ],
@@ -52,6 +52,17 @@
           "cursor-hand": "url(\"/cursors/hand.png\") 8 8, pointer",
           "cursor-point": "pointer"
         }
+      }
+    },
+    {
+      "name": "icons-dotto-emoji",
+      "type": "registry:component",
+      "title": "Dotto Emoji",
+      "description": "16x16 pixel art emoji set",
+      "author": "Henry Chandler (https://github.com/meritite-union/dotto-emoji)",
+      "categories": ["pxl-ui", "icons", "emojis"],
+      "meta": {
+        "license": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt)"
       }
     },
     {

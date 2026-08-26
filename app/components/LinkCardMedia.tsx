@@ -103,7 +103,7 @@ export default function LinkCardMedia({ item: itemName }: { item: string }) {
   if (itemKind === "icon") {
     return (
       <div
-        className={cn("not-italic text-sm text-muted-foreground")}
+        className={cn("not-italic text-sm text-muted-foreground [&_svg]:size-full")}
         // biome-ignore lint/security/noDangerouslySetInnerHtml: Icon rendering
         dangerouslySetInnerHTML={{ __html: getFirstIcon(itemName) }}
       />

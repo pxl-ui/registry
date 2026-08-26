@@ -8,6 +8,45 @@ import { LinkCard, LinkCardMedia } from "~/components";
 import { lists } from "~/lib/icons";
 import { toRouteId } from "~/lib/registry";
 
+## Cursors
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.cursors.map(item => (
+    <LinkCard
+      href={toRouteId(item.name)}
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <LinkCardMedia
+        slot="media"
+        item={item.name}        
+      />
+    </LinkCard>
+  ))}
+
+</div>
+
+
+## Emojis
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.emojis.map(item => (
+    <LinkCard
+      href={toRouteId(item.name)}
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <LinkCardMedia
+        slot="media"
+        item={item.name}        
+      />
+    </LinkCard>
+  ))}
+
+</div>
+
 ## Flags
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
