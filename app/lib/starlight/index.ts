@@ -7,6 +7,7 @@ export { docsLoader, i18nLoader } from "@astrojs/starlight/loaders";
 
 export * from "./icons";
 export * from "./schemas";
+export { z } from "./schemas/zod";
 
 const DEFAULT_CONFIG_BASE = "app/content/config";
 export const configLoader = (

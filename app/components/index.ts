@@ -4,6 +4,7 @@ import ColorPreview from "./ColorPreview";
 import ComponentPreview from "./ComponentPreview.astro";
 import CursorPreview from "./CursorPreview";
 import EmojiPreview from "./EmojiPreview";
+import FlagPreview from "./FlagPreview";
 import FontPreview from "./FontPreview";
 import IconPreview from "./IconPreview";
 import Install from "./Install.astro";
@@ -20,6 +21,7 @@ export {
   ComponentPreview,
   CursorPreview,
   EmojiPreview,
+  FlagPreview,
   FontPreview,
   IconPreview,
   Install,

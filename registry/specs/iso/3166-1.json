@@ -1,0 +1,106 @@
+{
+  "$schema": "../pxl/schema.json",
+  "title": "ISO 3166-1",
+  "description": "A list of countries as seen in https://en.wikipedia.org/wiki/ISO%203166-1?oldformat=true",
+  "author": "ISO",
+  "url": "https://www.iso.org/obp/ui",
+  "version": "1.0.0",
+  "entries": [
+    {
+      "id": 20,
+      "title": "Andorra",
+      "alpha3": "AND",
+      "alpha2": "AD"
+    },
+    {
+      "id": 50,
+      "title": "Bangladesh",
+      "alpha3": "BGD",
+      "alpha2": "BD"
+    },
+    {
+      "id": 124,
+      "title": "Canada",
+      "alpha3": "CAN",
+      "alpha2": "CA"
+    },
+    {
+      "id": 156,
+      "title": "China",
+      "alpha3": "CHN",
+      "alpha2": "CH"
+    },
+    {
+      "id": 250,
+      "title": "France",
+      "alpha3": "FRA",
+      "alpha2": "FR"
+    },
+    {
+      "id": 276,
+      "title": "Germany",
+      "alpha3": "DEU",
+      "alpha2": "DE"
+    },
+    {
+      "id": 356,
+      "title": "India",
+      "alpha3": "IND",
+      "alpha2": "IN"
+    },
+    {
+      "id": 380,
+      "title": "Italy",
+      "alpha3": "ITA",
+      "alpha2": "IT"
+    },
+    {
+      "id": 392,
+      "title": "Japan",
+      "alpha3": "JPN",
+      "alpha2": "JP"
+    },
+    {
+      "id": 410,
+      "title": "South Korea",
+      "alpha3": "KOR",
+      "alpha2": "KR"
+    },
+    {
+      "id": 620,
+      "title": "Portugal",
+      "alpha3": "PRT",
+      "alpha2": "PT"
+    },
+    {
+      "id": 643,
+      "title": "Russia",
+      "alpha3": "RUS",
+      "alpha2": "RU"
+    },
+    {
+      "id": 682,
+      "title": "Saudi Arabia",
+      "alpha3": "SAU",
+      "alpha2": "SA"
+    },
+    {
+      "id": 724,
+      "title": "Spain",
+      "alpha3": "ESP",
+      "alpha2": "ES"
+    },
+    {
+      "id": 818,
+      "title": "Egypt",
+      "alpha3": "EGY",
+      "alpha2": "EG"
+    },
+    {
+      "id": 826,
+      "title": "United Kingdom",
+      "alpha3": "GBR",
+      "alpha2": "GB"
+    }
+  ]
+}

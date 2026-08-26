@@ -9,6 +9,10 @@ import {
 import { defineCollection } from "astro:content";
 
 export const collections = {
+  config: defineCollection({
+    loader: configLoader(),
+    schema: configSchema(),
+  }),
   docs: defineCollection({
     loader: docsLoader(),
     schema: docsSchema(),
@@ -16,9 +20,5 @@ export const collections = {
   i18n: defineCollection({
     loader: i18nLoader(),
     schema: i18nSchema(),
-  }),
-  config: defineCollection({
-    loader: configLoader(),
-    schema: configSchema(),
   }),
 };

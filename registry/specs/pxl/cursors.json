@@ -1,0 +1,371 @@
+{
+  "$schema": "../pxl/schema.json",
+  "title": "Cursors",
+  "description": "A list of mouse cursors kinds as seen in https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor and expanded with icons from Mousecape",
+  "author": "PXL-UI",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor",
+  "version": "1.0.0",
+  "entries": [
+    {
+      "id": 0,
+      "css": "auto",
+      "title": "Auto",
+      "description": "The UA will determine the cursor to display based on the current context. E.g., equivalent to text when hovering text.",
+      "category": "General"
+    },
+    {
+      "id": 1,
+      "css": "default",
+      "mac_os": "Arrow",
+      "title": "Default",
+      "description": "The platform-dependent default cursor. Typically an arrow.",
+      "category": "General"
+    },
+    {
+      "id": 2,
+      "css": "none",
+      "mac_os": "Empty",
+      "title": "None",
+      "description": "No cursor is rendered.",
+      "category": "General"
+    },
+    {
+      "id": 3,
+      "css": "context-menu",
+      "mac_os": "Ctx Menu",
+      "title": "Context Menu",
+      "description": "A context menu is available.",
+      "category": "Links & status"
+    },
+    {
+      "id": 4,
+      "css": "help",
+      "mac_os": "Help",
+      "title": "Help",
+      "description": "Help information is available.",
+      "category": "Links & status"
+    },
+    {
+      "id": 5,
+      "css": "pointer",
+      "mac_os": "Pointing",
+      "title": "Pointer",
+      "description": "The cursor is a pointer that indicates a link. Typically an image of a pointing hand.",
+      "category": "Links & status"
+    },
+    {
+      "id": 6,
+      "css": "progress",
+      "mac_os": "Busy",
+      "title": "Progress",
+      "description": "The program is busy in the background, but the user can still interact with the interface (in contrast to wait).",
+      "category": "Links & status"
+    },
+    {
+      "id": 7,
+      "css": "wait",
+      "mac_os": "Wait",
+      "title": "Wait",
+      "description": "The program is busy, and the user can't interact with the interface (in contrast to progress). Sometimes an image of an hourglass or a watch.",
+      "category": "Links & status"
+    },
+    {
+      "id": 8,
+      "mac_os": "Camera",
+      "title": "Camera",
+      "description": "Something is to be captured.",
+      "category": "Links & status"
+    },
+    {
+      "id": 100,
+      "css": "cell",
+      "mac_os": "Cell",
+      "title": "Cell",
+      "description": "The table cell or set of cells can be selected.",
+      "category": "Selection"
+    },
+    {
+      "id": 101,
+      "css": "crosshair",
+      "mac_os": "Crosshair",
+      "title": "Crosshair",
+      "description": "Cross cursor, often used to indicate selection in a bitmap.",
+      "category": "Selection"
+    },
+    {
+      "id": 102,
+      "css": "text",
+      "mac_os": "IBeam",
+      "title": "Text",
+      "description": "The text can be selected. Typically the shape of an I-beam.",
+      "category": "Selection"
+    },
+    {
+      "id": 103,
+      "css": "vertical-text",
+      "mac_os": "IBeam H.",
+      "title": "Vertical Text",
+      "description": "The vertical text can be selected. Typically the shape of a sideways I-beam.",
+      "category": "Selection"
+    },
+    {
+      "id": 104,
+      "css": "cell",
+      "mac_os": "Cell XOR",
+      "title": "Cell XOR",
+      "description": "The table cell or set of cells can be selected.",
+      "category": "Selection"
+    },
+    {
+      "id": 200,
+      "css": "alias",
+      "mac_os": "Alias",
+      "title": "Alias",
+      "description": "An alias or shortcut is to be created.",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 201,
+      "css": "copy",
+      "mac_os": "Copy",
+      "title": "Copy",
+      "description": "Something is to be copied.",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 202,
+      "css": "move",
+      "mac_os": "Move",
+      "title": "Move",
+      "description": "Something is to be moved.",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 203,
+      "css": "no-drop",
+      "mac_os": "Forbidden",
+      "title": "No Drop",
+      "description": "An item may not be dropped at the current location. Firefox bug 275173: On Windows and macOS, no-drop is the same as not-allowed.",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 204,
+      "css": "not-allowed",
+      "mac_os": "Forbidden",
+      "title": "Not Allowed",
+      "description": "The requested action will not be carried out.",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 205,
+      "css": "grab",
+      "mac_os": "Open",
+      "title": "Grab",
+      "description": "Something can be grabbed (dragged to be moved).",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 206,
+      "css": "grabbing",
+      "mac_os": "Closed",
+      "title": "Grabbing",
+      "description": "Something is being grabbed (dragged to be moved).",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 207,
+      "mac_os": "Open",
+      "title": "Hand",
+      "description": "An open hand.",
+      "category": "Drag & Drop"
+    },
+    {
+      "id": 300,
+      "css": "all-scroll",
+      "mac_os": "Move",
+      "title": "All Scroll",
+      "description": "Something can be scrolled in any direction (panned). Firefox bug 275174: On Windows, all-scroll is the same as move.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 301,
+      "css": "col-resize",
+      "mac_os": "Resize W-E",
+      "title": "Col Resize",
+      "description": "The item/column can be resized horizontally. Often rendered as arrows pointing left and right with a vertical bar separating them.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 302,
+      "css": "row-resize",
+      "mac_os": "Resize N-S",
+      "title": "Row Resize",
+      "description": "The item/row can be resized vertically. Often rendered as arrows pointing up and down with a horizontal bar separating them.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 303,
+      "css": "n-resize",
+      "mac_os": "Window N",
+      "title": "N Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 304,
+      "css": "e-resize",
+      "mac_os": "Window E",
+      "title": "E Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 305,
+      "css": "s-resize",
+      "mac_os": "Window S",
+      "title": "S Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 306,
+      "css": "w-resize",
+      "mac_os": "Window W",
+      "title": "W Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 307,
+      "css": "ne-resize",
+      "mac_os": "Window NE",
+      "title": "NE Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 308,
+      "css": "nw-resize",
+      "mac_os": "Window NW",
+      "title": "NW Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 309,
+      "css": "se-resize",
+      "mac_os": "Window SE",
+      "title": "SE Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 310,
+      "css": "sw-resize",
+      "mac_os": "Window SW",
+      "title": "SW Resize",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 311,
+      "css": "ew-resize",
+      "mac_os": "Window E-W",
+      "title": "EW Resize",
+      "description": "Bidirectional resize cursor.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 312,
+      "css": "ns-resize",
+      "mac_os": "Window N-S",
+      "title": "NS Resize",
+      "description": "Bidirectional resize cursor.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 313,
+      "css": "nesw-resize",
+      "mac_os": "Window NE-SW",
+      "title": "NESW Resize",
+      "description": "Bidirectional resize cursor.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 314,
+      "css": "nwse-resize",
+      "mac_os": "Window NW-SE",
+      "title": "NWSE Resize",
+      "description": "Bidirectional resize cursor.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 315,
+      "mac_os": "Resize E",
+      "title": "Resize E",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 316,
+      "mac_os": "Resize N",
+      "title": "Resize N",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 317,
+      "mac_os": "Resize S",
+      "title": "Resize S",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 318,
+      "mac_os": "Resize W",
+      "title": "Resize W",
+      "description": "Some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box. In some environments, an equivalent bidirectional resize cursor is shown. For example, n-resize and s-resize are the same as ns-resize.",
+      "category": "Resizing & Scrolling"
+    },
+    {
+      "id": 400,
+      "css": "zoom-in",
+      "mac_os": "Zoom In",
+      "title": "Zoom In",
+      "description": "Something can be zoomed (magnified) in or out.",
+      "category": "Zooming"
+    },
+    {
+      "id": 401,
+      "css": "zoom-out",
+      "mac_os": "Zoom Out",
+      "title": "Zoom Out",
+      "description": "Something can be zoomed (magnified) in or out.",
+      "category": "Zooming"
+    },
+    {
+      "id": 500,
+      "title": "Rotate N-E",
+      "description": "Rotate from North and East",
+      "category": "Rotating"
+    },
+    {
+      "id": 501,
+      "title": "Rotate N-W",
+      "description": "Rotate from North and West",
+      "category": "Rotating"
+    },
+    {
+      "id": 502,
+      "title": "Rotate S-E",
+      "description": "Rotate from South and East",
+      "category": "Rotating"
+    },
+    {
+      "id": 503,
+      "title": "Rotate S-W",
+      "description": "Rotate from South and West",
+      "category": "Rotating"
+    }
+  ]
+}

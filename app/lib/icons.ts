@@ -1,13 +1,9 @@
 import { filter } from "~/lib/registry";
 
-
 type IconPack = {
   name: string;
-  variants: Record<
-    string, 
-    Record<string, string>
-  >;
-}
+  variants: Record<string, Record<string, string>>;
+};
 
 const iconPacks = new Map<string, IconPack>();
 
@@ -18,9 +14,7 @@ Object.entries(
     import: "default",
   }),
 ).forEach(([path, icon]) => {
-  const match = path.match(
-    /^\/registry\/icons\/([^/]+)\/svg\/(.+)$/
-  );
+  const match = path.match(/^\/registry\/icons\/([^/]+)\/svg\/(.+)$/);
 
   if (!match) {
     throw new Error(`Invalid icon path: ${path}`);
@@ -28,15 +22,15 @@ Object.entries(
 
   const [, pack, rest] = match;
 
-  const parts = rest.split('/');
+  const parts = rest.split("/");
   const filename = parts.pop()!;
 
-  if (!filename.endsWith('.svg')) {
+  if (!filename.endsWith(".svg")) {
     throw new Error(`Invalid icon path: ${path}`);
   }
 
   const name = filename.slice(0, -4);
-  const variant = parts.length > 0 ? parts.join('/') : 'default';
+  const variant = parts.length > 0 ? parts.join("/") : "default";
 
   if (!iconPacks.has(pack)) {
     iconPacks.set(pack, { name: pack, variants: {} });
@@ -63,8 +57,3 @@ const lists = {
 };
 
 export { iconPacks, lists };
-
-export default {
-  iconPacks,
-  lists,
-};

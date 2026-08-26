@@ -1,4 +1,4 @@
-import * as React from "react";
+import { type ComponentProps, useEffect, useRef } from "react";
 import {
   type DayButton,
   DayPicker,
@@ -26,8 +26,8 @@ function Calendar({
   formatters,
   components,
   ...props
-}: React.ComponentProps<typeof DayPicker> & {
-  buttonVariant?: React.ComponentProps<typeof Button>["variant"];
+}: ComponentProps<typeof DayPicker> & {
+  buttonVariant?: ComponentProps<typeof Button>["variant"];
 }) {
   const defaultClassNames = getDefaultClassNames();
 
@@ -98,7 +98,9 @@ function Calendar({
           "text-[0.8rem] text-muted-foreground select-none",
           defaultClassNames.week_number,
         ),
-        day: cn("relative w-full h-full p-0 text-center group/day select-none text-2xs"),
+        day: cn(
+          "relative w-full h-full p-0 text-center group/day select-none text-2xs",
+        ),
         range_start: cn(
           "relative isolate z-0 rounded-l-(--cell-radius) bg-muted after:absolute after:inset-y-0 after:right-0 after:w-4 after:bg-muted",
           defaultClassNames.range_start,
@@ -260,11 +262,11 @@ function CalendarDayButton({
   modifiers,
   locale,
   ...props
-}: React.ComponentProps<typeof DayButton> & { locale?: Partial<Locale> }) {
+}: ComponentProps<typeof DayButton> & { locale?: Partial<Locale> }) {
   const defaultClassNames = getDefaultClassNames();
 
-  const ref = React.useRef<HTMLButtonElement>(null);
-  React.useEffect(() => {
+  const ref = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
     if (modifiers.focused) ref.current?.focus();
   }, [modifiers.focused]);
 
