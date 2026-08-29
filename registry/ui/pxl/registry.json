@@ -253,6 +253,21 @@
       ]
     },
     {
+      "name": "dropdown-menu",
+      "type": "registry:component",
+      "title": "Dropdown Menu",
+      "description": "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
+      "categories": ["pxl-ui", "components", "navigation"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "dropdown-menu.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/dropdown-menu.tsx"
+        }
+      ]
+    },
+    {
       "name": "field",
       "type": "registry:component",
       "title": "Field",

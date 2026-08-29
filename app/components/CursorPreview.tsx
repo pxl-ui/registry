@@ -44,7 +44,7 @@ export default function CursorPreview({ pack: packName }: { pack: string }) {
                   <div className="hidden sm:flex px-1 font-normal truncate items-center min-w-0">
                     {cursors.get(k)?.title}
                   </div>
-                  <div className="flex px-1 font-normal truncate items-center min-w-0">
+                  <div className="flex px-1 font-normal text-wrap items-center min-w-0">
                     {cursors.get(k)?.description}
                   </div>
                   <div className="flex px-1 font-normal items-center">
@@ -95,7 +95,7 @@ export default function CursorPreview({ pack: packName }: { pack: string }) {
                 <div className="hidden sm:flex px-1 font-normal truncate items-center min-w-0">
                   {cursors.get(k)?.title}
                 </div>
-                <div className="flex px-1 font-normal truncate items-center min-w-0">
+                <div className="flex px-1 font-normal text-wrap items-center min-w-0">
                   {cursors.get(k)?.description}
                 </div>
                 <div className="flex px-1 font-normal items-center">

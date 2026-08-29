@@ -3,7 +3,7 @@ title: Item
 ---
 import { ComponentPreview, Install } from '~/components';
 
-<ComponentPreview src="item/preview" />
+<ComponentPreview item="item" example="demo" />
 
 The `Item` component is a straightforward flex container that can house nearly any type of content. Use it to display a title, description, and actions. Group it with the `ItemGroup` component to create a list of items.
 
@@ -13,7 +13,7 @@ The `Item` component is a straightforward flex container that can house nearly a
 
 ## Usage
 
-```tsx showLineNumbers
+```tsx
 import {
   Item,
   ItemActions,
@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/pxl/item"
 ```
 
-```tsx showLineNumbers
+```tsx
 <Item>
   <ItemMedia variant="icon">
     <Icon />
@@ -55,11 +55,58 @@ ItemGroup
     └── ItemFooter
 ```
 
-## Item vs Field
+## Variant
 
-Use `Field` if you need to display a form input such as a checkbox, input, radio, or select.
+Use the `variant` prop to change the visual style of the item.
 
-If you only need to display content such as a title, description, and actions, use `Item`.
+<ComponentPreview item="item" example="variant" />
+
+## Size
+
+Use the `size` prop to change the size of the item. Available sizes are `default`, `sm`, and `sm`.
+
+<ComponentPreview item="item" example="size" />
+
+## Icon
+
+Use `ItemMedia` with `variant="icon"` to display an icon.
+
+<ComponentPreview item="item" example="icon" />
+
+## Avatar
+
+You can use `ItemMedia` with `variant="avatar"` to display an avatar.
+
+<ComponentPreview item="item" example="avatar" />
+
+## Image
+
+Use `ItemMedia` with `variant="image"` to display an image.
+
+<ComponentPreview item="item" example="image" />
+
+## Group
+
+Use `ItemGroup` to group related items together.
+
+<ComponentPreview item="item" example="group" />
+
+## Header
+
+Use `ItemHeader` to add a header above the item content.
+
+<ComponentPreview item="item" example="header" />
+
+## Link
+
+Use the `render` prop to render the item as a link. The hover and focus states will be applied to the anchor element.
+
+<ComponentPreview item="item" example="link" />
+
+## Dropdown
+
+<ComponentPreview item="item" example="dropdown" />
+
 
 ## API Reference
 

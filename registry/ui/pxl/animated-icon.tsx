@@ -3,7 +3,7 @@ import type { ComponentProps, ComponentType, SVGProps } from "react";
 
 import { cn } from "@/lib/utils";
 
-export const animations = {
+const animations = {
   /**
    * pulse — Rhythmic heartbeat scale. Ideal for: likes, presence, health,
    * active states, anything that "lives".
@@ -165,9 +165,9 @@ export const animations = {
   },
 } satisfies Record<string, { animate: TargetAndTransition }>;
 
-export type Animation = keyof typeof animations;
+type Animation = keyof typeof animations;
 
-export default function AnimatedIcon({
+function AnimatedIcon({
   animation,
   className,
   icon: Icon,
@@ -193,3 +193,7 @@ export default function AnimatedIcon({
     </motion.span>
   );
 }
+
+export default AnimatedIcon;
+
+export { AnimatedIcon, type Animation, animations };

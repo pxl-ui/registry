@@ -10,7 +10,7 @@ import {
   ItemTitle,
 } from "@/components/ui/pxl/item";
 
-export default function ItemPreview() {
+export default function ItemDemo() {
   return (
     <ItemGroup className="w-full max-w-md">
       <Item variant="outline">

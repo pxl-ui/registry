@@ -27,6 +27,7 @@ function ItemSeparator({
     <Separator
       data-slot="item-separator"
       orientation="horizontal"
+      border="dashed"
       className={cn("my-2", className)}
       {...props}
     />
@@ -34,14 +35,19 @@ function ItemSeparator({
 }
 
 const itemVariants = cva(
-  "group/item flex w-full flex-wrap items-center px-rounded-md px-border-md pixel-size-[5px] [--px-border-offset:2px] [--px-face-offset:2px] px-ring text-sm transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
+  "group/item flex w-full flex-wrap items-center pixel-size-lg pixel-rounded pixel-border text-sm transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
   {
     variants: {
       variant: {
-        default: "[--px-border-color:transparent] [--px-bg:transparent]",
-        outline: "[--px-border-color:var(--border)] [--px-bg:transparent]",
+        default: "pixel-color-[transparent] bg-transparent",
+        outline: "pixel-color-border bg-transparent",
         muted:
-          "[--px-border-color:transparent] [--px-bg:color-mix(in_oklab,var(--muted)_50%,transparent)]",
+          "pixel-color-[transparent] bg-[color-mix(in_oklab,var(--muted)_50%,transparent)]",
+        primary: "pixel-color-[transparent] bg-primary text-primary-foreground",
+        success: "pixel-color-[transparent] bg-success text-success-foreground",
+        danger: "pixel-color-[transparent] bg-danger text-danger-foreground",
+        warning: "pixel-color-[transparent] bg-warning text-warning-foreground",
+        info: "pixel-color-[transparent] bg-info text-info-foreground",
       },
       size: {
         default: "gap-3.5 px-4 py-3.5",

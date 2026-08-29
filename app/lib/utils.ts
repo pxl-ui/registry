@@ -19,11 +19,11 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string; }> = {
 }
 
 export function url(path: string) {
-  if (baseUrl === "/") {
-    return `${baseUrl}${path}`;
+  if (/^https?:\/\//i.test(path)) {
+    return path;
   }
 
-  return [baseUrl, path].join("/");
+  return `${baseUrl.replace(/\/+$/, "")}/${path.replace(/^\/+/, "")}`;
 }
 
 export function registryItemFromRouteId(routeId: string) {

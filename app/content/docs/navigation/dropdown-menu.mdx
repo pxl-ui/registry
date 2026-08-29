@@ -1,0 +1,117 @@
+---
+title: Dropdown Menu
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="dropdown-menu" />
+
+## Installation
+
+<Install item="dropdown-menu" />
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/pxl/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/pxl/dropdown-menu"
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger render={<Button variant="outline" />}>
+    Open
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuGroup>
+      <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuItem>Profile</DropdownMenuItem>
+      <DropdownMenuItem>Billing</DropdownMenuItem>
+    </DropdownMenuGroup>
+    <DropdownMenuSeparator />
+    <DropdownMenuGroup>
+      <DropdownMenuItem>Team</DropdownMenuItem>
+      <DropdownMenuItem>Subscription</DropdownMenuItem>
+    </DropdownMenuGroup>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Composition
+
+Use the following composition to build a `DropdownMenu`:
+
+```text
+DropdownMenu
+├── DropdownMenuTrigger
+└── DropdownMenuContent
+    ├── DropdownMenuGroup
+    │   ├── DropdownMenuLabel
+    │   ├── DropdownMenuItem
+    │   └── DropdownMenuItem
+    ├── DropdownMenuSeparator
+    ├── DropdownMenuGroup
+    │   ├── DropdownMenuLabel
+    │   ├── DropdownMenuCheckboxItem
+    │   └── DropdownMenuCheckboxItem
+    ├── DropdownMenuSeparator
+    ├── DropdownMenuGroup
+    │   ├── DropdownMenuLabel
+    │   └── DropdownMenuRadioGroup
+    │       ├── DropdownMenuRadioItem
+    │       └── DropdownMenuRadioItem
+    └── DropdownMenuSub
+        ├── DropdownMenuSubTrigger
+        └── DropdownMenuSubContent
+            └── DropdownMenuGroup
+                ├── DropdownMenuLabel
+                ├── DropdownMenuItem
+                └── DropdownMenuItem
+```
+
+## Submenu
+
+Use `DropdownMenuSub` to nest secondary actions.
+
+<ComponentPreview item="dropdown-menu" example="submenu" />
+
+## Shortcuts
+
+Add `DropdownMenuShortcut` to show keyboard hints.
+
+<ComponentPreview item="dropdown-menu" example="shortcuts" />
+
+## Icons
+
+Combine icons with labels for quick scanning.
+
+<ComponentPreview item="dropdown-menu" example="icons" />
+
+## Checkboxes
+
+Use `DropdownMenuCheckboxItem` for toggles.
+
+<ComponentPreview item="dropdown-menu" example="checkboxes" />
+
+## Radio Group
+
+Use `DropdownMenuRadioGroup` for exclusive choices.
+
+<ComponentPreview item="dropdown-menu" example="radio-group" />
+
+## Complex
+
+A richer example combining groups, icons, and submenus.
+
+<ComponentPreview item="dropdown-menu" example="complex" />
+
+## API Reference
+
+See the [Base UI documentation](https://base-ui.com/react/components/menu) for the full API reference.
