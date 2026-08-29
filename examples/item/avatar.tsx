@@ -19,7 +19,7 @@ export default function ItemAvatarExample() {
       <Item variant="outline">
         <ItemMedia>
           <Avatar className="size-10">
-            <AvatarImage src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/princess.png" />
+            <AvatarImage className="bg-success" src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/princess.png" />
             <AvatarFallback>P</AvatarFallback>
           </Avatar>
         </ItemMedia>
@@ -46,11 +46,12 @@ export default function ItemAvatarExample() {
       </Item>
       <Item variant="outline">
         <ItemMedia>
-          <div className="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale">
+          <div className="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale *:data-[slot=avatar]:group-hover/item:grayscale-0">
             <Avatar className="hidden sm:flex">
               <AvatarImage
                 src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png"
                 alt="@hero"
+                className="bg-primary"
               />
               <AvatarFallback>H</AvatarFallback>
             </Avatar>
@@ -58,6 +59,7 @@ export default function ItemAvatarExample() {
               <AvatarImage
                 src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/princess.png"
                 alt="@princess"
+                className="bg-success"
               />
               <AvatarFallback>P</AvatarFallback>
             </Avatar>
@@ -65,6 +67,7 @@ export default function ItemAvatarExample() {
               <AvatarImage
                 src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/wizard.png"
                 alt="@wizard"
+                className="bg-info"
               />
               <AvatarFallback>W</AvatarFallback>
             </Avatar>

@@ -1,0 +1,18 @@
+---
+import TableOfContents from '@astrojs/starlight/components/TableOfContents.astro';
+
+import ProductAdvertisement from "./ProductAdvertisement.astro";
+---
+
+{
+	Astro.locals.starlightRoute.toc && (
+    <div class="right-sidebar-panel hidden sticky h-[90svh] lg:flex flex-col gap-4 pt-8 pb-8">
+      <div class="flex scroll-fade scrollbar-none flex-col gap-8 overflow-y-auto px-8">
+        <TableOfContents />
+      </div>
+			<div class="hidden flex-1 flex-col gap-6 px-6 xl:flex">
+        <ProductAdvertisement />
+			</div>
+    </div>
+	)
+}

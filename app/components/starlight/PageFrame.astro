@@ -10,12 +10,12 @@ const { hasSidebar } = Astro.locals.starlightRoute;
 	{hasSidebar && (
 		<nav class="sidebar print:hidden" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
 			<MobileMenuToggle />
-			<div id="starlight__sidebar" class="sidebar-pane peer-aria-expanded:[--sl-sidebar-visibility:visible] [visibility:var(--sl-sidebar-visibility,hidden)] fixed z-(--sl-z-index-menu) inset-y-[var(--sl-nav-height)_0] inset-s-0 w-full bg-background overflow-y-auto scrollbar-thin scrollbar-thumb-border scrollbar-gutter-stable lg:[--sl-sidebar-visibility:visible] lg:w-72">
+			<div id="starlight__sidebar" class="sidebar-pane peer-aria-expanded:[--sl-sidebar-visibility:visible] [visibility:var(--sl-sidebar-visibility,hidden)] fixed z-(--sl-z-index-menu) inset-y-[var(--sl-nav-height)_0] inset-s-0 w-full bg-background overflow-y-auto scrollbar-thin scrollbar-thumb-border scrollbar-gutter-stable lg:scrollbar-none lg:[--sl-sidebar-visibility:visible] lg:w-72 lg:h-[calc(100svh-10rem)] lg:pt-12 scroll-fade">
 				<div class="sidebar-content flex flex-col gap-4 h-full min-h-max p-[1rem_var(--sl-sidebar-pad-x)_0] lg:after:content-[''] lg:after:pb-px" >
 					<slot name="sidebar" />
 				</div>
 			</div>
 		</nav>
 	)}
-	<div class="main-frame pt-[calc(var(--sl-nav-height)+24px)] lg:ps-(--sl-content-inline-start) [html[data-has-sidebar]_&]:lg:ps-72"><slot /></div>
+	<div class="main-frame pt-(--sl-nav-height) lg:ps-(--sl-content-inline-start) [html[data-has-sidebar]_&]:lg:ps-72"><slot /></div>
 </div>

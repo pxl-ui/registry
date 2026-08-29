@@ -1,0 +1,24 @@
+---
+
+import { buttonVariants } from "@/components/ui/pxl/button";
+import { cn } from "@/lib/utils";
+import { url } from "~/lib/utils";
+
+const spriteUrl = url("sprites/regulus.png");
+---
+
+<a class="size-full" href="#">
+  <div class="group relative flex flex-col gap-2 pixel-rounded pixel-size-lg bg-muted p-6 text-sm text-muted-foreground">
+    <div
+      class="mx-auto size-24 sprite-sheet sprite-cols-2 sprite-rows-2 sprite-animate-[0,1] sprite-duration-[1000ms]"
+      style={{
+        backgroundImage: `url(${spriteUrl})`,
+      }}
+    ></div>
+    <h3 class="text-base leading-tight font-semibold text-balance group-hover:underline">GOTCHU</h3>
+    <p class="text-muted-foreground">Next-gen virtual pet</p>
+    <button type="button" class={cn(buttonVariants({ variant: "default"}))}>
+      Get yours now
+    </button>
+  </div>
+</a>

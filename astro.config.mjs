@@ -97,6 +97,7 @@ export default defineConfig({
         MobileMenuToggle: './app/components/starlight/MobileMenuToggle.astro',
         Pagination: './app/components/starlight/Pagination.astro',
         PageFrame: './app/components/starlight/PageFrame.astro',
+        PageSidebar: './app/components/starlight/PageSidebar.astro',
         PageTitle: './app/components/starlight/PageTitle.astro',
         Search: './app/components/starlight/Search.astro',
         SocialIcons: './app/components/starlight/SocialIcons.astro',

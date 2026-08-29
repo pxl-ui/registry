@@ -21,7 +21,7 @@ export default function ItemImageExample() {
                 alt="Midnight City Lights"
                 width={32}
                 height={32}
-                className="object-cover grayscale"
+                className="object-cover grayscale group-hover/item:grayscale-0"
               />
             </ItemMedia>
             <ItemContent>
@@ -44,7 +44,7 @@ export default function ItemImageExample() {
                 alt="Coffee Shop Conversations"
                 width={32}
                 height={32}
-                className="object-cover grayscale"
+                className="object-cover grayscale group-hover/item:grayscale-0"
               />
             </ItemMedia>
             <ItemContent>
@@ -67,7 +67,7 @@ export default function ItemImageExample() {
                 alt="Coffee Shop Conversations"
                 width={32}
                 height={32}
-                className="object-cover grayscale"
+                className="object-cover grayscale group-hover/item:grayscale-0"
               />
             </ItemMedia>
             <ItemContent>

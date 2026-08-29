@@ -22,7 +22,7 @@ export default function ItemGroupExample() {
           <Avatar>
             <AvatarImage
               src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png"
-              className="grayscale"
+              className="bg-primary grayscale group-hover/item:grayscale-0"
             />
             <AvatarFallback>H</AvatarFallback>
           </Avatar>
@@ -48,7 +48,7 @@ export default function ItemGroupExample() {
           <Avatar>
             <AvatarImage
               src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/princess.png"
-              className="grayscale"
+              className="bg-success grayscale group-hover/item:grayscale-0"
             />
             <AvatarFallback>P</AvatarFallback>
           </Avatar>
@@ -74,7 +74,7 @@ export default function ItemGroupExample() {
           <Avatar>
             <AvatarImage
               src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/wizard.png"
-              className="grayscale"
+              className="bg-info grayscale group-hover/item:grayscale-0"
             />
             <AvatarFallback>W</AvatarFallback>
           </Avatar>
