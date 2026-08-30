@@ -557,6 +557,21 @@
       ]
     },
     {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "Skeleton",
+      "description": "Use to show a placeholder while content is loading.",
+      "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "skeleton.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/skeleton.tsx"
+        }
+      ]
+    },
+    {
       "name": "sprite-background",
       "type": "registry:component",
       "title": "Sprite Background",
