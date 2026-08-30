@@ -572,6 +572,21 @@
       ]
     },
     {
+      "name": "slider",
+      "type": "registry:component",
+      "title": "Slider",
+      "description": "An input where the user selects a value from within a given range.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "slider.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/slider.tsx"
+        }
+      ]
+    },
+    {
       "name": "sprite-background",
       "type": "registry:component",
       "title": "Sprite Background",

@@ -1,0 +1,46 @@
+---
+title: Slider
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="slider" />
+
+## Installation
+
+<Install item="slider" />
+
+## Usage
+
+```tsx
+import { Slider } from "@/components/ui/pxl/slider"
+```
+
+```tsx
+<Slider defaultValue={[33]} max={100} step={1} />
+```
+
+## Variants
+
+Use the `variant` prop to change the colors of the slider.
+
+<ComponentPreview item="slider" example="variants" />
+
+## Range
+
+Use an array with two values for a range slider.
+
+## Multiple Thumbs
+
+Use an array with multiple values for multiple thumbs.
+
+## Vertical
+
+Use `orientation="vertical"` for a vertical slider.
+
+## Disabled
+
+Use the `disabled` prop to disable the slider.
+
+## API Reference
+
+See the [Base UI Slider](https://base-ui.com/react/components/slider#api-reference) documentation.
