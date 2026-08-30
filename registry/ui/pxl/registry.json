@@ -572,6 +572,20 @@
       ]
     },
     {
+      "name": "switch",
+      "type": "registry:component",
+      "title": "Switch",
+      "description": "A control that allows the user to toggle between on and off.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "files": [
+        {
+          "path": "switch.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/switch.tsx"
+        }
+      ]
+    },
+    {
       "name": "tabs",
       "type": "registry:component",
       "title": "Tabs",
