@@ -368,6 +368,8 @@
       "categories": ["pxl-ui", "components", "layout"],
       "dependencies": ["@base-ui/react"],
       "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/dropdown-menu",
         "pxl-ui/registry/separator"
       ],
       "files": [

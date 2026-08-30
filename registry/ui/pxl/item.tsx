@@ -1,9 +1,17 @@
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
-import type { ComponentProps } from "react";
+import type { ComponentProps, PropsWithChildren } from "react";
 
 import { cn } from "@/lib/utils";
+import { Button } from "@/ui/pxl/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/ui/pxl/dropdown-menu";
 import { Separator } from "@/ui/pxl/separator";
 
 function ItemGroup({ className, ...props }: ComponentProps<"ul">) {
@@ -28,6 +36,7 @@ function ItemSeparator({
       data-slot="item-separator"
       orientation="horizontal"
       border="dashed"
+      size="md"
       className={cn("my-2", className)}
       {...props}
     />
@@ -131,14 +140,32 @@ function ItemContent({ className, ...props }: ComponentProps<"div">) {
   );
 }
 
-function ItemTitle({ className, ...props }: ComponentProps<"div">) {
+const itemTitleVariants = cva(
+  "line-clamp-1 flex w-fit items-center gap-2 text-sm leading-snug underline-offset-4",
+  {
+    variants: {
+      font: {
+        default: "font-heading",
+        heading: "font-heading",
+        sans: "font-sans",
+        mono: "font-mono",
+      },
+    },
+    defaultVariants: {
+      font: "default",
+    },
+  },
+);
+
+function ItemTitle({
+  className,
+  font,
+  ...props
+}: ComponentProps<"div"> & VariantProps<typeof itemTitleVariants>) {
   return (
     <div
       data-slot="item-title"
-      className={cn(
-        "line-clamp-1 flex w-fit items-center gap-2 text-sm leading-snug font-heading underline-offset-4",
-        className,
-      )}
+      className={cn(itemTitleVariants({ font }), className)}
       {...props}
     />
   );
@@ -165,6 +192,36 @@ function ItemActions({ className, ...props }: ComponentProps<"div">) {
       {...props}
     />
   );
+}
+
+function ItemActionsMenu({
+  children,
+  ...props
+}: Omit<ComponentProps<typeof DropdownMenu>, "children"> & PropsWithChildren) {
+  return (
+    <DropdownMenu {...props}>
+      <DropdownMenuTrigger
+        render={
+          <Button size="icon-xs" variant="ghost" title="More">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M13 23h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-2-2h-2v-2h2v2Zm0-4h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-2-2h-2V9h2v2Zm0-4h-2V5h2v2Zm-2-2H9V3h2v2Zm4 0h-2V3h2v2Zm-2-2h-2V1h2v2Z" />
+            </svg>
+          </Button>
+        }
+      />
+      <DropdownMenuContent align="end">
+        <DropdownMenuGroup>{children}</DropdownMenuGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+function ItemActionsMenuItem(props: ComponentProps<typeof DropdownMenuItem>) {
+  return <DropdownMenuItem {...props} />;
 }
 
 function ItemHeader({ className, ...props }: ComponentProps<"div">) {
@@ -196,6 +253,8 @@ function ItemFooter({ className, ...props }: ComponentProps<"div">) {
 export {
   Item,
   ItemActions,
+  ItemActionsMenu,
+  ItemActionsMenuItem,
   ItemContent,
   ItemDescription,
   ItemFooter,
