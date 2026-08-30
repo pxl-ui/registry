@@ -10,15 +10,15 @@ const switchVariants = cva("peer group/switch relative inline-flex shrink-0 item
     variant: {
       default: "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-input data-checked:bg-foreground dark:data-unchecked:bg-input/80 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground dark:data-checked:*:data-[slot=switch-thumb]:bg-background",
       primary:
-        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-input data-checked:bg-primary-foreground data-checked:*:data-[slot=switch-thumb]:bg-primary dark:data-unchecked:bg-input/80 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",
+        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-primary data-checked:bg-primary-foreground data-checked:*:data-[slot=switch-thumb]:bg-primary dark:data-unchecked:bg-primary/60 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",
       success:
-        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-input data-checked:bg-success-foreground data-checked:*:data-[slot=switch-thumb]:bg-success dark:data-unchecked:bg-input/80 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
+        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-success data-checked:bg-success-foreground data-checked:*:data-[slot=switch-thumb]:bg-success dark:data-unchecked:bg-success/60 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
       danger:
-        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-input data-checked:bg-danger-foreground data-checked:*:data-[slot=switch-thumb]:bg-danger dark:data-unchecked:bg-input/80 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
+        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-danger data-checked:bg-danger-foreground data-checked:*:data-[slot=switch-thumb]:bg-danger dark:data-unchecked:bg-danger/60 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
       warning:
-        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-input data-checked:bg-warning-foreground data-checked:*:data-[slot=switch-thumb]:bg-warning dark:data-unchecked:bg-input/80 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
+        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-warning data-checked:bg-warning-foreground data-checked:*:data-[slot=switch-thumb]:bg-warning dark:data-unchecked:bg-warning/60 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
       info:
-        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-input data-checked:bg-info-foreground data-checked:*:data-[slot=switch-thumb]:bg-info dark:data-unchecked:bg-input/80 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
+        "*:data-[slot=switch-thumb]:bg-background data-unchecked:bg-info data-checked:bg-info-foreground data-checked:*:data-[slot=switch-thumb]:bg-info dark:data-unchecked:bg-info/60 dark:data-unchecked:*:data-[slot=switch-thumb]:bg-foreground",    
     },
     size: {
       sm: "h-3.5 w-6 pixel-size-sm *:data-[slot=switch-thumb]:size-2.5 *:data-[slot=switch-thumb]:pixel-size-xs data-unchecked:*:data-[slot=switch-thumb]:translate-x-0.5 data-checked:*:data-[slot=switch-thumb]:translate-x-[calc(100%+2px)]",
