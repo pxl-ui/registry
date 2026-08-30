@@ -1,6 +1,9 @@
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
+
+import { Separator } from "./separator";
 
 function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
   return (
@@ -12,29 +15,51 @@ function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
   );
 }
 
-function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
+function AccordionItem({
+  children,
+  className,
+  ...props
+}: AccordionPrimitive.Item.Props) {
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
       className={cn(className)}
       {...props}
-    />
+    >
+      {children}
+      <Separator data-slot="accordion-separator" border="dashed" />
+    </AccordionPrimitive.Item>
   );
 }
+
+const accordionTriggerVariants = cva(
+  "group/accordion-trigger relative flex flex-1 items-start justify-between pixel-rounded pixel-size-[5px] px-ring pixel-color-background py-2.5 text-left text-sm outline-none hover:pixel-color-secondary hover:text-secondary-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 aria-disabled:[--px-ring-color:transparent] **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground hover:**:data-[slot=accordion-trigger-icon]:text-secondary-foreground",
+  {
+    variants: {
+      font: {
+        heading: "font-heading",
+        sans: "font-sans",
+        mono: "font-mono",
+      },
+    },
+    defaultVariants: {
+      font: "heading",
+    },
+  },
+);
 
 function AccordionTrigger({
   className,
   children,
+  font = "heading",
   ...props
-}: AccordionPrimitive.Trigger.Props) {
+}: AccordionPrimitive.Trigger.Props &
+  VariantProps<typeof accordionTriggerVariants>) {
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
-        className={cn(
-          "group/accordion-trigger relative flex flex-1 items-start justify-between px-rounded-md pixel-size-[5px] px-ring [--px-bg:var(--background)] px-4 py-4 text-left text-sm font-heading outline-none hover:[--px-bg:var(--secondary)] hover:text-secondary-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 aria-disabled:[--px-ring-color:transparent] **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground hover:**:data-[slot=accordion-trigger-icon]:text-secondary-foreground",
-          className,
-        )}
+        className={cn(accordionTriggerVariants({ font }), className)}
         {...props}
       >
         {children}
@@ -74,7 +99,7 @@ function AccordionContent({
     >
       <div
         className={cn(
-          "h-(--accordion-panel-height) px-4 pt-4 pb-4 data-ending-style:h-0 data-starting-style:h-0 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
+          "h-(--accordion-panel-height) pb-2.5 data-ending-style:h-0 data-starting-style:h-0 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
           className,
         )}
       >
