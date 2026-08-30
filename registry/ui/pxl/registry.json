@@ -176,6 +176,21 @@
       ]
     },
     {
+      "name": "collapsible",
+      "type": "registry:component",
+      "title": "Collapsible",
+      "description": "An interactive component which expands/collapses a panel.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "collapsible.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/collapsible.tsx"
+        }
+      ]
+    },
+    {
       "name": "command",
       "type": "registry:component",
       "title": "Command",
