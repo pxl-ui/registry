@@ -1,0 +1,71 @@
+---
+title: Hover Card
+---
+
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="hover-card" />
+
+## Installation
+
+<Install item="hover-card" />
+
+## Usage
+
+```tsx
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+```
+
+```tsx
+<HoverCard>
+  <HoverCardTrigger>Hover</HoverCardTrigger>
+  <HoverCardContent>
+    The React Framework – created and maintained by @gotchu-creatures.
+  </HoverCardContent>
+</HoverCard>
+```
+
+## Composition
+
+Use the following composition to build a `HoverCard`:
+
+```text
+HoverCard
+├── HoverCardTrigger
+└── HoverCardContent
+```
+
+## Trigger Delays
+
+Use `delay` and `closeDelay` on the trigger to control when the card opens and
+closes.
+
+```tsx showLineNumbers {2}
+<HoverCard>
+  <HoverCardTrigger delay={100} closeDelay={200}>
+    Hover
+  </HoverCardTrigger>
+  <HoverCardContent>Content</HoverCardContent>
+</HoverCard>
+```
+
+## Positioning
+
+Use the `side` and `align` props on `HoverCardContent` to control placement.
+
+```tsx showLineNumbers {3}
+<HoverCard>
+  <HoverCardTrigger>Hover</HoverCardTrigger>
+  <HoverCardContent side="top" align="start">
+    Content
+  </HoverCardContent>
+</HoverCard>
+```
+
+## API Reference
+
+See the [Base UI](https://base-ui.com/react/components/hover-card#api-reference) documentation for more information.

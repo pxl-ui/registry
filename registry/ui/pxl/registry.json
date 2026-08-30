@@ -312,6 +312,21 @@
       ]
     },
     {
+      "name": "hover-card",
+      "type": "registry:component",
+      "title": "Hover Card",
+      "description": "For sighted users to preview content available behind a link.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "hover-card.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/hover-card.tsx"
+        }
+      ]
+    },
+    {
       "name": "input-group",
       "type": "registry:component",
       "title": "Input Group",
