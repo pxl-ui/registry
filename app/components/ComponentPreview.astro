@@ -14,6 +14,7 @@ export type Props = {
 	class?: string;
 	collapsedHeight?: number;
 	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
+	previewOnly?: boolean;
 
 	/** Approach n.1: Raw code */
 	code?: string;
@@ -27,7 +28,7 @@ export type Props = {
 	example?: string;
 }
 
-const { align, chromeless, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120 } = Astro.props;
+const { align, chromeless, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120, previewOnly } = Astro.props;
 
 let srcPath = src;
 let sourceCode = code;
@@ -45,7 +46,6 @@ if (item) {
 		"not-content",
 		cardVariants(),
 		"pixel-color-border! bg-background! mt-4 mb-12",
-		className
 	)}
 	style={style}
 >
@@ -62,7 +62,7 @@ if (item) {
 			{srcPath ? <ComponentRenderer src={srcPath} client:load /> : <slot />}
 		</div>
 
-		{sourceCode && <Code 
+		{!previewOnly && sourceCode && <Code 
 			class="relative border-t-4 border-border" 
 			code={sourceCode} 
 			collapsed

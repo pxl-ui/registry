@@ -303,6 +303,22 @@
       }
     },
     {
+      "name": "styles-typeset",
+      "type": "registry:style",
+      "title": "Typeset",
+      "description": "A styling system for HTML and rendered markdown, from blog posts to streaming chat. One CSS file you own.",
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "typeset.css",
+          "target": "@components/styles/pxl/typeset.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/styles/pxl/typeset.css\"": {}
+      }
+    },
+    {
       "name": "styles-widgets",
       "type": "registry:style",
       "title": "Widget Sizes",

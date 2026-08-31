@@ -143,6 +143,25 @@
       ]
     },
     {
+      "name": "callout",
+      "type": "registry:component",
+      "title": "Callout",
+      "description": "Displays a callout for user attention.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": [
+        "pxl-ui/registry/alert",
+        "pxl-ui/registry/collapsible"
+      ],
+      "files": [
+        {
+          "path": "callout.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/callout.tsx"
+        }
+      ]
+    },
+    {
       "name": "card",
       "type": "registry:component",
       "title": "Card",

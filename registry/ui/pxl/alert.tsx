@@ -8,8 +8,8 @@ const alertVariants = cva(
   {
     variants: {
       border: {
-        solid: "pixel-border pixel-size-lg",
-        rounded: "pixel-rounded pixel-size-lg",
+        solid: "pixel-border pixel-size-lg px-[calc(--spacing(2.5)+var(--pixel-size))] py-[calc(--spacing(2)+var(--pixel-size))]",
+        rounded: "pixel-rounded pixel-size-lg px-[calc(--spacing(2.5)+var(--pixel-size))] py-[calc(--spacing(2)+var(--pixel-size))]",
         none: "",
       },
       variant: {
@@ -99,7 +99,7 @@ function AlertAction({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       data-slot="alert-action"
-      className={cn("absolute top-2 right-2.5", className)}
+      className={cn("absolute top-[calc(--spacing(2)+var(--pixel-size))] right-[calc(--spacing(2.5)+var(--pixel-size))]", className)}
       {...props}
     />
   );

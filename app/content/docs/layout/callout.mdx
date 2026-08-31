@@ -1,0 +1,40 @@
+---
+title: Callout
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="callout" />
+
+The `Callout` component is a styled and customized version of the `Alert` component including additional features such as collapsible content.
+
+## Installation
+
+<Install item="callout" />
+
+## Usage
+
+```tsx
+import { Callout } from "@/components/ui/pxl/callout"
+```
+
+```tsx
+<Callout callout="info" title="Heads up!">
+  You can add components and dependencies to your app using the cli.
+</Callout>
+```
+
+## Alert vs Callout
+
+Use the `Callout` if you need to display admonitions/callouts for example from Markdown sources. Use the `Alert` component if you need deeper control or advanced customization.
+
+## Collapsible
+
+Use the `collapsible` and `collapsed` props to make the callout collapsible.
+
+<ComponentPreview item="callout" example="collapsible" />
+
+## Types
+
+Use the `callout` prop to change the callout styles.
+
+<ComponentPreview item="callout" example="types" />

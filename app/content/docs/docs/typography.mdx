@@ -3,7 +3,7 @@ title: Typography
 sidebar:
   order: 4
 ---
-import { LinkCard, LinkCardMedia } from "~/components";
+import { ComponentPreview, Install, LinkCard, LinkCardMedia } from "~/components";
 
 import { lists } from "~/lib/fonts";
 import { toRouteId } from "~/lib/registry";
@@ -23,11 +23,32 @@ import "~/examples/fonts/press-start-2p.css"
 import "~/examples/fonts/tiny5.css"
 import "~/examples/fonts/vt323.css"
 
+## Typeset
+
+A styling system for HTML and rendered markdown, from blog posts to streaming chat. One CSS file you own.
+
+<ComponentPreview class="max-h-72 overflow-auto" src="typeset/docs" previewOnly />
+
+### Installation
+
+<Install item="styles-typeset" />
+
+### Usage
+
+```tsx
+<div className="typeset">
+  <h2>My heading</h2>
+  <p>my paragraph</p>
+</div>
+```
+
+## Font Families
+
 PXL-UI provides fonts for `font-heading`, `font-sans`, and `font-mono`.
 
 Please note that each fonts may require different methods of installation or downloading typographic resources.
 
-## Heading Fonts
+### Headings
 > These fonts are useful for displaying titles, headings, or fancy badges and buttons (normally in uppercase).
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -47,7 +68,7 @@ Please note that each fonts may require different methods of installation or dow
 
 </div>
 
-## Text Fonts
+### Texts
 
 > These fonts are used everywhere to display regular texts. Therefore, they tend to be legible and support a wide variety of symbols.
 
@@ -68,7 +89,7 @@ Please note that each fonts may require different methods of installation or dow
 
 </div>
 
-## Monospaced Fonts
+### Monospaced
 
 > In contexts where the spacing of each character must be similar across all letters, they are ideal for code blocks or command-line terminals.
 
