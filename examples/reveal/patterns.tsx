@@ -11,7 +11,7 @@ export default function RetroMenuExample() {
   const [pattern, setPattern] = useState<RevealPattern>("diagonal");
 
   return (
-    <div className="relative flex flex-col items-start gap-4 p-8">
+    <div className="flex flex-col gap-4 items-center">
 
       <div className="flex flex-row gap-2 w-full">
         
@@ -46,7 +46,7 @@ export default function RetroMenuExample() {
         </Button>
       </div>
       
-      <WidgetArea size="sm">
+      <div className="w-widget-md aspect-square">
         <Reveal
           show={open}
           pattern={pattern}
@@ -71,7 +71,7 @@ export default function RetroMenuExample() {
             </nav>
           </WidgetArea>
         </Reveal>
-      </WidgetArea>
+      </div>
     </div>
   );
 }

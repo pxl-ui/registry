@@ -219,9 +219,11 @@ const calloutVariants: Record<
   },
 };
 
+type CalloutVariant = keyof typeof calloutVariants;
+
 function Callout({
   border = "rounded",
-  callout = "info",
+  type: calloutType,
   children,
   className,
   collapsible = false,
@@ -231,7 +233,7 @@ function Callout({
   title,
   ...props
 }: ComponentProps<typeof Alert> & {
-  callout?: keyof typeof calloutVariants;
+  type?: keyof typeof calloutVariants;
   collapsible?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (
@@ -241,6 +243,17 @@ function Callout({
   open?: boolean;
   title?: string;
 }) {
+  const calloutClass = cn(calloutType && calloutVariants[calloutType].className, className);
+  const calloutVariant = calloutType ? calloutVariants[calloutType].variant : "default";
+  const calloutIcon = calloutType ? (<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {calloutVariants[calloutType].icon}
+            </svg>) : undefined;
+  const calloutTitle = title ?? (calloutType ? calloutType.charAt(0).toUpperCase() + calloutType.slice(1) : undefined);
+
   if (collapsible) {
     return (
       <Collapsible
@@ -250,27 +263,19 @@ function Callout({
         render={
           <Alert
             border={border}
-            className={cn(calloutVariants[callout].className, className)}
-            variant={calloutVariants[callout].variant}
+            className={calloutClass}
+            variant={calloutVariant}
             {...props}
           />
         }
       >
-        <CollapsibleTrigger
-          render={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {calloutVariants[callout].icon}
-            </svg>
-          }
-        />
+        {calloutIcon && <CollapsibleTrigger
+          render={calloutIcon}
+        />}
         <CollapsibleTrigger
           render={
             <AlertTitle className="flex gap-0.5" data-slot="alert-title">
-              {title ?? callout.charAt(0).toUpperCase() + callout.slice(1)}
+              {calloutTitle}
               <svg
                 className="size-4 transition-transform group-data-open/alert:rotate-90"
                 xmlns="http://www.w3.org/2000/svg"
@@ -291,21 +296,17 @@ function Callout({
 
   return (
     <Alert 
-      className={cn(calloutVariants[callout].className, className)}
-      variant={calloutVariants[callout].variant} {...props}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        {calloutVariants[callout].icon}
-      </svg>
+      border={border}
+      className={calloutClass}
+      variant={calloutVariant} 
+      {...props}>
+      {calloutIcon}
       <AlertTitle>
-        {title ?? callout.charAt(0).toUpperCase() + callout.slice(1)}
+        {calloutTitle}
       </AlertTitle>
       {children && <AlertDescription>{children}</AlertDescription>}
     </Alert>
   );
 }
 
-export { Callout, calloutVariants };
+export { Callout, type CalloutVariant, calloutVariants };

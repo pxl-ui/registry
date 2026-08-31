@@ -16,12 +16,12 @@ export default function RevealPreview() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full relative flex flex-col items-start gap-4 p-8">
+    <div className="flex flex-col gap-4">
       <Button onClick={() => setOpen((v) => !v)}>
         {open ? "Hide menu" : "Show menu"}
       </Button>
 
-      <WidgetArea size="sm">
+      <div className="w-widget-md aspect-square">
         <Reveal
           show={open}
           variant="muted"
@@ -63,7 +63,7 @@ export default function RevealPreview() {
             </Card>
           </WidgetArea>
         </Reveal>
-      </WidgetArea>
+      </div>
     </div>
   );
 }

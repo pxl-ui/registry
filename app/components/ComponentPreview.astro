@@ -28,7 +28,7 @@ export type Props = {
 	example?: string;
 }
 
-const { align, chromeless, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120, previewOnly } = Astro.props;
+const { align = "center", chromeless, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120, previewOnly } = Astro.props;
 
 let srcPath = src;
 let sourceCode = code;

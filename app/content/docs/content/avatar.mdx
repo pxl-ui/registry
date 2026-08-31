@@ -3,7 +3,7 @@ title: Avatar
 ---
 import { ComponentPreview, Install } from "~/components";
 
-<ComponentPreview src="avatar/preview" />
+<ComponentPreview item="avatar" />
 
 ## Installation
 
@@ -52,13 +52,16 @@ AvatarGroup
 
 Use the `AvatarBadge` component to add a badge to the avatar. The badge is positioned at the bottom right of the avatar.
 
+
+<ComponentPreview item="avatar" example="badge" />
+
 Use the `className` prop to add custom styles to the badge such as custom colors, sizes, etc.
 
 ```tsx
 <Avatar>
   <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
   <AvatarFallback>CN</AvatarFallback>
-  <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+  <AvatarBadge className="bg-success-foreground" />
 </Avatar>
 ```
 
@@ -66,23 +69,31 @@ Use the `className` prop to add custom styles to the badge such as custom colors
 
 You can also use an icon inside `<AvatarBadge>`.
 
+<ComponentPreview item="avatar" example="badge-with-icon" />
+
 ## Avatar Group
 
 Use the `AvatarGroup` component to add a group of avatars.
+
+<ComponentPreview item="avatar" example="group" />
 
 ## Avatar Group Count
 
 Use `<AvatarGroupCount>` to add a count to the group.
 
+<ComponentPreview item="avatar" example="group-count" />
+
 ## Avatar Group with Icon
 
 You can also use an icon inside `<AvatarGroupCount>`.
+
+<ComponentPreview item="avatar" example="group-count-icon" />
 
 ## Sizes
 
 Use the `size` prop to change the size of the avatar.
 
-<ComponentPreview src="avatar/sizes" />
+<ComponentPreview item="avatar" example="sizes" />
 
 ## API Reference
 

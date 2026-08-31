@@ -5,14 +5,14 @@ export default function CalloutTypesExample() {
   return (
     <div className="flex flex-col gap-3 max-w-md w-full">
       <div>
-        <Callout callout="note" collapsible>
+        <Callout type="note" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="abstract" collapsible>
+        <Callout type="abstract" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -24,7 +24,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="info" collapsible>
+        <Callout type="info" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -32,7 +32,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="todo" collapsible>
+        <Callout type="todo" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -40,7 +40,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="tip" collapsible>
+        <Callout type="tip" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -52,7 +52,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="success" collapsible>
+        <Callout type="success" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -64,7 +64,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="question" collapsible>
+        <Callout type="question" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -76,7 +76,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="warning" collapsible>
+        <Callout type="warning" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -88,7 +88,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="failure" collapsible>
+        <Callout type="failure" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -100,7 +100,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="danger" collapsible>
+        <Callout type="danger" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -112,7 +112,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="bug" collapsible>
+        <Callout type="bug" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -120,7 +120,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="example" collapsible>
+        <Callout type="example" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
@@ -128,7 +128,7 @@ export default function CalloutTypesExample() {
         <Separator border="dashed" className="mt-3"  />
       </div>
       <div>
-        <Callout callout="quote" collapsible>
+        <Callout type="quote" collapsible>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Callout>
