@@ -633,6 +633,20 @@
       ]
     },
     {
+      "name": "table",
+      "type": "registry:component",
+      "title": "Table",
+      "description": "A responsive table component.",
+      "categories": ["pxl-ui", "components", "content"],
+      "files": [
+        {
+          "path": "table.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/table.tsx"
+        }
+      ]
+    },
+    {
       "name": "tabs",
       "type": "registry:component",
       "title": "Tabs",
