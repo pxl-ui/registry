@@ -4,12 +4,10 @@ description: Grid-based widget sizing and positioning
 sidebar:
   order: 2
 ---
-import { Callout, ComponentPreview, Install } from "~/components";
+import { ComponentPreview, Install } from "~/components";
 import { url as resolveUrl } from '~/lib/utils';
 
-<ComponentPreview src="anchor-grid/preview" />
-
-<Callout type="tip" title="When to use">Use Anchor Grid to display your widgets in websites or other full screen based setups. For desktop/floating widgets, use <a href={resolveUrl("layout/widget-area")}>Widget Area</a> instead.</Callout>
+<ComponentPreview item="anchor-grid" />
 
 ## Installation
 
@@ -18,9 +16,7 @@ import { url as resolveUrl } from '~/lib/utils';
 ## Usage
 
 ```tsx
-import {
-  AnchorGrid
-} from "@/components/ui/pxl/anchor-grid"
+import { AnchorGrid } from "@/components/ui/pxl/anchor-grid"
 ```
 
 ```tsx
@@ -46,3 +42,7 @@ import {
   ]}
   />
 ```
+
+## Anchor Grid vs Widget Area
+
+Use Anchor Grid to display your widgets in websites or other full screen based setups. For desktop/floating widgets, use <a href={resolveUrl("layout/widget-area")}>Widget Area</a> instead.

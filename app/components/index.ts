@@ -10,6 +10,7 @@ import IconPreview from "./IconPreview";
 import Install from "./Install.astro";
 import LinkCard from "./LinkCard.astro";
 import LinkCardMedia from "./LinkCardMedia";
+import NodeCommand from "./NodeCommand";
 import Showcase from "./Showcase";
 import Step from "./Step.astro";
 import Steps from "./Steps.astro";
@@ -27,6 +28,7 @@ export {
   Install,
   LinkCard,
   LinkCardMedia,
+  NodeCommand,
   Showcase,
   Step,
   Steps,

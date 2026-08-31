@@ -2,11 +2,11 @@ import { useMeasure } from "@uidotdev/usehooks";
 
 import { AnchorGrid } from "@/components/ui/pxl/anchor-grid";
 
-export default function AnchorGridPreview() {
+export default function AnchorGridDemo() {
   const [ref, { width, height }] = useMeasure();
 
   return (
-    <div className="w-full h-100" ref={ref}>
+    <div className="w-full max-w-md aspect-video" ref={ref}>
       <AnchorGrid
         containerWidth={width ?? 0}
         containerHeight={height ?? 0}

@@ -6,9 +6,7 @@ sidebar:
 import { Callout, ComponentPreview, Install } from "~/components";
 import { url as resolveUrl } from '~/lib/utils';
 
-<ComponentPreview src="widget-area/preview" />
-
-<Callout type="tip" title="When to use">Use Widget Area to display your widgets in desktop or floating setups. For full screen scenarios, use <a href={resolveUrl("layout/anchor-grid")}>Anchor Grid</a> instead.</Callout>
+<ComponentPreview item="widget-area" />
 
 ## Installation
 
@@ -17,15 +15,19 @@ import { url as resolveUrl } from '~/lib/utils';
 ## Usage
 
 ```tsx
-import {
-  WidgetArea
-} from "@/components/ui/pxl/widget-area"
+import { WidgetArea } from "@/components/ui/pxl/widget-area"
 ```
 
 ```tsx
 <WidgetArea size="sm" />
 ```
 
-## Sizes
+## Widget Area vs Anchor Grid
 
-<ComponentPreview src="widget-area/sizes" />
+Use Widget Area to display your widgets in desktop or floating setups. For full screen scenarios, use <a href={resolveUrl("layout/anchor-grid")}>Anchor Grid</a> instead.
+
+## Size
+
+Use the `size` prop to change the size of the widget.
+
+<ComponentPreview item="widget-area" example="sizes" />

@@ -4,21 +4,9 @@ description: How to install dependencies and structure your app.
 sidebar:
   order: 2
 ---
-import { Tabs, TabItem, Code } from '@astrojs/starlight/components';
+import { NodeCommand } from '~/components';
 
 This repository is a [Shadcn GitHub Registry](https://ui.shadcn.com/docs/registry/github) so you can use the shadcn client to install it's components.
 
-<Tabs>
-  <TabItem label={"pnpm"}>
-    <Code code={"pnpm dlx shadcn@latest list pxl-ui/registry"} lang="sh" frame="none" />
-  </TabItem>
-  <TabItem label={"npm"}>
-    <Code code={"npx shadcn@latest list pxl-ui/registry"} lang="sh" frame="none" />
-  </TabItem>
-  <TabItem label={"yarn"}>
-    <Code code={"yarn dlx shadcn@latest list pxl-ui/registry"} lang="sh" frame="none" />
-  </TabItem>
-  <TabItem label={"bun"}>
-    <Code code={"bunx --bun shadcn@latest list pxl-ui/registry"} lang="sh" frame="none" />
-  </TabItem>
-</Tabs>
+<NodeCommand client:load
+  command="shadcn@latest list pxl-ui/registry" />

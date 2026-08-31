@@ -5,7 +5,7 @@ import { WeatherIcon } from "@/components/ui/pxl/weather-icon";
 
 const t = getWeatherCodeI18n("en");
 
-export default function WeatherIconDemo() {
+export default function WeatherIconCodes() {
   return (
     <div className="flex flex-col gap-2">
       <table>
