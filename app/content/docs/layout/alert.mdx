@@ -1,0 +1,104 @@
+---
+title: Alert
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="alert" />
+
+## Installation
+
+<Install item="alert" />
+
+## Usage
+
+```tsx
+import {
+  Alert,
+  AlertAction,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/pxl/alert"
+```
+
+```tsx
+<Alert>
+  <InfoIcon />
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components and dependencies to your app using the cli.
+  </AlertDescription>
+  <AlertAction>
+    <Button variant="outline">Enable</Button>
+  </AlertAction>
+</Alert>
+```
+
+## Composition
+
+Use the following composition to build an `Alert`:
+
+```text
+Alert
+├── Icon
+├── AlertTitle
+├── AlertDescription
+└── AlertAction
+```
+
+## Collapsible
+
+Use the `collapsible` and `collapsed` props to make the alert content collapsible.
+
+<ComponentPreview item="alert" example="collapsible" />
+
+## Action
+
+Use `AlertAction` to add a button or other action element to the alert.
+
+<ComponentPreview item="alert" example="action" />
+
+## Border
+
+Use the `border` prop to change the border of the alert.
+
+<ComponentPreview item="alert" example="borders" />
+
+## Variants
+
+Use the `variant` prop to change the colors of the alert.
+
+<ComponentPreview item="alert" example="variants" />
+
+## API Reference
+
+### Alert
+
+The `Alert` component displays a callout for user attention.
+
+| Prop      | Type                         | Default     |
+| --------- | ---------------------------- | ----------- |
+| `variant` | `"default" \| "destructive"` | `"default"` |
+
+### AlertTitle
+
+The `AlertTitle` component displays the title of the alert.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### AlertDescription
+
+The `AlertDescription` component displays the description or content of the alert.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### AlertAction
+
+The `AlertAction` component displays an action element (like a button) positioned absolutely in the top-right corner of the alert.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |

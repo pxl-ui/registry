@@ -19,6 +19,21 @@
       ]
     },
     {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "Displays an alert for user attention.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "alert.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/alert.tsx"
+        }
+      ]
+    },
+    {
       "name": "anchor-grid",
       "type": "registry:component",
       "title": "Anchor Grid",
