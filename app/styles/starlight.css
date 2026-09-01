@@ -516,7 +516,7 @@ body {
       }
 
       .title {
-        @apply p-0 font-mono text-xs;
+        @apply p-0 font-mono text-xs bg-transparent;
       }
       .title::after {
         @apply hidden;
