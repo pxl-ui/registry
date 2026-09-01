@@ -7,7 +7,7 @@ import {
 
 export default function CollapsibleTransition() {
   return (
-    <Collapsible className="mx-auto w-full max-w-sm h-fit rounded-md data-open:bg-muted">
+    <Collapsible className="mx-auto w-full max-w-sm h-fit pixel-rounded data-open:bg-muted">
       <CollapsibleTrigger
         render={
           <Button variant="ghost" className="w-full">

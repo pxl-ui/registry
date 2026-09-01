@@ -11,7 +11,7 @@ export default function SeparatorDemo() {
           Retro styled components
         </p>
       </div>
-      <Separator />
+      <Separator border="dashed" />
       <div className="flex h-5 items-center gap-4 text-sm">
         <span>Docs</span>
         <Separator orientation="vertical" />

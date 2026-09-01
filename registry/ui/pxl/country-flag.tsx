@@ -101,7 +101,7 @@ function CountryFlag({
   }
 
   return (
-    <Component className={cn(flagVariants({ size }), className)} {...props} />
+    <Component shapeRendering="crisp-edges" className={cn(flagVariants({ size }), className)} {...props} />
   );
 }
 

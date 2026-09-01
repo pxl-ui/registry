@@ -7,7 +7,7 @@ function Textarea({ className, ...props }: ComponentProps<"textarea">) {
     <div
       data-slot="textarea-wrapper"
       className={cn(
-        "pr-1.5 pb-1.5 px-rounded-sm px-border-sm pixel-size-[3px] [--px-border-color:var(--input)] has-[textarea:focus-visible]:[--px-border-color:var(--ring)] has-[textarea:disabled]:opacity-50 has-[textarea[aria-invalid=true]]:[--px-border-color:var(--destructive)]",
+        "pr-1.5 pb-1.5 pixel-border pixel-color-input pixel-size-[3px] has-[textarea:focus-visible]:pixel-color-ring has-[textarea:disabled]:opacity-50 has-[textarea[aria-invalid=true]]:pixel-color-destructive",
         className,
       )}
     >

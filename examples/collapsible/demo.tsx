@@ -28,16 +28,16 @@ export default function CollapsibleDemo() {
           }
         />
       </div>
-      <div className="flex items-center justify-between rounded-md border px-4 py-2 text-sm">
+      <div className="flex items-center justify-between pixel-border px-4 py-2 text-sm">
         <span className="text-muted-foreground">Status</span>
         <span className="font-medium">Shipped</span>
       </div>
       <CollapsibleContent className="flex flex-col gap-2">
-        <div className="rounded-md border px-4 py-2 text-sm">
+        <div className="pixel-border px-4 py-2 text-sm">
           <p className="font-medium">Shipping address</p>
           <p className="text-muted-foreground">100 Market St, San Francisco</p>
         </div>
-        <div className="rounded-md border px-4 py-2 text-sm">
+        <div className="pixel-border px-4 py-2 text-sm">
           <p className="font-medium">Items</p>
           <p className="text-muted-foreground">2x Studio Headphones</p>
         </div>
