@@ -4,9 +4,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const cardVariants = cva(
-  "group/card @container/card flex flex-col text-card-foreground pixel-color-card-foreground pixel-border pixel-size-(--card-border) p-(--card-border) bg-card",
+  "group/card @container/card flex flex-col text-card-foreground pixel-color-card-foreground pixel-size-(--card-border) bg-card",
   {
     variants: {
+      border: {
+        solid: "pixel-border p-(--card-border)",
+        rounded: "pixel-rounded",
+        none: ""
+      },
       size: {
         default: "[--card-border:--spacing(1)] [--card-spacing:--spacing(2)]",
         sm: "[--card-border:--spacing(0.5)] [--card-spacing:--spacing(1)]",
@@ -33,6 +38,7 @@ const cardVariants = cva(
       },
     },
     defaultVariants: {
+      border: "solid",
       size: "default",
       variant: "default",
     },
@@ -41,6 +47,7 @@ const cardVariants = cva(
 
 function Card({
   className,
+  border,
   size,
   variant,
   ...props
@@ -52,6 +59,7 @@ function Card({
     <div
       data-slot="card"
       className={cardVariants({
+        border,
         size,
         variant,
         className,

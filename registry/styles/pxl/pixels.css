@@ -31,6 +31,7 @@
   --px: var(--pixel-size, 2px);
   position: relative;
   isolation: isolate;
+  box-decoration-break: clone;
 
   clip-path: polygon(
     0 var(--px),
@@ -101,6 +102,9 @@
     0 var(--px)
   );
 
+  box-decoration-break: clone;
+  position: relative;
+  isolation: isolate;
   clip-path: var(--px-shape);
 }
 

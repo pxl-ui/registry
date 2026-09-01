@@ -59,10 +59,10 @@ export default function NodeCommad({
         value={activeTabIndex}
         onValueChange={(val) => setActiveTabIndex(val)}
       >
-        <Card variant="muted" className="pixel-color-border!">
+        <Card variant="muted" border="rounded">
           <CardHeader>
             <svg
-              className="absolute top-5 left-4 size-5"
+              className="absolute top-4 left-4 size-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 24 24"

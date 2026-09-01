@@ -1,19 +1,15 @@
 ---
 
+import type { ComponentProps } from 'react';
+
 import { Callout as PxlCallout } from '@/components/ui/pxl/callout';
+import { cn } from '@/lib/utils';
 
-export type Props = {
-  title?: string;
-  type?: "caution" | "note" | "tip" | "danger" | undefined
-}
+export type Props = ComponentProps<typeof PxlCallout>;
 
-const { title: titleOverride, type } = Astro.props;
-
-let title = "";
-
-title = titleOverride ?? title;
+const { className, ...props } = Astro.props;
 
 ---
-<PxlCallout className="not-content" type={type}>
+<PxlCallout className={cn("not-content", className)} {...props} >
   <slot />
 </PxlCallout>
