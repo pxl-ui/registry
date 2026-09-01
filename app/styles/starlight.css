@@ -525,6 +525,20 @@ body {
   }
 }
 
+[data-slot=code-preview-content] {
+  .expressive-code code {
+    @apply pt-3.5 pb-0;
+  }
+
+  .ec-line .code {
+    @apply [border-inline-start:none] ps-0;
+  }
+
+  .ec-line .gutter .ln {
+    @apply w-10 p-0 mr-6;
+  }
+}
+
 .mobile-preferences,
 #starlight__on-this-page--mobile {
   @apply hidden;
