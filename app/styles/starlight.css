@@ -456,6 +456,10 @@ body {
 
   code:not(.not-content, .not-content *) {
     @apply font-mono font-medium text-xs rounded-sm [--radius:.625rem];
+    background-color: var(
+      --color-muted,
+      color-mix(in oklab, currentColor 8%, transparent)
+    );
   }
 
   h1:not(.not-content, .not-content *) {
