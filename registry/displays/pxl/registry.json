@@ -1,0 +1,749 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/displays",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "displays/dci2k",
+      "type": "registry:style",
+      "title": "DCI 2K",
+      "description": "Utilities for the DCI 2K displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-dci2k": "17 / 9",
+          "display-dci2k-w": "2048",
+          "display-dci2k-h": "1080"
+        }
+      }
+    },
+    {
+      "name": "displays/dci4k",
+      "type": "registry:style",
+      "title": "True 4K / DCI 4K",
+      "description": "Utilities for the True 4K displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-dci4k": "17 / 9",
+          "display-dci4k-w": "4096",
+          "display-dci4k-h": "2160"
+        }
+      }
+    },
+    {
+      "name": "displays/dfhd",
+      "type": "registry:style",
+      "title": "Dual Full HD / DFHD",
+      "description": "Utilities for the DFHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-dfhd": "32 / 9",
+          "display-dfhd-w": "3840",
+          "display-dfhd-h": "1080"
+        }
+      }
+    },
+    {
+      "name": "displays/dqhd",
+      "type": "registry:style",
+      "title": "Dual QHD / DQHD",
+      "description": "Utilities for the DQHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-dqhd": "32 / 9",
+          "display-dqhd-w": "5120",
+          "display-dqhd-h": "1440"
+        }
+      }
+    },
+    {
+      "name": "displays/dvga",
+      "type": "registry:style",
+      "title": "DVGA",
+      "description": "Utilities for the DVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-dvga": "3 / 2",
+          "display-dvga-w": "960",
+          "display-dvga-h": "640"
+        }
+      }
+    },
+    {
+      "name": "displays/duhd",
+      "type": "registry:style",
+      "title": "Dual UDH / DUHD",
+      "description": "Utilities for the DUHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-duhd": "32 / 9",
+          "display-duhd-w": "7680",
+          "display-duhd-h": "2160"
+        }
+      }
+    },
+    {
+      "name": "displays/esp32-s3-154",
+      "type": "registry:style",
+      "title": "ESP32-S3 1.54″ / 240×240",
+      "description": "Utilities for the 1.54-inch 240×240 IPS display with ST7789 controller.",
+      "categories": ["pxl-ui", "displays", "displays-embedded"],
+      "cssVars": {
+        "theme": {
+          "aspect-esp32-s3-154": "1 / 1",
+          "display-esp32-s3-154-w": "240",
+          "display-esp32-s3-154-h": "240"
+        }
+      }
+    },
+    {
+      "name": "displays/fhd",
+      "type": "registry:style",
+      "title": "Full HD / 1080p",
+      "description": "Utilities for the Full HD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-fhd": "16 / 9",
+          "display-fhd-w": "1920",
+          "display-fhd-h": "1080"
+        }
+      }
+    },
+    {
+      "name": "displays/fullscreen",
+      "type": "registry:style",
+      "title": "Fullscreen / 4:3",
+      "description": "Utilities for the Fullscreen displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-fullscreen": "4 / 3",
+          "display-fullscreen-w": "768",
+          "display-fullscreen-h": "576"
+        }
+      }
+    },
+    {
+      "name": "displays/fwvga",
+      "type": "registry:style",
+      "title": "FWVGA",
+      "description": "Utilities for the FWVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-fwvga": "16 / 9",
+          "display-fwvga-w": "854",
+          "display-fwvga-h": "480"
+        }
+      }
+    },
+    {
+      "name": "displays/fwxga",
+      "type": "registry:style",
+      "title": "FWXGA",
+      "description": "Utilities for the FWXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-fwxga": "16 / 9",
+          "display-fwxga-w": "1366",
+          "display-fwxga-h": "768"
+        }
+      }
+    },
+    {
+      "name": "displays/hd",
+      "type": "registry:style",
+      "title": "HDTV / 720p",
+      "description": "Utilities for the HDTV displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-hd": "16 / 9",
+          "display-hd-w": "1280",
+          "display-hd-h": "720"
+        }
+      }
+    },
+    {
+      "name": "displays/hd+",
+      "type": "registry:style",
+      "title": "HD+ / 900p",
+      "description": "Utilities for the HD+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-hdplus": "16 / 9",
+          "display-hdplus-w": "1600",
+          "display-hdplus-h": "900"
+        }
+      }
+    },
+    {
+      "name": "displays/hvga",
+      "type": "registry:style",
+      "title": "HVGA",
+      "description": "Utilities for the HVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-hvga": "3 / 2",
+          "display-hvga-w": "480",
+          "display-hvga-h": "320"
+        }
+      }
+    },
+    {
+      "name": "displays/qhd",
+      "type": "registry:style",
+      "title": "qHD",
+      "description": "Utilities for the qHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-qhd": "16 / 9",
+          "display-qhd-w": "960",
+          "display-qhd-h": "540"
+        }
+      }
+    },
+    {
+      "name": "displays/qhd+",
+      "type": "registry:style",
+      "title": "QHD / 1440p",
+      "description": "Utilities for the QHD+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-qhdplus": "16 / 9",
+          "display-qhdplus-w": "3200",
+          "display-qhdplus-h": "1800"
+        }
+      }
+    },
+    {
+      "name": "displays/qqvga",
+      "type": "registry:style",
+      "title": "QQVGA",
+      "description": "Utilities for the QQVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-qqvga": "4 / 3",
+          "display-qqvga-w": "160",
+          "display-qqvga-h": "120"
+        }
+      }
+    },
+    {
+      "name": "displays/qsxga",
+      "type": "registry:style",
+      "title": "QSXGA",
+      "description": "Utilities for the QSXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-qsxga": "5 / 4",
+          "display-qsxga-w": "2560",
+          "display-qsxga-h": "2048"
+        }
+      }
+    },
+    {
+      "name": "displays/quadvga",
+      "type": "registry:style",
+      "title": "QuadVGA",
+      "description": "Utilities for the QuadVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-quadvga": "4 / 3",
+          "display-quadvga-w": "1280",
+          "display-quadvga-h": "960"
+        }
+      }
+    },
+    {
+      "name": "displays/quxga",
+      "type": "registry:style",
+      "title": "QUXGA",
+      "description": "Utilities for the QUXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-quxga": "4 / 3",
+          "display-quxga-w": "3200",
+          "display-quxga-h": "2400"
+        }
+      }
+    },
+    {
+      "name": "displays/qvga",
+      "type": "registry:style",
+      "title": "QVGA",
+      "description": "Utilities for the QVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-qvga": "4 / 3",
+          "display-qvga-w": "320",
+          "display-qvga-h": "240"
+        }
+      }
+    },
+    {
+      "name": "displays/qwxga",
+      "type": "registry:style",
+      "title": "QWXGA",
+      "description": "Utilities for the QWXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-qwxga": "9",
+          "display-qwxga-w": "2048",
+          "display-qwxga-h": "1152"
+        }
+      }
+    },
+    {
+      "name": "displays/qxga",
+      "type": "registry:style",
+      "title": "QXGA",
+      "description": "Utilities for the QXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-qxga": "4 / 3",
+          "display-qxga-w": "2048",
+          "display-qxga-h": "1536"
+        }
+      }
+    },
+    {
+      "name": "displays/svga",
+      "type": "registry:style",
+      "title": "SVGA",
+      "description": "Utilities for the SVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-svga": "4 / 3",
+          "display-svga-w": "800",
+          "display-svga-h": "600"
+        }
+      }
+    },
+    {
+      "name": "displays/sxga",
+      "type": "registry:style",
+      "title": "SXGA",
+      "description": "Utilities for the SXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-sxga": "5 / 4",
+          "display-sxga-w": "1280",
+          "display-sxga-h": "1024"
+        }
+      }
+    },
+    {
+      "name": "displays/sxga+",
+      "type": "registry:style",
+      "title": "SXGA+",
+      "description": "Utilities for the SXGA+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-sxgaplus": "4 / 3",
+          "display-sxgaplus-w": "1400",
+          "display-sxgaplus-h": "1050"
+        }
+      }
+    },
+    {
+      "name": "displays/uhd",
+      "type": "registry:style",
+      "title": "UHD / 4K",
+      "description": "Utilities for the 4K displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-uhd": "16 / 9",
+          "display-uhd-w": "3840",
+          "display-uhd-h": "2160"
+        }
+      }
+    },
+    {
+      "name": "displays/uhd+",
+      "type": "registry:style",
+      "title": "UHD+ / 5K",
+      "description": "Utilities for the UHD+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-uhdplus": "16 / 9",
+          "display-uhdplus-w": "5120",
+          "display-uhdplus-h": "2880"
+        }
+      }
+    },
+    {
+      "name": "displays/uhd8k",
+      "type": "registry:style",
+      "title": "UHD / 8K",
+      "description": "Utilities for the 8K displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-uhd8k": "16 / 9",
+          "display-uhd8k-w": "7680",
+          "display-uhd8k-h": "4320"
+        }
+      }
+    },
+    {
+      "name": "displays/vga",
+      "type": "registry:style",
+      "title": "VGA",
+      "description": "Utilities for the VGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-vga": "4 / 3",
+          "display-vga-w": "640",
+          "display-vga-h": "480"
+        }
+      }
+    },
+    {
+      "name": "displays/uwfhd",
+      "type": "registry:style",
+      "title": "UWFHD",
+      "description": "Utilities for the UWFHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-uwfhd": "64 / 27",
+          "display-uwfhd-w": "2560",
+          "display-uwfhd-h": "1080"
+        }
+      }
+    },
+    {
+      "name": "displays/uwqhd",
+      "type": "registry:style",
+      "title": "UWQHD",
+      "description": "Utilities for the UWQHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-uwqhd": "43 / 18",
+          "display-uwqhd-w": "3440",
+          "display-uwqhd-h": "1440"
+        }
+      }
+    },
+    {
+      "name": "displays/uxga",
+      "type": "registry:style",
+      "title": "UXGA",
+      "description": "Utilities for the UXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-uxga": "4 / 3",
+          "display-uxga-w": "1600",
+          "display-uxga-h": "1200"
+        }
+      }
+    },
+    {
+      "name": "displays/widget-lg",
+      "type": "registry:style",
+      "title": "Widget (Large)",
+      "description": "Utilities for the Large Widget displays.",
+      "categories": ["pxl-ui", "displays", "displays-widget"],
+      "cssVars": {
+        "theme": {
+          "aspect-widget-lg": "1 / 1",
+          "display-widget-lg-w": "344",
+          "display-widget-lg-h": "344"
+        }
+      }
+    },
+    {
+      "name": "displays/widget-md",
+      "type": "registry:style",
+      "title": "Widget (Medium)",
+      "description": "Utilities for the Medium Widget displays.",
+      "categories": ["pxl-ui", "displays", "displays-widget"],
+      "cssVars": {
+        "theme": {
+          "aspect-widget-md": "86 / 41",
+          "display-widget-md-w": "344",
+          "display-widget-md-h": "164"
+        }
+      }
+    },
+    {
+      "name": "displays/widget-sm",
+      "type": "registry:style",
+      "title": "Widget (Small)",
+      "description": "Utilities for the Small Widget displays.",
+      "categories": ["pxl-ui", "displays", "displays-widget" ],
+      "cssVars": {
+        "theme": {
+          "aspect-widget-sm": "1 / 1",
+          "display-widget-sm-w": "164",
+          "display-widget-sm-h": "164"
+        }
+      }
+    },
+    {
+      "name": "displays/widget-xl",
+      "type": "registry:style",
+      "title": "Widget (Extra Large)",
+      "description": "Utilities for the Extra Large Widget displays.",
+      "categories": ["pxl-ui", "displays", "displays-widget"],
+      "cssVars": {
+        "theme": {
+          "aspect-widget-xl": "43 / 22",
+          "display-widget-xl-w": "704",
+          "display-widget-xl-h": "344"
+        }
+      }
+    },
+    {
+      "name": "displays/wqhd",
+      "type": "registry:style",
+      "title": "WQHD / 1440p",
+      "description": "Utilities for the WQHD displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-wqhd": "16 / 9",
+          "display-wqhd-w": "2560",
+          "display-wqhd-h": "1440"
+        }
+      }
+    },
+    {
+      "name": "displays/wqhd+",
+      "type": "registry:style",
+      "title": "WQHD+ / 3K",
+      "description": "Utilities for the WQHD+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-hd"],
+      "cssVars": {
+        "theme": {
+          "aspect-wqhdplus": "16 / 9",
+          "display-wqhdplus-w": "2880",
+          "display-wqhdplus-h": "1620"
+        }
+      }
+    },
+    {
+      "name": "displays/wqsxga",
+      "type": "registry:style",
+      "title": "WQSXGA",
+      "description": "Utilities for the WQSXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wqsxga": "25 / 16",
+          "display-wqsxga-w": "3200",
+          "display-wqsxga-h": "2048"
+        }
+      }
+    },
+    {
+      "name": "displays/wquxga",
+      "type": "registry:style",
+      "title": "WQUXGA",
+      "description": "Utilities for the WQUXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wquxga": "16 / 10",
+          "display-wquxga-w": "3840",
+          "display-wquxga-h": "2400"
+        }
+      }
+    },
+    {
+      "name": "displays/wqvga",
+      "type": "registry:style",
+      "title": "WQVGA",
+      "description": "Utilities for the WQVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wqvga": "5 / 3",
+          "display-wqvga-w": "400",
+          "display-wqvga-h": "240"
+        }
+      }
+    },
+    {
+      "name": "displays/wqxga",
+      "type": "registry:style",
+      "title": "WQXGA",
+      "description": "Utilities for the WQXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wqxga": "16 / 10",
+          "display-wqxga-w": "2560",
+          "display-wqxga-h": "1600"
+        }
+      }
+    },
+    {
+      "name": "displays/wqxga+",
+      "type": "registry:style",
+      "title": "WQXGA+",
+      "description": "Utilities for the WQXGA+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wqxgaplus": "16 / 10",
+          "display-wqxgaplus-w": "2880",
+          "display-wqxgaplus-h": "1800"
+        }
+      }
+    },
+    {
+      "name": "displays/wsvga",
+      "type": "registry:style",
+      "title": "WSVGA",
+      "description": "Utilities for the WSVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wsvga": "16 / 9",
+          "display-wsvga-w": "1024",
+          "display-wsvga-h": "576"
+        }
+      }
+    },
+    {
+      "name": "displays/wsxga",
+      "type": "registry:style",
+      "title": "WSXGA",
+      "description": "Utilities for the WSXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wsxga": "16 / 10",
+          "display-wsxga-w": "1440",
+          "display-wsxga-h": "900"
+        }
+      }
+    },
+    {
+      "name": "displays/wsxga+",
+      "type": "registry:style",
+      "title": "WSXGA+",
+      "description": "Utilities for the WSXGA+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wsxgaplus": "16 / 10",
+          "display-wsxgaplus-w": "1680",
+          "display-wsxgaplus-h": "1050"
+        }
+      }
+    },
+    {
+      "name": "displays/wuxga",
+      "type": "registry:style",
+      "title": "WUXGA",
+      "description": "Utilities for the WUXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wuxga": "16 / 10",
+          "display-wuxga-w": "1920",
+          "display-wuxga-h": "1200"
+        }
+      }
+    },
+    {
+      "name": "displays/wvga",
+      "type": "registry:style",
+      "title": "WVGA",
+      "description": "Utilities for the WVGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-vga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wvga": "15 / 9",
+          "display-wvga-w": "800",
+          "display-wvga-h": "480"
+        }
+      }
+    },
+    {
+      "name": "displays/wxga",
+      "type": "registry:style",
+      "title": "WXGA",
+      "description": "Utilities for the WXGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wxga": "16 / 10",
+          "display-wxga-w": "1280",
+          "display-wxga-h": "800"
+        }
+      }
+    },
+    {
+      "name": "displays/wxga+",
+      "type": "registry:style",
+      "title": "WXGA+",
+      "description": "Utilities for the WXGA+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-wxgaplus": "3 / 2",
+          "display-wxgaplus-w": "1280",
+          "display-wxgaplus-h": "854"
+        }
+      }
+    },
+    {
+      "name": "displays/xga",
+      "type": "registry:style",
+      "title": "XGA",
+      "description": "Utilities for the XGA displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-xga": "4 / 3",
+          "display-xga-w": "1024",
+          "display-xga-h": "768"
+        }
+      }
+    },
+    {
+      "name": "displays/xga+",
+      "type": "registry:style",
+      "title": "XGA+",
+      "description": "Utilities for the XGA+ displays.",
+      "categories": ["pxl-ui", "displays", "displays-xga"],
+      "cssVars": {
+        "theme": {
+          "aspect-xgaplus": "4 / 3",
+          "display-xgaplus-w": "1152",
+          "display-xgaplus-h": "864"
+        }
+      }
+    }
+  ]
+}
