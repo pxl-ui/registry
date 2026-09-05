@@ -8,6 +8,7 @@ import { url } from "./utils";
 type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "widget";
 type ComponentKind = "content" | "interaction" | "layout" | "navigation";
 type DisplayKind = "embedded" | "hd" | "vga" | "widget" | "xga";
+type WidgetKind = "small" | "medium" | "large" | "extralarge";
 
 const KIND_CATEGORIES = {
   background: "background",
@@ -32,6 +33,13 @@ const DISPLAY_KIND_CATEGORIES = {
   widget: "displays-widget",
   xga: "displays-xga"
 } satisfies Partial<Record<DisplayKind, string>>;
+
+const WIDGET_KIND_CATEGORIES = {
+  small: "widget-sm",
+  medium: "widget-md",
+  large: "widget-lg",
+  extralarge: "widget-xl",
+} satisfies Partial<Record<WidgetKind, string>>;
 
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   backgrounds: { prefix: "backgrounds-" },
@@ -228,6 +236,26 @@ function displayKind(itemName: string): DisplayKind {
   throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
 }
 
+function widgetKind(itemName: string): WidgetKind {
+  const item = registry.get(itemName);
+
+  if (!item) {
+    throw new Error(`Item "${itemName}" not found`);
+  }
+
+  if (!item.categories || item.categories.length === 0) {
+    throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`);
+  }
+
+  for (const [kind, category] of Object.entries(WIDGET_KIND_CATEGORIES)) {
+    if (item.categories?.includes(category)) {
+      return kind as WidgetKind;
+    }
+  }
+
+  throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
+}
+
 /**
  * Removes kind prefixes from registry item. Eg: from "fonts-able-5" to "able-5".
  */
@@ -293,6 +321,15 @@ function toRouteId(itemName: string) {
     if (itemDisplayKind === "xga") return url(`displays/xga/${baseName}`);
   }
 
+  if (itemKind === "widget") {
+    const itemWidgetKind = widgetKind(itemName);
+    
+    if (itemWidgetKind === "small") return url(`widgets/sm/${baseName}`);
+    if (itemWidgetKind === "medium") return url(`widgets/md/${baseName}`);
+    if (itemWidgetKind === "large") return url(`widgets/lg/${baseName}`);
+    if (itemWidgetKind === "extralarge") return url(`widgets/xl/${baseName}`);
+  }
+
   // TODO: Implement component subcategories
   throw new Error(`Method toRouteId not implemented for kind "${itemKind}"`);
 }
@@ -332,6 +369,8 @@ function pages(itemName: string): {
     attrs: LinkHTMLAttributes;
   } | undefined;
   const itemKind = kind(itemName);
+
+  console.log(itemName, itemKind);
 
   if (!(itemKind in KIND_CATEGORIES)) {
     return {

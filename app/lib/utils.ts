@@ -38,17 +38,3 @@ export function registryItemFromRouteId(routeId: string) {
   return REGISTRY_URL_GROUPS[group].prefix ?
     `${REGISTRY_URL_GROUPS[group].prefix}${itemName}` : itemName;
 }
-
-export function routeFromRegistryItem(registryItem: string, groupName: string) {
-  const group = REGISTRY_URL_GROUPS[groupName];
-
-  if (!group) {
-    return null;
-  }
-
-  return url(
-    group.prefix ? 
-      `${groupName}/${registryItem.replace(group.prefix, "")}` :
-      `${groupName}/${registryItem}`
-  );
-}

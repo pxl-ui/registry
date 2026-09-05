@@ -70,6 +70,10 @@ export default defineConfig({
             link: "/docs/",
             items: [
               { autogenerate: { directory: "docs" } },
+              {
+                label: "Recipes",
+                items: [{ autogenerate: { directory: "recipes" } }],
+              }
             ]
           },
           {
@@ -108,12 +112,8 @@ export default defineConfig({
                 link: "/widgets/",
               },
               {
-                label: "Widgets",
-                items: [{ autogenerate: { directory: "widgets" } }],
-              },
-              {
-                label: "Recipes",
-                items: [{ autogenerate: { directory: "recipes" } }],
+                label: "Medium",
+                items: [{ autogenerate: { directory: "widgets/md" } }],
               }
             ]
           },
