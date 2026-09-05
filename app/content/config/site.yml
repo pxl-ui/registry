@@ -4,9 +4,9 @@ header:
      text: "Home"
    - link: "docs/installation"
      text: "Docs"
-   - link: "docs/components"
+   - link: "components"
      text: "Components"
-   - link: "docs/widgets"
+   - link: "widgets"
      text: "Widgets"
 footer:
   author: aitorllj93 (https://aitorllamas.com)
