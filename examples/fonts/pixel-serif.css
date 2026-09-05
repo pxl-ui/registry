@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/pixel-serif.css";
+
+.font-pixel-serif {
+  font-family: 'Pixel Serif', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

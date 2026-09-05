@@ -191,11 +191,38 @@
       }
     },
     {
+      "name": "fonts-pixel-serif",
+      "type": "registry:style",
+      "title": "Pixel Serif",
+      "description": "Pixel Art Serif Font by @ReffPixels (Pablo Rodriguez)",
+      "author": "ReffPixels (https://reffpixels.itch.io/)",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "license": "Creative Commons Attribution-NoDerivatives 4.0 International License",
+        "order": 3
+      },
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "pixel-serif.css",
+          "target": "@components/fonts/pxl/pixel-serif.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/pixel-serif.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Pixel Serif', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts-pixelify-sans",
       "type": "registry:font",
       "title": "Pixelify Sans",
       "description": "Pixel display font. It works great for your retro party designs, game creation or pretty much anything that demands a “go back in time” vibe.",
-      "author": "Stefie Justprince (github.com/eifetx/Pixelify-Sans)",
+      "author": "Stefie Justprince (https://github.com/eifetx/Pixelify-Sans)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
         "order": 3
