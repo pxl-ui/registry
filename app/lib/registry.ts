@@ -317,7 +317,7 @@ function toRouteId(itemName: string) {
     if (itemDisplayKind === "embedded") return url(`displays/embedded/${baseName}`);
     if (itemDisplayKind === "hd") return url(`displays/hd/${baseName}`);
     if (itemDisplayKind === "vga") return url(`displays/vga/${baseName}`);
-    if (itemDisplayKind === "widget") return url(`displays/widget/${baseName}`);
+    if (itemDisplayKind === "widget") return url(`displays/widgets/${baseName}`);
     if (itemDisplayKind === "xga") return url(`displays/xga/${baseName}`);
   }
 
