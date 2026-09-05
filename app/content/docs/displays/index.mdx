@@ -6,6 +6,44 @@ import { ColorPreview, LinkCard, LinkCardMedia } from "~/components";
 import { toRouteId } from "~/lib/registry";
 import { lists } from "~/lib/displays";
 
+## Widgets
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.widget.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <LinkCardMedia
+        slot="media"
+        item={item.name}        
+      />
+    </LinkCard>
+  ))}
+
+</div>
+
+## Embedded Systems
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.embedded.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+      <LinkCardMedia
+        slot="media"
+        item={item.name}        
+      />
+    </LinkCard>
+  ))}
+
+</div>
+
 ## High-definition
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -49,44 +87,6 @@ import { lists } from "~/lib/displays";
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.xga.map(item => (
-    <LinkCard 
-      href={toRouteId(item.name)} 
-      title={item.title ?? item.name}
-      description={item.description}
-    >
-      <LinkCardMedia
-        slot="media"
-        item={item.name}        
-      />
-    </LinkCard>
-  ))}
-
-</div>
-
-## Embedded Systems
-
-<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-
-  {lists.embedded.map(item => (
-    <LinkCard 
-      href={toRouteId(item.name)} 
-      title={item.title ?? item.name}
-      description={item.description}
-    >
-      <LinkCardMedia
-        slot="media"
-        item={item.name}        
-      />
-    </LinkCard>
-  ))}
-
-</div>
-
-## Widgets
-
-<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-
-  {lists.widget.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}
