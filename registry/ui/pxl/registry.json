@@ -39,6 +39,9 @@
       "title": "Anchor Grid",
       "description": "Grid-based widget sizing and positioning",
       "categories": ["pxl-ui", "components", "layout"],
+      "meta": {
+        "order": 2
+      },
       "files": [
         {
           "path": "anchor-grid.tsx",
@@ -321,7 +324,7 @@
       "type": "registry:component",
       "title": "Field",
       "description": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "field.tsx",
@@ -365,7 +368,7 @@
       "type": "registry:component",
       "title": "Input Group",
       "description": "Add addons, buttons, and helper content to inputs.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "registryDependencies": [
         "pxl-ui/registry/button",
         "pxl-ui/registry/input",
@@ -384,7 +387,7 @@
       "type": "registry:component",
       "title": "Input",
       "description": "A text input component for forms and user data entry with built-in styling and accessibility features.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": ["@base-ui/react"],
       "files": [
         {
@@ -441,7 +444,7 @@
       "type": "registry:component",
       "title": "Label",
       "description": "Renders an accessible label associated with controls.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "label.tsx",
@@ -537,6 +540,9 @@
       "title": "Screen",
       "description": "Custom filters for different screen displays",
       "categories": ["pxl-ui", "components", "layout"],
+      "meta": {
+        "order": 3
+      },
       "files": [
         {
           "path": "screen.tsx",
@@ -728,7 +734,7 @@
       "type": "registry:component",
       "title": "Textarea",
       "description": "Displays a form textarea or a component that looks like a textarea.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "interaction"],
       "files": [
         {
           "path": "textarea.tsx",
@@ -742,7 +748,7 @@
       "type": "registry:component",
       "title": "Tooltip",
       "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-      "categories": ["pxl-ui", "components", "ui"],
+      "categories": ["pxl-ui", "components", "layout"],
       "dependencies": ["@base-ui/react"],
       "files": [
         {
@@ -757,7 +763,7 @@
       "type": "registry:component",
       "title": "Weather Icon",
       "description": "A Icon Component to display the Weather",
-      "categories": ["pxl-ui", "components", "weather"],
+      "categories": ["pxl-ui", "components", "content"],
       "dependencies": [
         "weather-i18n"
       ],
@@ -791,6 +797,9 @@
       "title": "Widget Area",
       "description": "Widget sizing container",
       "categories": ["pxl-ui", "components", "layout"],
+      "meta": {
+        "order": 1
+      },
       "files": [
         {
           "path": "widget-area.tsx",

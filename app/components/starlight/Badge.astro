@@ -1,0 +1,50 @@
+---
+
+import type { HTMLAttributes } from 'astro/types';
+import type { VariantProps } from 'class-variance-authority';
+
+import { badgeVariants } from "@/components/ui/pxl/badge";
+import { cn } from '@/lib/utils';
+import type { BadgeComponentProps } from '~/lib/starlight/schemas/badge';
+
+function getVariant (badgeVariant: BadgeComponentProps["variant"]): VariantProps<typeof badgeVariants>["variant"] {
+  if (!badgeVariant) {
+    return "default";
+  }
+
+  if (badgeVariant === "note") return "primary";
+  if (badgeVariant === "danger") return "danger";
+  if (badgeVariant === "success") return "success";
+  if (badgeVariant === "caution") return "warning";
+  if (badgeVariant === "tip") return "info";
+  if (badgeVariant === "default") return "default";
+}
+
+function getSize(badgeSize: BadgeComponentProps["size"]): VariantProps<typeof badgeVariants>["size"] {
+  if (!badgeSize) {
+    return "sm";
+  }
+
+  if (badgeSize === "large") return "lg";
+  if (badgeSize === "medium") return "md";
+  if (badgeSize === "small") return "sm";
+}
+
+type Props = BadgeComponentProps & HTMLAttributes<'span'>;
+
+const {
+	class: className,
+	size,
+	text,
+  variant,
+	...attrs
+} = Astro.props;
+---
+<span 
+  class={cn(badgeVariants({
+    size: getSize(size),
+    variant: getVariant(variant),
+  }), className)} 
+  {...attrs}>
+  {text}
+</span>

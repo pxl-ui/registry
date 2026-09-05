@@ -4,7 +4,7 @@ import { TabItem, Tabs } from '@astrojs/starlight/components';
 
 import { cardVariants } from '@/components/ui/pxl/card';
 import { cn } from '@/lib/utils';
-import registry, { files } from '~/lib/registry';
+import registry, { files, type RegistryItem } from '~/lib/registry';
 
 import CollapsibleCode from "./Code.astro";
 import NodeCommand from './NodeCommand';
@@ -15,6 +15,21 @@ function resolveTargetPath(path: string) {
     .replace("@components", "components")
     .replace("@hooks", "hooks")
     .replace("@lib", "lib")
+}
+
+function cssVarsToCSS(vars: NonNullable<RegistryItem["cssVars"]>) {
+  return [
+    vars.theme && `@theme {
+${Object.entries(vars.theme).map(([k, v]) => `  --${k}: ${v};`).join("\n")}
+}`,
+    vars.light && `:root {
+${Object.entries(vars.light).map(([k, v]) => `  --${k}: ${v};`).join("\n")}
+}`,
+    vars.dark && `.dark,
+[data-theme="dark"] {
+${Object.entries(vars.dark).map(([k, v]) => `  --${k}: ${v};`).join("\n")}
+}`,
+  ].filter(Boolean).join("\n");
 }
 
 export type Props = {
@@ -67,7 +82,22 @@ const dependencies = item?.dependencies ?? [];
           />
         </div>
       ))}
-      <h3>{Astro.locals.t('registry.installation.manual.steps.updateImports')}</h3>
+      {item?.cssVars && <h3>{Astro.locals.t('registry.installation.manual.steps.includeCSSVars')}</h3>}
+      {item?.cssVars && (
+        <div class={cn(
+          "not-content",
+          cardVariants(),
+          "pixel-color-border! bg-background! mt-4",
+        )}>
+          <CollapsibleCode 
+            class="relative"
+            code={cssVarsToCSS(item.cssVars)}
+            collapsed={false}
+            lang="css" 
+          />
+        </div>
+      )}
+      {itemFiles.length > 0 && <h3>{Astro.locals.t('registry.installation.manual.steps.updateImports')}</h3>}
     </div>
   </TabItem>
 </Tabs>

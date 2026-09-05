@@ -1,0 +1,52 @@
+---
+
+
+
+import { Separator } from '@/components/ui/pxl/separator';
+import { cn } from '@/lib/utils'
+
+import Badge from './Badge.astro'
+import Icon from "./Icon.astro";
+
+const { topics } = Astro.locals.starlightSidebarTopics;
+---
+
+<ul>
+  {
+    topics.map((topic) => {
+      const { class: className, ...attrs } = topic.attrs || {}
+
+      return (
+        <li>
+          <a
+            {...attrs}
+            href={topic.link}
+            class={cn(
+              "flex gap-2 py-2 px-1.25 p items-center",
+              "font-normal text-foreground text-2xl md:text-xs",
+              "hover:bg-muted hover:pixel-border hover:pixel-color-muted",
+              topic.isCurrent && "bg-muted pixel-border pixel-color-muted",
+              className
+
+            )}
+          >
+            {topic.icon && (
+              <div class="flex items-center justify-center p-1">
+                <Icon class="size-4" name={topic.icon} />
+              </div>
+            )}
+            {topic.label}
+            {topic.badge && (
+              <>
+                {' '}
+                <Badge text={topic.badge.text} variant={topic.badge.variant} />
+              </>
+            )}
+          </a>
+        </li>
+      )
+    })
+  }
+</ul>
+<Separator border="dashed" />
+

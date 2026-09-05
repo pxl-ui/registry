@@ -4,6 +4,7 @@ import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import starlightSidebarTopics from "starlight-sidebar-topics";
 
 const baseUrl = process.env.NODE_ENV === "development" ? undefined : "/registry";
 
@@ -62,32 +63,147 @@ export default defineConfig({
           href: "https://github.com/pxl-ui/registry",
         },
       ],
-      sidebar: [
-        { autogenerate: { directory: "docs" } },
-        {
-          label: "Layout",
-          items: [{ autogenerate: { directory: "layout" } }],
-        },
-        {
-          label: "Interaction",
-          items: [{ autogenerate: { directory: "interaction" } }],           
-        },
-        {
-          label: "Navigation",
-          items: [{ autogenerate: { directory: "navigation" } }],     
-        },
-        {
-          label: "Content",
-          items: [{ autogenerate: { directory: "content" } }],     
-        },
-        {
-          label: "Widgets",
-          items: [{ autogenerate: { directory: "widgets" } }],
-        },
-        {
-          label: "Recipes",
-          items: [{ autogenerate: { directory: "recipes" } }],
-        }
+      plugins: [
+        starlightSidebarTopics([
+          {
+            label: "Docs",
+            link: "/docs/",
+            items: [
+              { autogenerate: { directory: "docs" } },
+            ]
+          },
+          {
+            label: "Components",
+            link: "/components/",
+            items: [
+              {
+                label: "Introduction",
+                link: "/components/",
+              },
+              {
+                label: "Layout",
+                items: [{ autogenerate: { directory: "components/layout" } }],
+              },
+              {
+                label: "Interaction",
+                items: [{ autogenerate: { directory: "components/interaction" } }],           
+              },
+              {
+                label: "Navigation",
+                items: [{ autogenerate: { directory: "components/navigation" } }],     
+              },
+              {
+                label: "Content",
+                items: [{ autogenerate: { directory: "components/content" } }],     
+              }
+            ]
+          },
+          {
+            label: "Widgets",
+            badge: "new",
+            link: "/widgets/",
+            items: [
+              {
+                label: "Introduction",
+                link: "/widgets/",
+              },
+              {
+                label: "Widgets",
+                items: [{ autogenerate: { directory: "widgets" } }],
+              },
+              {
+                label: "Recipes",
+                items: [{ autogenerate: { directory: "recipes" } }],
+              }
+            ]
+          },
+          {
+            label: "Colors",
+            link: "/colors/",
+            items: [
+              {
+                label: "Introduction",
+                link: "/colors/",
+              },
+              {
+                label: "Palettes",
+                items: [{ autogenerate: { directory: "colors/palettes" } }],
+              },
+            ]
+          },
+          {
+            label: "Typography",
+            link: "/typography/",
+            items: [
+              {
+                label: "Introduction",
+                link: "/typography/",
+              },
+              {
+                label: "Typeset",
+                link: "/typography/typeset",
+              },
+              {
+                label: "Fonts",
+                items: [{ autogenerate: { directory: "typography/fonts" } }],
+              },
+            ]
+          },
+          {
+            label: "Icons",
+            link: "/icons/",
+            items: [
+              {
+                label: "Introduction",
+                link: "/icons/",
+              },
+              {
+                label: "Packs",
+                items: [{ autogenerate: { directory: "icons/packs" } }],
+              },
+            ]
+          },
+          {
+            label: "Backgrounds",
+            link: "/backgrounds/",
+            items: [
+              {
+                label: "Introduction",
+                link: "/backgrounds/",
+              },
+              {
+                label: "Patterns",
+                items: [{ autogenerate: { directory: "backgrounds/patterns" } }],
+              },
+            ]
+          },
+          {
+            label: "Displays",
+            link: "/displays/",
+            items: [
+              {
+                label: "Widgets",
+                items: [{ autogenerate: { directory: "displays/widgets" } }],
+              },
+              {
+                label: "Embedded Systems",
+                items: [{ autogenerate: { directory: "displays/embedded" } }],
+              },
+              {
+                label: "High-definition",
+                items: [{ autogenerate: { directory: "displays/hd" } }],
+              },
+              {
+                label: "Video Graphics Array",
+                items: [{ autogenerate: { directory: "displays/vga" } }],
+              },
+              {
+                label: "Extended Graphics Array",
+                items: [{ autogenerate: { directory: "displays/xga" } }],
+              },
+            ]
+          },
+        ]),
       ],
       customCss: ["./app/styles/starlight.css"],
       components: {
@@ -100,6 +216,7 @@ export default defineConfig({
         PageSidebar: './app/components/starlight/PageSidebar.astro',
         PageTitle: './app/components/starlight/PageTitle.astro',
         Search: './app/components/starlight/Search.astro',
+        Sidebar: './app/components/starlight/Sidebar.astro',
         SocialIcons: './app/components/starlight/SocialIcons.astro',
         ThemeSelect: './app/components/starlight/ThemeSelect.astro',
       },

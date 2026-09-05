@@ -3,6 +3,7 @@ import Code from "./Code.astro";
 import ColorPreview from "./ColorPreview";
 import ComponentPreview from "./ComponentPreview.astro";
 import CursorPreview from "./CursorPreview";
+import DisplayPreview from "./DisplayPreview";
 import EmojiPreview from "./EmojiPreview";
 import FlagPreview from "./FlagPreview";
 import FontPreview from "./FontPreview";
@@ -21,6 +22,7 @@ export {
   ColorPreview,
   ComponentPreview,
   CursorPreview,
+  DisplayPreview,
   EmojiPreview,
   FlagPreview,
   FontPreview,

@@ -6,7 +6,7 @@ sidebar:
 ---
 import { LinkCard } from "~/components";
 import { lists } from "~/lib/components";
-import { routeFromRegistryItem } from "~/lib/utils";
+import { toRouteId } from "~/lib/registry";
 
 ## Layout
 > <p className="text-muted-foreground">How do I organize the interface?</p>
@@ -16,7 +16,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 
   {lists.layout.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "layout")} 
+      href={toRouteId(item.name, "layout")} 
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -32,7 +32,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 
   {lists.interaction.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "interaction")} 
+      href={toRouteId(item.name, "interaction")} 
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -48,7 +48,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 
   {lists.navigation.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "navigation")} 
+      href={toRouteId(item.name, "navigation")} 
       title={item.title ?? item.name}
       description={item.description}
     >
@@ -64,7 +64,7 @@ import { routeFromRegistryItem } from "~/lib/utils";
 
   {lists.content.map(item => (
     <LinkCard 
-      href={routeFromRegistryItem(item.name, "content")} 
+      href={toRouteId(item.name, "content")} 
       title={item.title ?? item.name}
       description={item.description}
     >

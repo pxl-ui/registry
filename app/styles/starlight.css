@@ -98,6 +98,7 @@
   --pixel-size-sm: 1px;
   --pixel-size-md: 2px;
   --pixel-size-lg: 4px;
+  --pixel-size-xl: 8px;
 
   --background-image-chrome: linear-gradient(
     to bottom,
@@ -339,40 +340,40 @@ body {
 }
 
 .sidebar-pane {
-  li {
-    @apply mx-0 my-3 md:my-0 border-s-0;
-    & > a {
-      @apply py-[4.2px];
+  .top-level {
+    li {
+      @apply mx-0 my-3 md:my-0 border-s-0;
+      & > a {
+        @apply py-[4.2px];
+      }
+
+      a[aria-current="page"],
+      a:hover {
+        @apply border-none shadow-none pixel-border bg-muted pixel-color-muted text-foreground;
+      }
+
+      a span,
+      .group-label span {
+        @apply font-normal text-2xl md:text-xs;
+      }
+
+      a span {
+        @apply text-foreground;
+      }
+
+      .group-label span {
+        @apply text-xs text-muted-foreground;
+      }
+
+      summary svg {
+        @apply hidden;
+      }
     }
 
-    a[aria-current="page"] {
-      @apply border-none shadow-none pixel-border bg-muted pixel-color-muted text-foreground;
+    details {
+      @apply mt-2;
     }
 
-    a span,
-    .group-label span {
-      @apply font-normal text-2xl md:text-xs;
-    }
-
-    a span {
-      @apply text-foreground;
-    }
-
-    .group-label span {
-      @apply text-xs text-muted-foreground;
-    }
-
-    summary svg {
-      @apply hidden;
-    }
-  }
-
-  details {
-    @apply mt-2;
-  }
-
-  .top-level > li:nth-child(1 of :has(> details)) > details {
-    @apply mt-4;
   }
 }
 

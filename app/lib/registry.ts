@@ -5,20 +5,39 @@ import type { LinkHTMLAttributes } from "./starlight/schemas/sidebar";
 import { url } from "./utils";
 
 /** Registry item meta kinds */
-type Kind = "background" | "color" | "font" | "icon" | "component" | "widget";
+type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "widget";
+type ComponentKind = "content" | "interaction" | "layout" | "navigation";
+type DisplayKind = "embedded" | "hd" | "vga" | "widget" | "xga";
 
 const KIND_CATEGORIES = {
   background: "background",
   color: "color-palette",
+  display: "displays",
   icon: "icons",
   font: "font-family",
   widget: "widgets",
 } satisfies Partial<Record<Kind, string>>;
 
+const COMPONENT_KIND_CATEGORIES = {
+  content: "content",
+  interaction: "interaction",
+  layout: "layout",
+  navigation: "navigation",
+} satisfies Partial<Record<ComponentKind, string>>;
+
+const DISPLAY_KIND_CATEGORIES = {
+  embedded: "displays-embedded",
+  hd: "displays-hd",
+  vga: "displays-vga",
+  widget: "displays-widget",
+  xga: "displays-xga"
+} satisfies Partial<Record<DisplayKind, string>>;
+
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   backgrounds: { prefix: "backgrounds-" },
   colors: { prefix: "colors-" },
-  fonts: { prefix: "fonts-" },
+  displays: { prefix: "displays/" },
+  typography: { prefix: "fonts-" },
   icons: { prefix: "icons-" },
   components: {},
   layout: {},
@@ -40,6 +59,11 @@ export type RegistryItem = {
   description?: string;
   author?: string;
   categories?: string[];
+  cssVars?: {
+    theme?: Record<string, string>;
+    light?: Record<string, string>;
+    dark?: Record<string, string>;
+  };
   dependencies?: string[];
   registryDependencies?: string[];
   files?: {
@@ -152,7 +176,7 @@ function kind(itemName: string): Kind {
   }
 
   if (!item.categories || item.categories.length === 0) {
-    return "component";
+    throw new Error(`Item "${itemName}" has no categories`);
   }
 
   for (const [kind, category] of Object.entries(KIND_CATEGORIES)) {
@@ -162,6 +186,46 @@ function kind(itemName: string): Kind {
   }
 
   return "component";
+}
+
+function componentKind(itemName: string): ComponentKind {
+  const item = registry.get(itemName);
+
+  if (!item) {
+    throw new Error(`Item "${itemName}" not found`);
+  }
+
+  if (!item.categories || item.categories.length === 0) {
+    throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`);
+  }
+
+  for (const [kind, category] of Object.entries(COMPONENT_KIND_CATEGORIES)) {
+    if (item.categories?.includes(category)) {
+      return kind as ComponentKind;
+    }
+  }
+
+  throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
+}
+
+function displayKind(itemName: string): DisplayKind {
+  const item = registry.get(itemName);
+
+  if (!item) {
+    throw new Error(`Item "${itemName}" not found`);
+  }
+
+  if (!item.categories || item.categories.length === 0) {
+    throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`);
+  }
+
+  for (const [kind, category] of Object.entries(DISPLAY_KIND_CATEGORIES)) {
+    if (item.categories?.includes(category)) {
+      return kind as DisplayKind;
+    }
+  }
+
+  throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
 }
 
 /**
@@ -174,24 +238,11 @@ function basename(itemName: string) {
     throw new Error(`Item "${itemName}" not found`);
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.background)) {
-    return itemName.replace("backgrounds-", "");
-  }
-
-  if (item.categories?.includes(KIND_CATEGORIES.color)) {
-    return itemName.replace("colors-", "");
-  }
-
-  if (item.categories?.includes(KIND_CATEGORIES.icon)) {
-    return itemName
-      .replace("icons-", "")
-      .replace("flags-", "")
-      .replace("cursors-", "");
-  }
-
-  if (item.categories?.includes(KIND_CATEGORIES.font)) {
-    return itemName.replace("fonts-", "");
-  }
+  if (item.categories?.includes(KIND_CATEGORIES.background)) return itemName.replace("backgrounds-", "");
+  if (item.categories?.includes(KIND_CATEGORIES.display)) return itemName.replace("displays/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.color)) return itemName.replace("colors-", "");
+  if (item.categories?.includes(KIND_CATEGORIES.icon)) return itemName.replace("icons-", "").replace("flags-", "").replace("cursors-", "");
+  if (item.categories?.includes(KIND_CATEGORIES.font)) return itemName.replace("fonts-", "");
 
   return itemName;
 }
@@ -218,20 +269,28 @@ function toRouteId(itemName: string) {
   const baseName = basename(itemName);
   const itemKind = kind(itemName);
 
-  if (itemKind === "background") {
-    return url(`backgrounds/${baseName}`);
+  if (itemKind === "background") return url(`backgrounds/patterns/${baseName}`);
+  if (itemKind === "color") return url(`colors/palettes/${baseName}`);
+  if (itemKind === "font") return url(`typography/fonts/${baseName}`);
+  if (itemKind === "icon") return url(`icons/packs/${baseName}`);
+
+  if (itemKind === "component") {
+    const itemComponentKind = componentKind(itemName);
+    
+    if (itemComponentKind === "content") return url(`components/content/${baseName}`);
+    if (itemComponentKind === "interaction") return url(`components/interaction/${baseName}`);
+    if (itemComponentKind === "layout") return url(`components/layout/${baseName}`);
+    if (itemComponentKind === "navigation") return url(`components/navigation/${baseName}`);
   }
 
-  if (itemKind === "color") {
-    return url(`colors/${baseName}`);
-  }
-
-  if (itemKind === "font") {
-    return url(`fonts/${baseName}`);
-  }
-
-  if (itemKind === "icon") {
-    return url(`icons/${baseName}`);
+  if (itemKind === "display") {
+    const itemDisplayKind = displayKind(itemName);
+    
+    if (itemDisplayKind === "embedded") return url(`displays/embedded/${baseName}`);
+    if (itemDisplayKind === "hd") return url(`displays/hd/${baseName}`);
+    if (itemDisplayKind === "vga") return url(`displays/vga/${baseName}`);
+    if (itemDisplayKind === "widget") return url(`displays/widget/${baseName}`);
+    if (itemDisplayKind === "xga") return url(`displays/xga/${baseName}`);
   }
 
   // TODO: Implement component subcategories
