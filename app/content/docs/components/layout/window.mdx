@@ -1,0 +1,34 @@
+---
+title: Window
+---
+import { Callout, ComponentPreview, Install } from "~/components";
+import { url as resolveUrl } from '~/lib/utils';
+
+<ComponentPreview item="window" />
+
+## Installation
+
+<Install item="window" />
+
+## Usage
+
+```tsx
+import { Window } from "@/components/ui/pxl/window"
+```
+
+```tsx
+<WindowContainer className="w-full h-full border border-border border-dashed rounded-2xl flex-1 min-h-0">
+  <Window
+    title={w.title}
+    initialX={w.x}
+    initialY={w.y}
+    initialWidth={w.w}
+    initialHeight={w.h}
+    onClose={() =>
+      setWindows((prev) => prev.filter((x) => x.id !== w.id))
+    }
+  >
+    Content
+  </Window>
+</WindowContainer>
+```

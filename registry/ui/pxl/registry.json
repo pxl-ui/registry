@@ -807,6 +807,21 @@
           "target": "@ui/pxl/widget-area.tsx"
         }
       ]
+    },
+    {
+      "name": "window",
+      "type": "registry:component",
+      "title": "Window",
+      "description": "A draggable, resizable window inside a container.",
+      "author": "Asanshay (https://ds.asanshay.com/window)",
+      "categories": ["pxl-ui", "components", "ui", "layout"],
+      "files": [
+        {
+          "path": "window.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/window.tsx"
+        }
+      ]
     }
   ]
 }
