@@ -6,17 +6,16 @@ export default defineEcConfig({
   plugins: [pluginLineNumbers()],
   themes: ["vitesse-dark", "vitesse-light"],
   shiki: {
-    bundledLangs: ["sh", "bash", "typescript", "tsx"],
+    bundledLangs: [
+      "bash",
+      "css",
+      "html",
+      "sh",
+      "tsx",
+      "typescript",
+    ],
   },
   defaultProps: {
-    showLineNumbers: false,
-    overridesByLang: {
-      "sh": {
-        showLineNumbers: false,
-      },
-      "text": {
-        showLineNumbers: false,
-      },
-    },
+    showLineNumbers: false
   },
 });
