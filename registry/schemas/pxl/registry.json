@@ -1,0 +1,197 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/schemas",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "schemas/feeds",
+      "type": "registry:component",
+      "title": "Feeds",
+      "description": "Zod types and schemas for RSS & Atom feeds.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "feeds/acast.ts",
+          "target": "@lib/pxl/schemas/feeds/acast.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/admin.ts",
+          "target": "@lib/pxl/schemas/feeds/admin.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/app.ts",
+          "target": "@lib/pxl/schemas/feeds/app.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/arxiv.ts",
+          "target": "@lib/pxl/schemas/feeds/arxiv.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/atom.ts",
+          "target": "@lib/pxl/schemas/feeds/atom.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/blogchannel.ts",
+          "target": "@lib/pxl/schemas/feeds/blogchannel.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/cc.ts",
+          "target": "@lib/pxl/schemas/feeds/cc.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/content.ts",
+          "target": "@lib/pxl/schemas/feeds/content.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/creativecommons.ts",
+          "target": "@lib/pxl/schemas/feeds/creativecommons.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/dc.ts",
+          "target": "@lib/pxl/schemas/feeds/dc.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/dcterms.ts",
+          "target": "@lib/pxl/schemas/feeds/dcterms.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/feedpress.ts",
+          "target": "@lib/pxl/schemas/feeds/feedpress.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/geo.ts",
+          "target": "@lib/pxl/schemas/feeds/geo.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/georss.ts",
+          "target": "@lib/pxl/schemas/feeds/georss.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/googleplay.ts",
+          "target": "@lib/pxl/schemas/feeds/googleplay.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/index.ts",
+          "target": "@lib/pxl/schemas/feeds/index.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/itunes.ts",
+          "target": "@lib/pxl/schemas/feeds/itunes.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/media.ts",
+          "target": "@lib/pxl/schemas/feeds/media.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/opensearch.ts",
+          "target": "@lib/pxl/schemas/feeds/opensearch.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/opml.ts",
+          "target": "@lib/pxl/schemas/feeds/opml.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/pingback.ts",
+          "target": "@lib/pxl/schemas/feeds/pingback.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/podcast.ts",
+          "target": "@lib/pxl/schemas/feeds/podcast.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/prism.ts",
+          "target": "@lib/pxl/schemas/feeds/prism.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/podcast.ts",
+          "target": "@lib/pxl/schemas/feeds/podcast.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/prism.ts",
+          "target": "@lib/pxl/schemas/feeds/prism.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/psc.ts",
+          "target": "@lib/pxl/schemas/feeds/psc.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/rawvoice.ts",
+          "target": "@lib/pxl/schemas/feeds/rawvoice.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/rss.ts",
+          "target": "@lib/pxl/schemas/feeds/rss.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/slash.ts",
+          "target": "@lib/pxl/schemas/feeds/slash.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/source.ts",
+          "target": "@lib/pxl/schemas/feeds/source.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/spotify.ts",
+          "target": "@lib/pxl/schemas/feeds/spotify.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/sy.ts",
+          "target": "@lib/pxl/schemas/feeds/sy.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/thr.ts",
+          "target": "@lib/pxl/schemas/feeds/thr.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/trackback.ts",
+          "target": "@lib/pxl/schemas/feeds/trackback.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/wfw.ts",
+          "target": "@lib/pxl/schemas/feeds/wfw.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "feeds/yt.ts",
+          "target": "@lib/pxl/schemas/feeds/yt.ts"
+        }
+      ]
+    }
+  ]
+}
