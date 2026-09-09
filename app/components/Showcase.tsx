@@ -173,7 +173,6 @@ function KeyboardWidget() {
               enableKeyNavigation
               keyboardRef={keyboard}
               onChange={onKbChange}
-              onSubmit={() => console.log("onSubmit")}
             />
           </CardContent>
         </Card>
@@ -291,7 +290,6 @@ function DialogueBoxWidget() {
         <DialogueMessage
           className="h-[2lh]"
           text="A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it."
-          onEnd={() => console.log("onEnd")}
         />
         <DialoguePortrait
           className="bg-primary"
