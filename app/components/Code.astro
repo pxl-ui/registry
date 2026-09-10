@@ -15,7 +15,7 @@ export type Props = {
 const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 , title} = Astro.props;
 
 ---
-{!collapsed && (
+{!collapsed && code && (
   <Code 
 		title={title}
 		code={code} 
@@ -23,7 +23,7 @@ const { class: className, code, collapsed, lang = "tsx", collapsedHeight = 110 ,
 		showLineNumbers />
 )}
 
-{collapsed && (
+{collapsed && code && (
   <div 
     data-slot="code-preview"
     data-collapsed-height={collapsedHeight}
