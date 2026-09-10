@@ -9,6 +9,9 @@ const lists = {
   texts: filter({
     categories: ["font-text"]
   }),
+  serifs: filter({
+    categories: ["font-serif"]
+  }),
   monospaces: filter({
     categories: ["font-monospace"]
   }),

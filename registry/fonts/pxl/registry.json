@@ -52,15 +52,15 @@
       "title": "Coral Pixels",
       "description": "Coral Pixels is a color font inspired by subpixel rendering techniques.",
       "author": "Tanukizamurai (https://github.com/tanukifont/Coral-Pixels)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-serif"],
       "meta": {
         "order": 9
       },
       "font": {
-        "family": "'Coral Pixels', sans-serif",
+        "family": "'Coral Pixels', serif",
         "provider": "google",
         "import": "CoralPixels",
-        "variable": "--font-sans",
+        "variable": "--font-serif",
         "dependency": "@fontsource/coral-pixels"
       }
     },
@@ -97,6 +97,34 @@
         "import": "GeistPixel",
         "variable": "--font-sans",
         "dependency": "@fontsource/geist-pixel"
+      }
+    },
+    {
+      "name": "fonts-illusion-book",
+      "type": "registry:style",
+      "title": "Illusion Book",
+      "description": "Illusion Book is a pixel typeface based on the size of 12*12 px. The design concept of the font is to show the elegance of serifs in pixel style, while also being highly readable and suitable for large blocks of text.",
+      "docs": "Download font from https://steven-liu.itch.io/illusion-book",
+      "author": "Steven Liu (https://steven-liu.itch.io)",
+      "categories": ["pxl-ui", "font-family", "font-serif"],
+      "meta": {
+        "license": "OFL 1.1 (https://steven-liu.itch.io/illusion-book)",
+        "order": 3
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "illusion-book.css",
+          "target": "@components/fonts/pxl/illusion-book.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/illusion-book.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-serif": "'Illusion Book', serif"
+        }
       }
     },
     {
@@ -224,7 +252,7 @@
       "title": "Pixel Serif",
       "description": "Pixel Art Serif Font by @ReffPixels (Pablo Rodriguez)",
       "author": "ReffPixels (https://reffpixels.itch.io/)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-serif"],
       "meta": {
         "license": "Creative Commons Attribution-NoDerivatives 4.0 International License",
         "order": 3
@@ -241,7 +269,7 @@
       },
       "cssVars": {
         "theme": {
-          "font-sans": "'Pixel Serif', sans-serif"
+          "font-serif": "'Pixel Serif', serif"
         }
       }
     },
@@ -290,7 +318,7 @@
       "author": "dithernaut (https://dithernaut.com/posts/pixel-scaling/)",
       "categories": ["pxl-ui", "font-family", "font-text"],
       "meta": {
-        "order": 2
+        "order": 4
       },
       "files": [
         {

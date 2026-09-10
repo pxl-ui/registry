@@ -36,6 +36,16 @@ export default defineConfig({
             rel: "preload",
             as: "font",
             crossorigin: "anonymous",
+            href: `${baseUrl ?? ""}/fonts/Illusion_Book_Regular.ttf`,
+            type: "font/ttf"
+          }
+        },
+        {
+          tag: "link",
+          attrs: {
+            rel: "preload",
+            as: "font",
+            crossorigin: "anonymous",
             href: `${baseUrl ?? ""}/fonts/Pixel_Digivolve.otf`,
             type: "font/otf"
           }

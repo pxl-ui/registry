@@ -141,6 +141,14 @@
   --text-lg: 1.125rem; /** 18px **/
 }
 
+@utility font-serif {
+  --font-size-adjust: 0.6;
+  --text-2xs: 0.65rem;
+
+  font-family: var(--font-serif);
+  font-size-adjust: var(--font-size-adjust);
+}
+
 @utility font-mono {
   --font-size-adjust: 0.54;
 

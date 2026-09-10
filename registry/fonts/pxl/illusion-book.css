@@ -1,0 +1,10 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Illusion Book";
+    src: url("/fonts/Illusion_Book_Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+}

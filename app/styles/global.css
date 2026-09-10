@@ -9,6 +9,7 @@
 @import "shadcn/tailwind.css";
 
 @import "@/components/fonts/pxl/able-5.css";
+@import "@/components/fonts/pxl/illusion-book.css";
 @import "@/components/fonts/pxl/monogram.css";
 @import "@/components/fonts/pxl/pixel-digivolve.css";
 
@@ -46,8 +47,9 @@
   /*#region Shadcn*/
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-heading: "Pixel Digivolve", "Inter Variable", sans-serif;
-  --font-sans: "Able 5", "Inter Variable", sans-serif;
+  --font-heading: "Pixel Digivolve", sans-serif;
+  --font-sans: "Able 5", sans-serif;
+  --font-serif: "Illusion Book", serif;
   --font-mono: "Monogram Extended", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
