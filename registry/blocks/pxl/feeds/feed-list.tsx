@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemTitle,
 } from "@/components/ui/pxl/item";
-import type { Atom, Rss } from "@/lib/schemas/pxl/feeds";
+import type { Atom, Rdf, Rss } from "@/lib/schemas/pxl/feeds";
 import { cn } from "@/lib/utils";
 
 function FeedList({ ...props }: ComponentProps<typeof ItemGroup>) {
@@ -83,6 +83,38 @@ function AtomFeedListItemDescription({
   );
 }
 FeedListItemDescription.Atom = AtomFeedListItemDescription;
+
+function RdfFeedListItemTitle({
+  item,
+  ...props
+}: ComponentProps<typeof ItemTitle> & { item: Rdf.Item }) {
+  const title = useMemo(() => {
+    return item.title ?? "";
+  }, [item]);
+
+  return <FeedListItemTitle {...props}>{title}</FeedListItemTitle>;
+}
+FeedListItemTitle.Rdf = RdfFeedListItemTitle;
+
+function RdfFeedListItemDescription({
+  item,
+  ...props
+}: ComponentProps<typeof ItemTitle> & { item: Rdf.Item }) {
+  const description = useMemo(() => {
+    return item.content?.encoded ??  item.description;
+  }, [item]);
+
+  return (description && 
+    <FeedListItemDescription
+      {...props}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
+      dangerouslySetInnerHTML={{
+        __html: description,
+      }}
+    />
+  );
+}
+FeedListItemDescription.Rdf = RdfFeedListItemDescription;
 
 function RssFeedListItemTitle({
   item,

@@ -6,7 +6,7 @@ import {
   ItemDescription,
   ItemTitle,
 } from "@/components/ui/pxl/item";
-import type { Atom, Rss } from "@/lib/schemas/pxl/feeds";
+import type { Atom, Rdf, Rss } from "@/lib/schemas/pxl/feeds";
 import { cn } from "@/lib/utils";
 
 function FeedGrid({ className, ...props }: ComponentProps<"ul">) {
@@ -106,6 +106,38 @@ function AtomFeedGridItemDescription({
   );
 }
 FeedGridItemDescription.Atom = AtomFeedGridItemDescription;
+
+function RdfFeedGridItemTitle({
+  item,
+  ...props
+}: ComponentProps<typeof ItemTitle> & { item: Rdf.Item }) {
+  const title = useMemo(() => {
+    return item.title ?? "";
+  }, [item]);
+
+  return <FeedGridItemTitle {...props}>{title}</FeedGridItemTitle>;
+}
+FeedGridItemTitle.Rdf = RdfFeedGridItemTitle;
+
+function RdfFeedGridItemDescription({
+  item,
+  ...props
+}: ComponentProps<typeof ItemTitle> & { item: Rdf.Item }) {
+  const description = useMemo(() => {
+    return item.content?.encoded ??  item.description;
+  }, [item]);
+
+  return (description && 
+    <FeedGridItemDescription
+      {...props}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
+      dangerouslySetInnerHTML={{
+        __html: description,
+      }}
+    />
+  );
+}
+FeedGridItemDescription.Rdf = RdfFeedGridItemDescription;
 
 function RssFeedGridItemTitle({
   item,

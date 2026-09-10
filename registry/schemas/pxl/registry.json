@@ -148,6 +148,11 @@
         },
         { 
           "type": "registry:file",
+          "path": "feeds/rdf.ts",
+          "target": "@lib/pxl/schemas/feeds/rdf.ts"
+        },
+        { 
+          "type": "registry:file",
           "path": "feeds/rss.ts",
           "target": "@lib/pxl/schemas/feeds/rss.ts"
         },
