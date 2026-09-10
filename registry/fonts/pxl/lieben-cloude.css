@@ -1,0 +1,17 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Lieben Cloude";
+    src: url("/fonts/Lieben_Cloude.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Lieben Cloude";
+    src: url("/fonts/Lieben_Cloude_Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+}

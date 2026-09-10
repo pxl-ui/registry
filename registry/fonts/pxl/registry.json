@@ -118,6 +118,34 @@
       }
     },
     {
+      "name": "fonts-lieben-cloude",
+      "type": "registry:style",
+      "title": "Lieben Cloude",
+      "description": "Cute and [squary] typeface",
+      "docs": "Download font from https://rmocci.itch.io/cloude",
+      "author": "rmocci (https://rmocci.itch.io/)",
+      "categories": ["pxl-ui", "font-family", "font-text"],
+      "meta": {
+        "license": "OFL 1.1 (https://rmocci.itch.io/cloude)",
+        "order": 2
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "lieben-cloude.css",
+          "target": "@components/fonts/pxl/lieben-cloude.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/lieben-cloude.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Lieben Cloude', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts-micro-5",
       "type": "registry:font",
       "title": "Micro 5",

@@ -381,3 +381,9 @@
     text-underline-offset: calc(var(--qs-px) * 3);
   }
 }
+
+
+.font-quanta-strike {
+  --font-size-adjust: 0.55;
+  font-family: "quanta-strike-12", serif;
+}  

@@ -97,18 +97,18 @@
 }
 
 @utility text-4xs {
-  font-size: var(--text-4xs);
-  line-height: var(--tw-leading, var(--text-4xs--line-height));
+  font-size: var(--text-4xs, 0.375rem);
+  line-height: var(--tw-leading, var(--text-4xs--line-height, calc(1 / 0.375)));
 }
 
 @utility text-3xs {
-  font-size: var(--text-3xs);
-  line-height: var(--tw-leading, var(--text-3xs--line-height));
+  font-size: var(--text-3xs, 0.5rem);
+  line-height: var(--tw-leading, var(--text-3xs--line-height, calc(1 / 0.5)));
 }
 
 @utility text-2xs {
-  font-size: var(--text-2xs);
-  line-height: var(--tw-leading, var(--text-2xs--line-height));
+  font-size: var(--text-2xs, 0.625rem);
+  line-height: var(--tw-leading, var(--text-2xs--line-height, calc(1 / 0.625)));
 }
 
 @utility font-heading {
