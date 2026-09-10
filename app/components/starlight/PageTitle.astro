@@ -2,18 +2,15 @@
 
 import { buttonVariants } from '@/components/ui/pxl/button';
 import { cn } from '@/lib/utils';
-import { pages, registry } from "~/lib/registry";
-import { registryItemFromRouteId } from "~/lib/utils";
+import { fromRouteId, pages } from "~/lib/registry";
+import { type Credits, creditsSchema } from "~/lib/starlight/schemas/credits";
 
 import Icon from './Icon.astro';
 
-const itemName = registryItemFromRouteId(Astro.locals.starlightRoute.id); 
-const item = itemName ? registry.get(itemName) : null;
+const item = fromRouteId(Astro.locals.starlightRoute.id); 
 
 const title = item?.title ?? Astro.locals.starlightRoute.entry.data.title;
 const description = item?.description ?? Astro.locals.starlightRoute.entry.data.description;
-
-import { type Credits, creditsSchema } from "~/lib/starlight/schemas/credits";
 
 let author: Credits | undefined;
 let license: Credits | undefined;
@@ -28,8 +25,8 @@ if (item?.meta?.license) {
 
 let { pagination } = Astro.locals.starlightRoute;
 
-if (itemName && !pagination.prev && !pagination.next) {
-  pagination = pages(itemName);
+if (item?.name && !pagination.prev && !pagination.next) {
+  pagination = pages(item.name);
 }
 
 const { prev, next } = pagination;
