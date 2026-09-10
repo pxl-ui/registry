@@ -46,7 +46,7 @@ function FeedGridItemTitle({
 }: ComponentProps<typeof ItemTitle>) {
   return (
     <ItemTitle
-      className={cn("text-xs @5xs:text-sm @md:text-base", className)}
+      className={cn("font-serif font-bold text-xs @5xs:text-sm @md:text-base", className)}
       {...props}
     />
   );
@@ -59,7 +59,7 @@ function FeedGridItemDescription({
   return (
     <ItemDescription
       className={cn(
-        "text-2xs @5xs:text-xs @md:text-sm line-clamp-none max-h-20 overflow-hidden relative group-hover/item:overflow-auto group-hover/item:scrollbar-thin scrollbar-stable",
+        "font-serif text-2xs @5xs:text-xs @md:text-sm line-clamp-none max-h-20 overflow-hidden relative group-hover/item:overflow-auto group-hover/item:scrollbar-thin scrollbar-stable",
         className,
       )}
       {...props}

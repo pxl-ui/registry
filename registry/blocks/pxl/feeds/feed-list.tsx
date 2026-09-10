@@ -26,7 +26,7 @@ function FeedListItemTitle({
   className,
   ...props
 }: ComponentProps<typeof ItemTitle>) {
-  return <ItemTitle className={cn("text-base", className)} {...props} />;
+  return <ItemTitle className={cn("font-serif font-bold text-base", className)} {...props} />;
 }
 
 function FeedListItemDescription({
@@ -36,7 +36,7 @@ function FeedListItemDescription({
   return (
     <ItemDescription
       className={cn(
-        "text-sm line-clamp-none max-h-20 overflow-hidden relative group-hover/item:overflow-auto group-hover/item:scrollbar-thin scrollbar-stable",
+        "font-serif text-sm line-clamp-none max-h-20 overflow-hidden relative group-hover/item:overflow-auto group-hover/item:scrollbar-thin scrollbar-stable",
         className,
       )}
       {...props}
