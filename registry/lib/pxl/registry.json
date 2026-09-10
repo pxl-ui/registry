@@ -4,6 +4,20 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
+      "name": "lib/html",
+      "type": "registry:lib",
+      "title": "Html",
+      "description": "Html utilities",
+      "categories": ["pxl-ui", "html"],
+      "files": [
+        {
+          "type": "registry:lib",
+          "path": "html.ts",
+          "target": "@lib/pxl/html.ts"
+        }
+      ]
+    },
+    {
       "name": "sprite",
       "type": "registry:lib",
       "title": "Sprite",
