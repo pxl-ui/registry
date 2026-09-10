@@ -1,0 +1,45 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/blocks",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "feeds/feed-grid",
+      "type": "registry:component",
+      "title": "Feed Grid",
+      "description": "A grid of feed entries.",
+      "categories": ["pxl-ui", "blocks", "feeds"],
+      "registryDependencies": [
+        "pxl-ui/registry/lib/html",
+        "pxl-ui/registry/schemas/feeds",
+        "pxl-ui/registry/item"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "feeds/feed-grid.tsx",
+          "target": "@components/blocks/pxl/feeds/feed-grid.tsx"
+        }
+      ]
+    },
+    {
+      "name": "feeds/feed-list",
+      "type": "registry:component",
+      "title": "Feed List",
+      "description": "A list of feed entries.",
+      "categories": ["pxl-ui", "blocks", "feeds"],
+      "registryDependencies": [
+        "pxl-ui/registry/lib/html",
+        "pxl-ui/registry/schemas/feeds",
+        "pxl-ui/registry/item"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "feeds/feed-list.tsx",
+          "target": "@components/blocks/pxl/feeds/feed-list.tsx"
+        }
+      ]
+    }
+  ]
+}

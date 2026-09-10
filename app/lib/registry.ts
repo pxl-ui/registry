@@ -43,6 +43,7 @@ const WIDGET_KIND_CATEGORIES = {
 
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   backgrounds: { prefix: "backgrounds-" },
+  "blocks/feeds/": { prefix: "feeds/" },
   colors: { prefix: "colors-" },
   displays: { prefix: "displays/" },
   typography: { prefix: "fonts-" },
@@ -57,7 +58,9 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
 
 export type Registry = {
   name: string;
-  items: RegistryItem[];
+  homepage?: string;
+  include?: string[];
+  items?: RegistryItem[];
 };
 
 export type RegistryItem = {
@@ -106,7 +109,7 @@ const definitions = await Promise.all(
   }),
 );
 
-for (const include of root.include) {
+for (const include of ((root as Registry).include ?? [])) {
   const resolved = definitions.find((r) => r.path === `/${include}`);
 
   if (!resolved) {
@@ -116,7 +119,7 @@ for (const include of root.include) {
 
   const basePath = resolved.path.replace("registry.json", "");
 
-  for (const item of resolved.data.items) {
+  for (const item of (resolved.data.items ?? [])) {
     registry.set(item.name, item);
     if (item.files) {
       registryFiles.set(
@@ -131,7 +134,7 @@ for (const include of root.include) {
   }
 }
 
-for (const item of root.items) {
+for (const item of ((root as Registry).items ?? [])) {
   registry.set(item.name, item);
 }
 
@@ -369,8 +372,6 @@ function pages(itemName: string): {
     attrs: LinkHTMLAttributes;
   } | undefined;
   const itemKind = kind(itemName);
-
-  console.log(itemName, itemKind);
 
   if (!(itemKind in KIND_CATEGORIES)) {
     return {

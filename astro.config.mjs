@@ -103,6 +103,16 @@ export default defineConfig({
             ]
           },
           {
+            label: "Blocks",
+            link: "/blocks",
+            items: [
+              {
+                label: "Feeds",
+                items: [{ autogenerate: { directory: "blocks/feeds" } }],
+              }  
+            ]
+          },
+          {
             label: "Widgets",
             badge: "new",
             link: "/widgets/",
@@ -205,7 +215,7 @@ export default defineConfig({
           },
         ]),
       ],
-      customCss: ["./app/styles/starlight.css"],
+      customCss: ["./app/styles/global.css"],
       components: {
         Footer: './app/components/starlight/Footer.astro',
         Header: './app/components/starlight/Header.astro',
