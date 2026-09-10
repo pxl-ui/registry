@@ -122,6 +122,126 @@
   );
 }
 
+@utility pixel-shadow-x-* {
+  --pixel-shadow-x: --value(--pixel-size-*, [length], [*]);
+}
+ 
+@utility pixel-shadow-y-* {
+  --pixel-shadow-y: --value(--pixel-size-*, [length], [*]);
+}
+
+@utility pixel-shadow-offset-* {
+  --pixel-shadow-x: --value(--pixel-size-*, [length], [*]);
+  --pixel-shadow-y: --value(--pixel-size-*, [length], [*]);
+}
+
+
+ 
+@utility pixel-shadow {
+  --px: var(--pixel-size, 2px);
+  position: relative;
+  isolation: isolate;
+  box-decoration-break: clone;
+ 
+  clip-path: polygon(
+    0 var(--px),
+    var(--px) var(--px),
+    var(--px) 0,
+    calc(100% - var(--px)) 0,
+    calc(100% - var(--px)) var(--px),
+    100% var(--px),
+    100% calc(100% - var(--px)),
+    calc(100% - var(--px)) calc(100% - var(--px)),
+    calc(100% - var(--px)) 100%,
+    var(--px) 100%,
+    var(--px) calc(100% - var(--px)),
+    0 calc(100% - var(--px)),
+    0 var(--px)
+  );
+ 
+  &::after {
+    --px: var(--pixel-size, 2px);
+    position: absolute;
+    inset: 0;
+    z-index: -2; /* por debajo del ::before de pixel-border (-1) */
+    pointer-events: none;
+    content: "";
+    background: var(--pixel-color, var(--foreground));
+    transform: translate(
+      var(--pixel-shadow-x, var(--px)),
+      var(--pixel-shadow-y, var(--px))
+    );
+ 
+    clip-path: polygon(
+      0 var(--px),
+      var(--px) var(--px),
+      var(--px) 0,
+      calc(100% - var(--px)) 0,
+      calc(100% - var(--px)) var(--px),
+      100% var(--px),
+      100% calc(100% - var(--px)),
+      calc(100% - var(--px)) calc(100% - var(--px)),
+      calc(100% - var(--px)) 100%,
+      var(--px) 100%,
+      var(--px) calc(100% - var(--px)),
+      0 calc(100% - var(--px)),
+      0 var(--px)
+    );
+  }
+}
+
+@utility pixel-shadow-flat {
+  --px: var(--pixel-size, 2px);
+  box-shadow: var(--pixel-shadow-x, var(--px)) var(--pixel-shadow-y, var(--px)) 0
+    0 var(--pixel-color, var(--foreground));
+}
+
+@utility pixel-shadow-inset-x-* {
+  --pixel-inset-x: --value(--pixel-size-*, [length], [*]);
+}
+ 
+@utility pixel-shadow-inset-y-* {
+  --pixel-inset-y: --value(--pixel-size-*, [length], [*]);
+}
+ 
+@utility pixel-shadow-inset-offset-* {
+  --pixel-inset-x: --value(--pixel-size-*, [length], [*]);
+  --pixel-inset-y: --value(--pixel-size-*, [length], [*]);
+}
+
+@utility pixel-shadow-inset {
+  --px: var(--pixel-size, 2px);
+  /* Si el elemento ya usa pixel-border o pixel-rounded, este
+     box-shadow queda recortado por su clip-path: no hace falta
+     redibujar el polígono. */
+  box-shadow: inset var(--pixel-inset-x, var(--px)) var(--pixel-inset-y, var(--px))
+    0 0 var(--pixel-color, var(--border));
+}
+
+@utility pixel-bevel-light-* {
+  --pixel-bevel-light: --value(--color-*, [color]);
+}
+ 
+@utility pixel-bevel-dark-* {
+  --pixel-bevel-dark: --value(--color-*, [color]);
+}
+
+@utility pixel-bevel {
+  --px: var(--pixel-size, 2px);
+  box-shadow:
+    inset var(--px) var(--px) 0 0 var(--pixel-bevel-light, var(--foreground)),
+    inset calc(var(--px) * -1) calc(var(--px) * -1) 0 0
+      var(--pixel-bevel-dark, var(--border));
+}
+
+@utility pixel-bevel-pressed {
+  --px: var(--pixel-size, 2px);
+  box-shadow:
+    inset calc(var(--px) * -1) calc(var(--px) * -1) 0 0
+      var(--pixel-bevel-light, var(--foreground)),
+    inset var(--px) var(--px) 0 0 var(--pixel-bevel-dark, var(--border));
+}
+
 @utility px-border-sm {
   position: relative;
   isolation: isolate;
