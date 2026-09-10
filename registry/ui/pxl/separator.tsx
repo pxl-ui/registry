@@ -20,6 +20,7 @@ const separatorProps = cva("shrink-0", {
     border: {
       solid: "bg-current",
       dashed: "",
+      none: "",
     },
     variant: {
       default: "text-border",
