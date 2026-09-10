@@ -219,6 +219,34 @@
       }
     },
     {
+      "name": "fonts-not-jam-blackletter-16",
+      "type": "registry:style",
+      "title": "Not Jam Blackletter 16",
+      "description": "Not Jam Blackletter 16 is a 16px height blackletter font, perfect for old manuscripts, religious tomes or other antique texts.",
+      "docs": "Download font from https://not-jam.itch.io/not-jam-blackletter-13",
+      "author": "Not Jam (https://not-jam.itch.io)",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "CCO-1.0 (https://not-jam.itch.io/not-jam-blackletter-13)",
+        "order": 2
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "not-jam-blackletter-16.css",
+          "target": "@components/fonts/pxl/not-jam-blackletter-16.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/not-jam-blackletter-16.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Not Jam Blackletter 16', serif"
+        }
+      }
+    },
+    {
       "name": "fonts-pixel-digivolve",
       "type": "registry:style",
       "title": "Pixel Digivolve",

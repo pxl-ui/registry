@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/not-jam-blackletter-16.css";
+
+.font-not-jam-blackletter-16 {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Not Jam Blackletter 16', serif;
+  font-size-adjust: var(--font-size-adjust);
+}

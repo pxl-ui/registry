@@ -1,0 +1,10 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Not Jam Blackletter 16";
+    src: url("/fonts/Not_Jam_Blackletter_16.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+}
