@@ -4,7 +4,7 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "fonts-able-5",
+      "name": "fonts/able-5",
       "type": "registry:style",
       "title": "Able 5",
       "description": "A tiny font that supports hundreds of languages!",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "name": "fonts-bytesized",
+      "name": "fonts/bytesized",
       "type": "registry:font",
       "title": "Bytesized",
       "description": "A tiny 3x4 pixel font.",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "name": "fonts-coral-pixels",
+      "name": "fonts/coral-pixels",
       "type": "registry:font",
       "title": "Coral Pixels",
       "description": "Coral Pixels is a color font inspired by subpixel rendering techniques.",
@@ -65,7 +65,7 @@
       }
     },
     {
-      "name": "fonts-dotgothic16",
+      "name": "fonts/dotgothic16",
       "type": "registry:font",
       "title": "DotGothic16",
       "description": "Dotgothic 16 is based on the old 16x16 Gothic bitmap font that recreates the feel of pixel fonts from old video games, cell phones and computer screens on print.",
@@ -82,7 +82,7 @@
       }
     },
     {
-      "name": "fonts-geist-pixel",
+      "name": "fonts/geist-pixel",
       "type": "registry:font",
       "title": "Geist Pixel",
       "description": "Geist Pixel is a display typeface family of five pixel-based styles, each with a distinct visual character.",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "name": "fonts-illusion-book",
+      "name": "fonts/illusion-book",
       "type": "registry:style",
       "title": "Illusion Book",
       "description": "Illusion Book is a pixel typeface based on the size of 12*12 px. The design concept of the font is to show the elegance of serifs in pixel style, while also being highly readable and suitable for large blocks of text.",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "name": "fonts-jacquarda-bastarda-9",
+      "name": "fonts/jacquarda-bastarda-9",
       "type": "registry:font",
       "title": "Jacquarda Bastarda 9",
       "description": "Jacquarda Bastarda is an expanded revival typeface from a bastarda-esque Victorian needlepoint alphabet designed in Berlin by Heinrich Kuehn circa 1880.",
@@ -146,7 +146,7 @@
       }
     },
     {
-      "name": "fonts-lieben-cloude",
+      "name": "fonts/lieben-cloude",
       "type": "registry:style",
       "title": "Lieben Cloude",
       "description": "Cute and [squary] typeface",
@@ -174,7 +174,7 @@
       }
     },
     {
-      "name": "fonts-micro-5",
+      "name": "fonts/micro-5",
       "type": "registry:font",
       "title": "Micro 5",
       "description": "Micro 5 is a teeny-tiny typeface that can fit anywhere on your project.",
@@ -192,7 +192,7 @@
       }
     },
     {
-      "name": "fonts-monogram",
+      "name": "fonts/monogram",
       "type": "registry:style",
       "title": "Monogram",
       "description": "Elegant monospace pixel font",
@@ -219,7 +219,7 @@
       }
     },
     {
-      "name": "fonts-not-jam-blackletter-16",
+      "name": "fonts/not-jam-blackletter-16",
       "type": "registry:style",
       "title": "Not Jam Blackletter 16",
       "description": "Not Jam Blackletter 16 is a 16px height blackletter font, perfect for old manuscripts, religious tomes or other antique texts.",
@@ -247,7 +247,7 @@
       }
     },
     {
-      "name": "fonts-pixel-digivolve",
+      "name": "fonts/pixel-digivolve",
       "type": "registry:style",
       "title": "Pixel Digivolve",
       "description": "A simple ‘faux pixel’ face based loosely on the title logo from the classic “Digimon” series.",
@@ -275,7 +275,7 @@
       }
     },
     {
-      "name": "fonts-pixel-serif",
+      "name": "fonts/pixel-serif",
       "type": "registry:style",
       "title": "Pixel Serif",
       "description": "Pixel Art Serif Font by @ReffPixels (Pablo Rodriguez)",
@@ -302,7 +302,7 @@
       }
     },
     {
-      "name": "fonts-pixelify-sans",
+      "name": "fonts/pixelify-sans",
       "type": "registry:font",
       "title": "Pixelify Sans",
       "description": "Pixel display font. It works great for your retro party designs, game creation or pretty much anything that demands a “go back in time” vibe.",
@@ -320,7 +320,7 @@
       }
     },
     {
-      "name": "fonts-press-start-2p",
+      "name": "fonts/press-start-2p",
       "type": "registry:font",
       "title": "Press Start 2P",
       "description": "Press Start 2P is a bitmap font based on the font design from 1980s Namco arcade games. It works best at sizes of 8px, 16px and other multiples of 8.",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "name": "fonts-quanta-strike",
+      "name": "fonts/quanta-strike",
       "type": "registry:style",
       "title": "Quanta Strike",
       "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
@@ -360,7 +360,7 @@
       }
     },
     {
-      "name": "fonts-tiny5",
+      "name": "fonts/tiny5",
       "type": "registry:font",
       "title": "tiny5",
       "description": "tiny5 is a variable-width, 5-pixel font playing with the concept of least amount of information while producing both legible and aesthetically pleasing text.",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "name": "fonts-vt323",
+      "name": "fonts/vt323",
       "type": "registry:font",
       "title": "VT323",
       "description": "This font was created from the glyphs of the DEC VT320 text terminal.",
