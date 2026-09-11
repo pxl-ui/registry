@@ -4,7 +4,7 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "colors-arne-16",
+      "name": "colors/arne-16",
       "type": "registry:theme",
       "title": "Arne 16",
       "author": "Arne (http://androidarts.com/palette/16pal.htm)",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "name": "colors-catppuccin-frappe",
+      "name": "colors/catppuccin-frappe",
       "type": "registry:theme",
       "title": "Catppuccin Frappe",
       "description": "Soothing pastel theme for the high-spirited!",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "name": "colors-catppuccin-latte",
+      "name": "colors/catppuccin-latte",
       "type": "registry:theme",
       "title": "Catppuccin Latte",
       "description": "Soothing pastel theme for the high-spirited!",
@@ -161,7 +161,7 @@
       }
     },
     {
-      "name": "colors-catppuccin-macchiato",
+      "name": "colors/catppuccin-macchiato",
       "type": "registry:theme",
       "title": "Catppuccin Macchiato",
       "description": "Soothing pastel theme for the high-spirited!",
@@ -205,7 +205,7 @@
       }
     },
     {
-      "name": "colors-catppuccin-mocha",
+      "name": "colors/catppuccin-mocha",
       "type": "registry:theme",
       "title": "Catppuccin Mocha",
       "description": "Soothing pastel theme for the high-spirited!",
@@ -249,7 +249,7 @@
       }
     },
     {
-      "name": "colors-dmg-01",
+      "name": "colors/dmg-01",
       "type": "registry:theme",
       "title": "DMG-01",
       "description": "DMG-01 is the official model code for the original Nintendo Game Boy, launched in Japan in April 1989",
@@ -318,7 +318,7 @@
       }
     },
     {
-      "name": "colors-fantasy-24",
+      "name": "colors/fantasy-24",
       "type": "registry:theme",
       "title": "Fantasy 24",
       "author": "Gabriel C (https://twitter.com/cigsandflowers)",
@@ -391,7 +391,7 @@
       }
     },
     {
-      "name": "colors-flexoki",
+      "name": "colors/flexoki",
       "type": "registry:theme",
       "title": "Flexoki",
       "description": "Flexoki is an inky color scheme for prose and code designed for reading and writing on digital screens. It is inspired by analog inks and warm shades of paper.",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "name": "colors-flexoki-compat",
+      "name": "colors/flexoki-compat",
       "type": "registry:theme",
       "title": "Flexoki Compat",
       "description": "Flexoki is an inky color scheme for prose and code designed for reading and writing on digital screens. It is inspired by analog inks and warm shades of paper.",
@@ -534,7 +534,7 @@
       }
     },
     {
-      "name": "colors-final-menu",
+      "name": "colors/final-menu",
       "type": "registry:theme",
       "title": "Final Menu",
       "description": "A base palette inspired by Final Fantasy menus",
@@ -590,7 +590,7 @@
       }
     },
     {
-      "name": "colors-duel",
+      "name": "colors/duel",
       "type": "registry:theme",
       "title": "DUEL",
       "description": "A 256 colors palette divided in 32 groups.",
@@ -663,7 +663,7 @@
       }
     },
     {
-      "name": "colors-duel-compat",
+      "name": "colors/duel-compat",
       "type": "registry:theme",
       "title": "DUEL Compat",
       "description": "A 256 colors palette divided in 32 groups.",
@@ -734,7 +734,7 @@
       }
     },
     {
-      "name": "colors-gothic-bit",
+      "name": "colors/gothic-bit",
       "type": "registry:theme",
       "title": "Gothic Bit",
       "description": "A dark and moody palette with gothic aesthetic to it.",
@@ -787,7 +787,7 @@
       }
     },
     {
-      "name": "colors-justparchment8",
+      "name": "colors/justparchment8",
       "type": "registry:theme",
       "title": "JustParchment8",
       "description": "A small 8 colour palette made for paper and ink / parchment style designs. To be used for things like old scrolls and maps and to give the feel of old fasioned ink on parchment drawings.",
@@ -840,7 +840,7 @@
       }
     },
     {
-      "name": "colors-nestopia",
+      "name": "colors/nestopia",
       "type": "registry:theme",
       "title": "NEStopia",
       "description": "The default palette of the NES emulator NEStopia, taken from a screenshot showing all its possible colors at once.",
@@ -910,7 +910,7 @@
       }
     },
     {
-      "name": "colors-paperback",
+      "name": "colors/paperback",
       "type": "registry:theme",
       "title": "Paperback",
       "description": "A cool off-white and a warm off-black to evoke the pages of a manga magazine.",
@@ -963,7 +963,7 @@
       }
     },
     {
-      "name": "colors-pico-8",
+      "name": "colors/pico-8",
       "type": "registry:theme",
       "title": "PICO-8",
       "description": "The PICO-8 is a virtual video game console created by Lexaloffle Games.",
@@ -1035,7 +1035,7 @@
       }
     },
     {
-      "name": "colors-tailwind",
+      "name": "colors/tailwind",
       "type": "registry:theme",
       "title": "Tailwind",
       "description": "The Tailwind 4.x official palette in case you need to use it or modify it.",
@@ -1136,7 +1136,7 @@
       }
     },
     {
-      "name": "colors-vines-flexible-linear-ramps",
+      "name": "colors/vines-flexible-linear-ramps",
       "type": "registry:theme",
       "title": "Vine's Flexible Linear Ramps",
       "author": "Vine (https://x.com/VINE2D)",
