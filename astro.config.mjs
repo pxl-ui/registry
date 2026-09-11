@@ -111,8 +111,50 @@ export default defineConfig({
                   },
                   {
                     label: "Feeds",
-                    link: "/schemas/feeds"
+                    items: [
+                      { label: "Atom", link: "/schemas/atom"},
+                      { label: "Rdf", link: "/schemas/rdf"},
+                      { label: "Rss", link: "/schemas/rss"},
+                      { label: "Opml", link: "/schemas/opml"},
+                    ]
                   },
+                  {
+                    label: "Events",
+                    items: [
+                      { label: "GCalendar", link: "/schemas/gcalendar"}
+                    ]
+                  },
+                  {
+                    label: "Tasks",
+                    items: [
+                      { label: "TaskNotes", link: "/schemas/tasknotes"}
+                    ]
+                  },
+                  {
+                    label: "Notes",
+                    items: [
+                      { label: "Obsidian", link: "/schemas/obsidian"}
+                    ]
+                  },
+                  {
+                    label: "Mails",
+                    items: [
+                      { label: "ImapFlow", link: "/schemas/imapflow" },
+                      { label: "MailParser", link: "/schemas/mailparser" }
+                    ]
+                  },
+                  {
+                    label: "Weather",
+                    items: [
+                      { label: "OpenMeteo", link: "/schemas/openmeteo" }
+                    ]
+                  },
+                  {
+                    label: "Maps",
+                    items: [
+                      { label: "OpenStreetMap", link: "/schemas/openstreetmap" }
+                    ]
+                  }
                 ]
               },
               {

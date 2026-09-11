@@ -1,6 +1,106 @@
 import z from "zod";
 
-const ItemOrFeedSchema = z.object({
+import { AtomSchemas } from "./atom";
+
+// #region MODULES
+
+const AdminSchema = z.object({
+  errorReportsTo: z.string().optional(),
+  generatorAgent: z.string().optional(),
+});
+
+const DublinCoreSchema = z.object({
+  titles: z.array(z.string()).optional(),
+  creators: z.array(z.string()).optional(),
+  subjects: z.array(z.string()).optional(),
+  descriptions: z.array(z.string()).optional(),
+  publishers: z.array(z.string()).optional(),
+  contributors: z.array(z.string()).optional(),
+  dates: z.array(z.string()).optional(),
+  types: z.array(z.string()).optional(),
+  formats: z.array(z.string()).optional(),
+  identifiers: z.array(z.string()).optional(),
+  sources: z.array(z.string()).optional(),
+  languages: z.array(z.string()).optional(),
+  relations: z.array(z.string()).optional(),
+  title: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `titles` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  creator: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `creators` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  subject: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `subjects` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  description: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `descriptions` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  publisher: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `publishers` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  contributor: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `contributors` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  date: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `dates` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  type: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `types` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  format: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `formats` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  identifier: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `identifiers` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  source: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `sources` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  language: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `languages` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  relation: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "Use `relations` (array) instead. Dublin Core fields are repeatable.",
+  }),
+  coverage: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "This field type will be changed to array in the next major version of the package. Dublin Core fields are repeatable.",
+  }),
+  rights: z.string().optional().meta({
+    deprecated: true,
+    description:
+      "This field type will be changed to array in the next major version of the package. Dublin Core fields are repeatable.",
+  }),
+});
+
+const DublinCoreTermsSchema = z.object({
   abstracts: z.array(z.string()).optional(),
   accrualMethods: z.array(z.string()).optional(),
   accrualPeriodicities: z.array(z.string()).optional(),
@@ -312,15 +412,383 @@ const ItemOrFeedSchema = z.object({
   }),
 });
 
-const DcTermsSchemas = {
-  ItemOrFeed: ItemOrFeedSchema,
+const GeoRssSchema = z.object({
+  point: z
+    .object({
+      lat: z.number(),
+      lng: z.number(),
+    })
+    .optional(),
+  line: z
+    .object({
+      points: z.array(
+        z.object({
+          lat: z.number(),
+          lng: z.number(),
+        }),
+      ),
+    })
+    .optional(),
+  polygon: z
+    .object({
+      points: z
+        .array(
+          z.object({
+            lat: z.number(),
+            lng: z.number(),
+          }),
+        )
+        .optional(),
+    })
+    .optional(),
+  box: z.object({
+    lowerCorner: z.object({
+      lat: z.number(),
+      lng: z.number(),
+    }),
+    upperCorner: z.object({
+      lat: z.number(),
+      lng: z.number(),
+    }),
+  }),
+  featureTypeTag: z.string().optional(),
+  relationshipTag: z.string().optional(),
+  featureName: z.string().optional(),
+  elev: z.number().optional(),
+  floor: z.number().optional(),
+  radius: z.number().optional(),
+});
+
+const MediaCommonSchema = z.object({
+  ratings: z
+    .array(
+      z.object({
+        value: z.string(),
+        scheme: z.string().optional(),
+      }),
+    )
+    .optional(),
+  title: z
+    .object({
+      value: z.string(),
+      type: z.string().optional(),
+    })
+    .optional(),
+  description: z
+    .object({
+      value: z.string(),
+      type: z.string().optional(),
+    })
+    .optional(),
+  keywords: z.array(z.string()).optional(),
+  thumbnails: z
+    .array(
+      z.object({
+        url: z.url(),
+        height: z.number().optional(),
+        width: z.number().optional(),
+        time: z.string().optional(),
+      }),
+    )
+    .optional(),
+  categories: z
+    .array(
+      z.object({
+        name: z.string(),
+        scheme: z.string().optional(),
+        label: z.string().optional(),
+      }),
+    )
+    .optional(),
+  hashes: z
+    .array(
+      z.object({
+        value: z.string(),
+        algo: z.string().optional(),
+      }),
+    )
+    .optional(),
+  player: z
+    .object({
+      url: z.url(),
+      height: z.number().optional(),
+      width: z.number().optional(),
+    })
+    .optional(),
+  credits: z
+    .array(
+      z.object({
+        value: z.string(),
+        role: z.string().optional(),
+        scheme: z.string().optional(),
+      }),
+    )
+    .optional(),
+  copyright: z
+    .object({
+      value: z.string(),
+      url: z.url().optional(),
+    })
+    .optional(),
+  texts: z
+    .array(
+      z.object({
+        value: z.string(),
+        type: z.string().optional(),
+        lang: z.string().optional(),
+        start: z.string().optional(),
+        end: z.string().optional(),
+      }),
+    )
+    .optional(),
+  restrictions: z
+    .array(
+      z.object({
+        value: z.string(),
+        relationship: z.string(),
+        type: z.string().optional(),
+      }),
+    )
+    .optional(),
+  community: z
+    .object({
+      starRating: z
+        .object({
+          average: z.number().optional(),
+          count: z.number().optional(),
+          min: z.number().optional(),
+          max: z.number().optional(),
+        })
+        .optional(),
+      statistics: z
+        .object({
+          views: z.number().optional(),
+          favorites: z.number().optional(),
+        })
+        .optional(),
+      tags: z
+        .array(
+          z.object({
+            name: z.string(),
+            weight: z.number().optional(),
+          }),
+        )
+        .optional(),
+    })
+    .optional(),
+  comments: z.array(z.string()).optional(),
+  embed: z
+    .object({
+      url: z.url(),
+      width: z.number().optional(),
+      height: z.number().optional(),
+      params: z
+        .array(
+          z.object({
+            name: z.string(),
+            value: z.string(),
+          }),
+        )
+        .optional(),
+    })
+    .optional(),
+  responses: z.array(z.string()).optional(),
+  backLinks: z.array(z.string()).optional(),
+  status: z
+    .object({
+      state: z.string(),
+      reason: z.string().optional(),
+    })
+    .optional(),
+  prices: z
+    .array(
+      z.object({
+        type: z.string().optional(),
+        info: z.string().optional(),
+        price: z.number().optional(),
+        currency: z.string().optional(),
+      }),
+    )
+    .optional(),
+  licenses: z
+    .array(
+      z.union([
+        z.object({
+          name: z.string(),
+          type: z.string().optional(),
+          href: z.url().optional(),
+        }),
+        z.object({
+          name: z.string().optional(),
+          type: z.string().optional(),
+          href: z.url(),
+        }),
+      ]),
+    )
+    .optional(),
+  subTitles: z
+    .array(
+      z.object({
+        type: z.string().optional(),
+        lang: z.string().optional(),
+        href: z.url(),
+      }),
+    )
+    .optional(),
+  peerLinks: z
+    .array(
+      z.object({
+        type: z.string().optional(),
+        href: z.url(),
+      }),
+    )
+    .optional(),
+  locations: z
+    .array(
+      z.object({
+        description: z.string().optional(),
+        start: z.string().optional(),
+        end: z.string().optional(),
+        lat: z.number().optional(),
+        lng: z.number().optional(),
+      }),
+    )
+    .optional(),
+  rights: z
+    .object({
+      status: z.string().optional(),
+    })
+    .optional(),
+  scenes: z
+    .array(
+      z.object({
+        title: z.string().optional(),
+        description: z.string().optional(),
+        startTime: z.string().optional(),
+        endTime: z.string().optional(),
+      }),
+    )
+    .optional(),
+});
+
+const MediaContentSchema = MediaCommonSchema.extend({
+  url: z.url().optional(),
+  fileSize: z.number().optional(),
+  type: z.string().optional(),
+  medium: z.string().optional(),
+  isDefault: z.boolean().optional(),
+  expression: z.string().optional(),
+  bitrate: z.number().optional(),
+  framerate: z.number().optional(),
+  samplingrate: z.number().optional(),
+  channels: z.number().optional(),
+  duration: z.number().optional(),
+  height: z.number().optional(),
+  width: z.number().optional(),
+  lang: z.string().optional(),
+});
+
+const MediaGroupSchema = MediaCommonSchema.extend({
+  contents: z.array(MediaContentSchema).optional(),
+});
+
+const MediaSchema = MediaCommonSchema.extend({
+  groups: z.array(MediaGroupSchema).optional(),
+  contents: z.array(MediaContentSchema).optional(),
+  group: MediaGroupSchema.optional().meta({
+    deprecated: true,
+    description: "Use `groups` instead.",
+  }),
+});
+
+const SlashSchema = z.object({
+  section: z.string().optional(),
+  department: z.string().optional(),
+  comments: z.number().optional(),
+  hitParade: z.array(z.number()).optional(),
+});
+
+const SySchema = z.object({
+  updatePeriod: z.string().optional(),
+  updateFrequency: z.number().optional(),
+  updateBase: z.string().optional(),
+});
+
+const WfwSchema = z.object({
+  comment: z.string().optional(),
+  commentRss: z.string().optional(),
+});
+
+// #endregion
+
+const ItemSchema = z.object({
+  title: z.string(),
+  link: z.string(),
+  description: z.string().optional(),
+  rdf: z.object({
+    about: z.string().optional(),
+  }),
+  atom: AtomSchemas.Entry.optional(),
+  dc: DublinCoreSchema.optional(),
+  content: z
+    .object({
+      encoded: z.string().optional(),
+    })
+    .optional(),
+  slash: SlashSchema.optional(),
+  media: MediaSchema.optional(),
+  georss: GeoRssSchema.optional(),
+  dcterms: DublinCoreTermsSchema.optional(),
+  wfw: WfwSchema.optional(),
+});
+
+const FeedSchema = z.object({
+  title: z.string(),
+  link: z.string(),
+  description: z.string(),
+  image: z.object({
+    title: z.string(),
+    link: z.string(),
+    url: z.url().optional(),
+    rdf: z.object({
+      about: z.string().optional(),
+    }),
+  }),
+  items: z.array(ItemSchema).optional(),
+  textInput: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+      name: z.string(),
+      link: z.string(),
+      rdf: z.object({
+        about: z.string().optional(),
+      }),
+    })
+    .optional(),
+  rdf: z.object({
+    about: z.string().optional(),
+  }),
+  atom: AtomSchemas.Feed.optional(),
+  dc: DublinCoreSchema.optional(),
+  sy: SySchema.optional(),
+  media: MediaSchema.optional(),
+  georss: GeoRssSchema.optional(),
+  dcterms: DublinCoreTermsSchema.optional(),
+  admin: AdminSchema.optional(),
+});
+
+const RdfSchemas = {
+  Item: ItemSchema,
+  Feed: FeedSchema,
 };
 
-type ItemOrFeed = z.infer<typeof ItemOrFeedSchema>;
+type Item = z.infer<typeof ItemSchema>;
+type Feed = z.infer<typeof FeedSchema>;
 
-declare namespace DcTerms {
-  export type { ItemOrFeed }
+declare namespace Rdf {
+  export type { Item, Feed };
 }
 
-export type { DcTerms, ItemOrFeed };
-export { DcTermsSchemas, ItemOrFeedSchema };
+export type { Feed, Item, Rdf };
+export { FeedSchema, ItemSchema, RdfSchemas };

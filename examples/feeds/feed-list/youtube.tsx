@@ -1,5 +1,11 @@
-import { FeedList, FeedListItem, FeedListItemContent, FeedListItemDescription, FeedListItemTitle } from "@/features/pxl/feeds/feed-list";
-import type { Atom } from "@/lib/schemas/pxl/feeds";
+import {
+  FeedList,
+  FeedListItem,
+  FeedListItemContent,
+  FeedListItemDescription,
+  FeedListItemTitle,
+} from "@/features/pxl/feeds/feed-list";
+import type { Atom } from "@/lib/schemas/pxl/atom";
 
 export default function FeedListYoutubeAtomExample() {
   const atomFeed: Atom.Feed = {
@@ -1466,10 +1472,8 @@ export default function FeedListYoutubeAtomExample() {
     },
   };
 
-  
   return (
-    <FeedList
-      className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
+    <FeedList className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
       {atomFeed.entries?.map((entry) => (
         <FeedListItem key={entry.id}>
           <FeedListItemContent>

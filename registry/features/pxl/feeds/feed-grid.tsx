@@ -6,7 +6,9 @@ import {
   ItemDescription,
   ItemTitle,
 } from "@/components/ui/pxl/item";
-import type { Atom, Rdf, Rss } from "@/lib/schemas/pxl/feeds";
+import type { Atom } from "@/lib/schemas/pxl/atom";
+import type { Rdf } from "@/lib/schemas/pxl/rdf";
+import type { Rss } from "@/lib/schemas/pxl/rss";
 import { cn } from "@/lib/utils";
 
 function FeedGrid({ className, ...props }: ComponentProps<"ul">) {
@@ -46,7 +48,10 @@ function FeedGridItemTitle({
 }: ComponentProps<typeof ItemTitle>) {
   return (
     <ItemTitle
-      className={cn("font-serif font-bold text-xs @5xs:text-sm @md:text-base", className)}
+      className={cn(
+        "font-serif font-bold text-xs @5xs:text-sm @md:text-base",
+        className,
+      )}
       {...props}
     />
   );
@@ -124,17 +129,19 @@ function RdfFeedGridItemDescription({
   ...props
 }: ComponentProps<typeof ItemTitle> & { item: Rdf.Item }) {
   const description = useMemo(() => {
-    return item.content?.encoded ??  item.description;
+    return item.content?.encoded ?? item.description;
   }, [item]);
 
-  return (description && 
-    <FeedGridItemDescription
-      {...props}
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
-      dangerouslySetInnerHTML={{
-        __html: description,
-      }}
-    />
+  return (
+    description && (
+      <FeedGridItemDescription
+        {...props}
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
+    )
   );
 }
 FeedGridItemDescription.Rdf = RdfFeedGridItemDescription;

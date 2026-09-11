@@ -4,197 +4,167 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "schemas/feeds",
+      "name": "schemas/atom",
       "type": "registry:component",
-      "title": "Feeds Schemas",
-      "description": "Zod types and schemas for RSS & Atom feeds.",
+      "title": "Atom Schemas",
+      "description": "Zod types and schemas for Atom feeds.",
       "categories": ["pxl-ui", "schemas", "zod"],
       "dependencies": ["zod"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/acast.ts",
-          "target": "@lib/pxl/schemas/feeds/acast.ts"
-        },
+          "path": "atom.ts",
+          "target": "@lib/pxl/schemas/atom.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/gcalendar",
+      "type": "registry:component",
+      "title": "Google Calendar Schemas",
+      "description": "Zod types and schemas for Google Calendar.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/admin.ts",
-          "target": "@lib/pxl/schemas/feeds/admin.ts"
-        },
+          "path": "gcalendar.ts",
+          "target": "@lib/pxl/schemas/gcalendar.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/imapflow",
+      "type": "registry:component",
+      "title": "ImapFlow Schemas",
+      "description": "Zod types and schemas for ImapFlow.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/app.ts",
-          "target": "@lib/pxl/schemas/feeds/app.ts"
-        },
+          "path": "imapflow.ts",
+          "target": "@lib/pxl/schemas/imapflow.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/mailparser",
+      "type": "registry:component",
+      "title": "MailParser Schemas",
+      "description": "Zod types and schemas for MailParser.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/arxiv.ts",
-          "target": "@lib/pxl/schemas/feeds/arxiv.ts"
-        },
+          "path": "mailparser.ts",
+          "target": "@lib/pxl/schemas/mailparser.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/obsidian",
+      "type": "registry:component",
+      "title": "Obsidian Schemas",
+      "description": "Zod types and schemas for Obsidian.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/atom.ts",
-          "target": "@lib/pxl/schemas/feeds/atom.ts"
-        },
+          "path": "obsidian.ts",
+          "target": "@lib/pxl/schemas/obsidian.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/tasknotes",
+      "type": "registry:component",
+      "title": "TaskNotes Schemas",
+      "description": "Zod types and schemas for TaskNotes.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/blogchannel.ts",
-          "target": "@lib/pxl/schemas/feeds/blogchannel.ts"
-        },
+          "path": "tasknotes.ts",
+          "target": "@lib/pxl/schemas/tasknotes.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/openstreetmap",
+      "type": "registry:component",
+      "title": "OpenStreetMap Schemas",
+      "description": "Zod types and schemas for OpenStreetMap.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/cc.ts",
-          "target": "@lib/pxl/schemas/feeds/cc.ts"
-        },
+          "path": "openstreetmap.ts",
+          "target": "@lib/pxl/schemas/openstreetmap.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/openmeteo",
+      "type": "registry:component",
+      "title": "OpenMeteo Schemas",
+      "description": "Zod types and schemas for OpenMeteo.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/content.ts",
-          "target": "@lib/pxl/schemas/feeds/content.ts"
-        },
+          "path": "openmeteo.ts",
+          "target": "@lib/pxl/schemas/openmeteo.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/opml",
+      "type": "registry:component",
+      "title": "OPML Schemas",
+      "description": "Zod types and schemas for OPMLs.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/creativecommons.ts",
-          "target": "@lib/pxl/schemas/feeds/creativecommons.ts"
-        },
+          "path": "opml.ts",
+          "target": "@lib/pxl/schemas/opml.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/rdf",
+      "type": "registry:component",
+      "title": "RDF Schemas",
+      "description": "Zod types and schemas for RDF feeds.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/dc.ts",
-          "target": "@lib/pxl/schemas/feeds/dc.ts"
-        },
+          "path": "rdf.ts",
+          "target": "@lib/pxl/schemas/rdf.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/rss",
+      "type": "registry:component",
+      "title": "RSS Schemas",
+      "description": "Zod types and schemas for RSS feeds.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/dcterms.ts",
-          "target": "@lib/pxl/schemas/feeds/dcterms.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/feedpress.ts",
-          "target": "@lib/pxl/schemas/feeds/feedpress.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/geo.ts",
-          "target": "@lib/pxl/schemas/feeds/geo.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/georss.ts",
-          "target": "@lib/pxl/schemas/feeds/georss.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/googleplay.ts",
-          "target": "@lib/pxl/schemas/feeds/googleplay.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/index.ts",
-          "target": "@lib/pxl/schemas/feeds/index.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/itunes.ts",
-          "target": "@lib/pxl/schemas/feeds/itunes.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/media.ts",
-          "target": "@lib/pxl/schemas/feeds/media.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/opensearch.ts",
-          "target": "@lib/pxl/schemas/feeds/opensearch.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/opml.ts",
-          "target": "@lib/pxl/schemas/feeds/opml.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/pingback.ts",
-          "target": "@lib/pxl/schemas/feeds/pingback.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/podcast.ts",
-          "target": "@lib/pxl/schemas/feeds/podcast.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/prism.ts",
-          "target": "@lib/pxl/schemas/feeds/prism.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/podcast.ts",
-          "target": "@lib/pxl/schemas/feeds/podcast.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/prism.ts",
-          "target": "@lib/pxl/schemas/feeds/prism.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/psc.ts",
-          "target": "@lib/pxl/schemas/feeds/psc.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/rawvoice.ts",
-          "target": "@lib/pxl/schemas/feeds/rawvoice.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/rdf.ts",
-          "target": "@lib/pxl/schemas/feeds/rdf.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/rss.ts",
-          "target": "@lib/pxl/schemas/feeds/rss.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/slash.ts",
-          "target": "@lib/pxl/schemas/feeds/slash.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/source.ts",
-          "target": "@lib/pxl/schemas/feeds/source.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/spotify.ts",
-          "target": "@lib/pxl/schemas/feeds/spotify.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/sy.ts",
-          "target": "@lib/pxl/schemas/feeds/sy.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/thr.ts",
-          "target": "@lib/pxl/schemas/feeds/thr.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/trackback.ts",
-          "target": "@lib/pxl/schemas/feeds/trackback.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/wfw.ts",
-          "target": "@lib/pxl/schemas/feeds/wfw.ts"
-        },
-        { 
-          "type": "registry:file",
-          "path": "feeds/yt.ts",
-          "target": "@lib/pxl/schemas/feeds/yt.ts"
+          "path": "rss.ts",
+          "target": "@lib/pxl/schemas/rss.ts"
         }
       ]
     }

@@ -1,5 +1,11 @@
-import { FeedGrid, FeedGridItem, FeedGridItemContent, FeedGridItemDescription, FeedGridItemTitle } from "@/features/pxl/feeds/feed-grid";
-import type { Atom } from "@/lib/schemas/pxl/feeds";
+import {
+  FeedGrid,
+  FeedGridItem,
+  FeedGridItemContent,
+  FeedGridItemDescription,
+  FeedGridItemTitle,
+} from "@/features/pxl/feeds/feed-grid";
+import type { Atom } from "@/lib/schemas/pxl/atom";
 
 export default function FeedGridYoutubeAtomExample() {
   const atomFeed: Atom.Feed = {
@@ -1466,10 +1472,8 @@ export default function FeedGridYoutubeAtomExample() {
     },
   };
 
-  
   return (
-    <FeedGrid
-      className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
+    <FeedGrid className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
       {atomFeed.entries?.map((entry) => (
         <FeedGridItem key={entry.id}>
           <FeedGridItemContent>

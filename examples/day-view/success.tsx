@@ -2,6 +2,7 @@ import { useMemo } from "react";
 
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 import { DayView } from "@/components/widgets/pxl/day-view";
+import type { OpenMeteo } from "@/lib/schemas/pxl/openmeteo";
 
 export default function DayViewSuccessExample() {
   const hourlyTimeRange = useMemo(() => {
@@ -98,31 +99,33 @@ export default function DayViewSuccessExample() {
       <DayView
         status="success"
         className="size-full"
-        forecast={{
-          hourly_units: {
-            temperature_2m: "°C",
-          },
-          hourly: {
-            time: hourlyTimeRange,
-            temperature_2m: [
-              23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6, 25.6,
-              25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3, 24.5, 25,
-              24.7,
-            ],
-            weather_code: [
-              0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3, 3,
-              51, 3,
-            ],
-            is_day: [
-              0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-              0, 0,
-            ],
-          },
-          daily: {
-            temperature_2m_max: [25.6],
-            temperature_2m_min: [22.4],
-          },
-        }}
+        forecast={
+          {
+            hourly_units: {
+              temperature_2m: "°C",
+            },
+            hourly: {
+              time: hourlyTimeRange,
+              temperature_2m: [
+                23.6, 23.3, 23, 23, 23, 22.5, 22.4, 22.4, 22.4, 23.3, 24.6,
+                25.6, 25.4, 25.4, 25.4, 25.3, 25.3, 25.5, 25.1, 25.4, 25.3,
+                24.5, 25, 24.7,
+              ],
+              weather_code: [
+                0, 0, 3, 3, 3, 0, 0, 3, 2, 0, 0, 0, 0, 1, 3, 3, 3, 1, 3, 3, 3,
+                3, 51, 3,
+              ],
+              is_day: [
+                0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                1, 0, 0,
+              ],
+            },
+            daily: {
+              temperature_2m_max: [25.6],
+              temperature_2m_min: [22.4],
+            },
+          } as OpenMeteo.Forecast
+        }
         events={events}
       />
     </WidgetArea>

@@ -1,5 +1,11 @@
-import { FeedGrid, FeedGridItem, FeedGridItemContent, FeedGridItemDescription, FeedGridItemTitle } from "@/features/pxl/feeds/feed-grid";
-import type { Rss } from "@/lib/schemas/pxl/feeds";
+import {
+  FeedGrid,
+  FeedGridItem,
+  FeedGridItemContent,
+  FeedGridItemDescription,
+  FeedGridItemTitle,
+} from "@/features/pxl/feeds/feed-grid";
+import type { Rss } from "@/lib/schemas/pxl/rss";
 
 export default function FeedGridDemo() {
   const rssFeed: Rss.Feed = {

@@ -7,7 +7,9 @@ import {
   ItemGroup,
   ItemTitle,
 } from "@/components/ui/pxl/item";
-import type { Atom, Rdf, Rss } from "@/lib/schemas/pxl/feeds";
+import type { Atom } from "@/lib/schemas/pxl/atom";
+import type { Rdf } from "@/lib/schemas/pxl/rdf";
+import type { Rss } from "@/lib/schemas/pxl/rss";
 import { cn } from "@/lib/utils";
 
 function FeedList({ ...props }: ComponentProps<typeof ItemGroup>) {

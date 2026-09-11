@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/pxl/card";
 import { ScrollArea } from "@/components/ui/pxl/scroll-area";
 import { WeatherIcon } from "@/components/ui/pxl/weather-icon";
+import type { GCalendar } from "@/lib/schemas/pxl/gcalendar";
+import type { OpenMeteo } from "@/lib/schemas/pxl/openmeteo";
 import { cn } from "@/lib/utils";
 
 function Weather({
@@ -26,22 +28,7 @@ function Weather({
   language = "en",
   texts,
 }: {
-  /** Partial object of openmeteo forecast data */
-  forecast?: {
-    daily: {
-      temperature_2m_max: number[];
-      temperature_2m_min: number[];
-    };
-    hourly: {
-      is_day: (0 | 1)[];
-      temperature_2m: number[];
-      time: string[];
-      weather_code: number[];
-    };
-    hourly_units: {
-      temperature_2m: string;
-    };
-  };
+  forecast?: OpenMeteo.Forecast;
   language?: Language;
   texts: {
     maxLabel: string;
@@ -155,21 +142,7 @@ function Schedule({
   events,
   language,
 }: {
-  /** Partial object of gcalendar event data */
-  events?: {
-    end?: {
-      date?: string;
-      endTime?: string;
-    };
-    htmlLink?: string;
-    id?: string;
-    start?: {
-      date?: string;
-      dateTime?: string;
-    };
-    status?: "confirmed" | "tentative" | "cancelled";
-    summary?: string;
-  }[];
+  events?: GCalendar.Event[];
   language: Language;
 }) {
   const formatGroupLabel = useCallback(
@@ -230,10 +203,10 @@ function Schedule({
     const map = new Map<
       string,
       {
-        id?: string;
-        summary?: string;
-        start?: string;
-        sortKey?: string;
+        id?: string | null;
+        summary?: string | null;
+        start?: string | null;
+        sortKey?: string | null;
       }[]
     >();
 
@@ -241,8 +214,8 @@ function Schedule({
       const start =
         event.start?.dateTime ??
         event.start?.date ??
-        event.end?.endTime ??
-        event.end?.endTime;
+        event.end?.dateTime ??
+        event.end?.date;
 
       if (!start) {
         continue;
@@ -325,7 +298,7 @@ function Schedule({
                 <li
                   key={item.id ?? idx.toString()}
                   className="flex items-center leading-4"
-                  title={item.summary}
+                  title={item.summary ?? ""}
                 >
                   {item.start && (
                     <span className="text-muted-foreground mr-2 font-mono text-2xs">

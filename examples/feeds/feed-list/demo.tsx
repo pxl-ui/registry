@@ -1,5 +1,11 @@
-import { FeedList, FeedListItem, FeedListItemContent, FeedListItemDescription, FeedListItemTitle } from "@/features/pxl/feeds/feed-list";
-import type { Rss } from "@/lib/schemas/pxl/feeds";
+import {
+  FeedList,
+  FeedListItem,
+  FeedListItemContent,
+  FeedListItemDescription,
+  FeedListItemTitle,
+} from "@/features/pxl/feeds/feed-list";
+import type { Rss } from "@/lib/schemas/pxl/rss";
 
 export default function FeedListDemo() {
   const rssFeed: Rss.Feed = {

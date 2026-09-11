@@ -11,7 +11,9 @@
       "categories": ["pxl-ui", "features", "feeds"],
       "registryDependencies": [
         "pxl-ui/registry/lib/html",
-        "pxl-ui/registry/schemas/feeds",
+        "pxl-ui/registry/schemas/atom",
+        "pxl-ui/registry/schemas/rdf",
+        "pxl-ui/registry/schemas/rss",
         "pxl-ui/registry/item"
       ],
       "files": [
@@ -30,7 +32,9 @@
       "categories": ["pxl-ui", "features", "feeds"],
       "registryDependencies": [
         "pxl-ui/registry/lib/html",
-        "pxl-ui/registry/schemas/feeds",
+        "pxl-ui/registry/schemas/atom",
+        "pxl-ui/registry/schemas/rdf",
+        "pxl-ui/registry/schemas/rss",
         "pxl-ui/registry/item"
       ],
       "files": [

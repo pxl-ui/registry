@@ -18,7 +18,9 @@
         "pxl-ui/registry/button",
         "pxl-ui/registry/card",
         "pxl-ui/registry/scroll-area",
-        "pxl-ui/registry/weather-icon"
+        "pxl-ui/registry/weather-icon",
+        "pxl-ui/registry/schemas/gcalendar",
+        "pxl-ui/registry/schemas/openmeteo"
       ],
       "files": [
         {
