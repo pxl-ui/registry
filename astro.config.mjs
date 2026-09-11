@@ -103,6 +103,19 @@ export default defineConfig({
             items: [
               { autogenerate: { directory: "utilities" }},
               {
+                label: "Schemas",
+                items: [
+                  {
+                    label: "Introduction",
+                    link: "/schemas"
+                  },
+                  {
+                    label: "Feeds",
+                    link: "/schemas/feeds"
+                  },
+                ]
+              },
+              {
                 label: "Displays",
                 items: [
                   {

@@ -5,7 +5,7 @@ import type { LinkHTMLAttributes } from "./starlight/schemas/sidebar";
 import { url } from "./utils";
 
 /** Registry item meta kinds */
-type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "feature" | "widget";
+type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "feature" | "schema" | "widget";
 type ComponentKind = "content" | "interaction" | "layout" | "navigation";
 type DisplayKind = "embedded" | "hd" | "vga" | "widget" | "xga";
 type WidgetKind = "small" | "medium" | "large" | "extralarge";
@@ -17,6 +17,7 @@ const KIND_CATEGORIES = {
   display: "displays",
   icon: "icons",
   font: "font-family",
+  schema: "schemas",
   widget: "widgets",
 } satisfies Partial<Record<Kind, string>>;
 
@@ -54,6 +55,7 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   interaction: {},
   navigation: {},
   content: {},
+  schemas: { prefix: "schemas/" },
   widgets: {},
 };
 
@@ -275,6 +277,7 @@ function basename(itemName: string) {
   if (item.categories?.includes(KIND_CATEGORIES.color)) return itemName.replace("colors/", "");
   if (item.categories?.includes(KIND_CATEGORIES.icon)) return itemName.replace("icons/", "");
   if (item.categories?.includes(KIND_CATEGORIES.font)) return itemName.replace("fonts/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.schema)) return itemName.replace("schemas/", "");
 
   return itemName;
 }
@@ -305,6 +308,7 @@ function toRouteId(itemName: string) {
   if (itemKind === "color") return url(`colors/${baseName}`);
   if (itemKind === "font") return url(`typography/${baseName}`);
   if (itemKind === "icon") return url(`icons/${baseName}`);
+  if (itemKind === "schema") return url(`schemas/${baseName}`);
 
   if (itemKind === "component") {
     const itemComponentKind = componentKind(itemName);

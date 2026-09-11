@@ -1,0 +1,19 @@
+---
+title: Introduction
+---
+import { LinkCard } from "~/components";
+import { lists } from "~/lib/schemas";
+import { toRouteId } from "~/lib/registry";
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.all.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>

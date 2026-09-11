@@ -6,7 +6,7 @@
     {
       "name": "schemas/feeds",
       "type": "registry:component",
-      "title": "Feeds",
+      "title": "Feeds Schemas",
       "description": "Zod types and schemas for RSS & Atom feeds.",
       "categories": ["pxl-ui", "schemas", "zod"],
       "dependencies": ["zod"],
