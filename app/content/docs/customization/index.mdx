@@ -3,31 +3,31 @@ title: Customization
 ---
 import { LinkCard } from '~/components';
 import { lists as colorLists } from '~/lib/colors';
-import { url } from '~/lib/utils';
+import { url as toRouteId } from '~/lib/utils';
 
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   <LinkCard 
-    href={url("colors")} 
+    href={toRouteId("colors")} 
     title="Colors"
   >
   </LinkCard>
 
   <LinkCard 
-    href={url("typography")} 
+    href={toRouteId("typography")} 
     title="Typography"
   >
   </LinkCard>
 
   <LinkCard 
-    href={url("icons")} 
+    href={toRouteId("icons")} 
     title="Icons"
   >
   </LinkCard>
 
   <LinkCard 
-    href={url("backgrounds")} 
+    href={toRouteId("backgrounds")} 
     title="Backgrounds"
   >
   </LinkCard>
