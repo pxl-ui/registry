@@ -255,7 +255,7 @@
       "description": "Displays a country flag.",
       "categories": ["pxl-ui", "components", "content"],
       "registryDependencies": [
-        "pxl-ui/registry/flags-countries"
+        "pxl-ui/registry/icons/terrabandiere"
       ],
       "files": [
         {

@@ -48,7 +48,7 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   colors: { prefix: "colors/" },
   displays: { prefix: "displays/" },
   typography: { prefix: "fonts/" },
-  icons: { prefix: "icons-" },
+  icons: { prefix: "icons/" },
   components: {},
   layout: {},
   interaction: {},
@@ -273,7 +273,7 @@ function basename(itemName: string) {
   if (item.categories?.includes(KIND_CATEGORIES.background)) return itemName.replace("backgrounds-", "");
   if (item.categories?.includes(KIND_CATEGORIES.display)) return itemName.replace("displays/", "");
   if (item.categories?.includes(KIND_CATEGORIES.color)) return itemName.replace("colors/", "");
-  if (item.categories?.includes(KIND_CATEGORIES.icon)) return itemName.replace("icons-", "").replace("flags-", "").replace("cursors-", "");
+  if (item.categories?.includes(KIND_CATEGORIES.icon)) return itemName.replace("icons/", "");
   if (item.categories?.includes(KIND_CATEGORIES.font)) return itemName.replace("fonts/", "");
 
   return itemName;

@@ -4,7 +4,7 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "icons-pixelarticons-cursors",
+      "name": "icons/pixelarticons-cursors",
       "type": "registry:style",
       "title": "Pixelarticons Mouse Cursors",
       "description": "Mouse cursors powered by pixelarticons",
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "icons-dotto-emoji",
+      "name": "icons/dotto-emoji",
       "type": "registry:component",
       "title": "Dotto Emoji",
       "description": "16x16 pixel art emoji set",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "name": "icons-terrabandiere",
+      "name": "icons/terrabandiere",
       "type": "registry:component",
       "title": "Terrabandiere",
       "description": "Pixel flags from the world",
