@@ -1,3 +1,5 @@
+import { Separator } from "@/components/ui/pxl/separator";
+
 import Callout from "./Callout.astro";
 import Code from "./Code.astro";
 import ColorPreview from "./ColorPreview";
@@ -13,6 +15,7 @@ import LinkCard from "./LinkCard.astro";
 import LinkCardMedia from "./LinkCardMedia";
 import NodeCommand from "./NodeCommand";
 import Showcase from "./Showcase";
+import Stats from "./Stats";
 import Step from "./Step.astro";
 import Steps from "./Steps.astro";
 
@@ -31,7 +34,9 @@ export {
   LinkCard,
   LinkCardMedia,
   NodeCommand,
+  Separator,
   Showcase,
+  Stats,
   Step,
   Steps,
 };

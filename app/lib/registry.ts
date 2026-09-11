@@ -5,7 +5,16 @@ import type { LinkHTMLAttributes } from "./starlight/schemas/sidebar";
 import { url } from "./utils";
 
 /** Registry item meta kinds */
-type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "feature" | "schema" | "widget";
+type Kind =
+  | "background"
+  | "color"
+  | "display"
+  | "font"
+  | "icon"
+  | "component"
+  | "feature"
+  | "schema"
+  | "widget";
 type ComponentKind = "content" | "interaction" | "layout" | "navigation";
 type DisplayKind = "embedded" | "hd" | "vga" | "widget" | "xga";
 type WidgetKind = "small" | "medium" | "large" | "extralarge";
@@ -33,7 +42,7 @@ const DISPLAY_KIND_CATEGORIES = {
   hd: "displays-hd",
   vga: "displays-vga",
   widget: "displays-widget",
-  xga: "displays-xga"
+  xga: "displays-xga",
 } satisfies Partial<Record<DisplayKind, string>>;
 
 const WIDGET_KIND_CATEGORIES = {
@@ -112,7 +121,7 @@ const definitions = await Promise.all(
   }),
 );
 
-for (const include of ((root as Registry).include ?? [])) {
+for (const include of (root as Registry).include ?? []) {
   const resolved = definitions.find((r) => r.path === `/${include}`);
 
   if (!resolved) {
@@ -122,7 +131,7 @@ for (const include of ((root as Registry).include ?? [])) {
 
   const basePath = resolved.path.replace("registry.json", "");
 
-  for (const item of (resolved.data.items ?? [])) {
+  for (const item of resolved.data.items ?? []) {
     registry.set(item.name, item);
     if (item.files) {
       registryFiles.set(
@@ -137,7 +146,7 @@ for (const include of ((root as Registry).include ?? [])) {
   }
 }
 
-for (const item of ((root as Registry).items ?? [])) {
+for (const item of (root as Registry).items ?? []) {
   registry.set(item.name, item);
 }
 
@@ -182,6 +191,31 @@ function filter({
     });
 }
 
+function count({ categories }: { categories?: string | string[] }): number {
+  const categoriesArr =
+    typeof categories === "string" ? [categories] : categories;
+
+  if (!categoriesArr) {
+    return registry.size;
+  }
+
+  let acc = 0;
+
+  for (const entry of registry.values()) {
+    if (
+      categoriesArr &&
+      categoriesArr.length > 0 &&
+      categoriesArr.some((cat) => !entry.categories?.includes(cat))
+    ) {
+      continue;
+    }
+
+    acc++;
+  }
+
+  return acc;
+}
+
 function kind(itemName: string): Kind {
   const item = registry.get(itemName);
 
@@ -210,7 +244,9 @@ function componentKind(itemName: string): ComponentKind {
   }
 
   if (!item.categories || item.categories.length === 0) {
-    throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`);
+    throw new Error(
+      `Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`,
+    );
   }
 
   for (const [kind, category] of Object.entries(COMPONENT_KIND_CATEGORIES)) {
@@ -219,7 +255,9 @@ function componentKind(itemName: string): ComponentKind {
     }
   }
 
-  throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
+  throw new Error(
+    `Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`,
+  );
 }
 
 function displayKind(itemName: string): DisplayKind {
@@ -230,7 +268,9 @@ function displayKind(itemName: string): DisplayKind {
   }
 
   if (!item.categories || item.categories.length === 0) {
-    throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`);
+    throw new Error(
+      `Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`,
+    );
   }
 
   for (const [kind, category] of Object.entries(DISPLAY_KIND_CATEGORIES)) {
@@ -239,7 +279,9 @@ function displayKind(itemName: string): DisplayKind {
     }
   }
 
-  throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
+  throw new Error(
+    `Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`,
+  );
 }
 
 function widgetKind(itemName: string): WidgetKind {
@@ -250,7 +292,9 @@ function widgetKind(itemName: string): WidgetKind {
   }
 
   if (!item.categories || item.categories.length === 0) {
-    throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`);
+    throw new Error(
+      `Unable to resolve kind for component: "${itemName}". Reason: Component has no categories`,
+    );
   }
 
   for (const [kind, category] of Object.entries(WIDGET_KIND_CATEGORIES)) {
@@ -259,7 +303,9 @@ function widgetKind(itemName: string): WidgetKind {
     }
   }
 
-  throw new Error(`Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`);
+  throw new Error(
+    `Unable to resolve kind for component: "${itemName}". Reason: Component has no kind category`,
+  );
 }
 
 /**
@@ -272,12 +318,18 @@ function basename(itemName: string) {
     throw new Error(`Item "${itemName}" not found`);
   }
 
-  if (item.categories?.includes(KIND_CATEGORIES.background)) return itemName.replace("backgrounds/", "");
-  if (item.categories?.includes(KIND_CATEGORIES.display)) return itemName.replace("displays/", "");
-  if (item.categories?.includes(KIND_CATEGORIES.color)) return itemName.replace("colors/", "");
-  if (item.categories?.includes(KIND_CATEGORIES.icon)) return itemName.replace("icons/", "");
-  if (item.categories?.includes(KIND_CATEGORIES.font)) return itemName.replace("fonts/", "");
-  if (item.categories?.includes(KIND_CATEGORIES.schema)) return itemName.replace("schemas/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.background))
+    return itemName.replace("backgrounds/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.display))
+    return itemName.replace("displays/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.color))
+    return itemName.replace("colors/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.icon))
+    return itemName.replace("icons/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.font))
+    return itemName.replace("fonts/", "");
+  if (item.categories?.includes(KIND_CATEGORIES.schema))
+    return itemName.replace("schemas/", "");
 
   return itemName;
 }
@@ -312,13 +364,16 @@ function toRouteId(itemName: string) {
 
   if (itemKind === "component") {
     const itemComponentKind = componentKind(itemName);
-    
-    if (itemComponentKind === "content") return url(`components/content/${baseName}`);
-    if (itemComponentKind === "interaction") return url(`components/interaction/${baseName}`);
-    if (itemComponentKind === "layout") return url(`components/layout/${baseName}`);
-    if (itemComponentKind === "navigation") return url(`components/navigation/${baseName}`);
-  }
 
+    if (itemComponentKind === "content")
+      return url(`components/content/${baseName}`);
+    if (itemComponentKind === "interaction")
+      return url(`components/interaction/${baseName}`);
+    if (itemComponentKind === "layout")
+      return url(`components/layout/${baseName}`);
+    if (itemComponentKind === "navigation")
+      return url(`components/navigation/${baseName}`);
+  }
 
   if (itemKind === "feature") {
     return url(`features/${baseName}`);
@@ -326,17 +381,19 @@ function toRouteId(itemName: string) {
 
   if (itemKind === "display") {
     const itemDisplayKind = displayKind(itemName);
-    
-    if (itemDisplayKind === "embedded") return url(`displays/embedded/${baseName}`);
+
+    if (itemDisplayKind === "embedded")
+      return url(`displays/embedded/${baseName}`);
     if (itemDisplayKind === "hd") return url(`displays/hd/${baseName}`);
     if (itemDisplayKind === "vga") return url(`displays/vga/${baseName}`);
-    if (itemDisplayKind === "widget") return url(`displays/widgets/${baseName}`);
+    if (itemDisplayKind === "widget")
+      return url(`displays/widgets/${baseName}`);
     if (itemDisplayKind === "xga") return url(`displays/xga/${baseName}`);
   }
 
   if (itemKind === "widget") {
     const itemWidgetKind = widgetKind(itemName);
-    
+
     if (itemWidgetKind === "small") return url(`widgets/sm/${baseName}`);
     if (itemWidgetKind === "medium") return url(`widgets/md/${baseName}`);
     if (itemWidgetKind === "large") return url(`widgets/lg/${baseName}`);
@@ -348,39 +405,47 @@ function toRouteId(itemName: string) {
 }
 
 function pages(itemName: string): {
-  next: {
-    type: 'link';
-    label: string;
-    href: string;
-    isCurrent: boolean;
-    badge: Badge | undefined;
-    attrs: LinkHTMLAttributes;
-  } | undefined;
-  prev: {
-	type: 'link';
-	label: string;
-	href: string;
-	isCurrent: boolean;
-	badge: Badge | undefined;
-	attrs: LinkHTMLAttributes;
-} | undefined;
+  next:
+    | {
+        type: "link";
+        label: string;
+        href: string;
+        isCurrent: boolean;
+        badge: Badge | undefined;
+        attrs: LinkHTMLAttributes;
+      }
+    | undefined;
+  prev:
+    | {
+        type: "link";
+        label: string;
+        href: string;
+        isCurrent: boolean;
+        badge: Badge | undefined;
+        attrs: LinkHTMLAttributes;
+      }
+    | undefined;
 } {
-  let next: {
-    type: 'link';
-    label: string;
-    href: string;
-    isCurrent: boolean;
-    badge: Badge | undefined;
-    attrs: LinkHTMLAttributes;
-  } | undefined;
-  let prev: {
-    type: 'link';
-    label: string;
-    href: string;
-    isCurrent: boolean;
-    badge: Badge | undefined;
-    attrs: LinkHTMLAttributes;
-  } | undefined;
+  let next:
+    | {
+        type: "link";
+        label: string;
+        href: string;
+        isCurrent: boolean;
+        badge: Badge | undefined;
+        attrs: LinkHTMLAttributes;
+      }
+    | undefined;
+  let prev:
+    | {
+        type: "link";
+        label: string;
+        href: string;
+        isCurrent: boolean;
+        badge: Badge | undefined;
+        attrs: LinkHTMLAttributes;
+      }
+    | undefined;
   const itemKind = kind(itemName);
 
   if (!(itemKind in KIND_CATEGORIES)) {
@@ -390,12 +455,13 @@ function pages(itemName: string): {
     };
   }
 
-  const categories = [KIND_CATEGORIES[itemKind as keyof typeof KIND_CATEGORIES]];
-
+  const categories = [
+    KIND_CATEGORIES[itemKind as keyof typeof KIND_CATEGORIES],
+  ];
 
   const items = filter({ categories });
 
-  const index = items.findIndex(i => i.name === itemName);
+  const index = items.findIndex((i) => i.name === itemName);
 
   if (index > 0) {
     const prevItem = items[index - 1];
@@ -406,7 +472,7 @@ function pages(itemName: string): {
       href: toRouteId(prevItem.name),
       isCurrent: false,
       badge: undefined,
-      attrs: {}
+      attrs: {},
     };
   }
 
@@ -419,7 +485,7 @@ function pages(itemName: string): {
       href: toRouteId(nextItem.name),
       isCurrent: false,
       badge: undefined,
-      attrs: {}
+      attrs: {},
     };
   }
 
@@ -433,6 +499,7 @@ export default registry;
 
 export {
   basename,
+  count,
   filter,
   fromRouteId,
   kind,
