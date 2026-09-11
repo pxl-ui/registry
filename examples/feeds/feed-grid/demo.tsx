@@ -1,4 +1,4 @@
-import { FeedGrid, FeedGridItem, FeedGridItemContent, FeedGridItemDescription, FeedGridItemTitle } from "@/components/blocks/pxl/feeds/feed-grid";
+import { FeedGrid, FeedGridItem, FeedGridItemContent, FeedGridItemDescription, FeedGridItemTitle } from "@/features/pxl/feeds/feed-grid";
 import type { Rss } from "@/lib/schemas/pxl/feeds";
 
 export default function FeedGridDemo() {

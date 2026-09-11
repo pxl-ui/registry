@@ -5,13 +5,14 @@ import type { LinkHTMLAttributes } from "./starlight/schemas/sidebar";
 import { url } from "./utils";
 
 /** Registry item meta kinds */
-type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "widget";
+type Kind = "background" | "color" | "display" | "font" | "icon" | "component" | "feature" | "widget";
 type ComponentKind = "content" | "interaction" | "layout" | "navigation";
 type DisplayKind = "embedded" | "hd" | "vga" | "widget" | "xga";
 type WidgetKind = "small" | "medium" | "large" | "extralarge";
 
 const KIND_CATEGORIES = {
   background: "background",
+  feature: "features",
   color: "color-palette",
   display: "displays",
   icon: "icons",
@@ -43,7 +44,7 @@ const WIDGET_KIND_CATEGORIES = {
 
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   backgrounds: { prefix: "backgrounds-" },
-  "blocks/feeds/": { prefix: "feeds/" },
+  "features/feeds/": { prefix: "feeds/" },
   colors: { prefix: "colors-" },
   displays: { prefix: "displays/" },
   typography: { prefix: "fonts-" },
@@ -312,6 +313,11 @@ function toRouteId(itemName: string) {
     if (itemComponentKind === "interaction") return url(`components/interaction/${baseName}`);
     if (itemComponentKind === "layout") return url(`components/layout/${baseName}`);
     if (itemComponentKind === "navigation") return url(`components/navigation/${baseName}`);
+  }
+
+
+  if (itemKind === "feature") {
+    return url(`features/${baseName}`);
   }
 
   if (itemKind === "display") {

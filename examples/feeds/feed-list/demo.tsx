@@ -1,4 +1,4 @@
-import { FeedList, FeedListItem, FeedListItemContent, FeedListItemDescription, FeedListItemTitle } from "@/components/blocks/pxl/feeds/feed-list";
+import { FeedList, FeedListItem, FeedListItemContent, FeedListItemDescription, FeedListItemTitle } from "@/features/pxl/feeds/feed-list";
 import type { Rss } from "@/lib/schemas/pxl/feeds";
 
 export default function FeedListDemo() {

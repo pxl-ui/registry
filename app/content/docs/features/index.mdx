@@ -1,0 +1,24 @@
+---
+title: Features
+description: Here you can find all the feature blocks available in the library. We are working on adding more features.
+---
+import { LinkCard } from "~/components";
+import { lists } from "~/lib/features";
+import { toRouteId } from "~/lib/registry";
+
+## Feeds
+> <p className="text-muted-foreground">Components to display RSS feeds</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.feeds.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>

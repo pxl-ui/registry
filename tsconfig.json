@@ -14,7 +14,7 @@
       "~/examples/*": ["./examples/*"],
       "~/*": ["./app/*"],
       "@/components/backgrounds/*": ["./registry/backgrounds/*"],
-      "@/components/blocks/*": ["./registry/blocks/*"],
+      "@/components/features/*": ["./registry/features/*"],
       "@/components/colors/*": ["./registry/colors/*"],
       "@/components/fonts/*": ["./registry/fonts/*"],
       "@/components/icons/*": ["./registry/icons/*"],

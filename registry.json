@@ -4,9 +4,9 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "include": [
     "registry/backgrounds/pxl/registry.json",
-    "registry/blocks/pxl/registry.json",
     "registry/colors/pxl/registry.json",
     "registry/displays/pxl/registry.json",
+    "registry/features/pxl/registry.json",
     "registry/fonts/pxl/registry.json",
     "registry/hooks/pxl/registry.json",
     "registry/icons/pxl/registry.json",

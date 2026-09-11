@@ -113,12 +113,16 @@ export default defineConfig({
             ]
           },
           {
-            label: "Blocks",
-            link: "/blocks",
+            label: "Features",
+            link: "/features",
             items: [
               {
+                label: "Introduction",
+                link: "/features/",
+              },
+              {
                 label: "Feeds",
-                items: [{ autogenerate: { directory: "blocks/feeds" } }],
+                items: [{ autogenerate: { directory: "features/feeds" } }],
               }  
             ]
           },
