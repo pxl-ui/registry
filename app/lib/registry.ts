@@ -301,10 +301,10 @@ function toRouteId(itemName: string) {
   const baseName = basename(itemName);
   const itemKind = kind(itemName);
 
-  if (itemKind === "background") return url(`backgrounds/patterns/${baseName}`);
-  if (itemKind === "color") return url(`colors/palettes/${baseName}`);
-  if (itemKind === "font") return url(`typography/fonts/${baseName}`);
-  if (itemKind === "icon") return url(`icons/packs/${baseName}`);
+  if (itemKind === "background") return url(`backgrounds/${baseName}`);
+  if (itemKind === "color") return url(`colors/${baseName}`);
+  if (itemKind === "font") return url(`typography/${baseName}`);
+  if (itemKind === "icon") return url(`icons/${baseName}`);
 
   if (itemKind === "component") {
     const itemComponentKind = componentKind(itemName);

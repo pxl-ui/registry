@@ -79,11 +79,58 @@ export default defineConfig({
             label: "Docs",
             link: "/docs/",
             items: [
-              { autogenerate: { directory: "docs" } },
+              {
+                label: "Introduction",
+                link: "/docs"
+              },
+              {
+                label: "Installation",
+                link: "/docs/installation"
+              },
               {
                 label: "Recipes",
                 items: [{ autogenerate: { directory: "recipes" } }],
-              }
+              },
+              {
+                label: "Additional Resources",
+                link: "/docs/additional-resources"
+              },
+            ]
+          },
+          {
+            label: "Utilities",
+            link: "/utilities/pixels",
+            items: [
+              { autogenerate: { directory: "utilities" }},
+              {
+                label: "Displays",
+                items: [
+                  {
+                    label: "Introduction",
+                    link: "/displays"
+                  },
+                  {
+                    label: "Widgets",
+                    items: [{ autogenerate: { directory: "displays/widgets" } }],
+                  },
+                  {
+                    label: "Embedded Systems",
+                    items: [{ autogenerate: { directory: "displays/embedded" } }],
+                  },
+                  {
+                    label: "High-definition",
+                    items: [{ autogenerate: { directory: "displays/hd" } }],
+                  },
+                  {
+                    label: "Video Graphics Array",
+                    items: [{ autogenerate: { directory: "displays/vga" } }],
+                  },
+                  {
+                    label: "Extended Graphics Array",
+                    items: [{ autogenerate: { directory: "displays/xga" } }],
+                  },
+                ]
+              },
             ]
           },
           {
@@ -142,89 +189,285 @@ export default defineConfig({
             ]
           },
           {
-            label: "Colors",
-            link: "/colors/",
+            label: "Customization",
+            link: "/customization",
             items: [
               {
-                label: "Introduction",
-                link: "/colors/",
+                label: "Colors",
+                items: [
+                  { 
+                    label: "Introduction",
+                    link: "/colors"
+                  },
+                  {
+                    label: "Complete Palettes",
+                    items: [
+                      { 
+                        label: "DUEL",
+                        link: "/colors/duel"
+                      },
+                      { 
+                        label: "Flexoki",
+                        link: "/colors/flexoki"
+                      },
+                      { 
+                        label: "Catppuccin Frappe",
+                        link: "/colors/catppuccin-frappe"
+                      },
+                      { 
+                        label: "Catppuccin Latte",
+                        link: "/colors/catppuccin-latte"
+                      },
+                      { 
+                        label: "Catppuccin Macchiato",
+                        link: "/colors/catppuccin-macchiato"
+                      },
+                      { 
+                        label: "Catppuccin Mocha",
+                        link: "/colors/catppuccin-mocha"
+                      },
+                      { 
+                        label: "Nestopia",
+                        link: "/colors/nestopia"
+                      }
+                    ]
+                  },
+                  {
+                    label: "Base Palettes",
+                    items: [
+                      { 
+                        label: "Paperback",
+                        link: "/colors/paperback"
+                      },
+                      { 
+                        label: "Gothic Bit",
+                        link: "/colors/gothic-bit"
+                      },
+                      { 
+                        label: "JustParchment8",
+                        link: "/colors/justparchment8"
+                      },
+                      { 
+                        label: "DMG-01",
+                        link: "/colors/dmg-01"
+                      },
+                      { 
+                        label: "Final Menu",
+                        link: "/colors/final-menu"
+                      },
+                    ]
+                  },
+                  {
+                    label: "Color Palettes",
+                    items: [
+                      {
+                        label: "PICO-8",
+                        link: "/colors/pico-8"
+                      },
+                      {
+                        label: "FANTASY 24",
+                        link: "/colors/fantasy-24"
+                      },
+                      {
+                        label: "ARNE-16",
+                        link: "/colors/arne-16"
+                      },
+                      {
+                        label: "Vine's Flexible Linear Ramps",
+                        link: "/colors/vines-flexible-linear-ramps"
+                      }
+                    ]
+                  },
+                  {
+                    label: "Compat Palettes",
+                    items: [
+                      { 
+                        label: "DUEL",
+                        link: "/colors/duel-compat"
+                      },
+                      { 
+                        label: "Flexoki",
+                        link: "/colors/flexoki-compat"
+                      },
+                      { 
+                        label: "Tailwind",
+                        link: "/colors/tailwind"
+                      },
+                    ]
+                  }
+                ],
               },
               {
-                label: "Palettes",
-                items: [{ autogenerate: { directory: "colors/palettes" } }],
+                label: "Typography",
+                items: [
+                  { 
+                    label: "Introduction",
+                    link: "/typography/"
+                  },
+                  {
+                    label: "Headings",
+                    items: [
+                      {
+                        label: "Pixel Digivolve",
+                        link: "/typography/pixel-digivolve"
+                      },
+                      {
+                        label: "Not Jam Blackletter 16",
+                        link: "/typography/not-jam-blackletter-16"
+                      },
+                      {
+                        label: "Jacquarda Bastarda 9",
+                        link: "/typography/jacquarda-bastarda-9"
+                      }
+                    ]
+                  },
+                  {
+                    label: "Sans",
+                    items: [
+                      {
+                        label: "Able 5",
+                        link: "/typography/able-5"
+                      },
+                      {
+                        label: "Lieben Cloude",
+                        link: "/typography/lieben-cloude"
+                      },
+                      {
+                        label: "Pixelify Sans",
+                        link: "/typography/pixelify-sans"
+                      },
+                      {
+                        label: "Quanta Strike",
+                        link: "/typography/quanta-strike"
+                      },
+                      {
+                        label: "Tiny5",
+                        link: "/typography/tiny5"
+                      },
+                      {
+                        label: "Micro 5",
+                        link: "/typography/micro-5"
+                      },
+                      {
+                        label: "Geist Pixel",
+                        link: "/typography/geist-pixel"
+                      },
+                      {
+                        label: "DotGothic16",
+                        link: "/typography/dotgothic16"
+                      },
+                      {
+                        label: "Press Start 2P",
+                        link: "/typography/press-start-2p"
+                      }
+                    ]
+                  },
+                  {
+                    label: "Serif",
+                    items: [
+                      {
+                        label: "Illusion Book",
+                        link: "/typography/illusion-book"
+                      },
+                      {
+                        label: "Pixel Serif",
+                        link: "/typography/pixel-serif"
+                      },
+                      {
+                        label: "Coral Pixels",
+                        link: "/typography/coral-pixels"
+                      }
+                    ]
+                  },
+                  {
+                    label: "Monospaced",
+                    items: [
+                      {
+                        label: "Monogram",
+                        link: "/typography/monogram"
+                      },
+                      {
+                        label: "Bytesized",
+                        link: "/typography/bytesized"
+                      },
+                      {
+                        label: "VT323",
+                        link: "/typography/vt323"
+                      }
+                    ]
+                  }
+                ]
               },
-            ]
-          },
-          {
-            label: "Typography",
-            link: "/typography/",
-            items: [
               {
-                label: "Introduction",
-                link: "/typography/",
+                label: "Icons",
+                items: [
+                  {
+                    label: "Introduction",
+                    link: "/icons/",
+                  },
+                  {
+                    label: "Cursors",
+                    items: [
+                      {
+                        label: "Pixelarticons",
+                        link: "/icons/pixelarticons-cursors"
+                      },
+                    ],
+                  },
+                  {
+                    label: "Emojis",
+                    items: [
+                      {
+                        label: "Dotto Emoji",
+                        link: "/icons/dotto-emoji"
+                      },
+                    ],
+                  },
+                  {
+                    label: "Flags",
+                    items: [
+                      {
+                        label: "Terrabandiere",
+                        link: "/icons/terrabandiere"
+                      },
+                    ],
+                  },
+                ]
               },
               {
-                label: "Typeset",
-                link: "/typography/typeset",
-              },
-              {
-                label: "Fonts",
-                items: [{ autogenerate: { directory: "typography/fonts" } }],
-              },
-            ]
-          },
-          {
-            label: "Icons",
-            link: "/icons/",
-            items: [
-              {
-                label: "Introduction",
-                link: "/icons/",
-              },
-              {
-                label: "Packs",
-                items: [{ autogenerate: { directory: "icons/packs" } }],
-              },
-            ]
-          },
-          {
-            label: "Backgrounds",
-            link: "/backgrounds/",
-            items: [
-              {
-                label: "Introduction",
-                link: "/backgrounds/",
-              },
-              {
-                label: "Patterns",
-                items: [{ autogenerate: { directory: "backgrounds/patterns" } }],
-              },
-            ]
-          },
-          {
-            label: "Displays",
-            link: "/displays/",
-            items: [
-              {
-                label: "Widgets",
-                items: [{ autogenerate: { directory: "displays/widgets" } }],
-              },
-              {
-                label: "Embedded Systems",
-                items: [{ autogenerate: { directory: "displays/embedded" } }],
-              },
-              {
-                label: "High-definition",
-                items: [{ autogenerate: { directory: "displays/hd" } }],
-              },
-              {
-                label: "Video Graphics Array",
-                items: [{ autogenerate: { directory: "displays/vga" } }],
-              },
-              {
-                label: "Extended Graphics Array",
-                items: [{ autogenerate: { directory: "displays/xga" } }],
-              },
+                label: "Backgrounds",
+                items: [
+                  {
+                    label: "Introduction",
+                    link: "/backgrounds/",
+                  },
+                  {
+                    label: "Patterns",
+                    items: [
+                      {
+                        label: "Grid Pattern",
+                        link: "/backgrounds/grid-pattern"
+                      },
+                      {
+                        label: "Animated Grid Pattern",
+                        link: "/backgrounds/animated-grid-pattern"
+                      },
+                      {
+                        label: "Hexagon Pattern",
+                        link: "/backgrounds/hexagon-pattern"
+                      },
+                      {
+                        label: "Flickering Grid",
+                        link: "/backgrounds/flickering-grid"
+                      },
+                      {
+                        label: "Glyph Matrix",
+                        link: "/backgrounds/glyph-matrix"
+                      },
+                    ],
+                  },
+                ]
+              }
             ]
           },
         ]),

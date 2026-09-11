@@ -1,0 +1,35 @@
+---
+title: Customization
+---
+import { LinkCard } from '~/components';
+import { lists as colorLists } from '~/lib/colors';
+import { url } from '~/lib/utils';
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  <LinkCard 
+    href={url("colors")} 
+    title="Colors"
+  >
+  </LinkCard>
+
+  <LinkCard 
+    href={url("typography")} 
+    title="Typography"
+  >
+  </LinkCard>
+
+  <LinkCard 
+    href={url("icons")} 
+    title="Icons"
+  >
+  </LinkCard>
+
+  <LinkCard 
+    href={url("backgrounds")} 
+    title="Backgrounds"
+  >
+  </LinkCard>
+
+</div>
