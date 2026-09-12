@@ -2,14 +2,19 @@
 
 import type { ComponentProps } from 'react';
 
-import { Callout as PxlCallout } from '@/components/ui/pxl/callout';
+import { type CalloutVariant, Callout as PxlCallout } from '@/components/ui/pxl/callout';
 import { cn } from '@/lib/utils';
 
-export type Props = ComponentProps<typeof PxlCallout>;
+export type Props = ComponentProps<typeof PxlCallout> & {
+  type?: CalloutVariant
+};
 
-const { className, ...props } = Astro.props;
+const { className, type: variant, ...props } = Astro.props;
 
 ---
-<PxlCallout className={cn("not-content", className)} {...props} >
+<PxlCallout 
+  className={cn("not-content", className)} 
+  variant={variant}
+  {...props} >
   <slot />
 </PxlCallout>

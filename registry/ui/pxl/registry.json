@@ -153,7 +153,6 @@
       "categories": ["pxl-ui", "components", "layout"],
       "dependencies": ["@base-ui/react"],
       "registryDependencies": [
-        "pxl-ui/registry/alert",
         "pxl-ui/registry/collapsible"
       ],
       "files": [
