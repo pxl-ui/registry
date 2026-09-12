@@ -78,7 +78,7 @@ function CountryFlag({
   ...props
 }: SVGProps<SVGSVGElement> &
   VariantProps<typeof flagVariants> & {
-    /** ISO 3166-1 Code */
+    /** [ISO 3166-1](https://www.wikiwand.com/es/ISO_3166-1) Code */
     code: string | number;
   }) {
   const key = useMemo(() => {
