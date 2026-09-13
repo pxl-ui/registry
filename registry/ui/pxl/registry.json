@@ -453,6 +453,26 @@
       ]
     },
     {
+      "name": "markdown",
+      "type": "registry:component",
+      "title": "Markdown",
+      "description": "A markdown renderer designed with support for streaming content.",
+      "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["streamdown"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/dialog",
+        "pxl-ui/registry/styles-typeset"
+      ],
+      "files": [
+        {
+          "path": "markdown.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/markdown.tsx"
+        }
+      ]
+    },
+    {
       "name": "popover",
       "type": "registry:component",
       "title": "Popover",

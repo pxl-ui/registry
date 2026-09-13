@@ -522,3 +522,28 @@
     margin-block-start: 0;
   }
 }
+
+/** Streamdown **/
+@layer utilities {
+  .typeset
+    *:not(
+      :where(
+        .not-typeset,
+        [data-not-typeset],
+        .not-typeset *,
+        [data-not-typeset] *
+      )
+    ) {
+    /* Links. */
+    &:where([data-streamdown="link"]) {
+      --link-color: color-mix(in srgb, var(--primary-foreground) 60%, transparent);
+      color: var(--link-color);
+      text-decoration: none;
+      border-bottom: 1px solid var(--link-color);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    &:where([data-streamdown="link"]:hover) {
+      --link-color: color-mix(in srgb, var(--primary-foreground) 100%, transparent);
+    }
+  }
+}
