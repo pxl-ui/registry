@@ -4,7 +4,7 @@ import {
   FeedGridItemContent,
   FeedGridItemDescription,
   FeedGridItemTitle,
-} from "@/features/pxl/feeds/feed-grid";
+} from "@/features/pxl/feeds/grid";
 import type { Atom } from "@/lib/schemas/pxl/atom";
 
 export default function FeedGridYoutubeAtomExample() {

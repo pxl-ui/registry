@@ -4,7 +4,7 @@ import {
   FeedListItemContent,
   FeedListItemDescription,
   FeedListItemTitle,
-} from "@/features/pxl/feeds/feed-list";
+} from "@/features/pxl/feeds/list";
 import type { Atom } from "@/lib/schemas/pxl/atom";
 
 export default function FeedListYoutubeAtomExample() {

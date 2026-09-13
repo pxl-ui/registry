@@ -21,7 +21,7 @@
       ]
     },
     {
-      "name": "feeds/feed-grid",
+      "name": "feeds/grid",
       "type": "registry:component",
       "title": "Feed Grid",
       "description": "A grid of feed entries.",
@@ -36,13 +36,16 @@
       "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/feed-grid.tsx",
-          "target": "@components/features/pxl/feeds/feed-grid.tsx"
+          "path": "feeds/grid.tsx",
+          "target": "@components/features/pxl/feeds/grid.tsx"
+        }
+      ]
+    },
         }
       ]
     },
     {
-      "name": "feeds/feed-list",
+      "name": "feeds/list",
       "type": "registry:component",
       "title": "Feed List",
       "description": "A list of feed entries.",
@@ -57,8 +60,8 @@
       "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/feed-list.tsx",
-          "target": "@components/features/pxl/feeds/feed-list.tsx"
+          "path": "feeds/list.tsx",
+          "target": "@components/features/pxl/feeds/list.tsx"
         }
       ]
     }

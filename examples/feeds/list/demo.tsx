@@ -1,13 +1,13 @@
 import {
-  FeedGrid,
-  FeedGridItem,
-  FeedGridItemContent,
-  FeedGridItemDescription,
-  FeedGridItemTitle,
-} from "@/features/pxl/feeds/feed-grid";
+  FeedList,
+  FeedListItem,
+  FeedListItemContent,
+  FeedListItemDescription,
+  FeedListItemTitle,
+} from "@/features/pxl/feeds/list";
 import type { Rss } from "@/lib/schemas/pxl/rss";
 
-export default function FeedGridDemo() {
+export default function FeedListDemo() {
   const rssFeed: Rss.Feed = {
     title: "101 Cookbooks",
     link: "https://www.101cookbooks.com/",
@@ -755,15 +755,15 @@ export default function FeedGridDemo() {
   };
 
   return (
-    <FeedGrid className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
+    <FeedList className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
       {rssFeed.items?.map((item, idx) => (
-        <FeedGridItem key={item.guid?.value ?? idx}>
-          <FeedGridItemContent>
-            <FeedGridItemTitle.Rss item={item} />
-            <FeedGridItemDescription.Rss item={item} />
-          </FeedGridItemContent>
-        </FeedGridItem>
+        <FeedListItem key={item.guid?.value ?? idx}>
+          <FeedListItemContent>
+            <FeedListItemTitle.Rss item={item} />
+            <FeedListItemDescription.Rss item={item} />
+          </FeedListItemContent>
+        </FeedListItem>
       ))}
-    </FeedGrid>
+    </FeedList>
   );
 }
