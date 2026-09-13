@@ -229,7 +229,11 @@ export default defineConfig({
               {
                 label: "Feeds",
                 items: [{ autogenerate: { directory: "features/feeds" } }],
-              }  
+              },
+              {
+                label: "Marketing",
+                items: [{ autogenerate: { directory: "features/marketing" } }],
+              },
             ]
           },
           {

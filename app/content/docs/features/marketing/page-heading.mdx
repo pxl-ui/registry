@@ -1,0 +1,74 @@
+---
+title: Page Heading
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="marketing/page-heading" />
+
+## Installation
+
+<Install item="marketing/page-heading" />
+
+## Usage
+
+```tsx
+import { 
+  PageHeading,
+  PageHeadingActions,
+  PageHeadingBody,
+  PageHeadingTagline,
+  PageHeadingTitle,
+} from "@/components/features/pxl/marketing/page-heading";
+```
+
+```tsx
+<PageHeading alignment="center">
+  <PageHeadingTagline>
+    New features released
+  </PageHeadingTagline>
+  <PageHeadingTitle>
+    Make Better Decisions, With Ease
+  </PageHeadingTitle>
+  <PageHeadingBody>
+    Acme Inc's personal AI helps you cut through the noise, speed up delivery, and stay focused without switching contexts.
+  </PageHeadingBody>
+  <PageHeadingActions>
+    <Button variant="default">Get Started</Button>
+    <Button variant="secondary">Watch Demo</Button>
+  </PageHeadingActions>
+</PageHeading>
+```
+
+## API reference
+
+### PageHeading
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `alignment`        | `left \| center \| right`    | -       | Alignment   |
+| `size`        | `sm \| lg`    | -       | Size   |
+| `className`        | -    | -       | Additional styles   |
+
+### PageHeadingTagline
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### PageHeadingTitle
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### PageHeadingBody
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### PageHeadingActions
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |

@@ -64,6 +64,54 @@
           "target": "@components/features/pxl/feeds/list.tsx"
         }
       ]
+    },
+    {
+      "name": "marketing/page-heading",
+      "type": "registry:component",
+      "title": "Page Heading",
+      "description": "A component that acts as the text-focused version of a hero banner.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "registryDependencies": [
+        "pxl-ui/registry/marketing/tagline"
+      ], 
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/page-heading.tsx",
+          "target": "@components/features/pxl/marketing/page-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/section-heading",
+      "type": "registry:component",
+      "title": "Section Heading",
+      "description": "A component that standardizes heading typography and spacing.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "registryDependencies": [
+        "pxl-ui/registry/marketing/tagline"
+      ], 
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/section-heading.tsx",
+          "target": "@components/features/pxl/marketing/section-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/tagline",
+      "type": "registry:component",
+      "title": "Tagline",
+      "description": "A component that displays a tagline with different variants.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/tagline.tsx",
+          "target": "@components/features/pxl/marketing/tagline.tsx"
+        }
+      ]
     }
   ]
 }

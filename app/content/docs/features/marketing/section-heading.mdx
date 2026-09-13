@@ -1,0 +1,63 @@
+---
+title: Section Heading
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="marketing/section-heading" />
+
+## Installation
+
+<Install item="marketing/section-heading" />
+
+## Usage
+
+```tsx
+import { 
+  SectionHeading,
+  SectionHeadingTagline,
+  SectionHeadingTitle,
+  SectionHeadingBody,
+} from "@/components/features/pxl/marketing/section-heading";
+```
+
+```tsx
+<SectionHeading>
+  <SectionHeadingTagline>
+    Pricing
+  </SectionHeadingTagline>
+  <SectionHeadingTitle>
+    Simple Pricing, Smarter Work
+  </SectionHeadingTitle>
+  <SectionHeadingBody>
+    Acme Inc. has a plan designed to help you move faster.
+  </SectionHeadingBody>
+</SectionHeading>
+```
+
+## API reference
+
+### SectionHeading
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `alignment`        | `left \| center \| right`    | -       | Alignment   |
+| `size`        | `sm \| lg`    | -       | Size   |
+| `className`        | -    | -       | Additional styles   |
+
+### SectionHeadingTagline
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### SectionHeadingTitle
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### SectionHeadingBody
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
