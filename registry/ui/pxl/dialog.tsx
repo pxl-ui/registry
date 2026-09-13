@@ -124,7 +124,7 @@ function DialogTitle({ className, ...props }: DialogPrimitive.Title.Props) {
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
-      className={cn("font-heading leading-none", className)}
+      className={cn("font-heading leading-none [&_svg:not([class*='size-'])]:size-4 [&>svg]:inline-block [&>svg]:mr-1", className)}
       {...props}
     />
   );
