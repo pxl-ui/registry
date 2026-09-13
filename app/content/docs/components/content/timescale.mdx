@@ -1,0 +1,81 @@
+---
+title: Timescale
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="timescale" />
+
+## Installation
+
+<Install item="timescale" />
+
+## Usage
+
+```tsx
+import {
+  TimescaleAge,
+  TimescaleContent,
+  TimescaleHeader,
+  TimescaleIntroScroll,
+  TimescaleItem,
+  TimescaleRail,
+  TimescaleRoot,
+  TimescaleTick,
+  TimescaleTrack,
+  TimescaleViewport,
+  TimescaleYear,
+} from "@/components/ui/pxl/timescale";
+```
+
+```tsx
+<TimescaleIntroScroll>
+  <TimescaleRoot>
+    <TimescaleHeader>
+      <TimescaleAge />
+      <TimescaleYear />
+    </TimescaleHeader>
+
+    <TimescaleViewport>
+      <TimescaleTrack>
+        <TimescaleRail />
+
+        <TimescaleItem>
+          <TimescaleTick />
+          <TimescaleAge />
+          <TimescaleYear />
+          <TimescaleContent />
+        </TimescaleItem>
+      </TimescaleTrack>
+    </TimescaleViewport>
+  </TimescaleRoot>
+</TimescaleIntroScroll>
+```
+
+## Composition
+
+Use the following composition to build a `Timescale`
+
+```text
+TimescaleRoot
+├── TimescaleHeader
+│   ├── TimescaleAge
+│   └── TimescaleYear
+└── TimescaleViewport
+    └── TimescaleTrack
+        ├── TimescaleRail
+        └── TimescaleItem
+            ├── TimescaleTick
+            ├── TimescaleAge
+            ├── TimescaleYear
+            └── TimescaleContent
+```
+
+Wrap in `TimescaleIntroScroll` to scroll a horizontal `Timescale` to its latest item on mount, respecting `prefers-reduced-motion`.
+
+## API reference
+
+### TimescaleRoot
+
+| Prop           | Type     | Default          | Description                                  |
+| -------------- | -------- | ---------------- | -------------------------------------------- |
+| `orientation`       | `string` | `"horizontal" \| "vertical"`  | |

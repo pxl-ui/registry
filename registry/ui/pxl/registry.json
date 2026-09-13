@@ -763,6 +763,20 @@
       ]
     },
     {
+      "name": "timescale",
+      "type": "registry:component",
+      "description": "Ruler-style timeline for plotting milestones along a horizontal or vertical axis.",
+      "categories": ["pxl-ui", "components", "content"],
+      "author": "Chánh Đại (https://github.com/ncdai)",
+      "files": [
+        {
+          "path": "timescale.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/timescale.tsx"
+        }
+      ]
+    },
+    {
       "name": "tooltip",
       "type": "registry:component",
       "title": "Tooltip",
