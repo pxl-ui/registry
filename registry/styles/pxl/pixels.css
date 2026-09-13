@@ -5,7 +5,7 @@
 
 @utility pixel-color-* {
   --pixel-color: --value(--color-*, [color]);
-  --pixel-alpha: calc(--modifier(integer) * 1%);
+  --pixel-alpha: calc(--modifier(integer, --default(100)) * 1%);
   --pixel-color: --alpha(--value(--color-*, [color]) / var(--pixel-alpha, 100%));
 }
 
