@@ -521,6 +521,20 @@
       ]
     },
     {
+      "name": "rating",
+      "type": "registry:component",
+      "title": "Rating",
+      "description": "Star rating display for a numeric score.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "files": [
+        {
+          "path": "rating.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/rating.tsx"
+        }
+      ]
+    },
+    {
       "name": "reveal",
       "type": "registry:component",
       "title": "Reveal",
