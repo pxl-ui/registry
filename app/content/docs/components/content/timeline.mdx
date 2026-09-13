@@ -1,0 +1,127 @@
+---
+title: Timeline
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="timeline" />
+
+## Installation
+
+<Install item="timeline" />
+
+
+## Usage
+
+```tsx
+import {
+  Timeline,
+  TimelineContent,
+  TimelineDate,
+  TimelineHeader,
+  TimelineIndicator,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineTitle,
+} from "@/components/reui/timeline"
+```
+
+```tsx
+<Timeline>
+  <TimelineItem step={1}>
+    <TimelineHeader>
+      <TimelineDate>March 2024</TimelineDate>
+      <TimelineTitle>Project Initialized</TimelineTitle>
+    </TimelineHeader>
+    <TimelineIndicator />
+    <TimelineSeparator />
+    <TimelineContent>
+      Successfully set up the project repository and initial architecture.
+    </TimelineContent>
+  </TimelineItem>
+</Timeline>
+```
+
+## Horizontal Orientation
+
+<ComponentPreview item="timeline" example="horizontal" />
+
+## With Icons
+
+<ComponentPreview item="timeline" example="icons" />
+
+## With Left-Aligned Dates
+
+<ComponentPreview item="timeline" example="left-aligned-dates" />
+
+## Alternating layout
+
+<ComponentPreview item="timeline" example="alternating" />
+
+## API Reference
+
+### Timeline
+
+The root component for the timeline.
+
+| Prop            | Type                         | Default      | Description                                  |
+| :-------------- | :--------------------------- | :----------- | :------------------------------------------- |
+| `defaultValue`  | `number`                     | `1`          | The initial active step.                     |
+| `value`         | `number`                     | -            | The current active step (controlled).        |
+| `onValueChange` | `(value: number) => void`    | -            | Callback fired when the active step changes. |
+| `orientation`   | `"horizontal" \| "vertical"` | `"vertical"` | The layout orientation of the timeline.      |
+
+### TimelineItem
+
+A single item in the timeline.
+
+| Prop   | Type     | Default | Description                                  |
+| :----- | :------- | :------ | :------------------------------------------- |
+| `step` | `number` | -       | **Required**. The step number for this item. |
+
+### TimelineDate
+
+The date or time label for a timeline item.
+
+| Prop        | Type     | Default | Description                                |
+| :---------- | :------- | :------ | :----------------------------------------- |
+| `className` | `string` | -       | Additional CSS classes for the date label. |
+
+### TimelineTitle
+
+The title for a timeline item.
+
+| Prop        | Type     | Default | Description                           |
+| :---------- | :------- | :------ | :------------------------------------ |
+| `className` | `string` | -       | Additional CSS classes for the title. |
+
+### TimelineIndicator
+
+The visual indicator (usually a dot) for a timeline item.
+
+| Prop        | Type     | Default | Description                               |
+| :---------- | :------- | :------ | :---------------------------------------- |
+| `className` | `string` | -       | Additional CSS classes for the indicator. |
+
+### TimelineSeparator
+
+The line connecting timeline indicators.
+
+| Prop        | Type     | Default | Description                                    |
+| :---------- | :------- | :------ | :--------------------------------------------- |
+| `className` | `string` | -       | Additional CSS classes for the separator line. |
+
+### TimelineHeader
+
+A container for the date and title.
+
+| Prop        | Type     | Default | Description                                      |
+| :---------- | :------- | :------ | :----------------------------------------------- |
+| `className` | `string` | -       | Additional CSS classes for the header container. |
+
+### TimelineContent
+
+The main descriptive content for a timeline item.
+
+| Prop        | Type     | Default | Description                                       |
+| :---------- | :------- | :------ | :------------------------------------------------ |
+| `className` | `string` | -       | Additional CSS classes for the content container. |
