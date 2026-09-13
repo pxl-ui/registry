@@ -1,0 +1,84 @@
+---
+title: Profile Card
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="profile-card" />
+
+## Installation
+
+<Install item="profile-card" />
+
+## Usage
+
+```tsx
+import {
+  ProfileCard,
+  ProfileCardAvatar,
+  ProfileCardBody,
+  ProfileCardDetails,
+  ProfileCardName,
+  ProfileCardVerifiedBadge,
+} from "@/components/ui/pxl/profile-card"
+```
+
+```tsx
+<ProfileCard>
+  <ProfileCardAvatar
+    name="@hero"
+    src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/hero.png" 
+  />
+  <ProfileCardDetails>
+    <ProfileCardName>
+      Link <ProfileCardVerifiedBadge />
+    </ProfileCardName>
+    <ProfileCardBody>@hero</ProfileCardBody>
+  </ProfileCardDetails>
+</ProfileCard>
+```
+## Composition
+
+Use the following composition to build a `ProfileCard`
+
+```text
+ProfileCard
+├── ProfileCardAvatar
+└── ProfileCardDetails
+    ├── ProfileCardName
+    │   └──ProfileCardVerifiedBadge
+    └── ProfileCardBody
+```
+
+## API reference
+
+### ProfileCard
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `orientation`        | `horizontal \| vertical`    | `horizontal`       | The orientation of the card   |
+| `className`        | -    | -       | Additional styles   |
+
+### ProfileCardDetails
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+
+### ProfileCardName
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### ProfileCardVerifiedBadge
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### ProfileCardBody
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |

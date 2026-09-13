@@ -488,6 +488,23 @@
       ]
     },
     {
+      "name": "profile-card",
+      "type": "registry:component",
+      "title": "Profile Card",
+      "description": "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
+      "categories": ["pxl-ui", "components", "content"],
+      "registryDependencies": [
+        "pxl-ui/registry/avatar"
+      ],
+      "files": [
+        {
+          "path": "profile-card.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/profile-card.tsx"
+        }
+      ]
+    },
+    {
       "name": "questionnaire",
       "type": "registry:component",
       "title": "Questionnaire",
