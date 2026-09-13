@@ -1,7 +1,7 @@
 "use client";
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { cva } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
 
 import { cn } from "@/lib/utils";
@@ -9,15 +9,20 @@ import { cn } from "@/lib/utils";
 const Select = SelectPrimitive.Root;
 
 const selectVariants = cva(
-  "pixel-border flex w-fit items-center justify-between gap-1.5 py-2 pr-2 pl-2.5 whitespace-nowrap transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 data-placeholder:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "flex w-fit items-center justify-between gap-1.5 py-2 pr-2 pl-2.5 whitespace-nowrap transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 data-placeholder:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
+      border: {
+        solid: "pixel-border",
+        none: "",
+      },
       size: {
         default: "h-9 text-sm",
         sm: "h-8 text-sm",
       },
     },
     defaultVariants: {
+      border: "solid",
       size: "default",
     },
   },
@@ -45,18 +50,18 @@ function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
 
 function SelectTrigger({
   className,
+  border = "solid",
   size = "default",
   children,
   ...props
-}: SelectPrimitive.Trigger.Props & {
-  size?: "sm" | "default";
-}) {
+}: SelectPrimitive.Trigger.Props & VariantProps<typeof selectVariants>) {
   return (
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       data-size={size}
       className={cn(
         selectVariants({
+          border,
           size,
         }),
         className,
