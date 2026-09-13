@@ -645,6 +645,21 @@
       ]
     },
     {
+      "name": "slide-to-unlock",
+      "type": "registry:component",
+      "title": "Slide to Unlock",
+      "description": "Interactive slider inspired by the classic iPhone “slide to unlock” gesture.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "slide-to-unlock.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/slide-to-unlock.tsx"
+        }
+      ]
+    },
+    {
       "name": "slider",
       "type": "registry:component",
       "title": "Slider",

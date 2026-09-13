@@ -1,0 +1,61 @@
+---
+title: Slide to Unlock
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="slide-to-unlock" />
+
+## Installation
+
+<Install item="slide-to-unlock" />
+
+## Usage
+
+```tsx
+import {
+  SlideToUnlock,
+  SlideToUnlockHandle,
+  SlideToUnlockText,
+  SlideToUnlockTrack,
+} from "@/components/ui/pxl/slide-to-unlock"
+```
+
+```tsx
+<SlideToUnlock>
+  <SlideToUnlockTrack>
+    <SlideToUnlockText>
+      slide to unlock
+    </SlideToUnlockText>
+    <SlideToUnlockHandle />
+  </SlideToUnlockTrack>
+</SlideToUnlock>
+```
+
+## Composition
+
+Use the following composition to build a `SlideToUnlock`
+
+```text
+SlideToUnlock
+└── SlideToUnlockTrack
+    ├── SlideToUnlockText
+    └── SlideToUnlockHandle
+```
+
+## API reference
+
+### SlideToUnlock
+
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `handleWidth`         | `number`                    | -       | Width of the drag handle in pixels. |
+| `onUnlock`         | `(() => void) \| undefined`                    | -       | Called when the handle is dragged fully to the end. |
+
+
+### SlideToUnlockText
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `children`         | `React.JSX.Element \| ((props: { isDragging: boolean; }) => React.JSX.Element) \| string`                    | -       | Accepts a render function as children to react to the dragging state. |
+
