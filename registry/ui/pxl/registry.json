@@ -763,6 +763,19 @@
       ]
     },
     {
+      "name": "timeline",
+      "type": "registry:component",
+      "description": "A timeline component that displays events with customizable orientation, alignment, and spacing. A visual representation of events in chronological order.",
+      "categories": ["pxl-ui", "components", "content"],
+      "files": [
+        {
+          "path": "timeline.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/timeline.tsx"
+        }
+      ]
+    },
+    {
       "name": "timescale",
       "type": "registry:component",
       "description": "Ruler-style timeline for plotting milestones along a horizontal or vertical axis.",
