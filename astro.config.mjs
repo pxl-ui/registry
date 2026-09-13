@@ -223,6 +223,10 @@ export default defineConfig({
                 link: "/features/",
               },
               {
+                label: "Articles",
+                items: [{ autogenerate: { directory: "features/articles" } }],
+              },
+              {
                 label: "Feeds",
                 items: [{ autogenerate: { directory: "features/feeds" } }],
               }  

@@ -4,6 +4,23 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
+      "name": "articles/blockquote",
+      "type": "registry:component",
+      "title": "Article Blockquote",
+      "description": "A component that highlights a key excerpt or quote from an article.",
+      "categories": ["pxl-ui", "features", "articles"],
+      "registryDependencies": [
+        "pxl-ui/registry/profile-card"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "articles/blockquote.tsx",
+          "target": "@components/features/pxl/articles/blockquote.tsx"
+        }
+      ]
+    },
+    {
       "name": "feeds/feed-grid",
       "type": "registry:component",
       "title": "Feed Grid",

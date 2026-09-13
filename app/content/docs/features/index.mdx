@@ -6,6 +6,23 @@ import { LinkCard } from "~/components";
 import { lists } from "~/lib/features";
 import { toRouteId } from "~/lib/registry";
 
+## Articles
+> <p className="text-muted-foreground">Components to display blog posts or articles</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.articles.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
 ## Feeds
 > <p className="text-muted-foreground">Components to display RSS feeds</p>
 

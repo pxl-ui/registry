@@ -1,0 +1,115 @@
+---
+title: Article Blockquote
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="articles/blockquote" />
+
+## Installation
+
+<Install item="articles/blockquote" />
+
+## Usage
+
+```tsx
+import {
+  Blockquote,
+  BlockquoteAuthor,
+  BlockquoteAuthorAvatar,
+  BlockquoteAuthorBody,
+  BlockquoteAuthorDetails,
+  BlockquoteAuthorName,
+  BlockquoteIcon,
+  BlockquoteParagraph,
+} from "@/components/features/pxl/articles/blockquote";
+```
+
+```tsx
+<Blockquote>
+  <BlockquoteIcon position="start" />
+  <BlockquoteParagraph>
+    Blessed is the man that endureth temptation: for when he is tried, he
+    shall receive the crown of life, which the Lord hath promised to them
+    that love him.
+  </BlockquoteParagraph>
+  <BlockquoteIcon position="end" />
+  <BlockquoteAuthor>
+    <BlockquoteAuthorAvatar
+      src="https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/portraits/wizard.png"
+      name="James"
+    />
+    <BlockquoteAuthorDetails>
+      <BlockquoteAuthorName>@wizard</BlockquoteAuthorName>
+      <BlockquoteAuthorBody>4 Sept, 2025</BlockquoteAuthorBody>
+    </BlockquoteAuthorDetails>
+  </BlockquoteAuthor>
+</Blockquote>
+```
+
+## Composition
+
+Use the following composition to build a `Blockquote`
+
+```text
+Blockquote
+├── BlockquoteIcon
+├── BlockquoteParagraph
+├── BlockquoteIcon
+└── BlockquoteAuthor
+    ├── BlockquoteAuthorAvatar
+    └── BlockquoteAuthorDetails
+        ├── BlockquoteAuthorName
+        └── BlockquoteAuthorBody
+```
+
+
+## API reference
+
+### Blockquote
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### BlockquoteIcon
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+
+### BlockquoteParagraph
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### BlockquoteAuthor
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### BlockquoteAuthorAvatar
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### BlockquoteAuthorDetails
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### BlockquoteAuthorName
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
+
+### BlockquoteAuthorBody
+
+| Prop             | Type                        | Default | Description                                                                        |
+| :--------------- | :-------------------------- | :------ | :--------------------------------------------------------------------------------- |
+| `className`        | -    | -       | Additional styles   |
