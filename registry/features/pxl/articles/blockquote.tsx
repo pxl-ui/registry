@@ -25,12 +25,12 @@ function BlockquoteAuthorDetails(
   return <ProfileCardDetails {...props} />;
 }
 
-function BlockquoteAuthorName(props: ComponentProps<typeof ProfileCardName>) {
-  return <ProfileCardName {...props} />;
+function BlockquoteAuthorName({ className, ...props }: ComponentProps<typeof ProfileCardName>) {
+  return <ProfileCardName className={cn("font-serif", className)} {...props} />;
 }
 
-function BlockquoteAuthorBody(props: ComponentProps<typeof ProfileCardBody>) {
-  return <ProfileCardBody {...props} />;
+function BlockquoteAuthorBody({ className, ...props }: ComponentProps<typeof ProfileCardBody>) {
+  return <ProfileCardBody className={cn("font-serif", className)} {...props} />;
 }
 
 function BlockquoteIcon({
@@ -62,7 +62,7 @@ function BlockquoteParagraph({ className, ...props }: ComponentProps<"p">) {
     <p
       data-slot="blockquote-paragraph"
       className={cn(
-        "text-2xl tracking-tight text-pretty text-muted-foreground lg:text-3xl lg:tracking-tight",
+        "font-serif text-2xl tracking-tight text-pretty text-muted-foreground lg:text-3xl lg:tracking-tight",
         className,
       )}
       {...props}
