@@ -39,3 +39,37 @@ import { toRouteId } from "~/lib/registry";
   ))}
 
 </div>
+
+## Chats
+> <p className="text-muted-foreground">Components to display chat conversations and messages</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.chats.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
+## Marketing
+> <p className="text-muted-foreground">Components to display landing page and marketing contents</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.marketing.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>

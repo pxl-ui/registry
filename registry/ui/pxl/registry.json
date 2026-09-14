@@ -367,6 +367,20 @@
       ]
     },
     {
+      "name": "emoji",
+      "type": "registry:component",
+      "title": "Emoji",
+      "description": "Render Unicode emoji inline with text.",
+      "categories": ["pxl-ui", "components", "content"],
+      "files": [
+        {
+          "path": "emoji.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/emoji.tsx"
+        }
+      ]
+    },
+    {
       "name": "field",
       "type": "registry:component",
       "title": "Field",

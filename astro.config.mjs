@@ -231,6 +231,10 @@ export default defineConfig({
                 items: [{ autogenerate: { directory: "features/feeds" } }],
               },
               {
+                label: "Chats",
+                items: [{ autogenerate: { directory: "features/chats" } }],
+              },
+              {
                 label: "Marketing",
                 items: [{ autogenerate: { directory: "features/marketing" } }],
               },

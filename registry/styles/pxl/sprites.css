@@ -19,3 +19,13 @@
   image-rendering: pixelated;
   background-size: calc(var(--sprite-cols, 1) * 100%) calc(var(--sprite-rows, 1) * 100%);
 }
+
+.emoji {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em;
+}
