@@ -34,6 +34,24 @@
       ]
     },
     {
+      "name": "alert-dialog",
+      "type": "registry:component",
+      "title": "Alert Dialog",
+      "description": "A modal dialog that interrupts the user with important content and expects a response.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "alert-dialog.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/alert-dialog.tsx"
+        }
+      ]
+    },
+    {
       "name": "anchor-grid",
       "type": "registry:component",
       "title": "Anchor Grid",
