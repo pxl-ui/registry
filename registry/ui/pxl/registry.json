@@ -535,6 +535,20 @@
       ]
     },
     {
+      "name": "menubar",
+      "type": "registry:component",
+      "title": "Menubar",
+      "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
+      "categories": ["pxl-ui", "components", "navigation"],
+      "files": [
+        {
+          "path": "menubar.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/menubar.tsx"
+        }
+      ]
+    },
+    {
       "name": "popover",
       "type": "registry:component",
       "title": "Popover",
