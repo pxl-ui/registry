@@ -1,13 +1,13 @@
 import {
-  FeedGrid,
-  FeedGridItem,
-  FeedGridItemContent,
-  FeedGridItemDescription,
-  FeedGridItemTitle,
-} from "@/features/pxl/feeds/grid";
+  Teaser,
+  TeaserContent,
+  TeaserDescription,
+  TeaserGroup,
+  TeaserTitle,
+} from "@/features/pxl/feeds/teaser";
 import type { Atom } from "@/lib/schemas/pxl/atom";
 
-export default function FeedGridYoutubeAtomExample() {
+export default function TeaserYoutubeAtomExample() {
   const atomFeed: Atom.Feed = {
     authors: [
       {
@@ -1473,15 +1473,17 @@ export default function FeedGridYoutubeAtomExample() {
   };
 
   return (
-    <FeedGrid className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
+    <TeaserGroup 
+      layout="list" 
+      className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-border">
       {atomFeed.entries?.map((entry) => (
-        <FeedGridItem key={entry.id}>
-          <FeedGridItemContent>
-            <FeedGridItemTitle.Atom entry={entry} />
-            <FeedGridItemDescription.Atom entry={entry} />
-          </FeedGridItemContent>
-        </FeedGridItem>
+        <Teaser key={entry.id}>
+          <TeaserContent>
+            <TeaserTitle.Atom entry={entry} />
+            <TeaserDescription.Atom entry={entry} />
+          </TeaserContent>
+        </Teaser>
       ))}
-    </FeedGrid>
+    </TeaserGroup>
   );
 }

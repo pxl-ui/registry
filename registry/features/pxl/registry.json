@@ -77,47 +77,22 @@
       ]
     },
     {
-      "name": "feeds/grid",
+      "name": "feeds/teaser",
       "type": "registry:component",
-      "title": "Feed Grid",
-      "description": "A grid of feed entries.",
+      "title": "Teaser",
+      "description": "A news article teaser.",
       "categories": ["pxl-ui", "features", "feeds"],
       "registryDependencies": [
         "pxl-ui/registry/lib/html",
         "pxl-ui/registry/schemas/atom",
         "pxl-ui/registry/schemas/rdf",
-        "pxl-ui/registry/schemas/rss",
-        "pxl-ui/registry/item"
+        "pxl-ui/registry/schemas/rss"
       ],
       "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/grid.tsx",
-          "target": "@components/features/pxl/feeds/grid.tsx"
-        }
-      ]
-    },
-        }
-      ]
-    },
-    {
-      "name": "feeds/list",
-      "type": "registry:component",
-      "title": "Feed List",
-      "description": "A list of feed entries.",
-      "categories": ["pxl-ui", "features", "feeds"],
-      "registryDependencies": [
-        "pxl-ui/registry/lib/html",
-        "pxl-ui/registry/schemas/atom",
-        "pxl-ui/registry/schemas/rdf",
-        "pxl-ui/registry/schemas/rss",
-        "pxl-ui/registry/item"
-      ],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "feeds/list.tsx",
-          "target": "@components/features/pxl/feeds/list.tsx"
+          "path": "feeds/teaser.tsx",
+          "target": "@components/features/pxl/feeds/teaser.tsx"
         }
       ]
     },

@@ -1,0 +1,38 @@
+---
+title: Teaser
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="feeds/teaser" />
+
+## Installation
+
+<Install item="feeds/teaser" />
+
+## List Layout
+
+<ComponentPreview item="feeds/teaser" example="youtube" />
+
+## Usage
+
+```tsx
+import { 
+  Teaser, 
+  TeaserContent,
+  TeaserDescription ,
+  TeaserGroup,
+  TeaserTitle, 
+} from "@/components/features/pxl/feeds/teaser";
+```
+
+```tsx
+<TeaserGroup 
+  layout="columns" >
+  <Teaser>
+    <TeaserContent>
+      <TeaserTitle.Rss item={item} />
+      <TeaserDescription.Rss item={item} />
+    </TeaserContent>
+  </Teaser>
+</TeaserGroup>
+```
