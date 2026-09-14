@@ -540,11 +540,28 @@
       "title": "Menubar",
       "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
       "categories": ["pxl-ui", "components", "navigation"],
+      "registryDependencies": [
+        "pxl-ui/registry/dropdown-menu"
+      ],
       "files": [
         {
           "path": "menubar.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/menubar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:component",
+      "title": "Navigation Menu",
+      "description": "A collection of links for navigating websites.",
+      "categories": ["pxl-ui", "components", "navigation"],
+      "files": [
+        {
+          "path": "navigation-menu.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/navigation-menu.tsx"
         }
       ]
     },

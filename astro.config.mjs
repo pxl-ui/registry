@@ -216,6 +216,7 @@ export default defineConfig({
           },
           {
             label: "Features",
+            badge: "new",
             link: "/features",
             items: [
               {
@@ -242,7 +243,6 @@ export default defineConfig({
           },
           {
             label: "Widgets",
-            badge: "new",
             link: "/widgets/",
             items: [
               {
