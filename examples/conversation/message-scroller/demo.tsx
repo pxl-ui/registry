@@ -1,9 +1,9 @@
-import { Bubble, BubbleContent } from "@/components/features/pxl/chats/bubble";
+import { Bubble, BubbleContent } from "@/components/features/pxl/conversation/bubble";
 import {
   Message,
   MessageAvatar,
   MessageContent,
-} from "@/components/features/pxl/chats/message";
+} from "@/components/features/pxl/conversation/message";
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -11,7 +11,7 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/components/features/pxl/chats/message-scroller";
+} from "@/components/features/pxl/conversation/message-scroller";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/pxl/avatar";
 
 export default function MessageScrollerDemo() {

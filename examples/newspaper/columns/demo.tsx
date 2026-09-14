@@ -1,13 +1,13 @@
+import { Columns } from "@/components/features/pxl/newspaper/columns";
 import {
   Teaser,
   TeaserContent,
   TeaserDescription,
-  TeaserGroup,
   TeaserTitle,
-} from "@/features/pxl/feeds/teaser";
+} from "@/features/pxl/newspaper/teaser";
 import type { Rss } from "@/lib/schemas/pxl/rss";
 
-export default function TeaserDemo() {
+export default function ColumnsDemo() {
   const rssFeed: Rss.Feed = {
     title: "101 Cookbooks",
     link: "https://www.101cookbooks.com/",
@@ -755,9 +755,7 @@ export default function TeaserDemo() {
   };
 
   return (
-    <TeaserGroup 
-      layout="columns" 
-      className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
+    <Columns className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto">
       {rssFeed.items?.map((item, idx) => (
         <Teaser key={item.guid?.value ?? idx}>
           <TeaserContent>
@@ -766,6 +764,6 @@ export default function TeaserDemo() {
           </TeaserContent>
         </Teaser>
       ))}
-    </TeaserGroup>
+    </Columns>
   );
 }

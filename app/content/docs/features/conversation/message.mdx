@@ -3,7 +3,7 @@ title: Message
 ---
 import { ComponentPreview, Install } from '~/components';
 
-<ComponentPreview item="chats/message" />
+<ComponentPreview item="conversation/message" />
 
 The `Message` component lays out a single message in a conversation. It handles the avatar, alignment, header, and footer around the message surface.
 
@@ -11,14 +11,14 @@ For AI apps, you can render reasoning steps, tool calls and assistant messages u
 
 ## Installation
 
-<Install item="chats/message" />
+<Install item="conversation/message" />
 
 ## Usage
 
 ```tsx showLineNumbers
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/pxl/avatar"
-import { Bubble, BubbleContent } from "@/components/features/pxl/chats/bubble"
-import { Message, MessageAvatar, MessageContent } from "@/components/features/pxl/chats/message"
+import { Bubble, BubbleContent } from "@/components/features/pxl/conversation/bubble"
+import { Message, MessageAvatar, MessageContent } from "@/components/features/pxl/conversation/message"
 ```
 
 ```tsx showLineNumbers

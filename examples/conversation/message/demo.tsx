@@ -3,14 +3,14 @@ import {
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "@/components/features/pxl/chats/bubble";
-import { Marker, MarkerContent } from "@/components/features/pxl/chats/marker";
+} from "@/components/features/pxl/conversation/bubble";
+import { Marker, MarkerContent } from "@/components/features/pxl/conversation/marker";
 import {
   Message,
   MessageAvatar,
   MessageContent,
   MessageFooter,
-} from "@/components/features/pxl/chats/message";
+} from "@/components/features/pxl/conversation/message";
 import {
   Avatar,
   AvatarFallback,

@@ -3,7 +3,7 @@ title: Message Scroller
 ---
 import { ComponentPreview, Install } from '~/components';
 
-<ComponentPreview item="chats/message-scroller" />
+<ComponentPreview item="conversation/message-scroller" />
 
 ## What Makes a Great Streaming Chat Experience
 
@@ -57,12 +57,12 @@ markdown.
 
 ## Installation
 
-<Install item="chats/message-scroller" />
+<Install item="conversation/message-scroller" />
 
 ## Usage
 
 ```tsx
-import { Message } from "@/components/features/pxl/chats/message"
+import { Message } from "@/components/features/pxl/conversation/message"
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -70,7 +70,7 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/components/features/pxl/chats/message-scroller"
+} from "@/components/features/pxl/conversation/message-scroller"
 ```
 
 ```tsx
@@ -452,7 +452,7 @@ function VirtualizedTranscript({
                     key={virtualItem.key}
                     ref={virtualizer.measureElement}
                     data-index={virtualItem.index}
-                    className="absolute start-0 top-0 w-full"
+                    className="absolute inset-s-0 top-0 w-full"
                     style={{
                       transform: `translateY(${virtualItem.start}px)`,
                     }}

@@ -4,84 +4,112 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
-      "name": "articles/blockquote",
+      "name": "conversation/bubble",
       "type": "registry:component",
-      "title": "Article Blockquote",
+      "title": "Bubble",
+      "description": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "conversation/bubble.tsx",
+          "target": "@components/features/pxl/conversation/bubble.tsx"
+        }
+      ]
+    },
+    {
+      "name": "conversation/marker",
+      "type": "registry:component",
+      "title": "Marker",
+      "description": "Displays an inline status, system note, bordered row, or labeled separator in a conversation.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "conversation/marker.tsx",
+          "target": "@components/features/pxl/conversation/marker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "conversation/message",
+      "type": "registry:component",
+      "title": "Message",
+      "description": "Displays a message in a conversation, with optional avatar, header, footer, and alignment.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "conversation/message.tsx",
+          "target": "@components/features/pxl/conversation/message.tsx"
+        }
+      ]
+    },
+    {
+      "name": "conversation/message-scroller",
+      "type": "registry:component",
+      "title": "Message Scroller",
+      "description": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "conversation/message-scroller.tsx",
+          "target": "@components/features/pxl/conversation/message-scroller.tsx"
+        }
+      ]
+    },
+    {
+      "name": "magazine/blockquote",
+      "type": "registry:component",
+      "title": "Blockquote",
       "description": "A component that highlights a key excerpt or quote from an article.",
-      "categories": ["pxl-ui", "features", "articles"],
+      "categories": ["pxl-ui", "features", "magazine"],
       "registryDependencies": [
         "pxl-ui/registry/profile-card"
       ],
       "files": [
         { 
           "type": "registry:file",
-          "path": "articles/blockquote.tsx",
-          "target": "@components/features/pxl/articles/blockquote.tsx"
+          "path": "magazine/blockquote.tsx",
+          "target": "@components/features/pxl/magazine/blockquote.tsx"
         }
       ]
     },
     {
-      "name": "chats/bubble",
+      "name": "newspaper/columns",
       "type": "registry:component",
-      "title": "Bubble",
-      "description": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content.",
-      "categories": ["pxl-ui", "features", "chats"],
+      "title": "Columns",
+      "description": "A component for displaying newspaper teasers in columns grid.",
+      "categories": ["pxl-ui", "features", "newspaper"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "chats/bubble.tsx",
-          "target": "@components/features/pxl/chats/bubble.tsx"
+          "path": "newspaper/columns.tsx",
+          "target": "@components/features/pxl/newspaper/columns.tsx"
         }
       ]
     },
     {
-      "name": "chats/marker",
+      "name": "newspaper/list",
       "type": "registry:component",
-      "title": "Marker",
-      "description": "Displays an inline status, system note, bordered row, or labeled separator in a conversation.",
-      "categories": ["pxl-ui", "features", "chats"],
+      "title": "List",
+      "description": "A component for displaying newspaper teasers in a list.",
+      "categories": ["pxl-ui", "features", "newspaper"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "chats/marker.tsx",
-          "target": "@components/features/pxl/chats/marker.tsx"
+          "path": "newspaper/list.tsx",
+          "target": "@components/features/pxl/newspaper/list.tsx"
         }
       ]
     },
     {
-      "name": "chats/message",
-      "type": "registry:component",
-      "title": "Message",
-      "description": "Displays a message in a conversation, with optional avatar, header, footer, and alignment.",
-      "categories": ["pxl-ui", "features", "chats"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "chats/message.tsx",
-          "target": "@components/features/pxl/chats/message.tsx"
-        }
-      ]
-    },
-    {
-      "name": "chats/message-scroller",
-      "type": "registry:component",
-      "title": "Message Scroller",
-      "description": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message.",
-      "categories": ["pxl-ui", "features", "chats"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "chats/message-scroller.tsx",
-          "target": "@components/features/pxl/chats/message-scroller.tsx"
-        }
-      ]
-    },
-    {
-      "name": "feeds/teaser",
+      "name": "newspaper/teaser",
       "type": "registry:component",
       "title": "Teaser",
-      "description": "A news article teaser.",
-      "categories": ["pxl-ui", "features", "feeds"],
+      "description": "A component for displaying newspaper article teasers.",
+      "categories": ["pxl-ui", "features", "newspaper"],
       "registryDependencies": [
         "pxl-ui/registry/lib/html",
         "pxl-ui/registry/schemas/atom",
@@ -91,8 +119,8 @@
       "files": [
         { 
           "type": "registry:file",
-          "path": "feeds/teaser.tsx",
-          "target": "@components/features/pxl/feeds/teaser.tsx"
+          "path": "newspaper/teaser.tsx",
+          "target": "@components/features/pxl/newspaper/teaser.tsx"
         }
       ]
     },

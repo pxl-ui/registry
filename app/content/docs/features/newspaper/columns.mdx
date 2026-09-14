@@ -1,38 +1,33 @@
 ---
-title: Teaser
+title: Columns
 ---
 import { ComponentPreview, Install } from '~/components';
 
-<ComponentPreview item="feeds/teaser" />
+<ComponentPreview item="newspaper/columns" />
 
 ## Installation
 
-<Install item="feeds/teaser" />
-
-## List Layout
-
-<ComponentPreview item="feeds/teaser" example="youtube" />
+<Install item="newspaper/columns" />
 
 ## Usage
 
 ```tsx
+import { Columns } from "@/components/features/pxl/newspaper/columns";
 import { 
   Teaser, 
   TeaserContent,
-  TeaserDescription ,
-  TeaserGroup,
+  TeaserDescription,
   TeaserTitle, 
-} from "@/components/features/pxl/feeds/teaser";
+} from "@/components/features/pxl/newspaper/teaser";
 ```
 
 ```tsx
-<TeaserGroup 
-  layout="columns" >
+<Columns>
   <Teaser>
     <TeaserContent>
       <TeaserTitle.Rss item={item} />
       <TeaserDescription.Rss item={item} />
     </TeaserContent>
   </Teaser>
-</TeaserGroup>
+</Columns>
 ```

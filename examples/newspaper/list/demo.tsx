@@ -1,13 +1,13 @@
+import { List } from "@/components/features/pxl/newspaper/list";
 import {
   Teaser,
   TeaserContent,
   TeaserDescription,
-  TeaserGroup,
-  TeaserTitle,
-} from "@/features/pxl/feeds/teaser";
+  TeaserTitle
+} from "@/features/pxl/newspaper/teaser";
 import type { Atom } from "@/lib/schemas/pxl/atom";
 
-export default function TeaserYoutubeAtomExample() {
+export default function NewspaperListDemo() {
   const atomFeed: Atom.Feed = {
     authors: [
       {
@@ -1473,8 +1473,7 @@ export default function TeaserYoutubeAtomExample() {
   };
 
   return (
-    <TeaserGroup 
-      layout="list" 
+    <List
       className="w-full max-w-md max-h-142 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-border">
       {atomFeed.entries?.map((entry) => (
         <Teaser key={entry.id}>
@@ -1484,6 +1483,6 @@ export default function TeaserYoutubeAtomExample() {
           </TeaserContent>
         </Teaser>
       ))}
-    </TeaserGroup>
+    </List>
   );
 }

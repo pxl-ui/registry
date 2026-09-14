@@ -6,19 +6,6 @@ import type { Rdf } from "@/lib/schemas/pxl/rdf";
 import type { Rss } from "@/lib/schemas/pxl/rss";
 import { cn } from "@/lib/utils";
 
-const teaserGroupVariants = cva("group/teaser-group w-full", {
-  variants: {
-    layout: {
-      columns:
-        "columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4",
-      list: "flex flex-col gap-4 has-data-[size=sm]:gap-2.5 has-data-[size=xs]:gap-2",
-    },
-  },
-  defaultVariants: {
-    layout: "list",
-  },
-});
-
 const teaserVariants = cva(
   "group/teaser flex w-full flex-wrap items-center text-sm transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
   {
@@ -34,26 +21,6 @@ const teaserVariants = cva(
     },
   },
 );
-
-function TeaserGroup({
-  className,
-  layout = "list",
-  ...props
-}: ComponentProps<"ul"> & VariantProps<typeof teaserGroupVariants>) {
-  return (
-    <ul
-      data-slot="teaser-group"
-      data-layout={layout}
-      className={cn(
-        teaserGroupVariants({
-          layout,
-        }),
-        className,
-      )}
-      {...props}
-    />
-  );
-}
 
 function Teaser({
   className,
@@ -226,4 +193,9 @@ function RssTeaserDescription({
 }
 TeaserDescription.Rss = RssTeaserDescription;
 
-export { Teaser, TeaserContent, TeaserDescription, TeaserGroup, TeaserTitle };
+export {
+  Teaser,
+  TeaserContent,
+  TeaserDescription,
+  TeaserTitle,
+};

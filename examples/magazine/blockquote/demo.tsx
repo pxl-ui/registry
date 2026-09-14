@@ -7,7 +7,7 @@ import {
   BlockquoteAuthorName,
   BlockquoteIcon,
   BlockquoteParagraph,
-} from "@/components/features/pxl/articles/blockquote";
+} from "@/components/features/pxl/magazine/blockquote";
 
 export default function BlockquoteDemo() {
   return (

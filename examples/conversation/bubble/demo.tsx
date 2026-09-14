@@ -3,7 +3,7 @@ import {
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "@/components/features/pxl/chats/bubble";
+} from "@/components/features/pxl/conversation/bubble";
 import { Emoji } from "@/components/ui/pxl/emoji";
 
 export default function BubbleDemo() {

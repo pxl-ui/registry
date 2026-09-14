@@ -1,0 +1,30 @@
+---
+title: Teaser
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="newspaper/teaser" />
+
+## Installation
+
+<Install item="newspaper/teaser" />
+
+## Usage
+
+```tsx
+import { 
+  Teaser, 
+  TeaserContent,
+  TeaserDescription ,
+  TeaserTitle, 
+} from "@/components/features/pxl/newspaper/teaser";
+```
+
+```tsx
+<Teaser>
+  <TeaserContent>
+    <TeaserTitle.Rss item={item} />
+    <TeaserDescription.Rss item={item} />
+  </TeaserContent>
+</Teaser>
+```

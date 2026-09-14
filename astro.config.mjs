@@ -224,16 +224,16 @@ export default defineConfig({
                 link: "/features/",
               },
               {
-                label: "Articles",
-                items: [{ autogenerate: { directory: "features/articles" } }],
+                label: "Magazine",
+                items: [{ autogenerate: { directory: "features/magazine" } }],
               },
               {
-                label: "Feeds",
-                items: [{ autogenerate: { directory: "features/feeds" } }],
+                label: "Newspaper",
+                items: [{ autogenerate: { directory: "features/newspaper" } }],
               },
               {
-                label: "Chats",
-                items: [{ autogenerate: { directory: "features/chats" } }],
+                label: "Conversation",
+                items: [{ autogenerate: { directory: "features/conversation" } }],
               },
               {
                 label: "Marketing",

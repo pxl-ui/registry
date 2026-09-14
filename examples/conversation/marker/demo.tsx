@@ -2,7 +2,7 @@ import {
   Marker,
   MarkerContent,
   MarkerIcon,
-} from "@/components/features/pxl/chats/marker";
+} from "@/components/features/pxl/conversation/marker";
 import { Spinner } from "@/components/ui/pxl/spinner";
 
 export default function MarkerDemo() {
