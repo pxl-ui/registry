@@ -171,6 +171,20 @@
           "target": "@components/features/pxl/marketing/tagline.tsx"
         }
       ]
+    },
+    {
+      "name": "tasks/status-toggle",
+      "type": "registry:component",
+      "title": "Status Toggle",
+      "description": "A status toggle checkbox for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/status-toggle.tsx",
+          "target": "@components/features/pxl/tasks/status-toggle.tsx"
+        }
+      ]
     }
   ]
 }

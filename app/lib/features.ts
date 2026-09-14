@@ -1,17 +1,20 @@
 import { filter } from "~/lib/registry";
 
 const lists = {
-  articles: filter({
-    categories: ["features", "articles"],
+  magazine: filter({
+    categories: ["features", "magazine"],
   }),
-  chats: filter({
-    categories: ["features", "chats"],
+  conversation: filter({
+    categories: ["features", "conversation"],
   }),
-  feeds: filter({
-    categories: ["features", "feeds"],
+  newspaper: filter({
+    categories: ["features", "newspaper"],
   }),
   marketing: filter({
     categories: ["features", "marketing"],
+  }),
+  tasks: filter({
+    categories: ["features", "tasks"],
   }),
 };
 

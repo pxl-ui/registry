@@ -1,5 +1,19 @@
 import z from "zod";
 
+const StatusSchema = z
+  .enum(["none", "open", "in-progress", "done"])
+  .default("none")
+  .describe(
+    "Tracks the current state of a task (e.g., todo, in-progress, done). Status determines whether a task appears as completed and can trigger auto-archiving.",
+  );
+
+const PrioritySchema = z
+  .enum(["none", "low", "normal", "high"])
+  .default("none")
+  .describe(
+    "Indicates task importance. Used for sorting and filtering. Values are sorted alphabetically in Bases views, so use prefixes like 1-, 2- to control order.",
+  );
+
 const ReminderSchema = z.union([
   z.object({
     id: z.string(),
@@ -20,7 +34,7 @@ const TimeEntrySchema = z.object({
   startTime: z.string(),
   endTime: z.string().optional(),
   description: z.string().optional(),
-})
+});
 
 const CorePropertiesSchema = z
   .object({
@@ -30,18 +44,8 @@ const CorePropertiesSchema = z
       .describe(
         "The task name. Can be stored in frontmatter or in the filename (when 'store title in filename' is enabled).",
       ),
-    status: z
-      .enum(["none", "open", "in-progress", "done"])
-      .default("none")
-      .describe(
-        "Tracks the current state of a task (e.g., todo, in-progress, done). Status determines whether a task appears as completed and can trigger auto-archiving.",
-      ),
-    priority: z
-      .enum(["none", "low", "normal", "high"])
-      .default("none")
-      .describe(
-        "Indicates task importance. Used for sorting and filtering. Values are sorted alphabetically in Bases views, so use prefixes like 1-, 2- to control order.",
-      ),
+    status: StatusSchema,
+    priority: PrioritySchema,
   })
   .describe(
     "Status and priority are the core properties that define a task's state and importance.",
@@ -188,16 +192,18 @@ const FeaturePropertiesSchema = z
   );
 
 const TaskSchema = z.object({
-  ...CorePropertiesSchema,
-  ...DatePropertiesSchema,
-  ...OrganizationPropertiesSchema,
-  ...TaskDetailsSchema,
-  ...MetadataPropertiesSchema,
-  ...FeaturePropertiesSchema,
+  ...CorePropertiesSchema.shape,
+  ...DatePropertiesSchema.shape,
+  ...OrganizationPropertiesSchema.shape,
+  ...TaskDetailsSchema.shape,
+  ...MetadataPropertiesSchema.shape,
+  ...FeaturePropertiesSchema.shape,
 });
 
 const TaskNotesSchemas = {
+  Priority: PrioritySchema,
   Reminder: ReminderSchema,
+  Status: StatusSchema,
   Task: TaskSchema,
   TimeEntry: TimeEntrySchema,
 };
@@ -208,12 +214,14 @@ type OrganizationProperties = z.infer<typeof OrganizationPropertiesSchema>;
 type TaskDetails = z.infer<typeof TaskDetailsSchema>;
 type MetadataProperties = z.infer<typeof MetadataPropertiesSchema>;
 type FeatureProperties = z.infer<typeof FeaturePropertiesSchema>;
+type Priority = z.infer<typeof PrioritySchema>;
 type Reminder = z.infer<typeof ReminderSchema>;
+type Status = z.infer<typeof StatusSchema>;
 type Task = z.infer<typeof TaskSchema>;
 type TimeEntry = z.infer<typeof TimeEntrySchema>;
 
 declare namespace TaskNotes {
-  export type { Reminder, Task, TimeEntry };
+  export type { Priority, Reminder, Status, Task, TimeEntry };
 }
 
 export type {
@@ -222,7 +230,9 @@ export type {
   FeatureProperties,
   MetadataProperties,
   OrganizationProperties,
+  Priority,
   Reminder,
+  Status,
   Task,
   TaskDetails,
   TaskNotes,
@@ -234,7 +244,9 @@ export {
   FeaturePropertiesSchema,
   MetadataPropertiesSchema,
   OrganizationPropertiesSchema,
+  PrioritySchema,
   ReminderSchema,
+  StatusSchema,
   TaskDetailsSchema,
   TaskNotesSchemas,
   TaskSchema,

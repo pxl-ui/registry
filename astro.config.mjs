@@ -239,6 +239,10 @@ export default defineConfig({
                 label: "Marketing",
                 items: [{ autogenerate: { directory: "features/marketing" } }],
               },
+              {
+                label: "Tasks",
+                items: [{ autogenerate: { directory: "features/tasks" } }],
+              },
             ]
           },
           {

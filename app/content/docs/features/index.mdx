@@ -12,7 +12,7 @@ import { toRouteId } from "~/lib/registry";
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  {lists.articles.map(item => (
+  {lists.magazine.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}
@@ -29,7 +29,7 @@ import { toRouteId } from "~/lib/registry";
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  {lists.feeds.map(item => (
+  {lists.newspaper.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}
@@ -46,7 +46,7 @@ import { toRouteId } from "~/lib/registry";
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  {lists.chats.map(item => (
+  {lists.conversation.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}
@@ -64,6 +64,23 @@ import { toRouteId } from "~/lib/registry";
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.marketing.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
+## Tasks
+> <p className="text-muted-foreground">Components to display tasks</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.tasks.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}
