@@ -84,6 +84,21 @@
       ]
     },
     {
+      "name": "attachment",
+      "type": "registry:component",
+      "title": "Attachment",
+      "description": "Displays a file or image attachment with media, metadata, upload state, and actions.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "attachment.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/attachment.tsx"
+        }
+      ]
+    },
+    {
       "name": "avatar",
       "type": "registry:component",
       "title": "Avatar",
@@ -721,6 +736,20 @@
           "path": "slider.tsx",
           "type": "registry:component",
           "target": "@ui/pxl/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:component",
+      "title": "Spinner",
+      "description": "An indicator that can be used to show a loading state.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "files": [
+        {
+          "path": "spinner.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/spinner.tsx"
         }
       ]
     },
