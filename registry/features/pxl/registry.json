@@ -77,6 +77,54 @@
       ]
     },
     {
+      "name": "marketing/page-heading",
+      "type": "registry:component",
+      "title": "Page Heading",
+      "description": "A component that acts as the text-focused version of a hero banner.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "registryDependencies": [
+        "pxl-ui/registry/marketing/tagline"
+      ], 
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/page-heading.tsx",
+          "target": "@components/features/pxl/marketing/page-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/section-heading",
+      "type": "registry:component",
+      "title": "Section Heading",
+      "description": "A component that standardizes heading typography and spacing.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "registryDependencies": [
+        "pxl-ui/registry/marketing/tagline"
+      ], 
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/section-heading.tsx",
+          "target": "@components/features/pxl/marketing/section-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/tagline",
+      "type": "registry:component",
+      "title": "Tagline",
+      "description": "A component that displays a tagline with different variants.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/tagline.tsx",
+          "target": "@components/features/pxl/marketing/tagline.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper/columns",
       "type": "registry:component",
       "title": "Columns",
@@ -125,50 +173,72 @@
       ]
     },
     {
-      "name": "marketing/page-heading",
+      "name": "tasks/due-badge",
       "type": "registry:component",
-      "title": "Page Heading",
-      "description": "A component that acts as the text-focused version of a hero banner.",
-      "categories": ["pxl-ui", "features", "marketing"],
-      "registryDependencies": [
-        "pxl-ui/registry/marketing/tagline"
-      ], 
+      "title": "Due Badge",
+      "description": "A due badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "marketing/page-heading.tsx",
-          "target": "@components/features/pxl/marketing/page-heading.tsx"
+          "path": "tasks/due-badge.tsx",
+          "target": "@components/features/pxl/tasks/due-badge.tsx"
         }
       ]
     },
     {
-      "name": "marketing/section-heading",
+      "name": "tasks/estimate-badge",
       "type": "registry:component",
-      "title": "Section Heading",
-      "description": "A component that standardizes heading typography and spacing.",
-      "categories": ["pxl-ui", "features", "marketing"],
-      "registryDependencies": [
-        "pxl-ui/registry/marketing/tagline"
-      ], 
+      "title": "Estimate Badge",
+      "description": "A estimate badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "marketing/section-heading.tsx",
-          "target": "@components/features/pxl/marketing/section-heading.tsx"
+          "path": "tasks/estimate-badge.tsx",
+          "target": "@components/features/pxl/tasks/estimate-badge.tsx"
         }
       ]
     },
     {
-      "name": "marketing/tagline",
+      "name": "tasks/priority-badge",
       "type": "registry:component",
-      "title": "Tagline",
-      "description": "A component that displays a tagline with different variants.",
-      "categories": ["pxl-ui", "features", "marketing"],
+      "title": "Priority Badge",
+      "description": "A priority badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "marketing/tagline.tsx",
-          "target": "@components/features/pxl/marketing/tagline.tsx"
+          "path": "tasks/priority-badge.tsx",
+          "target": "@components/features/pxl/tasks/priority-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tasks/scheduled-badge",
+      "type": "registry:component",
+      "title": "Scheduled Badge",
+      "description": "A scheduled badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/scheduled-badge.tsx",
+          "target": "@components/features/pxl/tasks/scheduled-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tasks/status-badge",
+      "type": "registry:component",
+      "title": "Status Badge",
+      "description": "A status badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/status-badge.tsx",
+          "target": "@components/features/pxl/tasks/status-badge.tsx"
         }
       ]
     },

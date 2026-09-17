@@ -29,4 +29,18 @@
       transform: translateX(calc(-100% + 100cqw));
     }
   }
+
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+
+    50% {
+      transform: rotateY(90deg);
+    }
+
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
 }

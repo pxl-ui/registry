@@ -42,7 +42,7 @@ const badgeVariants = cva(
         default: "h-4 text-2xs pixel-size-[6px]",
         xs: "h-3 text-2xs",
         sm: "h-4 text-2xs pixel-size-[6px]",
-        md: "h-5 text-xs pixel-size-[8px]",
+        md: "h-5 text-xs pixel-size-xl",
         lg: "h-6 text-base pixel-size-[10px]",
       },
     },

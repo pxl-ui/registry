@@ -154,6 +154,7 @@
     alternate;
   --animate-shine: shine var(--tw-duration, 1s) ease-in-out infinite;
   --animate-spin: spin var(--tw-duration, 1s) linear infinite;
+  --animate-flip: spin var(--tw-duration, 300ms) ease-in-out;
 
   --aspect-widget-sm: 1 / 1;
   --aspect-widget-md: 86 / 41;
