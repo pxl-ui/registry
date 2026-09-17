@@ -563,5 +563,23 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      warmup: {
+        // Avoid pre-warming the entire module graph on dev startup
+        clientFiles: [],
+      },
+    },
+    optimizeDeps: {
+      // Pre-bundle only the core runtime deps; skip heavy optional deps
+      include: [
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge",
+        "class-variance-authority",
+      ],
+    },
   },
 });

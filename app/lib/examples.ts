@@ -1,12 +1,15 @@
 
 import type { ComponentType } from "react";
 
-const components = new Map<string, () => Promise<{ default: ComponentType}>>();
-const sources = new Map<string, string>();
+const components = new Map<string, () => Promise<{ default: ComponentType }>>();
+
+const sourceGlobs = import.meta.glob<string>("/examples/**/*.tsx", {
+  query: "?raw",
+  import: "default",
+});
 
 Object.entries(
-  import.meta.glob<{ default: ComponentType }>("/examples/**/*.tsx", {
-  }),
+  import.meta.glob<{ default: ComponentType }>("/examples/**/*.tsx"),
 ).forEach(([path, component]) => {
   components.set(
     path.replace("/examples/", "").replace(".tsx", ""),
@@ -14,25 +17,19 @@ Object.entries(
   );
 });
 
-Object.entries(
-  import.meta.glob<string>("/examples/**/*.tsx", {
-    query: "?raw",
-    import: "default",
-    eager: true
-  }),
-).forEach(([path, content]) => {
-  sources.set(
-    path.replace("/examples/", "").replace(".tsx", ""),
-    content,
-  );
-});
+async function getSource(path: string): Promise<string | undefined> {
+  const key = `/examples/${path}.tsx`;
+  const importer = sourceGlobs[key];
+  if (!importer) return undefined;
+  return importer();
+}
 
 export {
   components,
-  sources,
-}
+  getSource,
+};
 
 export default {
   components,
-  sources,
+  getSource,
 };

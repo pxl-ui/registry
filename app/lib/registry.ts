@@ -1,5 +1,5 @@
 import root from "../../registry.json" with { type: "json" };
-import { files } from "./files";
+import { getFile } from "./files";
 import type { Badge } from "./starlight/schemas/badge";
 import type { LinkHTMLAttributes } from "./starlight/schemas/sidebar";
 import { url } from "./utils";
@@ -108,9 +108,9 @@ export type RegistryItem = {
 
 const registry = new Map<string, RegistryItem>();
 
-const registryFiles = new Map<
+const registryFilePaths = new Map<
   string,
-  { path: string; content: string; target: string }[]
+  { path: string; target: string }[]
 >();
 
 const definitions = await Promise.all(
@@ -138,11 +138,10 @@ for (const include of (root as Registry).include ?? []) {
   for (const item of resolved.data.items ?? []) {
     registry.set(item.name, item);
     if (item.files) {
-      registryFiles.set(
+      registryFilePaths.set(
         item.name,
         item.files.map((f) => ({
           path: `${basePath}${f.path}`,
-          content: files.get(`${basePath}${f.path}`) ?? "",
           target: f.target,
         })),
       );
@@ -499,6 +498,20 @@ function pages(itemName: string): {
   };
 }
 
+async function resolveRegistryFiles(
+  itemName: string,
+): Promise<{ path: string; content: string; target: string }[]> {
+  const paths = registryFilePaths.get(itemName);
+  if (!paths) return [];
+  return Promise.all(
+    paths.map(async (f) => ({
+      path: f.path,
+      content: await getFile(f.path),
+      target: f.target,
+    })),
+  );
+}
+
 export default registry;
 
 export {
@@ -509,6 +522,6 @@ export {
   kind,
   pages,
   registry,
-  registryFiles as files,
+  resolveRegistryFiles as files,
   toRouteId,
 };

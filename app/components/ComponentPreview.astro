@@ -2,7 +2,7 @@
 
 import { cardVariants } from '@/components/ui/pxl/card';
 import { cn } from '@/lib/utils';
-import { sources } from "~/lib/examples";
+import { getSource } from "~/lib/examples";
 import { basename } from '~/lib/registry';
 
 import Code from './Code.astro';
@@ -35,9 +35,9 @@ let sourceCode = code;
 
 if (item) {
 	srcPath = `${basename(item)}/${example}`;
-	sourceCode = sources.get(srcPath);
+	sourceCode = await getSource(srcPath);
 } else if (src) {
-	sourceCode = sources.get(src);
+	sourceCode = await getSource(src);
 }
 ---
 

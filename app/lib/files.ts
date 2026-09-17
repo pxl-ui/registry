@@ -1,18 +1,17 @@
 
-const files = new Map<string, string>();
-
-Object.entries(
-  import.meta.glob<string>("/registry/**/*", {
-    query: "?raw",
-    eager: true,
-    import: "default",
-  }),
-).forEach(([path, content]) => {
-  files.set(path, content);
+const fileGlobs = import.meta.glob<string>("/registry/**/*", {
+  query: "?raw",
+  import: "default",
 });
 
-export { files };
+async function getFile(path: string): Promise<string> {
+  const importer = fileGlobs[path];
+  if (!importer) return "";
+  return importer();
+}
+
+export { getFile };
 
 export default {
-  files
+  getFile,
 };

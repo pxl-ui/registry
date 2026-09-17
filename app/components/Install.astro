@@ -40,7 +40,7 @@ const { item: itemName } = Astro.props;
 
 const item = registry.get(itemName);
 
-const itemFiles = files.get(itemName) ?? [];
+const itemFiles = await files(itemName);
 const dependencies = item?.dependencies ?? [];
 
 ---
