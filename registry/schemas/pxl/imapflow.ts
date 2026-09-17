@@ -117,3 +117,4 @@ export {
   MessageSchema,
   ParsedMessageSchema,
 };
+export default ImapFlowSchemas;

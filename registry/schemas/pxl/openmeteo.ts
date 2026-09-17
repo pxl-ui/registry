@@ -44,3 +44,4 @@ declare namespace OpenMeteo {
 
 export type { Forecast, OpenMeteo };
 export { ForecastSchema, OpenMeteoSchemas };
+export default OpenMeteoSchemas;

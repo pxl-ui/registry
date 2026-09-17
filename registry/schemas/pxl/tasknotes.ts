@@ -1,14 +1,24 @@
 import z from "zod";
 
 const StatusSchema = z
-  .enum(["none", "open", "in-progress", "done"])
+  .union([
+    z.literal("none").describe("The task has no status"),
+    z.literal("open").describe("The task is open"),
+    z.literal("in-progress").describe("The task is in-progress"),
+    z.literal("done").describe("The task is done"),
+  ])
   .default("none")
   .describe(
     "Tracks the current state of a task (e.g., todo, in-progress, done). Status determines whether a task appears as completed and can trigger auto-archiving.",
   );
 
 const PrioritySchema = z
-  .enum(["none", "low", "normal", "high"])
+  .union([
+    z.literal("none").describe("The task has no priority"),
+    z.literal("low").describe("The task has low priority"),
+    z.literal("normal").describe("The task has normal priority"),
+    z.literal("high").describe("The task has high priority"),
+  ])
   .default("none")
   .describe(
     "Indicates task importance. Used for sorting and filtering. Values are sorted alphabetically in Bases views, so use prefixes like 1-, 2- to control order.",
@@ -252,3 +262,4 @@ export {
   TaskSchema,
   TimeEntrySchema,
 };
+export default TaskNotesSchemas;

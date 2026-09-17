@@ -1201,3 +1201,4 @@ declare namespace Atom {
 
 export type { Atom, Entry, Feed };
 export { AtomSchemas, EntrySchema, FeedSchema };
+export default AtomSchemas;

@@ -14,6 +14,7 @@ import Install from "./Install.astro";
 import LinkCard from "./LinkCard.astro";
 import LinkCardMedia from "./LinkCardMedia";
 import NodeCommand from "./NodeCommand";
+import SchemaPreview from "./SchemaPreview.astro";
 import Showcase from "./Showcase";
 import Stats from "./Stats";
 import Step from "./Step.astro";
@@ -34,6 +35,7 @@ export {
   LinkCard,
   LinkCardMedia,
   NodeCommand,
+  SchemaPreview,
   Separator,
   Showcase,
   Stats,

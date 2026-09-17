@@ -312,3 +312,4 @@ export {
   EventStatusSchema,
   GCalendarSchemas,
 };
+export default GCalendarSchemas;

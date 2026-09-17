@@ -39,14 +39,15 @@ const BodySchema = z.object({
   outlines: z.array(OutlineSchema).optional(),
 });
 
-const OpmlSchemas = {
-  Outline: OutlineSchema,
-};
-
 const DocumentSchema = z.object({
   head: HeadSchema.optional(),
   body: BodySchema.optional(),
 });
+
+const OpmlSchemas = {
+  Document: DocumentSchema,
+  Outline: OutlineSchema,
+};
 
 type Head = z.infer<typeof HeadSchema>;
 type Body = z.infer<typeof BodySchema>;
@@ -75,3 +76,4 @@ declare namespace Opml {
 
 export type { Body, Document, Head, Opml, Outline };
 export { BodySchema, DocumentSchema, HeadSchema, OpmlSchemas, OutlineSchema };
+export default OpmlSchemas;

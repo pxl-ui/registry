@@ -48,3 +48,4 @@ declare namespace OpenStreetMap {
 
 export type { Address, OpenStreetMap, Place };
 export { AddressSchema, OpenStreetMapSchemas, PlaceSchema };
+export default OpenStreetMapSchemas;

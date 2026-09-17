@@ -792,3 +792,4 @@ declare namespace Rdf {
 
 export type { Feed, Item, Rdf };
 export { FeedSchema, ItemSchema, RdfSchemas };
+export default RdfSchemas;

@@ -28,8 +28,8 @@ const PublishPropertiesSchema = z.object({
 
 const DocumentSchema = z
   .object({
-    ...CorePropertiesSchema,
-    ...PublishPropertiesSchema,
+    ...CorePropertiesSchema.shape,
+    ...PublishPropertiesSchema.shape,
   })
   .describe("Obsidian document frontmatter schema");
 
@@ -45,3 +45,4 @@ declare namespace Obsidian {
 
 export type { Document, Obsidian };
 export { DocumentSchema, ObsidianSchemas };
+export default ObsidianSchemas;

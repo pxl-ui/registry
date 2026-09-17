@@ -27,3 +27,4 @@ declare namespace MailParser {
 
 export type { MailParser, Message };
 export { MailParserSchemas, MessageSchema };
+export default MailParserSchemas;

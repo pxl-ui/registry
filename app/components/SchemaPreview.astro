@@ -1,0 +1,49 @@
+---
+
+import { cardVariants } from '@/components/ui/pxl/card';
+import { cn } from '@/lib/utils';
+import { getSchemas } from "~/lib/schemas";
+
+import { JsonSchemasAccordion } from './JSONSchemaTable';
+
+export type Props = {
+	align?: "center" | "start" | "end";
+	chromeless?: boolean;
+	class?: string;
+	collapsedHeight?: number;
+	style?: string | astroHTML.JSX.CSSProperties | null | undefined;
+
+	item: string;
+}
+
+const { align = "center", chromeless, class: className, item, style } = Astro.props;
+const schemas = await getSchemas(item);
+---
+
+<div
+	class={cn(
+		"not-content",
+		cardVariants(),
+		"pixel-color-border! bg-background! mt-4 mb-12",
+	)}
+	style={style}
+>
+	<div
+		data-slot="card-content"
+		class={cn("flex-1 min-h-0", className)}
+	>
+		{schemas && (
+      <div 
+        data-align={align}
+  			data-chromeless={chromeless}
+        class={cn(
+          "relative w-full p-4",
+          "flex flex-col gap-4 min-h-72 overflow-auto"
+        )}>
+        <JsonSchemasAccordion
+          client:load schemas={Object.entries(schemas).reduce((acc, [k, schema]) => Object.assign(acc, {
+          [k]: schema.toJSONSchema()
+        }), {})} />
+		</div>)}
+	</div>
+</div>

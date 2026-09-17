@@ -2081,3 +2081,4 @@ declare namespace Rss {
 
 export type { Feed, Item, Rss };
 export { FeedSchema, ItemSchema, RssSchemas };
+export default RssSchemas;
