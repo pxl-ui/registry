@@ -201,6 +201,20 @@
       ]
     },
     {
+      "name": "tasks/id-badge",
+      "type": "registry:component",
+      "title": "ID Badge",
+      "description": "An ID badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/id-badge.tsx",
+          "target": "@components/features/pxl/tasks/id-badge.tsx"
+        }
+      ]
+    },
+    {
       "name": "tasks/priority-badge",
       "type": "registry:component",
       "title": "Priority Badge",
@@ -211,6 +225,20 @@
           "type": "registry:file",
           "path": "tasks/priority-badge.tsx",
           "target": "@components/features/pxl/tasks/priority-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tasks/project-badge",
+      "type": "registry:component",
+      "title": "Project Badge",
+      "description": "A project badge for task items.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/project-badge.tsx",
+          "target": "@components/features/pxl/tasks/project-badge.tsx"
         }
       ]
     },
@@ -253,6 +281,20 @@
           "type": "registry:file",
           "path": "tasks/status-toggle.tsx",
           "target": "@components/features/pxl/tasks/status-toggle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tasks/task",
+      "type": "registry:component",
+      "title": "Task",
+      "description": "A task item.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/task.tsx",
+          "target": "@components/features/pxl/tasks/task.tsx"
         }
       ]
     }

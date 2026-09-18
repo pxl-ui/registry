@@ -5,19 +5,19 @@ import type { ComponentProps, SVGProps } from "react";
 import type { TaskNotes } from "@/lib/schemas/pxl/tasknotes";
 import { cn } from "@/lib/utils";
 
-const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-1 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='fill-'])]:fill-current pixel-border pixel-color-foreground pixel-rounded pixel-size-lg",
+const statusToggleVariants = cva(
+  "group/button inline-flex shrink-0 items-center justify-center bg-clip-padding font-medium whitespace-nowrap outline-none select-none focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-1 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='fill-'])]:fill-current pixel-border pixel-color-foreground pixel-size-md transition-all animation-duration-1000 hover:animate-pulse",
   {
     defaultVariants: {
       size: "icon",
     },
     variants: {
       size: {
-        icon: "size-8",
-        "icon-xs": "size-6",
-        "icon-sm": "size-7",
-        "icon-md": "size-8",
-        "icon-lg": "size-9",
+        icon: "size-4",
+        "icon-xs": "size-3",
+        "icon-sm": "size-3.5",
+        "icon-md": "size-4",
+        "icon-lg": "size-4.5",
       },
     },
   },
@@ -45,11 +45,11 @@ const ToggleIcon = {
 };
 
 function StatusToggle({
-  size = "icon-sm",
+  size = "icon",
   value = "open",
   ...props
 }: Button.Props &
-  VariantProps<typeof buttonVariants> & {
+  VariantProps<typeof statusToggleVariants> & {
     value: "open" | "in-progress" | "done";
   }) {
   return (
@@ -57,7 +57,7 @@ function StatusToggle({
       type="button"
       data-slot="button"
       data-size={size}
-      className={cn(buttonVariants({ size }))}
+      className={cn(statusToggleVariants({ size }))}
       {...props}
     >
       {value === "in-progress" && (<ToggleIcon.InProgress className="size-full" />)}
@@ -69,7 +69,7 @@ function StatusToggle({
 function TaskNotesStatusToggle({
   task,
   ...props
-}: ComponentProps<typeof StatusToggle> & {
+}: VariantProps<typeof statusToggleVariants> & {
   task: TaskNotes.Task;
 }) {
   return (

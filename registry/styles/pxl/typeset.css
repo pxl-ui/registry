@@ -217,13 +217,69 @@
 
     /* GFM task lists. */
     &:where(ul.contains-task-list) {
-      list-style-type: none;
+      list-style-type: none !important;
       padding-inline-start: 0.25em;
     }
     &:where(li.task-list-item > input[type="checkbox"]) {
       margin-inline-end: 0.5em;
       vertical-align: -0.1em;
       accent-color: var(--color-primary, currentColor);
+
+
+      --px: 2px;
+      position: relative;
+      isolation: isolate;
+      box-decoration-break: clone;
+
+      clip-path: polygon(
+        0 var(--px),
+        var(--px) var(--px),
+        var(--px) 0,
+        calc(100% - var(--px)) 0,
+        calc(100% - var(--px)) var(--px),
+        100% var(--px),
+        100% calc(100% - var(--px)),
+        calc(100% - var(--px)) calc(100% - var(--px)),
+        calc(100% - var(--px)) 100%,
+        var(--px) 100%,
+        var(--px) calc(100% - var(--px)),
+        0 calc(100% - var(--px)),
+        0 var(--px)
+      );
+
+      &::before {
+        --px: 2px;
+        --pw: 2px;
+        position: absolute;
+        inset: var(--px-border-offset, 0px);
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background: var(--pixel-color, var(--border));
+
+        clip-path: polygon(
+          /* outer edge, clockwise (pixelada) */
+          0 var(--px),
+          var(--px) var(--px),
+          var(--px) 0,
+          calc(100% - var(--px)) 0,
+          calc(100% - var(--px)) var(--px),
+          100% var(--px),
+          100% calc(100% - var(--px)),
+          calc(100% - var(--px)) calc(100% - var(--px)),
+          calc(100% - var(--px)) 100%,
+          var(--px) 100%,
+          var(--px) calc(100% - var(--px)),
+          0 calc(100% - var(--px)),
+          0 var(--px),
+          /* inner edge, counter-clockwise (rectángulo simple, sin escalera) */
+          var(--pw) var(--pw),
+          var(--pw) calc(100% - var(--pw)),
+          calc(100% - var(--pw)) calc(100% - var(--pw)),
+          calc(100% - var(--pw)) var(--pw),
+          var(--pw) var(--pw)
+        );
+      }
     }
 
     /* Disclosures. */

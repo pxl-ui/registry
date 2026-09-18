@@ -1,0 +1,155 @@
+---
+title: Task
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="tasks/task" />
+
+## Installation
+
+<Install item="tasks/task" />
+
+## Usage
+
+```tsx
+import { 
+  Task,
+  TaskActions,
+  TaskContent,
+  TaskDescription
+  TaskHeader,
+  TaskMedia,
+  TaskStatus,
+  TaskTitle,
+} from "@/components/features/pxl/tasks/task";
+```
+
+```tsx
+<Task collapsible>
+  <TaskHeader>
+    <TaskMedia variant="status">
+      <TaskStatus />
+    </ItemMedia>
+    <TaskTitle>Title</TaskTitle>
+    <TaskActions>
+      <TaskActionItem>Action</TaskActionItem>
+    </TaskActions>
+  </TaskHeader>
+  <TaskContent>
+    <TaskDescription>Description</TaskDescription>
+  </TaskContent>
+</Item>
+```
+
+## Composition
+
+Use the following composition to build a `Task`:
+
+```text
+TaskGroup
+└── Task
+    ├── TaskHeader
+    │   ├── TaskMedia
+    │   │   └── TaskStatus
+    │   ├── TaskTitle
+    │   └── TaskActions
+    │       └── TaskActionItem
+    └─── TaskContent
+          └── TaskDescription
+```
+
+## API Reference
+
+### Task
+
+The main component for displaying tasks.
+
+### TaskGroup
+
+A container that groups related tasks together with consistent styling.
+
+```tsx
+<TaskGroup>
+  <Task />
+  <Task />
+</TaskGroup>
+```
+
+### TaskSeparator
+
+A separator between tasks in a group.
+
+```tsx
+<TaskGroup>
+  <Task />
+  <TaskSeparator />
+  <Task />
+</TaskGroup>
+```
+
+### TaskMedia
+
+Use `TaskMedia` to display media content such as status toggle or badges.
+
+| Prop      | Type                             | Default     |
+| --------- | -------------------------------- | ----------- |
+| `variant` | `"default" \| "status" \| "badge"` | `"default"` |
+
+```tsx
+<TaskMedia variant="status">
+  <TaskStatus />
+</ItemMedia>
+```
+
+```tsx
+<TaskMedia variant="badge">
+  <TaskId />
+</TaskMedia>
+```
+
+### TaskHeader
+
+Wraps the title, media and actions of the task.
+
+```tsx
+<Task>
+  <TaskHeader>Header</TaskHeader>
+  <TaskContent>...</TaskContent>
+</Task>
+```
+
+### TaskContent
+
+Wraps the description and additional information of the task.
+
+```tsx
+<TaskContent>
+  <TaskDescription>Description</TaskDescription>
+</TaskContent>
+```
+
+### TaskTitle
+
+Displays the title of the task.
+
+```tsx
+<TaskTitle>Item Title</TaskTitle>
+```
+
+### TaskDescription
+
+Displays the description of the task.
+
+```tsx
+<TaskDescription>Item description</TaskDescription>
+```
+
+### TaskActions
+
+Container for action buttons or other interactive elements.
+
+```tsx
+<TaskActions>
+  <TaskActionItem>Action</TaskActionItem>
+</TaskActions>
+```

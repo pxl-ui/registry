@@ -87,7 +87,8 @@ function DueBadge({
 function TaskNotesDueBadge({
   task,
   ...props
-}: ComponentProps<typeof DueBadge> & {
+}: ComponentProps<typeof Badge> & {
+  locale?: string;
   task: TaskNotes.Task;
 }) {
   return task.due && <DueBadge {...props} value={task.due} />;

@@ -201,6 +201,18 @@ const FeaturePropertiesSchema = z
     "Properties used by specific TaskNotes features like Pomodoro timer and calendar sync.",
   );
 
+const AdditionalPropertiesSchema = z.object({
+  id: z.string()
+    .optional()
+    .describe("The task unique identifier."),
+  description: z
+    .string()
+    .optional()
+    .describe("The task description. Markdown content of the note."),
+}).describe(
+  "Properties that are not part of the TaskNotes spec but still useful."
+)
+
 const TaskSchema = z.object({
   ...CorePropertiesSchema.shape,
   ...DatePropertiesSchema.shape,
@@ -208,6 +220,7 @@ const TaskSchema = z.object({
   ...TaskDetailsSchema.shape,
   ...MetadataPropertiesSchema.shape,
   ...FeaturePropertiesSchema.shape,
+  ...AdditionalPropertiesSchema.shape,
 });
 
 const TaskNotesSchemas = {
@@ -224,6 +237,7 @@ type OrganizationProperties = z.infer<typeof OrganizationPropertiesSchema>;
 type TaskDetails = z.infer<typeof TaskDetailsSchema>;
 type MetadataProperties = z.infer<typeof MetadataPropertiesSchema>;
 type FeatureProperties = z.infer<typeof FeaturePropertiesSchema>;
+type AdditionalProperties = z.infer<typeof AdditionalPropertiesSchema>;
 type Priority = z.infer<typeof PrioritySchema>;
 type Reminder = z.infer<typeof ReminderSchema>;
 type Status = z.infer<typeof StatusSchema>;
@@ -235,6 +249,7 @@ declare namespace TaskNotes {
 }
 
 export type {
+  AdditionalProperties,
   CoreProperties,
   DateProperties,
   FeatureProperties,
@@ -249,6 +264,7 @@ export type {
   TimeEntry,
 };
 export {
+  AdditionalPropertiesSchema,
   CorePropertiesSchema,
   DatePropertiesSchema,
   FeaturePropertiesSchema,

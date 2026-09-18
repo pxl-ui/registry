@@ -62,7 +62,8 @@ function EstimateBadge({
 function TaskNotesEstimateBadge({
   task,
   ...props
-}: ComponentProps<typeof EstimateBadge> & {
+}: ComponentProps<typeof Badge> & {
+  showLabel?: boolean;
   task: TaskNotes.Task;
 }) {
   const value = (task.timeEstimate ?? 0) * 60; // Estimate is in minutes, we need to transform it to seconds.
