@@ -2,6 +2,8 @@ import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/naviga
 import type {
   ComponentPropsWithoutRef,
   ComponentPropsWithRef,
+  ComponentType,
+  SVGProps,
 } from "react";
 
 import type { Outline } from "@/lib/schemas/pxl/opml";
@@ -85,7 +87,7 @@ function SectionsLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "font-serif flex items-center gap-2 pixel-rounded pixel-size-md p-2 text-sm transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&_svg:not([class*='size-'])]:size-4",
+        "font-serif flex items-center gap-2 p-2 text-sm transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}
@@ -102,22 +104,13 @@ function SectionsTrigger({
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
       className={cn(
-        "group/navigation-menu-trigger inline-flex font-serif h-9 w-max items-center justify-center pixel-rounded pixel-rounded-md px-2.5 py-1.5 text-sm font-medium transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-muted/50 data-popup-open:hover:bg-muted data-open:bg-muted/50 data-open:hover:bg-muted data-open:focus:bg-muted",
+        "group/navigation-menu-trigger gap-2 inline-flex font-serif h-7 w-max items-center justify-center px-2.5 py-1.5 text-sm font-medium transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-muted/50 data-popup-open:hover:bg-muted data-open:bg-muted/50 data-open:hover:bg-muted data-open:focus:bg-muted [&_svg:not([class*='size-'])]:size-4",
         "group",
         className,
       )}
       {...props}
     >
       {children}{" "}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="relative top-px ml-1 size-3 transition duration-300 group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180"
-        aria-hidden="true"
-      >
-        <path d="M13 16h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7v-2h2v2Zm8 0h-2v-2h2v2ZM7 10H5V8h2v2Zm12 0h-2V8h2v2Z" />
-      </svg>
     </NavigationMenuPrimitive.Trigger>
   );
 }
@@ -140,11 +133,13 @@ function SectionsContent({
 
 function SectionsItem({
   children,
+  icon: Icon,
   title,
   href,
   className,
   ...props
 }: ComponentPropsWithRef<typeof NavigationMenuPrimitive.Item> & {
+  icon?: ComponentType<SVGProps<SVGSVGElement>>;
   href: string;
 }) {
   return (
@@ -158,7 +153,10 @@ function SectionsItem({
           href={href}
           render={
             <a href={href}>
-              <SectionsTrigger>{title}</SectionsTrigger>
+              <SectionsTrigger>
+                {Icon && <Icon />}
+                {title}
+              </SectionsTrigger>
               <SectionsContent>
                 <ul className="w-96">                
                   {children}
@@ -168,7 +166,10 @@ function SectionsItem({
           }
         />
       ) : (
-        <SectionsLink href={href}>{title}</SectionsLink>
+        <SectionsLink className="h-7" href={href}>
+          {Icon && <Icon />}
+          {title}
+        </SectionsLink>
       )}
     </NavigationMenuPrimitive.Item>
   );
@@ -206,14 +207,17 @@ function SectionsListItem({
 
 function OutlineSectionsItem({
   children,
+  icons,
   outline,
 }: ComponentPropsWithRef<typeof NavigationMenuPrimitive.Item> & {
+  icons?: Record<string, ComponentType<SVGProps<SVGSVGElement>>>,
   outline: Outline;
 }) {
   return (
     <SectionsItem
       href={outline.url ?? "#"}
       title={outline.title ?? outline.text}
+      icon={icons?.[outline.text]}
     >
       {children}
     </SectionsItem>
@@ -223,7 +227,9 @@ SectionsItem.Outline = OutlineSectionsItem;
 
 function OutlineSectionsListItem({
   outline,
-}: ComponentPropsWithoutRef<"li"> & { outline: Outline }) {
+}: ComponentPropsWithoutRef<"li"> & {
+  outline: Outline 
+}) {
   return (
     <SectionsListItem
       href={outline.url ?? "#"}
