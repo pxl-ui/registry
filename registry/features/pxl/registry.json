@@ -153,6 +153,20 @@
       ]
     },
     {
+      "name": "newspaper/sections",
+      "type": "registry:component",
+      "title": "Sections",
+      "description": "A component for displaying newspaper sections.",
+      "categories": ["pxl-ui", "features", "newspaper"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "newspaper/sections.tsx",
+          "target": "@components/features/pxl/newspaper/sections.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper/teaser",
       "type": "registry:component",
       "title": "Teaser",
