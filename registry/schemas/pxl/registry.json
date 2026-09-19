@@ -19,6 +19,36 @@
       ]
     },
     {
+      "name": "schemas/changelog",
+      "type": "registry:component",
+      "title": "Changelog Schemas",
+      "description": "Zod types and schemas for Changelogs.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "changelog.ts",
+          "target": "@lib/pxl/schemas/changelog.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/conventional-commit",
+      "type": "registry:component",
+      "title": "Conventional Commit Schemas",
+      "description": "Zod types and schemas for Conventional Commit.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "conventional-commit.ts",
+          "target": "@lib/pxl/schemas/conventional-commit.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/gcalendar",
       "type": "registry:component",
       "title": "Google Calendar Schemas",

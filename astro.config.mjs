@@ -112,6 +112,13 @@ export default defineConfig({
                     link: "/schemas",
                   },
                   {
+                    label: "Codebase",
+                    items: [
+                      { label: "Changelog", link: "/schemas/changelog" },
+                      { label: "Conventional Commit", link: "/schemas/conventional-commit" }
+                    ],
+                  },
+                  {
                     label: "Events",
                     items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
                   },
