@@ -740,7 +740,7 @@ const ItemSchema = z.object({
   georss: GeoRssSchema.optional(),
   dcterms: DublinCoreTermsSchema.optional(),
   wfw: WfwSchema.optional(),
-});
+}).describe("An Rdf item.");
 
 const FeedSchema = z.object({
   title: z.string(),
@@ -776,7 +776,7 @@ const FeedSchema = z.object({
   georss: GeoRssSchema.optional(),
   dcterms: DublinCoreTermsSchema.optional(),
   admin: AdminSchema.optional(),
-});
+}).describe("An Rdf feed.");
 
 const RdfSchemas = {
   Item: ItemSchema,

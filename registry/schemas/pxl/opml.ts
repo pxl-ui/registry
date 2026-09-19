@@ -33,7 +33,7 @@ const OutlineSchema: z.ZodType<Outline> = z.lazy(() =>
     url: z.url().optional(),
     outlines: z.array(OutlineSchema).optional(),
   }),
-);
+).describe("An OPML outline.");
 
 const BodySchema = z.object({
   outlines: z.array(OutlineSchema).optional(),
@@ -42,7 +42,7 @@ const BodySchema = z.object({
 const DocumentSchema = z.object({
   head: HeadSchema.optional(),
   body: BodySchema.optional(),
-});
+}).describe("An OPML document.");
 
 const OpmlSchemas = {
   Document: DocumentSchema,

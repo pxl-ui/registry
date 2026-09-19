@@ -29,7 +29,7 @@ const ForecastSchema = z.object({
   hourly_units: z.object({
     temperature_2m: z.string(),
   }),
-});
+}).describe("A weather forecast.");
 
 const OpenMeteoSchemas = {
   Forecast: ForecastSchema,

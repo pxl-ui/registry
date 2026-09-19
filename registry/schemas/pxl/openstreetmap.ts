@@ -14,7 +14,7 @@ const AddressSchema = z.object({
   "ISO3166-2-lvl4": z.string(),
   country: z.string(),
   country_code: z.string(),
-});
+}).describe("An OpenStreetMap Address.");
 
 const PlaceSchema = z.object({
   place_id: z.number(),
@@ -32,7 +32,7 @@ const PlaceSchema = z.object({
   display_name: z.string(),
   address: AddressSchema,
   boundingbox: z.array(z.string()),
-});
+}).describe("An OpenStreetMap Place.");
 
 const OpenStreetMapSchemas = {
   Address: AddressSchema,

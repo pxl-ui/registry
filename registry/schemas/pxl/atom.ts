@@ -1092,7 +1092,7 @@ const EntrySchema = z.object({
   yt: YoutubeItemSchema.optional(),
   pingback: PingbackItemSchema.optional(),
   trackback: TrackbackSchema.optional(),
-});
+}).describe("An Atom entry.");
 
 const FeedSchema = z.object({
   authors: z
@@ -1183,7 +1183,7 @@ const FeedSchema = z.object({
   yt: YoutubeFeedSchema.optional(),
   admin: AdminSchema.optional(),
   pingback: PingbackFeedSchema.optional(),
-});
+}).describe("An Atom feed.");
 
 // #endregion
 

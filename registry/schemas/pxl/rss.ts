@@ -1967,7 +1967,7 @@ const ItemSchema = z.object({
   pingback: PingbackItemSchema.optional(),
   trackback: TrackbackSchema.optional(),
   acast: ACastItemSchema.optional(),
-});
+}).describe("An Rss item.");
 
 const FeedSchema = z.object({
   title: z.string(),
@@ -2063,7 +2063,7 @@ const FeedSchema = z.object({
   spotify: SpotifyFeedSchema.optional(),
   pingback: PingbackFeedSchema.optional(),
   acast: ACastFeedSchema.optional(),
-});
+}).describe("An Rss feed.");
 
 // #endregion
 
