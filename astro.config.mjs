@@ -113,6 +113,7 @@ export default defineConfig({
                   },
                   {
                     label: "Codebase",
+                    collapsed: true,
                     items: [
                       { label: "Changelog", link: "/schemas/changelog" },
                       { label: "Conventional Commit", link: "/schemas/conventional-commit" }
@@ -120,14 +121,17 @@ export default defineConfig({
                   },
                   {
                     label: "Events",
+                    collapsed: true,
                     items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
                   },
                   {
                     label: "Notes",
+                    collapsed: true,
                     items: [{ label: "Obsidian", link: "/schemas/obsidian" }],
                   },
                   {
                     label: "Mails",
+                    collapsed: true,
                     items: [
                       { label: "ImapFlow", link: "/schemas/imapflow" },
                       { label: "MailParser", link: "/schemas/mailparser" },
@@ -135,10 +139,12 @@ export default defineConfig({
                   },
                   {
                     label: "Weather",
+                    collapsed: true,
                     items: [{ label: "OpenMeteo", link: "/schemas/openmeteo" }],
                   },
                   {
                     label: "Maps",
+                    collapsed: true,
                     items: [
                       {
                         label: "OpenStreetMap",
@@ -157,26 +163,31 @@ export default defineConfig({
                   },
                   {
                     label: "Widgets",
+                    collapsed: true,
                     items: [
                       { autogenerate: { directory: "displays/widgets" } },
                     ],
                   },
                   {
                     label: "Embedded Systems",
+                    collapsed: true,
                     items: [
                       { autogenerate: { directory: "displays/embedded" } },
                     ],
                   },
                   {
                     label: "High-definition",
+                    collapsed: true,
                     items: [{ autogenerate: { directory: "displays/hd" } }],
                   },
                   {
                     label: "Video Graphics Array",
+                    collapsed: true,
                     items: [{ autogenerate: { directory: "displays/vga" } }],
                   },
                   {
                     label: "Extended Graphics Array",
+                    collapsed: true,
                     items: [{ autogenerate: { directory: "displays/xga" } }],
                   },
                 ],
@@ -232,6 +243,7 @@ export default defineConfig({
                   { autogenerate: { directory: "features/newspaper" } },
                   {
                     label: "Atom",
+                    collapsed: true,
                     items: [
                       {
                         label: "Schemas",
@@ -241,6 +253,7 @@ export default defineConfig({
                   },
                   {
                     label: "Rdf",
+                    collapsed: true,
                     items: [
                       {
                         label: "Schemas",
@@ -250,6 +263,7 @@ export default defineConfig({
                   },
                   {
                     label: "Rss",
+                    collapsed: true,
                     items: [
                       {
                         label: "Schemas",
@@ -259,6 +273,7 @@ export default defineConfig({
                   },
                   {
                     label: "Opml",
+                    collapsed: true,
                     items: [
                       {
                         label: "Schemas",
@@ -284,6 +299,7 @@ export default defineConfig({
                   { autogenerate: { directory: "features/tasks" } },
                   {
                     label: "TaskNotes",
+                    collapsed: true,
                     items: [
                       {
                         label: "Schemas",
@@ -322,6 +338,7 @@ export default defineConfig({
                   },
                   {
                     label: "Complete Palettes",
+                    collapsed: true,
                     items: [
                       {
                         label: "DUEL",
@@ -355,6 +372,7 @@ export default defineConfig({
                   },
                   {
                     label: "Base Palettes",
+                    collapsed: true,
                     items: [
                       {
                         label: "Paperback",
@@ -380,6 +398,7 @@ export default defineConfig({
                   },
                   {
                     label: "Color Palettes",
+                    collapsed: true,
                     items: [
                       {
                         label: "PICO-8",
@@ -401,6 +420,7 @@ export default defineConfig({
                   },
                   {
                     label: "Compat Palettes",
+                    collapsed: true,
                     items: [
                       {
                         label: "DUEL",
@@ -427,6 +447,7 @@ export default defineConfig({
                   },
                   {
                     label: "Headings",
+                    collapsed: true,
                     items: [
                       {
                         label: "Pixel Digivolve",
@@ -444,6 +465,7 @@ export default defineConfig({
                   },
                   {
                     label: "Sans",
+                    collapsed: true,
                     items: [
                       {
                         label: "Able 5",
@@ -485,6 +507,7 @@ export default defineConfig({
                   },
                   {
                     label: "Serif",
+                    collapsed: true,
                     items: [
                       {
                         label: "Illusion Book",
@@ -502,6 +525,7 @@ export default defineConfig({
                   },
                   {
                     label: "Monospaced",
+                    collapsed: true,
                     items: [
                       {
                         label: "Monogram",
@@ -528,6 +552,7 @@ export default defineConfig({
                   },
                   {
                     label: "Cursors",
+                    collapsed: true,
                     items: [
                       {
                         label: "Pixelarticons",
@@ -537,6 +562,7 @@ export default defineConfig({
                   },
                   {
                     label: "Emojis",
+                    collapsed: true,
                     items: [
                       {
                         label: "Dotto Emoji",
@@ -546,6 +572,7 @@ export default defineConfig({
                   },
                   {
                     label: "Flags",
+                    collapsed: true,
                     items: [
                       {
                         label: "Terrabandiere",
@@ -564,6 +591,7 @@ export default defineConfig({
                   },
                   {
                     label: "Patterns",
+                    collapsed: true,
                     items: [
                       {
                         label: "Grid Pattern",
