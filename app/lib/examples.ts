@@ -24,8 +24,16 @@ async function getSource(path: string): Promise<string | undefined> {
   return importer();
 }
 
+function getExamplesSlugs(): string[] {
+  return Object.keys(sourceGlobs).map(s => s
+    .replace("/examples/", "")
+    .replace(".tsx", "")
+  );
+}
+
 export {
   components,
+  getExamplesSlugs,
   getSource,
 };
 

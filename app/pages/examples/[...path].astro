@@ -1,0 +1,60 @@
+---
+import "~/styles/global.css";
+
+import ComponentRenderer from "~/components/ComponentRenderer";
+import { getExamplesSlugs } from "~/lib/examples";
+
+export function getStaticPaths() {
+  return getExamplesSlugs().map(path => ({
+    params: {
+      path,
+    }
+  }));
+}
+
+const { path } = Astro.params;
+
+---
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Examples - {path} | PXL UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/Able_5.ttf" type="font/ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/Illusion_Book_Regular.ttf" type="font/ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/Pixel_Digivolve.otf" type="font/otf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/Monogram_Extended.ttf" type="font/ttf">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content={`Examples - ${path}`}>
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en">
+    <meta property="og:description" content="A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it.">
+    <meta property="og:site_name" content="PXL UI">
+    <meta name="description" content="A UI kit for people making things that blink, bounce, and beep. Sharp pixel edges paired with fluid, modern interaction — nothing here looks like a template, and nothing here should stay looking like ours once you're done with it.">
+  </head>
+  <body>
+    <div
+      data-align="center"
+      data-chromeless={false}
+      class="relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end">
+      <ComponentRenderer client:load src={path} />
+    </div>
+
+
+    <script>
+    	const storageKey = 'starlight-theme';
+      const themes = { dark: "dark", light: "light" };
+
+      function loadTheme() {
+        const rawTheme = typeof localStorage !== 'undefined' && localStorage.getItem(storageKey);
+        const theme = rawTheme === themes.dark || rawTheme === themes.light ? rawTheme : themes.light;
+        document.documentElement.dataset.theme = theme;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadTheme()
+      })
+
+    </script>
+  </body>
+</html>

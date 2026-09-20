@@ -1,9 +1,12 @@
 ---
 
+
+
 import { cardVariants } from '@/components/ui/pxl/card';
 import { cn } from '@/lib/utils';
 import { getSource } from "~/lib/examples";
 import { basename } from '~/lib/registry';
+import { url } from '~/lib/utils';
 
 import Code from './Code.astro';
 import ComponentRenderer from './ComponentRenderer';
@@ -26,9 +29,11 @@ export type Props = {
 	/** Approach n.3: Component name + example name (default to demo)  */
 	item?: string;
 	example?: string;
+	/** Whether render this component as iframe or not. Default true. */
+	asIframe?: boolean;
 }
 
-const { align = "center", chromeless, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120, previewOnly } = Astro.props;
+const { align = "center", chromeless = false, src, code, lang = "tsx", class: className, item, example = "demo", style, collapsedHeight = 120, previewOnly, asIframe = true } = Astro.props;
 
 let srcPath = src;
 let sourceCode = code;
@@ -39,6 +44,9 @@ if (item) {
 } else if (src) {
 	sourceCode = await getSource(src);
 }
+
+const iframeUrl = url(`examples/${srcPath}?align=${align}&chromeless=${chromeless}`);
+
 ---
 
 <div
@@ -53,14 +61,25 @@ if (item) {
 		data-slot="card-content"
 		class={cn("flex-1 min-h-0", className)}
 	>
-		<div 
-			data-align={align}
-			data-chromeless={chromeless}
-			class={cn(
-				"relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end",
-			)}>
-			{srcPath ? <ComponentRenderer src={srcPath} client:load /> : <slot />}
-		</div>
+		{srcPath && asIframe ? (
+			<>
+				<div id={`${srcPath}-skeleton`} class="animate-pulse w-full h-72 bg-muted" />
+				<iframe 
+					id={srcPath}
+					class={cn(
+						"flex min-h-72 w-full invisible absolute",
+					)} title={srcPath} src={iframeUrl} />
+			</>
+		) : (
+			<div 
+				data-align={align}
+				data-chromeless={chromeless}
+				class={cn(
+					"relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end",
+				)}>
+				{srcPath ? <ComponentRenderer src={srcPath} client:load /> : <slot />}
+			</div>
+		)}
 
 		{!previewOnly && sourceCode && <Code 
 			class="relative border-t-4 border-border" 
@@ -70,4 +89,18 @@ if (item) {
 			lang={lang} 
 			/>}
 	</div>
+	<script define:vars={{ srcPath }}>
+		const iframe = document.getElementById(srcPath);
+		const skeleton = document.getElementById(`${srcPath}-skeleton`);
+
+		iframe?.addEventListener('load', () => {
+			setTimeout(() => {
+				iframe.classList.toggle("relative", true);
+				iframe.classList.toggle("absolute", false);
+				iframe.classList.toggle("invisible", false);
+				skeleton.style.display = "none";
+				iframe.style.height = `${iframe.contentDocument.body.scrollHeight}px`;
+			}, 500);
+		});
+	</script>
 </div>
