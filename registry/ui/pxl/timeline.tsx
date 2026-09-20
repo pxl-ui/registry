@@ -1,5 +1,6 @@
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
+import { cva, type VariantProps } from "class-variance-authority";
 import { createContext, useCallback, useContext, useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -72,14 +73,30 @@ function Timeline({
   );
 }
 
+
+const timelineContentVariants = cva("text-muted-foreground", {
+  variants: {
+    size: {
+      default: "text-sm",
+      sm: "text-sm",
+      md: "text-base",
+      lg: "text-lg",
+    },
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});
+
 function TimelineContent({
   className,
   render,
+  size = "default",
   children,
   ...props
-}: useRender.ComponentProps<"div">) {
+}: useRender.ComponentProps<"div"> & VariantProps<typeof timelineContentVariants>) {
   const defaultProps = {
-    className: cn("text-muted-foreground text-sm", className),
+    className: cn(timelineTitleVariants({ size, }), className),
     "data-slot": "timeline-content",
     children,
   };
@@ -91,15 +108,31 @@ function TimelineContent({
   });
 }
 
+
+const timelineDateVariants = cva("mb-1 block font-medium text-muted-foreground group-data-[orientation=vertical]/timeline:max-sm:h-4", {
+  variants: {
+    size: {
+      default: "text-xs",
+      xs: "text-xs",
+      sm: "text-sm",
+      md: "text-base",
+    },
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});
+
 function TimelineDate({
   className,
   render,
+  size = "default",
   children,
   ...props
-}: useRender.ComponentProps<"time">) {
+}: useRender.ComponentProps<"time">  & VariantProps<typeof timelineDateVariants>) {
   const defaultProps = {
     className: cn(
-      "mb-1 block font-medium text-muted-foreground text-xs group-data-[orientation=vertical]/timeline:max-sm:h-4",
+      timelineDateVariants({ size, }),
       className,
     ),
     "data-slot": "timeline-date",
@@ -206,14 +239,31 @@ function TimelineSeparator({
   });
 }
 
+const timelineTitleVariants = cva("font-medium", {
+  variants: {
+    size: {
+      default: "text-sm",
+      sm: "text-sm",
+      md: "text-base",
+      lg: "text-lg",
+      xl: "text-xl",
+    },
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});
+
 function TimelineTitle({
   className,
   render,
+  size = "default",
   children,
   ...props
-}: useRender.ComponentProps<"h3">) {
+}: useRender.ComponentProps<"h3"> &
+  VariantProps<typeof timelineTitleVariants>) {
   const defaultProps = {
-    className: cn("font-medium text-sm", className),
+    className: cn(timelineTitleVariants({ size }), className),
     "data-slot": "timeline-title",
     children,
   };
