@@ -97,9 +97,9 @@ function Version({ version }: { version: Types.Version }) {
   );
 }
 
-function Changelog({ document }: { document: Types.Document }) {
+function Changelog({ document, ...props }: ComponentProps<"div"> & { document: Types.Document }) {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div {...props}>
       <SectionHeading>
         <SectionHeading.Title font="heading">
           {document.title ?? "Changelog"}

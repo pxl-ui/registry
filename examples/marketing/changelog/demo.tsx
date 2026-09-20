@@ -435,5 +435,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 };
 
 export default function ChangelogSectionDemo() {
-  return <Changelog document={changelog} />;
+  return <Changelog className="max-h-144 overflow-auto" document={changelog} />;
 }
