@@ -77,6 +77,20 @@
       ]
     },
     {
+      "name": "marketing/changelog",
+      "type": "registry:component",
+      "title": "Changelog",
+      "description": "A component that showcases your product updates, releases, and improvements in a beautiful timeline format.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marketing/changelog.tsx",
+          "target": "@components/features/pxl/marketing/changelog.tsx"
+        }
+      ]
+    },
+    {
       "name": "marketing/page-heading",
       "type": "registry:component",
       "title": "Page Heading",

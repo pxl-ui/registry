@@ -1,5 +1,6 @@
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
+import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
 
 import { Tagline } from "@/components/features/pxl/marketing/tagline";
@@ -35,26 +36,40 @@ function SectionHeadingTagline({ ...props }: ComponentProps<typeof Tagline>) {
   return <Tagline variant="default" {...props} />;
 }
 
+const sectionHeadingTitleVariants = cva(
+  "scroll-m-20 text-4xl font-medium tracking-tight text-balance group-data-[size=sm]/section-heading:text-3xl lg:text-5xl lg:group-data-[size=sm]/section-heading:text-4xl",
+  {
+    defaultVariants: {
+      font: "sans",
+    },
+    variants: {
+      font: {
+        heading: "font-heading",
+        sans: "font-sans",
+        serif: "font-serif",
+      },
+    },
+  },
+);
+
 function SectionHeadingTitle({
   children,
   className,
+  font = "sans",
   render,
   ...props
-}: useRender.ComponentProps<"h2">) {
+}: useRender.ComponentProps<"h2"> &
+  VariantProps<typeof sectionHeadingTitleVariants>) {
+  const defaultProps = {
+    "data-slot": "section-heading-title",
+    className: cn(sectionHeadingTitleVariants({ font }), className),
+    children,
+  };
+
   return useRender({
     defaultTagName: "div",
     render,
-    props: mergeProps<"div">(
-      {
-        "data-slot": "section-heading-title",
-        className: cn(
-          "cn-font-heading scroll-m-20 text-4xl font-medium tracking-tight text-balance group-data-[size=sm]/section-heading:text-3xl lg:text-5xl lg:group-data-[size=sm]/section-heading:text-4xl",
-          className,
-        ),
-        children,
-      },
-      props,
-    ),
+    props: mergeProps<"div">(defaultProps, props),
   });
 }
 

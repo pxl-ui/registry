@@ -30,7 +30,7 @@ function PageHeadingTitle({ className, ...props }: React.ComponentProps<"h1">) {
     <h1
       data-slot="page-heading-title"
       className={cn(
-        "cn-font-heading scroll-m-20 text-5xl font-medium tracking-tight text-balance lg:text-6xl",
+        "scroll-m-20 text-5xl font-medium tracking-tight text-balance lg:text-6xl",
         className
       )}
       {...props}
