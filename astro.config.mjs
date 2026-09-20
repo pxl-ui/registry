@@ -162,6 +162,24 @@ export default defineConfig({
                     link: "/displays",
                   },
                   {
+                    label: "Mocks",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Android",
+                        link: "/displays/mocks/android",
+                      },
+                      {
+                        label: "Iphone",
+                        link: "/displays/mocks/iphone",
+                      },
+                      {
+                        label: "Safari",
+                        link: "/displays/mocks/safari",
+                      },
+                    ],
+                  },
+                  {
                     label: "Widgets",
                     collapsed: true,
                     items: [

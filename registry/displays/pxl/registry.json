@@ -4,6 +4,20 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
+      "name": "android",
+      "type": "registry:component",
+      "title": "Android",
+      "description": "A mockup of an Android device.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "android.tsx",
+          "target": "@components/displays/pxl/android.tsx"
+        }
+      ]
+    },
+    {
       "name": "displays/dci2k",
       "type": "registry:style",
       "title": "DCI 2K",
@@ -796,6 +810,34 @@
           "display-height-xgaplus": "864px"
         }
       }
+    },
+    {
+      "name": "iphone",
+      "type": "registry:component",
+      "title": "Iphone",
+      "description": "A mockup of an Iphone device.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "iphone.tsx",
+          "target": "@components/displays/pxl/iphone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "safari",
+      "type": "registry:component",
+      "title": "Safari",
+      "description": "A safari browser mockup to showcase your website.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "safari.tsx",
+          "target": "@components/displays/pxl/safari.tsx"
+        }
+      ]
     }
   ]
 }
