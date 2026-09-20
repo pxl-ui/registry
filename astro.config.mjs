@@ -177,6 +177,10 @@ export default defineConfig({
                         label: "Safari",
                         link: "/displays/mocks/safari",
                       },
+                      {
+                        label: "ESP32-S3 1.54″",
+                        link: "/displays/mocks/esp32-s3-154",
+                      },
                     ],
                   },
                   {

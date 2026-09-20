@@ -812,6 +812,20 @@
       }
     },
     {
+      "name": "esp32-s3-154",
+      "type": "registry:component",
+      "title": "ESP32-S3 1.54″",
+      "description": "A mockup of an ESP32-S3 1.54″ device.",
+      "categories": ["pxl-ui", "components", "layout"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "esp32-s3-154.tsx",
+          "target": "@components/displays/pxl/esp32-s3-154.tsx"
+        }
+      ]
+    },
+    {
       "name": "iphone",
       "type": "registry:component",
       "title": "Iphone",
