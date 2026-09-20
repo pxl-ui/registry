@@ -60,6 +60,7 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   "features/newspaper/": { prefix: "newspaper/" },
   "features/tasks/": { prefix: "tasks/" },
   colors: { prefix: "colors/" },
+  "displays/mocks": {},
   displays: { prefix: "displays/" },
   typography: { prefix: "fonts/" },
   icons: { prefix: "icons/" },
