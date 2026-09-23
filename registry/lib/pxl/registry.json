@@ -18,6 +18,20 @@
       ]
     },
     {
+      "name": "lib/types",
+      "type": "registry:lib",
+      "title": "Types",
+      "description": "Type utilities",
+      "categories": ["pxl-ui", "types"],
+      "files": [
+        {
+          "type": "registry:lib",
+          "path": "types.ts",
+          "target": "@lib/pxl/types.ts"
+        }
+      ]
+    },
+    {
       "name": "sprite",
       "type": "registry:lib",
       "title": "Sprite",

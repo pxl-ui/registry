@@ -1,13 +1,22 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { type ComponentProps, useMemo } from "react";
+import {
+  type ComponentProps,
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
-import type { Atom } from "@/lib/schemas/pxl/atom";
-import type { Rdf } from "@/lib/schemas/pxl/rdf";
-import type { Rss } from "@/lib/schemas/pxl/rss";
 import { cn } from "@/lib/utils";
 
+const TeaserContext = createContext<{ hovered: boolean }>({
+  hovered: false,
+});
+
 const teaserVariants = cva(
-  "group/teaser flex w-full flex-wrap items-center text-sm transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
+  "group/teaser @container flex w-full flex-wrap items-center text-sm transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
   {
     variants: {
       size: {
@@ -24,16 +33,25 @@ const teaserVariants = cva(
 
 function Teaser({
   className,
+  state = "unread",
   size = "default",
   ...props
-}: ComponentProps<"li"> & VariantProps<typeof teaserVariants>) {
+}: ComponentProps<"li"> & VariantProps<typeof teaserVariants> & {
+  state?: "read" | "unread"
+}) {
+  const [hovered, setHovered] = useState(false);
   return (
-    <li
-      className={cn(teaserVariants({ size }))}
-      data-slot="teaser"
-      data-size={size}
-      {...props}
-    />
+    <TeaserContext.Provider value={{ hovered }}>
+      <li
+        className={cn(teaserVariants({ size }))}
+        data-slot="teaser"
+        data-state={state}
+        data-size={size}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        {...props}
+      />
+    </TeaserContext.Provider>
   );
 }
 
@@ -41,11 +59,7 @@ function TeaserContent({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       data-slot="teaser-content"
-      className={cn(
-        "flex flex-1 flex-col gap-1",
-        "@container inline-block max-w-[-webkit-fill-available]",
-        className,
-      )}
+      className={cn("min-w-0 flex-1 flex flex-col gap-1", className)}
       {...props}
     />
   );
@@ -56,8 +70,10 @@ function TeaserTitle({ className, ...props }: ComponentProps<"div">) {
     <div
       data-slot="teaser-title"
       className={cn(
-        "line-clamp-1 flex w-fit items-center gap-2 leading-snug underline-offset-4 px-px",
-        "font-serif font-bold text-xs @5xs:text-sm @md:text-base",
+        "min-w-0",
+        "font-serif font-bold leading-snug text-pretty",
+        "text-xs @5xs:text-sm @md:text-base",
+        "group-data-[state=read]/teaser:text-muted-foreground",
         className,
       )}
       {...props}
@@ -65,17 +81,36 @@ function TeaserTitle({ className, ...props }: ComponentProps<"div">) {
   );
 }
 
-function TeaserDescription({ className, ...props }: ComponentProps<"div">) {
+const teaserDescriptionVariants = cva("", {
+  defaultVariants: {
+    lineClamp: "scroll",
+  },
+  variants: {
+    lineClamp: {
+      3: "line-clamp-3",
+      5: "line-clamp-5",
+      none: "",
+      scroll:
+        "max-h-20 overflow-y-auto scrollbar-gutter-stable scrollbar-thin scrollbar-thumb-transparent group-hover/teaser:scrollbar-thumb-border",
+    },
+  },
+});
+
+function TeaserDescription({
+  className,
+  lineClamp = "scroll",
+  ...props
+}: ComponentProps<"div"> & VariantProps<typeof teaserDescriptionVariants>) {
   return (
     <div
       data-slot="teaser-description"
       className={cn(
         "relative px-px",
-        "max-h-20 overflow-y-auto scrollbar-gutter-stable scrollbar-thin",
-        "scrollbar-thumb-transparent group-hover/teaser:scrollbar-thumb-border",
-        "font-serif font-normal text-left text-muted-foreground",
-        "text-2xs leading-normal @5xs:text-xs @md:text-sm",
+        "font-serif font-normal leading-normal text-left",
+        "text-muted-foreground group-data-[state=read]/teaser:text-muted-foreground/60",
+        "text-2xs @5xs:text-xs @md:text-sm",
         "[&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-primary",
+        teaserDescriptionVariants({ lineClamp }),
         className,
       )}
       {...props}
@@ -83,119 +118,204 @@ function TeaserDescription({ className, ...props }: ComponentProps<"div">) {
   );
 }
 
-function AtomTeaserTitle({
-  entry,
-  ...props
-}: ComponentProps<typeof TeaserTitle> & { entry: Atom.Entry }) {
-  const title = useMemo(() => {
-    const group = entry.media?.groups?.find((g) => g.title?.value);
-
-    return group?.title?.value ?? entry.title;
-  }, [entry]);
-
-  return <TeaserTitle {...props}>{title}</TeaserTitle>;
+function TeaserMeta({ className, ...props }: ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="teaser-meta"
+      className={cn("min-w-0 flex-1 flex flex-row gap-1.5", className)}
+      {...props}
+    />
+  );
 }
-TeaserTitle.Atom = AtomTeaserTitle;
 
-function AtomTeaserDescription({
-  entry,
+function TeaserAuthor({ className, ...props }: ComponentProps<"cite">) {
+  return (
+    <cite
+      data-slot="teaser-author"
+      className={cn(
+        "font-serif font-normal leading-normal text-left",
+        "text-muted-foreground group-data-[state=read]/teaser:text-muted-foreground/60",
+        "text-2xs @5xs:text-xs @md:text-sm",
+        className,
+      )}
+      {...props}
+    />
+  );
+}
+
+function TeaserDate({
+  className,
+  date,
+  dateFormat = "dd/MM",
+  hourFormat = "24-h",
+  locale,
   ...props
-}: ComponentProps<typeof TeaserDescription> & { entry: Atom.Entry }) {
-  const description = useMemo(() => {
-    const group = entry.media?.groups?.find((g) => g.description?.value);
+}: ComponentProps<"time"> & {
+  date?: Date | string | number;
+  dateFormat?: "dd/MM" | "MM/dd" | "yyyy-MM-dd" | null;
+  hourFormat?: "24-h" | "12-h" | null;
+  locale?: string;
+}) {
+  const formatted = useMemo(() => {
+    if (!date) {
+      return null;
+    }
 
-    return group?.description?.value ?? entry.content;
-  }, [entry]);
+    const value = new Date(date);
 
-  if (!description) {
+    if (Number.isNaN(value)) {
+      return null;
+    }
+
+    if (!dateFormat && !hourFormat) {
+      return "";
+    }
+
+    const options: Intl.DateTimeFormatOptions = {};
+
+    if (dateFormat) {
+      switch (dateFormat) {
+        case "dd/MM":
+          options.day = "2-digit";
+          options.month = "2-digit";
+          break;
+        case "MM/dd":
+          options.month = "2-digit";
+          options.day = "2-digit";
+          break;
+        case "yyyy-MM-dd":
+          options.year = "numeric";
+          options.month = "2-digit";
+          options.day = "2-digit";
+          break;
+      }
+    }
+    if (hourFormat) {
+      options.hour = "2-digit";
+      options.minute = "2-digit";
+      options.hour12 = hourFormat === "12-h";
+    }
+    return value.toLocaleString(locale, options).replace(",", " -");
+  }, [date, dateFormat, hourFormat, locale]);
+
+  if (!formatted) {
     return null;
   }
 
   return (
-    <TeaserDescription
+    <time
+      data-slot="teaser-date"
+      className={cn(
+        "italic font-serif font-normal leading-normal text-left",
+        "text-muted-foreground group-data-[state=read]/teaser:text-muted-foreground/60",
+        "text-2xs @5xs:text-xs @md:text-sm",
+        className,
+      )}
       {...props}
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
-      dangerouslySetInnerHTML={{
-        __html: description,
-      }}
+    >
+      {formatted}
+    </time>
+  );
+}
+
+const teaserMediaVariants = cva(
+  "flex shrink-0 items-center justify-center gap-2 group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start [&_svg]:pointer-events-none",
+  {
+    variants: {
+      color: {
+        default: "",
+        grayscale: "grayscale",
+        sepia: "sepia",
+      },
+      variant: {
+        default: "bg-transparent",
+        icon: "[&_svg:not([class*='size-'])]:size-4",
+        image:
+          "overflow-hidden pixel-rounded pixel-size-md [&_img]:size-full [&_img]:object-cover size-6 @5xs:size-8 @md:size-16 empty:hidden",
+        video:
+          "overflow-hidden pixel-rounded pixel-size-md [&_video]:size-full [&_video]:object-cover size-6 @5xs:size-8 @md:size-16 empty:hidden",
+      },
+    },
+    defaultVariants: {
+      color: "default",
+      variant: "default",
+    },
+  },
+);
+
+function TeaserMedia({
+  className,
+  color = "default",
+  variant = "default",
+  ...props
+}: ComponentProps<"div"> & VariantProps<typeof teaserMediaVariants>) {
+  return (
+    <div
+      data-slot="teaser-media"
+      data-variant={variant}
+      className={cn(teaserMediaVariants({ color, variant, className }))}
+      {...props}
     />
   );
 }
-TeaserDescription.Atom = AtomTeaserDescription;
 
-function RdfTeaserTitle({
-  item,
-  ...props
-}: ComponentProps<typeof TeaserTitle> & { item: Rdf.Item }) {
-  const title = useMemo(() => {
-    return item.title ?? "";
-  }, [item]);
-
-  return <TeaserTitle {...props}>{title}</TeaserTitle>;
-}
-TeaserTitle.Rdf = RdfTeaserTitle;
-
-function RdfTeaserDescription({
-  item,
-  ...props
-}: ComponentProps<typeof TeaserDescription> & { item: Rdf.Item }) {
-  const description = useMemo(() => {
-    return item.content?.encoded ?? item.description;
-  }, [item]);
-
+function TeaserImage({ alt, className, ...props }: ComponentProps<"img">) {
   return (
-    description && (
-      <TeaserDescription
-        {...props}
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
-        dangerouslySetInnerHTML={{
-          __html: description,
-        }}
-      />
-    )
-  );
-}
-TeaserDescription.Rdf = RdfTeaserDescription;
-
-function RssTeaserTitle({
-  item,
-  ...props
-}: ComponentProps<typeof TeaserTitle> & { item: Rss.Item }) {
-  const title = useMemo(() => {
-    return item.title ?? "";
-  }, [item]);
-
-  return <TeaserTitle {...props}>{title}</TeaserTitle>;
-}
-TeaserTitle.Rss = RssTeaserTitle;
-
-function RssTeaserDescription({
-  item,
-  ...props
-}: ComponentProps<typeof TeaserDescription> & { item: Rss.Item }) {
-  const description = useMemo(() => {
-    return item.itunes?.summary ?? item.description;
-  }, [item]);
-
-  if (!description) {
-    return null;
-  }
-
-  return (
-    <TeaserDescription
+    <img
+      data-slot="teaser-image"
+      alt={alt}
+      title={alt}
+      className={cn("", className)}
       {...props}
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: feed content
-      dangerouslySetInnerHTML={{
-        __html: description,
-      }}
     />
   );
 }
-TeaserDescription.Rss = RssTeaserDescription;
+
+function TeaserVideo({
+  className,
+  src,
+  type,
+  ...props
+}: ComponentProps<"video"> & Pick<ComponentProps<"source">, "src" | "type">) {
+  const { hovered } = useContext(TeaserContext);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    if (hovered) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }, [hovered]);
+
+  return (
+    <video
+      ref={videoRef}
+      data-slot="teaser-video"
+      muted
+      loop
+      playsInline
+      className={cn("", className)}
+      {...props}
+    >
+      <source src={src} type={type} />
+    </video>
+  );
+}
 
 export {
   Teaser,
+  TeaserAuthor,
   TeaserContent,
+  TeaserDate,
   TeaserDescription,
+  TeaserImage,
+  TeaserMedia,
+  TeaserMeta,
   TeaserTitle,
+  TeaserVideo,
 };

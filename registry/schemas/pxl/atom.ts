@@ -981,7 +981,7 @@ const SourceSchema = z.object({
     .array(
       z.object({
         href: z.string(),
-        rel: z.enum(["self", "alternate"]).optional(),
+        rel: z.string().optional(),
         type: z.string().optional(),
         hreflang: z.string().optional(),
         title: z.string().optional(),
@@ -1050,7 +1050,7 @@ const EntrySchema = z.object({
     .array(
       z.object({
         href: z.string(),
-        rel: z.enum(["self", "alternate"]).optional(),
+        rel: z.string().optional(),
         type: z.string().optional(),
         hreflang: z.string().optional(),
         title: z.string().optional(),
@@ -1145,7 +1145,7 @@ const FeedSchema = z.object({
     .array(
       z.object({
         href: z.string(),
-        rel: z.enum(["self", "alternate"]).optional(),
+        rel: z.string().optional(),
         type: z.string().optional(),
         hreflang: z.string().optional(),
         title: z.string().optional(),

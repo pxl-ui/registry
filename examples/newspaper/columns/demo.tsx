@@ -1,10 +1,9 @@
 import { Columns } from "@/components/features/pxl/newspaper/columns";
 import {
-  Teaser,
-  TeaserContent,
   TeaserDescription,
   TeaserTitle,
-} from "@/features/pxl/newspaper/teaser";
+} from "@/features/pxl/newspaper/rss/teaser";
+import { Teaser, TeaserContent } from "@/features/pxl/newspaper/teaser";
 import type { Rss } from "@/lib/schemas/pxl/rss";
 
 export default function ColumnsDemo() {
@@ -759,8 +758,8 @@ export default function ColumnsDemo() {
       {rssFeed.items?.map((item, idx) => (
         <Teaser key={item.guid?.value ?? idx}>
           <TeaserContent>
-            <TeaserTitle.Rss item={item} />
-            <TeaserDescription.Rss item={item} />
+            <TeaserTitle item={item} />
+            <TeaserDescription item={item} />
           </TeaserContent>
         </Teaser>
       ))}

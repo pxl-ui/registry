@@ -1811,48 +1811,17 @@ const WfwSchema = z.object({
   commentRss: z.string().optional(),
 });
 
-// #endregion
+const SourceNsItemSchema = z.object({
+  markdown: z.string().optional(),
+  outlines: z.array(z.string()).optional(),
+  linkFull: z.string().optional(),
+  inReplyTo: z.object({
+    value: z.string(),
+    isPermaLink: z.boolean().optional(),
+  }).optional(),
+})
 
-// #region INTERNAL
-
-const SourceNsSchema = z.object({
-  accounts: z
-    .array(
-      z.object({
-        service: z.string(),
-        value: z.string().optional(),
-      }),
-    )
-    .optional(),
-  likes: z
-    .object({
-      server: z.string(),
-    })
-    .optional(),
-  archive: z
-    .object({
-      url: z.string(),
-      startDay: z.string(),
-      endDay: z.string().optional(),
-      filename: z.string().optional(),
-    })
-    .optional(),
-  subscriptionLists: z
-    .array(
-      z.object({
-        url: z.url(),
-        value: z.string().optional(),
-      }),
-    )
-    .optional(),
-  cloud: z.string().optional(),
-  blogroll: z.string().optional(),
-  self: z.string().optional(),
-  localTime: z.string().optional(),
-});
-
-/** Note that this Schema is different from Atom's Source */
-const SourceSchema = z.object({
+const SourceNsFeedSchema = z.object({
   accounts: z
     .array(
       z.object({
@@ -1961,7 +1930,7 @@ const ItemSchema = z.object({
   dcterms: DublinCoreTermsSchema.optional(),
   prism: PrismItemSchema.optional(),
   wfw: WfwSchema.optional(),
-  sourceNs: SourceNsSchema.optional(),
+  sourceNs: SourceNsItemSchema.optional(),
   rawvoice: RawVoiceItemSchema.optional(),
   spotify: SpotifyItemSchema.optional(),
   pingback: PingbackItemSchema.optional(),
@@ -2057,7 +2026,7 @@ const FeedSchema = z.object({
   feedpress: FeedpressSchema.optional(),
   opensearch: OpenSearchSchema.optional(),
   admin: AdminSchema.optional(),
-  source: SourceSchema.optional(),
+  sourceNs: SourceNsFeedSchema.optional(),
   blogChannel: BlogChannelSchema.optional(),
   rawvoice: RawVoiceFeedSchema.optional(),
   spotify: SpotifyFeedSchema.optional(),

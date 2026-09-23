@@ -79,6 +79,21 @@
       ]
     },
     {
+      "name": "schemas/json-feed",
+      "type": "registry:component",
+      "title": "JSON Feed Schemas",
+      "description": "Zod types and schemas for JSON feeds.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "json-feed.ts",
+          "target": "@lib/pxl/schemas/json-feed.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/mailparser",
       "type": "registry:component",
       "title": "MailParser Schemas",

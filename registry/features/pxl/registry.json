@@ -139,68 +139,6 @@
       ]
     },
     {
-      "name": "newspaper/columns",
-      "type": "registry:component",
-      "title": "Columns",
-      "description": "A component for displaying newspaper teasers in columns grid.",
-      "categories": ["pxl-ui", "features", "newspaper"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "newspaper/columns.tsx",
-          "target": "@components/features/pxl/newspaper/columns.tsx"
-        }
-      ]
-    },
-    {
-      "name": "newspaper/list",
-      "type": "registry:component",
-      "title": "List",
-      "description": "A component for displaying newspaper teasers in a list.",
-      "categories": ["pxl-ui", "features", "newspaper"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "newspaper/list.tsx",
-          "target": "@components/features/pxl/newspaper/list.tsx"
-        }
-      ]
-    },
-    {
-      "name": "newspaper/sections",
-      "type": "registry:component",
-      "title": "Sections",
-      "description": "A component for displaying newspaper sections.",
-      "categories": ["pxl-ui", "features", "newspaper"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "newspaper/sections.tsx",
-          "target": "@components/features/pxl/newspaper/sections.tsx"
-        }
-      ]
-    },
-    {
-      "name": "newspaper/teaser",
-      "type": "registry:component",
-      "title": "Teaser",
-      "description": "A component for displaying newspaper article teasers.",
-      "categories": ["pxl-ui", "features", "newspaper"],
-      "registryDependencies": [
-        "pxl-ui/registry/lib/html",
-        "pxl-ui/registry/schemas/atom",
-        "pxl-ui/registry/schemas/rdf",
-        "pxl-ui/registry/schemas/rss"
-      ],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "newspaper/teaser.tsx",
-          "target": "@components/features/pxl/newspaper/teaser.tsx"
-        }
-      ]
-    },
-    {
       "name": "tasks/due-badge",
       "type": "registry:component",
       "title": "Due Badge",

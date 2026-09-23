@@ -264,22 +264,22 @@ export default defineConfig({
                 items: [
                   { autogenerate: { directory: "features/newspaper" } },
                   {
+                    label: "Opml",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/opml",
+                      },
+                    ],
+                  },
+                  {
                     label: "Atom",
                     collapsed: true,
                     items: [
                       {
                         label: "Schemas",
                         link: "/schemas/atom",
-                      },
-                    ],
-                  },
-                  {
-                    label: "Rdf",
-                    collapsed: true,
-                    items: [
-                      {
-                        label: "Schemas",
-                        link: "/schemas/rdf",
                       },
                     ],
                   },
@@ -294,12 +294,22 @@ export default defineConfig({
                     ],
                   },
                   {
-                    label: "Opml",
+                    label: "Rdf",
                     collapsed: true,
                     items: [
                       {
                         label: "Schemas",
-                        link: "/schemas/opml",
+                        link: "/schemas/rdf",
+                      },
+                    ],
+                  },
+                  {
+                    label: "Json Feed",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/json-feed",
                       },
                     ],
                   },
