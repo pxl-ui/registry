@@ -1,0 +1,61 @@
+---
+title: Header
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="newspaper/header" />
+
+## Installation
+
+<Install item="newspaper/header" />
+
+## Usage
+
+```tsx
+import { 
+  Header,
+  HeaderDate,
+  HeaderIssueNumber,
+  HeaderLanguage,
+  HeaderLogo,
+  HeaderMasthead,
+  HeaderMastheadContent,
+  HeaderNav,
+  HeaderSeparator,
+  HeaderSubtitle,
+  HeaderTitle,
+  HeaderTopMeta,
+} from "@/components/features/pxl/newspaper/header";
+import {
+  SectionSeparator,
+  Sections,
+  SectionsItem,
+} from "@/components/features/pxl/newspaper/sections";
+```
+
+```tsx
+<Header>
+  <HeaderTopMeta>
+    <HeaderIssueNumber issueNumber="123" />
+    <HeaderDate date="01/03/2026" />
+    <HeaderLanguage>English</HeaderLanguage>
+  </HeaderTopMeta>
+  <HeaderSeparator />
+  <HeaderMasthead>
+    <HeaderLogo>
+      <img src="logo" />
+    </HeaderLogo>
+    <HeaderMastheadContent>
+      <HeaderTitle>Title</HeaderTitle>
+      <HeaderSubtitle>Subtitle</HeaderSubtitle>
+    </HeaderMastheadContent>
+  </HeaderMasthead>
+  <HeaderSeparator />
+  <HeaderNav>
+    <Sections>
+      <SectionItem href="#" title="Section Title" />
+      <SectionSeparator />
+    </Sections>
+  </HeaderNav>
+</Header>
+```

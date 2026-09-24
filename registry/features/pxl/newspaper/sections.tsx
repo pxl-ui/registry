@@ -1,11 +1,13 @@
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu";
 import type {
+  ComponentProps,
   ComponentPropsWithoutRef,
   ComponentPropsWithRef,
   ComponentType,
   SVGProps,
 } from "react";
 
+import { Separator } from "@/components/ui/pxl/separator";
 import type { Outline } from "@/lib/schemas/pxl/opml";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +40,6 @@ function SectionsPositioner({
   );
 }
 
-
 function SectionsList({
   className,
   ...props
@@ -47,7 +48,7 @@ function SectionsList({
     <NavigationMenuPrimitive.List
       data-slot="navigation-menu-list"
       className={cn(
-        "group flex flex-1 list-none items-center justify-center gap-0",
+        "group flex flex-1 list-none items-center w-full justify-between gap-0",
         className,
       )}
       {...props}
@@ -66,14 +67,12 @@ function Sections({
     <NavigationMenuPrimitive.Root
       data-slot="navigation-menu"
       className={cn(
-        "group/navigation-menu relative flex max-w-max flex-1 items-center justify-center",
+        "group/navigation-menu relative flex w-full flex-1 items-center justify-center",
         className,
       )}
       {...props}
     >
-      <SectionsList>
-        {children}
-      </SectionsList>
+      <SectionsList>{children}</SectionsList>
       <SectionsPositioner align={align} />
     </NavigationMenuPrimitive.Root>
   );
@@ -87,7 +86,7 @@ function SectionsLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "font-serif flex items-center gap-2 p-2 text-sm transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&_svg:not([class*='size-'])]:size-4",
+        "font-serif flex items-center gap-2 p-2 text-xs  md:text-sm transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}
@@ -131,6 +130,15 @@ function SectionsContent({
   );
 }
 
+function SectionSeparator({
+  className,
+  ...props
+}: ComponentProps<typeof Separator>) {
+  return (
+    <Separator className="h-7" border="solid" orientation="vertical" {...props} />
+  );
+}
+
 function SectionsItem({
   children,
   icon: Icon,
@@ -145,30 +153,37 @@ function SectionsItem({
   return (
     <NavigationMenuPrimitive.Item
       data-slot="navigation-menu-item"
-      className={cn("relative", className)}
+      className={cn("relative min-w-0 flex-1 md:w-full justify-center", className)}
       {...props}
     >
       {children ? (
         <NavigationMenuPrimitive.Link
           href={href}
           render={
-            <a href={href}>
-              <SectionsTrigger>
+            <a href={href} className="block min-w-0 w-full">
+              <SectionsTrigger className={cn(
+                "min-w-0 w-full truncate",
+                Icon && "[&_span]:hidden md:[&_span]:inline-flex [&_svg]:shrink-0"
+              )}>
                 {Icon && <Icon />}
-                {title}
+                <span className="min-w-0 truncate">{title}</span>
               </SectionsTrigger>
               <SectionsContent>
-                <ul className="w-96">                
-                  {children}
-                </ul>
+                <ul className="w-96">{children}</ul>
               </SectionsContent>
             </a>
           }
         />
       ) : (
-        <SectionsLink className="h-7" href={href}>
+        <SectionsLink
+          className={cn(
+            "min-w-0 h-7 w-full truncate justify-center",
+            Icon && "[&_svg]:shrink-0 [&_span]:hidden sm:[&_span]:inline-flex"
+          )}
+          href={href}
+        >
           {Icon && <Icon />}
-          {title}
+          <span className="min-w-0 truncate">{title}</span>
         </SectionsLink>
       )}
     </NavigationMenuPrimitive.Item>
@@ -210,7 +225,7 @@ function OutlineSectionsItem({
   icons,
   outline,
 }: ComponentPropsWithRef<typeof NavigationMenuPrimitive.Item> & {
-  icons?: Record<string, ComponentType<SVGProps<SVGSVGElement>>>,
+  icons?: Record<string, ComponentType<SVGProps<SVGSVGElement>>>;
   outline: Outline;
 }) {
   return (
@@ -228,7 +243,7 @@ SectionsItem.Outline = OutlineSectionsItem;
 function OutlineSectionsListItem({
   outline,
 }: ComponentPropsWithoutRef<"li"> & {
-  outline: Outline 
+  outline: Outline;
 }) {
   return (
     <SectionsListItem
@@ -242,9 +257,4 @@ function OutlineSectionsListItem({
 }
 SectionsListItem.Outline = OutlineSectionsListItem;
 
-export {
-  Sections,
-  SectionsItem,
-  SectionsListItem
-};
-
+export { SectionSeparator, Sections, SectionsItem, SectionsListItem };

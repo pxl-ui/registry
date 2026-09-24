@@ -35,6 +35,23 @@
       ]
     },
     {
+      "name": "newspaper/atom/teaser",
+      "type": "registry:component",
+      "title": "Atom Teaser",
+      "description": "A component for displaying newspaper article teasers from Atom feeds.",
+      "categories": ["pxl-ui", "features", "newspaper", "newspaper/atom"],
+      "registryDependencies": [
+        "pxl-ui/registry/schemas/atom"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "atom/teaser.tsx",
+          "target": "@components/features/pxl/newspaper/atom/teaser.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper/columns",
       "type": "registry:component",
       "title": "Columns",
@@ -49,19 +66,16 @@
       ]
     },
     {
-      "name": "newspaper/atom/teaser",
+      "name": "newspaper/header",
       "type": "registry:component",
-      "title": "Atom Teaser",
-      "description": "A component for displaying newspaper article teasers from Atom feeds.",
-      "categories": ["pxl-ui", "features", "newspaper", "newspaper/atom"],
-      "registryDependencies": [
-        "pxl-ui/registry/schemas/atom"
-      ],
+      "title": "Header",
+      "description": "A component for displaying a newspaper header.",
+      "categories": ["pxl-ui", "features", "newspaper"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "atom/teaser.tsx",
-          "target": "@components/features/pxl/newspaper/atom/teaser.tsx"
+          "path": "header.tsx",
+          "target": "@components/features/pxl/newspaper/header.tsx"
         }
       ]
     },

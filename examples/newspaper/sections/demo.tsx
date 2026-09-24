@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 
 import {
+  SectionSeparator,
   Sections,
   SectionsItem,
   SectionsListItem,
 } from "@/components/features/pxl/newspaper/sections";
-import { Separator } from "@/components/ui/pxl/separator";
 import type { Opml } from "@/lib/schemas/pxl/opml";
 
 const sources: Opml.Outline[] = [
@@ -185,7 +185,7 @@ const SourcesIcons = {
 export default function SectionsDemo() {
   return (
     <Sections>
-      <Separator className="h-7" border="solid" orientation="vertical" />
+      <SectionSeparator />
       {sources.map((s, i) => (
         <Fragment key={s.text}>
           <SectionsItem.Outline outline={s} icons={SourcesIcons}>
@@ -193,12 +193,10 @@ export default function SectionsDemo() {
               <SectionsListItem.Outline key={outline.text} outline={outline} />
             ))}
           </SectionsItem.Outline>
-          {i !== sources.length - 1 && (
-            <Separator className="h-7" border="solid" orientation="vertical" />
-          )}
+          {i !== sources.length - 1 && <SectionSeparator />}
         </Fragment>
       ))}
-      <Separator className="h-7" border="solid" orientation="vertical" />
+      <SectionSeparator />
     </Sections>
   );
 }
