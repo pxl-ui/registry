@@ -173,6 +173,24 @@
       ]
     },
     {
+      "name": "button-group",
+      "type": "registry:component",
+      "title": "Button Group",
+      "description": "A container that groups related buttons together with consistent styling.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/separator"
+      ],
+      "files": [
+        {
+          "path": "button-group.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/button-group.tsx"
+        }
+      ]
+    },
+    {
       "name": "calendar",
       "type": "registry:component",
       "title": "Calendar",

@@ -1,3 +1,4 @@
+import { Kbd } from "@/components/ui/pxl/kbd";
 import { Separator } from "@/components/ui/pxl/separator";
 
 import Callout from "./Callout.astro";
@@ -32,6 +33,7 @@ export {
   FontPreview,
   IconPreview,
   Install,
+  Kbd,
   LinkCard,
   LinkCardMedia,
   NodeCommand,
