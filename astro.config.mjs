@@ -326,6 +326,10 @@ export default defineConfig({
                 items: [{ autogenerate: { directory: "features/marketing" } }],
               },
               {
+                label: "Notes",
+                items: [{ autogenerate: { directory: "features/notes" } }],
+              },
+              {
                 label: "Tasks",
                 items: [
                   { autogenerate: { directory: "features/tasks" } },

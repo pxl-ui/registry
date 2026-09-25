@@ -139,6 +139,20 @@
       ]
     },
     {
+      "name": "notes/sticky",
+      "type": "registry:component",
+      "title": "Sticky",
+      "description": "A component that displays a sticky note.",
+      "categories": ["pxl-ui", "features", "notes"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "notes/sticky.tsx",
+          "target": "@components/features/pxl/notes/sticky.tsx"
+        }
+      ]
+    },
+    {
       "name": "tasks/due-badge",
       "type": "registry:component",
       "title": "Due Badge",

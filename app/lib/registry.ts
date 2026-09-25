@@ -58,6 +58,7 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   "features/magazine/": { prefix: "magazine/" },
   "features/marketing/": { prefix: "marketing/" },
   "features/newspaper/": { prefix: "newspaper/" },
+  "features/notes/": { prefix: "notes/" },
   "features/tasks/": { prefix: "tasks/" },
   colors: { prefix: "colors/" },
   "displays/mocks": {},
