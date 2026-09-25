@@ -1,0 +1,88 @@
+---
+title: Context Menu
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="context-menu" />
+
+## Installation
+
+<Install item="context-menu" />
+
+## Usage
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu"
+```
+
+```tsx
+<ContextMenu>
+  <ContextMenuTrigger>Right click here</ContextMenuTrigger>
+  <ContextMenuContent>
+    <ContextMenuItem>Profile</ContextMenuItem>
+    <ContextMenuItem>Billing</ContextMenuItem>
+    <ContextMenuItem>Team</ContextMenuItem>
+    <ContextMenuItem>Subscription</ContextMenuItem>
+  </ContextMenuContent>
+</ContextMenu>
+```
+
+## Composition
+
+Use the following composition to build a `ContextMenu`:
+
+```text
+ContextMenu
+├── ContextMenuTrigger
+└── ContextMenuContent
+    ├── ContextMenuGroup
+    │   ├── ContextMenuLabel
+    │   ├── ContextMenuItem
+    │   └── ContextMenuItem
+    ├── ContextMenuSeparator
+    ├── ContextMenuGroup
+    │   ├── ContextMenuLabel
+    │   ├── ContextMenuCheckboxItem
+    │   └── ContextMenuCheckboxItem
+    ├── ContextMenuSeparator
+    ├── ContextMenuGroup
+    │   ├── ContextMenuLabel
+    │   └── ContextMenuRadioGroup
+    │       ├── ContextMenuRadioItem
+    │       └── ContextMenuRadioItem
+    └── ContextMenuSub
+        ├── ContextMenuSubTrigger
+        └── ContextMenuSubContent
+            └── ContextMenuGroup
+                ├── ContextMenuItem
+                └── ContextMenuItem
+```
+
+## Submenu
+
+Use `ContextMenuSub` to nest secondary actions.
+
+## Shortcuts
+
+Add `ContextMenuShortcut` to show keyboard hints.
+
+## Checkboxes
+
+Use `ContextMenuCheckboxItem` for toggles.
+
+## Radio
+
+Use `ContextMenuRadioItem` for exclusive choices.
+
+## Destructive
+
+Use `variant="destructive"` to style the menu item as destructive.
+
+## API Reference
+
+See the [Base UI](https://base-ui.com/react/components/context-menu#api-reference) documentation for more information.

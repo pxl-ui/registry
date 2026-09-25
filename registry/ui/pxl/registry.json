@@ -296,6 +296,21 @@
       ]
     },
     {
+      "name": "context-menu",
+      "type": "registry:component",
+      "title": "Context Menu",
+      "description": "Displays a menu of actions triggered by a right click.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [
+        {
+          "path": "context-menu.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/context-menu.tsx"
+        }
+      ]
+    },
+    {
       "name": "country-flag",
       "type": "registry:component",
       "title": "Country Flag",
