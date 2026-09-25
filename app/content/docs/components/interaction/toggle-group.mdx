@@ -1,0 +1,55 @@
+---
+title: Toggle Group
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="toggle-group" />
+
+## Installation
+
+<Install item="toggle-group" />
+
+## Usage
+
+```tsx
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/pxl/toggle-group"
+```
+
+```tsx
+<ToggleGroup type="single">
+  <ToggleGroupItem value="a">A</ToggleGroupItem>
+  <ToggleGroupItem value="b">B</ToggleGroupItem>
+  <ToggleGroupItem value="c">C</ToggleGroupItem>
+</ToggleGroup>
+```
+
+## Composition
+
+Use the following composition to build a `ToggleGroup`:
+
+```text
+ToggleGroup
+├── ToggleGroupItem
+└── ToggleGroupItem
+```
+
+## Outline
+
+Use `variant="outline"` for an outline style.
+
+## Size
+
+Use the `size` prop to change the size of the toggle group.
+
+## Spacing
+
+Use `spacing` to add spacing between toggle group items.
+
+## Vertical
+
+Use `orientation="vertical"` for vertical toggle groups.
+
+## API Reference
+
+See the [Base UI Toggle Group](https://base-ui.com/react/components/toggle-group#api-reference) documentation.
+
