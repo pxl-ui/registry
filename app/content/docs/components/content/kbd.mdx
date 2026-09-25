@@ -1,0 +1,77 @@
+---
+title: Kbd
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="kbd" />
+
+## Installation
+
+<Install item="kbd" />
+
+## Usage
+
+```tsx
+import { Kbd } from "@/components/ui/kbd"
+```
+
+```tsx
+<Kbd>Ctrl</Kbd>
+```
+
+## Composition
+
+Use the following composition to build `Kbd` and `KbdGroup`:
+
+```text
+Kbd
+KbdGroup
+├── Kbd
+└── Kbd
+```
+
+## Group
+
+Use the `KbdGroup` component to group keyboard keys together.
+
+## Button
+
+Use the `Kbd` component inside a `Button` component to display a keyboard key inside a button.
+
+## Tooltip
+
+You can use the `Kbd` component inside a `Tooltip` component to display a tooltip with a keyboard key.
+
+## Input Group
+
+You can use the `Kbd` component inside a `InputGroupAddon` component to display a keyboard key inside an input group.
+
+
+## API Reference
+
+### Kbd
+
+Use the `Kbd` component to display a keyboard key.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | ``      |
+
+```tsx
+<Kbd>Ctrl</Kbd>
+```
+
+### KbdGroup
+
+Use the `KbdGroup` component to group `Kbd` components together.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | ``      |
+
+```tsx
+<KbdGroup>
+  <Kbd>Ctrl</Kbd>
+  <Kbd>B</Kbd>
+</KbdGroup>
+```

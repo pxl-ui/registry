@@ -494,6 +494,20 @@
       ]
     },
     {
+      "name": "kbd",
+      "type": "registry:component",
+      "title": "Kbd",
+      "description": "Used to display textual user input from keyboard.",
+      "categories": ["pxl-ui", "components", "content"],
+      "files": [
+        {
+          "path": "kbd.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/kbd.tsx"
+        }
+      ]
+    },
+    {
       "name": "keyboard",
       "type": "registry:component",
       "title": "Keyboard",
