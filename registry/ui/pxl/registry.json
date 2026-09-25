@@ -293,6 +293,25 @@
       ]
     },
     {
+      "name": "combobox",
+      "type": "registry:component",
+      "title": "Combobox",
+      "description": "Autocomplete input with a list of suggestions.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/input-group"
+      ],
+      "files": [
+        {
+          "path": "combobox.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/combobox.tsx"
+        }
+      ]
+    },
+    {
       "name": "command",
       "type": "registry:component",
       "title": "Command",
