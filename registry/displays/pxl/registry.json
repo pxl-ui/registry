@@ -8,7 +8,7 @@
       "type": "registry:component",
       "title": "Android",
       "description": "A mockup of an Android device.",
-      "categories": ["pxl-ui", "components", "layout"],
+      "categories": ["pxl-ui", "components", "mock"],
       "files": [
         {
           "type": "registry:file",
@@ -816,7 +816,7 @@
       "type": "registry:component",
       "title": "ESP32-S3 1.54″",
       "description": "A mockup of an ESP32-S3 1.54″ device.",
-      "categories": ["pxl-ui", "components", "layout"],
+      "categories": ["pxl-ui", "components", "mock"],
       "files": [
         {
           "type": "registry:file",
@@ -830,7 +830,7 @@
       "type": "registry:component",
       "title": "Iphone",
       "description": "A mockup of an Iphone device.",
-      "categories": ["pxl-ui", "components", "layout"],
+      "categories": ["pxl-ui", "components", "mock"],
       "files": [
         {
           "type": "registry:file",
@@ -844,7 +844,7 @@
       "type": "registry:component",
       "title": "Safari",
       "description": "A safari browser mockup to showcase your website.",
-      "categories": ["pxl-ui", "components", "layout"],
+      "categories": ["pxl-ui", "components", "mock"],
       "files": [
         {
           "type": "registry:file",
