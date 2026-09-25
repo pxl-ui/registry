@@ -287,10 +287,6 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
   const isDescriptiveEnum = schema.anyOf?.every((s) => s.type === "string");
   const isUnion = schema.anyOf && !isDescriptiveEnum;
 
-  if (!hasProperties && !isEnum && !isDescriptiveEnum) {
-    console.log(schema);
-  }
-
   if (isUnion) {
     return (
       <div>
