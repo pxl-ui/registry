@@ -4,7 +4,7 @@ import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
 const stickyVariants = cva(
-  "relative flex aspect-square flex-col pixel-rounded pixel-size-lg shadow-md pb-(--sticky-spacing)",
+  "relative flex aspect-square flex-col pixel-rounded shadow-md pb-(--sticky-spacing)",
   {
     defaultVariants: {
       size: "md",
@@ -13,9 +13,9 @@ const stickyVariants = cva(
     },
     variants: {
       size: {
-        sm: "[--sticky-spacing:--spacing(2)] *:data-[slot=sticky-title]:text-xs  *:data-[slot=sticky-content]:**:text-2xs",
-        md: "[--sticky-spacing:--spacing(3)] *:data-[slot=sticky-title]:text-sm *:data-[slot=sticky-content]:**:text-xs",
-        lg: "[--sticky-spacing:--spacing(4)] *:data-[slot=sticky-title]:text-base *:data-[slot=sticky-content]:**:text-sm",
+        sm: "pixel-size-md [--sticky-spacing:--spacing(2)] *:data-[slot=sticky-title]:text-xs  *:data-[slot=sticky-content]:**:text-2xs",
+        md: "pixel-size-lg [--sticky-spacing:--spacing(3)] *:data-[slot=sticky-title]:text-sm *:data-[slot=sticky-content]:**:text-xs",
+        lg: "pixel-size-lg [--sticky-spacing:--spacing(4)] *:data-[slot=sticky-title]:text-base *:data-[slot=sticky-content]:**:text-sm",
       },
       variant: {
         default: "pixel-border p-(--pixel-size) *:data-[slot=sticky-title]:bg-border",
