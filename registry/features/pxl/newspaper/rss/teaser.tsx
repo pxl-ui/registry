@@ -109,7 +109,6 @@ function TeaserImage({
       })?.[0];
 
     if (mediaContentsImage) {
-      console.log(mediaContentsImage);
       return {
         alt:
           mediaContentsImage.description?.value ??
