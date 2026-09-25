@@ -594,7 +594,7 @@
     &:where([data-streamdown="link"]) {
       --link-color: color-mix(in srgb, var(--primary-foreground) 60%, transparent);
       color: var(--link-color);
-      text-decoration: none;
+      text-decoration: none !important;
       border-bottom: 1px solid var(--link-color);
       transition: color 0.2s, border-color 0.2s;
     }
