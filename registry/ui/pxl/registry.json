@@ -1009,6 +1009,21 @@
       ]
     },
     {
+      "name": "toggle",
+      "type": "registry:component",
+      "title": "Toggle",
+      "description": "A two-state button that can be either on or off.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "toggle.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/toggle.tsx"
+        }
+      ]
+    },
+    {
       "name": "tooltip",
       "type": "registry:component",
       "title": "Tooltip",
