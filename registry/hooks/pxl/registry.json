@@ -36,6 +36,20 @@
           "target": "@hooks/pxl/use-context-menu-trigger.ts"
         }
       ]
+    },
+    {
+      "name": "use-controllable-state",
+      "type": "registry:hook",
+      "title": "Use Controllable State",
+      "description": "Robust controllable state management",
+      "categories": ["pxl-ui", "state"],
+      "files": [
+        {
+          "type": "registry:hook",
+          "path": "use-controllable-state.ts",
+          "target": "@hooks/pxl/use-controllable-state.ts"
+        }
+      ]
     }
   ]
 }
