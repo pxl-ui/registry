@@ -1,0 +1,1863 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/ui/rich-text-editor",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "rich-text-editor/core",
+      "type": "registry:lib",
+      "title": "Core utils for Rich Text Editor",
+      "description": "A rich text editor built on Lexical extensions with shadcn/ui components: nodes, plugins, toolbars, localization, and RTL support.",
+      "dependencies": [
+        "lexical@0.50.0",
+        "@lexical/extension@0.50.0",
+        "@lexical/react@0.50.0",
+        "@lexical/utils@0.50.0"
+      ]
+    },
+    {
+      "name": "rich-text-editor/dictionaries/arabic",
+      "type": "registry:lib",
+      "title": "Arabic Dictionary",
+      "description": "Arabic dictionary for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-dictionary"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "files": [
+        {
+          "path": "dictionaries/arabic.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/dictionaries/arabic.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/dictionaries/english",
+      "type": "registry:lib",
+      "title": "English Dictionary",
+      "description": "English dictionary for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-dictionary"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "files": [
+        {
+          "path": "dictionaries/english.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/dictionaries/english.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/dictionaries/hebrew",
+      "type": "registry:lib",
+      "title": "Hebrew Dictionary",
+      "description": "Hebrew dictionary for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-dictionary"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "files": [
+        {
+          "path": "dictionaries/hebrew.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/dictionaries/hebrew.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/ai",
+      "type": "registry:lib",
+      "title": "AI Extension",
+      "description": "AI commands extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/markdown@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/ai.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/ai.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/auto-link",
+      "type": "registry:lib",
+      "title": "Auto-Link Extension",
+      "description": "Auto-link extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/code-core@0.50.0",
+        "@lexical/link@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/auto-link.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/auto-link.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/autocomplete",
+      "type": "registry:lib",
+      "title": "Autocomplete Extension",
+      "description": "Autocomplete extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/autocomplete.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/autocomplete.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/card",
+      "type": "registry:lib",
+      "title": "Card Extension",
+      "description": "Card extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/card.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/card.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/chat",
+      "type": "registry:lib",
+      "title": "Chat Extension",
+      "description": "Chat extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/code-core@0.50.0",
+        "@lexical/markdown@0.50.0",
+        "@lexical/rich-text@0.50.0",
+        "@lexical/table@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/chat.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/chat.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/code",
+      "type": "registry:lib",
+      "title": "Code Extension",
+      "description": "Code extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/code-core@0.50.0",
+        "@lexical/code-shiki@0.50.0",
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/code.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/code.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/collapsible",
+      "type": "registry:lib",
+      "title": "Collapsible Extension",
+      "description": "Collapsible extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/collapsible.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/collapsible.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/comment",
+      "type": "registry:lib",
+      "title": "Comment Extension",
+      "description": "Comment extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/mark@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/comment.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/comment.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/datetime",
+      "type": "registry:lib",
+      "title": "Datetime Extension",
+      "description": "Datetime extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/datetime.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/datetime.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/drag-drop-paste",
+      "type": "registry:lib",
+      "title": "Drag-Drop-Paste Extension",
+      "description": "Drag-drop-paste extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/rich-text@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/drag-drop-past.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/drag-drop-paste.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/emoji",
+      "type": "registry:lib",
+      "title": "Emoji Extension",
+      "description": "Emoji extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "emojibase-data"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/emoji.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/emoji.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/equation",
+      "type": "registry:lib",
+      "title": "Equation Extension",
+      "description": "Equation extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/equation.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/equation.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/figma",
+      "type": "registry:lib",
+      "title": "Figma Extension",
+      "description": "Figma extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/figma.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/figma.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/find-replace",
+      "type": "registry:lib",
+      "title": "Find-Replace Extension",
+      "description": "Find-Replace extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/find-replace.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/find-replace.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/format-state",
+      "type": "registry:lib",
+      "title": "Format-State Extension",
+      "description": "Format-State extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/link@0.50.0",
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/format-state.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/format-state.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/image",
+      "type": "registry:lib",
+      "title": "Image Extension",
+      "description": "Image extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/image.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/image.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/layout",
+      "type": "registry:lib",
+      "title": "Layout Extension",
+      "description": "Layout extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/layout.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/layout.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/link",
+      "type": "registry:lib",
+      "title": "Link Extension",
+      "description": "Link extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/link@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/link.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/link.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/mention",
+      "type": "registry:lib",
+      "title": "Mention Extension",
+      "description": "Mention extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/mention.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/mention.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/poll",
+      "type": "registry:lib",
+      "title": "Poll Extension",
+      "description": "Poll extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/poll.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/poll.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/pullquote",
+      "type": "registry:lib",
+      "title": "Pullquote Extension",
+      "description": "Pullquote extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/pullquote.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/pullquote.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/review",
+      "type": "registry:lib",
+      "title": "Review Extension",
+      "description": "Review extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/review.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/review.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/ruby",
+      "type": "registry:lib",
+      "title": "Ruby Extension",
+      "description": "Ruby extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/ruby.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/ruby.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/shortcuts",
+      "type": "registry:lib",
+      "title": "Shortcuts Extension",
+      "description": "Shortcuts extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/list@0.50.0",
+        "@lexical/rich-text@0.50.0",
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/shortcuts.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/shortcuts.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/slot-host",
+      "type": "registry:lib",
+      "title": "Slot-Host Extension",
+      "description": "Slot-Host extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/slot-host.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/slot-host.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/special-text",
+      "type": "registry:lib",
+      "title": "Special Text Extension",
+      "description": "Special text extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/special-text.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/special-text.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/speech-to-text",
+      "type": "registry:lib",
+      "title": "Speech to Text Extension",
+      "description": "Speech to text extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/speech-to-text.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/speech-to-text.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/tab-focus",
+      "type": "registry:lib",
+      "title": "Tab Focus Extension",
+      "description": "Tab focus extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/tab-focus.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/tab-focus.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/twitter",
+      "type": "registry:lib",
+      "title": "Twitter Extension",
+      "description": "Twitter extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/twitter.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/twitter.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/extensions/youtube",
+      "type": "registry:lib",
+      "title": "Youtube Extension",
+      "description": "Youtube extension for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-extension"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "extensions/youtube.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/extensions/youtube.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/locales",
+      "type": "registry:lib",
+      "title": "Locales",
+      "description": "Locales for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "files": [
+        {
+          "path": "locales.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/locales.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/card",
+      "type": "registry:lib",
+      "title": "Card Node",
+      "description": "Card node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/card-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/card-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/collapsible",
+      "type": "registry:lib",
+      "title": "Collapsible Node",
+      "description": "Card node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/collapsible-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/collapsible-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/datetime",
+      "type": "registry:lib",
+      "title": "Datetime Node",
+      "description": "Datetime node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/calendar",
+        "pxl-ui/registry/checkbox",
+        "pxl-ui/registry/field",
+        "pxl-ui/registry/input-group",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/datetime-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/datetime-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/emoji",
+      "type": "registry:lib",
+      "title": "Emoji Node",
+      "description": "Emoji node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/emoji-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/emoji-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/equation",
+      "type": "registry:lib",
+      "title": "Equation Node",
+      "description": "Equation node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "devDependencies": ["@types/katex"],
+      "dependencies": [
+        "katex"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/equation-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/equation-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/figma",
+      "type": "registry:lib",
+      "title": "Figma Node",
+      "description": "Figma node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/figma-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/figma-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/image",
+      "type": "registry:lib",
+      "title": "Image Node",
+      "description": "Image node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/image-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/image-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/layout",
+      "type": "registry:lib",
+      "title": "Layout Node",
+      "description": "Layout node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/layout-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/layout-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/mention",
+      "type": "registry:lib",
+      "title": "Mention Node",
+      "description": "Mention node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/mention-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/mention-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/poll",
+      "type": "registry:lib",
+      "title": "Poll Node",
+      "description": "Poll node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/checkbox",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/poll-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/poll-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/pullquote",
+      "type": "registry:lib",
+      "title": "Pullquote Node",
+      "description": "Pullquote node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/pullquote-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/pullquote-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/review",
+      "type": "registry:lib",
+      "title": "Review Node",
+      "description": "Review node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/html@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/review-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/review-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/ruby",
+      "type": "registry:lib",
+      "title": "Ruby Node",
+      "description": "Ruby node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/ruby-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/ruby-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/slot-container",
+      "type": "registry:lib",
+      "title": "Slot Container Node",
+      "description": "Slot container node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/slot-container-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/slot-container-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/special-text",
+      "type": "registry:lib",
+      "title": "Special Text Node",
+      "description": "Special text node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/special-text-node.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/special-text-node.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/tweet",
+      "type": "registry:lib",
+      "title": "Tweet Node",
+      "description": "Tweet node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/tweet-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/tweet-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/nodes/youtube",
+      "type": "registry:lib",
+      "title": "Youtube Node",
+      "description": "Youtube node for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-node"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "nodes/youtube-node.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/nodes/youtube-node.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/activitybar",
+      "type": "registry:component",
+      "title": "Activity Bar Plugin",
+      "description": "Activity bar plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/dialog",
+        "pxl-ui/registry/kbd",
+        "pxl-ui/registry/scroll-area",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/activitybar/activitybar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/activitybar/activitybar-plugin.tsx"
+        },
+        {
+          "path": "plugins/activitybar/count-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/activitybar/count-plugin.tsx"
+        },
+        {
+          "path": "plugins/activitybar/read-only-toggle-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/activitybar/read-only-toggle-plugin.tsx"
+        },
+        {
+          "path": "plugins/activitybar/shortcut-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/activitybar/shortcut-plugin.tsx"
+        },
+        {
+          "path": "plugins/activitybar/speech-to-text-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/activitybar/speech-to-text-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/auto-embed",
+      "type": "registry:component",
+      "title": "Auto Embed Plugin",
+      "description": "Auto embed plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/command",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/auto-embed-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/auto-embed-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/block-insert",
+      "type": "registry:component",
+      "title": "Block Insert Plugin",
+      "description": "Block insert plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "devDependencies": ["@types/katex"],
+      "dependencies": [
+        "@lexical/table@0.50.0",
+        "katex"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/button-group",
+        "pxl-ui/registry/checkbox",
+        "pxl-ui/registry/dropdown-menu",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/tooltip",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/block-insert/block-insert-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/block-insert-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-code-block-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-code-block-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-columns-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-columns-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-emoji-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-emoji-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-equation-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-equation-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-figma-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-figma-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-horizontal-rule-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-horizontal-rule-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-image-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-image-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-table-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-table-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-twitter-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-twitter-plugin.tsx"
+        },
+        {
+          "path": "plugins/block-insert/insert-youtube-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/block-insert/insert-youtube-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/chat",
+      "type": "registry:component",
+      "title": "Chat Plugin",
+      "description": "Chat plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/markdown@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/tooltip",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/chat/chat-input-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/chat/chat-input-plugin.tsx"
+        },
+        {
+          "path": "plugins/chat/chat-message-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/chat/chat-message-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/component-picker",
+      "type": "registry:component",
+      "title": "Component Picker Plugin",
+      "description": "Component picker plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@base-ui/react",
+        "@lexical/list@0.50.0",
+        "@lexical/rich-text@0.50.0",
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/command",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/component-picker/ai-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/ai-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/bulleted-list-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/bulleted-list-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/card-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/card-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/check-list-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/check-list-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/code-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/code-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/collapsible-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/collapsible-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/columns-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/columns-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/component-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/component-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/datetime-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/datetime-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/divider-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/divider-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/heading-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/heading-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/image-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/image-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/numbered-list-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/numbered-list-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/paragraph-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/paragraph-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/poll-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/poll-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/pullquote-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/pullquote-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/quote-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/quote-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/review-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/review-picker-plugin.tsx"
+        },
+        {
+          "path": "plugins/component-picker/table-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/component-picker/table-picker-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/content-editable",
+      "type": "registry:component",
+      "title": "ContentEditable Plugin",
+      "description": "ContentEditable plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/content-editable.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/content-editable.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/context-menu",
+      "type": "registry:component",
+      "title": "Context Menu Plugin",
+      "description": "Context menu plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/link@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/context-menu",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/context-menu-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/context-menu-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/draggable-block",
+      "type": "registry:component",
+      "title": "Draggable Block Plugin",
+      "description": "Draggable block plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/draggable-block-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/draggable-block-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/emoji-picker",
+      "type": "registry:component",
+      "title": "Emoji Picker Plugin",
+      "description": "Emoji picker plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@base-ui/react",
+        "emojibase-data"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/command",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/emoji-picker-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/emoji-picker-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/find-replace",
+      "type": "registry:component",
+      "title": "Find Replace Plugin",
+      "description": "Find replace plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/button-group",
+        "pxl-ui/registry/input-group",
+        "pxl-ui/registry/tooltip",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/decorator/find-replace-panel.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/decorator/find-replace-panel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/floating",
+      "type": "registry:component",
+      "title": "Floating Plugins",
+      "description": "Floating plugins for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@base-ui/react",
+        "@lexical/link@0.50.0",
+        "@lexical/mark@0.50.0",
+        "@lexical/markdown@0.50.0",
+        "@lexical/table@0.50.0",
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/alert-dialog",
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/command",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/input-group",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/textarea",
+        "pxl-ui/registry/tooltip",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/floating/ai-editor-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/ai-editor-plugin.tsx"
+        },
+        {
+          "path": "plugins/floating/comment-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/comment-plugin.tsx"
+        },
+        {
+          "path": "plugins/floating/floating-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/floating-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/floating/floating-utils.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/floating-utils.ts"
+        },
+        {
+          "path": "plugins/floating/link-editor-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/link-editor-plugin.tsx"
+        },
+        {
+          "path": "plugins/floating/ruby-editor-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/ruby-editor-plugin.tsx"
+        },
+        {
+          "path": "plugins/floating/table-hover-actions-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/floating/table-hover-actions-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/i18n",
+      "type": "registry:component",
+      "title": "I18n Plugin",
+      "description": "I18n plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/select",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/i18n-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/i18n-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/mention",
+      "type": "registry:component",
+      "title": "Mention Plugin",
+      "description": "Mention plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/command",
+        "pxl-ui/registry/popover",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/mention-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/mention-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/review",
+      "type": "registry:component",
+      "title": "Review Plugin",
+      "description": "Review plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/decorator/review-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/decorator/review-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/table-of-contents",
+      "type": "registry:component",
+      "title": "Table of Contents Plugin",
+      "description": "Table of contents plugin for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/rich-text@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/sidebar",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/table-of-contents-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/table-of-contents-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/plugins/toolbar",
+      "type": "registry:component",
+      "title": "Toolbar Plugins",
+      "description": "Toolbar plugins for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-plugin"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/file@0.50.0",
+        "@lexical/history@0.50.0",
+        "@lexical/link@0.50.0",
+        "@lexical/list@0.50.0",
+        "@lexical/markdown@0.50.0",
+        "@lexical/rich-text@0.50.0",
+        "@lexical/selection@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/button-group",
+        "pxl-ui/registry/combobox",
+        "pxl-ui/registry/dropdown-menu",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/scroll-area",
+        "pxl-ui/registry/toggle-group",
+        "pxl-ui/registry/tooltip",
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "plugins/toolbar/ai-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/ai-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/block-format-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/block-format-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/clear-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/clear-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/color-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/color-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/element-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/element-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/find-replace-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/find-replace-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/font-family-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/font-family-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/font-size-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/font-size-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/history-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/history-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/import-export-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/import-export-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/indent-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/indent-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/link-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/link-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/ruby-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/ruby-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/text-format-toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/text-format-toolbar-plugin.tsx"
+        },
+        {
+          "path": "plugins/toolbar/toolbar-plugin.tsx",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/toolbar-plugin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/theme",
+      "type": "registry:lib",
+      "title": "Theme",
+      "description": "Theme for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "theme.css",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/theme.css"
+        },
+        {
+          "path": "theme.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/theme.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/transformers/emoji",
+      "type": "registry:lib",
+      "title": "Emoji Transformer",
+      "description": "Emoji transformer for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-transformer"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/markdown@0.50.0",
+        "emojibase-data"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "transformers/emoji-transformer.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/transformers/emoji-transformer.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/transformers/horizontal-rule",
+      "type": "registry:lib",
+      "title": "Horizontal Rule Transformer",
+      "description": "Horizontal rule transformer for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-transformer"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/markdown@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "transformers/horizontal-rule-transformer.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/transformers/horizontal-rule-transformer.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/transformers/image",
+      "type": "registry:lib",
+      "title": "Image Transformer",
+      "description": "Image transformer for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-transformer"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/markdown@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "transformers/image-transformer.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/transformers/image-transformer.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor/transformers/table",
+      "type": "registry:lib",
+      "title": "Table Transformer",
+      "description": "Table transformer for Rich Text Editor",
+      "categories": ["pxl-ui", "rich-text-editor", "editor-transformer"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "dependencies": [
+        "@lexical/markdown@0.50.0",
+        "@lexical/table@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core"
+      ],
+      "files": [
+        {
+          "path": "transformers/table-transformer.ts",
+          "type": "registry:file",
+          "target": "@ui/pxl/rich-text-editor/transformers/table-transformer.ts"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor",
+      "type": "registry:block",
+      "title": "Rich Text Editor",
+      "description": "A rich text editor built on Lexical extensions with shadcn/ui components: nodes, plugins, toolbars, localization, and RTL support.",
+      "categories": ["pxl-ui", "components", "interaction", "rich-text-editor"],
+      "author": "Talha Mujahid (https://github.com/htmujahid)",
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor/core",
+        "pxl-ui/registry/rich-text-editor/dictionaries/arabic",
+        "pxl-ui/registry/rich-text-editor/dictionaries/english",
+        "pxl-ui/registry/rich-text-editor/dictionaries/hebrew",
+        "pxl-ui/registry/rich-text-editor/extensions/ai",
+        "pxl-ui/registry/rich-text-editor/extensions/auto-link",
+        "pxl-ui/registry/rich-text-editor/extensions/autocomplete",
+        "pxl-ui/registry/rich-text-editor/extensions/card",
+        "pxl-ui/registry/rich-text-editor/extensions/chat",
+        "pxl-ui/registry/rich-text-editor/extensions/code",
+        "pxl-ui/registry/rich-text-editor/extensions/collapsible",
+        "pxl-ui/registry/rich-text-editor/extensions/comment",
+        "pxl-ui/registry/rich-text-editor/extensions/datetime",
+        "pxl-ui/registry/rich-text-editor/extensions/drag-drop-paste",
+        "pxl-ui/registry/rich-text-editor/extensions/emoji",
+        "pxl-ui/registry/rich-text-editor/extensions/equation",
+        "pxl-ui/registry/rich-text-editor/extensions/figma",
+        "pxl-ui/registry/rich-text-editor/extensions/find-replace",
+        "pxl-ui/registry/rich-text-editor/extensions/format-state",
+        "pxl-ui/registry/rich-text-editor/extensions/image",
+        "pxl-ui/registry/rich-text-editor/extensions/layout",
+        "pxl-ui/registry/rich-text-editor/extensions/link",
+        "pxl-ui/registry/rich-text-editor/extensions/mention",
+        "pxl-ui/registry/rich-text-editor/extensions/poll",
+        "pxl-ui/registry/rich-text-editor/extensions/pullquote",
+        "pxl-ui/registry/rich-text-editor/extensions/review",
+        "pxl-ui/registry/rich-text-editor/extensions/ruby",
+        "pxl-ui/registry/rich-text-editor/extensions/shortcuts",
+        "pxl-ui/registry/rich-text-editor/extensions/slot-host",
+        "pxl-ui/registry/rich-text-editor/extensions/special-text",
+        "pxl-ui/registry/rich-text-editor/extensions/speech-to-text",
+        "pxl-ui/registry/rich-text-editor/extensions/tab-focus",
+        "pxl-ui/registry/rich-text-editor/extensions/twitter",
+        "pxl-ui/registry/rich-text-editor/extensions/youtube",
+        "pxl-ui/registry/rich-text-editor/locales",
+        "pxl-ui/registry/rich-text-editor/nodes/card",
+        "pxl-ui/registry/rich-text-editor/nodes/collapsible",
+        "pxl-ui/registry/rich-text-editor/nodes/datetime",
+        "pxl-ui/registry/rich-text-editor/nodes/emoji",
+        "pxl-ui/registry/rich-text-editor/nodes/equation",
+        "pxl-ui/registry/rich-text-editor/nodes/figma",
+        "pxl-ui/registry/rich-text-editor/nodes/image",
+        "pxl-ui/registry/rich-text-editor/nodes/layout",
+        "pxl-ui/registry/rich-text-editor/nodes/mention",
+        "pxl-ui/registry/rich-text-editor/nodes/poll",
+        "pxl-ui/registry/rich-text-editor/nodes/pullquote",
+        "pxl-ui/registry/rich-text-editor/nodes/review",
+        "pxl-ui/registry/rich-text-editor/nodes/ruby",
+        "pxl-ui/registry/rich-text-editor/nodes/slot-container",
+        "pxl-ui/registry/rich-text-editor/nodes/special-text",
+        "pxl-ui/registry/rich-text-editor/nodes/tweet",
+        "pxl-ui/registry/rich-text-editor/nodes/youtube",
+        "pxl-ui/registry/rich-text-editor/plugins/activitybar",
+        "pxl-ui/registry/rich-text-editor/plugins/auto-embed",
+        "pxl-ui/registry/rich-text-editor/plugins/block-insert",
+        "pxl-ui/registry/rich-text-editor/plugins/chat",
+        "pxl-ui/registry/rich-text-editor/plugins/component-picker",
+        "pxl-ui/registry/rich-text-editor/plugins/content-editable",
+        "pxl-ui/registry/rich-text-editor/plugins/context-menu",
+        "pxl-ui/registry/rich-text-editor/plugins/draggable-block",
+        "pxl-ui/registry/rich-text-editor/plugins/emoji-picker",
+        "pxl-ui/registry/rich-text-editor/plugins/find-replace",
+        "pxl-ui/registry/rich-text-editor/plugins/floating",
+        "pxl-ui/registry/rich-text-editor/plugins/i18n",
+        "pxl-ui/registry/rich-text-editor/plugins/mention",
+        "pxl-ui/registry/rich-text-editor/plugins/review",
+        "pxl-ui/registry/rich-text-editor/plugins/table-of-contents",
+        "pxl-ui/registry/rich-text-editor/plugins/toolbar",
+        "pxl-ui/registry/rich-text-editor/theme",
+        "pxl-ui/registry/rich-text-editor/transformers/emoji",
+        "pxl-ui/registry/rich-text-editor/transformers/horizontal-rule",
+        "pxl-ui/registry/rich-text-editor/transformers/image",
+        "pxl-ui/registry/rich-text-editor/transformers/table"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+import { INSERT_UNORDERED_LIST_COMMAND } from "@lexical/list";
+import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
+import { $getRoot, $getSelection } from "lexical";
+import { useMemo } from "react";
+
+import {
+  type ComponentPickerItem,
+  useComponentPickerItems,
+} from "@/ui/pxl/rich-text-editor/plugins/component-picker/component-picker-plugin";
+import { useTranslation } from "@/ui/pxl/rich-text-editor/plugins/i18n-plugin";
+
+export function BulletedListPickerPlugin() {
+  const [editor] = useLexicalComposerContext();
+  const { t } = useTranslation();
+
+  const items = useMemo<ComponentPickerItem[]>(
+    () => [
+      {
+        value: "bulleted-list",
+        label: t.bulletedListBlock,
+        icon: <svg className="text-muted-foreground" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M10 5h12v2H10zm0 4h8v2h-8zm0 4h12v2H10zm0 4h8v2h-8zm-4-6H4V9h2v2ZM4 9H2V7h2v2Zm4 0H6V7h2v2ZM6 7H4V5h2v2Zm-2 6h2v2H4zm0 4h2v2H4zm-2 0v-2h2v2zm4 0v-2h2v2z"/></svg>,
+        keywords: ["bulleted list", "unordered list", "ul"],
+        onSelect: () => {
+          editor.update(() => {
+            if (!$getSelection()) {
+              $getRoot().selectEnd();
+            }
+          });
+          editor.dispatchCommand(INSERT_UNORDERED_LIST_COMMAND, undefined);
+        },
+      },
+    ],
+    [editor, t],
+  );
+
+  useComponentPickerItems(items);
+
+  return null;
+}

@@ -4,6 +4,11 @@ import "~/styles/global.css";
 import ComponentRenderer from "~/components/ComponentRenderer";
 import { getExamplesSlugs } from "~/lib/examples";
 
+const clientOnlyPaths = [
+  "rich-text-editor/demo",
+  "features/notes/editor/demo"
+]
+
 export function getStaticPaths() {
   return getExamplesSlugs().map(path => ({
     params: {
@@ -37,7 +42,9 @@ const { path } = Astro.params;
       data-align="center"
       data-chromeless={false}
       class="relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-start data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0 sm:data-[align=end]:items-end">
-      <ComponentRenderer client:load src={path} />
+      {clientOnlyPaths.includes(path) ?
+        <ComponentRenderer client:only src={path} /> :
+        <ComponentRenderer client:load src={path} />}
     </div>
 
 

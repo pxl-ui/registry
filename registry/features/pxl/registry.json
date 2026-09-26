@@ -153,6 +153,20 @@
       ]
     },
     {
+      "name": "notes/editor",
+      "type": "registry:component",
+      "title": "Editor",
+      "description": "A component that displays a notes editor.",
+      "categories": ["pxl-ui", "features", "notes"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "notes/editor.tsx",
+          "target": "@components/features/pxl/notes/editor.tsx"
+        }
+      ]
+    },
+    {
       "name": "notes/sticky",
       "type": "registry:component",
       "title": "Sticky",

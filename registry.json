@@ -15,6 +15,7 @@
     "registry/schemas/pxl/registry.json",
     "registry/styles/pxl/registry.json",
     "registry/ui/pxl/registry.json",
+    "registry/ui/pxl/rich-text-editor/registry.json",
     "registry/widgets/pxl/registry.json"
   ],
   "items": [
