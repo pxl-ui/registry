@@ -581,6 +581,24 @@
       ]
     },
     {
+      "name": "map",
+      "type": "registry:component",
+      "title": "Map",
+      "description": "Interactive map components powered by MapLibre GL for displaying locations, markers, routes, and geospatial data with full theme support.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": [
+        "maplibre-gl",
+        "cn"
+      ],
+      "files": [
+        {
+          "path": "map.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/map.tsx"
+        }
+      ]
+    },
+    {
       "name": "markdown",
       "type": "registry:component",
       "title": "Markdown",

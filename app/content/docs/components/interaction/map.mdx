@@ -1,0 +1,185 @@
+---
+title: Map
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="map" />
+
+## About
+
+The carousel component is built using the [MapLibre GL JS](https://maplibre.org/), [OpenFreeMap](https://openfreemap.org/) tiles, [OpenMapTiles](https://openmaptiles.org/) schema, and [OpenStreetMap](https://www.openstreetmap.org/) data.
+
+## Installation
+
+<Install item="map" />
+
+## Usage
+
+```tsx
+import { MapComponent } from "@/components/ui/pxl/map"
+```
+
+```tsx
+<MapComponent center={[-122.4194, 37.7749]} zoom={12} />
+```
+
+## Custom Map Styles
+
+Provide custom map tile styles for complete visual control over your maps. Supports separate styles for light and dark themes.
+
+```tsx
+<Map
+  center={[-122.4194, 37.7749]}
+  zoom={12}
+  styles={{
+    light: "/map-styles/custom-light-style.json",
+    dark: "/map-styles/custom-dark-style.json",
+  }}
+/>
+```
+
+## Custom Marker Styling
+
+```tsx
+<MapMarker longitude={lng} latitude={lat}>
+  <MarkerContent>
+    <div className="bg-primary text-primary-foreground rounded-full p-2">
+      <RestaurantIcon className="h-4 w-4" />
+    </div>
+  </MarkerContent>
+</MapMarker>
+```
+
+## Programmatic Map Control
+
+```tsx
+const { map } = useMap()
+
+useEffect(() => {
+  if (map) {
+    map.flyTo({ center: [lng, lat], zoom: 14 })
+  }
+}, [map, lng, lat])
+```
+
+## Drawing Routes
+
+```tsx
+<MapRoute
+  id="route-1"
+  coordinates={[
+    [-122.4194, 37.7749],
+    [-122.4783, 37.8199],
+    [-122.4230, 37.8267],
+  ]}
+  color="hsl(var(--primary))"
+  width={4}
+/>
+```
+
+## API
+
+### MapComponent
+
+| Prop        | Type                 | Default                       | Description                                      |
+| ----------- | -------------------- | ----------------------------- | ------------------------------------------------ |
+| `center`    | `[number, number]`   | `[-122.4194, 37.7749]` (SF)   | Map center coordinates [longitude, latitude]     |
+| `zoom`      | `number`             | `12`                          | Initial zoom level (0-22)                        |
+| `minZoom`   | `number`             | `0`                           | Minimum zoom level allowed                       |
+| `maxZoom`   | `number`             | `22`                          | Maximum zoom level allowed                       |
+| `styles`    | `object`             | OpenFreeMap                   | Custom tile styles for light/dark themes         |
+| `className` | `string`             | -                             | Additional CSS classes                           |
+| `children`  | `ReactNode`          | -                             | Child components (markers, controls, etc.)       |
+
+### MapMarker
+
+| Prop          | Type                                 | Default | Description                                 |
+| ------------- | ------------------------------------ | ------- | ------------------------------------------- |
+| `longitude`   | `number`                             | -       | Marker longitude coordinate (required)      |
+| `latitude`    | `number`                             | -       | Marker latitude coordinate (required)       |
+| `draggable`   | `boolean`                            | `false` | Whether the marker can be dragged           |
+| `onClick`     | `() => void`                         | -       | Called when marker is clicked               |
+| `onDragStart` | `(lngLat: LngLat) => void`           | -       | Called when drag starts                     |
+| `onDrag`      | `(lngLat: LngLat) => void`           | -       | Called continuously during drag             |
+| `onDragEnd`   | `(lngLat: LngLat) => void`           | -       | Called when drag ends                       |
+| `children`    | `ReactNode`                          | -       | Marker content components                   |
+
+### MarkerContent
+
+| Prop        | Type        | Default        | Description                               |
+| ----------- | ----------- | -------------- | ----------------------------------------- |
+| `children`  | `ReactNode` | Blue dot       | Custom marker appearance                  |
+| `className` | `string`    | -              | Additional CSS classes                    |
+
+### MarkerPopup
+
+| Prop           | Type        | Default | Description                                 |
+| -------------- | ----------- | ------- | ------------------------------------------- |
+| `children`     | `ReactNode` | -       | Popup content                               |
+| `className`    | `string`    | -       | Additional CSS classes                      |
+| `closeButton`  | `boolean`   | `false` | Show close button in popup                  |
+| `closeOnClick` | `boolean`   | `true`  | Close popup when clicking outside           |
+
+### MarkerTooltip
+
+| Prop        | Type        | Default | Description                   |
+| ----------- | ----------- | ------- | ----------------------------- |
+| `children`  | `ReactNode` | -       | Tooltip content               |
+| `className` | `string`    | -       | Additional CSS classes        |
+
+### MarkerLabel
+
+| Prop        | Type                                      | Default | Description                         |
+| ----------- | ----------------------------------------- | ------- | ----------------------------------- |
+| `children`  | `ReactNode`                               | -       | Label content                       |
+| `className` | `string`                                  | -       | Additional CSS classes              |
+| `position`  | `"top" \| "bottom" \| "left" \| "right"`  | `"top"` | Label position relative to marker   |
+
+### MapControls
+
+| Prop             | Type                                                       | Default          | Description                                |
+| ---------------- | ---------------------------------------------------------- | ---------------- | ------------------------------------------ |
+| `position`       | `"top-left" \| "top-right" \| "bottom-left" \| "bottom-right"` | `"bottom-right"` | Controls position on map                   |
+| `showZoom`       | `boolean`                                                  | `true`           | Show zoom in/out buttons                   |
+| `showCompass`    | `boolean`                                                  | `false`          | Show compass/reset north button            |
+| `showLocate`     | `boolean`                                                  | `false`          | Show geolocation button                    |
+| `showFullscreen` | `boolean`                                                  | `false`          | Show fullscreen toggle button              |
+| `onLocate`       | `(coords: { lng: number; lat: number }) => void`           | -                | Called when user location is found         |
+| `className`      | `string`                                                   | -                | Additional CSS classes                     |
+
+### MapPopup
+
+| Prop          | Type        | Default | Description                       |
+| ------------- | ----------- | ------- | --------------------------------- |
+| `longitude`   | `number`    | -       | Popup longitude (required)        |
+| `latitude`    | `number`    | -       | Popup latitude (required)         |
+| `children`    | `ReactNode` | -       | Popup content                     |
+| `className`   | `string`    | -       | Additional CSS classes            |
+| `closeButton` | `boolean`   | `true`  | Show close button                 |
+| `onClose`     | `() => void`| -       | Called when popup is closed       |
+
+### MapRoute
+
+| Prop          | Type                      | Default     | Description                              |
+| ------------- | ------------------------- | ----------- | ---------------------------------------- |
+| `id`          | `string`                  | -           | Unique route identifier (required)       |
+| `coordinates` | `[number, number][]`      | -           | Array of [lng, lat] coordinates          |
+| `color`       | `string`                  | `"#3b82f6"` | Route line color                         |
+| `width`       | `number`                  | `3`         | Route line width in pixels               |
+| `opacity`     | `number`                  | `1`         | Route line opacity (0-1)                 |
+| `dashArray`   | `number[]`                | -           | Dash pattern for dashed lines            |
+| `interactive` | `boolean`                 | `true`      | Enable click/hover interactions          |
+| `onClick`     | `() => void`              | -           | Called when route is clicked             |
+
+### useMap Hook
+
+Returns the map instance and loading state for advanced use cases.
+
+```tsx
+const { map, isLoaded } = useMap()
+```
+
+| Return Value | Type                 | Description                          |
+| ------------ | -------------------- | ------------------------------------ |
+| `map`        | `maplibregl.Map \| null` | MapLibre GL map instance         |
+| `isLoaded`   | `boolean`            | Whether the map has finished loading |

@@ -687,6 +687,9 @@ export default defineConfig({
         clientFiles: [],
       },
     },
+    worker: {
+      format: "es",
+    },
     optimizeDeps: {
       // Pre-bundle only the core runtime deps; skip heavy optional deps
       include: [
@@ -698,6 +701,9 @@ export default defineConfig({
         "tailwind-merge",
         "class-variance-authority",
       ],
+      exclude: [
+        "maplibre-gl",
+      ]
     },
   },
 });
