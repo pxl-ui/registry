@@ -139,6 +139,20 @@
       ]
     },
     {
+      "name": "notes/deck",
+      "type": "registry:component",
+      "title": "Deck",
+      "description": "A component that displays a sticky notes deck.",
+      "categories": ["pxl-ui", "features", "notes"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "notes/deck.tsx",
+          "target": "@components/features/pxl/notes/deck.tsx"
+        }
+      ]
+    },
+    {
       "name": "notes/sticky",
       "type": "registry:component",
       "title": "Sticky",
