@@ -657,6 +657,21 @@
       ]
     },
     {
+      "name": "progress",
+      "type": "registry:component",
+      "title": "Progress",
+      "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [
+        {
+          "path": "progress.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/progress.tsx"
+        }
+      ]
+    },
+    {
       "name": "questionnaire",
       "type": "registry:component",
       "title": "Questionnaire",

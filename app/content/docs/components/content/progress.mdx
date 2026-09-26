@@ -1,0 +1,55 @@
+---
+title: Progress
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="progress" />
+
+## Installation
+
+<Install item="progress" />
+
+## Usage
+
+```tsx
+import { Progress } from "@/components/ui/progress"
+```
+
+```tsx
+<Progress value={33} />
+```
+
+## Composition
+
+### With label and value
+
+Use `ProgressLabel` and `ProgressValue` to add a label and value display.
+
+```tsx showLineNumbers
+import {
+  Progress,
+  ProgressLabel,
+  ProgressValue,
+} from "@/components/ui/progress"
+
+;<Progress value={56} className="w-full max-w-sm">
+  <ProgressLabel>Upload progress</ProgressLabel>
+  <ProgressValue />
+</Progress>
+```
+
+```text
+Progress
+├── ProgressLabel
+├── ProgressValue
+└── ProgressTrack
+    └── ProgressIndicator
+```
+
+## Label
+
+Use `ProgressLabel` and `ProgressValue` to add a label and value display.
+
+## API Reference
+
+See the [Base UI Progress](https://base-ui.com/react/components/progress#api-reference) documentation.
