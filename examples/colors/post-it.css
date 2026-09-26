@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@import "@/components/colors/pxl/post-it.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+.colors-post-it {
+  --background: var(--color-post-it-fresh-snow);
+  --foreground: var(--color-post-it-black-onyx);
+  --card: var(--color-post-it-fresh-snow);
+  --card-foreground: var(--color-post-it-black-onyx);
+  --popover: var(--color-post-it-fresh-snow);
+  --popover-foreground: var(--color-post-it-black-onyx);
+  --muted: var(--color-post-it-fresh-snow);
+  --muted-foreground: var(--color-post-it-black-onyx);
+  --accent: var(--color-post-it-fresh-snow);
+  --accent-foreground: var(--color-post-it-black-onyx);
+  --border: var(--color-post-it-pebble-gray);
+  --input: var(--color-post-it-pebble-gray);
+  --ring: var(--color-post-it-pebble-gray);
+
+  --primary: var(--color-post-it-aqua-splash);
+  --primary-foreground: color-mix(in oklab, var(--color-black) 40%, transparent);
+  --info: var(--color-post-it-iris-infusion);
+  --info-foreground: color-mix(in oklab, var(--color-black) 40%, transparent);
+  --success: var(--color-post-it-acid-lime);
+  --success-foreground: color-mix(in oklab, var(--color-black) 40%, transparent);
+  --warning: var(--color-post-it-vital-orange);
+  --warning-foreground: color-mix(in oklab, var(--color-black) 40%, transparent);
+  --danger: var(--color-post-it-guava);
+  --danger-foreground: color-mix(in oklab, var(--color-black) 40%, transparent);
+}

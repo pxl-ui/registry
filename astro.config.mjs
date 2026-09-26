@@ -452,6 +452,10 @@ export default defineConfig({
                         label: "Vine's Flexible Linear Ramps",
                         link: "/colors/vines-flexible-linear-ramps",
                       },
+                      {
+                        label: "Post-It",
+                        link: "/colors/post-it",
+                      },
                     ],
                   },
                   {

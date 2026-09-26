@@ -1035,6 +1035,26 @@
       }
     },
     {
+      "name": "colors/post-it",
+      "type": "registry:theme",
+      "title": "Post-It",
+      "description": "The Post-It colors",
+      "categories": ["pxl-ui", "color-palette", "color-palette-colors"],
+      "meta": {
+        "order": 1
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "post-it.css",
+          "target": "@components/colors/pxl/post-it.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/post-it.css\"": {}
+      }
+    },
+    {
       "name": "colors/tailwind",
       "type": "registry:theme",
       "title": "Tailwind",

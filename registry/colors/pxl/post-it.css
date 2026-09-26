@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-post-it-acid-lime: oklch(91.567% 0.171 113.622);
+  --color-post-it-aqua-splash: oklch(82.582% 0.1015 205.748);
+  --color-post-it-black-onyx: oklch(24.419% 0.0064 0.594);
+  --color-post-it-blue-paradise: oklch(82.196% 0.111 221.747);
+  --color-post-it-canary-yellow: oklch(95.591% 0.0923 103.341);
+  --color-post-it-candy-apple-red: oklch(65.942% 0.192 17.168);
+  --color-post-it-citron: oklch(88.964% 0.1562 102.302);
+  --color-post-it-fresh-mint: oklch(88.029% 0.0468 191.308);
+  --color-post-it-fresh-snow: oklch(96.396% 0.0029 264.542);
+  --color-post-it-guava: oklch(76.577% 0.1405 14.938);
+  --color-post-it-iris-infusion: oklch(74.261% 0.0925 315.15);
+  --color-post-it-limeade: oklch(80.645% 0.1639 129.649);
+  --color-post-it-lucky-green: oklch(75.311% 0.1312 153.897);
+  --color-post-it-moonstone: oklch(71.985% 0.0993 273.977);
+  --color-post-it-papaya-fizz: oklch(81.662% 0.1042 32.5);
+  --color-post-it-pebble-gray: oklch(78.601% 0.0091 17.35);
+  --color-post-it-pink-salt: oklch(89.857% 0.0374 349.853);
+  --color-post-it-positively-pink: oklch(86.15% 0.0841 355.172);
+  --color-post-it-power-pink: oklch(71.403% 0.176 355.119);
+  --color-post-it-orchid-frost: oklch(90.805% 0.0277 309.199);
+  --color-post-it-sea-glass: oklch(68.568% 0.1002 213.151);
+  --color-post-it-sunnyside: oklch(87.434% 0.1665 90.709);
+  --color-post-it-tropical-pink: oklch(82.861% 0.1313 333.304);
+  --color-post-it-vital-orange: oklch(81.279% 0.1326 61.597);
+  --color-post-it-washed-denim: oklch(81.853% 0.0893 254.421);
+}
