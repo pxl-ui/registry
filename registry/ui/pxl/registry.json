@@ -40,9 +40,7 @@
       "description": "A modal dialog that interrupts the user with important content and expects a response.",
       "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": ["@base-ui/react"],
-      "registryDependencies": [
-        "pxl-ui/registry/button"
-      ],
+      "registryDependencies": ["pxl-ui/registry/button"],
       "files": [
         {
           "path": "alert-dialog.tsx",
@@ -179,9 +177,7 @@
       "description": "A container that groups related buttons together with consistent styling.",
       "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": ["@base-ui/react", "cn"],
-      "registryDependencies": [
-        "pxl-ui/registry/separator"
-      ],
+      "registryDependencies": ["pxl-ui/registry/separator"],
       "files": [
         {
           "path": "button-group.tsx",
@@ -196,9 +192,7 @@
       "title": "Calendar",
       "description": "A calendar component that allows users to select a date or a range of dates.",
       "categories": ["pxl-ui", "components", "content"],
-      "dependencies": [
-        "react-day-picker"
-      ],
+      "dependencies": ["react-day-picker"],
       "registryDependencies": [
         "pxl-ui/registry/button",
         "pxl-ui/registry/select"
@@ -218,9 +212,7 @@
       "description": "Displays a callout for user attention.",
       "categories": ["pxl-ui", "components", "layout"],
       "dependencies": ["@base-ui/react"],
-      "registryDependencies": [
-        "pxl-ui/registry/collapsible"
-      ],
+      "registryDependencies": ["pxl-ui/registry/collapsible"],
       "files": [
         {
           "path": "callout.tsx",
@@ -251,9 +243,7 @@
       "description": "A carousel with motion and swipe built using Embla.",
       "categories": ["pxl-ui", "components", "navigation"],
       "dependencies": ["embla-carousel-react"],
-      "registryDependencies": [
-        "pxl-ui/registry/button"
-      ],
+      "registryDependencies": ["pxl-ui/registry/button"],
       "files": [
         {
           "path": "carousel.tsx",
@@ -317,9 +307,7 @@
       "title": "Command",
       "description": "Command menu for search and quick actions.",
       "categories": ["pxl-ui", "components", "navigation"],
-      "dependencies": [
-        "cmdk"
-      ],
+      "dependencies": ["cmdk"],
       "registryDependencies": [
         "pxl-ui/registry/dialog",
         "pxl-ui/registry/input-group"
@@ -353,9 +341,7 @@
       "title": "Country Flag",
       "description": "Displays a country flag.",
       "categories": ["pxl-ui", "components", "content"],
-      "registryDependencies": [
-        "pxl-ui/registry/icons/terrabandiere"
-      ],
+      "registryDependencies": ["pxl-ui/registry/icons/terrabandiere"],
       "files": [
         {
           "path": "country-flag.tsx",
@@ -371,9 +357,7 @@
       "description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
       "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": ["@base-ui/react"],
-      "registryDependencies": [
-        "pxl-ui/registry/button"
-      ],
+      "registryDependencies": ["pxl-ui/registry/button"],
       "files": [
         {
           "path": "dialog.tsx",
@@ -388,9 +372,7 @@
       "title": "Dialogue Box",
       "description": "Displays a dialogue box with animated text and portrait.",
       "categories": ["pxl-ui", "components", "content"],
-      "dependencies": [
-        "streamdown"
-      ],
+      "dependencies": ["streamdown"],
       "registryDependencies": [
         "pxl-ui/registry/avatar",
         "pxl-ui/registry/card"
@@ -586,10 +568,7 @@
       "title": "Map",
       "description": "Interactive map components powered by MapLibre GL for displaying locations, markers, routes, and geospatial data with full theme support.",
       "categories": ["pxl-ui", "components", "interaction"],
-      "dependencies": [
-        "maplibre-gl",
-        "cn"
-      ],
+      "dependencies": ["maplibre-gl", "cn"],
       "files": [
         {
           "path": "map.tsx",
@@ -624,9 +603,7 @@
       "title": "Menubar",
       "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
       "categories": ["pxl-ui", "components", "navigation"],
-      "registryDependencies": [
-        "pxl-ui/registry/dropdown-menu"
-      ],
+      "registryDependencies": ["pxl-ui/registry/dropdown-menu"],
       "files": [
         {
           "path": "menubar.tsx",
@@ -670,9 +647,7 @@
       "title": "Profile Card",
       "description": "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
       "categories": ["pxl-ui", "components", "content"],
-      "registryDependencies": [
-        "pxl-ui/registry/avatar"
-      ],
+      "registryDependencies": ["pxl-ui/registry/avatar"],
       "files": [
         {
           "path": "profile-card.tsx",
@@ -688,9 +663,7 @@
       "description": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions.",
       "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": ["@shadcn/react/questionnaire"],
-      "registryDependencies": [
-        "pxl-ui/registry/button"
-      ],
+      "registryDependencies": ["pxl-ui/registry/button"],
       "files": [
         {
           "path": "questionnaire.tsx",
@@ -887,7 +860,13 @@
       "type": "registry:component",
       "title": "Sprite Background",
       "description": "A background image renderer for single sprite-sheets",
-      "categories": ["pxl-ui", "components", "content", "sprite-sheet", "animations"],
+      "categories": [
+        "pxl-ui",
+        "components",
+        "content",
+        "sprite-sheet",
+        "animations"
+      ],
       "files": [
         {
           "path": "sprite-background.tsx",
@@ -901,7 +880,14 @@
       "type": "registry:component",
       "title": "Sprite Canvas",
       "description": "A canvas renderer for single sprite-sheets",
-      "categories": ["pxl-ui", "components", "content", "sprite-sheet", "canvas", "animations"],
+      "categories": [
+        "pxl-ui",
+        "components",
+        "content",
+        "sprite-sheet",
+        "canvas",
+        "animations"
+      ],
       "registryDependencies": [
         "pxl-ui/registry/sprite",
         "pxl-ui/registry/use-sprite"
@@ -1048,9 +1034,7 @@
       "description": "A set of two-state buttons that can be toggled on or off.",
       "categories": ["pxl-ui", "components", "interaction"],
       "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
-      "registryDependencies": [
-        "pxl-ui/registry/toggle"
-      ],
+      "registryDependencies": ["pxl-ui/registry/toggle"],
       "files": [
         {
           "path": "toggle-group.tsx",
@@ -1075,14 +1059,27 @@
       ]
     },
     {
+      "name": "video-player",
+      "type": "registry:component",
+      "title": "Video Player",
+      "description": "A composable, shadcn/ui styled video player component.",
+      "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["media-chrome@4.19"],
+      "files": [
+        {
+          "path": "video-player.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/video-player.tsx"
+        }
+      ]
+    },
+    {
       "name": "weather-icon",
       "type": "registry:component",
       "title": "Weather Icon",
       "description": "A Icon Component to display the Weather",
       "categories": ["pxl-ui", "components", "content"],
-      "dependencies": [
-        "weather-i18n"
-      ],
+      "dependencies": ["weather-i18n"],
       "files": [
         {
           "path": "weather-icon.tsx",
