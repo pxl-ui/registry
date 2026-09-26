@@ -36,7 +36,7 @@ export default function HeaderDemo() {
       <HeaderMasthead>
         <HeaderLogo>
           <img
-            src="/logos/tmh.png"
+            src="https://raw.githubusercontent.com/pxl-ui/registry/refs/heads/main/app/public/logos/tmh.png"
             alt="The Morning Herald logo"
             width="100"
             height="120"
@@ -47,7 +47,7 @@ export default function HeaderDemo() {
           <HeaderTitle className="font-not-jam-blackletter-16">
             The Morning Herald
           </HeaderTitle>
-          <HeaderSubtitle>Culture</HeaderSubtitle>
+          <HeaderSubtitle>International</HeaderSubtitle>
         </HeaderMastheadContent>
       </HeaderMasthead>
       <HeaderSeparator />

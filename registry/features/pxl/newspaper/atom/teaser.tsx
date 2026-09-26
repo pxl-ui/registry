@@ -30,6 +30,10 @@ function TeaserDescription({
   ...props
 }: ComponentProps<typeof BaseTeaserDescription> & { entry: Atom.Entry }) {
   const description = useMemo(() => {
+    if (entry.summary) {
+      return entry.summary;
+    }
+
     const group = entry.media?.groups?.find((g) => g.description?.value);
 
     if (group) {
@@ -37,7 +41,7 @@ function TeaserDescription({
     }
 
     return entry.content;
-  }, [entry.content, entry.media]);
+  }, [entry.content, entry.summary, entry.media]);
 
   return (
     description && (

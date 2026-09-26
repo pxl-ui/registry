@@ -1,4 +1,5 @@
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu";
+import { cn } from "cn";
 import type {
   ComponentProps,
   ComponentPropsWithoutRef,
@@ -9,7 +10,6 @@ import type {
 
 import { Separator } from "@/components/ui/pxl/separator";
 import type { Outline } from "@/lib/schemas/pxl/opml";
-import { cn } from "@/lib/utils";
 
 function SectionsPositioner({
   className,
@@ -135,7 +135,12 @@ function SectionSeparator({
   ...props
 }: ComponentProps<typeof Separator>) {
   return (
-    <Separator className="h-7" border="solid" orientation="vertical" {...props} />
+    <Separator
+      className="h-7"
+      border="solid"
+      orientation="vertical"
+      {...props}
+    />
   );
 }
 
@@ -153,7 +158,10 @@ function SectionsItem({
   return (
     <NavigationMenuPrimitive.Item
       data-slot="navigation-menu-item"
-      className={cn("relative min-w-0 flex-1 md:w-full justify-center", className)}
+      className={cn(
+        "relative min-w-0 flex-1 md:w-full justify-center",
+        className,
+      )}
       {...props}
     >
       {children ? (
@@ -161,10 +169,13 @@ function SectionsItem({
           href={href}
           render={
             <a href={href} className="block min-w-0 w-full">
-              <SectionsTrigger className={cn(
-                "min-w-0 w-full truncate",
-                Icon && "[&_span]:hidden md:[&_span]:inline-flex [&_svg]:shrink-0"
-              )}>
+              <SectionsTrigger
+                className={cn(
+                  "min-w-0 w-full truncate",
+                  Icon &&
+                    "[&_span]:hidden md:[&_span]:inline-flex [&_svg]:shrink-0",
+                )}
+              >
                 {Icon && <Icon />}
                 <span className="min-w-0 truncate">{title}</span>
               </SectionsTrigger>
@@ -178,7 +189,7 @@ function SectionsItem({
         <SectionsLink
           className={cn(
             "min-w-0 h-7 w-full truncate justify-center",
-            Icon && "[&_svg]:shrink-0 [&_span]:hidden sm:[&_span]:inline-flex"
+            Icon && "[&_svg]:shrink-0 [&_span]:hidden sm:[&_span]:inline-flex",
           )}
           href={href}
         >

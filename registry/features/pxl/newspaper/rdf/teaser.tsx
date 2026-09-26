@@ -1,6 +1,7 @@
 import { type ComponentProps, useMemo } from "react";
 
 import {
+  TeaserAuthor as BaseTeaserAuthor,
   TeaserDescription as BaseTeaserDescription,
   TeaserTitle as BaseTeaserTitle,
 } from "@/features/pxl/newspaper/teaser";
@@ -19,6 +20,25 @@ function TeaserTitle({
   }, [item.title]);
 
   return <BaseTeaserTitle {...props}>{title}</BaseTeaserTitle>;
+}
+
+function TeaserAuthor({
+  item,
+  ...props
+}: ComponentProps<typeof BaseTeaserAuthor> & { item: Rdf.Item }) {
+  const author = useMemo(() => {
+    if (item.dc?.creators) {
+      return item.dc.creators.join(", ");
+    }
+
+    if (item.dc?.creator) {
+      return item.dc.creator;
+    }
+
+    return null;
+  }, [item.dc]);
+
+  return author && <BaseTeaserAuthor {...props}>{author}</BaseTeaserAuthor>;
 }
 
 function TeaserDescription({
@@ -46,4 +66,4 @@ function TeaserDescription({
   );
 }
 
-export { TeaserDescription, TeaserTitle };
+export { TeaserAuthor, TeaserDescription, TeaserTitle };

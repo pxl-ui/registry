@@ -35,12 +35,31 @@
       ]
     },
     {
+      "name": "newspaper/atom/hero",
+      "type": "registry:component",
+      "title": "Atom Hero",
+      "description": "A component for displaying a newspaper hero from Atom Item.",
+      "categories": ["pxl-ui", "features", "newspaper", "newspaper/atom"],
+      "registryDependencies": [
+        "pxl-ui/registry/newspaper/hero",
+        "pxl-ui/registry/schemas/atom"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "atom/hero.tsx",
+          "target": "@components/features/pxl/newspaper/atom/hero.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper/atom/teaser",
       "type": "registry:component",
       "title": "Atom Teaser",
       "description": "A component for displaying newspaper article teasers from Atom feeds.",
       "categories": ["pxl-ui", "features", "newspaper", "newspaper/atom"],
       "registryDependencies": [
+        "pxl-ui/registry/newspaper/teaser",
         "pxl-ui/registry/schemas/atom"
       ],
       "files": [
@@ -57,6 +76,9 @@
       "title": "Columns",
       "description": "A component for displaying newspaper teasers in columns grid.",
       "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "cn"
+      ],
       "files": [
         { 
           "type": "registry:file",
@@ -71,6 +93,12 @@
       "title": "Header",
       "description": "A component for displaying a newspaper header.",
       "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/separator"
+      ],
       "files": [
         { 
           "type": "registry:file",
@@ -80,16 +108,76 @@
       ]
     },
     {
+      "name": "newspaper/hero",
+      "type": "registry:component",
+      "title": "Hero",
+      "description": "A component for displaying a newspaper hero.",
+      "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/markdown",
+        "pxl-ui/registry/newspaper/typeset"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "hero.tsx",
+          "target": "@components/features/pxl/newspaper/hero.tsx"
+        }
+      ]
+    },
+    {
+      "name": "newspaper/journal",
+      "type": "registry:component",
+      "title": "Journal",
+      "description": "A news journal.",
+      "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "cn"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "columns.tsx",
+          "target": "@components/features/pxl/newspaper/journal.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper/list",
       "type": "registry:component",
       "title": "List",
       "description": "A component for displaying newspaper teasers in a list.",
       "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "cn"
+      ],
       "files": [
         { 
           "type": "registry:file",
           "path": "list.tsx",
           "target": "@components/features/pxl/newspaper/list.tsx"
+        }
+      ]
+    },
+    {
+      "name": "newspaper/rdf/hero",
+      "type": "registry:component",
+      "title": "RDF Hero",
+      "description": "A component for displaying a newspaper hero from RDF Item.",
+      "categories": ["pxl-ui", "features", "newspaper", "newspaper/rdf"],
+      "registryDependencies": [
+        "pxl-ui/registry/newspaper/hero",
+        "pxl-ui/registry/schemas/rdf"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "rdf/hero.tsx",
+          "target": "@components/features/pxl/newspaper/rdf/hero.tsx"
         }
       ]
     },
@@ -100,6 +188,7 @@
       "description": "A component for displaying newspaper article teasers from RDF feeds.",
       "categories": ["pxl-ui", "features", "newspaper", "newspaper/rdf"],
       "registryDependencies": [
+        "pxl-ui/registry/newspaper/teaser",
         "pxl-ui/registry/schemas/rdf"
       ],
       "files": [
@@ -111,12 +200,31 @@
       ]
     },
     {
+      "name": "newspaper/rss/hero",
+      "type": "registry:component",
+      "title": "RSS Hero",
+      "description": "A component for displaying a newspaper hero from RSS Item.",
+      "categories": ["pxl-ui", "features", "newspaper", "newspaper/rss"],
+      "registryDependencies": [
+        "pxl-ui/registry/newspaper/hero",
+        "pxl-ui/registry/schemas/rss"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "rss/hero.tsx",
+          "target": "@components/features/pxl/newspaper/rss/hero.tsx"
+        }
+      ]
+    },
+    {
       "name": "newspaper/rss/teaser",
       "type": "registry:component",
       "title": "RSS Teaser",
       "description": "A component for displaying newspaper article teasers from RSS feeds.",
       "categories": ["pxl-ui", "features", "newspaper", "newspaper/rss"],
       "registryDependencies": [
+        "pxl-ui/registry/newspaper/teaser",
         "pxl-ui/registry/schemas/rss"
       ],
       "files": [
@@ -133,6 +241,14 @@
       "title": "Sections",
       "description": "A component for displaying newspaper sections.",
       "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/separator",
+        "pxl-ui/registry/schemas/opml"
+      ],
       "files": [
         { 
           "type": "registry:file",
@@ -147,6 +263,9 @@
       "title": "Teaser",
       "description": "A component for displaying newspaper article teasers.",
       "categories": ["pxl-ui", "features", "newspaper"],
+      "dependencies": [
+        "cn"
+      ],
       "registryDependencies": [
         "pxl-ui/registry/lib/html"
       ],
@@ -155,6 +274,20 @@
           "type": "registry:file",
           "path": "teaser.tsx",
           "target": "@components/features/pxl/newspaper/teaser.tsx"
+        }
+      ]
+    },
+    {
+      "name": "newspaper/typeset",
+      "type": "registry:style",
+      "title": "Newspaper Typeset",
+      "description": "Styles for displaying newspaper contents.",
+      "categories": ["pxl-ui", "features", "newspaper"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "typeset.css",
+          "target": "@components/features/pxl/newspaper/typeset.css"
         }
       ]
     }

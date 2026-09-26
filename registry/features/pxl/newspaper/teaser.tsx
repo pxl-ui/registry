@@ -1,4 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "cn";
 import {
   type ComponentProps,
   createContext,
@@ -9,24 +10,22 @@ import {
   useState,
 } from "react";
 
-import { cn } from "@/lib/utils";
-
 const TeaserContext = createContext<{ hovered: boolean }>({
   hovered: false,
 });
 
 const teaserVariants = cva(
-  "group/teaser @container flex w-full flex-wrap items-center text-sm transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
+  "group/teaser flex w-full flex-wrap items-center transition-colors duration-100 outline-none [a]:transition-colors [a]:hover:bg-muted",
   {
     variants: {
       size: {
-        default: "gap-3.5",
-        sm: "gap-2.5",
         xs: "gap-2",
+        sm: "gap-2.5",
+        md: "gap-3.5",
       },
     },
     defaultVariants: {
-      size: "default",
+      size: "md",
     },
   },
 );
@@ -34,11 +33,12 @@ const teaserVariants = cva(
 function Teaser({
   className,
   state = "unread",
-  size = "default",
+  size = "md",
   ...props
-}: ComponentProps<"li"> & VariantProps<typeof teaserVariants> & {
-  state?: "read" | "unread"
-}) {
+}: ComponentProps<"li"> &
+  VariantProps<typeof teaserVariants> & {
+    state?: "read" | "unread";
+  }) {
   const [hovered, setHovered] = useState(false);
   return (
     <TeaserContext.Provider value={{ hovered }}>
@@ -65,14 +65,13 @@ function TeaserContent({ className, ...props }: ComponentProps<"div">) {
   );
 }
 
-function TeaserTitle({ className, ...props }: ComponentProps<"div">) {
+function TeaserTitle({ className, ...props }: ComponentProps<"h2">) {
   return (
-    <div
+    <h2
       data-slot="teaser-title"
       className={cn(
         "min-w-0",
-        "font-serif font-bold leading-snug text-pretty",
-        "text-xs @5xs:text-sm @md:text-base",
+        "font-serif font-bold leading-snug text-base text-pretty",
         "group-data-[state=read]/teaser:text-muted-foreground",
         className,
       )}
@@ -106,10 +105,8 @@ function TeaserDescription({
       data-slot="teaser-description"
       className={cn(
         "relative px-px",
-        "font-serif font-normal leading-normal text-left",
-        "text-muted-foreground group-data-[state=read]/teaser:text-muted-foreground/60",
-        "text-2xs @5xs:text-xs @md:text-sm",
-        "[&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-primary",
+        "newspaper-typeset",
+        "group-data-[state=read]/teaser:text-muted-foreground/60",
         teaserDescriptionVariants({ lineClamp }),
         className,
       )}
@@ -135,7 +132,7 @@ function TeaserAuthor({ className, ...props }: ComponentProps<"cite">) {
       className={cn(
         "font-serif font-normal leading-normal text-left",
         "text-muted-foreground group-data-[state=read]/teaser:text-muted-foreground/60",
-        "text-2xs @5xs:text-xs @md:text-sm",
+        "text-2xs",
         className,
       )}
       {...props}
@@ -208,7 +205,7 @@ function TeaserDate({
       className={cn(
         "italic font-serif font-normal leading-normal text-left",
         "text-muted-foreground group-data-[state=read]/teaser:text-muted-foreground/60",
-        "text-2xs @5xs:text-xs @md:text-sm",
+        "text-2xs",
         className,
       )}
       {...props}
@@ -231,9 +228,9 @@ const teaserMediaVariants = cva(
         default: "bg-transparent",
         icon: "[&_svg:not([class*='size-'])]:size-4",
         image:
-          "overflow-hidden pixel-rounded pixel-size-md [&_img]:size-full [&_img]:object-cover size-6 @5xs:size-8 @md:size-16 empty:hidden",
+          "overflow-hidden [&_img]:size-full [&_img]:object-cover size-6 group-data-[size=sm]/teaser:size-8 group-data-[size=md]/teaser:size-20 empty:hidden",
         video:
-          "overflow-hidden pixel-rounded pixel-size-md [&_video]:size-full [&_video]:object-cover size-6 @5xs:size-8 @md:size-16 empty:hidden",
+          "overflow-hidden [&_video]:size-full [&_video]:object-cover size-6 group-data-[size=sm]/teaser:size-8 group-data-[size=md]/teaser:size-20 empty:hidden",
       },
     },
     defaultVariants: {

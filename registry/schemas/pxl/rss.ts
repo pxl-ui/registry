@@ -1907,12 +1907,12 @@ const ItemSchema = z.object({
       url: z.string().optional(),
     })
     .optional(),
-  atom: AtomSchemas.Entry.optional(),
+  atom: AtomSchemas.Entry.partial().optional(),
   cc: CreativeCommonsSchema.optional(),
   dc: DublinCoreSchema.optional(),
   content: z.object({
     encoded: z.string().optional(),
-  }),
+  }).optional(),
   creativeCommons: z
     .object({
       licenses: z.array(z.string()).optional(),
@@ -2006,7 +2006,7 @@ const FeedSchema = z.object({
   skipHours: z.array(z.number()).optional(),
   skipDays: z.array(z.string()).optional(),
   items: z.array(ItemSchema).optional(),
-  atom: AtomSchemas.Feed.optional(),
+  atom: AtomSchemas.Feed.partial().optional(),
   cc: CreativeCommonsSchema.optional(),
   dc: DublinCoreSchema.optional(),
   sy: SySchema.optional(),

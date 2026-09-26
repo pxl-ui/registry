@@ -1,5 +1,6 @@
 import { type ComponentProps, useCallback, useState } from "react";
 import {
+  type Components,
   type LinkSafetyModalProps,
   Streamdown,
   type StreamdownTranslations,
@@ -15,6 +16,39 @@ import {
   DialogTitle,
 } from "@/components/ui/pxl/dialog";
 import { cn } from "@/lib/utils";
+
+const DEFAULT_MARKDOWN_COMPONENTS: Components = {
+  h1: ({ children }) => (
+    <h1>
+      {children}
+    </h1>
+  ),
+  h2: ({ children }) => (
+    <h2>
+      {children}
+    </h2>
+  ),
+  h3: ({ children }) => (
+    <h3>
+      {children}
+    </h3>
+  ),
+  h4: ({ children }) => (
+    <h4>
+      {children}
+    </h4>
+  ),
+  h5: ({ children }) => (
+    <h5>
+      {children}
+    </h5>
+  ),
+  h6: ({ children }) => (
+    <h6>
+      {children}
+    </h6>
+  ),
+}
 
 const DEFAULT_MARKDOWN_TRANSLATIONS: StreamdownTranslations = {
   // Code block
@@ -150,11 +184,14 @@ function LinkSafetyModal({
 
 function Markdown({
   className,
-  components,
+  components = DEFAULT_MARKDOWN_COMPONENTS,
   linkSafety,
   translations = DEFAULT_MARKDOWN_TRANSLATIONS,
+  typeset = "typeset",
   ...props
-}: ComponentProps<typeof Streamdown>) {
+}: ComponentProps<typeof Streamdown> & {
+  typeset?: string;
+}) {
   return (
     <Streamdown
       mode="static"
@@ -166,7 +203,8 @@ function Markdown({
         ...linkSafety,
       }}
       className={cn(
-        "typeset size-full [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
+        typeset,
+        "size-full [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
         className,
       )}
       components={{

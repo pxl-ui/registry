@@ -1,0 +1,54 @@
+---
+title: Hero
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="newspaper/hero" />
+
+## Installation
+
+<Install item="newspaper/hero" />
+
+## Usage
+
+```tsx
+import { 
+  Hero, 
+  HeroHeadline,
+  HeroFigure,
+  HeroImage,
+  HeroCaption
+  HeroContent, 
+} from "@/components/features/pxl/newspaper/hero";
+import {
+  Columns
+} from "@/components/features/pxl/newspaper/columns";
+```
+
+```tsx
+<Hero>
+  <HeroHeadline />
+  <HeroFigure>
+    <HeroImage />
+    <HeroCaption />
+  </HeroFigure>
+
+  <Columns>
+    <HeroContent />
+  </Columns>
+</Hero>
+```
+
+## Composition
+
+Use the following composition to build a `Journal`:
+
+```text
+Hero
+├── HeroHeadline
+├── HeroFigure
+│   ├── HeroImage
+│   └── HeroCaption
+└── Columns    
+    └── HeroContent
+```

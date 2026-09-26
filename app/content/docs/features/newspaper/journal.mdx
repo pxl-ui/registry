@@ -1,0 +1,49 @@
+---
+title: Journal
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="newspaper/journal" />
+
+## Installation
+
+<Install item="newspaper/journal" />
+
+## Usage
+
+```tsx
+import { 
+  Journal, 
+  JournalContent 
+} from "@/components/features/pxl/newspaper/journal";
+```
+
+```tsx
+<Journal>
+  <Header>
+    {...}
+  </Header>
+  <JournalContent>
+    <Hero>
+      {...}
+    </Hero>
+    <Separator />
+    <List>
+      {...}
+    </List>
+  </JournalContent>
+</Journal>
+```
+
+## Composition
+
+Use the following composition to build a `Journal`:
+
+```text
+Journal
+├── Header
+└── JournalContent
+    ├── Hero
+    ├── Separator
+    └── List
+```

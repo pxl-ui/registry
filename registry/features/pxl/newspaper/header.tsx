@@ -1,7 +1,7 @@
+import { cn } from "cn";
 import { type ComponentProps, useMemo } from "react";
 
 import { Separator } from "@/components/ui/pxl/separator";
-import { cn } from "@/lib/utils";
 
 function Header({ className, ...props }: ComponentProps<"header">) {
   return (
@@ -56,8 +56,9 @@ function HeaderIssueNumber({
 
     const formatter = new Intl.NumberFormat(locale);
 
-    return prefix ?
-      `${prefix}${formatter.format(issueNumber)}` : formatter.format(issueNumber);
+    return prefix
+      ? `${prefix}${formatter.format(issueNumber)}`
+      : formatter.format(issueNumber);
   }, [issueNumber, locale, prefix]);
 
   return (
