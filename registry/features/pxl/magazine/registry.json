@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/magazine",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "magazine/blockquote",
+      "type": "registry:component",
+      "title": "Blockquote",
+      "description": "A component that highlights a key excerpt or quote from an article.",
+      "categories": ["pxl-ui", "features", "magazine"],
+      "registryDependencies": [
+        "pxl-ui/registry/profile-card"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "blockquote.tsx",
+          "target": "@components/features/pxl/magazine/blockquote.tsx"
+        }
+      ]
+    }
+  ]
+}

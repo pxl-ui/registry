@@ -1,0 +1,69 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/marketing",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "marketing/changelog",
+      "type": "registry:component",
+      "title": "Changelog",
+      "description": "A component that showcases your product updates, releases, and improvements in a beautiful timeline format.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "changelog.tsx",
+          "target": "@components/features/pxl/marketing/changelog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/page-heading",
+      "type": "registry:component",
+      "title": "Page Heading",
+      "description": "A component that acts as the text-focused version of a hero banner.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "registryDependencies": [
+        "pxl-ui/registry/marketing/tagline"
+      ], 
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "page-heading.tsx",
+          "target": "@components/features/pxl/marketing/page-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/section-heading",
+      "type": "registry:component",
+      "title": "Section Heading",
+      "description": "A component that standardizes heading typography and spacing.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "registryDependencies": [
+        "pxl-ui/registry/marketing/tagline"
+      ], 
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "section-heading.tsx",
+          "target": "@components/features/pxl/marketing/section-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "marketing/tagline",
+      "type": "registry:component",
+      "title": "Tagline",
+      "description": "A component that displays a tagline with different variants.",
+      "categories": ["pxl-ui", "features", "marketing"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tagline.tsx",
+          "target": "@components/features/pxl/marketing/tagline.tsx"
+        }
+      ]
+    }
+  ]
+}

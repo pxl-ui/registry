@@ -6,10 +6,10 @@ import {
   useMessageScrollerScrollable,
   useMessageScrollerVisibility,
 } from "@shadcn/react/message-scroller";
+import { cn } from "cn";
 import type { ComponentProps } from "react";
 
 import { Button } from "@/components/ui/pxl/button";
-import { cn } from "@/lib/utils";
 
 function MessageScrollerProvider(
   props: ComponentProps<typeof MessageScrollerPrimitive.Provider>,

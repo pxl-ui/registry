@@ -1,0 +1,36 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/notebook",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "notebook/editor",
+      "type": "registry:component",
+      "title": "Editor",
+      "description": "A component that displays a notes editor.",
+      "categories": ["pxl-ui", "features", "notebook"],
+      "dependencies": [
+        "@lexical/clipboard@0.50.0",
+        "@lexical/extension@0.50.0",
+        "@lexical/hashtag@0.50.0",
+        "@lexical/history@0.50.0",
+        "@lexical/list@0.50.0",
+        "@lexical/markdown@0.50.0",
+        "@lexical/react@0.50.0",
+        "@lexical/rich-text@0.50.0",
+        "@lexical/table@0.50.0",
+        "lexical@0.50.0"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/rich-text-editor"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "editor.tsx",
+          "target": "@components/features/pxl/notebook/editor.tsx"
+        }
+      ]
+    }
+  ]
+}

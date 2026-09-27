@@ -1,0 +1,70 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/conversation",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "conversation/bubble",
+      "type": "registry:component",
+      "title": "Bubble",
+      "description": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "dependencies": ["@base-ui/react", "class-variance-authority",  "cn"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "bubble.tsx",
+          "target": "@components/features/pxl/conversation/bubble.tsx"
+        }
+      ]
+    },
+    {
+      "name": "conversation/marker",
+      "type": "registry:component",
+      "title": "Marker",
+      "description": "Displays an inline status, system note, bordered row, or labeled separator in a conversation.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "dependencies": ["@base-ui/react", "class-variance-authority",  "cn"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "marker.tsx",
+          "target": "@components/features/pxl/conversation/marker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "conversation/message",
+      "type": "registry:component",
+      "title": "Message",
+      "description": "Displays a message in a conversation, with optional avatar, header, footer, and alignment.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "dependencies": ["cn"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "message.tsx",
+          "target": "@components/features/pxl/conversation/message.tsx"
+        }
+      ]
+    },
+    {
+      "name": "conversation/message-scroller",
+      "type": "registry:component",
+      "title": "Message Scroller",
+      "description": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message.",
+      "categories": ["pxl-ui", "features", "conversation"],
+      "dependencies": ["@shadcn/react", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "message-scroller.tsx",
+          "target": "@components/features/pxl/conversation/message-scroller.tsx"
+        }
+      ]
+    }
+  ]
+}
