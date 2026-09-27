@@ -304,7 +304,7 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
     <div className="w-full max-w-4xl">
       <div className="w-full overflow-x-auto">
         {hasProperties ? (
-          <Table className="table-fixed w-full">
+          <Table border="none" className="table-fixed w-full">
             <TableHeader>
               <TableRow>
                 <TableHead className="w-45">Property</TableHead>
@@ -327,7 +327,7 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
           )
         )}
         {isEnum && (
-          <Table className="table-fixed w-full">
+          <Table border="none" className="table-fixed w-full">
             <TableHeader>
               <TableRow>
                 <TableHead>Possible Values</TableHead>

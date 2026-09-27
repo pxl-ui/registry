@@ -2,5 +2,27 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "pxl/features/cookbook",
   "homepage": "https://github.com/pxl-ui/registry",
-  "items": []
+  "items": [
+    {
+      "name": "cookbook/api",
+      "type": "registry:component",
+      "title": "Cookbook API",
+      "description": "An API for working with cooking recipes.",
+      "categories": ["pxl-ui", "features", "cookbook", "api"],
+      "dependencies": [
+        "@cooklang/cooklang",
+        "@logtape/logtape"
+      ],
+      "registryDependencies": [
+        "pxl-ui/registry/schemas/cooklang"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "api/services/parse-cook.ts",
+          "target": "@components/features/pxl/cookbook/api/services/parse-cook.ts"
+        }
+      ]
+    }
+  ]
 }

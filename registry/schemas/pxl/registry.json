@@ -49,6 +49,21 @@
       ]
     },
     {
+      "name": "schemas/cooklang",
+      "type": "registry:component",
+      "title": "Cooklang Schemas",
+      "description": "Zod types and schemas for Cooklang.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "cooklang.ts",
+          "target": "@lib/pxl/schemas/cooklang.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/gcalendar",
       "type": "registry:component",
       "title": "Google Calendar Schemas",

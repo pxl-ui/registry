@@ -120,6 +120,11 @@ export default defineConfig({
                     ],
                   },
                   {
+                    label: "Recipes",
+                    collapsed: true,
+                    items: [{ label: "Cooklang", link: "/schemas/cooklang" }],
+                  },
+                  {
                     label: "Events",
                     collapsed: true,
                     items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
@@ -131,11 +136,6 @@ export default defineConfig({
                       { label: "ImapFlow", link: "/schemas/imapflow" },
                       { label: "MailParser", link: "/schemas/mailparser" },
                     ],
-                  },
-                  {
-                    label: "Weather",
-                    collapsed: true,
-                    items: [{ label: "OpenMeteo", link: "/schemas/openmeteo" }],
                   },
                   {
                     label: "Maps",
@@ -258,7 +258,16 @@ export default defineConfig({
               },
               {
                 label: "Forecast",
-                items: [{ autogenerate: { directory: "features/forecast" } }],
+                items: [
+                  { autogenerate: { directory: "features/forecast" } },
+                  {
+                    label: "OpenMeteo",
+                    collapsed: true,
+                    items: [
+                      { label: "Schemas", link: "/schemas/openmeteo" }
+                    ]
+                  },
+                ],
               },
               {
                 label: "Magazine",
