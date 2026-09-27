@@ -1132,6 +1132,21 @@
       ]
     },
     {
+      "name": "tree",
+      "type": "registry:component",
+      "title": "Tree",
+      "description": "A composable tree component with animated expand/collapse and customizable nodes for displaying hierarchical data structures.",
+      "categories": ["pxl-ui", "components", "navigation"],
+      "dependencies": ["cn", "motion/react"],
+      "files": [
+        {
+          "path": "tree.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/tree.tsx"
+        }
+      ]
+    },
+    {
       "name": "video-player",
       "type": "registry:component",
       "title": "Video Player",
