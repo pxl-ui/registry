@@ -2,7 +2,7 @@
 
 import { Slider as SliderPrimitive } from "@base-ui/react/slider";
 import { cn } from "cn";
-import Color from "color";
+import { type Color, converter, formatHex, parse } from "culori";
 import {
   type ComponentProps,
   type ComponentPropsWithoutRef,
@@ -34,6 +34,21 @@ import { Separator } from "@/ui/pxl/separator";
 
 type Mode = "hex" | "rgb" | "css" | "hsl";
 
+type RGBValue = [number, number, number] | [number, number, number, number];
+
+type ColorValue = string | RGBValue;
+
+type HSLColor = {
+  mode: "hsl";
+  h: number;
+  s: number;
+  l: number;
+  alpha?: number;
+};
+
+const toHsl = converter("hsl");
+const toRgb = converter("rgb");
+
 const ColorPickerContext = createContext<
   | {
       hue: number;
@@ -60,6 +75,46 @@ function useColorPicker() {
   return context;
 }
 
+function toCuloriColor(value: ColorValue | undefined): Color | undefined {
+  if (!value) {
+    return undefined;
+  }
+  if (typeof value === "string") {
+    return parse(value) ?? undefined;
+  }
+
+  const [r, g, b, alpha] = value;
+
+  return { mode: "rgb", r: r / 255, g: g / 255, b: b / 255, alpha: alpha ?? 1 };
+}
+
+function toHslState(value: ColorValue | undefined) {
+  const color = toCuloriColor(value);
+  const hsl = color ? toHsl(color) : undefined;
+
+  return {
+    hue: hsl?.h ?? 0,
+    saturation: (hsl?.s ?? 0) * 100,
+    lightness: (hsl?.l ?? 0) * 100,
+    alpha: (hsl?.alpha ?? 1) * 100,
+  };
+}
+
+function createHslColor(
+  hue: number,
+  saturation: number,
+  lightness: number,
+  alpha: number,
+): HSLColor {
+  return {
+    mode: "hsl",
+    h: hue,
+    s: saturation / 100,
+    l: lightness / 100,
+    alpha: alpha / 100,
+  };
+}
+
 function ColorPicker({
   value,
   defaultValue = "#000000",
@@ -67,46 +122,52 @@ function ColorPicker({
   className,
   ...props
 }: ComponentProps<"div"> & {
-  value?: Parameters<typeof Color>[0];
-  defaultValue?: Parameters<typeof Color>[0];
-  onChange?: (value: Parameters<typeof Color.rgb>[0]) => void;
+  value?: ColorValue;
+  defaultValue?: ColorValue;
+  onChange?: (value: RGBValue) => void;
 }) {
-  const selectedColor = Color(value);
-  const defaultColor = Color(defaultValue);
+  const selectedColor = toCuloriColor(value);
+  const defaultColor = toCuloriColor(defaultValue);
 
-  const [hue, setHue] = useState(
-    selectedColor.hue() || defaultColor.hue() || 0,
-  );
+  const selectedHsl = selectedColor ? toHslState(value) : undefined;
+  const defaultHsl = defaultColor ? toHslState(defaultValue) : undefined;
+
+  const [hue, setHue] = useState(selectedHsl?.hue || defaultHsl?.hue || 0);
   const [saturation, setSaturation] = useState(
-    selectedColor.saturationl() || defaultColor.saturationl() || 100,
+    selectedHsl?.saturation || defaultHsl?.saturation || 100,
   );
   const [lightness, setLightness] = useState(
-    selectedColor.lightness() || defaultColor.lightness() || 50,
+    selectedHsl?.lightness || defaultHsl?.lightness || 50,
   );
   const [alpha, setAlpha] = useState(
-    selectedColor.alpha() * 100 || defaultColor.alpha() * 100,
+    selectedHsl?.alpha || defaultHsl?.alpha || 100,
   );
   const [mode, setMode] = useState<Mode>("hex");
 
   // Update color when controlled value changes
   useEffect(() => {
     if (value) {
-      const color = Color.rgb(value).rgb().object();
+      const color = toCuloriColor(value);
+      const rgb = color ? toRgb(color) : undefined;
 
-      setHue(color.r);
-      setSaturation(color.g);
-      setLightness(color.b);
-      setAlpha(color.a);
+      if (rgb) {
+        setHue(rgb.r * 255);
+        setSaturation(rgb.g * 255);
+        setLightness(rgb.b * 255);
+        setAlpha((rgb.alpha ?? 1) * 100);
+      }
     }
   }, [value]);
 
   // Notify parent of changes
   useEffect(() => {
     if (onChange) {
-      const color = Color.hsl(hue, saturation, lightness).alpha(alpha / 100);
-      const rgba = color.rgb().array();
+      const color = createHslColor(hue, saturation, lightness, alpha);
+      const rgb = toRgb(color);
 
-      onChange([rgba[0], rgba[1], rgba[2], alpha / 100]);
+      if (rgb) {
+        onChange([rgb.r * 255, rgb.g * 255, rgb.b * 255, alpha / 100]);
+      }
     }
   }, [hue, saturation, lightness, alpha, onChange]);
 
@@ -152,18 +213,23 @@ const ColorPickerSelection = memo(
         if (!(isDragging && containerRef.current)) {
           return;
         }
+
         const rect = containerRef.current.getBoundingClientRect();
+
         const x = Math.max(
           0,
           Math.min(1, (event.clientX - rect.left) / rect.width),
         );
+
         const y = Math.max(
           0,
           Math.min(1, (event.clientY - rect.top) / rect.height),
         );
+
         setPositionX(x);
         setPositionY(y);
         setSaturation(x * 100);
+
         const topLightness = x < 0.01 ? 100 : 50 + 50 * (1 - x);
         const lightness = topLightness * (1 - y);
 
@@ -273,13 +339,21 @@ function ColorPickerEyeDropper({
       // @ts-expect-error - EyeDropper API is experimental
       const eyeDropper = new EyeDropper();
       const result = await eyeDropper.open();
-      const color = Color(result.sRGBHex);
-      const [h, s, l] = color.hsl().array();
 
-      setHue(h);
-      setSaturation(s);
-      setLightness(l);
-      setAlpha(100);
+      const color = parse(result.sRGBHex);
+      if (!color) {
+        return;
+      }
+
+      const hsl = toHsl(color);
+      if (!hsl) {
+        return;
+      }
+
+      setHue(hsl.h ?? 0);
+      setSaturation((hsl.s ?? 0) * 100);
+      setLightness((hsl.l ?? 0) * 100);
+      setAlpha((hsl.alpha ?? 1) * 100);
     } catch (error) {
       console.error("EyeDropper failed:", error);
     }
@@ -366,10 +440,10 @@ function ColorPickerFormat({
   ...props
 }: ComponentPropsWithoutRef<"div">) {
   const { hue, saturation, lightness, alpha, mode } = useColorPicker();
-  const color = Color.hsl(hue, saturation, lightness, alpha / 100);
+  const color = createHslColor(hue, saturation, lightness, alpha);
 
   if (mode === "hex") {
-    const hex = color.hex();
+    const hex = formatHex(color);
 
     return (
       <div
@@ -393,10 +467,14 @@ function ColorPickerFormat({
   }
 
   if (mode === "rgb") {
-    const rgb = color
-      .rgb()
-      .array()
-      .map((value) => Math.round(value));
+    const rgbColor = toRgb(color);
+    const rgb = rgbColor
+      ? [
+          Math.round(rgbColor.r * 255),
+          Math.round(rgbColor.g * 255),
+          Math.round(rgbColor.b * 255),
+        ]
+      : [0, 0, 0];
 
     return (
       <div
@@ -426,10 +504,14 @@ function ColorPickerFormat({
   }
 
   if (mode === "css") {
-    const rgb = color
-      .rgb()
-      .array()
-      .map((value) => Math.round(value));
+    const rgbColor = toRgb(color);
+    const rgb = rgbColor
+      ? [
+          Math.round(rgbColor.r * 255),
+          Math.round(rgbColor.g * 255),
+          Math.round(rgbColor.b * 255),
+        ]
+      : [0, 0, 0];
 
     return (
       <div className={cn("w-full", className)} {...props}>
@@ -445,10 +527,11 @@ function ColorPickerFormat({
   }
 
   if (mode === "hsl") {
-    const hsl = color
-      .hsl()
-      .array()
-      .map((value) => Math.round(value));
+    const hsl = [
+      Math.round(hue),
+      Math.round(saturation),
+      Math.round(lightness),
+    ];
 
     return (
       <div
