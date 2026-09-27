@@ -695,6 +695,21 @@
       ]
     },
     {
+      "name": "qr-code",
+      "type": "registry:component",
+      "title": "QR Code",
+      "description": "Generates and display a QR code from a string.",
+      "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["cn", "culori", "qrcode"],
+      "files": [
+        {
+          "path": "qr-code.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/qr-code.tsx"
+        }
+      ]
+    },
+    {
       "name": "questionnaire",
       "type": "registry:component",
       "title": "Questionnaire",
