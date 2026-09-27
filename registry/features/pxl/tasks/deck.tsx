@@ -4,6 +4,12 @@ import { AnimatePresence, motion } from "motion/react";
 import type { ComponentProps } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import {
+  Sticky,
+  type StickyColor,
+  StickyContent,
+  stickyColors,
+} from "@/components/features/pxl/tasks/sticky";
 import { buttonVariants } from "@/components/ui/pxl/button";
 import {
   Select,
@@ -13,13 +19,6 @@ import {
   SelectValue,
 } from "@/components/ui/pxl/select";
 import { cn } from "@/lib/utils";
-
-import {
-  Sticky,
-  type StickyColor,
-  StickyContent,
-  stickyColors,
-} from "./sticky";
 
 type DeckState = Partial<Record<StickyColor, number>>;
 type Theme = {

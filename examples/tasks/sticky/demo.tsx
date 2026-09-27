@@ -2,7 +2,7 @@ import {
   Sticky,
   StickyContent,
   StickyTitle,
-} from "@/components/features/pxl/notes/sticky";
+} from "@/components/features/pxl/tasks/sticky";
 import { Markdown } from "@/components/ui/pxl/markdown";
 
 export default function StickyDemo() {

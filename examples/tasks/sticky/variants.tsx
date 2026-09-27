@@ -1,10 +1,10 @@
-import { deckThemes } from "@/components/features/pxl/notes/deck";
+import { deckThemes } from "@/components/features/pxl/tasks/deck";
 import {
   Sticky,
   type StickyColor,
   StickyContent,
   StickyTitle,
-} from "@/components/features/pxl/notes/sticky";
+} from "@/components/features/pxl/tasks/sticky";
 import { Markdown } from "@/components/ui/pxl/markdown";
 
 export default function StickyVariants() {

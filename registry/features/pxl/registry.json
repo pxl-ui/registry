@@ -139,44 +139,30 @@
       ]
     },
     {
-      "name": "notes/deck",
-      "type": "registry:component",
-      "title": "Deck",
-      "description": "A component that displays a sticky notes deck.",
-      "categories": ["pxl-ui", "features", "notes"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "notes/deck.tsx",
-          "target": "@components/features/pxl/notes/deck.tsx"
-        }
-      ]
-    },
-    {
-      "name": "notes/editor",
+      "name": "notebook/editor",
       "type": "registry:component",
       "title": "Editor",
       "description": "A component that displays a notes editor.",
-      "categories": ["pxl-ui", "features", "notes"],
+      "categories": ["pxl-ui", "features", "notebook"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "notes/editor.tsx",
-          "target": "@components/features/pxl/notes/editor.tsx"
+          "path": "notebook/editor.tsx",
+          "target": "@components/features/pxl/notebook/editor.tsx"
         }
       ]
     },
     {
-      "name": "notes/sticky",
+      "name": "tasks/deck",
       "type": "registry:component",
-      "title": "Sticky",
-      "description": "A component that displays a sticky note.",
-      "categories": ["pxl-ui", "features", "notes"],
+      "title": "Deck",
+      "description": "A component that displays a sticky notes deck.",
+      "categories": ["pxl-ui", "features", "tasks"],
       "files": [
         { 
           "type": "registry:file",
-          "path": "notes/sticky.tsx",
-          "target": "@components/features/pxl/notes/sticky.tsx"
+          "path": "tasks/deck.tsx",
+          "target": "@components/features/pxl/tasks/deck.tsx"
         }
       ]
     },
@@ -289,6 +275,20 @@
           "type": "registry:file",
           "path": "tasks/status-toggle.tsx",
           "target": "@components/features/pxl/tasks/status-toggle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tasks/sticky",
+      "type": "registry:component",
+      "title": "Sticky",
+      "description": "A component that displays a sticky note.",
+      "categories": ["pxl-ui", "features", "tasks"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasks/sticky.tsx",
+          "target": "@components/features/pxl/tasks/sticky.tsx"
         }
       ]
     },

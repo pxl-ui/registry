@@ -125,11 +125,6 @@ export default defineConfig({
                     items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
                   },
                   {
-                    label: "Notes",
-                    collapsed: true,
-                    items: [{ label: "Obsidian", link: "/schemas/obsidian" }],
-                  },
-                  {
                     label: "Mails",
                     collapsed: true,
                     items: [
@@ -326,8 +321,20 @@ export default defineConfig({
                 items: [{ autogenerate: { directory: "features/marketing" } }],
               },
               {
-                label: "Notes",
-                items: [{ autogenerate: { directory: "features/notes" } }],
+                label: "Notebook",
+                items: [
+                  { autogenerate: { directory: "features/notebook" } },
+                  {
+                    label: "Obsidian",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/obsidian",
+                      },
+                    ],
+                  },
+                ],
               },
               {
                 label: "Tasks",
