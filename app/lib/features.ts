@@ -16,8 +16,8 @@ const lists = {
   notebook: filter({
     categories: ["features", "notebook"],
   }),
-  tasks: filter({
-    categories: ["features", "tasks"],
+  taskboard: filter({
+    categories: ["features", "taskboard"],
   }),
 };
 

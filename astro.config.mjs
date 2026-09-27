@@ -337,9 +337,9 @@ export default defineConfig({
                 ],
               },
               {
-                label: "Tasks",
+                label: "Taskboard",
                 items: [
-                  { autogenerate: { directory: "features/tasks" } },
+                  { autogenerate: { directory: "features/taskboard" } },
                   {
                     label: "TaskNotes",
                     collapsed: true,

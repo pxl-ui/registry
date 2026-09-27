@@ -91,13 +91,13 @@ import { toRouteId } from "~/lib/registry";
 
 </div>
 
-## <FeatureIcon name="tasks" class="size-5 inline-flex" /> Tasks
+## <FeatureIcon name="tasks" class="size-5 inline-flex" /> Taskboard
 > <p className="text-muted-foreground">Components to display tasks</p>
 
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
-  {lists.tasks.map(item => (
+  {lists.taskboard.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}

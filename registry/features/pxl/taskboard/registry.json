@@ -1,0 +1,119 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/taskboard",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "taskboard/deck",
+      "type": "registry:component",
+      "title": "Deck",
+      "description": "A component that displays a sticky notes deck.",
+      "categories": ["pxl-ui", "features", "taskboard"],
+      "dependencies": ["cn", "motion"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/select",
+        "pxl-ui/registry/taskboard/sticky"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "deck.tsx",
+          "target": "@components/features/pxl/taskboard/deck.tsx"
+        }
+      ]
+    },
+    {
+      "name": "taskboard/sticky",
+      "type": "registry:component",
+      "title": "Sticky",
+      "description": "A component that displays a sticky note.",
+      "categories": ["pxl-ui", "features", "taskboard"],
+      "dependencies": ["cn"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "sticky.tsx",
+          "target": "@components/features/pxl/taskboard/sticky.tsx"
+        }
+      ]
+    },
+    {
+      "name": "taskboard/task-badge",
+      "type": "registry:component",
+      "title": "Task Badge",
+      "description": "Badges for task items.",
+      "dependencies": ["cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/badge"
+      ],
+      "categories": ["pxl-ui", "features", "taskboard"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "task-badge.tsx",
+          "target": "@components/features/pxl/taskboard/task-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "taskboard/task",
+      "type": "registry:component",
+      "title": "Task",
+      "description": "A task item.",
+      "categories": ["pxl-ui", "features", "taskboard"],
+      "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/dropdown-menu",
+        "pxl-ui/registry/separator",
+        "pxl-ui/registry/taskboard/task-badge"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "task.tsx",
+          "target": "@components/features/pxl/taskboard/task.tsx"
+        }
+      ]
+    },
+    {
+      "name": "taskboard/tasknotes/task-badge",
+      "type": "registry:component",
+      "title": "TaskNotes Badge",
+      "description": "Badges for task items using TaskNotes.",
+      "categories": ["pxl-ui", "features", "taskboard", "taskboard/tasknotes"],
+      "registryDependencies": [
+        "pxl-ui/registry/taskboard/task-badge",
+        "pxl-ui/registry/schemas/tasknotes"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasknotes/task-badge.tsx",
+          "target": "@components/features/pxl/taskboard/tasknotes/task-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "taskboard/tasknotes/task",
+      "type": "registry:component",
+      "title": "TaskNotes Task",
+      "description": "Components for displaying Tasks using TaskNotes.",
+      "categories": ["pxl-ui", "features", "taskboard", "taskboard/tasknotes"],
+      "registryDependencies": [
+        "pxl-ui/registry/taskboard/task",
+        "pxl-ui/registry/taskboard/tasknotes/task-badge",
+        "pxl-ui/registry/markdown",
+        "pxl-ui/registry/schemas/tasknotes"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasknotes/task.tsx",
+          "target": "@components/features/pxl/taskboard/tasknotes/task.tsx"
+        }
+      ]
+    }
+  ]
+}
