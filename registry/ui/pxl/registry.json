@@ -717,6 +717,26 @@
       ]
     },
     {
+      "name": "reel",
+      "type": "registry:component",
+      "title": "Reel",
+      "description": "A composable, Instagram-style Reel component with progress indicators and navigation controls.",
+      "categories": ["pxl-ui", "components", "content"],
+      "dependencies": ["cn", "motion"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/progress",
+        "pxl-ui/registry/use-controllable-state"
+      ],
+      "files": [
+        {
+          "path": "reel.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/reel.tsx"
+        }
+      ]
+    },
+    {
       "name": "reveal",
       "type": "registry:component",
       "title": "Reveal",

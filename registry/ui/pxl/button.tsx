@@ -15,6 +15,8 @@ const buttonVariants = cva(
       border: {
         default:
           "pixel-border pixel-rounded pixel-size-md pixel-color-[transparent]",
+        rounded:
+          "pixel-rounded pixel-size-md pixel-color-[transparent]",
         none: "",
         outline: "pixel-border pixel-rounded pixel-size-md",
       },
