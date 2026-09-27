@@ -13,6 +13,9 @@ const lists = {
   marketing: filter({
     categories: ["features", "marketing"],
   }),
+  notebook: filter({
+    categories: ["features", "notebook"],
+  }),
   tasks: filter({
     categories: ["features", "tasks"],
   }),

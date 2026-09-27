@@ -8,6 +8,7 @@ import ComponentPreview from "./ComponentPreview.astro";
 import CursorPreview from "./CursorPreview";
 import DisplayPreview from "./DisplayPreview";
 import EmojiPreview from "./EmojiPreview";
+import FeatureIcon from "./FeatureIcon.astro";
 import FlagPreview from "./FlagPreview";
 import FontPreview from "./FontPreview";
 import IconPreview from "./IconPreview";
@@ -20,6 +21,7 @@ import Showcase from "./Showcase";
 import Stats from "./Stats";
 import Step from "./Step.astro";
 import Steps from "./Steps.astro";
+import Icon from "./starlight/Icon.astro";
 
 export {
   Callout,
@@ -29,8 +31,10 @@ export {
   CursorPreview,
   DisplayPreview,
   EmojiPreview,
+  FeatureIcon,
   FlagPreview,
   FontPreview,
+  Icon,
   IconPreview,
   Install,
   Kbd,
