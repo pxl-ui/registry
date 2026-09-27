@@ -283,6 +283,29 @@
       ]
     },
     {
+      "name": "color-picker",
+      "type": "registry:component",
+      "title": "Color Picker",
+      "description": "Allows users to select a color. Modeled after the color picker in Figma.",
+      "categories": ["pxl-ui", "components", "interaction"],
+      "dependencies": ["cn", "color", "@base-ui/react"],
+      "devDependencies": ["@types/color"],
+      "registryDependencies": [
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/input-group",
+        "pxl-ui/registry/select",
+        "pxl-ui/registry/separator"
+      ],
+      "files": [
+        {
+          "path": "color-picker.tsx",
+          "type": "registry:component",
+          "target": "@ui/pxl/color-picker.tsx"
+        }
+      ]
+    },
+    {
       "name": "combobox",
       "type": "registry:component",
       "title": "Combobox",

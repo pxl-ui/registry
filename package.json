@@ -50,6 +50,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "cn": "^0.3.0",
+    "color": "^5.0.3",
     "embla-carousel-react": "^8.6.0",
     "emojibase-data": "^17.0.0",
     "feedsmith": "^2.9.6",
@@ -78,6 +79,7 @@
   },
   "devDependencies": {
     "@pagefind/default-ui": "^1.5.2",
+    "@types/color": "^4.2.1",
     "@types/js-yaml": "4.0.9",
     "@types/katex": "^0.16.8",
     "@types/node": "^22.13.10",

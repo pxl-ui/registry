@@ -8,14 +8,26 @@ import { Input } from "@/components/ui/pxl/input";
 import { Textarea } from "@/components/ui/pxl/textarea";
 import { cn } from "@/lib/utils";
 
-function InputGroup({ className, ...props }: ComponentProps<"div">) {
+const inputGroupVariants = cva("group/input-group relative flex h-9 w-full min-w-0 items-center transition-[color,box-shadow] outline-none in-data-[slot=combobox-content]:focus-within:[--pixel-color:inherit] has-[[data-slot=input-group-control]:focus-visible]:pixel-color-ring has-[[data-slot][aria-invalid=true]]:pixel-color-destructive has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>textarea]:h-auto dark:pixel-color-input has-[>[data-align=block-end]]:[&>input]:pt-3 has-[>[data-align=block-start]]:[&>input]:pb-3 has-[>[data-align=inline-end]]:[&>input]:pr-1.5 has-[>[data-align=inline-start]]:[&>input]:pl-1.5", {
+  variants: {
+    border: {
+      solid: "pixel-rounded pixel-border pixel-size-[3px]",
+      none: ""
+    }
+  },
+  defaultVariants: {
+    border: "solid"
+  }
+})
+
+function InputGroup({ border, className, ...props }: ComponentProps<"div"> & VariantProps<typeof inputGroupVariants>) {
   return (
     // biome-ignore lint/a11y/useSemanticElements: input group
     <div
       data-slot="input-group"
       role="group"
       className={cn(
-        "group/input-group relative flex h-9 w-full min-w-0 items-center pixel-rounded pixel-border pixel-size-[3px] transition-[color,box-shadow] outline-none in-data-[slot=combobox-content]:focus-within:[--pixel-color:inherit] has-[[data-slot=input-group-control]:focus-visible]:pixel-color-ring has-[[data-slot][aria-invalid=true]]:pixel-color-destructive has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>textarea]:h-auto dark:pixel-color-input has-[>[data-align=block-end]]:[&>input]:pt-3 has-[>[data-align=block-start]]:[&>input]:pb-3 has-[>[data-align=inline-end]]:[&>input]:pr-1.5 has-[>[data-align=inline-start]]:[&>input]:pl-1.5",
+        inputGroupVariants({ border }),
         className,
       )}
       {...props}
@@ -117,12 +129,13 @@ function InputGroupText({ className, ...props }: ComponentProps<"span">) {
   );
 }
 
-function InputGroupInput({ className, ...props }: ComponentProps<"input">) {
+function InputGroupInput({ className, ...props }: ComponentProps<typeof Input>) {
   return (
     <Input
+      border="none"
       data-slot="input-group-control"
       className={cn(
-        "flex-1 pixel-size-[0px] pixel-color-[transparent] has-[input:focus-visible]:pixel-color-[transparent]",
+        "flex-1",
         className,
       )}
       {...props}

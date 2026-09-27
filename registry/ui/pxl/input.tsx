@@ -5,7 +5,7 @@ import { type ComponentProps, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
 const inputWrapperVariants = cva(
-  "pixel-rounded pixel-border pixel-size-md [--pixel-color:var(--input)] has-[input:focus-visible]:[--pixel-color:var(--ring)] has-[input:disabled]:opacity-50 has-[input[aria-invalid=true]]:[--pixel-color:var(--destructive)]",
+  "[--pixel-color:var(--input)] has-[input:focus-visible]:[--pixel-color:var(--ring)] has-[input:disabled]:opacity-50 has-[input[aria-invalid=true]]:[--pixel-color:var(--destructive)]",
   {
     variants: {
       size: {
@@ -13,9 +13,14 @@ const inputWrapperVariants = cva(
         xs: "",
         md: "",
       },
-      defaultVariants: {
-        size: "default",
-      },
+      border: {
+        solid: "pixel-rounded pixel-border pixel-size-md",
+        none: "",
+      }
+    },
+    defaultVariants: {
+      border: "solid",
+      size: "default",
     },
   },
 );
@@ -29,8 +34,13 @@ const inputVariants = cva(
         xs: "px-1.5 py-0.5 h-5 text-sm file:h-7 file:text-sm md:text-xs",
         md: "px-2.5 py-1 h-9 text-base file:h-7 file:text-sm md:text-sm",
       },
+      border: {
+        solid: "",
+        none: "",
+      }
     },
     defaultVariants: {
+      border: "solid",
       size: "default",
     },
   },
@@ -39,12 +49,13 @@ const inputVariants = cva(
 const Input = forwardRef<
   HTMLInputElement,
   Omit<ComponentProps<"input">, "size"> & VariantProps<typeof inputVariants>
->(function Input({ className, size = "default", type, ...props }, ref) {
+>(function Input({ border = "solid", className, size = "default", type, ...props }, ref) {
   return (
     <div
       data-slot="input-wrapper"
       className={cn(
         inputWrapperVariants({
+          border,
           size,
         }),
         className,
@@ -56,6 +67,7 @@ const Input = forwardRef<
         data-slot="input"
         className={cn(
           inputVariants({
+            border,
             size,
           }),
         )}
