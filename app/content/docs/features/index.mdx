@@ -6,40 +6,6 @@ import { FeatureIcon, LinkCard } from "~/components";
 import { lists } from "~/lib/features";
 import { toRouteId } from "~/lib/registry";
 
-## <FeatureIcon name="magazine" class="size-5 inline-flex" /> Magazine
-> <p className="text-muted-foreground">Components to display blog posts or articles contents</p>
-
-
-<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-
-  {lists.magazine.map(item => (
-    <LinkCard 
-      href={toRouteId(item.name)} 
-      title={item.title ?? item.name}
-      description={item.description}
-    >
-    </LinkCard>
-  ))}
-
-</div>
-
-## <FeatureIcon name="newspaper" class="size-5 inline-flex" /> Newspaper
-> <p className="text-muted-foreground">Components to display distraction-free RSS feeds</p>
-
-
-<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-
-  {lists.newspaper.map(item => (
-    <LinkCard 
-      href={toRouteId(item.name)} 
-      title={item.title ?? item.name}
-      description={item.description}
-    >
-    </LinkCard>
-  ))}
-
-</div>
-
 ## <FeatureIcon name="conversation" class="size-5 inline-flex" /> Conversation
 > <p className="text-muted-foreground">Components to display chat conversations and messages</p>
 
@@ -57,6 +23,40 @@ import { toRouteId } from "~/lib/registry";
 
 </div>
 
+## <FeatureIcon name="forecast" class="size-5 inline-flex" /> Forecast
+> <p className="text-muted-foreground">Components to display the weather</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.forecast.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
+## <FeatureIcon name="magazine" class="size-5 inline-flex" /> Magazine
+> <p className="text-muted-foreground">Components to display blog posts or articles contents</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.magazine.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
 ## <FeatureIcon name="marketing" class="size-5 inline-flex" /> Marketing
 > <p className="text-muted-foreground">Components to display landing page and marketing contents</p>
 
@@ -64,6 +64,23 @@ import { toRouteId } from "~/lib/registry";
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 
   {lists.marketing.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
+## <FeatureIcon name="newspaper" class="size-5 inline-flex" /> Newspaper
+> <p className="text-muted-foreground">Components to display distraction-free RSS feeds</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.newspaper.map(item => (
     <LinkCard 
       href={toRouteId(item.name)} 
       title={item.title ?? item.name}

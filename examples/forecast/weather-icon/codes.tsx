@@ -1,7 +1,7 @@
 import type { WMO4677Code } from "weather-i18n/wmo_4677";
 import getWeatherCodeI18n from "weather-i18n/wmo_4677/i18n";
 
-import { WeatherIcon } from "@/components/ui/pxl/weather-icon";
+import { WeatherIcon } from "@/components/features/pxl/forecast/weather-icon";
 
 const t = getWeatherCodeI18n("en");
 

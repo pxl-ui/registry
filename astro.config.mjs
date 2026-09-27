@@ -251,8 +251,22 @@ export default defineConfig({
                 link: "/features/",
               },
               {
+                label: "Conversation",
+                items: [
+                  { autogenerate: { directory: "features/conversation" } },
+                ],
+              },
+              {
+                label: "Forecast",
+                items: [{ autogenerate: { directory: "features/forecast" } }],
+              },
+              {
                 label: "Magazine",
                 items: [{ autogenerate: { directory: "features/magazine" } }],
+              },
+              {
+                label: "Marketing",
+                items: [{ autogenerate: { directory: "features/marketing" } }],
               },
               {
                 label: "Newspaper",
@@ -309,16 +323,6 @@ export default defineConfig({
                     ],
                   },
                 ],
-              },
-              {
-                label: "Conversation",
-                items: [
-                  { autogenerate: { directory: "features/conversation" } },
-                ],
-              },
-              {
-                label: "Marketing",
-                items: [{ autogenerate: { directory: "features/marketing" } }],
               },
               {
                 label: "Notebook",

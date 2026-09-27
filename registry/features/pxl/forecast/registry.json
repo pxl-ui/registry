@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/forecast",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "forecast/weather-icon",
+      "type": "registry:component",
+      "title": "Weather Icon",
+      "description": "A Icon Component to display the Weather",
+      "categories": ["pxl-ui", "features", "forecast", "wmo_4677"],
+      "dependencies": ["cn", "weather-i18n"],
+      "files": [
+        {
+          "path": "weather-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/forecast/weather-icon.tsx"
+        }
+      ]
+    }
+  ]
+}

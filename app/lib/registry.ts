@@ -55,6 +55,7 @@ const WIDGET_KIND_CATEGORIES = {
 const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   backgrounds: { prefix: "backgrounds/" },
   "features/conversation/": { prefix: "conversation/" },
+  "features/forecast/": { prefix: "forecast/" },
   "features/magazine/": { prefix: "magazine/" },
   "features/marketing/": { prefix: "marketing/" },
   "features/newspaper/": { prefix: "newspaper/" },

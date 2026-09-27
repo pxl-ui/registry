@@ -8,6 +8,7 @@ import {
 import type { DayPhase, Language, WMO4677Code } from "weather-i18n/wmo_4677";
 import getWeatherCodeI18n from "weather-i18n/wmo_4677/i18n";
 
+import { WeatherIcon } from "@/components/features/pxl/forecast/weather-icon";
 import AnimatedIcon from "@/components/ui/pxl/animated-icon";
 import { Badge } from "@/components/ui/pxl/badge";
 import { Button } from "@/components/ui/pxl/button";
@@ -18,7 +19,6 @@ import {
   CardTitle,
 } from "@/components/ui/pxl/card";
 import { ScrollArea } from "@/components/ui/pxl/scroll-area";
-import { WeatherIcon } from "@/components/ui/pxl/weather-icon";
 import type { GCalendar } from "@/lib/schemas/pxl/gcalendar";
 import type { OpenMeteo } from "@/lib/schemas/pxl/openmeteo";
 import { cn } from "@/lib/utils";

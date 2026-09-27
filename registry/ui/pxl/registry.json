@@ -1162,21 +1162,6 @@
       ]
     },
     {
-      "name": "weather-icon",
-      "type": "registry:component",
-      "title": "Weather Icon",
-      "description": "A Icon Component to display the Weather",
-      "categories": ["pxl-ui", "components", "content"],
-      "dependencies": ["weather-i18n"],
-      "files": [
-        {
-          "path": "weather-icon.tsx",
-          "type": "registry:component",
-          "target": "@ui/pxl/weather-icon.tsx"
-        }
-      ]
-    },
-    {
       "name": "wheel-list",
       "type": "registry:component",
       "title": "Wheel List",

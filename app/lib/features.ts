@@ -1,6 +1,9 @@
 import { filter } from "~/lib/registry";
 
 const lists = {
+  forecast: filter({
+    categories: ["features", "forecast"],
+  }),
   magazine: filter({
     categories: ["features", "magazine"],
   }),

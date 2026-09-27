@@ -1,4 +1,4 @@
-import { WeatherIcon } from "@/components/ui/pxl/weather-icon";
+import { WeatherIcon } from "@/components/features/pxl/forecast/weather-icon";
 
 export default function WeatherIconDemo() {
   return (
