@@ -1,14 +1,12 @@
 import {
   type ComponentProps,
   useCallback,
-  useEffect,
-  useMemo,
-  useState,
+  useMemo
 } from "react";
-import type { DayPhase, Language, WMO4677Code } from "weather-i18n/wmo_4677";
-import getWeatherCodeI18n from "weather-i18n/wmo_4677/i18n";
+import type { Language } from "weather-i18n/wmo_4677";
 
-import { WeatherIcon } from "@/components/features/pxl/forecast/weather-icon";
+import { CurrentWeather, CurrentWeatherDate } from "@/components/features/pxl/forecast/current-weather";
+import { CurrentWeatherDescription, CurrentWeatherIcon, CurrentWeatherMinMax, CurrentWeatherTemperature } from "@/components/features/pxl/forecast/openmeteo/current-weather";
 import AnimatedIcon from "@/components/ui/pxl/animated-icon";
 import { Badge } from "@/components/ui/pxl/badge";
 import { Button } from "@/components/ui/pxl/button";
@@ -25,8 +23,6 @@ import { cn } from "@/lib/utils";
 
 function Weather({
   forecast,
-  language = "en",
-  texts,
 }: {
   forecast?: OpenMeteo.Forecast;
   language?: Language;
@@ -35,106 +31,24 @@ function Weather({
     minLabel: string;
   };
 }) {
-  const title = useMemo(() => {
-    return new Intl.DateTimeFormat(language, {
-      day: "numeric",
-      month: "long",
-    }).format(new Date());
-  }, [language]);
-
-  const [now, setNow] = useState(Date.now());
-
-  useEffect(function tick() {
-    const interval = setInterval(() => {
-      setNow(Date.now());
-    }, 60_000); // each minute
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const index = useMemo(
-    function evaluateIndex() {
-      if (!forecast) {
-        return 0;
-      }
-
-      const date = new Date(now);
-      const currentTime =
-        [
-          date.getFullYear(),
-          String(date.getMonth() + 1).padStart(2, "0"),
-          String(date.getDate()).padStart(2, "0"),
-        ].join("-") +
-        "T" +
-        String(date.getHours()).padStart(2, "0") +
-        ":00";
-
-      return forecast.hourly.time.indexOf(currentTime);
-    },
-    [forecast, now],
-  );
-
-  const weather = useMemo(() => {
-    if (!forecast) {
-      return null;
-    }
-
-    const code = forecast.hourly.weather_code[index] as WMO4677Code;
-    const dayPhase: DayPhase = forecast.hourly.is_day[index] ? "day" : "night";
-
-    const unit = forecast.hourly_units.temperature_2m ?? "°C";
-    const current = forecast.hourly.temperature_2m[index]
-      ? `${Math.round(forecast.hourly.temperature_2m[index])} ${unit}`
-      : undefined;
-    const summary = code
-      ? getWeatherCodeI18n(language)(code, dayPhase)
-      : undefined;
-    const max = forecast.daily.temperature_2m_max[0]
-      ? `${texts.maxLabel} ${Math.round(forecast.daily.temperature_2m_max[0])}`
-      : undefined;
-    const min = forecast.daily.temperature_2m_min[0]
-      ? `${texts.minLabel} ${Math.round(forecast.daily.temperature_2m_min[0])}`
-      : undefined;
-
-    return {
-      code,
-      dayPhase,
-      current,
-      summary,
-      max,
-      min,
-    };
-  }, [index, forecast, texts, language]);
+  if (!forecast) {
+    return null;
+  }
 
   return (
-    <div className="flex flex-col justify-between">
-      {weather && (
-        <div className="absolute inset-0 flex items-center justify-start ml-[13%]">
-          <WeatherIcon
-            className="size-24 fill-foreground/20"
-            code={weather.code}
-            dayPhase={weather.dayPhase}
-          />
-        </div>
-      )}
-      <div>
-        <h2 className="font-sans text-lg leading-3">{title}</h2>
-      </div>
+    <CurrentWeather>
+      <CurrentWeatherIcon forecast={forecast} />
+      
+      <CurrentWeatherDate />
 
       <div className="flex flex-col">
-        <div className="flex flex-row gap-1 items-end">
-          <span className="font-heading text-xl leading-6">
-            {weather?.current}
-          </span>
-        </div>
+        <CurrentWeatherTemperature forecast={forecast} />
         <div className="flex flex-col">
-          <h3 className="leading-4 text-xs">{weather?.summary}</h3>
-          <p className="leading-4 text-xs">
-            {weather?.max} {weather?.min}
-          </p>
+          <CurrentWeatherDescription forecast={forecast} />
+          <CurrentWeatherMinMax forecast={forecast} />
         </div>
       </div>
-    </div>
+    </CurrentWeather>
   );
 }
 

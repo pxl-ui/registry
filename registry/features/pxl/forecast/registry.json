@@ -4,6 +4,43 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
+      "name": "forecast/current-weather",
+      "type": "registry:component",
+      "title": "Current Weather",
+      "description": "Displays the current weather",
+      "categories": ["pxl-ui", "features", "forecast", "wmo_4677"],
+      "dependencies": ["cn", "weather-i18n"],
+      "registryDependencies": [
+        "pxl-ui/registry/forecast/weather-icon"
+      ],
+      "files": [
+        {
+          "path": "current-weather.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/forecast/current-weather.tsx"
+        }
+      ]
+    },
+    {
+      "name": "forecast/openmeteo/current-weather",
+      "type": "registry:component",
+      "title": "OpenMeteo Current Weather",
+      "description": "Displays the current weather from OpenMeteo",
+      "categories": ["pxl-ui", "features", "forecast", "openmeteo"],
+      "dependencies": ["cn", "weather-i18n"],
+      "registryDependencies": [
+        "pxl-ui/registry/forecast/current-weather",
+        "pxl-ui/registry/schemas/openmeteo"
+      ],
+      "files": [
+        {
+          "path": "openmeteo/current-weather.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/forecast/openmeteo/current-weather.tsx"
+        }
+      ]
+    },
+    {
       "name": "forecast/weather-icon",
       "type": "registry:component",
       "title": "Weather Icon",
