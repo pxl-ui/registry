@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/retrograde.css";
+
+.font-retrograde {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Retrograde', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

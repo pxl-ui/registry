@@ -1,0 +1,17 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Sorena";
+    src: url("/fonts/Sorena-Normal.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sorena Pixel";
+    src: url("/fonts/Sorena-Pixel.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+}

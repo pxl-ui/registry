@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/gothamono.css";
+
+.font-gothamono {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gothamono', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

@@ -1,0 +1,170 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/gossip.css";
+
+.font-gossip {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gossip Low Pixel', serif;
+  font-size-adjust: var(--font-size-adjust);
+
+  &.text-3xs,
+  &.text-2xs,
+  &.text-xs,
+  &.text-sm,
+  &.text-base {
+    font-family: 'Gossip Medium Pixel', serif;
+  }
+
+  &.text-lg,
+  &.text-xl,
+  &.text-2xl,
+  &.text-3xl,
+  &.text-4xl,
+  &.text-5xl,
+  &.text-6xl,
+  &.text-7xl,
+  &.text-8xl,
+  &.text-9xl {
+    font-family: 'Gossip High Pixel', serif;
+  }
+}
+
+.font-gossip-pixel {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gossip Low Pixel', serif;
+  font-size-adjust: var(--font-size-adjust);
+
+  &.text-3xs,
+  &.text-2xs,
+  &.text-xs,
+  &.text-sm,
+  &.text-base {
+    font-family: 'Gossip Medium Pixel', serif;
+  }
+
+  &.text-lg,
+  &.text-xl,
+  &.text-2xl,
+  &.text-3xl,
+  &.text-4xl,
+  &.text-5xl,
+  &.text-6xl,
+  &.text-7xl,
+  &.text-8xl,
+  &.text-9xl {
+    font-family: 'Gossip High Pixel', serif;
+  }
+}
+
+.font-gossip-square {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gossip Low Square', serif;
+  font-size-adjust: var(--font-size-adjust);
+
+  &.text-3xs,
+  &.text-2xs,
+  &.text-xs,
+  &.text-sm,
+  &.text-base {
+    font-family: 'Gossip Medium Square', serif;
+  }
+
+  &.text-lg,
+  &.text-xl,
+  &.text-2xl,
+  &.text-3xl,
+  &.text-4xl,
+  &.text-5xl,
+  &.text-6xl,
+  &.text-7xl,
+  &.text-8xl,
+  &.text-9xl {
+    font-family: 'Gossip High Square', serif;
+  }
+}
+
+.font-gossip-cross-small {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gossip Low Cross Small', serif;
+  font-size-adjust: var(--font-size-adjust);
+
+  &.text-3xs,
+  &.text-2xs,
+  &.text-xs,
+  &.text-sm,
+  &.text-base {
+    font-family: 'Gossip Medium Cross Small', serif;
+  }
+
+  &.text-lg,
+  &.text-xl,
+  &.text-2xl,
+  &.text-3xl,
+  &.text-4xl,
+  &.text-5xl,
+  &.text-6xl,
+  &.text-7xl,
+  &.text-8xl,
+  &.text-9xl {
+    font-family: 'Gossip High Cross Small', serif;
+  }
+}
+
+.font-gossip-cross-stitch {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gossip Low Cross Stitch', serif;
+  font-size-adjust: var(--font-size-adjust);
+
+  &.text-3xs,
+  &.text-2xs,
+  &.text-xs,
+  &.text-sm,
+  &.text-base {
+    font-family: 'Gossip Medium Cross Stitch', serif;
+  }
+
+  &.text-lg,
+  &.text-xl,
+  &.text-2xl,
+  &.text-3xl,
+  &.text-4xl,
+  &.text-5xl,
+  &.text-6xl,
+  &.text-7xl,
+  &.text-8xl,
+  &.text-9xl {
+    font-family: 'Gossip High Cross Stitch', serif;
+  }
+}
+
+.font-gossip-needlepoint {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gossip Low Needlepoint', serif;
+  font-size-adjust: var(--font-size-adjust);
+
+  &.text-3xs,
+  &.text-2xs,
+  &.text-xs,
+  &.text-sm,
+  &.text-base {
+    font-family: 'Gossip Medium Needlepoint', serif;
+  }
+
+  &.text-lg,
+  &.text-xl,
+  &.text-2xl,
+  &.text-3xl,
+  &.text-4xl,
+  &.text-5xl,
+  &.text-6xl,
+  &.text-7xl,
+  &.text-8xl,
+  &.text-9xl {
+    font-family: 'Gossip High Needlepoint', serif;
+  }
+}

@@ -64,7 +64,7 @@ const REGISTRY_URL_GROUPS: Record<string, { prefix?: string }> = {
   colors: { prefix: "colors/" },
   "displays/mocks": {},
   displays: { prefix: "displays/" },
-  typography: { prefix: "fonts/" },
+  fonts: { prefix: "fonts/" },
   icons: { prefix: "icons/" },
   components: {},
   layout: {},
@@ -364,7 +364,7 @@ function toRouteId(itemName: string) {
 
   if (itemKind === "background") return url(`backgrounds/${baseName}`);
   if (itemKind === "color") return url(`colors/${baseName}`);
-  if (itemKind === "font") return url(`typography/${baseName}`);
+  if (itemKind === "font") return url(`fonts/${baseName}`);
   if (itemKind === "icon") return url(`icons/${baseName}`);
   if (itemKind === "schema") return url(`schemas/${baseName}`);
 

@@ -50,8 +50,8 @@ export default function FontPreview({
                 <p
                   className={cn(
                     "flex-1 truncate",
-                    s.className,
                     `font-${fontName}`,
+                    s.className,
                   )}
                 >
                   {sampleText}
@@ -85,9 +85,9 @@ export default function FontPreview({
                     <p
                       className={cn(
                         "flex-1 truncate",
+                        `font-${fontName}`,
                         s.className,
                         v.className,
-                        `font-${fontName}`,
                       )}
                     >
                       {sampleText}

@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/dogica.css";
+
+.font-dogica {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Dogica', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-dogica-pixel {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Dogica Pixel', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

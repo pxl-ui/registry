@@ -1,0 +1,58 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Player Sans Mono 8x8";
+    src: url("/fonts/Player_Sans_Mono-8x8-Light.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Player Sans Mono 8x8";
+    src: url("/fonts/Player_Sans_Mono-8x8-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Player Sans Mono 8x8";
+    src: url("/fonts/Player_Sans_Mono-8x8-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Player Sans Mono 8x8";
+    src: url("/fonts/Player_Sans_Mono-8x8-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Player Sans Mono 8x13";
+    src: url("/fonts/Player_Sans_Mono-8x13-Light.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Player Sans Mono 8x13";
+    src: url("/fonts/Player_Sans_Mono-8x13-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Player Sans Mono 8138";
+    src: url("/fonts/Player_Sans_Mono-8x13-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Player Sans Mono 8x13";
+    src: url("/fonts/Player_Sans_Mono-8x13-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+  }
+}

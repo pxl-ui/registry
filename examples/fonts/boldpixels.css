@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/boldpixels.css";
+
+.font-boldpixels {
+  --font-size-adjust: 0.6;
+
+  font-family: 'BoldPixels', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

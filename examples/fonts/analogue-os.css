@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/analogue-os.css";
+
+.font-analogue-os {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Analogue OS', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

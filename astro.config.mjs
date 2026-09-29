@@ -499,11 +499,11 @@ export default defineConfig({
                 ],
               },
               {
-                label: "Typography",
+                label: "Fonts",
                 items: [
                   {
                     label: "Introduction",
-                    link: "/typography/",
+                    link: "/fonts/",
                   },
                   {
                     label: "Headings",
@@ -511,15 +511,47 @@ export default defineConfig({
                     items: [
                       {
                         label: "Pixel Digivolve",
-                        link: "/typography/pixel-digivolve",
+                        link: "/fonts/pixel-digivolve",
                       },
                       {
                         label: "Not Jam Blackletter 16",
-                        link: "/typography/not-jam-blackletter-16",
+                        link: "/fonts/not-jam-blackletter-16",
+                      },
+                      {
+                        label: "Gallaecia Pixeleira",
+                        link: "/fonts/gallaecia-pixeleira",
+                      },
+                      {
+                        label: "Gossip",
+                        link: "/fonts/gossip",
+                      },
+                      {
+                        label: "Home Video",
+                        link: "/fonts/home-video",
                       },
                       {
                         label: "Jacquarda Bastarda 9",
-                        link: "/typography/jacquarda-bastarda-9",
+                        link: "/fonts/jacquarda-bastarda-9",
+                      },
+                      {
+                        label: "Matrix Mono",
+                        link: "/fonts/matrix-mono",
+                      },
+                      {
+                        label: "MFI Sisperdotze",
+                        link: "/fonts/mfi-sisperdotze",
+                      },
+                      {
+                        label: "Player 9",
+                        link: "/fonts/player-9",
+                      },
+                      {
+                        label: "Retrograde",
+                        link: "/fonts/retrograde",
+                      },
+                      {
+                        label: "Tyche",
+                        link: "/fonts/tyche",
                       },
                     ],
                   },
@@ -529,39 +561,103 @@ export default defineConfig({
                     items: [
                       {
                         label: "Able 5",
-                        link: "/typography/able-5",
+                        link: "/fonts/able-5",
                       },
                       {
                         label: "Lieben Cloude",
-                        link: "/typography/lieben-cloude",
+                        link: "/fonts/lieben-cloude",
                       },
                       {
                         label: "Pixelify Sans",
-                        link: "/typography/pixelify-sans",
+                        link: "/fonts/pixelify-sans",
                       },
                       {
                         label: "Quanta Strike",
-                        link: "/typography/quanta-strike",
+                        link: "/fonts/quanta-strike",
                       },
                       {
                         label: "Tiny5",
-                        link: "/typography/tiny5",
+                        link: "/fonts/tiny5",
                       },
                       {
                         label: "Micro 5",
-                        link: "/typography/micro-5",
+                        link: "/fonts/micro-5",
                       },
                       {
                         label: "Geist Pixel",
-                        link: "/typography/geist-pixel",
+                        link: "/fonts/geist-pixel",
+                      },
+                      {
+                        label: "Handjet",
+                        link: "/fonts/handjet",
                       },
                       {
                         label: "DotGothic16",
-                        link: "/typography/dotgothic16",
+                        link: "/fonts/dotgothic16",
                       },
                       {
                         label: "Press Start 2P",
-                        link: "/typography/press-start-2p",
+                        link: "/fonts/press-start-2p",
+                      },
+                      {
+                        label: "Analogue OS",
+                        link: "/fonts/analogue-os",
+                      },
+                      {
+                        label: "BIT",
+                        link: "/fonts/bit",
+                      },
+                      {
+                        label: "Bitrimus",
+                        link: "/fonts/bitrimus",
+                      },
+                      {
+                        label: "BoldPixels",
+                        link: "/fonts/boldpixels",
+                      },
+                      {
+                        label: "Departure Mono",
+                        link: "/fonts/departure-mono",
+                      },
+                      {
+                        label: "Dogica",
+                        link: "/fonts/dogica",
+                      },
+                      {
+                        label: "Gothamono",
+                        link: "/fonts/gothamono",
+                      },
+                      {
+                        label: "Ithaca",
+                        link: "/fonts/ithaca",
+                      },
+                      {
+                        label: "Matrix Sans",
+                        link: "/fonts/matrix-sans",
+                      },
+                      {
+                        label: "Northrup",
+                        link: "/fonts/northrup",
+                      },
+                      {
+                        label: "Pixel Ultima",
+                        link: "/fonts/pixel-ultima",
+                      },
+                      {
+                        label: "Player Sans Mono",
+                        link: "/fonts/player-sans-mono",
+                      },
+                      {
+                        label: "Sorena",
+                        link: "/fonts/sorena",
+                      },
+                      {
+                        label: "Unixel",
+                        link: "/fonts/unixel",
+                      },
+                      {
+                        label: "Vaticanus",
+                        link: "/fonts/vaticanus",
                       },
                     ],
                   },
@@ -570,16 +666,28 @@ export default defineConfig({
                     collapsed: true,
                     items: [
                       {
+                        label: "Cairopixel",
+                        link: "/fonts/cairopixel",
+                      },
+                      {
                         label: "Illusion Book",
-                        link: "/typography/illusion-book",
+                        link: "/fonts/illusion-book",
                       },
                       {
                         label: "Pixel Serif",
-                        link: "/typography/pixel-serif",
+                        link: "/fonts/pixel-serif",
                       },
                       {
                         label: "Coral Pixels",
-                        link: "/typography/coral-pixels",
+                        link: "/fonts/coral-pixels",
+                      },
+                      {
+                        label: "RuneScape",
+                        link: "/fonts/runescape",
+                      },
+                      {
+                        label: "Vergilia",
+                        link: "/fonts/vergilia",
                       },
                     ],
                   },
@@ -589,15 +697,19 @@ export default defineConfig({
                     items: [
                       {
                         label: "Monogram",
-                        link: "/typography/monogram",
+                        link: "/fonts/monogram",
                       },
                       {
                         label: "Bytesized",
-                        link: "/typography/bytesized",
+                        link: "/fonts/bytesized",
+                      },
+                      {
+                        label: "Greybeard",
+                        link: "/fonts/greybeard",
                       },
                       {
                         label: "VT323",
-                        link: "/typography/vt323",
+                        link: "/fonts/vt323",
                       },
                     ],
                   },

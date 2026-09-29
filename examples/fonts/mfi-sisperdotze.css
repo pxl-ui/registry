@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/mfi-sisperdotze.css";
+
+.font-mfi-sisperdotze {
+  --font-size-adjust: 0.6;
+
+  font-family: 'MFI Sisperdotze', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-mfi-sisperdotze-round {
+  --font-size-adjust: 0.6;
+
+  font-family: 'MFI Sisperdotze Round', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

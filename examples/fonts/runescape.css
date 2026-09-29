@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/runescape.css";
+
+.font-runescape {
+  --font-size-adjust: 0.6;
+
+  font-family: 'RuneScape Quill', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-runescape-plain {
+  --font-size-adjust: 0.6;
+
+  font-family: 'RuneScape Plain 12', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-runescape-quill {
+  --font-size-adjust: 0.6;
+
+  font-family: 'RuneScape Quill', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-runescape-fairy {
+  --font-size-adjust: 0.6;
+
+  font-family: 'RuneScape Fairy', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-runescape-surok {
+  --font-size-adjust: 0.6;
+
+  font-family: 'RuneScape Surok', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-runescape-barbarian-assault {
+  --font-size-adjust: 0.6;
+
+  font-family: 'RuneScape Barbarian Assault', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

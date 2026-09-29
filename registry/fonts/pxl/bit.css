@@ -1,0 +1,10 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Bit";
+    src: url("/fonts/Bit.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+}

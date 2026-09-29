@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/ithaca.css";
+
+.font-ithaca {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Ithaca', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

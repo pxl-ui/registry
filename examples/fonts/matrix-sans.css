@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/matrix-sans.css";
+
+.font-matrix-sans {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Matrix Sans', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-matrix-sans-print {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Matrix Sans Print', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-matrix-sans-raster {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Matrix Sans Raster', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-matrix-sans-screen {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Matrix Sans Screen', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-matrix-sans-video {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Matrix Sans Video', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

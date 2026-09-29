@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/home-video.css";
+
+.font-home-video {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Home Video', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

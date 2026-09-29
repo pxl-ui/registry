@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/vergilia.css";
+
+.font-vergilia {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Vergilia', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

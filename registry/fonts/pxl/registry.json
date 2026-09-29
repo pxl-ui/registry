@@ -10,7 +10,7 @@
       "description": "A tiny font that supports hundreds of languages!",
       "docs": "Download font from https://stormgold.itch.io/able-font",
       "author": "stormgold (https://stormgold.itch.io/)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "license": "License (https://stormgold.itch.io/able-font)",
         "order": 1
@@ -32,18 +32,149 @@
       }
     },
     {
+      "name": "fonts/analogue-os",
+      "type": "registry:style",
+      "title": "Analogue OS",
+      "description": "Recreation of the font used in Analogue OS on the Analogue Pocket device.",
+      "author": "AbFarid (farid.abbasbayli@gmail.com)",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "analogue-os.css",
+          "target": "@components/fonts/pxl/analogue-os.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/analogue-os.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Analogue OS', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/bit",
+      "type": "registry:style",
+      "title": "Bit",
+      "description": "Outrun and aesthetic typeface to combine the style of 80's with futuristic elements.",
+      "author": "Dávid Fucsku",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "bit.css",
+          "target": "@components/fonts/pxl/bit.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/bit.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Bit', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/bitrimus",
+      "type": "registry:style",
+      "title": "Bitrimus",
+      "description": "A bold, retro-inspired pixel art font that pays homage to the vibrant world of classic gaming and digital nostalgia.",
+      "author": "GGBot",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "bitrimus.css",
+          "target": "@components/fonts/pxl/bitrimus.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/bitrimus.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Bitrimus', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/boldpixels",
+      "type": "registry:style",
+      "title": "BoldPixels",
+      "description": "Handcrafted 16 pixels font designed to add a retro touch to your projects.",
+      "author": "YukiPixels",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "CC BY-SA 4.0"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "boldpixels.css",
+          "target": "@components/fonts/pxl/boldpixels.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/boldpixels.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'BoldPixels', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts/bytesized",
       "type": "registry:font",
       "title": "Bytesized",
       "description": "A tiny 3x4 pixel font.",
       "author": "Baltdev (https://github.com/balt-dev/bytesized-gf)",
-      "categories": ["pxl-ui", "font-family", "font-monospace"],
+      "categories": ["pxl-ui", "font-family", "font-mono"],
       "font": {
         "family": "'Bytesized', monospace",
         "provider": "google",
         "import": "Bytesized",
         "variable": "--font-mono",
         "dependency": "@fontsource/bytesized"
+      }
+    },
+    {
+      "name": "fonts/cairopixel",
+      "type": "registry:style",
+      "title": "Cairopixel",
+      "description": "Retro-inspired pixel typeface that blends classic bitmap aesthetics with a modern, refined approach.",
+      "author": "GGBot",
+      "categories": ["pxl-ui", "font-family", "font-serif"],
+      "meta": {
+        "license": "OFL 1.1",
+        "order": 1
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "cairopixel.css",
+          "target": "@components/fonts/pxl/cairopixel.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/cairopixel.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-serif": "'Cairopixel', serif"
+        }
       }
     },
     {
@@ -65,12 +196,65 @@
       }
     },
     {
+      "name": "fonts/departure-mono",
+      "type": "registry:style",
+      "title": "Departure Mono",
+      "description": "Lo-fi technical vibe inspired by the constraints of early command-line and graphical user interfaces, the tiny pixel fonts of the late 90s/early 00s, and sci-fi concepts from film and television.",
+      "author": "Helena Zhang",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "departure-mono.css",
+          "target": "@components/fonts/pxl/departure-mono.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/departure-mono.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Departure Mono', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/dogica",
+      "type": "registry:style",
+      "title": "Dogica",
+      "description": "Monospace typeface made with Inkscape and FontForge and tailored for GB Studio.",
+      "author": "Roberto Mocci (https://rmocci.itch.io/)",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "dogica.css",
+          "target": "@components/fonts/pxl/dogica.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/dogica.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Dogica', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts/dotgothic16",
       "type": "registry:font",
       "title": "DotGothic16",
       "description": "Dotgothic 16 is based on the old 16x16 Gothic bitmap font that recreates the feel of pixel fonts from old video games, cell phones and computer screens on print.",
       "author": "Fontworks Inc. (https://github.com/fontworks-fonts/DotGothic16)",
-      "categories": ["pxl-ui", "font-family", "font-text"],"meta": {
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
         "order": 7
       },
       "font": {
@@ -82,12 +266,38 @@
       }
     },
     {
+      "name": "fonts/gallaecia-pixeleira",
+      "type": "registry:style",
+      "title": "Gallaecia Pixeleira",
+      "description": "Decorative pixel display typeface inspired by Gallaecia Castelo font, originally designed by Carlos Nuñez.",
+      "author": "David Calviño",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "gallaecia-pixeleira.css",
+          "target": "@components/fonts/pxl/gallaecia-pixeleira.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/gallaecia-pixeleira.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Gallaecia Pixeleira', serif"
+        }
+      }
+    },
+    {
       "name": "fonts/geist-pixel",
       "type": "registry:font",
       "title": "Geist Pixel",
       "description": "Geist Pixel is a display typeface family of five pixel-based styles, each with a distinct visual character.",
       "author": "Vercel (https://vercel.com/font?type=pixel)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "order": 6
       },
@@ -97,6 +307,128 @@
         "import": "GeistPixel",
         "variable": "--font-sans",
         "dependency": "@fontsource/geist-pixel"
+      }
+    },
+    {
+      "name": "fonts/gossip",
+      "type": "registry:style",
+      "title": "Gossip",
+      "description": "A blackletter pixel font connecting the web and textiles, inspired by Gutenberg’s first lead type font—Textura, and Susan Kare’s Cairo glyphs.",
+      "author": "Deborah Khodanovich",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "gossip.css",
+          "target": "@components/fonts/pxl/gossip.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/gossip.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Gossip', serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/gothamono",
+      "type": "registry:style",
+      "title": "Gothamono",
+      "description": "What font would Batman use on the Batcomputer?",
+      "author": "Steven Lewis",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "gothamono.css",
+          "target": "@components/fonts/pxl/gothamono.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/gothamono.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Gothamono', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/greybeard",
+      "type": "registry:style",
+      "title": "Greybeard",
+      "description": "Chunky monospaced bitmap programming font for all you pixel-perfect nerds who don't like eyestrain.",
+      "author": "Andy Walker",
+      "categories": ["pxl-ui", "font-family", "font-mono"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "greybeard.css",
+          "target": "@components/fonts/pxl/greybeard.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/greybeard.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-mono": "'Greybeard', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/handjet",
+      "type": "registry:font",
+      "title": "Handjet",
+      "description": "Handjet is an element-based variable font (aka pixel font, modular font, …) where every glyph is composed using multiple copies of the same element.",
+      "author": "Rosetta (https://github.com/rosettatype/Handjet/)",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "order": 6
+      },
+      "font": {
+        "family": "'Handjet', sans-serif",
+        "provider": "google",
+        "import": "Handjet",
+        "variable": "--font-sans",
+        "dependency": "@fontsource-variable/handjet"
+      }
+    },
+    {
+      "name": "fonts/home-video",
+      "type": "registry:style",
+      "title": "Home Video",
+      "description": "A retro pixel font inspired by the classic screen fonts of VHS tapes. It captures the nostalgic charm of the 80s and 90s with its blocky, pixelated letterforms and authentic retro aesthetics.",
+      "author": "GGBot",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "home-video.css",
+          "target": "@components/fonts/pxl/home-video.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/home-video.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Home Video', serif"
+        }
       }
     },
     {
@@ -128,6 +460,32 @@
       }
     },
     {
+      "name": "fonts/ithaca",
+      "type": "registry:style",
+      "title": "Ithaca",
+      "description": "Bold, monospaced pixel font inspired by vintage computer terminals and retro gaming.",
+      "author": "GGBot",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "ithaca.css",
+          "target": "@components/fonts/pxl/ithaca.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/ithaca.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Ithaca', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts/jacquarda-bastarda-9",
       "type": "registry:font",
       "title": "Jacquarda Bastarda 9",
@@ -151,8 +509,8 @@
       "title": "Lieben Cloude",
       "description": "Cute and [squary] typeface",
       "docs": "Download font from https://rmocci.itch.io/cloude",
-      "author": "rmocci (https://rmocci.itch.io/)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "author": "Roberto Mocci (https://rmocci.itch.io/)",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "license": "OFL 1.1 (https://rmocci.itch.io/cloude)",
         "order": 2
@@ -174,12 +532,90 @@
       }
     },
     {
+      "name": "fonts/matrix-mono",
+      "type": "registry:style",
+      "title": "Matrix Mono",
+      "description": "5x5 pixel monospace typeface created as an alternative to other pixel typefaces with unique character glyphs and additional iconography.",
+      "author": "Nicholas Kruse",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "matrix-mono.css",
+          "target": "@components/fonts/pxl/matrix-mono.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/matrix-mono.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Matrix Mono', serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/matrix-sans",
+      "type": "registry:style",
+      "title": "Matrix Sans",
+      "description": "A set of pixelated, retro-style fonts based on the classic 5×7 dot matrix capitals. The design captures the look of this ubiquitous format, incorporating the best features from historical examples.",
+      "author": "Brad Neil",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "matrix-sans.css",
+          "target": "@components/fonts/pxl/matrix-sans.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/matrix-sans.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Matrix Sans', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/mfi-sisperdotze",
+      "type": "registry:style",
+      "title": "MFI Sisperdotze",
+      "description": "MFI Sisperdotze is a 6x12 monospaced bitmap font with character. It comes in 6 styles and perfectly fits for display use.",
+      "author": "Manufactura Independente",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "mfi-sisperdotze.css",
+          "target": "@components/fonts/pxl/mfi-sisperdotze.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/mfi-sisperdotze.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'MFI Sisperdotze', serif"
+        }
+      }
+    },
+    {
       "name": "fonts/micro-5",
       "type": "registry:font",
       "title": "Micro 5",
       "description": "Micro 5 is a teeny-tiny typeface that can fit anywhere on your project.",
       "author": "Sarah Cadigan-Fried (https://github.com/scfried/soft-type-micro)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "order": 5
       },
@@ -198,7 +634,7 @@
       "description": "Elegant monospace pixel font",
       "author": "datagoblin (https://datagoblin.itch.io/)",
       "docs": "Download font from https://datagoblin.itch.io/monogram",
-      "categories": ["pxl-ui", "font-family", "font-monospace"],
+      "categories": ["pxl-ui", "font-family", "font-mono"],
       "meta": {
         "order": 1
       },
@@ -215,6 +651,32 @@
       "cssVars": {
         "theme": {
           "font-mono": "'Monogram Extended', monospace"
+        }
+      }
+    },
+    {
+      "name": "fonts/northrup",
+      "type": "registry:style",
+      "title": "Northrup",
+      "description": "A pixel font inspired by classic video games such as the Earthbound series.",
+      "author": "Novov",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "northrup.css",
+          "target": "@components/fonts/pxl/northrup.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/northrup.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Northrup', sans-serif"
         }
       }
     },
@@ -270,7 +732,7 @@
       },
       "cssVars": {
         "theme": {
-          "font-heading": "'Pixel Digivolve', sans-serif"
+          "font-heading": "'Pixel Digivolve', serif"
         }
       }
     },
@@ -302,12 +764,38 @@
       }
     },
     {
+      "name": "fonts/pixel-ultima",
+      "type": "registry:style",
+      "title": "Pixel Ultima",
+      "description": "A pixel typeface designed to give a crisp look on screen at very small sizes, thus increasing legibility.",
+      "author": "Douglas Leão",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "pixel-ultima.css",
+          "target": "@components/fonts/pxl/pixel-ultima.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/pixel-ultima.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Pixel Ultima', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts/pixelify-sans",
       "type": "registry:font",
       "title": "Pixelify Sans",
       "description": "Pixel display font. It works great for your retro party designs, game creation or pretty much anything that demands a “go back in time” vibe.",
       "author": "Stefie Justprince (https://github.com/eifetx/Pixelify-Sans)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "order": 3
       },
@@ -320,12 +808,64 @@
       }
     },
     {
+      "name": "fonts/player-9",
+      "type": "registry:style",
+      "title": "Player 9",
+      "description": "Fantasy/fairytale/Art Nouveau lettering styles, with their swashy curves and unbalanced proportions, and puts them onto a blocky pixel grid.",
+      "author": "Justin Penner (https://justinpenner.ca/)",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1 (https://github.com/justinpenner/player-sans-mono/blob/master/LICENSE.txt)"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "player-9.css",
+          "target": "@components/fonts/pxl/player-9.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/player-9.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Player 9', serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/player-sans-mono",
+      "type": "registry:style",
+      "title": "Player Sans Mono",
+      "description": "Typeface family designed for video game developers.",
+      "author": "Justin Penner (https://justinpenner.ca/)",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1 (https://github.com/justinpenner/player-sans-mono/blob/master/LICENSE.txt)"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "player-sans-mono.css",
+          "target": "@components/fonts/pxl/player-sans-mono.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/player-sans-mono.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Player Sans Mono', serif"
+        }
+      }
+    },
+    {
       "name": "fonts/press-start-2p",
       "type": "registry:font",
       "title": "Press Start 2P",
       "description": "Press Start 2P is a bitmap font based on the font design from 1980s Namco arcade games. It works best at sizes of 8px, 16px and other multiples of 8.",
       "author": "Cody \"CodeMan38\" Boisclair <https://fonts.google.com/?query=CodeMan38>",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "order": 8
       },
@@ -344,7 +884,7 @@
       "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
       "docs": "Download font from https://github.com/dithernaut/quanta-strike",
       "author": "dithernaut (https://dithernaut.com/posts/pixel-scaling/)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "order": 4
       },
@@ -360,12 +900,90 @@
       }
     },
     {
+      "name": "fonts/retrograde",
+      "type": "registry:style",
+      "title": "Retrograde",
+      "description": "Strong and simple pixel typeface. It comes in 2 weights: Regular and Bold. It contains all caps letters, numbers, symbols and has limited language support.",
+      "author": "Daler Mukhiddinov",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "retrograde.css",
+          "target": "@components/fonts/pxl/retrograde.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/retrograde.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Retrograde', serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/runescape",
+      "type": "registry:style",
+      "title": "RuneScape",
+      "description": "Old School pixel font family. It comes in 10 styles, including Plain, Bold, Quill, Fairy, Barbarian Assault, Surok with all 192 characters exactly as appears in-game.",
+      "author": "RuneStar",
+      "categories": ["pxl-ui", "font-family", "font-serif"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "runescape.css",
+          "target": "@components/fonts/pxl/runescape.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/runescape.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-serif": "'RuneScape', serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/sorena",
+      "type": "registry:style",
+      "title": "Sorena",
+      "description": "Pixel typeface designed with the original idea of Irfan Khairollahi.",
+      "author": "Mohammad Darvishi",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "sorena.css",
+          "target": "@components/fonts/pxl/sorena.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/sorena.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Sorena', sans-serif"
+        }
+      }
+    },
+    {
       "name": "fonts/tiny5",
       "type": "registry:font",
       "title": "tiny5",
       "description": "tiny5 is a variable-width, 5-pixel font playing with the concept of least amount of information while producing both legible and aesthetically pleasing text.",
       "author": "Stefan Schmidt (https://github.com/Gissio/font_tiny5)",
-      "categories": ["pxl-ui", "font-family", "font-text"],
+      "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
         "order": 4
       },
@@ -378,12 +996,116 @@
       }
     },
     {
+      "name": "fonts/tyche",
+      "type": "registry:style",
+      "title": "Tyche",
+      "description": "Greek-style pixel display font. Named after the powerful goddess of fortune, this limited character set is perfect for any design linking antique themes in modern media.",
+      "author": "Liam Moniez",
+      "categories": ["pxl-ui", "font-family", "font-heading"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "tyche.css",
+          "target": "@components/fonts/pxl/tyche.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/tyche.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-heading": "'Tyche', serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/unixel",
+      "type": "registry:style",
+      "title": "Unixel",
+      "description": "Unixel tries to take inspiration from the Arabic script and has largely forgotten the geometric structure.",
+      "author": "Mohammad Darvishi",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "unixel.css",
+          "target": "@components/fonts/pxl/unixel.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/unixel.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Unixel', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/vaticanus",
+      "type": "registry:style",
+      "title": "Vaticanus",
+      "description": "Charming and minimalist 8-bit pixel font designed for retro and digital-inspired projects.",
+      "author": "GGBot",
+      "categories": ["pxl-ui", "font-family", "font-sans"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "vaticanus.css",
+          "target": "@components/fonts/pxl/vaticanus.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/vaticanus.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Vaticanus', sans-serif"
+        }
+      }
+    },
+    {
+      "name": "fonts/vergilia",
+      "type": "registry:style",
+      "title": "Vergilia",
+      "description": "Unique fusion of blackletter elegance and pixel precision.",
+      "author": "Echo Heo",
+      "categories": ["pxl-ui", "font-family", "font-serif"],
+      "meta": {
+        "license": "OFL 1.1"
+      },
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "vergilia.css",
+          "target": "@components/fonts/pxl/vergilia.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/fonts/pxl/vergilia.css\"": {}
+      },
+      "cssVars": {
+        "theme": {
+          "font-serif": "'Vergilia', serif"
+        }
+      }
+    },
+    {
       "name": "fonts/vt323",
       "type": "registry:font",
       "title": "VT323",
       "description": "This font was created from the glyphs of the DEC VT320 text terminal.",
       "author": "Peter Hull (https://fonts.google.com/?query=Peter+Hull)",
-      "categories": ["pxl-ui", "font-family", "font-monospace"],
+      "categories": ["pxl-ui", "font-family", "font-mono"],
       "font": {
         "family": "'VT323', monospace",
         "provider": "google",

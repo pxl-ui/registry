@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/player-sans-mono.css";
+
+.font-player-sans-mono {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Player Sans Mono 8x13', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-player-sans-mono-8x8 {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Player Sans Mono 8x8', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-player-sans-mono-8x13 {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Player Sans Mono 8x13', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

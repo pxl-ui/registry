@@ -1,0 +1,10 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Analogue OS";
+    src: url("/fonts/Analogue_OS-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+}

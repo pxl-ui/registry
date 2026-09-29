@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/bit.css";
+
+.font-bit {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Bit', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

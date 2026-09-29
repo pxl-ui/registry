@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/gallaecia-pixeleira.css";
+
+.font-gallaecia-pixeleira {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Gallaecia Pixeleira', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

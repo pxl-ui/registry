@@ -1,0 +1,73 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "RuneScape Plain 11";
+    src: url("/fonts/RuneScape_Plain_11.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Plain 12";
+    src: url("/fonts/RuneScape_Plain_12.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Plain 12";
+    src: url("/fonts/RuneScape_Plain_12-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Quill 8";
+    src: url("/fonts/RuneScape_Quill_8.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Quill";
+    src: url("/fonts/RuneScape_Quill.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Quill Caps";
+    src: url("/fonts/RuneScape_Quill_Caps.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Fairy";
+    src: url("/fonts/RuneScape_Fairy.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Fairy Large";
+    src: url("/fonts/RuneScape_Fairy_Large.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Surok";
+    src: url("/fonts/RuneScape_Surok.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "RuneScape Barbarian Assault";
+    src: url("/fonts/RuneScape_Barbarian_Assault.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+}

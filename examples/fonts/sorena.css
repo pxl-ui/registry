@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/sorena.css";
+
+.font-sorena {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Sorena', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}
+
+.font-sorena-pixel {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Sorena Pixel', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

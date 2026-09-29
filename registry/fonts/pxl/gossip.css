@@ -1,0 +1,107 @@
+
+
+@layer base {
+  @font-face {
+    font-family: "Gossip Low Pixel";
+    src: url("/fonts/Gossip_Low_Pixel.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Gossip Low Square";
+    src: url("/fonts/Gossip_Low_Square.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip Low Cross Small";
+    src: url("/fonts/Gossip_Low_Cross_Small.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip Low Cross Stitch";
+    src: url("/fonts/Gossip_Low_Cross_Stitch.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip Low Needlepoint";
+    src: url("/fonts/Gossip_Low_Needlepoint.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Gossip Medium Pixel";
+    src: url("/fonts/Gossip_Medium_Pixel.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Gossip Medium Square";
+    src: url("/fonts/Gossip_Medium_Square.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip Medium Cross Small";
+    src: url("/fonts/Gossip_Medium_Cross_Small.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip Medium Cross Stitch";
+    src: url("/fonts/Gossip_Medium_Cross_Stitch.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip Medium Needlepoint";
+    src: url("/fonts/Gossip_Medium_Needlepoint.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip High Pixel";
+    src: url("/fonts/Gossip_High_Pixel.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Gossip High Square";
+    src: url("/fonts/Gossip_High_Square.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip High Cross Small";
+    src: url("/fonts/Gossip_High_Cross_Small.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip High Cross Stitch";
+    src: url("/fonts/Gossip_High_Cross_Stitch.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Gossip High Needlepoint";
+    src: url("/fonts/Gossip_High_Needlepoint.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+}

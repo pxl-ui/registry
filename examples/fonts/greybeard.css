@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/greybeard.css";
+
+.font-greybeard {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Greybeard', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

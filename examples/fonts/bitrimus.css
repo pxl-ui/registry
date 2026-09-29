@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/bitrimus.css";
+
+.font-bitrimus {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Bitrimus', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

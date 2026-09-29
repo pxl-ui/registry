@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/pixel-ultima.css";
+
+.font-pixel-ultima {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Pixel Ultima', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

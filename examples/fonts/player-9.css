@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import "@/components/fonts/pxl/player-9.css";
+
+.font-player-9 {
+  --font-size-adjust: 0.6;
+
+  font-family: 'Player 9', sans-serif;
+  font-size-adjust: var(--font-size-adjust);
+}

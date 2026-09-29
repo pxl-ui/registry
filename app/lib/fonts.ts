@@ -7,13 +7,13 @@ const lists = {
     categories: ["font-heading"]
   }),
   texts: filter({
-    categories: ["font-text"]
+    categories: ["font-sans"]
   }),
   serifs: filter({
     categories: ["font-serif"]
   }),
   monospaces: filter({
-    categories: ["font-monospace"]
+    categories: ["font-mono"]
   }),
 }
 
