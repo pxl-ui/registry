@@ -320,9 +320,8 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
         ) : (
           !isEnum &&
           !isDescriptiveEnum && (
-            <div className="px-4 py-3 text-sm text-muted-foreground">
-              This schema is not an object with properties (type:{" "}
-              {typeLabel(schema, schema)}).
+            <div className="px-4 py-3 text-sm text-muted-foreground capitalize">
+              {typeLabel(schema, schema)}
             </div>
           )
         )}
@@ -336,14 +335,16 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
             <TableBody>
               {schema.enum?.map((v) => (
                 <TableRow key={v?.toString()} className="align-top">
-                  <TableCell className="text-sm">{v}</TableCell>
+                  <TableCell className="font-mono text-sm text-muted-foreground whitespace-normal wrap-break-word">
+                    {v}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         )}
         {isDescriptiveEnum && (
-          <Table className="table-fixed w-full">
+          <Table border="none" className="table-fixed w-full">
             <TableHeader>
               <TableRow>
                 <TableHead className="w-45">Value</TableHead>
@@ -353,7 +354,9 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
             <TableBody>
               {schema.anyOf?.map((v) => (
                 <TableRow key={v.const as string} className="align-top">
-                  <TableCell className="text-sm">{v.const as string}</TableCell>
+                  <TableCell className="font-mono text-sm text-muted-foreground whitespace-normal wrap-break-word">
+                    {v.const as string}
+                  </TableCell>
                   <TableCell className="text-sm whitespace-normal wrap-break-word">
                     {v.description}
                   </TableCell>

@@ -139,6 +139,21 @@
       ]
     },
     {
+      "name": "schemas/open-knowledge",
+      "type": "registry:component",
+      "title": "Open Knowledge Schemas",
+      "description": "Zod types and schemas for Open Knowledge.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "open-knowledge.ts",
+          "target": "@lib/pxl/schemas/open-knowledge.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/tasknotes",
       "type": "registry:component",
       "title": "TaskNotes Schemas",

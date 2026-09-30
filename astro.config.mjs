@@ -347,6 +347,16 @@ export default defineConfig({
                       },
                     ],
                   },
+                  {
+                    label: "Open Knowledge",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/open-knowledge",
+                      },
+                    ],
+                  },
                 ],
               },
               {
