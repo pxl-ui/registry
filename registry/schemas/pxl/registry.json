@@ -335,6 +335,21 @@
           "target": "@lib/pxl/schemas/rss.ts"
         }
       ]
+    },
+    {
+      "name": "schemas/schemaorg",
+      "type": "registry:component",
+      "title": "Schema.org Schemas",
+      "description": "Types for Schema.org.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "schemaorg.ts",
+          "target": "@lib/pxl/schemas/schemaorg.ts"
+        }
+      ]
     }
   ]
 }

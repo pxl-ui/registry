@@ -112,10 +112,17 @@ export default defineConfig({
                     link: "/schemas",
                   },
                   {
-                    label: "Codebase",
+                    label: "Generalistic",
                     collapsed: true,
                     items: [
                       { label: "JSON Schema", link: "/schemas/json-schema" },
+                      { label: "Schema.org", link: "/schemas/schemaorg" }
+                    ],
+                  },
+                  {
+                    label: "Codebase",
+                    collapsed: true,
+                    items: [
                       { label: "Changelog", link: "/schemas/changelog" },
                       { label: "Conventional Commit", link: "/schemas/conventional-commit" }
                     ],
