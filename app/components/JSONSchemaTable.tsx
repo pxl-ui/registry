@@ -77,6 +77,7 @@ function typeLabel(
     const name = schema.$ref.split("/").pop();
     return resolved ? typeLabel(resolved, rootSchema) : (name as string);
   }
+  if (schema.title !== undefined) return schema.title;
   if (schema.const !== undefined) return `${JSON.stringify(schema.const)}`;
   if (Array.isArray(schema.type)) return schema.type.join(" | ");
   if (schema.type === "array") {
@@ -99,6 +100,8 @@ function isExpandable(
   if (!schema) return false;
   let resolved = schema;
   if (schema.$ref) resolved = resolveRef(schema.$ref, rootSchema) || schema;
+  if (resolved.anyOf?.every((s) => s.type === "object" && s.properties))
+    return true;
   if (resolved.type === "object" && resolved.properties) return true;
   if (resolved.type === "array" && resolved.items) {
     const items = resolved.items.$ref
@@ -142,8 +145,6 @@ function constraints(schema: JsonSchema): string[] {
     out.push(`default: ${JSON.stringify(schema.default)}`);
   return out;
 }
-
-// ---------- fila individual (recursiva) ----------
 
 function SchemaRow({
   name,
@@ -250,8 +251,6 @@ function SchemaRow({
   );
 }
 
-// ---------- lista de propiedades de un objeto ----------
-
 function SchemaProperties({
   schema,
   rootSchema,
@@ -261,6 +260,16 @@ function SchemaProperties({
   rootSchema: JsonSchema;
   depth: number;
 }) {
+  if (schema.anyOf) {
+    return schema.anyOf.map((s, i) => (
+      <SchemaProperties
+        key={i.toString()}
+        schema={s}
+        rootSchema={rootSchema}
+        depth={depth}
+      />
+    ));
+  }
   if (!schema?.properties) return null;
   const required = new Set(schema.required || []);
   return (
@@ -384,7 +393,7 @@ function JsonSchemasAccordion({
             render={
               <div
                 data-slot="accordion-trigger"
-                className= "group/accordion-trigger relative flex flex-1 items-start justify-between pixel-rounded pixel-size-[5px] px-ring pixel-color-background py-2.5 text-left text-sm outline-none hover:pixel-color-secondary hover:text-secondary-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 aria-disabled:[--px-ring-color:transparent] **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground hover:**:data-[slot=accordion-trigger-icon]:text-secondary-foreground"
+                className="group/accordion-trigger relative flex flex-1 items-start justify-between pixel-rounded pixel-size-[5px] px-ring pixel-color-background py-2.5 text-left text-sm outline-none hover:pixel-color-secondary hover:text-secondary-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 aria-disabled:[--px-ring-color:transparent] **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground hover:**:data-[slot=accordion-trigger-icon]:text-secondary-foreground"
               >
                 <div>
                   <h3 className="font-heading text-sm">{schema.title ?? k}</h3>

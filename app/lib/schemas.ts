@@ -12,10 +12,25 @@ Object.entries(
     "/registry/schemas/**/*.ts",
   ),
 ).forEach(([path, schema]) => {
-  schemas.set(
-    path.replace("/registry/schemas/pxl/", "schemas/").replace(".ts", ""),
-    schema,
-  );
+  const base = path
+    .replace("/registry/schemas/pxl/", "schemas/")
+    .replace(".ts", "");
+
+  const ns = base.split("/")?.[1];
+
+  let key: string | null = base;
+
+  if (!key.endsWith(ns)) {
+    if (key.endsWith("index")) {
+      key = key.replace("/index", "");
+    } else {
+      key = null;
+    }
+  }
+
+  if (key) {
+    schemas.set(key, schema);
+  }
 });
 
 async function getSchemas(item: string) {

@@ -109,6 +109,21 @@
       ]
     },
     {
+      "name": "schemas/json-schema",
+      "type": "registry:component",
+      "title": "JSON Schema Schemas",
+      "description": "Zod types and schemas for JSON Schema.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "json-schema.ts",
+          "target": "@lib/pxl/schemas/json-schema.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/mailparser",
       "type": "registry:component",
       "title": "MailParser Schemas",
@@ -120,6 +135,84 @@
           "type": "registry:file",
           "path": "mailparser.ts",
           "target": "@lib/pxl/schemas/mailparser.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/mdbase",
+      "type": "registry:component",
+      "title": "Mdbase Schemas",
+      "description": "Zod types and schemas for Mdbase.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "registryDependencies": [
+        "pxl/registry/schemas/json-schema"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "mdbase/config.ts",
+          "target": "@lib/pxl/schemas/mdbase/config.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/conformance-claim.ts",
+          "target": "@lib/pxl/schemas/mdbase/conformance-claim.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/data-contract.ts",
+          "target": "@lib/pxl/schemas/mdbase/data-contract.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/diagnostic.ts",
+          "target": "@lib/pxl/schemas/mdbase/diagnostic.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/index.ts",
+          "target": "@lib/pxl/schemas/mdbase/index.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/operation-result.ts",
+          "target": "@lib/pxl/schemas/mdbase/operation-result.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/query-result.ts",
+          "target": "@lib/pxl/schemas/mdbase/query-result.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/query.ts",
+          "target": "@lib/pxl/schemas/mdbase/query.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/record-document.ts",
+          "target": "@lib/pxl/schemas/mdbase/record-document.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/type-file.ts",
+          "target": "@lib/pxl/schemas/mdbase/type-file.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/type-pack-lock.ts",
+          "target": "@lib/pxl/schemas/mdbase/type-pack-lock.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/type-pack.ts",
+          "target": "@lib/pxl/schemas/mdbase/type-pack.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "mdbase/view.ts",
+          "target": "@lib/pxl/schemas/mdbase/view.ts"
         }
       ]
     },

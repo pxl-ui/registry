@@ -115,6 +115,7 @@ export default defineConfig({
                     label: "Codebase",
                     collapsed: true,
                     items: [
+                      { label: "JSON Schema", link: "/schemas/json-schema" },
                       { label: "Changelog", link: "/schemas/changelog" },
                       { label: "Conventional Commit", link: "/schemas/conventional-commit" }
                     ],
@@ -344,6 +345,16 @@ export default defineConfig({
                       {
                         label: "Schemas",
                         link: "/schemas/obsidian",
+                      },
+                    ],
+                  },
+                  {
+                    label: "Mdbase",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/mdbase",
                       },
                     ],
                   },
