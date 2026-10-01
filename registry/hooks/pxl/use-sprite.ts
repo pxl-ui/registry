@@ -8,7 +8,7 @@ import {
   Sprite,
 } from "@/lib/pxl/sprite";
 
-const DEFAULT_TICK = 1000 / 12; // 83.33ms
+const DEFAULT_TICK = 2000 / 12;
 
 export type PlayFn = (
   animation: string,
