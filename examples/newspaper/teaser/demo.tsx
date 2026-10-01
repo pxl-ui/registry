@@ -70,7 +70,6 @@ export default function TeaserDemo() {
     pubDate: "Thu, 10 Sep 2026 03:30:01 GMT",
     dc: {
       creators: ["Natalia Marcos"],
-      creator: "Natalia Marcos",
     },
     content: {
       encoded:
@@ -108,8 +107,6 @@ export default function TeaserDemo() {
       alternatives: [
         "El actor también produce la miniserie de MGM+ y BBC que adapta la popularísima novela de Charles Dickens",
       ],
-      alternative:
-        "El actor también produce la miniserie de MGM+ y BBC que adapta la popularísima novela de Charles Dickens",
     },
   };
 

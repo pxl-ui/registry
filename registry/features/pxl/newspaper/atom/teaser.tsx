@@ -16,7 +16,7 @@ function TeaserTitle({
 }: ComponentProps<typeof BaseTeaserTitle> & { entry: Atom.Entry }) {
   const title = useMemo(() => {
     if (entry.title) {
-      return entry.title;
+      return entry.title.value;
     }
 
     return "";
@@ -31,7 +31,7 @@ function TeaserDescription({
 }: ComponentProps<typeof BaseTeaserDescription> & { entry: Atom.Entry }) {
   const description = useMemo(() => {
     if (entry.summary) {
-      return entry.summary;
+      return entry.summary.value;
     }
 
     const group = entry.media?.groups?.find((g) => g.description?.value);
@@ -40,7 +40,7 @@ function TeaserDescription({
       return group?.description?.value;
     }
 
-    return entry.content;
+    return entry.content?.value;
   }, [entry.content, entry.summary, entry.media]);
 
   return (

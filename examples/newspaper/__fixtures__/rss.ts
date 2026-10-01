@@ -20,7 +20,6 @@ export const item: Rss.Item = {
   },
   dc: {
     creators: ["Lulu Garcia-Navarro"],
-    creator: "Lulu Garcia-Navarro",
   },
   content: {
     encoded: `Sylvester Stallone has loomed large in our popular imagination for 50 years, ever since he exploded onto the screen playing the iconic underdog boxer Rocky Balboa in a film he wrote and that won the best picture Oscar. Many more “Rocky” films came after that, and also another franchise, “Rambo,” which heralded a new era of action movies in which Stallone and his one-time nemesis Arnold Schwarzenegger modeled a very specific type of masculinity: physically imposing, morally unambiguous and emotionally aloof.
@@ -154,7 +153,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Saeed Al-Batati, Shuaib Almosawa and Vivian Nereim"],
-        creator: "Saeed Al-Batati, Shuaib Almosawa and Vivian Nereim",
       },
       media: {
         contents: [
@@ -206,7 +204,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["The New York Times"],
-        creator: "The New York Times",
       },
       media: {
         contents: [
@@ -280,7 +277,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Veronica Chambers"],
-        creator: "Veronica Chambers",
       },
     },
     {
@@ -342,8 +338,7 @@ export const feed: Rss.Feed = {
         ],
       },
       dc: {
-        creators: ["Paul Sonne, Jim Tankersley and Christopher F. Schuetze"],
-        creator: "Paul Sonne, Jim Tankersley and Christopher F. Schuetze",
+        creators: ["Paul Sonne, Jim Tankersley and Christopher F. Schuetze"]
       },
       media: {
         contents: [
@@ -436,7 +431,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Vivian Nereim and Ismaeel Naar"],
-        creator: "Vivian Nereim and Ismaeel Naar",
       },
       media: {
         contents: [
@@ -529,7 +523,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Norimitsu Onishi and Renaud Philippe"],
-        creator: "Norimitsu Onishi and Renaud Philippe",
       },
       media: {
         contents: [
@@ -603,7 +596,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Aie Balagtas See"],
-        creator: "Aie Balagtas See",
       },
       media: {
         contents: [
@@ -705,7 +697,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Ian Austen"],
-        creator: "Ian Austen",
       },
       media: {
         contents: [
@@ -794,7 +785,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Ephrat Livni"],
-        creator: "Ephrat Livni",
       },
       media: {
         contents: [
@@ -882,7 +872,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Elian Peltier and Tomás Munita"],
-        creator: "Elian Peltier and Tomás Munita",
       },
       media: {
         contents: [
@@ -980,7 +969,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Francesca Regalado and Lynsey Chutel"],
-        creator: "Francesca Regalado and Lynsey Chutel",
       },
       media: {
         contents: [
@@ -1037,7 +1025,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Reham Mourshed and Abdi Latif Dahir"],
-        creator: "Reham Mourshed and Abdi Latif Dahir",
       },
       media: {
         contents: [
@@ -1127,7 +1114,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Carlos Barragán"],
-        creator: "Carlos Barragán",
       },
       media: {
         contents: [
@@ -1220,7 +1206,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Matthew Mpoke Bigg and Arlette Bashizi"],
-        creator: "Matthew Mpoke Bigg and Arlette Bashizi",
       },
       media: {
         contents: [
@@ -1285,7 +1270,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Alex Marshall"],
-        creator: "Alex Marshall",
       },
     },
     {
@@ -1340,7 +1324,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Zunaira Saieed"],
-        creator: "Zunaira Saieed",
       },
     },
     {
@@ -1390,7 +1373,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Raymond Zhong"],
-        creator: "Raymond Zhong",
       },
       media: {
         contents: [
@@ -1475,7 +1457,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Jeanna Smialek"],
-        creator: "Jeanna Smialek",
       },
       media: {
         contents: [
@@ -1544,7 +1525,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Katrin Bennhold"],
-        creator: "Katrin Bennhold",
       },
       media: {
         contents: [
@@ -1628,7 +1608,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Edward Wong, Genevieve Glatsky and Annie Correal"],
-        creator: "Edward Wong, Genevieve Glatsky and Annie Correal",
       },
       media: {
         contents: [
@@ -1705,7 +1684,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Isabella Kwai"],
-        creator: "Isabella Kwai",
       },
       media: {
         contents: [
@@ -1787,7 +1765,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Pranav Baskar"],
-        creator: "Pranav Baskar",
       },
       media: {
         contents: [
@@ -1877,7 +1854,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Stephen Castle"],
-        creator: "Stephen Castle",
       },
       media: {
         contents: [
@@ -1947,7 +1923,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Jonathan Wolfe"],
-        creator: "Jonathan Wolfe",
       },
       media: {
         contents: [
@@ -2033,7 +2008,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["David M. Halbfinger"],
-        creator: "David M. Halbfinger",
       },
       media: {
         contents: [
@@ -2110,7 +2084,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Annie Correal and Eric Schmitt"],
-        creator: "Annie Correal and Eric Schmitt",
       },
       media: {
         contents: [
@@ -2190,8 +2163,6 @@ export const feed: Rss.Feed = {
         ],
       },
       dc: {
-        creators: ["Lynsey Chutel"],
-        creator: "Lynsey Chutel",
       },
       media: {
         contents: [
@@ -2257,7 +2228,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Max Kim"],
-        creator: "Max Kim",
       },
       media: {
         contents: [
@@ -2338,7 +2308,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Stephen Castle"],
-        creator: "Stephen Castle",
       },
       media: {
         contents: [
@@ -2419,7 +2388,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Christopher F. Schuetze"],
-        creator: "Christopher F. Schuetze",
       },
       media: {
         contents: [
@@ -2560,7 +2528,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Johnatan Reiss"],
-        creator: "Johnatan Reiss",
       },
       media: {
         contents: [
@@ -2649,7 +2616,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Jeanna Smialek and Siobhán O’Grady"],
-        creator: "Jeanna Smialek and Siobhán O’Grady",
       },
       media: {
         contents: [
@@ -2710,7 +2676,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Matthew Mpoke Bigg, Arlette Bashizi and Sutton Raphael"],
-        creator: "Matthew Mpoke Bigg, Arlette Bashizi and Sutton Raphael",
       },
     },
     {
@@ -2752,7 +2717,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Koba Ryckewaert"],
-        creator: "Koba Ryckewaert",
       },
       media: {
         contents: [
@@ -2841,7 +2805,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Mark Landler"],
-        creator: "Mark Landler",
       },
       media: {
         contents: [
@@ -2919,7 +2882,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Isabella Kwai and John Yoon"],
-        creator: "Isabella Kwai and John Yoon",
       },
       media: {
         contents: [
@@ -3021,7 +2983,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Anupreeta Das, Sajal Pradhan and Binod Ghimire"],
-        creator: "Anupreeta Das, Sajal Pradhan and Binod Ghimire",
       },
       media: {
         contents: [
@@ -3114,7 +3075,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Catherine Porter, Giulia Imbert and William Daniels"],
-        creator: "Catherine Porter, Giulia Imbert and William Daniels",
       },
       media: {
         contents: [
@@ -3200,7 +3160,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Erika Solomon"],
-        creator: "Erika Solomon",
       },
       media: {
         contents: [
@@ -3278,7 +3237,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Austin Ramzy and Keith Bradsher"],
-        creator: "Austin Ramzy and Keith Bradsher",
       },
       media: {
         contents: [
@@ -3348,7 +3306,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Helene Cooper and Pranav Baskar"],
-        creator: "Helene Cooper and Pranav Baskar",
       },
       media: {
         contents: [
@@ -3434,7 +3391,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Matina Stevis-Gridneff"],
-        creator: "Matina Stevis-Gridneff",
       },
       media: {
         contents: [
@@ -3532,7 +3488,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Ephrat Livni and Isabel Kershner"],
-        creator: "Ephrat Livni and Isabel Kershner",
       },
       media: {
         contents: [
@@ -3617,7 +3572,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Katrin Bennhold"],
-        creator: "Katrin Bennhold",
       },
       media: {
         contents: [
@@ -3697,7 +3651,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Ian Austen"],
-        creator: "Ian Austen",
       },
       media: {
         contents: [
@@ -3790,7 +3743,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Andrew Higgins"],
-        creator: "Andrew Higgins",
       },
       media: {
         contents: [
@@ -3871,7 +3823,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Amelia Nierenberg"],
-        creator: "Amelia Nierenberg",
       },
       media: {
         contents: [
@@ -3949,7 +3900,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["John Yoon"],
-        creator: "John Yoon",
       },
       media: {
         contents: [
@@ -4031,7 +3981,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Francesca Regalado"],
-        creator: "Francesca Regalado",
       },
       media: {
         contents: [
@@ -4139,8 +4088,6 @@ export const feed: Rss.Feed = {
         creators: [
           "Stephen Castle, Adam Rasgon, Aaron Boxerman and Isabel Kershner",
         ],
-        creator:
-          "Stephen Castle, Adam Rasgon, Aaron Boxerman and Isabel Kershner",
       },
       media: {
         contents: [
@@ -4213,7 +4160,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Jim Tankersley"],
-        creator: "Jim Tankersley",
       },
       media: {
         contents: [
@@ -4287,7 +4233,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Laura Chung"],
-        creator: "Laura Chung",
       },
       media: {
         contents: [
@@ -4364,7 +4309,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Siobhán O’Grady"],
-        creator: "Siobhán O’Grady",
       },
       media: {
         contents: [
@@ -4438,7 +4382,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Annie Correal and Genevieve Glatsky"],
-        creator: "Annie Correal and Genevieve Glatsky",
       },
       media: {
         contents: [
@@ -4524,7 +4467,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Ali Watkins and Paulo Nunes dos Santos"],
-        creator: "Ali Watkins and Paulo Nunes dos Santos",
       },
     },
     {
@@ -4587,7 +4529,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Jeffrey Gettleman, Jenny Gross and Lily Kuo"],
-        creator: "Jeffrey Gettleman, Jenny Gross and Lily Kuo",
       },
       media: {
         contents: [
@@ -4676,7 +4617,6 @@ export const feed: Rss.Feed = {
       },
       dc: {
         creators: ["Qasim Nauman and Vivian Nereim"],
-        creator: "Qasim Nauman and Vivian Nereim",
       },
       media: {
         contents: [

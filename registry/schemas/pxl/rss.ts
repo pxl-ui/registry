@@ -71,81 +71,8 @@ const DublinCoreSchema = z.object({
   sources: z.array(z.string()).optional(),
   languages: z.array(z.string()).optional(),
   relations: z.array(z.string()).optional(),
-  title: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `titles` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  creator: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `creators` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  subject: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `subjects` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  description: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `descriptions` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  publisher: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `publishers` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  contributor: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `contributors` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  date: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `dates` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  type: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `types` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  format: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `formats` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  identifier: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `identifiers` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  source: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `sources` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  language: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `languages` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  relation: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `relations` (array) instead. Dublin Core fields are repeatable.",
-  }),
-  coverage: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core fields are repeatable.",
-  }),
-  rights: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core fields are repeatable.",
-  }),
+  coverage: z.array(z.string()).optional(),
+  rights: z.array(z.string()).optional(),
 });
 
 const DublinCoreTermsSchema = z.object({
@@ -183,281 +110,27 @@ const DublinCoreTermsSchema = z.object({
   temporals: z.array(z.string()).optional(),
   titles: z.array(z.string()).optional(),
   types: z.array(z.string()).optional(),
-  abstract: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `abstracts` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  accessRights: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  accrualMethod: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `accrualMethod` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  accrualPeriodicity: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `accrualPeriodicities` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  accrualPolicy: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `accrualPolicies` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  alternative: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `alternatives` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  audience: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  available: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `abstracts` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  bibliographicCitation: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `bibliographicCitations` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  conformsTo: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  contributor: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `contributors` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  coverage: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `coverages` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  created: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  creator: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `creators` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  date: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `dates` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  dateAccepted: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  dateCopyrighted: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  dateSubmitted: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  description: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `descriptions` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  educationLevel: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `educationLevels` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  extent: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `extents` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  format: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `formats` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  hasFormat: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `hasFormats` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  hasPart: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `hasParts` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  hasVersion: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `hasVersions` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  identifier: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `identifiers` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  instructionalMethod: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `instructionalMethods` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  isFormatOf: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  isPartOf: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  isReferencedBy: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  isReplacedBy: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  isRequiredBy: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  issued: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  isVersionOf: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  language: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `languages` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  license: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `licenses` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  mediator: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `mediators` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  medium: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `mediums` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  modified: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  provenance: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `provenances` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  publisher: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `publishers` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  references: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  relation: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `relations` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  replaces: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  requires: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  rights: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  rightsHolder: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `rightsHolders` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  source: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `sources` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  spatial: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `spatials` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  subject: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `subjects` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  tableOfContents: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
-  temporal: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `temporals` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  title: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `titles` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  type: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "Use `types` (array) instead. Dublin Core Terms fields are repeatable.",
-  }),
-  valid: z.string().optional().meta({
-    deprecated: true,
-    description:
-      "This field type will be changed to array in the next major version of the package. Dublin Core Terms fields are repeatable.",
-  }),
+  accessRights: z.array(z.string()).optional(),
+  available: z.array(z.string()).optional(),
+  conformsTo: z.array(z.string()).optional(),
+  created: z.array(z.string()).optional(),
+  dateAccepted: z.array(z.string()).optional(),
+  dateCopyrighted: z.array(z.string()).optional(),
+  dateSubmitted: z.array(z.string()).optional(),
+  isFormatOf: z.array(z.string()).optional(),
+  isPartOf: z.array(z.string()).optional(),
+  isReferencedBy: z.array(z.string()).optional(),
+  isReplacedBy: z.array(z.string()).optional(),
+  isRequiredBy: z.array(z.string()).optional(),
+  issued: z.array(z.string()).optional(),
+  isVersionOf: z.array(z.string()).optional(),
+  modified: z.array(z.string()).optional(),
+  references: z.array(z.string()).optional(),
+  replaces: z.array(z.string()).optional(),
+  requires: z.array(z.string()).optional(),
+  rights: z.array(z.string()).optional(),
+  tableOfContents: z.array(z.string()).optional(),
+  valid: z.array(z.string()).optional(),
 });
 
 const FeedpressSchema = z.object({
@@ -818,92 +491,6 @@ const PodcastItemSchema = z.object({
       space: z.string().optional(),
     })
     .optional(),
-  location: z
-    .object({
-      display: z.string(),
-      rel: z.string().optional(),
-      geo: z.string().optional(),
-      osm: z.string().optional(),
-      country: z.string().optional(),
-    })
-    .optional()
-    .meta({
-      deprecated: true,
-      description:
-        "Use `locations` (array) instead. Multiple podcast:location elements are allowed per specification.",
-    }),
-  value: z
-    .object({
-      type: z.string(),
-      method: z.string(),
-      suggested: z.number().optional(),
-      valueRecipients: z
-        .array(
-          z.object({
-            name: z.string().optional(),
-            customKey: z.string().optional(),
-            customValue: z.string().optional(),
-            type: z.string(),
-            address: z.string(),
-            split: z.number(),
-            fee: z.boolean().optional(),
-          }),
-        )
-        .optional(),
-      valueTimeSplits: z
-        .array(
-          z.object({
-            startTime: z.number(),
-            duration: z.number(),
-            remoteStartTime: z.number().optional(),
-            remotePercentage: z.number().optional(),
-            remoteItem: z
-              .object({
-                feedGuid: z.string(),
-                feedUrl: z.string().optional(),
-                itemGuid: z.string().optional(),
-                medium: z.string().optional(),
-                title: z.string().optional(),
-              })
-              .optional(),
-            valueRecipients: z
-              .array(
-                z.object({
-                  name: z.string().optional(),
-                  customKey: z.string().optional(),
-                  customValue: z.string().optional(),
-                  type: z.string(),
-                  address: z.string(),
-                  split: z.number(),
-                  fee: z.boolean().optional(),
-                }),
-              )
-              .optional(),
-          }),
-        )
-        .optional(),
-    })
-    .optional()
-    .meta({
-      deprecated: true,
-      description:
-        "Use `values` (array) instead. Multiple podcast:value elements are allowed per specification.",
-    }),
-  chats: z
-    .array(
-      z.object({
-        server: z.string(),
-        protocol: z.string(),
-        accountId: z.string().optional(),
-        space: z.string().optional(),
-      }),
-    )
-    .optional()
-    .meta({
-      deprecated: true,
-      description:
-        "Use `chat` (singular) instead. Only one podcast:chat element is allowed per specification.",
-    }),
 });
 
 const PodcastFeedSchema = z.object({
@@ -1123,92 +710,6 @@ const PodcastFeedSchema = z.object({
         .optional(),
     })
     .optional(),
-  location: z
-    .object({
-      display: z.string(),
-      rel: z.string().optional(),
-      geo: z.string().optional(),
-      osm: z.string().optional(),
-      country: z.string().optional(),
-    })
-    .optional()
-    .meta({
-      deprecated: true,
-      description:
-        "Use `locations` (array) instead. Multiple podcast:location elements are allowed per specification.",
-    }),
-  value: z
-    .object({
-      type: z.string(),
-      method: z.string(),
-      suggested: z.number().optional(),
-      valueRecipients: z
-        .array(
-          z.object({
-            name: z.string().optional(),
-            customKey: z.string().optional(),
-            customValue: z.string().optional(),
-            type: z.string(),
-            address: z.string(),
-            split: z.number(),
-            fee: z.boolean().optional(),
-          }),
-        )
-        .optional(),
-      valueTimeSplits: z
-        .array(
-          z.object({
-            startTime: z.number(),
-            duration: z.number(),
-            remoteStartTime: z.number().optional(),
-            remotePercentage: z.number().optional(),
-            remoteItem: z
-              .object({
-                feedGuid: z.string(),
-                feedUrl: z.string().optional(),
-                itemGuid: z.string().optional(),
-                medium: z.string().optional(),
-                title: z.string().optional(),
-              })
-              .optional(),
-            valueRecipients: z
-              .array(
-                z.object({
-                  name: z.string().optional(),
-                  customKey: z.string().optional(),
-                  customValue: z.string().optional(),
-                  type: z.string(),
-                  address: z.string(),
-                  split: z.number(),
-                  fee: z.boolean().optional(),
-                }),
-              )
-              .optional(),
-          }),
-        )
-        .optional(),
-    })
-    .optional()
-    .meta({
-      deprecated: true,
-      description:
-        "Use `values` (array) instead. Multiple podcast:value elements are allowed per specification.",
-    }),
-  chats: z
-    .array(
-      z.object({
-        server: z.string(),
-        protocol: z.string(),
-        accountId: z.string().optional(),
-        space: z.string().optional(),
-      }),
-    )
-    .optional()
-    .meta({
-      deprecated: true,
-      description:
-        "Use `chat` (singular) instead. Only one podcast:chat element is allowed per specification.",
-    }),
 });
 
 const MediaCommonSchema = z.object({
@@ -1447,10 +948,6 @@ const MediaGroupSchema = MediaCommonSchema.extend({
 const MediaSchema = MediaCommonSchema.extend({
   groups: z.array(MediaGroupSchema).optional(),
   contents: z.array(MediaContentSchema).optional(),
-  group: MediaGroupSchema.optional().meta({
-    deprecated: true,
-    description: "Use `groups` instead.",
-  }),
 });
 
 const OpenSearchSchema = z.object({
@@ -1865,17 +1362,11 @@ const ItemSchema = z.object({
   title: z.string().optional(),
   link: z.string().optional(),
   description: z.string().optional(),
-  authors: z
-    .array(
-      z.union([
-        z.string(),
-        z.object({
-          name: z.string().optional(),
-          email: z.email().optional(),
-        }),
-      ]),
-    )
-    .optional(),
+  authors:z.object({
+    name: z.string().optional(),
+    email: z.email().optional(),
+  })
+  .optional(),
   categories: z
     .array(
       z.object({
@@ -1944,24 +1435,16 @@ const FeedSchema = z.object({
   description: z.string(),
   language: z.string().optional(),
   copyright: z.string().optional(),
-  managingEditor: z
-    .union([
-      z.string(),
-      z.object({
-        name: z.string().optional(),
-        email: z.email().optional(),
-      }),
-    ])
-    .optional(),
-  webMaster: z
-    .union([
-      z.string(),
-      z.object({
-        name: z.string().optional(),
-        email: z.email().optional(),
-      }),
-    ])
-    .optional(),
+  managingEditor:  z.object({
+    name: z.string().optional(),
+    email: z.email().optional(),
+  })
+  .optional(),
+  webMaster: z.object({
+    name: z.string().optional(),
+    email: z.email().optional(),
+  })
+  .optional(),
   pubDate: z.string().optional(),
   lastBuildDate: z.string().optional(),
   categories: z

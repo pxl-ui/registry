@@ -1,16 +1,12 @@
 import {
-  TeaserAuthor,
-  TeaserDate,
   TeaserDescription,
   TeaserImage,
-  TeaserTitle,
-  TeaserVideo,
+  TeaserTitle
 } from "@/features/pxl/newspaper/rss/teaser";
 import {
   Teaser,
   TeaserContent,
-  TeaserMedia,
-  TeaserMeta,
+  TeaserMedia
 } from "@/features/pxl/newspaper/teaser";
 import type { Rss } from "@/lib/schemas/pxl/rss";
 
@@ -100,8 +96,6 @@ export default function TeaserReadExample() {
     dc: {
       creators: ["Kat Lay, Global health correspondent"],
       dates: ["2026-09-09T04:00:58Z"],
-      creator: "Kat Lay, Global health correspondent",
-      date: "2026-09-09T04:00:58Z",
     },
     media: {
       contents: [

@@ -15,7 +15,7 @@ function HeroHeadline({
 }: ComponentProps<typeof BaseHeroHeadline> & { entry: Atom.Entry }) {
   const title = useMemo(() => {
     if (entry.title) {
-      return entry.title;
+      return entry.title.value;
     }
 
     return "";
@@ -45,11 +45,11 @@ function HeroContent({
 }: ComponentProps<typeof BaseHeroContent> & { entry: Atom.Entry }) {
   const content = useMemo(() => {
     if (entry.content) {
-      return entry.content;
+      return entry.content.value;
     }
 
     if (entry.summary) {
-      return entry.summary;
+      return entry.summary.value;
     }
 
     return null;

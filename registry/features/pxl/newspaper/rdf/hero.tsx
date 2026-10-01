@@ -31,10 +31,6 @@ function HeroCaption({
       return item.dc.creators.join(", ");
     }
 
-    if (item.dc?.creator) {
-      return item.dc.creator;
-    }
-
     return null;
   }, [item.dc]);
 
