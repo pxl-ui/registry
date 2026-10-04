@@ -247,21 +247,6 @@
       ]
     },
     {
-      "name": "schemas/tasknotes",
-      "type": "registry:component",
-      "title": "TaskNotes Schemas",
-      "description": "Zod types and schemas for TaskNotes.",
-      "categories": ["pxl-ui", "schemas", "zod"],
-      "dependencies": ["zod"],
-      "files": [
-        { 
-          "type": "registry:file",
-          "path": "tasknotes.ts",
-          "target": "@lib/pxl/schemas/tasknotes.ts"
-        }
-      ]
-    },
-    {
       "name": "schemas/openstreetmap",
       "type": "registry:component",
       "title": "OpenStreetMap Schemas",
@@ -273,6 +258,24 @@
           "type": "registry:file",
           "path": "openstreetmap.ts",
           "target": "@lib/pxl/schemas/openstreetmap.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/opds",
+      "type": "registry:component",
+      "title": "OPDS Schemas",
+      "description": "Zod types and schemas for Open Publication Distribution System.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "registryDependencies": [
+        "pxl-ui/registry/schemas/atom"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "opds.ts",
+          "target": "@lib/pxl/schemas/opds.ts"
         }
       ]
     },
@@ -348,6 +351,21 @@
           "type": "registry:file",
           "path": "schemaorg.ts",
           "target": "@lib/pxl/schemas/schemaorg.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/tasknotes",
+      "type": "registry:component",
+      "title": "TaskNotes Schemas",
+      "description": "Zod types and schemas for TaskNotes.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tasknotes.ts",
+          "target": "@lib/pxl/schemas/tasknotes.ts"
         }
       ]
     }

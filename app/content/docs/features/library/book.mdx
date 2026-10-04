@@ -12,9 +12,36 @@ import { ComponentPreview, Install } from '~/components';
 ## Usage
 
 ```tsx
-import { BookCover } from "@/components/features/pxl/library/book"
+import {
+  Book,
+  BookBackCover,
+  BookCover,
+  BookSpine,
+} from "@/components/features/pxl/library/book"
 ```
 
 ```tsx
-<BookCover />
+<Book view="cover" size="lg">
+  <BookBackCover>Back cover content</BookBackCover>
+  <BookSpine>Spine content</BookSpine>
+  <BookCover>Cover content</BookCover>
+</Book>
 ```
+
+## Sizes
+
+<ComponentPreview item="library/book" example="sizes" />
+
+## Views
+
+<ComponentPreview item="library/book" example="views" />
+
+## API Reference
+
+### Book
+
+| Prop | Default | Description |
+| --- | --- | --- |
+| `view` | `"spine"` | `"cover"`, `"spine"`, or `"back-cover"`. |
+| `size` | `"sm"` | `"sm"` or `"lg"`; overrides the individual face sizes. |
+| `duration` | `0.65` | Turn duration in seconds. |
