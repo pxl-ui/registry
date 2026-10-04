@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Book,
   BookBackCover,
@@ -18,10 +20,33 @@ import { Shelf } from "@/components/features/pxl/library/shelf";
 
 import { dracula, janeAusten, mobyDick } from "../__fixtures__/opds";
 
+import "~/examples/fonts/not-jam-blackletter-16.css";
+
 export default function BookShelfDemo() {
+  const [hoveredBook, setHoveredBook] = useState<string | null>(null);
+  const [focusedBook, setFocusedBook] = useState<string | null>(null);
   return (
     <Shelf>
-      <Book view={"spine"} size="md">
+      <Book
+        layout="spine"
+        view={
+          hoveredBook === "dracula" || focusedBook === "dracula"
+            ? "back-cover"
+            : "spine"
+        }
+        size="md"
+        aria-label="Dracula"
+        tabIndex={0}
+        onMouseEnter={() => setHoveredBook("dracula")}
+        onMouseLeave={() => setHoveredBook(null)}
+        onFocus={() => setFocusedBook("dracula")}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) {
+            setFocusedBook(null);
+          }
+        }}
+        className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+      >
         <BookBackCover className="bg-[#E9CA4E]">
           <BookBackCoverBlurb catalog={dracula} />
         </BookBackCover>
@@ -47,9 +72,28 @@ export default function BookShelfDemo() {
           </BookCoverMeta>
         </BookCover>
       </Book>
-      <Book view={"spine"} size="md">
+      <Book
+        layout="spine"
+        view={
+          hoveredBook === "janeAusten" || focusedBook === "janeAusten"
+            ? "back-cover"
+            : "spine"
+        }
+        size="md"
+        aria-label="Pride and Prejudice"
+        tabIndex={0}
+        onMouseEnter={() => setHoveredBook("janeAusten")}
+        onMouseLeave={() => setHoveredBook(null)}
+        onFocus={() => setFocusedBook("janeAusten")}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) {
+            setFocusedBook(null);
+          }
+        }}
+        className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+      >
         <BookBackCover className="bg-[#202220]">
-          <BookBackCoverBlurb catalog={janeAusten} />
+          <BookBackCoverBlurb className="text-white/60" catalog={janeAusten} />
         </BookBackCover>
 
         <BookSpine className="bg-[#202220]">
@@ -73,7 +117,26 @@ export default function BookShelfDemo() {
           </BookCoverMeta>
         </BookCover>
       </Book>
-      <Book view={"spine"} size="md">
+      <Book
+        layout="spine"
+        view={
+          hoveredBook === "mobyDick" || focusedBook === "mobyDick"
+            ? "back-cover"
+            : "spine"
+        }
+        size="md"
+        aria-label="Moby Dick"
+        tabIndex={0}
+        onMouseEnter={() => setHoveredBook("mobyDick")}
+        onMouseLeave={() => setHoveredBook(null)}
+        onFocus={() => setFocusedBook("mobyDick")}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) {
+            setFocusedBook(null);
+          }
+        }}
+        className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+      >
         <BookBackCover className="bg-[#928D86]">
           <BookBackCoverBlurb catalog={mobyDick} />
         </BookBackCover>

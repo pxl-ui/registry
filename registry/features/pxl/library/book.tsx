@@ -11,6 +11,7 @@ type BookSize = "sm" | "md" | "lg";
 const BookContext = createContext<{ view: BookView; size: BookSize } | null>(
   null,
 );
+const bookWidth: Record<BookSize, number> = { sm: 5, md: 7.5, lg: 10 };
 const bookRotation: Record<BookView, number> = {
   cover: 0,
   spine: 90,
@@ -23,12 +24,12 @@ const bookVariants = cva("relative inline-block shrink-0 align-bottom", {
       sm: "h-32 w-20 [--book-depth:0.875rem] [--book-width:5rem]",
       md: "h-48 w-30 [--book-depth:1.6rem] [--book-width:7.5rem]",
       lg: "h-64 w-40 [--book-depth:2rem] [--book-width:10rem]",
-    }
+    },
   },
   defaultVariants: {
     size: "sm",
-  }
-})
+  },
+});
 
 function Book({
   className,
@@ -37,16 +38,30 @@ function Book({
   view = "spine",
   size = "sm",
   duration = 0.65,
+  layout = "cover",
   ...props
 }: {
   /** Change this value from any event or external state to turn the book. */
   view?: BookView;
   /** Sets the dimensions of all composed faces. */
   size?: BookSize;
+  /** Space reserved for the book, independent of the displayed view. */
+  layout?: "cover" | "spine";
   /** Duration of each turn, in seconds. */
   duration?: number;
 } & ComponentProps<"div"> & VariantProps<typeof bookVariants>) {
   const reducedMotion = useReducedMotion();
+  const compact = layout === "spine";
+  const extracted = compact && view !== "spine";
+  const restingZ = `${-bookWidth[size] / 2}rem`;
+  // Pull clear of the neighboring spines before turning; reverse on return.
+  // Null starts each segment at the current pose if the interaction is interrupted.
+  const compactAnimation = reducedMotion
+    ? { rotateY: bookRotation[view], z: extracted ? "3rem" : restingZ }
+    : {
+        rotateY: extracted ? [null, 90, bookRotation[view]] : [null, 90, 90],
+        z: extracted ? [null, "3rem", "3rem"] : [null, "3rem", restingZ],
+      };
 
   return (
     <BookContext.Provider value={{ view, size }}>
@@ -55,12 +70,14 @@ function Book({
         data-slot="book"
         data-view={view}
         data-size={size}
-        className={cn(
-          bookVariants({ size, }),
-          className,
-        )}
+        data-layout={layout}
+        className={cn(bookVariants({ size }), className)}
         style={{
           perspective: "800px",
+          ...(compact && {
+            width: "var(--book-depth)",
+            zIndex: extracted ? 10 : 0,
+          }),
           ...style,
         }}
       >
@@ -70,17 +87,23 @@ function Book({
           style={
             {
               transformStyle: "preserve-3d",
+              ...(compact && {
+                width: "var(--book-width)",
+                left: "calc((var(--book-depth) - var(--book-width)) / 2)",
+              }),
             } as ComponentProps<typeof motion.div>["style"]
           }
           initial={false}
-          animate={{
-            rotateY: bookRotation[view],
-            z: view === "spine" ? 0 : 24,
-          }}
+          animate={
+            compact
+              ? { ...compactAnimation, y: extracted ? -24 : 0 }
+              : { rotateY: bookRotation[view], z: view === "spine" ? 0 : 24 }
+          }
           transition={{
             type: "tween",
             duration: reducedMotion ? 0 : duration,
             ease: "easeInOut",
+            ...(compact && { times: [0, extracted ? 0.4 : 0.6, 1] }),
           }}
         >
           {/* The page block closes the volume without changing the pixel covers. */}

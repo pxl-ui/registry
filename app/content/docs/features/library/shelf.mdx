@@ -8,3 +8,32 @@ import { ComponentPreview, Install } from '~/components';
 ## Installation
 
 <Install item="library/shelf" />
+
+## Usage
+
+```tsx
+import { useState } from "react"
+import { Book, BookCover, BookSpine, BookBackCover, type BookView } from "@/components/features/pxl/library/book"
+import { Shelf } from "@/components/features/pxl/library/shelf"
+
+function Example() {
+  const [view, setView] = useState<BookView>("spine")
+  const hoverView: BookView = "back-cover"
+
+  return (
+    <Shelf>
+      <Book
+        layout="spine"
+        view={view}
+        size="md"
+        onMouseEnter={() => setView(hoverView)}
+        onMouseLeave={() => setView("spine")}
+      >
+        <BookSpine>Spine content</BookSpine>
+        <BookCover>Cover content</BookCover>
+        <BookBackCover>Back cover content</BookBackCover>
+      </Book>
+    </Shelf>
+  )
+}
+```
