@@ -118,24 +118,24 @@ const Icons: Partial<Record<WMO4677Code, CodeMapping>> = {
     day(props: SVGProps<SVGSVGElement>) {
       return (
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
           viewBox="0 0 24 24"
           {...props}
         >
-          <path d="M10 20H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 18H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2Zm-12-4H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 12H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2ZM10 8H6V6h4v2Zm8 0h-4V6h4v2ZM6 6H2V4h4v2Zm8 0h-4V4h4v2Zm8-2v2h-4V4h4Z"></path>
+          <path d="M10 3h6v2h-6zM8 5h2v2h-2zM16 5h2v2h-2zM4 7h4v2h-4zM18 7h2v2h-2zM2 9h2v2h-2zM20 9h2v2h-2zM4 11h16v2h-16zM4 15h12v2h-12zM18 15h2v2h-2zM2 19h4v2h-4zM8 19h14v2h-14z"></path>
         </svg>
       );
     },
     night(props: SVGProps<SVGSVGElement>) {
       return (
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
           viewBox="0 0 24 24"
           {...props}
         >
-          <path d="M10 20H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 18H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2Zm-12-4H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 12H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2ZM10 8H6V6h4v2Zm8 0h-4V6h4v2ZM6 6H2V4h4v2Zm8 0h-4V4h4v2Zm8-2v2h-4V4h4Z"></path>
+          <path d="M10 3h6v2h-6zM8 5h2v2h-2zM16 5h2v2h-2zM4 7h4v2h-4zM18 7h2v2h-2zM2 9h2v2h-2zM20 9h2v2h-2zM4 11h16v2h-16zM4 15h12v2h-12zM18 15h2v2h-2zM2 19h4v2h-4zM8 19h14v2h-14z"></path>
         </svg>
       );
     },
@@ -145,24 +145,24 @@ const Icons: Partial<Record<WMO4677Code, CodeMapping>> = {
     day(props: SVGProps<SVGSVGElement>) {
       return (
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
           viewBox="0 0 24 24"
           {...props}
         >
-          <path d="M10 20H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 18H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2Zm-12-4H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 12H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2ZM10 8H6V6h4v2Zm8 0h-4V6h4v2ZM6 6H2V4h4v2Zm8 0h-4V4h4v2Zm8-2v2h-4V4h4Z"></path>
+          <path d="M10 3h6v2h-6zM8 5h2v2h-2zM16 5h2v2h-2zM4 7h4v2h-4zM18 7h2v2h-2zM2 9h2v2h-2zM20 9h2v2h-2zM4 11h16v2h-16zM4 15h12v2h-12zM18 15h2v2h-2zM2 19h4v2h-4zM8 19h14v2h-14z"></path>
         </svg>
       );
     },
     night(props: SVGProps<SVGSVGElement>) {
       return (
         <svg
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
           viewBox="0 0 24 24"
           {...props}
         >
-          <path d="M10 20H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 18H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2Zm-12-4H6v-2h4v2Zm8 0h-4v-2h4v2ZM6 12H2v-2h4v2Zm8 0h-4v-2h4v2Zm8 0h-4v-2h4v2ZM10 8H6V6h4v2Zm8 0h-4V6h4v2ZM6 6H2V4h4v2Zm8 0h-4V4h4v2Zm8-2v2h-4V4h4Z"></path>
+          <path d="M10 3h6v2h-6zM8 5h2v2h-2zM16 5h2v2h-2zM4 7h4v2h-4zM18 7h2v2h-2zM2 9h2v2h-2zM20 9h2v2h-2zM4 11h16v2h-16zM4 15h12v2h-12zM18 15h2v2h-2zM2 19h4v2h-4zM8 19h14v2h-14z"></path>
         </svg>
       );
     },

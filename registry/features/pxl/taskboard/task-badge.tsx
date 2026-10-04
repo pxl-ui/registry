@@ -80,14 +80,7 @@ function DueBadge({
 
   return (
     <Badge variant={variant} {...props}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="size-3 mr-1"
-      >
-        <path d="M13 22H5v-2h8v2Zm6 0h-2v-2h2v2ZM5 8h14V6h2v4H5v10H3V6h2v2Zm12 12h-2v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2h-2v-2h2v2Zm8 0h-2v-2h2v2Zm-6-2h-2v-2h2v2Zm4 0h-2v-2h2v2ZM9 14H7v-2h2v2Zm4 0h-2v-2h2v2Zm6 0h-2v-2h2v2ZM9 4h6V2h2v2h2v2H5V4h2V2h2v2Z"></path>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="size-3 mr-1"><path d="M6 2h12v2h-12zM4 4h2v2h-2zM18 4h2v2h-2zM2 6h2v5h-2zM11 6h2v7h-2zM20 6h2v12h-2zM2 13h8v2h-8zM13 13h2v2h-2zM2 15h2v7h-2zM8 15h2v4h-2zM15 15h2v2h-2zM4 17h4v2h-4zM18 18h2v2h-2zM10 20h8v2h-8z"></path></svg>
       {formatted}
     </Badge>
   );
@@ -286,14 +279,7 @@ function ScheduledBadge({
 
   return (
     <Badge variant={variant} {...props}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="size-3 mr-1"
-      >
-        <path d="M21 23h-8v-2h8v2ZM9 21H3v-2h6v2Zm4 0h-2v-8h2v8Zm10 0h-2v-8h2v8ZM3 7h14V5h2v4H3v10H1V5h2v2Zm15 10h2v2h-2v-1h-2v-4h2v3Zm3-4h-8v-2h8v2ZM7 3h6V1h2v2h2v2H3V3h2V1h2v2Z" />
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="size-3 mr-1"><path d="M7 2h2v4h-2zM15 2h2v4h-2zM5 4h2v2h-2zM9 4h6v2h-6zM17 4h2v2h-2zM3 6h2v14h-2zM19 6h2v2h-2zM5 8h5v2h-5zM12 10h8v2h-8zM10 12h2v8h-2zM20 12h2v8h-2zM14 14h2v4h-2zM16 16h2v2h-2zM5 20h4v2h-4zM12 20h8v2h-8z"></path></svg>
       {formatted}
     </Badge>
   );

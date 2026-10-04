@@ -6,7 +6,6 @@ import {
   $getNearestNodeFromDOMNode,
   $isElementNode,
 } from "lexical";
-import { GripVertical } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -90,7 +89,7 @@ export function DraggableBlockPlugin() {
             <svg className="size-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M13 11h7v2h-7v7h-2v-7H4v-2h7V4h2v7Z"/></svg>
           </button>
           <div className="flex size-5 items-center justify-center rounded-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground">
-            <GripVertical className="size-4" />
+            <svg className="size-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M7 1h2v2h-2zM15 1h2v2h-2zM5 3h2v2h-2zM9 3h2v2h-2zM13 3h2v2h-2zM17 3h2v2h-2zM7 5h2v2h-2zM15 5h2v2h-2zM7 9h2v2h-2zM15 9h2v2h-2zM5 11h2v2h-2zM9 11h2v2h-2zM13 11h2v2h-2zM17 11h2v2h-2zM7 13h2v2h-2zM15 13h2v2h-2zM7 17h2v2h-2zM15 17h2v2h-2zM5 19h2v2h-2zM9 19h2v2h-2zM13 19h2v2h-2zM17 19h2v2h-2zM7 21h2v2h-2zM15 21h2v2h-2z"></path></svg>
           </div>
         </div>
       }

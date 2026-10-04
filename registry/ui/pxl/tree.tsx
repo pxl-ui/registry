@@ -421,33 +421,9 @@ export const TreeIcon = ({
   const getDefaultIcon = () =>
     hasChildren ? (
       isExpanded ? (
-        <svg
-          className="size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            fill="currentColor"
-            d="M6 10v2H5v2H4v2H3v2H2v3h1v1h15v-1h1v-3h1v-2h1v-2h1v-2h1v-2zm14 4h-1v2h-1v2h-1v2H4v-2h1v-2h1v-2h1v-2h13z"
-          />
-          <path
-            fill="currentColor"
-            d="M20 5v4h-2V6H9V5H8V4H3v10H2v2H1V3h1V2h7v1h1v1h9v1z"
-          />
-        </svg>
+        <svg className="size-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h8v2h-8zM2 6h2v12h-2zM10 6h10v2h-10zM20 8h2v4h-2zM8 10h12v2h-12zM22 10h1v4h-1zM6 12h2v2h-2zM21 12h1v2h-1zM4 14h2v2h-2zM19 14h2v2h-2zM17 16h2v2h-2zM4 18h13v2h-13z"></path></svg>
       ) : (
-        <svg
-          className="size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            fill="currentColor"
-            d="M22 6V5h-9V4h-1V3h-1V2H2v1H1v18h1v1h20v-1h1V6zm-1 14H3V4h7v1h1v1h1v1h9z"
-          />
-        </svg>
+        <svg className="size-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 20H4v-2h16v2ZM4 18H2V6h2v12Zm18 0h-2V8h2v10ZM20 8H10V6H4V4h8v2h8v2Z"/></svg>
       )
     ) : (
       <svg className="size-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M18 22H6v-2h12v2ZM6 20H4V4h2v16ZM16 4h-2v4h4V6h2v14h-2V10h-6V4H6V2h10v2Zm2 2h-2V4h2v2Z"/></svg>

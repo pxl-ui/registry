@@ -348,7 +348,7 @@ function BookSpineTitle({ className, ...props }: ComponentProps<"h2">) {
   return (
     <h2
       data-slot="book-title"
-      className={cn("font-heading line-clamp-1", className)}
+      className={cn("font-heading line-clamp-1 min-h-0 shrink", className)}
       {...props}
     />
   );
@@ -359,7 +359,7 @@ function BookSpineAuthor({ className, ...props }: ComponentProps<"h3">) {
     <h3
       data-slot="book-author"
       className={cn(
-        "font-serif line-clamp-1 text-black/40 italic",
+        "font-serif line-clamp-1 min-h-0 shrink-20 text-black/40 italic text-end",
         className,
       )}
       {...props}

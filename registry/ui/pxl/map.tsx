@@ -700,14 +700,7 @@ function MapControls({
           className="bg-background border-border hover:bg-accent hover:text-accent-foreground flex h-8 w-8 items-center justify-center rounded-lg border shadow-md transition-colors"
           aria-label="Reset north"
         >
-          <svg
-            className="size-4 -scale-x-100"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M10 6H8v12h2v2H6V4h4v2Zm2 12h-2v-2h2v2Zm6-2h-6v-2h4v-2h2v4Zm-2-4h-2v-2h2v2Zm-2-2h-2V8h2v2Zm-2-2h-2V6h2v2Z" />
-          </svg>
+          <svg className="size-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h4v2h-4zM14 4h4v2h-4zM20 4h2v2h-2zM10 6h4v2h-4zM18 6h2v4h-2zM6 8h4v2h-4zM2 10h6v2h-6zM16 10h2v4h-2zM8 12h4v2h-4zM10 14h2v4h-2zM14 14h2v4h-2zM12 18h2v4h-2z"></path></svg>
         </button>
       )}
 
