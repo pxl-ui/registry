@@ -278,6 +278,10 @@ export default defineConfig({
                 ],
               },
               {
+                label: "Library",
+                items: [{ autogenerate: { directory: "features/library" } }],
+              },
+              {
                 label: "Magazine",
                 items: [{ autogenerate: { directory: "features/magazine" } }],
               },

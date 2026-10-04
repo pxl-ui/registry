@@ -40,9 +40,24 @@ import { toRouteId } from "~/lib/registry";
 
 </div>
 
+## <FeatureIcon name="library" class="size-5 inline-flex" /> Library
+> <p className="text-muted-foreground">Components to display media content such as books or movies</p>
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.library.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
 ## <FeatureIcon name="magazine" class="size-5 inline-flex" /> Magazine
 > <p className="text-muted-foreground">Components to display blog posts or articles contents</p>
-
 
 <div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
 

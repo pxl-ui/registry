@@ -1,0 +1,37 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/library",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "library/book",
+      "type": "registry:component",
+      "title": "Book",
+      "description": "A component for displaying a book",
+      "categories": ["pxl-ui", "features", "library"],
+      "dependencies": ["cn", "class-variance-authority"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "book.tsx",
+          "target": "@components/features/pxl/library/book.tsx"
+        }
+      ]
+    },
+    {
+      "name": "library/shelf",
+      "type": "registry:component",
+      "title": "Shelf",
+      "description": "A component for displaying a shelf",
+      "categories": ["pxl-ui", "features", "library"],
+      "dependencies": ["cn"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "shelf.tsx",
+          "target": "@components/features/pxl/library/shelf.tsx"
+        }
+      ]
+    }
+  ]
+}

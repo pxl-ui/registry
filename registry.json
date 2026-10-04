@@ -10,6 +10,7 @@
     "registry/features/pxl/conversation/registry.json",
     "registry/features/pxl/cookbook/registry.json",
     "registry/features/pxl/forecast/registry.json",
+    "registry/features/pxl/library/registry.json",
     "registry/features/pxl/magazine/registry.json",
     "registry/features/pxl/mailbox/registry.json",
     "registry/features/pxl/marketing/registry.json",
