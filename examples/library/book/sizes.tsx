@@ -25,7 +25,7 @@ export default function BookSizes() {
         </BookCoverMeta>
       </BookCover>
 
-      <BookCover size="lg">
+      <BookCover size="md">
         <BookCoverImage catalog={book} />
         <BookCoverMeta>
           <BookCoverTitle

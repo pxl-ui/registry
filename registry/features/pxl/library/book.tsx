@@ -6,7 +6,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { type ComponentProps, createContext, useContext } from "react";
 
 type BookView = "cover" | "spine" | "back-cover";
-type BookSize = "sm" | "lg";
+type BookSize = "sm" | "md" | "lg";
 
 const BookContext = createContext<{ view: BookView; size: BookSize } | null>(
   null,
@@ -20,8 +20,9 @@ const bookRotation: Record<BookView, number> = {
 const bookVariants = cva("relative inline-block shrink-0 align-bottom", {
   variants: {
     size: {
-      sm: "h-32 w-20",
-      lg: "h-64 w-40",
+      sm: "h-32 w-20 [--book-depth:0.875rem] [--book-width:5rem]",
+      md: "h-48 w-30 [--book-depth:1.6rem] [--book-width:7.5rem]",
+      lg: "h-64 w-40 [--book-depth:2rem] [--book-width:10rem]",
     }
   },
   defaultVariants: {
@@ -55,8 +56,7 @@ function Book({
         data-view={view}
         data-size={size}
         className={cn(
-          "relative inline-block shrink-0 align-bottom",
-          size === "sm" ? "h-32 w-20" : "h-64 w-40",
+          bookVariants({ size, }),
           className,
         )}
         style={{
@@ -70,9 +70,6 @@ function Book({
           style={
             {
               transformStyle: "preserve-3d",
-              // Match the standalone spine widths, respecting root font size.
-              "--book-depth": size === "sm" ? "0.875rem" : "2rem",
-              "--book-width": size === "sm" ? "5rem" : "10rem",
             } as ComponentProps<typeof motion.div>["style"]
           }
           initial={false}
@@ -149,11 +146,22 @@ const bookCoverVariants = cva(
   {
     variants: {
       genre: {
-        unknown: "bg-muted **:data-[slot=book-meta]:border-l-muted-foreground",
+        unknown: "bg-muted",
+        "literary-fiction": "bg-lime-400", // FB
+        "crime-fiction": "bg-slate-400", // FF
+        thriller: "bg-mist-400", // FH
+        "adventure": "bg-emerald-400", // FJ
+        "horror": "bg-stone-400", // FK
+        "science-fiction": "bg-purple-400", // FL
+        fantasy: "bg-violet-400", // FM
+        erotic: "bg-red-400", // FP
+        romance: "bg-rose-400", // FR
+        "historical-fiction": "bg-blue-400", // FV
       },
       size: {
         sm: "h-32 w-20 pixel-size-sm **:data-[slot=book-joint]:left-2 **:data-[slot=book-meta]:h-14 **:data-[slot=book-title]:text-2xs **:data-[slot=book-author]:text-3xs",
-        lg: "h-64 w-40 pixel-size-md **:data-[slot=book-joint]:left-4 **:data-[slot=book-meta]:h-28 **:data-[slot=book-title]:text-base **:data-[slot=book-author]:text-xs",
+        md: "h-48 w-30 pixel-size-md **:data-[slot=book-joint]:left-3 **:data-[slot=book-meta]:h-20 **:data-[slot=book-title]:text-sm **:data-[slot=book-author]:text-2xs",
+        lg: "h-64 w-40 pixel-size-lg **:data-[slot=book-joint]:left-4 **:data-[slot=book-meta]:h-24 **:data-[slot=book-title]:text-base **:data-[slot=book-author]:text-xs",
       },
     },
     defaultVariants: {
@@ -166,7 +174,7 @@ const bookCoverVariants = cva(
 function BookCover({
   className,
   genre = "unknown",
-  size,
+  size = "sm",
   children,
   ...props
 }: ComponentProps<"div"> & VariantProps<typeof bookCoverVariants>) {
@@ -176,7 +184,7 @@ function BookCover({
       <div
         data-slot="book-cover"
         className={cn(
-          bookCoverVariants({ genre, size: book?.size ?? size ?? "sm" }),
+          bookCoverVariants({ genre, size: book?.size ?? size }),
           book && "size-full",
           className,
         )}
@@ -234,7 +242,8 @@ const bookBackCoverVariants = cva(
       },
       size: {
         sm: "h-32 w-20 pixel-size-sm **:data-[slot=book-joint]:right-2 **:data-[slot=book-blurb]:text-3xs **:data-[slot=book-blurb]:pt-2 **:data-[slot=book-blurb]:max-h-[calc(100%-(--spacing(2)))] **:data-[slot=book-blurb]:px-1",
-        lg: "h-64 w-40 pixel-size-md **:data-[slot=book-joint]:right-4 **:data-[slot=book-blurb]:text-xs **:data-[slot=book-blurb]:pt-4 **:data-[slot=book-blurb]:max-h-[calc(100%-(--spacing(4)))] **:data-[slot=book-blurb]:px-2",
+        md: "h-48 w-30 pixel-size-md **:data-[slot=book-joint]:right-3 **:data-[slot=book-blurb]:text-2xs **:data-[slot=book-blurb]:pt-3 **:data-[slot=book-blurb]:max-h-[calc(100%-(--spacing(3)))] **:data-[slot=book-blurb]:px-1.5",
+        lg: "h-64 w-40 pixel-size-lg **:data-[slot=book-joint]:right-4 **:data-[slot=book-blurb]:text-xs **:data-[slot=book-blurb]:pt-4 **:data-[slot=book-blurb]:max-h-[calc(100%-(--spacing(4)))] **:data-[slot=book-blurb]:px-2",
       },
     },
     defaultVariants: {
@@ -290,7 +299,8 @@ const bookSpineVariants = cva("group/book-cover relative pixel-rounded", {
     },
     size: {
       sm: "h-32 w-3.5 pixel-size-sm **:data-[slot=book-meta]:px-1 **:data-[slot=book-meta]:gap-1 **:data-[slot=book-title]:text-2xs **:data-[slot=book-author]:text-3xs",
-      lg: "h-64 w-4 pixel-size-md **:data-[slot=book-meta]:px-2.5 **:data-[slot=book-meta]:gap-2 **:data-[slot=book-title]:text-base **:data-[slot=book-author]:text-xs",
+      md: "h-48 w-7 pixel-size-sm **:data-[slot=book-meta]:px-1.75 **:data-[slot=book-meta]:gap-1 **:data-[slot=book-title]:text-xs **:data-[slot=book-author]:text-2xs",
+      lg: "h-64 w-9 pixel-size-md **:data-[slot=book-meta]:px-2.5 **:data-[slot=book-meta]:gap-2 **:data-[slot=book-title]:text-base **:data-[slot=book-author]:text-xs",
     },
   },
   defaultVariants: {
@@ -349,7 +359,7 @@ function BookSpineAuthor({ className, ...props }: ComponentProps<"h3">) {
     <h3
       data-slot="book-author"
       className={cn(
-        "font-serif line-clamp-1 text-muted-foreground italic",
+        "font-serif line-clamp-1 text-black/40 italic",
         className,
       )}
       {...props}

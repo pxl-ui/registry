@@ -25,7 +25,7 @@ export default function BookDemo() {
   return (
     <Book
       view={hover ? "back-cover" : "cover"}
-      size="lg"
+      size="md"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >

@@ -4,7 +4,7 @@ import type { ComponentProps } from "react"
 function Shelf({ className, ...props }: ComponentProps<"div">) {
   return (
     <div data-slot="shelf"
-      className={cn("", className)}
+      className={cn("flex items-end", className)}
       {...props}
       />
   )
