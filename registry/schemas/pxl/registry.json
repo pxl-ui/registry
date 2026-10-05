@@ -287,10 +287,60 @@
         "pxl-ui/registry/schemas/atom"
       ],
       "files": [
-        { 
+        {
           "type": "registry:file",
-          "path": "opds.ts",
-          "target": "@lib/pxl/schemas/opds.ts"
+          "path": "opds/acquisition-object.ts",
+          "target": "@lib/pxl/schemas/opds/acquisition-object.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/feed-metadata.ts",
+          "target": "@lib/pxl/schemas/opds/feed-metadata.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/feed.ts",
+          "target": "@lib/pxl/schemas/opds/feed.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/index.ts",
+          "target": "@lib/pxl/schemas/opds/index.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/link.ts",
+          "target": "@lib/pxl/schemas/opds/link.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/metadata.ts",
+          "target": "@lib/pxl/schemas/opds/metadata.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/properties.ts",
+          "target": "@lib/pxl/schemas/opds/properties.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/publication.ts",
+          "target": "@lib/pxl/schemas/opds/publication.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/shared.ts",
+          "target": "@lib/pxl/schemas/opds/shared.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/subcollection.ts",
+          "target": "@lib/pxl/schemas/opds/subcollection.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "opds/v1.2.ts",
+          "target": "@lib/pxl/schemas/opds/v1.2.ts"
         }
       ]
     },

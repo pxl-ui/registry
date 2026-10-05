@@ -16,7 +16,7 @@ import {
   BookSpineAuthor,
   BookSpineTitle,
 } from "@/components/features/pxl/library/opds/book";
-import { dracula } from "~/examples/library/__fixtures__/opds";
+import { publication } from "~/examples/library/__fixtures__/opds-2.0";
 
 import "~/examples/fonts/not-jam-blackletter-16.css";
 
@@ -29,28 +29,34 @@ export default function BookDemo() {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <BookBackCover className="bg-[#E9CA4E]">
-        <BookBackCoverBlurb catalog={dracula} />
+      <BookBackCover className="bg-[#14100D]">
+        <BookBackCoverBlurb
+          className="text-white/60"
+          publication={publication}
+        />
       </BookBackCover>
 
-      <BookSpine className="bg-[#E9CA4E]">
+      <BookSpine className="bg-[#14100D]">
         <BookSpineMeta>
           <BookSpineTitle
-            className="font-not-jam-blackletter-16"
-            catalog={dracula}
+            className="font-not-jam-blackletter-16 text-white/60"
+            publication={publication}
           />
-          <BookSpineAuthor catalog={dracula} />
+          <BookSpineAuthor
+            className="text-white/60"
+            publication={publication}
+          />
         </BookSpineMeta>
       </BookSpine>
 
       <BookCover>
-        <BookCoverImage catalog={dracula} />
+        <BookCoverImage publication={publication} />
         <BookCoverMeta>
           <BookCoverTitle
             className="font-not-jam-blackletter-16"
-            catalog={dracula}
+            publication={publication}
           />
-          <BookCoverAuthor catalog={dracula} />
+          <BookCoverAuthor publication={publication} />
         </BookCoverMeta>
       </BookCover>
     </Book>

@@ -23,7 +23,7 @@ import {
 ```tsx
 <Book view="cover" size="lg">
   <BookBackCover>Back cover content</BookBackCover>
-  <BookSpine>Spine content</BookSpine>
+  <BookSpine pages={320}>Spine content</BookSpine>
   <BookCover>Cover content</BookCover>
 </Book>
 ```
@@ -50,3 +50,11 @@ import {
 | `size` | `"sm"` | `"sm"`, `"md"` or `"lg"`. |
 | `layout` | `"cover"` | Space reserved independently of `view`: `"cover"` or `"spine"`. Spine layout pulls the book forward when displaying either cover. |
 | `duration` | `0.65` | Turn duration in seconds. |
+| `pages` | — | Page count used for book thickness. A value on `BookSpine` takes precedence. |
+
+### BookSpine
+
+| Prop | Default | Description |
+| --- | --- | --- |
+| `size` | `"sm"` | `"sm"`, `"md"`, or `"lg"`. Inherits the size of a composed `Book`. |
+| `pages` | — | Page count used for spine width: minimum through 80, linear growth to 500, then maximum. |

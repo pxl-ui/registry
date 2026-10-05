@@ -1,16 +1,13 @@
-import type z from "zod";
+import { z } from "zod";
 
 import { filter } from "~/lib/registry";
 
-const schemas = new Map<
-  string,
-  () => Promise<{ default: Record<string, z.ZodType> }>
->();
+type SchemaBundle = { [name: string]: z.ZodType | SchemaBundle };
+
+const schemas = new Map<string, () => Promise<{ default: SchemaBundle }>>();
 
 Object.entries(
-  import.meta.glob<{ default: Record<string, z.ZodType> }>(
-    "/registry/schemas/**/*.ts",
-  ),
+  import.meta.glob<{ default: SchemaBundle }>("/registry/schemas/**/*.ts"),
 ).forEach(([path, schema]) => {
   const base = path
     .replace("/registry/schemas/pxl/", "schemas/")
@@ -33,10 +30,24 @@ Object.entries(
   }
 });
 
+function flattenSchemas(
+  bundle: SchemaBundle,
+  prefix = "",
+): Record<string, z.ZodType> {
+  return Object.fromEntries(
+    Object.entries(bundle).flatMap(([name, value]) => {
+      const key = prefix ? `${prefix}.${name}` : name;
+      return value instanceof z.ZodType
+        ? [[key, value] as const]
+        : Object.entries(flattenSchemas(value, key));
+    }),
+  );
+}
+
 async function getSchemas(item: string) {
   const schemaImporter = schemas.get(item);
   if (schemaImporter) {
-    return (await schemaImporter()).default;
+    return flattenSchemas((await schemaImporter()).default);
   }
 
   return null;

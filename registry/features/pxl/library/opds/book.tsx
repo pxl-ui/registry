@@ -11,23 +11,12 @@ import {
 import type { OPDS } from "@/lib/schemas/pxl/opds";
 
 function BookBackCoverBlurb({
-  catalog,
+  publication,
   ...props
 }: ComponentProps<typeof BaseBookBackCoverBlurb> & {
-  catalog: OPDS.Catalog;
+  publication: OPDS.Publication;
 }) {
-  const blurb = useMemo(
-    function getBlurb() {
-      const entry = catalog.entries?.[0];
-
-      if (entry?.content) {
-        return entry?.content;
-      }
-    },
-    [catalog],
-  );
-
-  if (!blurb) {
+  if (!publication.metadata.description) {
     return null;
   }
 
@@ -36,31 +25,42 @@ function BookBackCoverBlurb({
       {...props}
       // biome-ignore lint/security/noDangerouslySetInnerHtml: html content
       dangerouslySetInnerHTML={{
-        __html: blurb.value,
+        __html: publication.metadata.description,
       }}
     ></BaseBookBackCoverBlurb>
   );
 }
 
 function BookCoverAuthor({
-  catalog,
+  publication,
   ...props
 }: ComponentProps<typeof BaseBookCoverAuthor> & {
-  catalog: OPDS.Catalog;
+  publication: OPDS.Publication;
 }) {
   const author = useMemo(
     function getAuthor() {
-      const entry = catalog.entries?.[0];
+      const author = 
+        Array.isArray(publication.metadata.author) ?
+          publication.metadata.author[0] :
+          publication.metadata.author;
 
-      if (entry?.authors?.[0]?.name) {
-        if (entry?.authors?.[0]?.name.includes(",")) {
-          return entry?.authors?.[0]?.name?.split(",").reverse().join(" ");
-        }
-
-        return entry?.authors?.[0]?.name;
+      if (typeof author === "string") {
+        return author;
       }
+
+      if (typeof author?.name === "string") {
+        return author.name;
+      }
+
+      if (!author) {
+        return null;
+      }
+
+      const keys = Object.keys(author.name);
+
+      return author.name[keys[0]];
     },
-    [catalog],
+    [publication.metadata.author],
   );
 
   if (!author) {
@@ -71,28 +71,24 @@ function BookCoverAuthor({
 }
 
 function BookCoverImage({
-  catalog,
+  publication,
   ...props
 }: ComponentProps<"img"> & {
-  catalog: OPDS.Catalog
+  publication: OPDS.Publication;
 }) {
   const image = useMemo(
     function getImage() {
-      const entry = catalog.entries?.[0];
+      const largestImage = publication.images?.sort((a, b) => 
+        (b.width ?? 0) - (a.width ?? 0)
+      )?.[0];
 
-      const imageLink = entry?.links?.find(l => l.rel === "http://opds-spec.org/image");
-
-      if (imageLink) {
-        return imageLink.href;
+      if (largestImage) {
+        return largestImage.href;
       }
 
-      const thumbnailLink = entry?.links?.find(l => l.rel === "http://opds-spec.org/image/thumbnail");
-
-      if (thumbnailLink) {
-        return thumbnailLink.href;
-      }
+      return null;
     },
-    [catalog],
+    [publication.images],
   );
   
   if (!image) {
@@ -109,42 +105,59 @@ function BookCoverImage({
 }
 
 function BookCoverTitle({
-  catalog,
+  publication,
   ...props
 }: ComponentProps<typeof BaseBookCoverTitle> & {
-  catalog: OPDS.Catalog;
+  publication: OPDS.Publication;
 }) {
   const title = useMemo(
     function getTitle() {
-      const entry = catalog.entries?.[0];
-
-      if (entry?.title.value) {
-        return entry.title.value;
+      if (typeof publication.metadata.title === "string") {
+        return publication.metadata.title;
       }
 
-      return catalog.title.value;
+      const keys = Object.keys(publication.metadata.title);
+
+      return publication.metadata.title[keys[0]];
     },
-    [catalog],
+    [publication.metadata.title],
   );
+
+  if (!title) return null;
 
   return <BaseBookCoverTitle {...props}>{title}</BaseBookCoverTitle>;
 }
 
 function BookSpineAuthor({
-  catalog,
+  publication,
   ...props
 }: ComponentProps<typeof BaseBookSpineAuthor> & {
-  catalog: OPDS.Catalog;
+  publication: OPDS.Publication;
 }) {
   const author = useMemo(
     function getAuthor() {
-      const entry = catalog.entries?.[0];
+      const author = 
+        Array.isArray(publication.metadata.author) ?
+          publication.metadata.author[0] :
+          publication.metadata.author;
 
-      if (entry?.authors?.[0]?.name) {
-        return entry?.authors?.[0]?.name;
+      if (typeof author === "string") {
+        return author;
       }
+
+      if (typeof author?.name === "string") {
+        return author.name;
+      }
+
+      if (!author) {
+        return null;
+      }
+
+      const keys = Object.keys(author.name);
+
+      return author.name[keys[0]];
     },
-    [catalog],
+    [publication.metadata.author],
   );
 
   if (!author) {
@@ -155,23 +168,25 @@ function BookSpineAuthor({
 }
 
 function BookSpineTitle({
-  catalog,
+  publication,
   ...props
 }: ComponentProps<typeof BaseBookSpineTitle> & {
-  catalog: OPDS.Catalog;
+  publication: OPDS.Publication;
 }) {
   const title = useMemo(
     function getTitle() {
-      const entry = catalog.entries?.[0];
-
-      if (entry?.title.value) {
-        return entry.title.value;
+      if (typeof publication.metadata.title === "string") {
+        return publication.metadata.title;
       }
 
-      return catalog.title.value;
+      const keys = Object.keys(publication.metadata.title);
+
+      return publication.metadata.title[keys[0]];
     },
-    [catalog],
+    [publication.metadata.title],
   );
+
+  if (!title) return null;
 
   return <BaseBookSpineTitle {...props}>{title}</BaseBookSpineTitle>;
 }

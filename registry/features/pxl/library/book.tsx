@@ -3,7 +3,14 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 import { motion, useReducedMotion } from "motion/react";
-import { type ComponentProps, createContext, useContext } from "react";
+import {
+  Children,
+  type ComponentProps,
+  createContext,
+  Fragment,
+  isValidElement,
+  useContext,
+} from "react";
 
 type BookView = "cover" | "spine" | "back-cover";
 type BookSize = "sm" | "md" | "lg";
@@ -11,6 +18,41 @@ type BookSize = "sm" | "md" | "lg";
 const BookContext = createContext<{ view: BookView; size: BookSize } | null>(
   null,
 );
+const bookSpineWidth: Record<BookSize, { min: number; max: number }> = {
+  sm: { min: 0.875, max: 1.75 },
+  md: { min: 1.75, max: 3.5 },
+  lg: { min: 2.25, max: 4.5 },
+};
+
+function getBookSpineWidth(size: BookSize, pages: number) {
+  const { min, max } = bookSpineWidth[size];
+  const progress = Math.min(1, Math.max(0, (pages - 80) / (500 - 80)));
+  return `${min + (max - min) * (Number.isNaN(progress) ? 0 : progress)}rem`;
+}
+
+function getBookSpinePages(
+  children: ComponentProps<"div">["children"],
+): number | undefined {
+  let pages: number | undefined;
+  Children.forEach(children, (child) => {
+    if (
+      pages !== undefined ||
+      !isValidElement<{
+        pages?: number;
+        children?: ComponentProps<"div">["children"];
+      }>(child)
+    ) {
+      return;
+    }
+    if (child.type === BookSpine) {
+      pages = child.props.pages;
+    } else if (child.type === Fragment) {
+      pages = getBookSpinePages(child.props.children);
+    }
+  });
+  return pages;
+}
+
 const bookWidth: Record<BookSize, number> = { sm: 5, md: 7.5, lg: 10 };
 const bookRotation: Record<BookView, number> = {
   cover: 0,
@@ -35,6 +77,7 @@ function Book({
   className,
   style,
   children,
+  pages,
   view = "spine",
   size = "sm",
   duration = 0.65,
@@ -43,6 +86,8 @@ function Book({
 }: {
   /** Change this value from any event or external state to turn the book. */
   view?: BookView;
+  /** Page count used to calculate the book thickness; BookSpine pages take precedence. */
+  pages?: number;
   /** Sets the dimensions of all composed faces. */
   size?: BookSize;
   /** Space reserved for the book, independent of the displayed view. */
@@ -50,6 +95,7 @@ function Book({
   /** Duration of each turn, in seconds. */
   duration?: number;
 } & ComponentProps<"div"> & VariantProps<typeof bookVariants>) {
+  const spinePages = getBookSpinePages(children) ?? pages;
   const reducedMotion = useReducedMotion();
   const compact = layout === "spine";
   const extracted = compact && view !== "spine";
@@ -74,6 +120,9 @@ function Book({
         className={cn(bookVariants({ size }), className)}
         style={{
           perspective: "800px",
+          ...(spinePages !== undefined && {
+            "--book-depth": getBookSpineWidth(size, spinePages),
+          }),
           ...(compact && {
             width: "var(--book-depth)",
             zIndex: extracted ? 10 : 0,
@@ -334,10 +383,15 @@ const bookSpineVariants = cva("group/book-cover relative pixel-rounded", {
 
 function BookSpine({
   className,
+  style,
+  pages,
   genre = "unknown",
   size,
   ...props
-}: ComponentProps<"div"> & VariantProps<typeof bookSpineVariants>) {
+}: ComponentProps<"div"> & VariantProps<typeof bookSpineVariants> & {
+  /** Up to 80 pages uses the minimum width; 500 or more uses the maximum. */
+  pages?: number;
+}) {
   const book = useContext(BookContext);
   return (
     <BookFace view="spine">
@@ -349,6 +403,12 @@ function BookSpine({
           className,
         )}
         {...props}
+        style={{
+          ...(!book && pages !== undefined && {
+            width: getBookSpineWidth(size ?? "sm", pages),
+          }),
+          ...style,
+        }}
       />
     </BookFace>
   );

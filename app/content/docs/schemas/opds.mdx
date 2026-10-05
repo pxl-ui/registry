@@ -12,9 +12,22 @@ import { Install, SchemaPreview } from "~/components";
 ## Usage
 
 ```ts
-import type { OPDS } from "@/lib/schemas/pxl/opds";
+import OPDSSchemas, { type OPDS } from "@/lib/schemas/pxl/opds";
 ```
 
 ```ts
-const video: OPDS.Catalog = { ... }
+const feed: OPDS.Feed = OPDSSchemas.Feed.parse({
+  metadata: { title: "My catalog" },
+  links: [{ href: "/catalog.json", rel: "self" }],
+  navigation: [{ href: "/new.json", title: "New publications" }],
+});
+```
+
+```ts
+const publication: OPDS.Publication = OPDSSchemas.Publication.parse({
+  metadata: { title: "A book", author: "An author" },
+  links: [
+    { href: "/book.epub", rel: "download", type: "application/epub+zip" },
+  ],
+});
 ```
