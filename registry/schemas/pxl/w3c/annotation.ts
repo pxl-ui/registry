@@ -661,34 +661,6 @@ const AnnotationCollectionSchema = z
   })
   .describe("An ordered, potentially paginated collection of W3C annotations.");
 
-const W3CAnnotationSchemas = {
-  Annotation: AnnotationSchema,
-  AnnotationCollection: AnnotationCollectionSchema,
-  AnnotationPage: AnnotationPageSchema,
-  EmbeddedAnnotationPage: EmbeddedAnnotationPageSchema,
-  Agent: AgentSchema,
-  Body: BodySchema,
-  Target: TargetSchema,
-  Choice: ChoiceSchema,
-  TextualBody: TextualBodySchema,
-  ExternalResource: ExternalResourceSchema,
-  SpecificResource: SpecificResourceSchema,
-  Motivation: MotivationSchema,
-  Selector: SelectorSchema,
-  FragmentSelector: FragmentSelectorSchema,
-  CssSelector: CssSelectorSchema,
-  XPathSelector: XPathSelectorSchema,
-  TextQuoteSelector: TextQuoteSelectorSchema,
-  TextPositionSelector: TextPositionSelectorSchema,
-  DataPositionSelector: DataPositionSelectorSchema,
-  SvgSelector: SvgSelectorSchema,
-  RangeSelector: RangeSelectorSchema,
-  State: StateSchema,
-  TimeState: TimeStateSchema,
-  HttpRequestState: HttpRequestStateSchema,
-  CssStylesheet: CssStylesheetSchema,
-};
-
 type Annotation = z.infer<typeof AnnotationSchema>;
 type AnnotationCollection = z.infer<typeof AnnotationCollectionSchema>;
 type AnnotationPage = z.infer<typeof AnnotationPageSchema>;
@@ -712,36 +684,6 @@ type TimeState = z.infer<typeof TimeStateSchema>;
 type HttpRequestState = z.infer<typeof HttpRequestStateSchema>;
 type CssStylesheet = z.infer<typeof CssStylesheetSchema>;
 type EmbeddedAnnotationPage = z.infer<typeof EmbeddedAnnotationPageSchema>;
-
-declare namespace W3CAnnotation {
-  export type {
-    Annotation,
-    AnnotationCollection,
-    AnnotationPage,
-    Agent,
-    Body,
-    Target,
-    SpecificResource,
-    TextualBody,
-    Selector,
-    State,
-    Choice,
-    ExternalResource,
-    Motivation,
-    FragmentSelector,
-    CssSelector,
-    XPathSelector,
-    TextQuoteSelector,
-    TextPositionSelector,
-    DataPositionSelector,
-    SvgSelector,
-    RangeSelector,
-    TimeState,
-    HttpRequestState,
-    CssStylesheet,
-    EmbeddedAnnotationPage,
-  };
-}
 
 export type {
   Agent,
@@ -770,7 +712,6 @@ export type {
   TextQuoteSelector,
   TextualBody,
   TimeState,
-  W3CAnnotation,
   XPathSelector,
 };
 export {
@@ -798,8 +739,5 @@ export {
   TextQuoteSelectorSchema,
   TextualBodySchema,
   TimeStateSchema,
-  W3CAnnotationSchemas,
   XPathSelectorSchema,
 };
-
-export default W3CAnnotationSchemas;

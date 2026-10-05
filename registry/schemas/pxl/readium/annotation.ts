@@ -305,21 +305,6 @@ const AnnotationSetSchema = z
     "A Readium annotation set serialized as application/rd-annotations+json in a .annotation file.",
   );
 
-const ReadiumAnnotationSchemas = {
-  Annotation: AnnotationSchema,
-  AnnotationSet: AnnotationSetSchema,
-  Creator: CreatorSchema,
-  Target: TargetSchema,
-  Body: BodySchema,
-  Selector: SelectorSchema,
-  TextQuoteSelector: TextQuoteSelectorSchema,
-  TextPositionSelector: TextPositionSelectorSchema,
-  CssSelector: CssSelectorSchema,
-  EPUBCFISelector: EPUBCFISelectorSchema,
-  FragmentSelector: FragmentSelectorSchema,
-  ProgressionSelector: ProgressionSelectorSchema,
-};
-
 type Annotation = z.infer<typeof AnnotationSchema>;
 type AnnotationSet = z.infer<typeof AnnotationSetSchema>;
 type Creator = z.infer<typeof CreatorSchema>;
@@ -333,23 +318,6 @@ type EPUBCFISelector = z.infer<typeof EPUBCFISelectorSchema>;
 type FragmentSelector = z.infer<typeof FragmentSelectorSchema>;
 type ProgressionSelector = z.infer<typeof ProgressionSelectorSchema>;
 
-declare namespace ReadiumAnnotation {
-  export type {
-    Annotation,
-    AnnotationSet,
-    Creator,
-    Target,
-    Body,
-    Selector,
-    TextQuoteSelector,
-    TextPositionSelector,
-    CssSelector,
-    EPUBCFISelector,
-    FragmentSelector,
-    ProgressionSelector,
-  };
-}
-
 export type {
   Annotation,
   AnnotationSet,
@@ -359,7 +327,6 @@ export type {
   EPUBCFISelector,
   FragmentSelector,
   ProgressionSelector,
-  ReadiumAnnotation,
   Selector,
   Target,
   TextPositionSelector,
@@ -374,11 +341,8 @@ export {
   EPUBCFISelectorSchema,
   FragmentSelectorSchema,
   ProgressionSelectorSchema,
-  ReadiumAnnotationSchemas,
   SelectorSchema,
   TargetSchema,
   TextPositionSelectorSchema,
   TextQuoteSelectorSchema,
 };
-
-export default ReadiumAnnotationSchemas;

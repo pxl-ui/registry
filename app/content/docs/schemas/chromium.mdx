@@ -1,0 +1,20 @@
+---
+title: Chromium Schemas
+---
+import { Install, SchemaPreview } from "~/components";
+
+<SchemaPreview item="schemas/chromium" />
+
+## Installation
+
+<Install item="schemas/chromium" />
+
+## Usage
+
+```ts
+import type { Chromium } from "@/lib/schemas/pxl/chromium";
+```
+
+```ts
+const bookmarks: Chromium.Bookmarks = { ... }
+```

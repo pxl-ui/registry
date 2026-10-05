@@ -130,7 +130,12 @@ export default defineConfig({
                   {
                     label: "Bookmarks",
                     collapsed: true,
-                    items: [{ label: "oEmbed", link: "/schemas/oembed" }],
+                    items: [
+                      { label: "Chromium", link: "/schemas/chromium" },
+                      { label: "oEmbed", link: "/schemas/oembed" },
+                      { label: "Readium", link: "/schemas/readium" },
+                      { label: "W3C", link: "/schemas/w3c" },
+                    ],
                   },
                   {
                     label: "Recipes",

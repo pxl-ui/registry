@@ -34,6 +34,26 @@
       ]
     },
     {
+      "name": "schemas/chromium",
+      "type": "registry:component",
+      "title": "Chromium Schemas",
+      "description": "Zod types and schemas for Chromium.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "chromium/bookmarks.ts",
+          "target": "@lib/pxl/schemas/chromium/bookmarks.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "chromium/index.ts",
+          "target": "@lib/pxl/schemas/chromium/index.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/conventional-commit",
       "type": "registry:component",
       "title": "Conventional Commit Schemas",
@@ -375,7 +395,7 @@
       ]
     },
     {
-      "name": "schemas/readium-annotation",
+      "name": "schemas/readium",
       "type": "registry:component",
       "title": "Readium Annotation Schemas",
       "description": "Zod types and schemas for the Readium Annotations draft profile and annotation sets.",
@@ -384,8 +404,13 @@
       "files": [
         {
           "type": "registry:file",
-          "path": "readium-annotation.ts",
-          "target": "@lib/pxl/schemas/readium-annotation.ts"
+          "path": "readium/annotation.ts",
+          "target": "@lib/pxl/schemas/readium/annotation.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "readium/index.ts",
+          "target": "@lib/pxl/schemas/readium/index.ts"
         }
       ]
     },
@@ -450,7 +475,7 @@
       ]
     },
     {
-      "name": "schemas/w3c-annotation",
+      "name": "schemas/w3c",
       "type": "registry:component",
       "title": "W3C Annotation Schemas",
       "description": "Zod types and schemas for the W3C Web Annotation Data Model.",
@@ -459,8 +484,13 @@
       "files": [
         {
           "type": "registry:file",
-          "path": "w3c-annotation.ts",
-          "target": "@lib/pxl/schemas/w3c-annotation.ts"
+          "path": "w3c/annotation.ts",
+          "target": "@lib/pxl/schemas/w3c/annotation.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "w3c/index.ts",
+          "target": "@lib/pxl/schemas/w3c/index.ts"
         }
       ]
     }

@@ -1,0 +1,20 @@
+---
+title: Readium Schemas
+---
+import { Install, SchemaPreview } from "~/components";
+
+<SchemaPreview item="schemas/readium" />
+
+## Installation
+
+<Install item="schemas/readium" />
+
+## Usage
+
+```ts
+import type { Readium } from "@/lib/schemas/pxl/readium";
+```
+
+```ts
+const annotations: Readium.AnnotationSet = { ... }
+```
