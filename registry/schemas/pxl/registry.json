@@ -375,6 +375,21 @@
       ]
     },
     {
+      "name": "schemas/readium-annotation",
+      "type": "registry:component",
+      "title": "Readium Annotation Schemas",
+      "description": "Zod types and schemas for the Readium Annotations draft profile and annotation sets.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "readium-annotation.ts",
+          "target": "@lib/pxl/schemas/readium-annotation.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/rdf",
       "type": "registry:component",
       "title": "RDF Schemas",
@@ -431,6 +446,21 @@
           "type": "registry:file",
           "path": "tasknotes.ts",
           "target": "@lib/pxl/schemas/tasknotes.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/w3c-annotation",
+      "type": "registry:component",
+      "title": "W3C Annotation Schemas",
+      "description": "Zod types and schemas for the W3C Web Annotation Data Model.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "w3c-annotation.ts",
+          "target": "@lib/pxl/schemas/w3c-annotation.ts"
         }
       ]
     }

@@ -31,8 +31,26 @@
       "files": [
         { 
           "type": "registry:file",
-          "path": "book.tsx",
+          "path": "opds/book.tsx",
           "target": "@components/features/pxl/library/opds/book.tsx"
+        }
+      ]
+    },
+    {
+      "name": "library/opds-1.2/book",
+      "type": "registry:component",
+      "title": "OPDS 1.2 Book",
+      "description": "A component for displaying a book from OPDS catalog",
+      "categories": ["pxl-ui", "features", "library", "library/opds"],
+      "registryDependencies": [
+        "pxl-ui/registry/library/book",
+        "pxl-ui/registry/schemas/opds"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "opds-1.2/book.tsx",
+          "target": "@components/features/pxl/library/opds-1.2/book.tsx"
         }
       ]
     },
