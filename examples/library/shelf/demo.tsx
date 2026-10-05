@@ -24,7 +24,11 @@ import {
   BookSpineAuthor,
   BookSpineTitle,
 } from "@/components/features/pxl/library/opds-1.2/book";
-import { Shelf } from "@/components/features/pxl/library/shelf";
+import {
+  Shelf,
+  ShelfContent,
+  ShelfSupport,
+} from "@/components/features/pxl/library/shelf";
 
 import {
   aliceInWonderland,
@@ -78,223 +82,226 @@ export default function BookShelfDemo() {
 
   return (
     <Shelf>
-      <Book
-        layout="spine"
-        view={getBookView("disloyal")}
-        role="button"
-        aria-pressed={getBookView("disloyal") === "back-cover"}
-        size="md"
-        aria-label="Disloyal"
-        tabIndex={0}
-        onClick={() => toggleBookCover("disloyal")}
-        onKeyDown={(event) => handleKeydown(event, "disloyal")}
-        onMouseEnter={() => handleMouseEnter("disloyal")}
-        onMouseLeave={handleMouseLeave}
-        onFocus={() => setFocusedBook("disloyal")}
-        onBlur={handleBlur}
-        className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-      >
-        <BookBackCover className="bg-[#202220]">
-          <BookBackCoverBlurbV2
-            className="text-white/60"
-            publication={publication}
-          />
-        </BookBackCover>
-
-        <BookSpine className="bg-[#202220]" pages={350}>
-          <BookSpineMeta>
-            <BookSpineTitleV2
-              className="font-not-jam-blackletter-16 text-white"
-              publication={publication}
-            />
-            <BookSpineAuthorV2
+      <ShelfContent>
+        <Book
+          layout="spine"
+          view={getBookView("disloyal")}
+          role="button"
+          aria-pressed={getBookView("disloyal") === "back-cover"}
+          size="md"
+          aria-label="Disloyal"
+          tabIndex={0}
+          onClick={() => toggleBookCover("disloyal")}
+          onKeyDown={(event) => handleKeydown(event, "disloyal")}
+          onMouseEnter={() => handleMouseEnter("disloyal")}
+          onMouseLeave={handleMouseLeave}
+          onFocus={() => setFocusedBook("disloyal")}
+          onBlur={handleBlur}
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+        >
+          <BookBackCover className="bg-[#202220]">
+            <BookBackCoverBlurbV2
               className="text-white/60"
               publication={publication}
             />
-          </BookSpineMeta>
-        </BookSpine>
+          </BookBackCover>
 
-        <BookCover>
-          <BookCoverImageV2 publication={publication} />
-          <BookCoverMeta>
-            <BookCoverTitleV2
-              className="font-not-jam-blackletter-16"
-              publication={publication}
-            />
-            <BookCoverAuthorV2 publication={publication} />
-          </BookCoverMeta>
-        </BookCover>
-      </Book>
-      <Book
-        layout="spine"
-        view={getBookView("dracula")}
-        role="button"
-        aria-pressed={getBookView("dracula") === "back-cover"}
-        size="md"
-        aria-label="Dracula"
-        tabIndex={0}
-        onClick={() => toggleBookCover("dracula")}
-        onKeyDown={(event) => handleKeydown(event, "dracula")}
-        onMouseEnter={() => handleMouseEnter("dracula")}
-        onMouseLeave={handleMouseLeave}
-        onFocus={() => setFocusedBook("dracula")}
-        onBlur={handleBlur}
-        className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-      >
-        <BookBackCover className="bg-[#E9CA4E]">
-          <BookBackCoverBlurb feed={dracula} />
-        </BookBackCover>
+          <BookSpine className="bg-[#202220]" pages={publication.metadata.numberOfPages}>
+            <BookSpineMeta>
+              <BookSpineTitleV2
+                className="font-not-jam-blackletter-16 text-white"
+                publication={publication}
+              />
+              <BookSpineAuthorV2
+                className="text-white/60"
+                publication={publication}
+              />
+            </BookSpineMeta>
+          </BookSpine>
 
-        <BookSpine className="bg-[#E9CA4E]" pages={399}>
-          <BookSpineMeta>
-            <BookSpineTitle
-              className="font-not-jam-blackletter-16"
-              feed={dracula}
-            />
-            <BookSpineAuthor feed={dracula} />
-          </BookSpineMeta>
-        </BookSpine>
+          <BookCover>
+            <BookCoverImageV2 publication={publication} />
+            <BookCoverMeta>
+              <BookCoverTitleV2
+                className="font-not-jam-blackletter-16"
+                publication={publication}
+              />
+              <BookCoverAuthorV2 publication={publication} />
+            </BookCoverMeta>
+          </BookCover>
+        </Book>
+        <Book
+          layout="spine"
+          view={getBookView("dracula")}
+          role="button"
+          aria-pressed={getBookView("dracula") === "back-cover"}
+          size="lg"
+          aria-label="Dracula"
+          tabIndex={0}
+          onClick={() => toggleBookCover("dracula")}
+          onKeyDown={(event) => handleKeydown(event, "dracula")}
+          onMouseEnter={() => handleMouseEnter("dracula")}
+          onMouseLeave={handleMouseLeave}
+          onFocus={() => setFocusedBook("dracula")}
+          onBlur={handleBlur}
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+        >
+          <BookBackCover className="bg-[#E9CA4E]">
+            <BookBackCoverBlurb feed={dracula} />
+          </BookBackCover>
 
-        <BookCover>
-          <BookCoverImage feed={dracula} />
-          <BookCoverMeta>
-            <BookCoverTitle
-              className="font-not-jam-blackletter-16"
-              feed={dracula}
-            />
-            <BookCoverAuthor feed={dracula} />
-          </BookCoverMeta>
-        </BookCover>
-      </Book>
-      <Book
-        layout="spine"
-        view={getBookView("prideAndPrejudice")}
-        role="button"
-        aria-pressed={getBookView("prideAndPrejudice") === "back-cover"}
-        size="md"
-        aria-label="Pride and Prejudice"
-        tabIndex={0}
-        onClick={() => toggleBookCover("prideAndPrejudice")}
-        onKeyDown={(event) => handleKeydown(event, "prideAndPrejudice")}
-        onMouseEnter={() => handleMouseEnter("prideAndPrejudice")}
-        onMouseLeave={handleMouseLeave}
-        onFocus={() => setFocusedBook("prideAndPrejudice")}
-        onBlur={handleBlur}
-        className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-      >
-        <BookBackCover className="bg-[#202220]">
-          <BookBackCoverBlurb
-            className="text-white/60"
-            feed={prideAndPrejudice}
-          />
-        </BookBackCover>
+          <BookSpine className="bg-[#E9CA4E]" pages={399}>
+            <BookSpineMeta>
+              <BookSpineTitle
+                className="font-not-jam-blackletter-16"
+                feed={dracula}
+              />
+              <BookSpineAuthor feed={dracula} />
+            </BookSpineMeta>
+          </BookSpine>
 
-        <BookSpine className="bg-[#202220]" pages={350}>
-          <BookSpineMeta>
-            <BookSpineTitle
-              className="font-not-jam-blackletter-16 text-white"
-              feed={prideAndPrejudice}
-            />
-            <BookSpineAuthor
+          <BookCover>
+            <BookCoverImage feed={dracula} />
+            <BookCoverMeta>
+              <BookCoverTitle
+                className="font-not-jam-blackletter-16"
+                feed={dracula}
+              />
+              <BookCoverAuthor feed={dracula} />
+            </BookCoverMeta>
+          </BookCover>
+        </Book>
+        <Book
+          layout="spine"
+          view={getBookView("prideAndPrejudice")}
+          role="button"
+          aria-pressed={getBookView("prideAndPrejudice") === "back-cover"}
+          size="md"
+          aria-label="Pride and Prejudice"
+          tabIndex={0}
+          onClick={() => toggleBookCover("prideAndPrejudice")}
+          onKeyDown={(event) => handleKeydown(event, "prideAndPrejudice")}
+          onMouseEnter={() => handleMouseEnter("prideAndPrejudice")}
+          onMouseLeave={handleMouseLeave}
+          onFocus={() => setFocusedBook("prideAndPrejudice")}
+          onBlur={handleBlur}
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+        >
+          <BookBackCover className="bg-[#202220]">
+            <BookBackCoverBlurb
               className="text-white/60"
               feed={prideAndPrejudice}
             />
-          </BookSpineMeta>
-        </BookSpine>
+          </BookBackCover>
 
-        <BookCover>
-          <BookCoverImage feed={prideAndPrejudice} />
-          <BookCoverMeta>
-            <BookCoverTitle
-              className="font-not-jam-blackletter-16"
-              feed={prideAndPrejudice}
-            />
-            <BookCoverAuthor feed={prideAndPrejudice} />
-          </BookCoverMeta>
-        </BookCover>
-      </Book>
-      <Book
-        layout="spine"
-        view={getBookView("mobyDick")}
-        role="button"
-        aria-pressed={getBookView("mobyDick") === "back-cover"}
-        size="md"
-        aria-label="Moby Dick"
-        tabIndex={0}
-        onClick={() => toggleBookCover("mobyDick")}
-        onKeyDown={(event) => handleKeydown(event, "mobyDick")}
-        onMouseEnter={() => handleMouseEnter("mobyDick")}
-        onMouseLeave={handleMouseLeave}
-        onFocus={() => setFocusedBook("mobyDick")}
-        onBlur={handleBlur}
-        className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-      >
-        <BookBackCover className="bg-[#928D86]">
-          <BookBackCoverBlurb feed={mobyDick} />
-        </BookBackCover>
+          <BookSpine className="bg-[#202220]" pages={350}>
+            <BookSpineMeta>
+              <BookSpineTitle
+                className="font-not-jam-blackletter-16 text-white"
+                feed={prideAndPrejudice}
+              />
+              <BookSpineAuthor
+                className="text-white/60"
+                feed={prideAndPrejudice}
+              />
+            </BookSpineMeta>
+          </BookSpine>
 
-        <BookSpine className="bg-[#928D86]" pages={550}>
-          <BookSpineMeta>
-            <BookSpineTitle
-              className="font-not-jam-blackletter-16"
-              feed={mobyDick}
-            />
-            <BookSpineAuthor feed={mobyDick} />
-          </BookSpineMeta>
-        </BookSpine>
+          <BookCover>
+            <BookCoverImage feed={prideAndPrejudice} />
+            <BookCoverMeta>
+              <BookCoverTitle
+                className="font-not-jam-blackletter-16"
+                feed={prideAndPrejudice}
+              />
+              <BookCoverAuthor feed={prideAndPrejudice} />
+            </BookCoverMeta>
+          </BookCover>
+        </Book>
+        <Book
+          layout="spine"
+          view={getBookView("mobyDick")}
+          role="button"
+          aria-pressed={getBookView("mobyDick") === "back-cover"}
+          size="md"
+          aria-label="Moby Dick"
+          tabIndex={0}
+          onClick={() => toggleBookCover("mobyDick")}
+          onKeyDown={(event) => handleKeydown(event, "mobyDick")}
+          onMouseEnter={() => handleMouseEnter("mobyDick")}
+          onMouseLeave={handleMouseLeave}
+          onFocus={() => setFocusedBook("mobyDick")}
+          onBlur={handleBlur}
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+        >
+          <BookBackCover className="bg-[#928D86]">
+            <BookBackCoverBlurb feed={mobyDick} />
+          </BookBackCover>
 
-        <BookCover>
-          <BookCoverImage feed={mobyDick} />
-          <BookCoverMeta>
-            <BookCoverTitle
-              className="font-not-jam-blackletter-16"
-              feed={mobyDick}
-            />
-            <BookCoverAuthor feed={mobyDick} />
-          </BookCoverMeta>
-        </BookCover>
-      </Book>
-      <Book
-        layout="spine"
-        view={getBookView("aliceInWonderland")}
-        role="button"
-        aria-pressed={getBookView("aliceInWonderland") === "back-cover"}
-        size="md"
-        aria-label="Alicen In Wonderland"
-        tabIndex={0}
-        onClick={() => toggleBookCover("aliceInWonderland")}
-        onKeyDown={(event) => handleKeydown(event, "aliceInWonderland")}
-        onMouseEnter={() => handleMouseEnter("aliceInWonderland")}
-        onMouseLeave={handleMouseLeave}
-        onFocus={() => setFocusedBook("aliceInWonderland")}
-        onBlur={handleBlur}
-        className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-      >
-        <BookBackCover className="bg-[#BBA995]">
-          <BookBackCoverBlurb feed={aliceInWonderland} />
-        </BookBackCover>
+          <BookSpine className="bg-[#928D86]" pages={550}>
+            <BookSpineMeta>
+              <BookSpineTitle
+                className="font-not-jam-blackletter-16"
+                feed={mobyDick}
+              />
+              <BookSpineAuthor feed={mobyDick} />
+            </BookSpineMeta>
+          </BookSpine>
 
-        <BookSpine className="bg-[#BBA995]" pages={125}>
-          <BookSpineMeta>
-            <BookSpineTitle
-              className="font-not-jam-blackletter-16"
-              feed={aliceInWonderland}
-            />
-            <BookSpineAuthor feed={aliceInWonderland} />
-          </BookSpineMeta>
-        </BookSpine>
+          <BookCover>
+            <BookCoverImage feed={mobyDick} />
+            <BookCoverMeta>
+              <BookCoverTitle
+                className="font-not-jam-blackletter-16"
+                feed={mobyDick}
+              />
+              <BookCoverAuthor feed={mobyDick} />
+            </BookCoverMeta>
+          </BookCover>
+        </Book>
+        <Book
+          layout="spine"
+          view={getBookView("aliceInWonderland")}
+          role="button"
+          aria-pressed={getBookView("aliceInWonderland") === "back-cover"}
+          size="sm"
+          aria-label="Alicen In Wonderland"
+          tabIndex={0}
+          onClick={() => toggleBookCover("aliceInWonderland")}
+          onKeyDown={(event) => handleKeydown(event, "aliceInWonderland")}
+          onMouseEnter={() => handleMouseEnter("aliceInWonderland")}
+          onMouseLeave={handleMouseLeave}
+          onFocus={() => setFocusedBook("aliceInWonderland")}
+          onBlur={handleBlur}
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+        >
+          <BookBackCover className="bg-[#BBA995]">
+            <BookBackCoverBlurb feed={aliceInWonderland} />
+          </BookBackCover>
 
-        <BookCover>
-          <BookCoverImage feed={aliceInWonderland} />
-          <BookCoverMeta>
-            <BookCoverTitle
-              className="font-not-jam-blackletter-16"
-              feed={aliceInWonderland}
-            />
-            <BookCoverAuthor feed={aliceInWonderland} />
-          </BookCoverMeta>
-        </BookCover>
-      </Book>
+          <BookSpine className="bg-[#BBA995]" pages={125}>
+            <BookSpineMeta>
+              <BookSpineTitle
+                className="font-not-jam-blackletter-16"
+                feed={aliceInWonderland}
+              />
+              <BookSpineAuthor feed={aliceInWonderland} />
+            </BookSpineMeta>
+          </BookSpine>
+
+          <BookCover>
+            <BookCoverImage feed={aliceInWonderland} />
+            <BookCoverMeta>
+              <BookCoverTitle
+                className="font-not-jam-blackletter-16"
+                feed={aliceInWonderland}
+              />
+              <BookCoverAuthor feed={aliceInWonderland} />
+            </BookCoverMeta>
+          </BookCover>
+        </Book>
+      </ShelfContent>
+      <ShelfSupport />
     </Shelf>
   );
 }
