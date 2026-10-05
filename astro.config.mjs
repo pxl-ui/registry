@@ -128,6 +128,11 @@ export default defineConfig({
                     ],
                   },
                   {
+                    label: "Bookmarks",
+                    collapsed: true,
+                    items: [{ label: "oEmbed", link: "/schemas/oembed" }],
+                  },
+                  {
                     label: "Recipes",
                     collapsed: true,
                     items: [{ label: "Cooklang", link: "/schemas/cooklang" }],
@@ -279,7 +284,19 @@ export default defineConfig({
               },
               {
                 label: "Library",
-                items: [{ autogenerate: { directory: "features/library" } }],
+                items: [
+                  { autogenerate: { directory: "features/library" } },
+                  {
+                    label: "OPDS",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/opds",
+                      },
+                    ],
+                  },
+                ],
               },
               {
                 label: "Magazine",

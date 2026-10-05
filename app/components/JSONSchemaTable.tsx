@@ -1,3 +1,4 @@
+import { cn } from "cn";
 import { useState } from "react";
 
 import {
@@ -384,8 +385,9 @@ function JsonSchemasAccordion({
 }: {
   schemas: Record<string, JsonSchema>;
 }) {
+  const [accordionValue, setAccordionValue] = useState<string[]>([]);
   return (
-    <Accordion>
+    <Accordion value={accordionValue} onValueChange={setAccordionValue}>
       {Object.entries(schemas).map(([k, schema]) => (
         <AccordionItem value={k} key={k}>
           <AccordionTrigger
@@ -398,7 +400,12 @@ function JsonSchemasAccordion({
                 <div>
                   <h3 className="font-heading text-sm">{schema.title ?? k}</h3>
                   {schema.description && (
-                    <Markdown className="font-mono text-sm text-muted-foreground mt-0.5">
+                    <Markdown
+                      className={cn(
+                        "font-mono text-sm text-muted-foreground mt-0.5",
+                        !accordionValue.includes(k) && "line-clamp-2",
+                      )}
+                    >
                       {schema.description}
                     </Markdown>
                   )}

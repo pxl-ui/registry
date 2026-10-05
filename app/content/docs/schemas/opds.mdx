@@ -1,0 +1,20 @@
+---
+title: OPDS
+---
+import { Install, SchemaPreview } from "~/components";
+
+<SchemaPreview item="schemas/opds" />
+
+## Installation
+
+<Install item="schemas/opds" />
+
+## Usage
+
+```ts
+import type { OPDS } from "@/lib/schemas/pxl/opds";
+```
+
+```ts
+const video: OPDS.Catalog = { ... }
+```

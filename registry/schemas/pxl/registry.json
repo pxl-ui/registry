@@ -232,6 +232,21 @@
       ]
     },
     {
+      "name": "schemas/oembed",
+      "type": "registry:component",
+      "title": "oEmbed Schemas",
+      "description": "Zod types and schemas for oEmbed.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "oEmbed.ts",
+          "target": "@lib/pxl/schemas/oEmbed.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/open-knowledge",
       "type": "registry:component",
       "title": "Open Knowledge Schemas",
