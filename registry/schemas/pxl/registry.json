@@ -475,6 +475,61 @@
       ]
     },
     {
+      "name": "schemas/tmdb",
+      "type": "registry:component",
+      "title": "TMDB Schemas",
+      "description": "Zod types and schemas for TMDB.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "tmdb/common.ts",
+          "target": "@lib/pxl/schemas/tmdb/common.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "tmdb/images.ts",
+          "target": "@lib/pxl/schemas/tmdb/images.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "tmdb/index.ts",
+          "target": "@lib/pxl/schemas/tmdb/index.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "tmdb/movies.ts",
+          "target": "@lib/pxl/schemas/tmdb/movies.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "tmdb/tv-series.ts",
+          "target": "@lib/pxl/schemas/tmdb/tv-series.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "tmdb/videos.ts",
+          "target": "@lib/pxl/schemas/tmdb/videos.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/watchmode",
+      "type": "registry:component",
+      "title": "WatchMode Schemas",
+      "description": "Zod types and schemas for WatchMode.",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "watchmode.ts",
+          "target": "@lib/pxl/schemas/watchmode.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/w3c",
       "type": "registry:component",
       "title": "W3C Annotation Schemas",

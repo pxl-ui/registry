@@ -301,6 +301,26 @@ export default defineConfig({
                       },
                     ],
                   },
+                  {
+                    label: "TMDB",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/tmdb",
+                      },
+                    ],
+                  },
+                  {
+                    label: "WatchMode",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Schemas",
+                        link: "/schemas/watchmode",
+                      },
+                    ],
+                  },
                 ],
               },
               {

@@ -1,0 +1,20 @@
+---
+title: TMDB Schemas
+---
+import { Install, SchemaPreview } from "~/components";
+
+<SchemaPreview item="schemas/tmdb" />
+
+## Installation
+
+<Install item="schemas/tmdb" />
+
+## Usage
+
+```ts
+import type { TMDB } from "@/lib/schemas/pxl/tmdb";
+```
+
+```ts
+const movie: TMDB.Movie = { ... }
+```
