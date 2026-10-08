@@ -50,6 +50,13 @@ function typeLabel(
     const items = schema.items;
     return `${typeLabel(items as JSONSchema.Document, rootSchema)}[]`;
   }
+  if (
+    schema.type === "object" &&
+    !schema.properties &&
+    schema.additionalProperties
+  ) {
+    return `Record<string, ${(schema.additionalProperties as JSONSchema.Document)?.title}>`;
+  }
   if (schema.enum) return "enum";
   if (schema.anyOf)
     return schema.anyOf.map((s) => typeLabel(s, rootSchema)).join(" | ");
@@ -250,11 +257,16 @@ function SchemaProperties({
       />
     ));
   }
-  if (!schema?.properties) return null;
+
+  const properties =
+    schema?.properties ??
+    (schema.additionalProperties as JSONSchema.Document)?.properties;
+
+  if (!properties) return null;
   const required = new Set(schema.required || []);
   return (
     <>
-      {Object.entries(schema.properties).map(([propName, propSchema]) => (
+      {Object.entries(properties).map(([propName, propSchema]) => (
         <SchemaRow
           key={propName}
           name={propName}
