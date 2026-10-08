@@ -17,60 +17,25 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/pxl/table";
-
-type JsonSchemaType =
-  | "string"
-  | "number"
-  | "integer"
-  | "boolean"
-  | "object"
-  | "array"
-  | "null";
-
-type JsonSchema = {
-  $ref?: string;
-  type?: JsonSchemaType | JsonSchemaType[];
-  title?: string;
-  description?: string;
-  properties?: Record<string, JsonSchema>;
-  required?: string[];
-  items?: JsonSchema;
-  enum?: string[];
-  const?: unknown;
-  default?: unknown;
-  format?: string;
-  pattern?: string;
-  minimum?: number;
-  maximum?: number;
-  minLength?: number;
-  maxLength?: number;
-  minItems?: number;
-  maxItems?: number;
-  anyOf?: JsonSchema[];
-  oneOf?: JsonSchema[];
-  allOf?: JsonSchema[];
-  $defs?: Record<string, JsonSchema>;
-  definitions?: Record<string, JsonSchema>;
-  [key: string]: unknown;
-};
+import type { JSONSchema } from "@/schemas/pxl/json-schema";
 
 function resolveRef(
   ref: string | undefined,
-  rootSchema: JsonSchema,
-): JsonSchema | null {
+  rootSchema: JSONSchema.Document,
+): JSONSchema.Document | null {
   if (!ref?.startsWith("#/")) return null;
   const path = ref.slice(2).split("/");
   let node = rootSchema;
   for (const segment of path) {
     if (node == null) return null;
-    node = node[segment] as JsonSchema;
+    node = node[segment] as JSONSchema.Document;
   }
   return node;
 }
 
 function typeLabel(
-  schema: JsonSchema | undefined,
-  rootSchema: JsonSchema,
+  schema: JSONSchema.Document | undefined,
+  rootSchema: JSONSchema.Document,
 ): string {
   if (!schema) return "any";
   if (schema.$ref) {
@@ -83,7 +48,7 @@ function typeLabel(
   if (Array.isArray(schema.type)) return schema.type.join(" | ");
   if (schema.type === "array") {
     const items = schema.items;
-    return `${typeLabel(items as JsonSchema, rootSchema)}[]`;
+    return `${typeLabel(items as JSONSchema.Document, rootSchema)}[]`;
   }
   if (schema.enum) return "enum";
   if (schema.anyOf)
@@ -95,15 +60,24 @@ function typeLabel(
 }
 
 function isExpandable(
-  schema: JsonSchema | undefined,
-  rootSchema: JsonSchema,
+  schema: JSONSchema.Document | undefined,
+  rootSchema: JSONSchema.Document,
 ): boolean {
   if (!schema) return false;
   let resolved = schema;
   if (schema.$ref) resolved = resolveRef(schema.$ref, rootSchema) || schema;
   if (resolved.anyOf?.every((s) => s.type === "object" && s.properties))
     return true;
-  if (resolved.type === "object" && resolved.properties) return true;
+  if (
+    resolved.type === "object" &&
+    (resolved.properties || resolved.additionalProperties)
+  )
+    return true;
+
+  if (typeof resolved.items === "boolean") {
+    return false;
+  }
+
   if (resolved.type === "array" && resolved.items) {
     const items = resolved.items.$ref
       ? resolveRef(resolved.items.$ref, rootSchema) || resolved.items
@@ -114,21 +88,26 @@ function isExpandable(
 }
 
 function getExpandedSchema(
-  schema: JsonSchema,
-  rootSchema: JsonSchema,
-): JsonSchema {
+  schema: JSONSchema.Document,
+  rootSchema: JSONSchema.Document,
+): JSONSchema.Document {
   let resolved = schema;
   if (schema.$ref) resolved = resolveRef(schema.$ref, rootSchema) || schema;
+
+  if (typeof resolved.items === "boolean") {
+    return {};
+  }
+
   if (resolved.type === "array") {
     const items = resolved.items?.$ref
       ? resolveRef(resolved.items.$ref, rootSchema) || resolved.items
       : resolved.items;
-    return items as JsonSchema;
+    return items as JSONSchema.Document;
   }
   return resolved;
 }
 
-function constraints(schema: JsonSchema): string[] {
+function constraints(schema: JSONSchema.Document): string[] {
   const out = [];
   if (schema.format) out.push(`format: ${schema.format}`);
   if (schema.pattern) out.push(`pattern: ${schema.pattern}`);
@@ -155,9 +134,9 @@ function SchemaRow({
   depth,
 }: {
   name: string;
-  schema: JsonSchema;
+  schema: JSONSchema.Document;
   required: boolean;
-  rootSchema: JsonSchema;
+  rootSchema: JSONSchema.Document;
   depth: number;
 }) {
   const [open, setOpen] = useState(depth < 1);
@@ -257,8 +236,8 @@ function SchemaProperties({
   rootSchema,
   depth,
 }: {
-  schema: JsonSchema;
-  rootSchema: JsonSchema;
+  schema: JSONSchema.Document;
+  rootSchema: JSONSchema.Document;
   depth: number;
 }) {
   if (schema.anyOf) {
@@ -289,7 +268,7 @@ function SchemaProperties({
   );
 }
 
-function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
+function JsonSchemaTable({ schema }: { schema: JSONSchema.Document }) {
   if (!schema) return null;
 
   const hasProperties = schema.type === "object" && schema.properties;
@@ -383,7 +362,7 @@ function JsonSchemaTable({ schema }: { schema: JsonSchema }) {
 function JsonSchemasAccordion({
   schemas,
 }: {
-  schemas: Record<string, JsonSchema>;
+  schemas: Record<string, JSONSchema.Document>;
 }) {
   const [accordionValue, setAccordionValue] = useState<string[]>([]);
   return (
