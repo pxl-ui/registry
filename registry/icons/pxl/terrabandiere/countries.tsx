@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 
 export default {
   sm: {
-    Andorra(props: SVGProps<SVGSVGElement>) {
+    AD(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Andorra</title>
@@ -84,7 +84,7 @@ export default {
         </svg>
       );
     },
-    Bangladesh(props: SVGProps<SVGSVGElement>) {
+    BD(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Bangladesh</title>
@@ -138,7 +138,7 @@ export default {
         </svg>
       );
     },
-    Canada(props: SVGProps<SVGSVGElement>) {
+    CA(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Canada</title>
@@ -198,7 +198,7 @@ export default {
         </svg>
       );
     },
-    China(props: SVGProps<SVGSVGElement>) {
+    CH(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>China</title>
@@ -253,7 +253,53 @@ export default {
         </svg>
       );
     },
-    Egypt(props: SVGProps<SVGSVGElement>) {
+    DE(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Germany</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Black" fill="#000000" d="m 1,1 h 14 v 3 h -14 z" />
+            <path id="Red" fill="#fd1c1c" d="m 1,4 h 14 v 4 h -14 z" />
+            <path id="Yellow" fill="#fff700" d="m 1,8 h 14 v 3 h -14 z" />
+          </g>
+        </svg>
+      );
+    },
+    EG(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Egypt</title>
@@ -302,507 +348,7 @@ export default {
         </svg>
       );
     },
-    France(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>France</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Blue" fill="#142269" d="m 1,1 h 4 v 10 h -4 z" />
-            <path id="White" fill="#ffffff" d="m 5,1 h 6 v 10 h -6 z" />
-            <path id="Red" fill="#d01515" d="m 11,1 h 4 v 10 h -4 z" />
-          </g>
-        </svg>
-      );
-    },
-    Germany(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Germany</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Black" fill="#000000" d="m 1,1 h 14 v 3 h -14 z" />
-            <path id="Red" fill="#fd1c1c" d="m 1,4 h 14 v 4 h -14 z" />
-            <path id="Yellow" fill="#fff700" d="m 1,8 h 14 v 3 h -14 z" />
-          </g>
-        </svg>
-      );
-    },
-    India(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>India</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Saffron" fill="#c47d22" d="m 1,1 h 14 v 3 h -14 z" />
-            <path id="White" fill="#ffffff" d="m 1,4 h 14 v 4 h -14 z" />
-            <path id="Green" fill="#00662c" d="m 1,8 h 14 v 3 h -14 z" />
-            <path id="AshokaChakraBg" fill="#6ddff8" d="m 6,4 h 4 v 4 h -4 z" />
-            <path
-              id="AshokaChakraFg"
-              fill="#1c4fb0"
-              d="m 7,4 v 1 h -1 v 2 h 1 v 1 h 2 v -1 h 1 v -2 h -1 v -1 z"
-            />
-            <path
-              id="AshokaChakraInnerBg"
-              fill="#ffffff"
-              d="m 7,5 h 2 v 2 h -2 z"
-            />
-            <path
-              id="AshokaChakraInnerFg"
-              fill="#6ddff8"
-              d="m 7,5 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Italy(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Italy</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Green" fill="#0a8f19" d="m 1,1 h 4 v 10 h -4 z" />
-            <path id="White" fill="#ffffff" d="m 5,1 h 6 v 10 h -6 z" />
-            <path id="Red" fill="#d01515" d="m 11,1 h 4 v 10 h -4 z" />
-          </g>
-        </svg>
-      );
-    },
-    Japan(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Japan</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <rect
-              id="rect5241"
-              fill="#ffffff"
-              width="14"
-              height="10"
-              x="1"
-              y="1"
-            />
-            <path
-              id="rect5647"
-              fill="#f7926c"
-              d="m 6,3 v 1 h -1 v 4 h 1 v 1 h 4 v -1 h 1 v -4 h -1 v -1 z"
-            />
-            <path
-              id="rect5640"
-              fill="#990000"
-              d="m 7,3 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Portugal(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Portugal</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Green" fill="#00662c" d="m 1,1 h 6 v 10 h -6 z" />
-            <path id="Red" fill="#fd1c1c" d="m 7,1 h 8 v 10 h -8 z" />
-            <path
-              id="SphereBorder"
-              fill="#fff700"
-              d="m 6,3 v 1 h 2 v -1 z m -2,2 v 2 h 1 v -2 z m 5,0 v 2 h 1 v -2 z m -3,3 v 1 h 2 v -1 z"
-            />
-            <path
-              id="SphereInner"
-              fill="#ff9d00"
-              d="m 5,4 v 2 h 1 v -1 h 1 v -1 z m 3,0 v 1 h 1 v -1 z m 0,2 v 1 h -1 v 1 h 2 v -2 z m -3,1 v 1 h 1 v -1 z"
-            />
-            <path id="SphereShield" fill="#ffffff" d="m 6,5 h 2 v 2 h -2 z" />
-          </g>
-        </svg>
-      );
-    },
-    Russia(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Russia</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="White" fill="#ffffff" d="m 1,1 h 14 v 10 h -14 z" />
-            <path id="Blue" fill="#1c4fb0" d="m 1,4 h 14 v 4 h -14 z" />
-            <path id="Red" fill="#d01515" d="m 1,8 h 14 v 3 h -14 z" />
-          </g>
-        </svg>
-      );
-    },
-    SaudiArabia(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Saudi Arabia</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="path10492" fill="#00662c" d="m 1,1 h 14 v 10 h -14 z" />
-            <path id="path1806" fill="#ffffff" d="m 5,8 h 4 v 1 h -4 z" />
-            <path id="path1808" fill="#bfbfbf" d="m 9,8 h 2 v 1 h -2 z" />
-            <path id="path1810" fill="#ffffff" d="m 11,3 h 1 v 3 h -1 z" />
-            <path id="path1812" fill="#bfbfbf" d="m 10,6 h 1 v 1 h -1 z" />
-            <path id="path1814" fill="#ffffff" d="m 9,3 h 1 v 3 h -1 z" />
-            <path id="path1816" fill="#ffffff" d="m 7,3 h 1 v 2 h -1 z" />
-            <path id="path1818" fill="#ffffff" d="m 4,3 h 1 v 2 h -1 z" />
-            <path id="path1820" fill="#bfbfbf" d="m 5,6 h 1 v 1 h -1 z" />
-            <path id="path1822" fill="#bfbfbf" d="m 6,3 h 1 v 3 h -1 z" />
-          </g>
-        </svg>
-      );
-    },
-    SouthKorea(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>South Korea</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="11"
-              width="14"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="15"
-              y="1"
-              width="1"
-              height="10"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="path13589" fill="#ffffff" d="m 1,1 h 14 v 10 h -14 z" />
-            <path
-              id="path4698"
-              fill="#f7926c"
-              d="m 6,3 v 1 h -1 v 1 h 6 v -1 h -1 v -1 z"
-            />
-            <path
-              id="path4703"
-              fill="#519fdf"
-              d="m 5,7 v 1 h 1 v 1 h 4 v -1 h 1 v -1 z"
-            />
-            <path
-              id="path4691"
-              fill="#fd1c1c"
-              d="m 7,3 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z"
-            />
-            <path
-              id="path4707"
-              fill="#1c4fb0"
-              d="m 9,5 v 1 h -1 v 1 h -1 v -1 h -2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h -1 v -1 z"
-            />
-            <path
-              id="path4719"
-              fill="#000000"
-              d="m 3,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
-            />
-            <path
-              id="path4731"
-              fill="#000000"
-              d="m 12,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
-            />
-            <path
-              id="path4739"
-              fill="#000000"
-              d="m 12,7 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
-            />
-            <path
-              id="path4748"
-              fill="#000000"
-              d="m 3,7 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Spain(props: SVGProps<SVGSVGElement>) {
+    ES(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Spain</title>
@@ -917,7 +463,53 @@ export default {
         </svg>
       );
     },
-    UnitedKingdom(props: SVGProps<SVGSVGElement>) {
+    FR(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>France</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Blue" fill="#142269" d="m 1,1 h 4 v 10 h -4 z" />
+            <path id="White" fill="#ffffff" d="m 5,1 h 6 v 10 h -6 z" />
+            <path id="Red" fill="#d01515" d="m 11,1 h 4 v 10 h -4 z" />
+          </g>
+        </svg>
+      );
+    },
+    GB(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>United Kingdom</title>
@@ -1015,9 +607,417 @@ export default {
         </svg>
       );
     },
+    IN(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>India</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Saffron" fill="#c47d22" d="m 1,1 h 14 v 3 h -14 z" />
+            <path id="White" fill="#ffffff" d="m 1,4 h 14 v 4 h -14 z" />
+            <path id="Green" fill="#00662c" d="m 1,8 h 14 v 3 h -14 z" />
+            <path id="AshokaChakraBg" fill="#6ddff8" d="m 6,4 h 4 v 4 h -4 z" />
+            <path
+              id="AshokaChakraFg"
+              fill="#1c4fb0"
+              d="m 7,4 v 1 h -1 v 2 h 1 v 1 h 2 v -1 h 1 v -2 h -1 v -1 z"
+            />
+            <path
+              id="AshokaChakraInnerBg"
+              fill="#ffffff"
+              d="m 7,5 h 2 v 2 h -2 z"
+            />
+            <path
+              id="AshokaChakraInnerFg"
+              fill="#6ddff8"
+              d="m 7,5 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    IT(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Italy</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Green" fill="#0a8f19" d="m 1,1 h 4 v 10 h -4 z" />
+            <path id="White" fill="#ffffff" d="m 5,1 h 6 v 10 h -6 z" />
+            <path id="Red" fill="#d01515" d="m 11,1 h 4 v 10 h -4 z" />
+          </g>
+        </svg>
+      );
+    },
+    JP(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Japan</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <rect
+              id="rect5241"
+              fill="#ffffff"
+              width="14"
+              height="10"
+              x="1"
+              y="1"
+            />
+            <path
+              id="rect5647"
+              fill="#f7926c"
+              d="m 6,3 v 1 h -1 v 4 h 1 v 1 h 4 v -1 h 1 v -4 h -1 v -1 z"
+            />
+            <path
+              id="rect5640"
+              fill="#990000"
+              d="m 7,3 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    KR(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>South Korea</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="path13589" fill="#ffffff" d="m 1,1 h 14 v 10 h -14 z" />
+            <path
+              id="path4698"
+              fill="#f7926c"
+              d="m 6,3 v 1 h -1 v 1 h 6 v -1 h -1 v -1 z"
+            />
+            <path
+              id="path4703"
+              fill="#519fdf"
+              d="m 5,7 v 1 h 1 v 1 h 4 v -1 h 1 v -1 z"
+            />
+            <path
+              id="path4691"
+              fill="#fd1c1c"
+              d="m 7,3 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z"
+            />
+            <path
+              id="path4707"
+              fill="#1c4fb0"
+              d="m 9,5 v 1 h -1 v 1 h -1 v -1 h -2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h -1 v -1 z"
+            />
+            <path
+              id="path4719"
+              fill="#000000"
+              d="m 3,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
+            />
+            <path
+              id="path4731"
+              fill="#000000"
+              d="m 12,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
+            />
+            <path
+              id="path4739"
+              fill="#000000"
+              d="m 12,7 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
+            />
+            <path
+              id="path4748"
+              fill="#000000"
+              d="m 3,7 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    PT(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Portugal</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Green" fill="#00662c" d="m 1,1 h 6 v 10 h -6 z" />
+            <path id="Red" fill="#fd1c1c" d="m 7,1 h 8 v 10 h -8 z" />
+            <path
+              id="SphereBorder"
+              fill="#fff700"
+              d="m 6,3 v 1 h 2 v -1 z m -2,2 v 2 h 1 v -2 z m 5,0 v 2 h 1 v -2 z m -3,3 v 1 h 2 v -1 z"
+            />
+            <path
+              id="SphereInner"
+              fill="#ff9d00"
+              d="m 5,4 v 2 h 1 v -1 h 1 v -1 z m 3,0 v 1 h 1 v -1 z m 0,2 v 1 h -1 v 1 h 2 v -2 z m -3,1 v 1 h 1 v -1 z"
+            />
+            <path id="SphereShield" fill="#ffffff" d="m 6,5 h 2 v 2 h -2 z" />
+          </g>
+        </svg>
+      );
+    },
+    RU(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Russia</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="White" fill="#ffffff" d="m 1,1 h 14 v 10 h -14 z" />
+            <path id="Blue" fill="#1c4fb0" d="m 1,4 h 14 v 4 h -14 z" />
+            <path id="Red" fill="#d01515" d="m 1,8 h 14 v 3 h -14 z" />
+          </g>
+        </svg>
+      );
+    },
+    SA(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Saudi Arabia</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="path10492" fill="#00662c" d="m 1,1 h 14 v 10 h -14 z" />
+            <path id="path1806" fill="#ffffff" d="m 5,8 h 4 v 1 h -4 z" />
+            <path id="path1808" fill="#bfbfbf" d="m 9,8 h 2 v 1 h -2 z" />
+            <path id="path1810" fill="#ffffff" d="m 11,3 h 1 v 3 h -1 z" />
+            <path id="path1812" fill="#bfbfbf" d="m 10,6 h 1 v 1 h -1 z" />
+            <path id="path1814" fill="#ffffff" d="m 9,3 h 1 v 3 h -1 z" />
+            <path id="path1816" fill="#ffffff" d="m 7,3 h 1 v 2 h -1 z" />
+            <path id="path1818" fill="#ffffff" d="m 4,3 h 1 v 2 h -1 z" />
+            <path id="path1820" fill="#bfbfbf" d="m 5,6 h 1 v 1 h -1 z" />
+            <path id="path1822" fill="#bfbfbf" d="m 6,3 h 1 v 3 h -1 z" />
+          </g>
+        </svg>
+      );
+    },
   },
   md: {
-    Andorra(props: SVGProps<SVGSVGElement>) {
+    AD(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props} >
           <title>Andorra</title>
@@ -1238,7 +1238,7 @@ export default {
         </svg>
       );
     },
-    Bangladesh(props: SVGProps<SVGSVGElement>) {
+    BD(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Bangladesh</title>
@@ -1292,7 +1292,7 @@ export default {
         </svg>
       );
     },
-    Canada(props: SVGProps<SVGSVGElement>) {
+    CA(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Canada</title>
@@ -1362,7 +1362,7 @@ export default {
         </svg>
       );
     },
-    China(props: SVGProps<SVGSVGElement>) {
+    CH(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>China</title>
@@ -1421,7 +1421,53 @@ export default {
         </svg>
       );
     },
-    Egypt(props: SVGProps<SVGSVGElement>) {
+    DE(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Germany</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Black" fill="#000000" d="m 1,1 h 30 v 6 h -30 z" />
+            <path id="Red" fill="#fd1c1c" d="m 1,7 h 30 v 6 h -30 z" />
+            <path id="Yellow" fill="#fff700" d="m 1,13 h 30 v 6 h -30 z" />
+          </g>
+        </svg>
+      );
+    },
+    EG(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Egypt</title>
@@ -1502,572 +1548,7 @@ export default {
         </svg>
       );
     },
-    France(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>France</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Blue" fill="#142269" d="m 1,1 h 10 v 18 h -10 z" />
-            <path id="White" fill="#ffffff" d="m 11,1 h 10 v 18 h -10 z" />
-            <path id="Red" fill="#d01515" d="m 21,1 h 10 v 18 h -10 z" />
-          </g>
-        </svg>
-      );
-    },
-    Germany(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Germany</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Black" fill="#000000" d="m 1,1 h 30 v 6 h -30 z" />
-            <path id="Red" fill="#fd1c1c" d="m 1,7 h 30 v 6 h -30 z" />
-            <path id="Yellow" fill="#fff700" d="m 1,13 h 30 v 6 h -30 z" />
-          </g>
-        </svg>
-      );
-    },
-    India(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>India</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Saffron" fill="#c47d22" d="m 1,1 h 30 v 5 h -30 z" />
-            <path id="White" fill="#ffffff" d="m 1,6 h 30 v 8 h -30 z" />
-            <path id="Green" fill="#00662c" d="m 1,14 h 30 v 5 h -30 z" />
-            <path
-              id="AshokaChakraBg"
-              fill="#6ddff8"
-              d="m 13,6 v 1 h -1 v 6 h 1 v 1 h 6 v -1 h 1 v -6 h -1 v -1 z"
-            />
-            <path
-              id="AshokaChakraBorder"
-              fill="#1c4fb0"
-              d="m 14,6 v 1 h -1 v 1 h -1 v 4 h 1 v 1 h 1 v 1 h 4 v -1 h 1 v -1 h 1 v -4 h -1 v -1 h -1 v -1 z"
-            />
-            <path
-              id="AshokaChakraBorder2"
-              fill="#00ccad"
-              d="m 14,7 v 1 h -1 v 4 h 1 v 1 h 4 v -1 h 1 v -4 h -1 v -1 z"
-            />
-            <path
-              id="AshokaChakraInnerBg"
-              fill="#ffffff"
-              d="m 15,7 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z"
-            />
-            <path
-              id="AshokaChakraInnerFg1"
-              fill="#519fdf"
-              d="m 15,8 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z"
-            />
-            <path
-              id="AshokaChakraInnerFg2"
-              fill="#6ddff8"
-              d="m 16,8 v 1 h 1 v -1 z m -2,1 v 1 h 1 v -1 z m 3,1 v 1 h 1 v -1 z m -2,1 v 1 h 1 v -1 z"
-            />
-            <path
-              id="AshokaChakraInnerFg3"
-              fill="#142269"
-              d="m 15,9 h 2 v 2 h -2 z"
-            />
-            <path
-              id="AshokaChakraInnerFg4"
-              fill="#1081d3"
-              d="m 17,9 v 1 h -1 v -1 z m -1,1 v 1 h -1 v -1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Italy(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Italy</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Green" fill="#0a8f19" d="m 1,1 h 10 v 18 h -10 z" />
-            <path id="White" fill="#ffffff" d="m 11,1 h 10 v 18 h -10 z" />
-            <path id="Red" fill="#d01515" d="m 21,1 h 10 v 18 h -10 z" />
-          </g>
-        </svg>
-      );
-    },
-    Japan(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Japan</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <rect
-              id="rect5177"
-              fill="#ffffff"
-              width="30"
-              height="18"
-              x="1"
-              y="1"
-            />
-            <path
-              id="rect5638"
-              fill="#f7926c"
-              d="m 13,4 v 3 h -3 v 6 h 3 v 3 h 6 v -3 h 3 v -6 h -3 v -3 z"
-            />
-            <path
-              id="rect5346"
-              fill="#990000"
-              d="m 14,4 v 1 h -2 v 1 h -1 v 2 h -1 v 4 h 1 v 2 h 1 v 1 h 2 v 1 h 4 v -1 h 2 v -1 h 1 v -2 h 1 v -4 h -1 v -2 h -1 v -1 h -2 v -1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Portugal(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Portugal</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="Green" fill="#00662c" d="m 1,1 h 11 v 18 h -11 z" />
-            <path id="Red" fill="#fd1c1c" d="m 12,1 h 19 v 18 h -19 z" />
-            <path
-              id="SphereBorder"
-              fill="#fff700"
-              d="m 10,5 v 1 h 4 v -1 z m 4,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 4 h 1 v -4 z m 0,4 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -4 v 1 h 4 z m -4,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -1,-1 v -4 h -1 v 4 z m 0,-4 h 1 v -1 h -1 z m 1,-1 h 1 v -1 h -1 z"
-            />
-            <path
-              id="ShieldBorder"
-              fill="#fd1c1c"
-              d="m 9,7 v 5 h 1 v 1 h 4 v -1 h 1 v -5 z"
-            />
-            <path
-              id="ShieldInner"
-              fill="#ffffff"
-              d="m 10,8 v 3 h 1 v 1 h 2 v -1 h 1 v -3 z"
-            />
-            <path id="ShieldInner2" fill="#1c4fb0" d="m 11,9 h 1 v 1 h -1 z" />
-            <path id="ShieldInner3" fill="#519fdf" d="m 12,10 h 1 v 1 h -1 z" />
-            <path
-              id="SphereAxis"
-              fill="#fff700"
-              d="m 11,6 v 1 h 1 v -1 z m -3,3 v 1 h 1 v -1 z m 7,1 v 1 h 1 v -1 z m -4,3 v 1 h 1 v -1 z"
-            />
-            <path
-              id="SphereAxis2"
-              fill="#ff9d00"
-              d="m 12,6 v 1 h 1 v -1 z m 3,3 v 1 h 1 v -1 z m -7,1 v 1 h 1 v -1 z m 4,3 v 1 h 1 v -1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Russia(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Russia</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="White" fill="#ffffff" d="m 1,1 h 30 v 18 h -30 z" />
-            <path id="Blue" fill="#1c4fb0" d="m 1,7 h 30 v 6 h -30 z" />
-            <path id="Red" fill="#d01515" d="m 1,13 h 30 v 6 h -30 z" />
-          </g>
-        </svg>
-      );
-    },
-    SaudiArabia(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>Saudi Arabia</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="path10490" fill="#00662c" d="m 1,1 h 30 v 18 h -30 z" />
-            <path id="path1130" fill="#ffffff" d="m 11,13 h 8 v 1 h -8 z" />
-            <path id="path1339" fill="#bfbfbf" d="m 19,13 h 3 v 1 h -3 z" />
-            <path id="path1625" fill="#4fbd42" d="m 19,12 h 1 v 1 h -1 z" />
-            <path id="path1696" fill="#4fbd42" d="m 19,14 h 1 v 1 h -1 z" />
-            <path id="path1698" fill="#4fbd42" d="m 22,14 h 1 v 1 h -1 z" />
-            <path id="path1700" fill="#bfbfbf" d="m 22,8 h 1 v 1 h -1 z" />
-            <path id="path1702" fill="#ffffff" d="m 23,5 h 1 v 3 h -1 z" />
-            <path id="path1704" fill="#ffffff" d="m 21,5 h 1 v 3 h -1 z" />
-            <path id="path1706" fill="#ffffff" d="m 19,5 h 1 v 3 h -1 z" />
-            <path id="path1708" fill="#ffffff" d="m 18,8 h 1 v 1 h -1 z" />
-            <path id="path1710" fill="#ffffff" d="m 16,7 h 1 v 1 h -1 z" />
-            <path id="path1712" fill="#ffffff" d="m 17,5 h 1 v 2 h -1 z" />
-            <path id="path1783" fill="#bfbfbf" d="m 15,8 h 1 v 1 h -1 z" />
-            <path id="path1785" fill="#ffffff" d="m 15,5 h 1 v 2 h -1 z" />
-            <path id="path1787" fill="#ffffff" d="m 8,5 h 1 v 2 h -1 z" />
-            <path id="path1789" fill="#ffffff" d="m 10,5 h 1 v 3 h -1 z" />
-            <path id="path1791" fill="#ffffff" d="m 12,5 h 1 v 1 h -1 z" />
-            <path id="path1794" fill="#bfbfbf" d="m 9,8 h 1 v 1 h -1 z" />
-            <path id="path1796" fill="#bfbfbf" d="m 12,7 h 1 v 1 h -1 z" />
-            <path id="path1798" fill="#bfbfbf" d="m 14,7 h 1 v 1 h -1 z" />
-            <path id="path1800" fill="#bfbfbf" d="m 13,5 h 1 v 2 h -1 z" />
-            <path id="path1802" fill="#bfbfbf" d="m 11,8 h 1 v 1 h -1 z" />
-            <path id="path1804" fill="#bfbfbf" d="m 13,8 h 1 v 1 h -1 z" />
-          </g>
-        </svg>
-      );
-    },
-    SouthKorea(props: SVGProps<SVGSVGElement>) {
-      return (
-        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <title>South Korea</title>
-          <g id="borders">
-            <rect
-              id="borderTop"
-              x="1"
-              y="0"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderLeft"
-              x="0"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-            <rect
-              id="borderBottom"
-              x="1"
-              y="19"
-              width="30"
-              height="1"
-              fill="currentColor"
-            />
-            <rect
-              id="borderRight"
-              x="31"
-              y="1"
-              width="1"
-              height="18"
-              fill="currentColor"
-            />
-          </g>
-          <g id="flag">
-            <path id="path13587" fill="#ffffff" d="m 1,1 h 30 v 18 h -30 z" />
-            <path id="path3695" fill="#519fdf" d="m 11,11 h 10 v 1 h -10 z" />
-            <path id="path3372" fill="#f7926c" d="m 11,8 h 10 v 1 h -10 z" />
-            <path id="path3437" fill="#ffcc80" d="m 13,5 h 6 v 1 h -6 z" />
-            <path id="path3376" fill="#f7926c" d="m 14,5 h 4 v 1 h -4 z" />
-            <path id="path3433" fill="#f7926c" d="m 12,6 h 8 v 1 h -8 z" />
-            <path id="path3435" fill="#ffcc80" d="m 11,7 h 10 v 1 h -10 z" />
-            <path
-              id="path3228"
-              fill="#fd1c1c"
-              d="m 15,5 v 1 h -2 v 1 h -1 v 2 h -1 v 2 h 1 v 2 h 1 v 1 h 2 v 1 h 2 v -1 h 2 v -1 h 1 v -2 h 1 v -2 h -1 v -2 h -1 v -1 h -2 v -1 z"
-            />
-            <path id="path4202" fill="#bfbfbf" d="m 13,14 h 6 v 1 h -6 z" />
-            <path id="path3837" fill="#519fdf" d="m 14,14 h 4 v 1 h -4 z" />
-            <path id="path3835" fill="#519fdf" d="m 12,13 h 8 v 1 h -8 z" />
-            <path id="path3985" fill="#bfbfbf" d="m 11,12 h 10 v 1 h -10 z" />
-            <path
-              id="rect3491"
-              fill="#1c4fb0"
-              d="m 17,9 v 1 h -1 v 1 h -1 v 1 h -1 v -1 h -1 v -1 h -2 v 1 h 1 v 2 h 1 v 1 h 2 v 1 h 2 v -1 h 2 v -1 h 1 v -3 h -1 v -1 z"
-            />
-            <path
-              id="path4204"
-              fill="#000000"
-              d="m 8,3 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m 0,-1 h 1 v -1 h -1 z m 1,-1 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z"
-            />
-            <path
-              id="path4252"
-              fill="#000000"
-              d="m 23,3 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 0,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m -1,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-3 v -1 h -1 v 1 z m -1,0 h -1 v 1 h 1 z"
-            />
-            <path
-              id="path4254"
-              fill="#a6a6a6"
-              d="m 25,5 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z"
-            />
-            <path
-              id="path4430"
-              fill="#000000"
-              d="m 7,11 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m 0,-1 h 1 v -1 h -1 z m 2,2 h 1 v -1 h -1 z"
-            />
-            <path id="path4444" fill="#a6a6a6" d="m 7,13 h 1 v 1 h -1 z" />
-            <path
-              id="path4454"
-              fill="#000000"
-              d="m 24,11 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -3,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z"
-            />
-            <path
-              id="path4472"
-              fill="#808080"
-              d="m 22,13 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z"
-            />
-          </g>
-        </svg>
-      );
-    },
-    Spain(props: SVGProps<SVGSVGElement>) {
+    ES(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>Spain</title>
@@ -2178,7 +1659,53 @@ export default {
         </svg>
       );
     },
-    UnitedKingdom(props: SVGProps<SVGSVGElement>) {
+    FR(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>France</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Blue" fill="#142269" d="m 1,1 h 10 v 18 h -10 z" />
+            <path id="White" fill="#ffffff" d="m 11,1 h 10 v 18 h -10 z" />
+            <path id="Red" fill="#d01515" d="m 21,1 h 10 v 18 h -10 z" />
+          </g>
+        </svg>
+      );
+    },
+    GB(props: SVGProps<SVGSVGElement>) {
       return (
         <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
           <title>United Kingdom</title>
@@ -2272,6 +1799,479 @@ export default {
               fill="#d01515"
               d="m 22,13 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 3 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -1 z"
             />
+          </g>
+        </svg>
+      );
+    },
+    IN(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>India</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Saffron" fill="#c47d22" d="m 1,1 h 30 v 5 h -30 z" />
+            <path id="White" fill="#ffffff" d="m 1,6 h 30 v 8 h -30 z" />
+            <path id="Green" fill="#00662c" d="m 1,14 h 30 v 5 h -30 z" />
+            <path
+              id="AshokaChakraBg"
+              fill="#6ddff8"
+              d="m 13,6 v 1 h -1 v 6 h 1 v 1 h 6 v -1 h 1 v -6 h -1 v -1 z"
+            />
+            <path
+              id="AshokaChakraBorder"
+              fill="#1c4fb0"
+              d="m 14,6 v 1 h -1 v 1 h -1 v 4 h 1 v 1 h 1 v 1 h 4 v -1 h 1 v -1 h 1 v -4 h -1 v -1 h -1 v -1 z"
+            />
+            <path
+              id="AshokaChakraBorder2"
+              fill="#00ccad"
+              d="m 14,7 v 1 h -1 v 4 h 1 v 1 h 4 v -1 h 1 v -4 h -1 v -1 z"
+            />
+            <path
+              id="AshokaChakraInnerBg"
+              fill="#ffffff"
+              d="m 15,7 v 1 h -1 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -2 h -1 v -1 h -1 v -1 z"
+            />
+            <path
+              id="AshokaChakraInnerFg1"
+              fill="#519fdf"
+              d="m 15,8 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z"
+            />
+            <path
+              id="AshokaChakraInnerFg2"
+              fill="#6ddff8"
+              d="m 16,8 v 1 h 1 v -1 z m -2,1 v 1 h 1 v -1 z m 3,1 v 1 h 1 v -1 z m -2,1 v 1 h 1 v -1 z"
+            />
+            <path
+              id="AshokaChakraInnerFg3"
+              fill="#142269"
+              d="m 15,9 h 2 v 2 h -2 z"
+            />
+            <path
+              id="AshokaChakraInnerFg4"
+              fill="#1081d3"
+              d="m 17,9 v 1 h -1 v -1 z m -1,1 v 1 h -1 v -1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    IT(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Italy</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Green" fill="#0a8f19" d="m 1,1 h 10 v 18 h -10 z" />
+            <path id="White" fill="#ffffff" d="m 11,1 h 10 v 18 h -10 z" />
+            <path id="Red" fill="#d01515" d="m 21,1 h 10 v 18 h -10 z" />
+          </g>
+        </svg>
+      );
+    },
+    JP(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Japan</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <rect
+              id="rect5177"
+              fill="#ffffff"
+              width="30"
+              height="18"
+              x="1"
+              y="1"
+            />
+            <path
+              id="rect5638"
+              fill="#f7926c"
+              d="m 13,4 v 3 h -3 v 6 h 3 v 3 h 6 v -3 h 3 v -6 h -3 v -3 z"
+            />
+            <path
+              id="rect5346"
+              fill="#990000"
+              d="m 14,4 v 1 h -2 v 1 h -1 v 2 h -1 v 4 h 1 v 2 h 1 v 1 h 2 v 1 h 4 v -1 h 2 v -1 h 1 v -2 h 1 v -4 h -1 v -2 h -1 v -1 h -2 v -1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    KR(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>South Korea</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="path13587" fill="#ffffff" d="m 1,1 h 30 v 18 h -30 z" />
+            <path id="path3695" fill="#519fdf" d="m 11,11 h 10 v 1 h -10 z" />
+            <path id="path3372" fill="#f7926c" d="m 11,8 h 10 v 1 h -10 z" />
+            <path id="path3437" fill="#ffcc80" d="m 13,5 h 6 v 1 h -6 z" />
+            <path id="path3376" fill="#f7926c" d="m 14,5 h 4 v 1 h -4 z" />
+            <path id="path3433" fill="#f7926c" d="m 12,6 h 8 v 1 h -8 z" />
+            <path id="path3435" fill="#ffcc80" d="m 11,7 h 10 v 1 h -10 z" />
+            <path
+              id="path3228"
+              fill="#fd1c1c"
+              d="m 15,5 v 1 h -2 v 1 h -1 v 2 h -1 v 2 h 1 v 2 h 1 v 1 h 2 v 1 h 2 v -1 h 2 v -1 h 1 v -2 h 1 v -2 h -1 v -2 h -1 v -1 h -2 v -1 z"
+            />
+            <path id="path4202" fill="#bfbfbf" d="m 13,14 h 6 v 1 h -6 z" />
+            <path id="path3837" fill="#519fdf" d="m 14,14 h 4 v 1 h -4 z" />
+            <path id="path3835" fill="#519fdf" d="m 12,13 h 8 v 1 h -8 z" />
+            <path id="path3985" fill="#bfbfbf" d="m 11,12 h 10 v 1 h -10 z" />
+            <path
+              id="rect3491"
+              fill="#1c4fb0"
+              d="m 17,9 v 1 h -1 v 1 h -1 v 1 h -1 v -1 h -1 v -1 h -2 v 1 h 1 v 2 h 1 v 1 h 2 v 1 h 2 v -1 h 2 v -1 h 1 v -3 h -1 v -1 z"
+            />
+            <path
+              id="path4204"
+              fill="#000000"
+              d="m 8,3 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m 0,-1 h 1 v -1 h -1 z m 1,-1 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z"
+            />
+            <path
+              id="path4252"
+              fill="#000000"
+              d="m 23,3 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 0,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m -1,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-3 v -1 h -1 v 1 z m -1,0 h -1 v 1 h 1 z"
+            />
+            <path
+              id="path4254"
+              fill="#a6a6a6"
+              d="m 25,5 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z"
+            />
+            <path
+              id="path4430"
+              fill="#000000"
+              d="m 7,11 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m 0,-1 h 1 v -1 h -1 z m 2,2 h 1 v -1 h -1 z"
+            />
+            <path id="path4444" fill="#a6a6a6" d="m 7,13 h 1 v 1 h -1 z" />
+            <path
+              id="path4454"
+              fill="#000000"
+              d="m 24,11 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -3,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z"
+            />
+            <path
+              id="path4472"
+              fill="#808080"
+              d="m 22,13 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    PT(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Portugal</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Green" fill="#00662c" d="m 1,1 h 11 v 18 h -11 z" />
+            <path id="Red" fill="#fd1c1c" d="m 12,1 h 19 v 18 h -19 z" />
+            <path
+              id="SphereBorder"
+              fill="#fff700"
+              d="m 10,5 v 1 h 4 v -1 z m 4,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 4 h 1 v -4 z m 0,4 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -4 v 1 h 4 z m -4,0 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z m -1,-1 v -4 h -1 v 4 z m 0,-4 h 1 v -1 h -1 z m 1,-1 h 1 v -1 h -1 z"
+            />
+            <path
+              id="ShieldBorder"
+              fill="#fd1c1c"
+              d="m 9,7 v 5 h 1 v 1 h 4 v -1 h 1 v -5 z"
+            />
+            <path
+              id="ShieldInner"
+              fill="#ffffff"
+              d="m 10,8 v 3 h 1 v 1 h 2 v -1 h 1 v -3 z"
+            />
+            <path id="ShieldInner2" fill="#1c4fb0" d="m 11,9 h 1 v 1 h -1 z" />
+            <path id="ShieldInner3" fill="#519fdf" d="m 12,10 h 1 v 1 h -1 z" />
+            <path
+              id="SphereAxis"
+              fill="#fff700"
+              d="m 11,6 v 1 h 1 v -1 z m -3,3 v 1 h 1 v -1 z m 7,1 v 1 h 1 v -1 z m -4,3 v 1 h 1 v -1 z"
+            />
+            <path
+              id="SphereAxis2"
+              fill="#ff9d00"
+              d="m 12,6 v 1 h 1 v -1 z m 3,3 v 1 h 1 v -1 z m -7,1 v 1 h 1 v -1 z m 4,3 v 1 h 1 v -1 z"
+            />
+          </g>
+        </svg>
+      );
+    },
+    RU(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Russia</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="White" fill="#ffffff" d="m 1,1 h 30 v 18 h -30 z" />
+            <path id="Blue" fill="#1c4fb0" d="m 1,7 h 30 v 6 h -30 z" />
+            <path id="Red" fill="#d01515" d="m 1,13 h 30 v 6 h -30 z" />
+          </g>
+        </svg>
+      );
+    },
+    SA(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Saudi Arabia</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="path10490" fill="#00662c" d="m 1,1 h 30 v 18 h -30 z" />
+            <path id="path1130" fill="#ffffff" d="m 11,13 h 8 v 1 h -8 z" />
+            <path id="path1339" fill="#bfbfbf" d="m 19,13 h 3 v 1 h -3 z" />
+            <path id="path1625" fill="#4fbd42" d="m 19,12 h 1 v 1 h -1 z" />
+            <path id="path1696" fill="#4fbd42" d="m 19,14 h 1 v 1 h -1 z" />
+            <path id="path1698" fill="#4fbd42" d="m 22,14 h 1 v 1 h -1 z" />
+            <path id="path1700" fill="#bfbfbf" d="m 22,8 h 1 v 1 h -1 z" />
+            <path id="path1702" fill="#ffffff" d="m 23,5 h 1 v 3 h -1 z" />
+            <path id="path1704" fill="#ffffff" d="m 21,5 h 1 v 3 h -1 z" />
+            <path id="path1706" fill="#ffffff" d="m 19,5 h 1 v 3 h -1 z" />
+            <path id="path1708" fill="#ffffff" d="m 18,8 h 1 v 1 h -1 z" />
+            <path id="path1710" fill="#ffffff" d="m 16,7 h 1 v 1 h -1 z" />
+            <path id="path1712" fill="#ffffff" d="m 17,5 h 1 v 2 h -1 z" />
+            <path id="path1783" fill="#bfbfbf" d="m 15,8 h 1 v 1 h -1 z" />
+            <path id="path1785" fill="#ffffff" d="m 15,5 h 1 v 2 h -1 z" />
+            <path id="path1787" fill="#ffffff" d="m 8,5 h 1 v 2 h -1 z" />
+            <path id="path1789" fill="#ffffff" d="m 10,5 h 1 v 3 h -1 z" />
+            <path id="path1791" fill="#ffffff" d="m 12,5 h 1 v 1 h -1 z" />
+            <path id="path1794" fill="#bfbfbf" d="m 9,8 h 1 v 1 h -1 z" />
+            <path id="path1796" fill="#bfbfbf" d="m 12,7 h 1 v 1 h -1 z" />
+            <path id="path1798" fill="#bfbfbf" d="m 14,7 h 1 v 1 h -1 z" />
+            <path id="path1800" fill="#bfbfbf" d="m 13,5 h 1 v 2 h -1 z" />
+            <path id="path1802" fill="#bfbfbf" d="m 11,8 h 1 v 1 h -1 z" />
+            <path id="path1804" fill="#bfbfbf" d="m 13,8 h 1 v 1 h -1 z" />
           </g>
         </svg>
       );

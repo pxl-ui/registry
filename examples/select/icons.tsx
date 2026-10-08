@@ -1,4 +1,4 @@
-import { CountryFlag } from "@/components/ui/pxl/country-flag";
+import { CountryFlag, type ISO_3166_Code } from "@/components/ui/pxl/country-flag";
 import {
   Select,
   SelectContent,
@@ -34,7 +34,7 @@ export default function SelectIconsExample() {
             
             return match ? (
               <>
-                <CountryFlag className="w-8! h-5!" code={match.iso31661} />
+                <CountryFlag className="w-8! h-5!" code={match.iso31661 as ISO_3166_Code } />
                 {match.label}
               </>
             ) : value;
@@ -46,7 +46,7 @@ export default function SelectIconsExample() {
           <SelectLabel>Language</SelectLabel>
           {items.map((item) => (
             <SelectItem className="uppercase" key={item.value} value={item.value}>
-              <CountryFlag className="w-8! h-5!" code={item.iso31661} />
+              <CountryFlag className="w-8! h-5!" code={item.iso31661 as ISO_3166_Code} />
               {item.label}
             </SelectItem>
           ))}

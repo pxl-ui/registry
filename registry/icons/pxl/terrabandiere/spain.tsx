@@ -1,0 +1,118 @@
+import type { SVGProps } from "react";
+
+export default {
+  sm: {
+    "ES-PV"(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Euskadi</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="11"
+              width="14"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="15"
+              y="1"
+              width="1"
+              height="10"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Red" fill="#d01515" d="m 1,1 h 14 v 10 h -14 z" />
+            <path
+              id="White"
+              fill="#ffffff"
+              d="M 7 1 L 7 5 L 1 5 L 1 7 L 7 7 L 7 11 L 9 11 L 9 7 L 15 7 L 15 5 L 9 5 L 9 1 L 7 1 z "
+            />
+            <path
+              id="Green"
+              fill="#0a8f19"
+              d="M 1 1 L 1 2 L 2 2 L 2 3 L 3 3 L 3 4 L 4 4 L 4 5 L 7 5 L 7 4 L 6 4 L 6 3 L 5 3 L 5 2 L 4 2 L 4 1 L 1 1 z M 12 1 L 12 2 L 11 2 L 11 3 L 10 3 L 10 4 L 9 4 L 9 5 L 12 5 L 12 4 L 13 4 L 13 3 L 14 3 L 14 2 L 15 2 L 15 1 L 12 1 z M 4 7 L 4 8 L 3 8 L 3 9 L 2 9 L 2 10 L 1 10 L 1 11 L 4 11 L 4 10 L 5 10 L 5 9 L 6 9 L 6 8 L 7 8 L 7 7 L 4 7 z M 9 7 L 9 8 L 10 8 L 10 9 L 11 9 L 11 10 L 12 10 L 12 11 L 15 11 L 15 10 L 14 10 L 14 9 L 13 9 L 13 8 L 12 8 L 12 7 L 9 7 z "
+            />
+          </g>
+        </svg>
+      );
+    },
+  },
+  md: {
+    "ES-PV"(props: SVGProps<SVGSVGElement>) {
+      return (
+        <svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+          <title>Euskadi</title>
+          <g id="borders">
+            <rect
+              id="borderTop"
+              x="1"
+              y="0"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderLeft"
+              x="0"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+            <rect
+              id="borderBottom"
+              x="1"
+              y="19"
+              width="30"
+              height="1"
+              fill="currentColor"
+            />
+            <rect
+              id="borderRight"
+              x="31"
+              y="1"
+              width="1"
+              height="18"
+              fill="currentColor"
+            />
+          </g>
+          <g id="flag">
+            <path id="Red" fill="#d01515" d="M 1 1 H 31 V 19 H 1 Z" />
+
+            <path
+              id="Green"
+              fill="#0a8f19"
+              d="M 1 1 L 1 3 L 3 3 L 3 4 L 4 4 L 4 5 L 6 5 L 6 6 L 7 6 L 7 7 L 9 7 L 9 8 L 10 8 L 10 12 L 9 12 L 9 13 L 7 13 L 7 14 L 6 14 L 6 15 L 4 15 L 4 16 L 3 16 L 3 17 L 1 17 L 1 19 L 5 19 L 5 18 L 6 18 L 6 17 L 8 17 L 8 16 L 9 16 L 9 15 L 11 15 L 11 14 L 12 14 L 12 13 L 20 13 L 20 14 L 21 14 L 21 15 L 23 15 L 23 16 L 24 16 L 24 17 L 26 17 L 26 18 L 27 18 L 27 19 L 31 19 L 31 17 L 29 17 L 29 16 L 28 16 L 28 15 L 26 15 L 26 14 L 25 14 L 25 13 L 23 13 L 23 12 L 22 12 L 22 8 L 23 8 L 23 7 L 25 7 L 25 6 L 26 6 L 26 5 L 28 5 L 28 4 L 29 4 L 29 3 L 31 3 L 31 1 L 27 1 L 27 2 L 26 2 L 26 3 L 24 3 L 24 4 L 23 4 L 23 5 L 21 5 L 21 6 L 20 6 L 20 7 L 12 7 L 12 6 L 11 6 L 11 5 L 9 5 L 9 4 L 8 4 L 8 3 L 6 3 L 6 2 L 5 2 L 5 1 L 1 1 z "
+            />
+
+            <path
+              id="White"
+              fill="#ffffff"
+              d="M 14 1 L 14 8 L 1 8 L 1 12 L 14 12 L 14 19 L 18 19 L 18 12 L 31 12 L 31 8 L 18 8 L 18 1 L 14 1 z "
+            />
+          </g>
+        </svg>
+      );
+    },
+  },
+};

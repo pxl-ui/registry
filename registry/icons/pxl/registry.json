@@ -77,9 +77,19 @@
       },
       "files": [
         {
-          "path": "terrabandiere.tsx",
+          "path": "terrabandiere/countries.tsx",
           "type": "registry:component",
-          "target": "@components/icons/pxl/terrabandiere.tsx"
+          "target": "@components/icons/pxl/terrabandiere/countries.tsx"
+        },
+        {
+          "path": "terrabandiere/spain.tsx",
+          "type": "registry:component",
+          "target": "@components/icons/pxl/terrabandiere/spain.tsx"
+        },
+        {
+          "path": "terrabandiere/index.tsx",
+          "type": "registry:component",
+          "target": "@components/icons/pxl/terrabandiere/index.tsx"
         }
       ]
     }

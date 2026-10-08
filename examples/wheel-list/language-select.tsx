@@ -1,4 +1,4 @@
-import { CountryFlag } from "@/components/ui/pxl/country-flag";
+import { CountryFlag, type ISO_3166_Code } from "@/components/ui/pxl/country-flag";
 import { WheelList, WheelOption } from "@/components/ui/pxl/wheel-list";
 import { WidgetArea } from "@/components/ui/pxl/widget-area";
 
@@ -23,7 +23,7 @@ export default function LanguageSelect() {
       <WheelList align="start" visibleCount={5} defaultValue="ES">
         {items.map((item) => (
           <WheelOption key={item.value} value={item.value}>
-            <CountryFlag code={item.iso31661} />
+            <CountryFlag code={item.iso31661 as ISO_3166_Code} />
             {item.label}
           </WheelOption>
         ))}
