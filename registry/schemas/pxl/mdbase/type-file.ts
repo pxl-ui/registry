@@ -130,7 +130,7 @@ const TypeFileSchema = withExtensions({
   schema: z.union([
     z.strictObject({
       dialect: z.literal("json-schema-2020-12"),
-      value: JSONSchemas["2020-12"],
+      value: JSONSchemas.Document,
     }),
     z.strictObject({
       dialect: z.literal("json-schema-2020-12"),
