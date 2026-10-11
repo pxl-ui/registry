@@ -11,6 +11,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint .",
+    "format": "biome check --write .",
     "astro": "astro",
     "validate": "pnpm dlx shadcn@latest registry validate pxl-ui/registry"
   },
