@@ -17,12 +17,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/pxl/table";
-import type { JSONSchema } from "@/schemas/pxl/json-schema";
+import { isRecord, type JSONSchema } from "@/schemas/pxl/json-schema";
 
 function resolveRef(
   ref: string | undefined,
   rootSchema: JSONSchema.Document,
 ): JSONSchema.Document | null {
+  // TODO: Check that # must target the document root
+  if (ref === "#") return rootSchema;
   if (!ref?.startsWith("#/")) return null;
   const path = ref.slice(2).split("/");
   let node = rootSchema;
@@ -51,11 +53,14 @@ function typeLabel(
     return `${typeLabel(items as JSONSchema.Document, rootSchema)}[]`;
   }
   if (
-    schema.type === "object" &&
-    !schema.properties &&
-    schema.additionalProperties
+    isRecord(schema)
   ) {
-    return `Record<string, ${(schema.additionalProperties as JSONSchema.Document)?.title}>`;
+
+    if (typeof schema.additionalProperties !== "object") {
+      return `Record<string, unknown>`;
+    }
+
+    return `Record<string, ${(typeLabel(schema.additionalProperties, rootSchema))}>`;
   }
   if (schema.enum) return "enum";
   if (schema.anyOf)
@@ -76,8 +81,7 @@ function isExpandable(
   if (resolved.anyOf?.every((s) => s.type === "object" && s.properties))
     return true;
   if (
-    resolved.type === "object" &&
-    (resolved.properties || resolved.additionalProperties)
+    isRecord(resolved)
   )
     return true;
 
@@ -99,7 +103,15 @@ function getExpandedSchema(
   rootSchema: JSONSchema.Document,
 ): JSONSchema.Document {
   let resolved = schema;
-  if (schema.$ref) resolved = resolveRef(schema.$ref, rootSchema) || schema;
+
+  if (isRecord(resolved)) {
+    if (typeof resolved.additionalProperties !== "object") {
+      return {};
+    }
+    resolved = resolved.additionalProperties;
+  }
+
+  if (resolved.$ref) resolved = resolveRef(resolved.$ref, rootSchema) || resolved;
 
   if (typeof resolved.items === "boolean") {
     return {};
