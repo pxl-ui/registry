@@ -1,4 +1,0 @@
-interface:
-  display_name: "ZOD Schema Elaboration"
-  short_description: "Elaborate ZOD Schemas"
-  default_prompt: "Use $zod-schema-elaboration to elaborate a Zod schema."

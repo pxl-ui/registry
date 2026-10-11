@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Design"
+  short_description: "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one."
+  default_prompt: "Use $frontend-design for building new UI with distinctive intentional visual design."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Composition Patterns"
+  short_description: "Refactoring react componets with composition patterns that scale"
+  default_prompt: "Use $react-composition-patterns to refactor components."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Best Practices"
+  short_description: "React and Next.js performance optimization guidelines from Vercel Engineering"
+  default_prompt: "Use $react-best-practices to write, review or refactor React/Next.js code."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "React View Transitions"
+  short_description: "Guide for implementing smooth, native-feeling animations using React's View Transition API."
+  default_prompt: "Use $react-view-transitions to implement smooth, native-feeling animations"
