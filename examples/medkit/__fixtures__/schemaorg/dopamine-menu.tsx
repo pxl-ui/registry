@@ -10,6 +10,7 @@ const dopamineMenu: Menu = {
       "@type": "MenuSection",
       name: "Starters",
       description: "less than 10 minutes",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/92_sandwich.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -87,6 +88,7 @@ const dopamineMenu: Menu = {
       "@type": "MenuSection",
       name: "Main Courses",
       description: "will take 45 minutes or more",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/87_ramen.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -204,6 +206,7 @@ const dopamineMenu: Menu = {
       "@type": "MenuSection",
       name: "Specials",
       description: "need advanced planning",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/85_roastedchicken.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -251,6 +254,7 @@ const dopamineMenu: Menu = {
       "@type": "MenuSection",
       name: "Sides",
       description: "great to do along with something else",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/32_curry.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -338,6 +342,7 @@ const dopamineMenu: Menu = {
       "@type": "MenuSection",
       name: "Desserts",
       description: "nice to have in moderation",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/34_donut.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
