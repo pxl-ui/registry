@@ -138,11 +138,6 @@ export default defineConfig({
                     ],
                   },
                   {
-                    label: "Recipes",
-                    collapsed: true,
-                    items: [{ label: "Cooklang", link: "/schemas/cooklang" }],
-                  },
-                  {
                     label: "Events",
                     collapsed: true,
                     items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
@@ -272,6 +267,17 @@ export default defineConfig({
                 label: "Conversation",
                 items: [
                   { autogenerate: { directory: "features/conversation" } },
+                ],
+              },
+              {
+                label: "Cookbook",
+                items: [
+                  { autogenerate: { directory: "features/cookbook" } },
+                  {
+                    label: "Cooklang",
+                    collapsed: true,
+                    items: [{ label: "Schemas", link: "/schemas/cooklang" }],
+                  },
                 ],
               },
               {

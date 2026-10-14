@@ -23,6 +23,42 @@
           "target": "@components/features/pxl/cookbook/api/services/parse-cook.ts"
         }
       ]
+    },
+    {
+      "name": "cookbook/food-menu",
+      "type": "registry:component",
+      "title": "Food Menu",
+      "description": "A component for displaying a food menu",
+      "categories": ["pxl-ui", "features", "cookbook"],
+      "dependencies": ["cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/separator"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "food-menu.tsx",
+          "target": "@components/features/pxl/cookbook/food-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cookbook/schemaorg/food-menu",
+      "type": "registry:component",
+      "title": "Schema.org Menu",
+      "description": "A component for displaying a food menu from Schema.org",
+      "categories": ["pxl-ui", "features", "cookbook", "cookbook/schemaorg"],
+      "registryDependencies": [
+        "pxl-ui/registry/cookbook/food-menu",
+        "pxl-ui/registry/schemas/schemaorg"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "schemaorg/food-menu.tsx",
+          "target": "@components/features/pxl/cookbook/schemaorg/food-menu.tsx"
+        }
+      ]
     }
   ]
 }

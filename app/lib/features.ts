@@ -4,6 +4,9 @@ const lists = {
   conversation: filter({
     categories: ["features", "conversation"],
   }),
+  cookbook: filter({
+    categories: ["features", "cookbook"],
+  }),
   forecast: filter({
     categories: ["features", "forecast"],
   }),

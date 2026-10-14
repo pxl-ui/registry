@@ -1,0 +1,50 @@
+---
+title: Food Menu
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="cookbook/food-menu" />
+
+## Installation
+
+<Install item="cookbook/food-menu" />
+
+## Usage
+
+```tsx
+import {
+  FoodMenu,
+  FoodMenuBody,
+  FoodMenuTitle,
+  FoodMenuSection,
+  FoodMenuSectionBody,
+  FoodMenuSectionTitle,
+  FoodMenuItem,
+  FoodMenuItemTitle,
+  FoodMenuItemPrice
+} from "@/components/features/pxl/cookbook/food-menu"
+```
+
+```tsx
+<FoodMenu>
+  <FoodMenuTitle>Ristorante</FoodMenuTitle>
+  <FoodMenuBody>
+    <FoodMenuSection>
+      <FoodMenuSectionTitle>
+        Starters
+      </FoodMenuSectionTitle>
+      <FoodMenuSectionBody>
+        <FoodMenuItem>
+          <FoodMenuItemTitle>
+            Homemade Iberian ham croquettes (6 pcs)
+          </FoodMenuItemTitle>
+          <FoodMenuItemLine />
+          <FoodMenuItemPrice>
+            9,50 €
+          </FoodMenuItemPrice>
+        </FoodMenuItem>
+      </FoodMenuSectionBody>
+    </FoodMenuSection>
+  </FoodMenuBody>
+</FoodMenu>
+```

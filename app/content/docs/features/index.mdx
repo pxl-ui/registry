@@ -23,6 +23,23 @@ import { toRouteId } from "~/lib/registry";
 
 </div>
 
+## <FeatureIcon name="cookbook" class="size-5 inline-flex" /> Cookbook
+> <p className="text-muted-foreground">Components to display food recipes, diets and menus</p>
+
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+
+  {lists.cookbook.map(item => (
+    <LinkCard 
+      href={toRouteId(item.name)} 
+      title={item.title ?? item.name}
+      description={item.description}
+    >
+    </LinkCard>
+  ))}
+
+</div>
+
 ## <FeatureIcon name="forecast" class="size-5 inline-flex" /> Forecast
 > <p className="text-muted-foreground">Components to display the weather</p>
 
