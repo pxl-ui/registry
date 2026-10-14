@@ -8,6 +8,7 @@ const foodMenu: Menu = {
     {
       "@type": "MenuSection",
       name: "Starters",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/92_sandwich.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -167,6 +168,7 @@ const foodMenu: Menu = {
     {
       "@type": "MenuSection",
       name: "Main Courses",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/87_ramen.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -358,6 +360,7 @@ const foodMenu: Menu = {
     {
       "@type": "MenuSection",
       name: "Second Courses",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/85_roastedchicken.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",
@@ -492,6 +495,7 @@ const foodMenu: Menu = {
     {
       "@type": "MenuSection",
       name: "Desserts",
+      image: "https://raw.githubusercontent.com/pxl-ui/registry/main/app/public/icons/food/34_donut.png",
       hasMenuItem: [
         {
           "@type": "MenuItem",

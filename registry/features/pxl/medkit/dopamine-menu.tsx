@@ -47,19 +47,6 @@ function DopamineMenuSection({
   );
 }
 
-function DopamineMenuSectionBody({
-  className,
-  ...props
-}: ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="dopamine-menu-section-body"
-      className={cn("flex flex-col gap-2", className)}
-      {...props}
-    />
-  );
-}
-
 function DopamineMenuSectionHeader({
   className,
   ...props
@@ -70,6 +57,7 @@ function DopamineMenuSectionHeader({
       className={cn(
         "flex flex-col items-center text-center gap-0.5 w-fit mx-auto",
         "has-data-[slot=dopamine-menu-section-media]:inline-grid has-data-[slot=dopamine-menu-section-media]:grid-cols-[auto_max-content] has-data-[slot=dopamine-menu-section-media]:items-center has-data-[slot=dopamine-menu-section-media]:gap-x-3 has-data-[slot=dopamine-menu-section-media]:gap-y-0.5 has-data-[slot=dopamine-menu-section-media]:mx-auto",
+        "[&:not(:has([data-slot='dopamine-menu-section-description']))_[data-slot='dopamine-menu-section-title']]:row-span-2",
         className
       )}
       {...props}
@@ -149,9 +137,22 @@ function DopamineMenuSectionDescription({
     <p
       data-slot="dopamine-menu-section-description"
       className={cn(
-        "font-serif text-2xs md:text-xs text-left text-muted-foreground line-clamp-2 [&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-primary",
+        "font-serif text-2xs md:text-xs text-left text-muted-foreground/60 line-clamp-2 [&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-primary",
         className,
       )}
+      {...props}
+    />
+  );
+}
+
+function DopamineMenuSectionBody({
+  className,
+  ...props
+}: ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="dopamine-menu-section-body"
+      className={cn("flex flex-col gap-2", className)}
       {...props}
     />
   );
@@ -161,7 +162,7 @@ function DopamineMenuItem({ className, ...props }: ComponentProps<"div">) {
   return (
     <article
       data-slot="dopamine-menu-item"
-      className={cn("flex justify-between items-baseline gap-2", className)}
+      className={cn("grid grid-cols-[auto_1fr_auto] items-baseline gap-x-2", className)}
       {...props}
     />
   );
@@ -172,7 +173,7 @@ function DopamineMenuItemTitle({ className, ...props }: ComponentProps<"h3">) {
     <h3
       data-slot="dopamine-menu-item-title"
       className={cn(
-        "font-serif font-bold leading-snug text-sm md:text-base text-pretty",
+        "font-serif leading-snug text-sm md:text-base text-pretty",
         className,
       )}
       {...props}
@@ -187,7 +188,7 @@ function DopamineMenuItemDescription({
   return (
     <p
       data-slot="dopamine-menu-item-description"
-      className={cn("", className)}
+      className={cn("font-serif text-muted-foreground/60 text-2xs md:text-xs col-span-full", className)}
       {...props}
     />
   );
@@ -198,7 +199,7 @@ function DopamineMenuItemTime({ className, ...props }: ComponentProps<"span">) {
     <span
       data-slot="dopamine-menu-item-time"
       className={cn(
-        "font-serif font-bold leading-snug text-sm md:text-base text-pretty",
+        "font-serif italic leading-snug text-xs md:text-sm text-pretty",
         className,
       )}
       {...props}
@@ -214,7 +215,7 @@ function DopamineMenuItemLine({
     <Separator
       border="dotted"
       size="lg"
-      className={cn("w-fit flex-1", className)}
+      className={cn("w-full flex-1", className)}
       {...props}
     />
   );

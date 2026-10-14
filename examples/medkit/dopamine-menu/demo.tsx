@@ -9,6 +9,7 @@ import {
   DopamineMenuSectionMedia,
 } from "@/components/features/pxl/medkit/dopamine-menu";
 import {
+  DopamineMenuItemDescription,
   DopamineMenuItemTime,
   DopamineMenuItemTitle,
   DopamineMenuSectionDescription,
@@ -31,8 +32,14 @@ export default function DopamineMenuDemo() {
         {dopamineMenu.hasMenuSection?.map((menuSection, mIdx) => (
           <DopamineMenuSection key={mIdx.toString()}>
             <DopamineMenuSectionHeader>
-              <DopamineMenuSectionMedia variant="image" className="size-8 grayscale group-hover/dopamine-menu-section:grayscale-0 transition-colors">
-                <DopamineMenuSectionImage className="pixelated" menuSection={menuSection} />
+              <DopamineMenuSectionMedia
+                variant="image"
+                className="size-8 grayscale group-hover/dopamine-menu-section:grayscale-0 transition-colors"
+              >
+                <DopamineMenuSectionImage
+                  className="pixelated"
+                  menuSection={menuSection}
+                />
               </DopamineMenuSectionMedia>
               <DopamineMenuSectionTitle
                 className="font-not-jam-blackletter-16"
@@ -46,6 +53,7 @@ export default function DopamineMenuDemo() {
                   <DopamineMenuItemTitle menuItem={menuItem} />
                   <DopamineMenuItemLine />
                   <DopamineMenuItemTime menuItem={menuItem} />
+                  <DopamineMenuItemDescription menuItem={menuItem} />
                 </DopamineMenuItem>
               ))}
             </DopamineMenuSectionBody>
