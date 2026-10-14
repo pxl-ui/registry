@@ -459,6 +459,11 @@
         },
         { 
           "type": "registry:file",
+          "path": "schemaorg/food-establishment.ts",
+          "target": "@lib/pxl/schemas/schemaorg/food-establishment.ts"
+        },
+        { 
+          "type": "registry:file",
           "path": "schemaorg/types.ts",
           "target": "@lib/pxl/schemas/schemaorg/types.ts"
         }
