@@ -20,6 +20,7 @@ const separatorProps = cva("shrink-0", {
     border: {
       solid: "bg-current",
       dashed: "",
+      dotted: "[--dot-gap:var(--pixel-size)]",
       none: "",
     },
     variant: {
@@ -50,6 +51,18 @@ const separatorProps = cva("shrink-0", {
       orientation: "vertical",
       className:
         "bg-[repeating-linear-gradient(to_bottom,currentColor_0,currentColor_var(--dash-size),transparent_var(--dash-size),transparent_calc(var(--dash-size)+var(--dash-gap)))]",
+    },
+    {
+      border: "dotted",
+      orientation: "horizontal",
+      className:
+        "bg-[repeating-linear-gradient(to_right,currentColor_0,currentColor_var(--pixel-size),transparent_var(--pixel-size),transparent_calc(var(--pixel-size)+var(--dot-gap)))]",
+    },
+    {
+      border: "dotted",
+      orientation: "vertical",
+      className:
+        "bg-[repeating-linear-gradient(to_bottom,currentColor_0,currentColor_var(--pixel-size),transparent_var(--pixel-size),transparent_calc(var(--pixel-size)+var(--dot-gap)))]",
     },
   ],
 });
