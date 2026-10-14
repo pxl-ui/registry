@@ -454,8 +454,13 @@
       "files": [
         { 
           "type": "registry:file",
-          "path": "schemaorg.ts",
-          "target": "@lib/pxl/schemas/schemaorg.ts"
+          "path": "schemaorg/defined-term-set.ts",
+          "target": "@lib/pxl/schemas/schemaorg/defined-term-set.ts"
+        },
+        { 
+          "type": "registry:file",
+          "path": "schemaorg/types.ts",
+          "target": "@lib/pxl/schemas/schemaorg/types.ts"
         }
       ]
     },

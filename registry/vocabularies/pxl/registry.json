@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/vocabularies",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "vocabularies/open-food-facts",
+      "type": "registry:component",
+      "title": "Open Food Facts Vocabularies",
+      "description": "Allergens vocabulary from Open Food Facts.",
+      "categories": ["pxl-ui", "vocabularies"],
+      "registryDependencies": [
+        "pxl/registry/schemas/schemaorg"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "open-food-facts.ts",
+          "target": "@lib/pxl/vocabularies/open-food-facts.ts"
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,7 @@
       "@/components/widgets/*": ["./registry/widgets/*"],
       "@/hooks/*": ["./registry/hooks/*"],
       "@/lib/schemas/*": ["./registry/schemas/*"],
+      "@/lib/vocabularies/*": ["./registry/vocabularies/*"],
       "@/lib/*": ["./registry/lib/*"],
       "@/*": ["./registry/*"],
     }
