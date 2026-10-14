@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/medkit",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "medkit/dopamine-menu",
+      "type": "registry:component",
+      "title": "Dopamine Menu",
+      "description": "A component for displaying a dopamine menu",
+      "categories": ["pxl-ui", "features", "medkit"],
+      "dependencies": ["cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/separator"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "dopamine-menu.tsx",
+          "target": "@components/features/pxl/medkit/dopamine-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "medkit/schemaorg/dopamine-menu",
+      "type": "registry:component",
+      "title": "Schema.org Dopamine Menu",
+      "description": "A component for displaying a dopamine menu from Schema.org",
+      "categories": ["pxl-ui", "features", "medkit", "medkit/schemaorg"],
+      "registryDependencies": [
+        "pxl-ui/registry/medkit/dopamine-menu",
+        "pxl-ui/registry/schemas/schemaorg"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "schemaorg/dopamine-menu.tsx",
+          "target": "@components/features/pxl/medkit/schemaorg/dopamine-menu.tsx"
+        }
+      ]
+    }
+  ]
+}

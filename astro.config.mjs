@@ -338,6 +338,12 @@ export default defineConfig({
                 items: [{ autogenerate: { directory: "features/marketing" } }],
               },
               {
+                label: "Medkit",
+                items: [
+                  { autogenerate: { directory: "features/medkit" } },
+                ],
+              },
+              {
                 label: "Newspaper",
                 items: [
                   { autogenerate: { directory: "features/newspaper" } },

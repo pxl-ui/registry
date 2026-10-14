@@ -1,0 +1,50 @@
+---
+title: Dopamine Menu
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="medkit/dopamine-menu" />
+
+## Installation
+
+<Install item="medkit/dopamine-menu" />
+
+## Usage
+
+```tsx
+import {
+  DopamineMenu,
+  DopamineMenuBody,
+  DopamineMenuTitle,
+  DopamineMenuSection,
+  DopamineMenuSectionBody,
+  DopamineMenuSectionTitle,
+  DopamineMenuItem,
+  DopamineMenuItemTitle,
+  DopamineMenuItemTime
+} from "@/components/features/pxl/medkit/dopamine-menu"
+```
+
+```tsx
+<DopamineMenu>
+  <DopamineMenuTitle>Dopamine</DopamineMenuTitle>
+  <DopamineMenuBody>
+    <DopamineMenuSection>
+      <DopamineMenuSectionTitle>
+        Starters
+      </DopamineMenuSectionTitle>
+      <DopamineMenuSectionBody>
+        <DopamineMenuItem>
+          <DopamineMenuItemTitle>
+            Yoga
+          </DopamineMenuItemTitle>
+          <DopamineMenuItemLine />
+          <DopamineMenuItemTime>
+            10 minutes
+          </DopamineMenuItemTime>
+        </DopamineMenuItem>
+      </DopamineMenuSectionBody>
+    </DopamineMenuSection>
+  </DopamineMenuBody>
+</DopamineMenu>
+```

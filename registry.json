@@ -14,6 +14,7 @@
     "registry/features/pxl/magazine/registry.json",
     "registry/features/pxl/mailbox/registry.json",
     "registry/features/pxl/marketing/registry.json",
+    "registry/features/pxl/medkit/registry.json",
     "registry/features/pxl/newspaper/registry.json",
     "registry/features/pxl/notebook/registry.json",
     "registry/features/pxl/taskboard/registry.json",

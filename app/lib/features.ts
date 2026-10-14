@@ -19,6 +19,9 @@ const lists = {
   marketing: filter({
     categories: ["features", "marketing"],
   }),
+  medkit: filter({
+    categories: ["features", "medkit"],
+  }),
   newspaper: filter({
     categories: ["features", "newspaper"],
   }),
