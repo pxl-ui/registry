@@ -6,6 +6,7 @@ import { fromRouteId, pages } from "~/lib/registry";
 import { type Credits, creditsSchema } from "~/lib/starlight/schemas/credits";
 
 import Icon from './Icon.astro';
+import { PageTitleActions } from './PageTitleActions';
 
 const item = fromRouteId(Astro.locals.starlightRoute.id); 
 
@@ -41,7 +42,7 @@ const { prev, next } = pagination;
     </h1>
     <div class="docs-nav flex items-center gap-2">
       <div class="hidden sm:block">
-
+        <PageTitleActions client:load entry={Astro.locals.starlightRoute.entry} />
       </div>
       <div class="ml-auto flex gap-2">
         {prev ? (
