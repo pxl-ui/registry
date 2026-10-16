@@ -37,10 +37,28 @@
       ]
     },
     {
+      "name": "clock/analog-pomodoro",
+      "type": "registry:component",
+      "title": "Analog Pomodoro",
+      "description": "A minimal analog pomodoro.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "analog-pomodoro.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/analog-pomodoro.tsx"
+        }
+      ]
+    },
+    {
       "name": "clock/analog-stopwatch",
       "type": "registry:component",
       "title": "Analog Stopwatch",
-      "description": "A pixel analog stopwatch with a minimal physical instrument design.",
+      "description": "A minimal analog stopwatch.",
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
