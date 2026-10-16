@@ -191,7 +191,7 @@ function DopamineMenuItemTime({
 }) {
   const time = useMemo(
     function resolveItemDuration() {
-      if (!menuItem.offers?.price) {
+      if (menuItem.offers?.price === undefined) {
         return null;
       }
 
@@ -204,8 +204,6 @@ function DopamineMenuItemTime({
         return null;
       }
 
-      // Si guardas directamente "minutes", "hours", "days", etc. en el schema,
-      // la clave vale directamente para el objeto de duración. Si no viniera, por defecto "minutes".
       const durationKey = currency || "minutes";
       const durationObj = { [durationKey]: amount };
 

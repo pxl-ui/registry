@@ -4,17 +4,46 @@
   "homepage": "https://github.com/pxl-ui/registry",
   "items": [
     {
+      "name": "medkit/dopamine-menu-editor",
+      "type": "registry:component",
+      "title": "Dopamine Menu Editor",
+      "description": "A compact Schema.org dopamine menu editor with JSON import, export, and accessible drag and drop.",
+      "categories": ["pxl-ui", "features", "medkit"],
+      "dependencies": ["@dnd-kit/react@^0.5.0", "@dnd-kit/dom@^0.5.0"],
+      "registryDependencies": [
+        "pxl-ui/registry/medkit/dopamine-menu",
+        "pxl-ui/registry/medkit/schemaorg/dopamine-menu",
+        "pxl-ui/registry/schemas/schemaorg",
+        "pxl-ui/registry/alert",
+        "pxl-ui/registry/alert-dialog",
+        "pxl-ui/registry/button",
+        "pxl-ui/registry/collapsible",
+        "pxl-ui/registry/dialog",
+        "pxl-ui/registry/dropdown-menu",
+        "pxl-ui/registry/field",
+        "pxl-ui/registry/input",
+        "pxl-ui/registry/scroll-area",
+        "pxl-ui/registry/select",
+        "pxl-ui/registry/textarea"
+      ],
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "dopamine-menu-editor.tsx",
+          "target": "@components/features/pxl/medkit/dopamine-menu-editor.tsx"
+        }
+      ]
+    },
+    {
       "name": "medkit/dopamine-menu",
       "type": "registry:component",
       "title": "Dopamine Menu",
       "description": "A component for displaying a dopamine menu",
       "categories": ["pxl-ui", "features", "medkit"],
       "dependencies": ["cn"],
-      "registryDependencies": [
-        "pxl-ui/registry/separator"
-      ],
+      "registryDependencies": ["pxl-ui/registry/separator"],
       "files": [
-        { 
+        {
           "type": "registry:file",
           "path": "dopamine-menu.tsx",
           "target": "@components/features/pxl/medkit/dopamine-menu.tsx"
@@ -32,7 +61,7 @@
         "pxl-ui/registry/schemas/schemaorg"
       ],
       "files": [
-        { 
+        {
           "type": "registry:file",
           "path": "schemaorg/dopamine-menu.tsx",
           "target": "@components/features/pxl/medkit/schemaorg/dopamine-menu.tsx"

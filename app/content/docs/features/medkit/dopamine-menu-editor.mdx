@@ -1,0 +1,67 @@
+---
+title: Dopamine Menu Editor
+description: A compact editor for Schema.org dopamine menus.
+---
+import { ComponentPreview, Install } from '~/components';
+
+<ComponentPreview item="medkit/dopamine-menu-editor" />
+
+## Installation
+
+<Install item="medkit/dopamine-menu-editor" />
+
+## Usage
+
+```tsx
+import { DopamineMenuEditor } from "@/components/features/pxl/medkit/dopamine-menu-editor";
+
+<DopamineMenuEditor defaultValue={{ name: "My dopamine menu" }} />
+```
+
+## Compact containers
+
+The editor adapts to its container rather than the viewport. Constrain its height to scroll the sections while keeping the header visible.
+
+<ComponentPreview item="medkit/dopamine-menu-editor" example="widget" />
+
+## Controlled mobile example
+
+<ComponentPreview item="medkit/dopamine-menu-editor" example="mobile" />
+
+## Editing and reordering
+
+Edit names directly in the card. Expand details to edit descriptions, image URLs, and activity durations. Add sections and activities with the inline buttons. Delete and move actions are in each section's menu and each expanded activity's menu.
+
+Drag a handle to reorder sections or activities. Activities can move between sections; dropping on a collapsed section appends the activity. Handles support keyboard dragging with Space, arrow keys, and Escape to cancel. Menus also provide Move up, Move down, and Move to section.
+
+Durations use the existing dopamine menu convention: `offers.price` is the amount and `offers.priceCurrency` is the unit. New durations default to minutes; hours and days are also available. Existing custom units are preserved.
+
+## Import and export
+
+Use the header menu to import a JSON file or paste JSON. The minimum document is:
+
+```json
+{ "name": "My dopamine menu" }
+```
+
+The editor validates known fields using the existing `MenuSchema` and requires a nonempty menu name. Empty lists and unnamed sections or activities are accepted. Invalid imports leave the current menu intact; replacing edited content requires confirmation.
+
+Export downloads `dopamine-menu.json` or copies formatted JSON. If copying is unavailable, the JSON remains selectable. A nonempty menu name is required to export.
+
+## Preserved content
+
+The editor edits first-level sections and their activities. Root-level activities, nested sections, and activity addons are preserved but not editable here; a note appears when they exist. Additional fields, identifiers, JSON-LD metadata, and untouched value types are retained. Deleting a section also removes its nested content.
+
+Editing an image URL updates only the first image. ImageObject metadata and additional images are preserved. Images are referenced by URL; no file upload or image storage is included.
+
+## API Reference
+
+### DopamineMenuEditor
+
+| Prop | Type | Default |
+| --- | --- | --- |
+| `value` | `Menu` | Uncontrolled |
+| `defaultValue` | `Menu` | Empty menu |
+| `onValueChange` | `(menu: Menu) => void` | — |
+| `labels` | `Partial<DopamineMenuEditorLabels>` | English labels |
+| `className` | `string` | — |
