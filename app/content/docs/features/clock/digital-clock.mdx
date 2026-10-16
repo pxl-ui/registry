@@ -1,0 +1,35 @@
+---
+title: Digital Clock
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="clock/digital-clock" />
+
+## Installation
+
+<Install item="clock/digital-clock" />
+
+## Usage
+
+```tsx
+import { DigitalClock } from "@/components/features/pxl/clock/digital-clock";
+```
+
+```tsx
+<DigitalClock timeZone="Europe/Madrid" />
+```
+
+## API Reference
+
+### DigitalClock
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `sm \| default \| md \| lg` | Case and display size. |
+| `variant` | `default \| primary \| secondary \| outline` | Semantic case colors. |
+| `border` | `solid \| rounded \| none` | Beveled, outlined, stepped or plain case. |
+| `className` | `string` | Root customization. |
+| `value` | `Date \| number \| string` | Fixed instant; omit for a live clock. |
+| `timeZone` | `string` | IANA zone; defaults to local time. |
+| `showSeconds` | `boolean` | Show the second hand/digits; default `true`. |
+| `hour12` | `boolean` | 12-hour format; default `false`. |

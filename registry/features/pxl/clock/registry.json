@@ -42,7 +42,7 @@
       "title": "Analog Pomodoro",
       "description": "A minimal analog pomodoro.",
       "categories": ["pxl-ui", "features", "clock"],
-      "dependencies": ["class-variance-authority"],
+      "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
         "pxl-ui/registry/button"
       ],
@@ -60,7 +60,7 @@
       "title": "Analog Stopwatch",
       "description": "A minimal analog stopwatch.",
       "categories": ["pxl-ui", "features", "clock"],
-      "dependencies": ["class-variance-authority"],
+      "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
         "pxl-ui/registry/button"
       ],
@@ -69,6 +69,21 @@
           "path": "analog-stopwatch.tsx",
           "type": "registry:component",
           "target": "@components/features/pxl/clock/analog-stopwatch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "clock/digital-clock",
+      "type": "registry:component",
+      "title": "Digital Clock",
+      "description": "A minimal digital clock.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "digital-clock.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/digital-clock.tsx"
         }
       ]
     }
