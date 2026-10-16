@@ -86,6 +86,24 @@
           "target": "@components/features/pxl/clock/digital-clock.tsx"
         }
       ]
+    },
+    {
+      "name": "clock/digital-countdown",
+      "type": "registry:component",
+      "title": "Digital Countdown",
+      "description": "A minimal digital countdown.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "digital-countdown.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/digital-countdown.tsx"
+        }
+      ]
     }
   ]
 }

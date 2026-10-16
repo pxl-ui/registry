@@ -9,7 +9,7 @@ const digitalClockVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-background text-foreground pixel-color-border",
+        default: "bg-muted text-foreground pixel-color-border",
         primary: "bg-primary text-primary-foreground pixel-color-primary-foreground",
         secondary: "bg-secondary text-secondary-foreground pixel-color-secondary-foreground",
         info: "bg-info text-info-foreground pixel-color-info-foreground",
@@ -18,10 +18,10 @@ const digitalClockVariants = cva(
         danger: "bg-danger text-info-foreground pixel-color-info-foreground",
       },
       size: {
-        sm: "w-38 text-xs [--clock-digit:1.5rem]",
-        default: "w-60 [--clock-digit:2.25rem]",
-        md: "w-60 [--clock-digit:2.25rem]",
-        lg: "w-72 text-base [--clock-digit:3rem]",
+        sm: "w-38 h-13 text-xs [--clock-digit:1.25rem]",
+        default: "w-60 h-17 [--clock-digit:2.25rem]",
+        md: "w-60 h-17 [--clock-digit:2.25rem]",
+        lg: "w-72 h-20 text-base [--clock-digit:2.5rem]",
       },
       border: {
         solid: "pixel-border pixel-size-lg",
