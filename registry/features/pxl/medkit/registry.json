@@ -13,7 +13,7 @@
       "registryDependencies": [
         "pxl-ui/registry/medkit/dopamine-menu",
         "pxl-ui/registry/medkit/schemaorg/dopamine-menu",
-        "pxl-ui/registry/schemas/schemaorg",
+        "pxl-ui/registry/schemas/schemaorg/food-establishment",
         "pxl-ui/registry/alert",
         "pxl-ui/registry/alert-dialog",
         "pxl-ui/registry/button",
@@ -58,7 +58,7 @@
       "categories": ["pxl-ui", "features", "medkit", "medkit/schemaorg"],
       "registryDependencies": [
         "pxl-ui/registry/medkit/dopamine-menu",
-        "pxl-ui/registry/schemas/schemaorg"
+        "pxl-ui/registry/schemas/schemaorg/food-establishment"
       ],
       "files": [
         {

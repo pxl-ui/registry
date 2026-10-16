@@ -23,6 +23,7 @@
     "registry/icons/pxl/registry.json",
     "registry/lib/pxl/registry.json",
     "registry/schemas/pxl/registry.json",
+    "registry/schemas/pxl/schemaorg/registry.json",
     "registry/vocabularies/pxl/registry.json",
     "registry/styles/pxl/registry.json",
     "registry/ui/pxl/registry.json",

@@ -50,7 +50,7 @@
       "categories": ["pxl-ui", "features", "cookbook", "cookbook/schemaorg"],
       "registryDependencies": [
         "pxl-ui/registry/cookbook/food-menu",
-        "pxl-ui/registry/schemas/schemaorg"
+        "pxl-ui/registry/schemas/schemaorg/food-establishment"
       ],
       "files": [
         { 

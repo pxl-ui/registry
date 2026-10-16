@@ -10,7 +10,7 @@
       "description": "Allergens vocabulary from Open Food Facts.",
       "categories": ["pxl-ui", "vocabularies"],
       "registryDependencies": [
-        "pxl/registry/schemas/schemaorg"
+        "pxl/registry/schemas/schemaorg/defined-term-set"
       ],
       "files": [
         { 

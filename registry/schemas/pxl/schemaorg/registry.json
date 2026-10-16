@@ -1,0 +1,117 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/schemas/schemaorg",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "schemas/schemaorg",
+      "type": "registry:lib",
+      "title": "Schema.org Schemas",
+      "description": "Schemas from Schema.org.",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "registryDependencies": [
+        "pxl/registry/schemas/schemaorg/action",
+        "pxl/registry/schemas/schemaorg/defined-term-set",
+        "pxl/registry/schemas/schemaorg/food-establishment",
+        "pxl/registry/schemas/schemaorg/how-to",
+        "pxl/registry/schemas/schemaorg/location",
+        "pxl/registry/schemas/schemaorg/software-application"
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/action",
+      "type": "registry:lib",
+      "title": "Schema.org Action",
+      "description": "Zod Schemas for Schema.org Action",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "registryDependencies": [
+        "pxl/registry/schemas/schemaorg/how-to",
+        "pxl/registry/schemas/schemaorg/location",
+        "pxl/registry/schemas/schemaorg/software-application"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "action.ts",
+          "target": "@lib/pxl/schemas/schemaorg/action.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/defined-term-set",
+      "type": "registry:lib",
+      "title": "Schema.org Defined Term Set",
+      "description": "Zod Schemas for Schema.org Defined Term Set",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "defined-term-set.ts",
+          "target": "@lib/pxl/schemas/schemaorg/defined-term-set.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/food-establishment",
+      "type": "registry:lib",
+      "title": "Schema.org Food Establisment",
+      "description": "Zod Schemas for Schema.org Food Establishment",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "food-establishment.ts",
+          "target": "@lib/pxl/schemas/schemaorg/food-establishment.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/how-to",
+      "type": "registry:lib",
+      "title": "Schema.org How To",
+      "description": "Zod Schemas for Schema.org How To",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "how-to.ts",
+          "target": "@lib/pxl/schemas/schemaorg/how-to.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/location",
+      "type": "registry:lib",
+      "title": "Schema.org Location",
+      "description": "Zod Schemas for Schema.org Location",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "location.ts",
+          "target": "@lib/pxl/schemas/schemaorg/location.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/software-application",
+      "type": "registry:lib",
+      "title": "Schema.org Software Application",
+      "description": "Zod Schemas for Schema.org Software Application",
+      "categories": ["pxl-ui", "schemas", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "software-application.ts",
+          "target": "@lib/pxl/schemas/schemaorg/software-application.ts"
+        }
+      ]
+    }
+  ]
+}
