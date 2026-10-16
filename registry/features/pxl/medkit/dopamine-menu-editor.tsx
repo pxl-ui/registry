@@ -328,18 +328,21 @@ function ImageField({
   );
 }
 
-const descriptionFieldVariants = cva("font-serif text-muted-foreground [&_textarea]:min-h-0 [&_textarea]:resize-none", {
-  variants: {
-    size: {
-      sm: "[&_textarea]:text-2xs [&_textarea]:py-0",
-      md: "[&_textarea]:text-xs [&_textarea]:py-0",
-      lg: "[&_textarea]:text-sm [&_textarea]:py-0",
+const descriptionFieldVariants = cva(
+  "font-serif text-muted-foreground [&_textarea]:min-h-0 [&_textarea]:resize-none",
+  {
+    variants: {
+      size: {
+        sm: "[&_textarea]:text-2xs [&_textarea]:py-0",
+        md: "[&_textarea]:text-xs [&_textarea]:py-0",
+        lg: "[&_textarea]:text-sm [&_textarea]:py-0",
+      },
+    },
+    defaultVariants: {
+      size: "lg",
     },
   },
-  defaultVariants: {
-    size: "lg",
-  },
-});
+);
 
 function DescriptionField({
   className,
@@ -553,99 +556,92 @@ function ItemRow({
       data-slot="dopamine-menu-editor-item"
       className="group/dopamine-menu-editor-item min-w-0 font-serif"
     >
-        <div className="flex min-w-0 items-center gap-1">
-          <Button
-            ref={sortable.handleRef}
-            size="icon-xs"
-            variant="ghost"
-            className="touch-none md:opacity-0 md:group-hover/dopamine-menu-editor-item:opacity-100"
-            data-drag-handle={uid}
-            aria-label={`${labels.drag}: ${item.name || labels.itemName}`}
+      <div className="flex min-w-0 items-center gap-1">
+        <Button
+          ref={sortable.handleRef}
+          size="icon-xs"
+          variant="ghost"
+          className="touch-none md:opacity-0 md:group-hover/dopamine-menu-editor-item:opacity-100"
+          data-drag-handle={uid}
+          aria-label={`${labels.drag}: ${item.name || labels.itemName}`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M7 1h2v2h-2zM15 1h2v2h-2zM5 3h2v2h-2zM9 3h2v2h-2zM13 3h2v2h-2zM17 3h2v2h-2zM7 5h2v2h-2zM15 5h2v2h-2zM7 9h2v2h-2zM15 9h2v2h-2zM5 11h2v2h-2zM9 11h2v2h-2zM13 11h2v2h-2zM17 11h2v2h-2zM7 13h2v2h-2zM15 13h2v2h-2zM7 17h2v2h-2zM15 17h2v2h-2zM5 19h2v2h-2zM9 19h2v2h-2zM13 19h2v2h-2zM17 19h2v2h-2zM7 21h2v2h-2zM15 21h2v2h-2z"></path>
-            </svg>
-          </Button>
-          <ImageField
-            size="md"
-            value={item}
-            onChange={(next) => editor.itemChange(section, index, next)}
-          />
+            <path d="M7 1h2v2h-2zM15 1h2v2h-2zM5 3h2v2h-2zM9 3h2v2h-2zM13 3h2v2h-2zM17 3h2v2h-2zM7 5h2v2h-2zM15 5h2v2h-2zM7 9h2v2h-2zM15 9h2v2h-2zM5 11h2v2h-2zM9 11h2v2h-2zM13 11h2v2h-2zM17 11h2v2h-2zM7 13h2v2h-2zM15 13h2v2h-2zM7 17h2v2h-2zM15 17h2v2h-2zM5 19h2v2h-2zM9 19h2v2h-2zM13 19h2v2h-2zM17 19h2v2h-2zM7 21h2v2h-2zM15 21h2v2h-2z"></path>
+          </svg>
+        </Button>
+        <ImageField
+          size="md"
+          value={item}
+          onChange={(next) => editor.itemChange(section, index, next)}
+        />
+        <Input
+          size="xs"
+          border="none"
+          className="min-w-0 max-w-full **:data-[slot=input]:field-sizing-content **:data-[slot=input]:w-auto **:data-[slot=input]:max-w-full"
+          aria-label={labels.itemName}
+          placeholder={labels.itemName}
+          value={item.name ?? ""}
+          autoFocus={editor.focus === uid}
+          onFocus={() => editor.setFocus(null)}
+          onChange={(event) => change({ ...item, name: event.target.value })}
+        />
+        <DopamineMenuItemLine size="md" className="min-w-2 self-end" />
+        <div className="max-w-32 truncate shrink-0 flex items-baseline gap-1">
           <Input
-            size="xs"
-            border="none"
-            className="min-w-0 max-w-full **:data-[slot=input]:field-sizing-content **:data-[slot=input]:w-auto **:data-[slot=input]:max-w-full"
-            aria-label={labels.itemName}
-            placeholder={labels.itemName}
-            value={item.name ?? ""}
-            autoFocus={editor.focus === uid}
-            onFocus={() => editor.setFocus(null)}
-            onChange={(event) => change({ ...item, name: event.target.value })}
-          />
-          <DopamineMenuItemLine size="md" className="min-w-2 self-end" />
-          <div
-            className="max-w-32 truncate shrink-0 flex items-baseline gap-1"
-          ><Input
             id={`${uid}-duration`}
-            type="number"
+            type="text"
             border="none"
-            className="max-w-4 [&_input]:h-6 [&_input]:text-xs [&_input]:px-0 [&_input]:text-end [&_input]:[appearance:textfield] [&_input]:[&::-webkit-inner-spin-button]:appearance-none [&_input]:[&::-webkit-outer-spin-button]:appearance-none"
+            className="w-auto [&_input]:field-sizing-content [&_input]:min-w-0 [&_input]:w-auto [&_input]:h-6 [&_input]:text-xs [&_input]:px-0 [&_input]:text-end"
             min={0}
             step="any"
-            value={item.offers?.price ?? ""}
+            value={item.offers?.price ?? "-"}
             onChange={(event) => {
-              const raw = event.target.value;
-              const price = raw === "" ? undefined : Number(raw);
-              if (
-                price === undefined ||
-                (Number.isFinite(price) && price >= 0)
-              )
-                change(updateDuration(item, price));
+              const price = event.target.value;
+              change(updateDuration(item, price));
             }}
           />
           <Select
             value={unit}
             onValueChange={(next) => {
-              if (next)
-                change(updateDuration(item, item.offers?.price, next));
+              if (next) change(updateDuration(item, item.offers?.price, next));
             }}
           >
-            <SelectTrigger 
+            <SelectTrigger
               border="none"
-              id={`${uid}-unit`} 
-              className="py-0 px-0 h-6 w-fit min-w-0 text-xs">
+              id={`${uid}-unit`}
+              className="py-0 px-0 h-6 w-fit min-w-0 text-xs"
+            >
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 {units.map((value) => (
                   <SelectItem key={value} value={value}>
-                    {labels[value as "minutes" | "hours" | "days"] ??
-                      value}
+                    {labels[value as "minutes" | "hours" | "days"] ?? value}
                   </SelectItem>
                 ))}
               </SelectGroup>
             </SelectContent>
           </Select>
-          </div>
-          <RowActions section={section} item={index} />
         </div>
-        {item.description && (
-          <div
-            data-slot="dopamine-menu-item-description"
-            className="flex min-w-0 items-center gap-1 ml-6"
-          >
-            <DescriptionField
-              size="sm"
-              value={item}
-              onChange={(next) => editor.itemChange(section, index, next)}
-            />
-          </div>
-        )}
+        <RowActions section={section} item={index} />
+      </div>
+      {item.description && (
+        <div
+          data-slot="dopamine-menu-item-description"
+          className="flex min-w-0 items-center gap-1 ml-6"
+        >
+          <DescriptionField
+            size="sm"
+            value={item}
+            onChange={(next) => editor.itemChange(section, index, next)}
+          />
+        </div>
+      )}
     </div>
   );
 }
