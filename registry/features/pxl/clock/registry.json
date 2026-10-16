@@ -35,6 +35,24 @@
           "target": "@components/features/pxl/clock/analog-countdown.tsx"
         }
       ]
+    },
+    {
+      "name": "clock/analog-stopwatch",
+      "type": "registry:component",
+      "title": "Analog Stopwatch",
+      "description": "A pixel analog stopwatch with a minimal physical instrument design.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "analog-stopwatch.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/analog-stopwatch.tsx"
+        }
+      ]
     }
   ]
 }

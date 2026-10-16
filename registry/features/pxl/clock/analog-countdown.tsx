@@ -28,11 +28,11 @@ const analogCountdownVariants = cva(
           "[--clock-progress-track-color:var(--danger-foreground)] [--clock-progress-indicator-color:var(--danger-foreground)] [--clock-pusher-color:var(--danger-foreground)] [--clock-hand-color:var(--danger-foreground)] [--clock-hand-axis-color:var(--danger-foreground)] [--clock-markers-color:var(--foreground)] [--clock-case-color:var(--danger)] [--clock-bezel-color:var(--danger-foreground)]",
       },
       size: {
-        sm: "w-38 **:data-[slot=clock-pusher]:w-5 **:data-[slot=clock-pusher]:h-1.5 **:data-[slot=clock-controls]:gap-1.5",
+        sm: "w-38 **:data-[slot=clock-pusher]:w-4 **:data-[slot=clock-pusher]:h-1.5 **:data-[slot=clock-controls]:gap-1.5",
         default:
-          "w-60 **:data-[slot=clock-pusher]:w-7 **:data-[slot=clock-pusher]:h-2 **:data-[slot=clock-controls]:gap-2",
-        md: "w-60 **:data-[slot=clock-pusher]:w-7 **:data-[slot=clock-pusher]:h-2 **:data-[slot=clock-controls]:gap-2",
-        lg: "w-72 **:data-[slot=clock-pusher]:w-10 **:data-[slot=clock-pusher]:h-3 **:data-[slot=clock-controls]:gap-2",
+          "w-60 **:data-[slot=clock-pusher]:w-6 **:data-[slot=clock-pusher]:h-2 **:data-[slot=clock-controls]:gap-2",
+        md: "w-60 **:data-[slot=clock-pusher]:w-6 **:data-[slot=clock-pusher]:h-2 **:data-[slot=clock-controls]:gap-2",
+        lg: "w-72 **:data-[slot=clock-pusher]:w-8 **:data-[slot=clock-pusher]:h-3 **:data-[slot=clock-controls]:gap-2",
       },
       border: {
         solid: "",

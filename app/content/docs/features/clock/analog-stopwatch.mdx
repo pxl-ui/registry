@@ -1,0 +1,35 @@
+---
+title: Analog Stopwatch
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="clock/analog-stopwatch" />
+
+## Installation
+
+<Install item="clock/analog-stopwatch" />
+
+## Usage
+
+```tsx
+import { AnalogStopwatch } from "@/components/features/pxl/clock/analog-stopwatch";
+```
+
+```tsx
+<AnalogStopwatch  />
+```
+
+## API Reference
+
+### AnalogStopwatch
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `sm \| default \| md \| lg` | Watch size. |
+| `variant` | `default \| primary \| secondary \| outline` | Semantic case colors. |
+| `border` | `solid \| rounded \| none` | Beveled, outlined, stepped or plain case. |
+| `className` | `string` | Root customization. |
+| `autoStart` | `boolean` | Start on mount; default `false`. |
+| `disabled` | `boolean` | Freeze time and disable controls. |
+| `onLap` | `(seconds: number) => void` | Enables the Lap button; receives exact elapsed seconds. |
+
