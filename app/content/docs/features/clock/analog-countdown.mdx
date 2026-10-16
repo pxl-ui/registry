@@ -1,0 +1,35 @@
+---
+title: Analog Countdown
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="clock/analog-countdown" />
+
+## Installation
+
+<Install item="clock/analog-countdown" />
+
+## Usage
+
+```tsx
+import { AnalogCountdown } from "@/components/features/pxl/clock/analog-countdown";
+````
+
+```tsx
+<AnalogCountdown duration={90} />
+```
+
+## API Reference
+
+### AnalogClock
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `sm \| default \| md \| lg` | Watch size. |
+| `variant` | `default \| primary \| secondary \| outline` | Semantic case colors. |
+| `border` | `solid \| rounded \| none` | Beveled, outlined, stepped or plain case. |
+| `className` | `string` | Root customization. |
+| `autoStart` | `boolean` | Start on mount; default `false`. |
+| `disabled` | `boolean` | Freeze time and disable controls. |
+| `duration` | `number` | Seconds; default `300`. Invalid values become zero. |
+| `onComplete` | `() => void` | Called once when a running countdown reaches zero. |

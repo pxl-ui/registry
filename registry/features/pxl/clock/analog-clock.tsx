@@ -26,10 +26,10 @@ const analogClockVariants = cva(
           "[--clock-hand-color:var(--foreground)] [--clock-second-hand-color:var(--danger-foreground)] [--clock-markers-color:var(--foreground)] [--clock-case-color:var(--danger)] [--clock-bezel-color:var(--danger-foreground)]",
       },
       size: {
-        sm: "w-44 p-3 text-xs [--clock-digit:1.5rem]",
+        sm: "w-38 text-xs [--clock-digit:1.5rem]",
         default: "w-60 [--clock-digit:2.25rem]",
         md: "w-60 [--clock-digit:2.25rem]",
-        lg: "w-72 p-5 text-base [--clock-digit:3rem]",
+        lg: "w-72 text-base [--clock-digit:3rem]",
       },
       border: {
         solid: "",
@@ -108,7 +108,7 @@ function AnalogClock({
       data-variant={variant}
       data-size={size}
       data-border={border}
-      className={cn(analogClockVariants({ variant, size, border }), className)}
+      className={cn(analogClockVariants({ font, variant, size, border }), className)}
       {...props}
     >
       <svg

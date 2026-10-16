@@ -17,6 +17,24 @@
           "target": "@components/features/pxl/clock/analog-clock.tsx"
         }
       ]
+    },
+    {
+      "name": "clock/analog-countdown",
+      "type": "registry:component",
+      "title": "Analog Countdown",
+      "description": "A minimal analog countdown.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "analog-countdown.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/analog-countdown.tsx"
+        }
+      ]
     }
   ]
 }
