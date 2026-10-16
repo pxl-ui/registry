@@ -1,6 +1,7 @@
 import { filter } from "~/lib/registry";
 
 const lists = {
+  clock: filter({ categories: ["features", "clock"] }),
   conversation: filter({
     categories: ["features", "conversation"],
   }),

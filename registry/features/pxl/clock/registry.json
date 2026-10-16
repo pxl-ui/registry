@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pxl/features/clock",
+  "homepage": "https://github.com/pxl-ui/registry",
+  "items": [
+    {
+      "name": "clock/analog-clock",
+      "type": "registry:component",
+      "title": "Analog Clock",
+      "description": "A minimal analog clock.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "analog-clock.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/analog-clock.tsx"
+        }
+      ]
+    }
+  ]
+}

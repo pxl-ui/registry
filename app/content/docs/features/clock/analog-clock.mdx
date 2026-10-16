@@ -1,0 +1,34 @@
+---
+title: Analog Clock
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="clock/analog-clock" />
+
+## Installation
+
+<Install item="clock/analog-clock" />
+
+## Usage
+
+```tsx
+import { AnalogClock } from "@/components/features/pxl/clock/analog-clock";
+````
+
+```tsx
+<AnalogClock timeZone="Europe/Madrid" />
+```
+
+## API Reference
+
+### AnalogClock
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `sm \| default \| md \| lg` | Case and display size. |
+| `variant` | `default \| primary \| secondary \| info` | Semantic case colors. |
+| `border` | `solid \| rounded \| none` | Beveled, outlined, stepped or plain case. |
+| `className` | `string` | Root customization. |
+| `value` | `Date \| number \| string` | Fixed instant; omit for a live clock. |
+| `timeZone` | `string` | IANA zone; defaults to local time. |
+| `showSeconds` | `boolean` | Show the second hand/digits; default `true`. |

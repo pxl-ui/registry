@@ -6,6 +6,15 @@ import { FeatureIcon, LinkCard } from "~/components";
 import { lists } from "~/lib/features";
 import { toRouteId } from "~/lib/registry";
 
+## <FeatureIcon name="clock" class="size-5 inline-flex" /> Clock
+> <p className="text-muted-foreground">Components for time, countdowns, stopwatches and focus sessions.</p>
+
+<div class="not-content mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+  {lists.clock.map(item => (
+    <LinkCard href={toRouteId(item.name)} title={item.title ?? item.name} description={item.description} />
+  ))}
+</div>
+
 ## <FeatureIcon name="conversation" class="size-5 inline-flex" /> Conversation
 > <p className="text-muted-foreground">Components to display chat conversations and messages</p>
 

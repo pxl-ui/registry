@@ -7,6 +7,7 @@
     "registry/colors/pxl/registry.json",
     "registry/displays/pxl/registry.json",
     "registry/features/pxl/calendar/registry.json",
+    "registry/features/pxl/clock/registry.json",
     "registry/features/pxl/conversation/registry.json",
     "registry/features/pxl/cookbook/registry.json",
     "registry/features/pxl/forecast/registry.json",

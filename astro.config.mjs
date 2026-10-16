@@ -264,6 +264,10 @@ export default defineConfig({
                 link: "/features/",
               },
               {
+                label: "Clock",
+                items: [{ autogenerate: { directory: "features/clock" } }],
+              },
+              {
                 label: "Conversation",
                 items: [
                   { autogenerate: { directory: "features/conversation" } },
