@@ -17,24 +17,24 @@ const digitalCountdownVariants = cva(
   {
     variants: {
       variant: {
-        default: "**:data-[slot=clock-display]:bg-muted text-foreground pixel-color-border [--clock-pusher-background:var(--background)] [--clock-pusher-border:var(--border)]",
+        default:
+          "**:data-[slot=clock-display]:bg-muted text-foreground pixel-color-border [--clock-pusher-background:var(--background)] [--clock-pusher-border:var(--border)]",
         primary:
           "**:data-[slot=clock-display]:bg-primary text-primary-foreground pixel-color-primary-foreground [--clock-pusher-background:var(--primary)] [--clock-pusher-border:var(--primary-foreground)]",
         secondary:
           "**:data-[slot=clock-display]:bg-secondary text-secondary-foreground pixel-color-secondary-foreground [--clock-pusher-background:var(--secondary)] [--clock-pusher-border:var(--secondary-foreground)]",
-        info:
-          "**:data-[slot=clock-display]:bg-info text-info-foreground pixel-color-info-foreground [--clock-pusher-background:var(--info)] [--clock-pusher-border:var(--info-foreground)]",
+        info: "**:data-[slot=clock-display]:bg-info text-info-foreground pixel-color-info-foreground [--clock-pusher-background:var(--info)] [--clock-pusher-border:var(--info-foreground)]",
         success:
           "**:data-[slot=clock-display]:bg-success text-success-foreground pixel-color-success-foreground [--clock-pusher-background:var(--success)] [--clock-pusher-border:var(--success-foreground)]",
         warning:
           "**:data-[slot=clock-display]:bg-warning text-warning-foreground pixel-color-warning-foreground [--clock-pusher-background:var(--warning)] [--clock-pusher-border:var(--warning-foreground)]",
         danger:
           "**:data-[slot=clock-display]:bg-danger text-danger-foreground pixel-color-danger-foreground [--clock-pusher-background:var(--danger)] [--clock-pusher-border:var(--danger-foreground)]",
-        
-        },
+      },
       size: {
         sm: "w-38 text-xs [--clock-digit:1.25rem] **:data-[slot=clock-display]:h-13 **:data-[slot=clock-pusher]:w-4",
-        default: "w-60 [--clock-digit:2.25rem] **:data-[slot=clock-display]:h-17 **:data-[slot=clock-pusher]:w-6",
+        default:
+          "w-60 [--clock-digit:2.25rem] **:data-[slot=clock-display]:h-17 **:data-[slot=clock-pusher]:w-6",
         md: "w-60 [--clock-digit:2.25rem] **:data-[slot=clock-display]:h-17  **:data-[slot=clock-pusher]:w-6",
         lg: "w-72 text-base [--clock-digit:2.5rem] **:data-[slot=clock-display]:h-20 **:data-[slot=clock-pusher]:w-8",
       },
@@ -147,7 +147,6 @@ function DigitalCountdown({
     .join(":");
   return (
     <div
-      {...props}
       data-slot="digital-countdown"
       data-variant={variant}
       data-size={size}
@@ -165,6 +164,7 @@ function DigitalCountdown({
         digitalCountdownVariants({ font, variant, size, border }),
         className,
       )}
+      {...props}
     >
       <div
         data-slot="clock-controls"
@@ -210,8 +210,7 @@ function DigitalCountdown({
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent_0px,transparent_3px,currentColor_4px)] opacity-[0.04]"
         />
-        <span 
-          className="relative leading-none tracking-wider text-(length:--clock-digit)">
+        <span className="relative leading-none tracking-wider text-(length:--clock-digit)">
           {display}
         </span>
       </div>

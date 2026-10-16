@@ -71,7 +71,6 @@ function AnalogStopwatch({
     disabled?: boolean;
     labels?: Partial<{ start: string; pause: string; reset: string }>;
     onLap?: (elapsedSeconds: number) => void;
-    labelsLap?: string;
   }) {
   const labels = {
     lap: "Lap",

@@ -104,6 +104,42 @@
           "target": "@components/features/pxl/clock/digital-countdown.tsx"
         }
       ]
+    },
+    {
+      "name": "clock/digital-pomodoro",
+      "type": "registry:component",
+      "title": "Digital Pomodoro",
+      "description": "A minimal digital pomodoro.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "digital-pomodoro.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/digital-pomodoro.tsx"
+        }
+      ]
+    },
+    {
+      "name": "clock/digital-stopwatch",
+      "type": "registry:component",
+      "title": "Digital Stopwatch",
+      "description": "A minimal digital stopwatch.",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/button"
+      ],
+      "files": [
+        {
+          "path": "digital-stopwatch.tsx",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/digital-stopwatch.tsx"
+        }
+      ]
     }
   ]
 }

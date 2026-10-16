@@ -1,0 +1,34 @@
+---
+title: Digital Stopwatch
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="clock/digital-stopwatch" />
+
+## Installation
+
+<Install item="clock/digital-stopwatch" />
+
+## Usage
+
+```tsx
+import { DigitalStopwatch } from "@/components/features/pxl/clock/digital-stopwatch";
+```
+
+```tsx
+<DigitalStopwatch  />
+```
+
+## API Reference
+
+### DigitalStopwatch
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `sm \| default \| md \| lg` | Case and display size. |
+| `variant` | `default \| primary \| secondary \| outline` | Semantic case colors. |
+| `border` | `solid \| rounded \| none` | Beveled, outlined, stepped or plain case. |
+| `className` | `string` | Root customization. |
+| `autoStart` | `boolean` | Start on mount; default `false`. |
+| `disabled` | `boolean` | Freeze time and disable controls. |
+| `onLap` | `(seconds: number) => void` | Enables the Lap button; receives exact elapsed seconds. |

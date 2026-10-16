@@ -1,0 +1,39 @@
+---
+title: Digital Pomodoro
+---
+import { ComponentPreview, Install } from "~/components";
+
+<ComponentPreview item="clock/digital-pomodoro" />
+
+## Installation
+
+<Install item="clock/digital-pomodoro" />
+
+## Usage
+
+```tsx
+import { DigitalPomodoro } from "@/components/features/pxl/clock/digital-pomodoro";
+```
+
+```tsx
+<DigitalPomodoro focusDuration={60} shortBreakDuration={15} longBreakDuration={30} />
+```
+
+## API Reference
+
+### DigitalPomodoro
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `sm \| default \| md \| lg` | Case and display size. |
+| `variant` | `default \| primary \| secondary \| outline` | Semantic case colors. |
+| `border` | `solid \| rounded \| none` | Beveled, outlined, stepped or plain case. |
+| `className` | `string` | Root customization. |
+| `autoStart` | `boolean` | Start on mount; default `false`. |
+| `disabled` | `boolean` | Freeze time and disable controls. |
+| `focusDuration` | `number` | Seconds; default `1500`. |
+| `shortBreakDuration` | `number` | Seconds; default `300`. |
+| `longBreakDuration` | `number` | Seconds; default `900`. |
+| `sessionsBeforeLongBreak` | `number` | Focus sessions per long break; default `4`. |
+| `autoAdvance` | `boolean` | Start the next phase automatically; default `false`. |
+| `onPhaseChange` | `(phase, completedSessions) => void` | Called on completion, Skip and Reset. |
