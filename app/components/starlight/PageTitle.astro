@@ -45,14 +45,14 @@ const { prev, next } = pagination;
         <PageTitleActions client:load entry={Astro.locals.starlightRoute.entry} />
       </div>
       <div class="ml-auto flex gap-2">
-        {prev ? (
+        {prev && (
           <a href={prev.href} rel="prev" class={cn(buttonVariants({
             size: "icon",
             variant: "secondary",
           }), "md:size-7")}>
             <Icon name="left-arrow" />
           </a>
-        ) : <p></p>}
+        )}
         {next && (
           <a href={next.href} rel="next" class={cn(buttonVariants({
             size: "icon",

@@ -19,20 +19,14 @@ export default function FlagPreview({ pack: packName }: { pack: string }) {
             <div
               className="grid gap-x-2 gap-y-1 w-full max-h-72
           grid-cols-[auto_auto_auto]
-          sm:grid-cols-[auto_1fr_auto_auto_auto_auto]"
+          sm:grid-cols-[1fr_auto_auto_auto]"
             >
               {/* Header row */}
-              <div className="hidden sm:block px-1 font-mono font-normal text-muted-foreground">
-                Code
-              </div>
               <div className="hidden sm:block px-1 font-mono font-normal text-muted-foreground">
                 Label
               </div>
               <div className="px-1 font-mono font-normal text-muted-foreground">
                 ALPHA2
-              </div>
-              <div className="hidden sm:block px-1 font-mono font-normal text-muted-foreground">
-                ALPHA3
               </div>
               {variantKeys.map((v) => (
                 <div
@@ -48,17 +42,11 @@ export default function FlagPreview({ pack: packName }: { pack: string }) {
                   key={idx.toString()}
                   className="contents group text-muted-foreground hover:text-foreground"
                 >
-                  <div className="hidden sm:flex px-1 font-mono font-normal items-center min-w-0">
-                    #{countries.get(k)?.id.toString().padStart(3, "0")}
-                  </div>
                   <div className="hidden sm:flex px-1 font-normal truncate items-center min-w-0">
                     {countries.get(k)?.title}
                   </div>
                   <div className="flex px-1 font-normal truncate items-center min-w-0">
                     {countries.get(k)?.alpha2}
-                  </div>
-                  <div className="hidden sm:flex px-1 font-normal truncate items-center min-w-0">
-                    {countries.get(k)?.alpha3}
                   </div>
                   {variantKeys.map((v) => (
                     <div key={v} className="px-1 font-normal flex items-center">

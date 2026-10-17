@@ -471,7 +471,7 @@ function Callout({
   const Icon = IconOverride ?? (variant ? CalloutIcon[variant] : undefined);
   const calloutTitle =
     title ??
-    (variant ? variant.charAt(0).toUpperCase() + variant.slice(1) : undefined);
+    (variant && variant !== "default" ? variant.charAt(0).toUpperCase() + variant.slice(1) : undefined);
 
   if (collapsible) {
     return (
