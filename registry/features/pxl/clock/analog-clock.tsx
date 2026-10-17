@@ -2,7 +2,9 @@
 
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
-import { type ComponentProps, useEffect, useState } from "react";
+import type { ComponentProps } from "react";
+
+import { useClock } from "@/components/features/pxl/clock/hooks/use-clock";
 
 const DIAL_MARKS = Array.from({ length: 60 }, (_, index) => index * 6);
 
@@ -70,37 +72,7 @@ function AnalogClock({
     timeZone?: string;
     showSeconds?: boolean;
   }) {
-  // The initial placeholder is deterministic on both the server and client.
-  const [now, setNow] = useState<number | null>(null);
-
-  useEffect(() => {
-    if (value !== undefined) return;
-    const update = () => setNow(Date.now());
-    update();
-    const interval = window.setInterval(update, 1000);
-    return () => window.clearInterval(interval);
-  }, [value]);
-
-  const date =
-    value === undefined
-      ? now === null
-        ? null
-        : new Date(now)
-      : new Date(value);
-  const valid = date !== null && Number.isFinite(date.getTime());
-  const formatter = new Intl.DateTimeFormat("en-GB", {
-    timeZone,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hourCycle: "h23",
-  });
-  const parts = valid ? formatter.formatToParts(date) : [];
-  const part = (type: Intl.DateTimeFormatPartTypes) =>
-    Number(parts.find((p) => p.type === type)?.value ?? 0);
-  const hours = part("hour"),
-    minutes = part("minute"),
-    seconds = part("second");
+  const { hours, minutes, seconds } = useClock({ value, timeZone });
 
   return (
     <div
@@ -108,7 +80,10 @@ function AnalogClock({
       data-variant={variant}
       data-size={size}
       data-border={border}
-      className={cn(analogClockVariants({ font, variant, size, border }), className)}
+      className={cn(
+        analogClockVariants({ font, variant, size, border }),
+        className,
+      )}
       {...props}
     >
       <svg
@@ -136,11 +111,7 @@ function AnalogClock({
             transform={`rotate(${angle},50,50)`}
           />
         ))}
-        <g
-          fill="currentColor"
-          fontSize="7"
-          textAnchor="middle"
-        >
+        <g fill="currentColor" fontSize="7" textAnchor="middle">
           <text x="50" y="23">
             12
           </text>

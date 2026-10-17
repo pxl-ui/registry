@@ -10,6 +10,9 @@
       "description": "A minimal analog clock.",
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-clock"
+      ],
       "files": [
         {
           "path": "analog-clock.tsx",
@@ -26,6 +29,7 @@
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-countdown",
         "pxl-ui/registry/button"
       ],
       "files": [
@@ -44,6 +48,7 @@
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-pomodoro",
         "pxl-ui/registry/button"
       ],
       "files": [
@@ -62,6 +67,7 @@
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-stopwatch",
         "pxl-ui/registry/button"
       ],
       "files": [
@@ -79,6 +85,9 @@
       "description": "A minimal digital clock.",
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
+      "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-clock"
+      ],
       "files": [
         {
           "path": "digital-clock.tsx",
@@ -95,6 +104,7 @@
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-countdown",
         "pxl-ui/registry/button"
       ],
       "files": [
@@ -113,6 +123,7 @@
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-pomodoro",
         "pxl-ui/registry/button"
       ],
       "files": [
@@ -131,6 +142,7 @@
       "categories": ["pxl-ui", "features", "clock"],
       "dependencies": ["class-variance-authority", "cn"],
       "registryDependencies": [
+        "pxl-ui/registry/clock/hooks/use-stopwatch",
         "pxl-ui/registry/button"
       ],
       "files": [
@@ -138,6 +150,66 @@
           "path": "digital-stopwatch.tsx",
           "type": "registry:component",
           "target": "@components/features/pxl/clock/digital-stopwatch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "clock/hooks/use-clock",
+      "type": "registry:hook",
+      "title": "useClock",
+      "description": "React hook to control clocks",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "hooks/use-clock.ts",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/hooks/use-clock.ts"
+        }
+      ]
+    },
+    {
+      "name": "clock/hooks/use-countdown",
+      "type": "registry:hook",
+      "title": "useCountdown",
+      "description": "React hook to control countdowns",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "hooks/use-countdown.ts",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/hooks/use-countdown.ts"
+        }
+      ]
+    },
+    {
+      "name": "clock/hooks/use-pomodoro",
+      "type": "registry:hook",
+      "title": "usePomodoro",
+      "description": "React hook to control pomodoros",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "hooks/use-pomodoro.ts",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/hooks/use-pomodoro.ts"
+        }
+      ]
+    },
+    {
+      "name": "clock/hooks/use-stopwatch",
+      "type": "registry:hook",
+      "title": "useStopwatch",
+      "description": "React hook to control stopwatches",
+      "categories": ["pxl-ui", "features", "clock"],
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [
+        {
+          "path": "hooks/use-stopwatch.ts",
+          "type": "registry:component",
+          "target": "@components/features/pxl/clock/hooks/use-stopwatch.ts"
         }
       ]
     }

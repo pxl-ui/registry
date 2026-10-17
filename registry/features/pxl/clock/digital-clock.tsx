@@ -2,7 +2,9 @@
 
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
-import { type ComponentProps, useEffect, useState } from "react";
+import type { ComponentProps } from "react";
+
+import { useClock } from "@/components/features/pxl/clock/hooks/use-clock";
 
 const digitalClockVariants = cva(
   "relative inline-flex max-w-full shrink-0 flex-col items-center gap-3 p-4 text-sm tabular-nums",
@@ -10,11 +12,15 @@ const digitalClockVariants = cva(
     variants: {
       variant: {
         default: "bg-muted text-foreground pixel-color-border",
-        primary: "bg-primary text-primary-foreground pixel-color-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground pixel-color-secondary-foreground",
+        primary:
+          "bg-primary text-primary-foreground pixel-color-primary-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground pixel-color-secondary-foreground",
         info: "bg-info text-info-foreground pixel-color-info-foreground",
-        success: "bg-success text-success-foreground pixel-color-success-foreground",
-        warning: "bg-warning text-warning-foreground pixel-color-warning-foreground",
+        success:
+          "bg-success text-success-foreground pixel-color-success-foreground",
+        warning:
+          "bg-warning text-warning-foreground pixel-color-warning-foreground",
         danger: "bg-danger text-info-foreground pixel-color-info-foreground",
       },
       size: {
@@ -64,30 +70,8 @@ function DigitalClock({
     showSeconds?: boolean;
     hour12?: boolean;
   }) {
-  // The initial placeholder is deterministic on both the server and client.
-  const [now, setNow] = useState<number | null>(null);
-  useEffect(() => {
-    if (value !== undefined) return;
-    const update = () => setNow(Date.now());
-    update();
-    const interval = window.setInterval(update, 1000);
-    return () => window.clearInterval(interval);
-  }, [value]);
-  const date =
-    value === undefined
-      ? now === null
-        ? null
-        : new Date(now)
-      : new Date(value);
-  const valid = date !== null && Number.isFinite(date.getTime());
-  const formatter = new Intl.DateTimeFormat("en-GB", {
-    timeZone,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hourCycle: "h23",
-  });
-  const description = valid ? formatter.format(date) : "--:--:--";
+  const { date, description, valid } = useClock({ value, timeZone });
+
   const display = valid
     ? new Intl.DateTimeFormat("en-US", {
         timeZone,
@@ -95,7 +79,7 @@ function DigitalClock({
         minute: "2-digit",
         ...(showSeconds ? { second: "2-digit" } : {}),
         hour12,
-      }).format(date)
+      }).format(date as Date)
     : showSeconds
       ? "--:--:--"
       : "--:--";
@@ -121,7 +105,7 @@ function DigitalClock({
       </span>
       <time
         data-slot="clock-time"
-        dateTime={valid ? date.toISOString() : undefined}
+        dateTime={valid ? date?.toISOString() : undefined}
         className="sr-only"
       >
         {description}
