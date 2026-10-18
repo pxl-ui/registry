@@ -196,21 +196,26 @@ function DopamineMenuItemTime({
       }
 
       const price = menuItem.offers.price;
-      const currency = menuItem.offers.priceCurrency;
+      const durationKey = menuItem.offers.priceCurrency ?? "minutes";
 
-      const amount = typeof price === "number" ? price : Number(price);
+      let placeholded = false;
+      let amount = typeof price === "number" ? price : Number(price);
 
       if (!Number.isFinite(amount)) {
-        return null;
+        placeholded = true;
+        amount = 2; // Placeholder in case amount is not a number (ie. ranges "1-2")
       }
 
-      const durationKey = currency || "minutes";
       const durationObj = { [durationKey]: amount };
 
       try {
-        return new Intl.DurationFormat(locale, {
+        const formatted = new Intl.DurationFormat(locale, {
           style: "short",
         }).format(durationObj);
+
+        return placeholded
+          ? formatted.replace(amount.toString(), price.toString())
+          : formatted;
       } catch {
         return `${amount} ${durationKey}`;
       }
@@ -222,9 +227,7 @@ function DopamineMenuItemTime({
     return null;
   }
 
-  return (
-    <BaseDopamineMenuItemTime {...props}>{time}</BaseDopamineMenuItemTime>
-  );
+  return <BaseDopamineMenuItemTime {...props}>{time}</BaseDopamineMenuItemTime>;
 }
 
 export {
