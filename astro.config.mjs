@@ -914,10 +914,8 @@ export default defineConfig({
         "react",
         "react-dom",
         "react-dom/client",
-        "lucide-react",
-        "clsx",
-        "tailwind-merge",
         "class-variance-authority",
+        "cn"
       ],
       exclude: [
         "maplibre-gl",
