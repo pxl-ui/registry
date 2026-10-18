@@ -8,8 +8,15 @@ import { NodeCommand } from '~/components';
 
 This repository is a [Shadcn GitHub Registry](https://ui.shadcn.com/docs/registry/github) so you can use the shadcn client to install it's components.
 
+To see everything available on this registry run:
+
 <NodeCommand client:load
   command="shadcn@latest list pxl-ui/registry" />
+
+To install a button component run:
+
+<NodeCommand client:load
+  command="shadcn@latest add pxl-ui/registry/button" />
 
 ## Scaffolding a new project
 
@@ -20,4 +27,6 @@ Use the CLI to scaffold a new project directly from the terminal:
 
 Supported templates: `next`, `vite`, `start`, `react-router`, and `astro`.
 
-For Laravel, create the app first with `laravel new`, then run `npx shadcn@latest init`.
+> For Laravel, create the app first with `laravel new`, then run `npx shadcn@latest init`.
+
+Then, you can safely install any component from the registry.
