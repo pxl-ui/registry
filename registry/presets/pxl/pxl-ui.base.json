@@ -6,7 +6,7 @@
   "description": "PXL-UI Base",
   "categories": ["pxl-ui"],
   "config": {
-    "style": "pxl-ui"
+    "style": "base-lyra"
   },
   "dependencies": [
     "@base-ui/react",
