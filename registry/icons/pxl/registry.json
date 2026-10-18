@@ -87,9 +87,9 @@
           "target": "@components/icons/pxl/terrabandiere/spain.tsx"
         },
         {
-          "path": "terrabandiere/index.tsx",
+          "path": "terrabandiere/index.ts",
           "type": "registry:component",
-          "target": "@components/icons/pxl/terrabandiere/index.tsx"
+          "target": "@components/icons/pxl/terrabandiere/index.ts"
         }
       ]
     }

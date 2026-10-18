@@ -270,7 +270,7 @@
       ],
       "files": [
         {
-          "path": "extensions/drag-drop-past.ts",
+          "path": "extensions/drag-drop-paste.ts",
           "type": "registry:file",
           "target": "@ui/pxl/rich-text-editor/extensions/drag-drop-paste.ts"
         }
@@ -1611,9 +1611,9 @@
           "target": "@ui/pxl/rich-text-editor/plugins/toolbar/color-toolbar-plugin.tsx"
         },
         {
-          "path": "plugins/toolbar/element-toolbar-plugin.tsx",
+          "path": "plugins/toolbar/element-format-toolbar-plugin.tsx",
           "type": "registry:file",
-          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/element-toolbar-plugin.tsx"
+          "target": "@ui/pxl/rich-text-editor/plugins/toolbar/element-format-toolbar-plugin.tsx"
         },
         {
           "path": "plugins/toolbar/find-replace-toolbar-plugin.tsx",
