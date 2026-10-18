@@ -8,7 +8,7 @@
       "type": "registry:style",
       "title": "Pixelarticons Mouse Cursors",
       "description": "Mouse cursors powered by pixelarticons",
-      "docs": "Download cursor png assets from https://pixelarticons.com/free/svg-cursors/",
+      "docs": "Download PixelartIcons cursor png assets from https://pixelarticons.com/free/svg-cursors/",
       "author": "Gerrit Halfmann (https://x.com/halfmage)",
       "categories": ["pxl-ui", "icons", "cursors"],
       "registryDependencies": [

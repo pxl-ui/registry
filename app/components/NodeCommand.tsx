@@ -109,7 +109,7 @@ export default function NodeCommad({
           <CardContent className="px-4 py-3.5">
             {tabs.map(({ label, template }, idx) => (
               <TabsContent key={label} value={idx}>
-                <pre className="font-mono" key={label}>
+                <pre className="font-mono overflow-y-auto scrollbar-thin scrollbar-thumb-border" key={label}>
                   {template.replace("{cmd}", command)}
                 </pre>
               </TabsContent>

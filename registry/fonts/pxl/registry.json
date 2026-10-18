@@ -8,7 +8,7 @@
       "type": "registry:style",
       "title": "Able 5",
       "description": "A tiny font that supports hundreds of languages!",
-      "docs": "Download font from https://stormgold.itch.io/able-font",
+      "docs": "Download Able 5 font from https://stormgold.itch.io/able-font",
       "author": "stormgold (https://stormgold.itch.io/)",
       "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
@@ -436,7 +436,7 @@
       "type": "registry:style",
       "title": "Illusion Book",
       "description": "Illusion Book is a pixel typeface based on the size of 12*12 px. The design concept of the font is to show the elegance of serifs in pixel style, while also being highly readable and suitable for large blocks of text.",
-      "docs": "Download font from https://steven-liu.itch.io/illusion-book",
+      "docs": "Download Illusion Book font from https://steven-liu.itch.io/illusion-book",
       "author": "Steven Liu (https://steven-liu.itch.io)",
       "categories": ["pxl-ui", "font-family", "font-serif"],
       "meta": {
@@ -508,7 +508,7 @@
       "type": "registry:style",
       "title": "Lieben Cloude",
       "description": "Cute and [squary] typeface",
-      "docs": "Download font from https://rmocci.itch.io/cloude",
+      "docs": "Download Lieben Cloude font from https://rmocci.itch.io/cloude",
       "author": "Roberto Mocci (https://rmocci.itch.io/)",
       "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {
@@ -633,7 +633,7 @@
       "title": "Monogram",
       "description": "Elegant monospace pixel font",
       "author": "datagoblin (https://datagoblin.itch.io/)",
-      "docs": "Download font from https://datagoblin.itch.io/monogram",
+      "docs": "Download Monogram font from https://datagoblin.itch.io/monogram",
       "categories": ["pxl-ui", "font-family", "font-mono"],
       "meta": {
         "order": 1
@@ -685,7 +685,7 @@
       "type": "registry:style",
       "title": "Not Jam Blackletter 16",
       "description": "Not Jam Blackletter 16 is a 16px height blackletter font, perfect for old manuscripts, religious tomes or other antique texts.",
-      "docs": "Download font from https://not-jam.itch.io/not-jam-blackletter-13",
+      "docs": "Download Not Jam Blackletter 16 font from https://not-jam.itch.io/not-jam-blackletter-13",
       "author": "Not Jam (https://not-jam.itch.io)",
       "categories": ["pxl-ui", "font-family", "font-heading"],
       "meta": {
@@ -713,7 +713,7 @@
       "type": "registry:style",
       "title": "Pixel Digivolve",
       "description": "A simple ‘faux pixel’ face based loosely on the title logo from the classic “Digimon” series.",
-      "docs": "Download font from https://www.dafont.com/es/pixel-digivolve.font",
+      "docs": "Download Pixel Digivolve font from https://www.dafont.com/es/pixel-digivolve.font",
       "author": "Neale Davidson (https://www.pixelsagas.com/?download=pixel-digivolve)",
       "categories": ["pxl-ui", "font-family", "font-heading"],
       "meta": {
@@ -882,7 +882,7 @@
       "type": "registry:style",
       "title": "Quanta Strike",
       "description": "A modern pixel typeface. Each size drawn by hand. Non-integer scaling ruins pixels. Each strike is its own design for one target size.",
-      "docs": "Download font from https://github.com/dithernaut/quanta-strike",
+      "docs": "Download Quanta Strike font from https://github.com/dithernaut/quanta-strike",
       "author": "dithernaut (https://dithernaut.com/posts/pixel-scaling/)",
       "categories": ["pxl-ui", "font-family", "font-sans"],
       "meta": {

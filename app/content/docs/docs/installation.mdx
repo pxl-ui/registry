@@ -10,3 +10,14 @@ This repository is a [Shadcn GitHub Registry](https://ui.shadcn.com/docs/registr
 
 <NodeCommand client:load
   command="shadcn@latest list pxl-ui/registry" />
+
+## Scaffolding a new project
+
+Use the CLI to scaffold a new project directly from the terminal:
+
+<NodeCommand client:load
+  command="shadcn@latest init https://raw.githubusercontent.com/pxl-ui/registry/refs/heads/main/registry/presets/pxl/pxl-ui.base.json -t [framework]" />
+
+Supported templates: `next`, `vite`, `start`, `react-router`, and `astro`.
+
+For Laravel, create the app first with `laravel new`, then run `npx shadcn@latest init`.

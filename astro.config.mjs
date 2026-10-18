@@ -90,137 +90,8 @@ export default defineConfig({
                 link: "/docs/installation",
               },
               {
-                label: "Recipes",
-                items: [{ autogenerate: { directory: "recipes" } }],
-              },
-              {
                 label: "Additional Resources",
                 link: "/docs/additional-resources",
-              },
-            ],
-          },
-          {
-            label: "Utilities",
-            link: "/utilities/pixels",
-            items: [
-              { autogenerate: { directory: "utilities" } },
-              {
-                label: "Schemas",
-                items: [
-                  {
-                    label: "Introduction",
-                    link: "/schemas",
-                  },
-                  {
-                    label: "Generalistic",
-                    collapsed: true,
-                    items: [
-                      { label: "JSON Schema", link: "/schemas/json-schema" },
-                      { label: "Schema.org", link: "/schemas/schemaorg" }
-                    ],
-                  },
-                  {
-                    label: "Codebase",
-                    collapsed: true,
-                    items: [
-                      { label: "Changelog", link: "/schemas/changelog" },
-                      { label: "Conventional Commit", link: "/schemas/conventional-commit" }
-                    ],
-                  },
-                  {
-                    label: "Bookmarks",
-                    collapsed: true,
-                    items: [
-                      { label: "Chromium", link: "/schemas/chromium" },
-                      { label: "oEmbed", link: "/schemas/oembed" },
-                      { label: "Readium", link: "/schemas/readium" },
-                      { label: "W3C", link: "/schemas/w3c" },
-                    ],
-                  },
-                  {
-                    label: "Events",
-                    collapsed: true,
-                    items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
-                  },
-                  {
-                    label: "Mails",
-                    collapsed: true,
-                    items: [
-                      { label: "ImapFlow", link: "/schemas/imapflow" },
-                      { label: "MailParser", link: "/schemas/mailparser" },
-                    ],
-                  },
-                  {
-                    label: "Maps",
-                    collapsed: true,
-                    items: [
-                      {
-                        label: "OpenStreetMap",
-                        link: "/schemas/openstreetmap",
-                      },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "Displays",
-                items: [
-                  {
-                    label: "Introduction",
-                    link: "/displays",
-                  },
-                  {
-                    label: "Mocks",
-                    collapsed: true,
-                    items: [
-                      {
-                        label: "Android",
-                        link: "/displays/mocks/android",
-                      },
-                      {
-                        label: "Iphone",
-                        link: "/displays/mocks/iphone",
-                      },
-                      {
-                        label: "Safari",
-                        link: "/displays/mocks/safari",
-                      },
-                      {
-                        label: "ESP32-S3 1.54″",
-                        link: "/displays/mocks/esp32-s3-154",
-                      },
-                    ],
-                  },
-                  {
-                    label: "Widgets",
-                    collapsed: true,
-                    items: [
-                      { autogenerate: { directory: "displays/widgets" } },
-                    ],
-                  },
-                  {
-                    label: "Embedded Systems",
-                    collapsed: true,
-                    items: [
-                      { autogenerate: { directory: "displays/embedded" } },
-                    ],
-                  },
-                  {
-                    label: "High-definition",
-                    collapsed: true,
-                    items: [{ autogenerate: { directory: "displays/hd" } }],
-                  },
-                  {
-                    label: "Video Graphics Array",
-                    collapsed: true,
-                    items: [{ autogenerate: { directory: "displays/vga" } }],
-                  },
-                  {
-                    label: "Extended Graphics Array",
-                    collapsed: true,
-                    items: [{ autogenerate: { directory: "displays/xga" } }],
-                  },
-                ],
               },
             ],
           },
@@ -876,6 +747,131 @@ export default defineConfig({
                         link: "/backgrounds/glyph-matrix",
                       },
                     ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            label: "Utilities",
+            link: "/utilities/pixels",
+            items: [
+              { autogenerate: { directory: "utilities" } },
+              {
+                label: "Schemas",
+                items: [
+                  {
+                    label: "Introduction",
+                    link: "/schemas",
+                  },
+                  {
+                    label: "Generalistic",
+                    collapsed: true,
+                    items: [
+                      { label: "JSON Schema", link: "/schemas/json-schema" },
+                      { label: "Schema.org", link: "/schemas/schemaorg" }
+                    ],
+                  },
+                  {
+                    label: "Codebase",
+                    collapsed: true,
+                    items: [
+                      { label: "Changelog", link: "/schemas/changelog" },
+                      { label: "Conventional Commit", link: "/schemas/conventional-commit" }
+                    ],
+                  },
+                  {
+                    label: "Bookmarks",
+                    collapsed: true,
+                    items: [
+                      { label: "Chromium", link: "/schemas/chromium" },
+                      { label: "oEmbed", link: "/schemas/oembed" },
+                      { label: "Readium", link: "/schemas/readium" },
+                      { label: "W3C", link: "/schemas/w3c" },
+                    ],
+                  },
+                  {
+                    label: "Events",
+                    collapsed: true,
+                    items: [{ label: "GCalendar", link: "/schemas/gcalendar" }],
+                  },
+                  {
+                    label: "Mails",
+                    collapsed: true,
+                    items: [
+                      { label: "ImapFlow", link: "/schemas/imapflow" },
+                      { label: "MailParser", link: "/schemas/mailparser" },
+                    ],
+                  },
+                  {
+                    label: "Maps",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "OpenStreetMap",
+                        link: "/schemas/openstreetmap",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "Displays",
+                items: [
+                  {
+                    label: "Introduction",
+                    link: "/displays",
+                  },
+                  {
+                    label: "Mocks",
+                    collapsed: true,
+                    items: [
+                      {
+                        label: "Android",
+                        link: "/displays/mocks/android",
+                      },
+                      {
+                        label: "Iphone",
+                        link: "/displays/mocks/iphone",
+                      },
+                      {
+                        label: "Safari",
+                        link: "/displays/mocks/safari",
+                      },
+                      {
+                        label: "ESP32-S3 1.54″",
+                        link: "/displays/mocks/esp32-s3-154",
+                      },
+                    ],
+                  },
+                  {
+                    label: "Widgets",
+                    collapsed: true,
+                    items: [
+                      { autogenerate: { directory: "displays/widgets" } },
+                    ],
+                  },
+                  {
+                    label: "Embedded Systems",
+                    collapsed: true,
+                    items: [
+                      { autogenerate: { directory: "displays/embedded" } },
+                    ],
+                  },
+                  {
+                    label: "High-definition",
+                    collapsed: true,
+                    items: [{ autogenerate: { directory: "displays/hd" } }],
+                  },
+                  {
+                    label: "Video Graphics Array",
+                    collapsed: true,
+                    items: [{ autogenerate: { directory: "displays/vga" } }],
+                  },
+                  {
+                    label: "Extended Graphics Array",
+                    collapsed: true,
+                    items: [{ autogenerate: { directory: "displays/xga" } }],
                   },
                 ],
               },
