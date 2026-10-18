@@ -1,16 +1,29 @@
+
+/**
+  @deprecated use display-w-* instead
+**/
 @utility widget-w-* {
   --widget-width: --value(--widget-width-*, [length], [*]);
 }
 
+/**
+  @deprecated use display-h-* instead
+**/
 @utility widget-h-* {
   --widget-height: --value(--widget-height-*, [length], [*]);
 }
 
+/**
+  @deprecated use display-size-* instead
+**/
 @utility widget-size-* {
   --widget-width: --value(--widget-width-*, [length], [*]);
   --widget-height: --value(--widget-height-*, [length], [*]);
 }
 
+/**
+  @deprecated use display instead
+**/
 @utility widget {
   --w-width: var(--widget-width, var(--widget-width-sm));
   --w-height: var(--widget-height, var(--widget-height-sm));

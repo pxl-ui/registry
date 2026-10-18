@@ -9,19 +9,19 @@
       "title": "Styles",
       "description": "TailwindCSS core styles for pxl-ui",
       "registryDependencies": [
-        "pxl-ui/registry/icons-pixelarticons-cursors",
-        "pxl-ui/registry/fonts-pixel-digivolve",
-        "pxl-ui/registry/fonts-able-5",
-        "pxl-ui/registry/fonts-monogram",
-        "pxl-ui/registry/styles-animations",
-        "pxl-ui/registry/styles-colors",
-        "pxl-ui/registry/styles-cursors",
-        "pxl-ui/registry/styles-filters",
-        "pxl-ui/registry/styles-gradients",
-        "pxl-ui/registry/styles-pixels",
-        "pxl-ui/registry/styles-sprites",
-        "pxl-ui/registry/styles-texts",
-        "pxl-ui/registry/styles-widgets"
+        "pxl-ui/registry/icons/pixelarticons-cursors",
+        "pxl-ui/registry/fonts/pixel-digivolve",
+        "pxl-ui/registry/fonts/able-5",
+        "pxl-ui/registry/fonts/monogram",
+        "pxl-ui/registry/styles/animations",
+        "pxl-ui/registry/styles/colors",
+        "pxl-ui/registry/styles/cursors",
+        "pxl-ui/registry/styles/filters",
+        "pxl-ui/registry/styles/gradients",
+        "pxl-ui/registry/styles/pixels",
+        "pxl-ui/registry/styles/sprites",
+        "pxl-ui/registry/styles/texts",
+        "pxl-ui/registry/styles/widgets"
       ],
       "cssVars": {
         "theme": {
@@ -98,7 +98,7 @@
       }
     },
     {
-      "name": "styles-animations",
+      "name": "styles/animations",
       "type": "registry:style",
       "title": "Animation Styles",
       "description": "Keyframe based CSS animations",
@@ -122,7 +122,7 @@
       }
     },
     {
-      "name": "styles-colors",
+      "name": "styles/colors",
       "type": "registry:style",
       "title": "Color Variants",
       "description": "Color variants to express intentionality inspired by Bootstrap",
@@ -166,7 +166,7 @@
       }
     },
     {
-      "name": "styles-cursors",
+      "name": "styles/cursors",
       "type": "registry:style",
       "title": "Mouse Cursors",
       "description": "Custom mouse cursor utilities",
@@ -183,7 +183,7 @@
       }
     },
     {
-      "name": "styles-filters",
+      "name": "styles/filters",
       "type": "registry:style",
       "title": "Screen Filters Styles",
       "description": "Custom screen filter styles",
@@ -200,7 +200,7 @@
       }
     },
     {
-      "name": "styles-keyboard",
+      "name": "styles/keyboard",
       "type": "registry:style",
       "title": "Keyboard Styles",
       "description": "Custom keyboard styles",
@@ -217,7 +217,7 @@
       }
     },
     {
-      "name": "styles-gradients",
+      "name": "styles/gradients",
       "type": "registry:style",
       "title": "Color Gradients",
       "description": "Predefined gradients inspired by videogame indicators",
@@ -236,7 +236,7 @@
       }
     },
     {
-      "name": "styles-pixels",
+      "name": "styles/pixels",
       "type": "registry:style",
       "title": "Pixel Styles",
       "description": "Custom pixel-based text and border styles",
@@ -261,7 +261,7 @@
       }
     },
     {
-      "name": "styles-sprites",
+      "name": "styles/sprites",
       "type": "registry:style",
       "title": "Sprite Styles",
       "description": "Sprite rendering utilities",
@@ -283,7 +283,7 @@
       }
     },
     {
-      "name": "styles-texts",
+      "name": "styles/texts",
       "type": "registry:style",
       "title": "Text Sizes",
       "description": "Text sizing override utilities",
@@ -303,7 +303,7 @@
       }
     },
     {
-      "name": "styles-typeset",
+      "name": "styles/typeset",
       "type": "registry:style",
       "title": "Typeset",
       "description": "A styling system for HTML and rendered markdown, from blog posts to streaming chat. One CSS file you own.",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "name": "styles-widgets",
+      "name": "styles/widgets",
       "type": "registry:style",
       "title": "Widget Sizes",
       "description": "Widget sizing utilities",

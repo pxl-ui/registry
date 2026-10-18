@@ -561,7 +561,7 @@
       ],
       "registryDependencies": [
         "pxl-ui/registry/button",
-        "pxl-ui/registry/styles-keyboard"
+        "pxl-ui/registry/styles/keyboard"
       ],
       "files": [
         {
@@ -610,7 +610,7 @@
       "registryDependencies": [
         "pxl-ui/registry/button",
         "pxl-ui/registry/dialog",
-        "pxl-ui/registry/styles-typeset"
+        "pxl-ui/registry/styles/typeset"
       ],
       "files": [
         {

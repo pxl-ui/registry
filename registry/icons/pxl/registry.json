@@ -12,7 +12,7 @@
       "author": "Gerrit Halfmann (https://x.com/halfmage)",
       "categories": ["pxl-ui", "icons", "cursors"],
       "registryDependencies": [
-        "pxl-ui/registry/styles-cursors"
+        "pxl-ui/registry/styles/cursors"
       ],
       "cssVars": {
         "theme": {
