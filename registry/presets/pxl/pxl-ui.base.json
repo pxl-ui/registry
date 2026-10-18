@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pxl-ui-base",
+  "type": "registry:base",
+  "title": "PXL-UI",
+  "description": "PXL-UI Base",
+  "categories": ["pxl-ui"],
+  "config": {
+    "style": "pxl-ui"
+  },
+  "dependencies": [
+    "@base-ui/react",
+    "class-variance-authority",
+    "cn",
+    "motion"
+  ],
+  "registryDependencies": [
+    "pxl-ui/registry/styles"
+  ]
+}
