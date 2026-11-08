@@ -30,11 +30,21 @@ const CreatorSchema = z
   .looseObject({
     id: UriSchema.describe("The creator's identity."),
     type: z
-      .enum(["Person", "Organization"])
-      .describe("Whether the creator is a person or organization."),
+      .union([
+        z.literal("Person"),
+        z.literal("Organization"),
+        z.literal("Software")
+      ])
+      .describe("Whether the creator is a person or organization.")
+      .meta({
+        title: "Agent "
+      }),
     name: z.string().optional().describe("The creator's name."),
   })
-  .describe("The person or organization that created the annotation.");
+  .describe("The person or organization that created the annotation.")
+  .meta({
+    title: "Creator"
+  });
 
 const TextQuoteSelectorSchema = z
   .looseObject({
@@ -183,7 +193,10 @@ const TargetSchema = z
         "Breadcrumb metadata used to display the annotation's location.",
       ),
   })
-  .describe("A segment or complete resource within the current publication.");
+  .describe("A segment or complete resource within the current publication.")
+  .meta({
+    title: "Target"
+  });
 
 const BodySchema = z
   .looseObject({
@@ -218,7 +231,16 @@ const BodySchema = z
   })
   .describe(
     "A Readium textual body with optional presentation and categorization hints.",
-  );
+  ).meta({
+    title: "Body"
+  });
+
+const MotivationSchema = 
+  z.union([
+    z.literal("bookmarking"),
+    z.literal("highlighting"),
+    z.literal("commenting"),
+  ]).meta({ title: "Motivation" });
 
 const AnnotationSchema = z
   .looseObject({
@@ -228,8 +250,7 @@ const AnnotationSchema = z
     ),
     type: z.literal("Annotation").describe("The annotation class."),
     // The draft's table spells this 'hightlighting'; use the W3C vocabulary term.
-    motivation: z
-      .enum(["bookmarking", "highlighting", "commenting"])
+    motivation: MotivationSchema
       .optional()
       .describe(
         "The reason for the annotation: bookmark, highlight or comment.",

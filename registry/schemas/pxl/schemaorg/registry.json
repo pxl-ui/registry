@@ -39,6 +39,21 @@
       ]
     },
     {
+      "name": "schemas/schemaorg/datatypes",
+      "type": "registry:lib",
+      "title": "Schema.org Datatypes",
+      "description": "Zod Schemas for Schema.org common datatypes",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "action.ts",
+          "target": "@lib/pxl/schemas/schemaorg/datatypes.ts"
+        }
+      ]
+    },
+    {
       "name": "schemas/schemaorg/defined-term-set",
       "type": "registry:lib",
       "title": "Schema.org Defined Term Set",
@@ -50,6 +65,24 @@
           "type": "registry:file",
           "path": "defined-term-set.ts",
           "target": "@lib/pxl/schemas/schemaorg/defined-term-set.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/ecommerce",
+      "type": "registry:lib",
+      "title": "Schema.org E-Commerce",
+      "description": "Zod Schemas for Schema.org E-Commerce",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "registryDependencies": [
+        "pxl/registry/schemas/schemaorg/datatypes"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "ecommerce.ts",
+          "target": "@lib/pxl/schemas/schemaorg/ecommerce.ts"
         }
       ]
     },
@@ -110,6 +143,24 @@
           "type": "registry:file",
           "path": "software-application.ts",
           "target": "@lib/pxl/schemas/schemaorg/software-application.ts"
+        }
+      ]
+    },
+    {
+      "name": "schemas/schemaorg/website",
+      "type": "registry:lib",
+      "title": "Schema.org WebSite",
+      "description": "Zod Schemas for Schema.org Web Sites",
+      "categories": ["pxl-ui", "schemas", "schemas/schemaorg", "zod"],
+      "dependencies": ["zod"],
+      "registryDependencies": [
+        "pxl/registry/schemas/schemaorg/datatypes"
+      ],
+      "files": [
+        { 
+          "type": "registry:file",
+          "path": "website.ts",
+          "target": "@lib/pxl/schemas/schemaorg/website.ts"
         }
       ]
     }

@@ -8,11 +8,13 @@ import { z } from "zod";
 const IriSchema = z
   .string()
   .regex(/^[A-Za-z][A-Za-z0-9+.-]*:[^\s<>"{}|\\^`]+$/)
-  .describe("An absolute IRI, including Unicode identifiers and URNs.");
+  .describe("An absolute IRI, including Unicode identifiers and URNs.")
+  .meta({ title: "Iri" });
 
 const DateTimeSchema = z.iso
   .datetime()
-  .describe("An xsd:dateTime timestamp in UTC, ending in Z.");
+  .describe("An xsd:dateTime timestamp in UTC, ending in Z.")
+  .meta({ title: "DateTime" });
 
 const oneOrMany = <T extends z.ZodType>(schema: T) =>
   z.union([schema, z.array(schema)]);
@@ -20,9 +22,9 @@ const oneOrMany = <T extends z.ZodType>(schema: T) =>
 const oneOrMore = <T extends z.ZodType>(schema: T) =>
   z.union([schema, z.array(schema).min(1)]);
 
-const TypeSchema = oneOrMore(z.string().min(1)).describe(
-  "One or more compact class names or class IRIs.",
-);
+const TypeSchema = oneOrMore(z.string().min(1))
+  .describe("One or more compact class names or class IRIs.")
+  .meta({ title: "Type" });
 
 const requiredType = (name: string) =>
   z.union([
@@ -46,39 +48,47 @@ const ContextSchema = z
   ])
   .describe(
     "JSON-LD context including the W3C annotation context; a single context is a string.",
-  );
+  )
+  .meta({ title: "Context" });
 
 const ReferenceSchema = z
   .looseObject({
     id: IriSchema.describe("The referenced resource's identity."),
     type: z.never().optional(),
   })
-  .describe("An identified resource without a declared class.");
+  .describe("An identified resource without a declared class.")
+  .meta({ title: "Reference" });
 
-const ResourceReferenceSchema = z.union([IriSchema, ReferenceSchema]);
+const ResourceReferenceSchema = z
+  .union([IriSchema, ReferenceSchema])
+  .meta({ title: "ResourceReference" });
+
+const MotivationEnumSchema = 
+  z.union([
+    z.literal("assessing"),
+    z.literal("bookmarking"),
+    z.literal("classifying"),
+    z.literal("commenting"),
+    z.literal("describing"),
+    z.literal("editing"),
+    z.literal("highlighting"),
+    z.literal("identifying"),
+    z.literal("linking"),
+    z.literal("moderating"),
+    z.literal("questioning"),
+    z.literal("replying"),
+    z.literal("tagging"),
+  ]).meta({ title: "MotivationEnum" });
 
 const MotivationSchema = z
   .union([
-    z.enum([
-      "assessing",
-      "bookmarking",
-      "classifying",
-      "commenting",
-      "describing",
-      "editing",
-      "highlighting",
-      "identifying",
-      "linking",
-      "moderating",
-      "questioning",
-      "replying",
-      "tagging",
-    ]),
+    MotivationEnumSchema,
     ResourceReferenceSchema,
   ])
   .describe(
     "A standard motivation or a reference to a motivation from another vocabulary.",
-  );
+  )
+  .meta({ title: "Motivation" });
 
 const AgentSchema = z
   .looseObject({
@@ -98,9 +108,12 @@ const AgentSchema = z
       .optional()
       .describe("Home pages for the agent."),
   })
-  .describe("A person, organization or software agent.");
+  .describe("A person, organization or software agent.")
+  .meta({ title: "Agent" });
 
-const AgentReferenceSchema = z.union([IriSchema, AgentSchema]);
+const AgentReferenceSchema = z
+  .union([IriSchema, AgentSchema])
+  .meta({ title: "AgentReference" });
 
 const lifecycleShape = {
   creator: oneOrMany(AgentReferenceSchema)
@@ -161,7 +174,8 @@ const ExternalResourceSchema = z
   }, "Specialized resources must satisfy their own schema.")
   .describe(
     "An external body or target, optionally described with content metadata.",
-  );
+  )
+  .meta({ title: "ExternalResource" });
 
 const TextualBodySchema = z
   .looseObject({
@@ -179,7 +193,8 @@ const TextualBodySchema = z
   })
   .describe(
     "An embedded textual body. TextualBody typing is recommended, not mandatory.",
-  );
+  )
+  .meta({ title: "TextualBody" });
 
 // Recursive selector relationships retain their discriminated TypeScript types.
 const selectorIdentityShape = {
@@ -195,7 +210,8 @@ const FragmentValueSchema = z
       "The specification defining the fragment syntax.",
     ),
   })
-  .describe("Selects a segment using a fragment identifier.");
+  .describe("Selects a segment using a fragment identifier.")
+  .meta({ title: "FragmentValue" });
 
 const CssValueSchema = z
   .looseObject({
@@ -203,7 +219,8 @@ const CssValueSchema = z
     type: z.literal("CssSelector").describe("The selector class."),
     value: z.string().describe("A CSS selector identifying elements."),
   })
-  .describe("Selects elements using CSS.");
+  .describe("Selects elements using CSS.")
+  .meta({ title: "CssValue" });
 
 const XPathValueSchema = z
   .looseObject({
@@ -211,7 +228,8 @@ const XPathValueSchema = z
     type: z.literal("XPathSelector").describe("The selector class."),
     value: z.string().describe("An XPath identifying the segment."),
   })
-  .describe("Selects a segment using XPath.");
+  .describe("Selects a segment using XPath.")
+  .meta({ title: "XPathValue" });
 
 const TextQuoteValueSchema = z
   .looseObject({
@@ -229,7 +247,8 @@ const TextQuoteValueSchema = z
       .optional()
       .describe("Text immediately following the selection."),
   })
-  .describe("Selects text using a quotation and optional surrounding context.");
+  .describe("Selects text using a quotation and optional surrounding context.")
+  .meta({ title: "TextQuoteValue" });
 
 const positionShape = {
   ...selectorIdentityShape,
@@ -247,14 +266,16 @@ const TextPositionValueSchema = z
   })
   .describe(
     "Selects a range measured in Unicode code points, not UTF-16 code units.",
-  );
+  )
+  .meta({ title: "TextPositionValue" });
 
 const DataPositionValueSchema = z
   .looseObject({
     ...positionShape,
     type: z.literal("DataPositionSelector").describe("The selector class."),
   })
-  .describe("Selects a range measured in bytes.");
+  .describe("Selects a range measured in bytes.")
+  .meta({ title: "DataPositionValue" });
 
 const SvgValueSchema = z
   .looseObject({
@@ -269,17 +290,20 @@ const SvgValueSchema = z
   })
   .describe(
     "Selects a region described by embedded or externally identified SVG.",
-  );
+  )
+  .meta({ title: "SvgValue" });
 
-const SimpleSelectorSchema = z.discriminatedUnion("type", [
-  FragmentValueSchema,
-  CssValueSchema,
-  XPathValueSchema,
-  TextQuoteValueSchema,
-  TextPositionValueSchema,
-  DataPositionValueSchema,
-  SvgValueSchema,
-]);
+const SimpleSelectorSchema = z
+  .discriminatedUnion("type", [
+    FragmentValueSchema,
+    CssValueSchema,
+    XPathValueSchema,
+    TextQuoteValueSchema,
+    TextPositionValueSchema,
+    DataPositionValueSchema,
+    SvgValueSchema,
+  ])
+  .meta({ title: "SimpleSelector" });
 
 type SelectorReference = string | z.infer<typeof ReferenceSchema> | Selector;
 
@@ -527,10 +551,10 @@ const CssStylesheetSchema = z
   .describe("An embedded or externally identified CSS stylesheet.");
 
 const AnnotationObjectSchema = z.looseObject({
-  ...lifecycleShape,
   "@context": ContextSchema.optional(),
   id: IriSchema.describe("The annotation's identity."),
   type: requiredType("Annotation").describe("Classes including Annotation."),
+  ...lifecycleShape,
   body: oneOrMany(BodySchema)
     .optional()
     .describe("Bodies related to every target."),
@@ -632,12 +656,12 @@ const AnnotationPageSchema = PageObjectSchema.extend({
 
 const AnnotationCollectionSchema = z
   .looseObject({
-    ...lifecycleShape,
     "@context": ContextSchema,
     id: IriSchema.describe("The collection's identity."),
     type: requiredType("AnnotationCollection").describe(
       "Classes including AnnotationCollection.",
     ),
+    ...lifecycleShape,
     label: oneOrMany(z.string())
       .optional()
       .describe("Human readable collection names."),
