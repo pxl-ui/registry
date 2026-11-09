@@ -1,0 +1,529 @@
+GIMP Palette
+Name: LPC
+Columns: 6
+#Description: Color Palette for LPC resources
+
+250 236 231 Ivory 50
+249 213 186 Ivory 200
+228 164 124 Ivory 400
+204 134 101 Ivory 600
+153 66  60  Ivory 800
+42  23  34  Ivory 950
+
+255 255 255 Porcelain 50
+250 236 231 Porcelain 200
+237 197 168 Porcelain 400
+228 164 124 Porcelain 600
+153 66  60  Porcelain 800
+42  23  34  Porcelain 950
+
+249 213 186 Peach 50
+237 197 168 Peach 200
+211 139 89  Peach 400
+174 107 63  Peach 600
+149 56  28  Peach 800
+42  23  34  Peach 950
+
+237 197 168 Tan 50
+228 164 124 Tan 200
+192 122 75  Tan 400
+150 91  56  Tan 600
+106 29  22  Tan 800
+39  25  32  Tan 950
+
+228 164 124 Tawny 50
+211 139 89  Tawny 200
+174 107 63  Tawny 400
+127 76  49  Tawny 600
+106 29  22  Tawny 800
+26  18  19  Tawny 950
+
+211 139 89  Honey 50
+174 107 63  Honey 200
+127 76  49  Honey 400
+96  52  41  Honey 600
+62  17  26  Honey 800
+26  18  19  Honey 950
+
+150 91  56  Bronze 50
+127 76  49  Bronze 200
+96  52  41  Bronze 400
+68  39  37  Bronze 600
+62  17  26  Bronze 800
+0   0   0   Bronze 950
+
+127 76  49  Brown 50
+107 60  46  Brown 200
+68  39  37  Brown 400
+46  31  28  Brown 600
+26  18  19  Brown 800
+0   0   0   Brown 950
+
+96  52  41  Coffee 50
+68  39  37  Coffee 200
+42  23  34  Coffee 400
+46  31  28  Coffee 600
+26  18  19  Coffee 800
+0   0   0   Coffee 950
+
+108 163 179 Aegean 50
+79  137 157 Aegean 200
+58  90  114 Aegean 400
+37  58  94  Aegean 600
+23  32  56  Aegean 800
+15  18  24  Aegean 950
+
+243 195 95  Amber 50
+209 148 40  Amber 200
+161 96  24  Amber 400
+121 65  23  Amber 600
+68  39  37  Amber 800
+26  18  19  Amber 950
+
+210 216 239 Amethyst 50
+164 176 220 Amethyst 200
+152 143 186 Amethyst 400
+124 110 166 Amethyst 600
+76  59  100 Amethyst 800
+26  18  19  Amethyst 950
+
+168 202 88  Apple 50
+117 167 67  Apple 200
+70  130 50  Apple 400
+48  100 47  Apple 600
+28  69  37  Apple 800
+27  25  43  Apple 950
+
+237 197 168 Apricot 50
+255 177 134 Apricot 200
+255 140 104 Apricot 400
+236 116 86  Apricot 600
+153 66  60  Apricot 800
+42  23  34  Apricot 950
+
+107 179 245 Azure 50
+88  141 226 Azure 200
+66  115 201 Azure 400
+50  79  154 Azure 600
+41  57  130 Azure 800
+29  37  96  Azure 950
+
+253 245 204 Beige 50
+244 215 160 Beige 200
+248 188 118 Beige 400
+224 156 76  Beige 600
+153 66  60  Beige 800
+42  23  34  Beige 950
+
+72  65  82  Black 50
+52  48  67  Black 200
+41  37  58  Black 400
+27  25  43  Black 600
+15  18  24  Black 800
+0   0   0   Black 950
+
+88  141 226 Blue 50
+66  115 201 Blue 200
+50  79  154 Blue 400
+41  57  130 Blue 600
+29  37  96  Blue 800
+16  16  37  Blue 950
+
+164 176 220 Blue_Violet 50
+131 138 209 Blue_Violet 200
+99  111 199 Blue_Violet 400
+50  79  154 Blue_Violet 600
+59  66  142 Blue_Violet 800
+44  36  82  Blue_Violet 950
+
+239 116 126 Cerise 50
+189 81  105 Cerise 200
+170 58  106 Cerise 400
+121 42  83  Cerise 600
+72  25  69  Cerise 800
+26  18  19  Cerise 950
+
+58  175 194 Cerulean 50
+42  133 152 Cerulean 200
+33  112 135 Cerulean 400
+24  80  111 Cerulean 600
+13  40  62  Cerulean 800
+15  18  24  Cerulean 950
+
+91  79  85  Charcoal 50
+82  65  75  Charcoal 200
+56  43  51  Charcoal 400
+37  31  37  Charcoal 600
+15  18  24  Charcoal 800
+0   0   0   Charcoal 950
+
+148 107 68  Chocolate 50
+117 80  45  Chocolate 200
+97  72  44  Chocolate 400
+64  54  29  Chocolate 600
+43  37  17  Chocolate 800
+26  18  19  Chocolate 950
+
+236 116 86  Coral 50
+205 84  61  Coral 200
+153 66  60  Coral 400
+106 29  22  Coral 600
+62  17  26  Coral 800
+26  18  19  Coral 950
+
+164 221 219 Cornflower 50
+115 190 211 Cornflower 200
+79  143 186 Cornflower 400
+60  94  139 Cornflower 600
+37  58  94  Cornflower 800
+23  32  56  Cornflower 950
+
+108 220 231 Cyan 50
+58  175 194 Cyan 200
+42  133 152 Cyan 400
+33  112 135 Cyan 600
+24  80  111 Cyan 800
+13  40  62  Cyan 950
+
+79  137 157 Denim 50
+58  90  114 Denim 200
+37  58  94  Denim 400
+23  32  56  Denim 600
+15  18  24  Denim 800
+0   0   0   Denim 950
+
+235 237 233 Dove 50
+227 231 211 Dove 200
+196 181 159 Dove 400
+149 128 128 Dove 600
+111 100 100 Dove 800
+42  23  34  Dove 950
+
+48  100 47  Emerald 50
+37  86  46  Emerald 200
+28  69  37  Emerald 400
+25  51  45  Emerald 600
+23  32  56  Emerald 800
+15  18  24  Emerald 950
+
+134 178 120 Fern 50
+95  135 77  Fern 200
+69  98  56  Fern 400
+49  72  41  Fern 600
+25  51  45  Fern 800
+27  25  43  Fern 950
+
+69  98  56  Forest 50
+49  72  41  Forest 200
+25  51  45  Forest 400
+23  32  56  Forest 600
+15  18  24  Forest 800
+0   0   0   Forest 950
+
+149 56  28  Garnet 50
+123 32  8   Garnet 200
+89  21  21  Garnet 400
+62  17  26  Garnet 600
+26  18  19  Garnet 800
+0   0   0   Garnet 950
+
+168 179 184 Gray 50
+129 142 151 Gray 200
+106 117 135 Gray 400
+75  75  96  Gray 600
+52  48  67  Gray 800
+27  25  43  Gray 950
+
+70  130 50  Green 50
+92  154 42  Green 200
+48  100 47  Green 400
+28  69  37  Green 600
+25  51  45  Green 800
+27  25  43  Green 950
+
+190 150 148 Heather 50
+174 119 113 Heather 200
+161 98  107 Heather 400
+145 77  104 Heather 600
+94  51  73  Heather 800
+42  23  34  Heather 950
+
+255 255 255 Ice 50
+224 242 243 Ice 200
+199 207 204 Ice 400
+129 142 151 Ice 600
+89  94  112 Ice 800
+41  37  58  Ice 950
+
+152 143 186 Indigo 50
+124 110 166 Indigo 200
+101 87  137 Indigo 400
+76  59  100 Indigo 600
+41  37  58  Indigo 800
+26  18  19  Indigo 950
+
+224 242 243 Lavender 50
+210 216 239 Lavender 200
+164 176 220 Lavender 400
+152 143 186 Lavender 600
+76  59  100 Lavender 800
+26  18  19  Lavender 950
+
+173 132 79  Leather 50
+148 107 68  Leather 200
+117 80  45  Leather 400
+97  72  44  Leather 600
+64  54  29  Leather 800
+26  18  19  Leather 950
+
+244 228 141 Lemon 50
+240 224 89  Lemon 200
+219 189 0   Lemon 400
+175 138 53  Lemon 600
+97  72  44  Lemon 800
+43  37  17  Lemon 950
+
+244 215 160 Linen 50
+248 188 118 Linen 200
+224 156 76  Linen 400
+161 96  24  Linen 600
+121 65  23  Linen 800
+42  23  34  Linen 950
+
+174 119 113 Mauve 50
+161 98  107 Mauve 200
+145 77  104 Mauve 400
+94  51  73  Mauve 600
+42  23  34  Mauve 800
+26  18  19  Mauve 950
+
+58  90  114 Midnight 50
+37  58  94  Midnight 200
+13  40  62  Midnight 400
+23  32  56  Midnight 600
+15  18  24  Midnight 800
+0   0   0   Midnight 950
+
+217 241 216 Mint 50
+173 204 166 Mint 200
+134 178 120 Mint 400
+95  135 77  Mint 600
+69  98  56  Mint 800
+25  51  45  Mint 950
+
+188 165 28  Mustard 50
+175 138 53  Mustard 200
+131 99  50  Mustard 400
+97  72  44  Mustard 600
+64  54  29  Mustard 800
+43  37  17  Mustard 950
+
+50  79  154 Navy 50
+41  57  130 Navy 200
+29  37  96  Navy 400
+16  16  37  Navy 600
+15  18  24  Navy 800
+0   0   0   Navy 950
+
+138 190 201 Neptune 50
+108 163 179 Neptune 200
+79  137 157 Neptune 400
+58  90  114 Neptune 600
+37  58  94  Neptune 800
+23  32  56  Neptune 950
+
+191 157 91  Oak 50
+173 132 79  Oak 200
+148 107 68  Oak 400
+117 80  45  Oak 600
+64  54  29  Oak 800
+26  18  19  Oak 950
+
+240 224 89  Ochre 50
+219 189 0   Ochre 200
+188 165 28  Ochre 400
+175 138 53  Ochre 600
+97  72  44  Ochre 800
+43  37  17  Ochre 950
+
+173 204 166 Olivine 50
+134 178 120 Olivine 200
+95  135 77  Olivine 400
+69  98  56  Olivine 600
+49  72  41  Olivine 800
+27  25  43  Olivine 950
+
+248 188 118 Orange 50
+224 156 76  Orange 200
+207 111 48  Orange 400
+181 73  54  Orange 600
+149 56  28  Orange 800
+62  17  26  Orange 950
+
+216 212 192 Pearl 50
+196 181 159 Pearl 200
+173 152 142 Pearl 400
+149 128 128 Pearl 600
+111 100 100 Pearl 800
+42  23  34  Pearl 950
+
+217 173 169 Periwinkle 50
+190 150 148 Periwinkle 200
+174 119 113 Periwinkle 400
+161 98  107 Periwinkle 600
+94  51  73  Periwinkle 800
+42  23  34  Periwinkle 950
+
+255 173 151 Pink 50
+247 143 138 Pink 200
+239 116 126 Pink 400
+189 81  105 Pink 600
+121 42  83  Pink 800
+42  23  34  Pink 950
+
+170 58  106 Plum 50
+121 42  83  Plum 200
+94  32  67  Plum 400
+72  25  69  Plum 600
+42  23  34  Plum 800
+26  18  19  Plum 950
+
+115 190 211 Powder 50
+79  143 186 Powder 200
+60  94  139 Powder 400
+37  58  94  Powder 600
+23  32  56  Powder 800
+15  18  24  Powder 950
+
+124 110 166 Purple 50
+101 87  137 Purple 200
+76  59  100 Purple 400
+41  37  58  Purple 600
+27  25  43  Purple 800
+0   0   0   Purple 950
+
+181 73  54  Red 50
+149 56  28  Red 200
+123 32  8   Red 400
+89  21  21  Red 600
+62  17  26  Red 800
+26  18  19  Red 950
+
+255 138 0   Red Orange 50
+207 111 48  Red Orange 200
+181 73  54  Red Orange 400
+149 56  28  Red Orange 600
+106 29  22  Red Orange 800
+62  17  26  Red Orange 950
+
+66  115 201 Royal 50
+50  79  154 Royal 200
+41  57  130 Royal 400
+29  37  96  Royal 600
+16  16  37  Royal 800
+0   0   0   Royal 950
+
+255 140 104 Salmon 50
+236 116 86  Salmon 200
+205 84  61  Salmon 400
+153 66  60  Salmon 600
+106 29  22  Salmon 800
+42  23  34  Salmon 950
+
+248 188 118 Sepia 50
+224 156 76  Sepia 200
+174 107 63  Sepia 400
+127 76  49  Sepia 600
+96  52  41  Sepia 800
+26  18  19  Sepia 950
+
+106 117 135 Shadow 50
+89  94  112 Shadow 200
+75  75  96  Shadow 400
+52  48  67  Shadow 600
+41  37  58  Shadow 800
+15  18  24  Shadow 950
+
+199 207 204 Silver 50
+168 179 184 Silver 200
+129 142 151 Silver 400
+106 117 135 Silver 600
+75  75  96  Silver 800
+41  37  58  Silver 950
+
+145 207 255 Sky 50
+107 179 245 Sky 200
+88  141 226 Sky 400
+66  115 201 Sky 600
+50  79  154 Sky 800
+29  37  96  Sky 950
+
+173 152 142 Smoke 50
+149 128 128 Smoke 200
+111 100 100 Smoke 400
+91  79  85  Smoke 600
+82  65  75  Smoke 800
+15  18  24  Smoke 950
+
+97  72  44  Soot 50
+64  54  29  Soot 200
+43  37  17  Soot 400
+26  18  19  Soot 600
+15  18  24  Soot 800
+0   0   0   Soot 950
+
+208 218 145 Spring 50
+168 202 88  Spring 200
+117 167 67  Spring 400
+70  130 50  Spring 600
+37  86  46  Spring 800
+27  25  43  Spring 950
+
+95  135 77  Swamp 50
+69  98  56  Swamp 200
+49  72  41  Swamp 400
+25  51  45  Swamp 600
+23  32  56  Swamp 800
+15  18  24  Swamp 950
+
+42  133 152 Teal 50
+33  112 135 Teal 200
+24  80  111 Teal 400
+23  58  85  Teal 600
+23  32  56  Teal 800
+0   0   0   Teal 950
+
+244 228 141 Tumeric 50
+243 195 95  Tumeric 200
+209 148 40  Tumeric 400
+161 96  24  Tumeric 600
+96  52  41  Tumeric 800
+42  23  34  Tumeric 950
+
+117 80  45  Umber 50
+97  72  44  Umber 200
+64  54  29  Umber 400
+43  37  17  Umber 600
+26  18  19  Umber 800
+0   0   0   Umber 950
+
+255 255 255 White 50
+235 237 233 White 200
+216 212 192 White 400
+173 152 142 White 600
+111 100 100 White 800
+56  43  51  White 950
+
+106 29  22  Wine 50
+89  21  21  Wine 200
+62  17  26  Wine 400
+42  23  34  Wine 600
+26  18  19  Wine 800
+0   0   0   Wine 950
+
+253 245 204 Yellow 50
+244 228 141 Yellow 200
+243 195 95  Yellow 400
+209 148 40  Yellow 600
+161 96  24  Yellow 800
+68  39  37  Yellow 950

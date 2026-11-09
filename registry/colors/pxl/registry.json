@@ -840,6 +840,23 @@
       }
     },
     {
+      "name": "colors/lpc",
+      "type": "registry:theme",
+      "title": "LPC",
+      "description": "The full palette of the LPC assets pack",
+      "categories": ["pxl-ui", "color-palette", "color-palette-complete"],
+      "files": [
+        {
+          "type": "registry:style",
+          "path": "lpc.css",
+          "target": "@components/colors/pxl/lpc.css"
+        }
+      ],
+      "css": {
+        "@import \"@/components/colors/pxl/lpc.css\"": {}
+      }
+    },
+    {
       "name": "colors/nestopia",
       "type": "registry:theme",
       "title": "NEStopia",

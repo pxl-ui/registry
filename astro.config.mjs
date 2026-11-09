@@ -385,6 +385,10 @@ export default defineConfig({
                         label: "Nestopia",
                         link: "/colors/nestopia",
                       },
+                      {
+                        label: "LPC",
+                        link: "/colors/lpc",
+                      },
                     ],
                   },
                   {
